@@ -1,0 +1,26 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HEAD>
+<TITLE> - FootNote</TITLE>
+</HEAD>
+<BODY>
+<H1>FootNote</H1>
+Other benefits of multithreading are better interactive responsiveness and realtime behaviour. This is limited, however, by the underlying platform: stand-alone Java runtime environments have good realtime behaviour. Running on top of other systems like Unix, Windows, the Macintosh, or Windows NT limits the realtime responsivness to that of the underlying system.<P>
+<BLOCKQUOTE>
+<I>Lots of things were going on at once in their simulations. Ropes were being pulled, wheels were turning, levers were rocking, and input from the user was being tracked. Because they had to write this all in a single threaded form, all the things that happen at the same time, even though they had nothing to do with each other, had to be manually intermixed. Using an "event loop" made things a little cleaner, but it was still a mess. The system became fragile and hard to understand.</I><P>
+<I>They were pulling in data from all over the net. But originally they were doing it one chunk at a time. This serialized network communication was very slow. When they converted to a multithreaded style, it was trivial to overlap all of their network communication.</I><P>
+</BLOCKQUOTE>
+<A NAME=HEADING14>
+<H3>Dynamic</H3>
+In a number of ways, Java is a more dynamic language than C or C++. It was designed to adapt to an evolving environment.<P>
+For example, one of the big problems with using C++ in a production environment is a side-effect of the way that it is always implemented. If company A produces a class library (a library of plug&amp;play components) and company B buys it and uses it in their product, then if A changes it's library and distributes a new release then B will almost certainly have to recompile and redistribute their software. In an environment where the end user gets A and B's software independently (say A is an OS vendor and B is an application vendor) problems can result. <P>
+For example, if A distributes an upgrade to its libraries then all of the users' the software from B will break. It is possible to avoid this problem in C++, but it is extraordinarily difficult and it effectively means not using any of the language's OO features directly.<P>
+<BLOCKQUOTE>
+<I>Archimedes built their product using the object-oriented graphics library from 3DPC Inc. 3DPC released a new version of the graphics library which several computer manufacturers bundled with their new machines. Customers of Archimedes that bought these new machines discovered to their dismay that their old software no longer worked. [In real life, this only happens on Unix systems. In the PC world, 3DPC would never have released such a library: their ability to change their product and use C++'s object oriented features is severely hindered]</I><P>
+</BLOCKQUOTE>
+By making these interconnections between modules later, Java completely avoids these problems and makes the use of the object-oriented paradigm much more straightforward. Libraries can freely add new methods and instance variables without any effect on their clients.<P>
+Java understands the concept of an interface. An interface is a concept borrowed from Objective C and is similar to a class. An interface is simply a specification of a set of methods that an object responds to. It does not include any instance variables or implementations. Interfaces can be multiply-inherited (unlike classes) and they can be used in a more flexible way than the usual rigid class inheritance structure.<P>
+Classes have a runtime representation: there is a class named Class, instances of which contain runtime class definitions. From an object you can find out what class it belongs to. If, in a C or C++ program, you have a pointer to an object but you don't know what type of object it is, there is no way to find out. In Java, finding out based on the runtime type information is straightforward. Because casts are checked at both compile-time and runtime, you can trust a cast in Java On the other hand in C and C++, the compiler just trusts that you're doing the right thing.<P>
+It is also possible to lookup the definition of a class given a string containing its name. This means that you can compute a data type name and have it easily dynamically linked into the running system.<P>
+<BLOCKQUOTE>
+<I>To expand their revenue stream, the folks at Archimedes wanted to architect their product so that new aftermarket plug-in modules could be added to extend the system. This was possible on the PC, but just barely. They had to hire a couple of new programmers because it was so complicated. This also added terrible problems when debugging.</I><P>
+</BODY>

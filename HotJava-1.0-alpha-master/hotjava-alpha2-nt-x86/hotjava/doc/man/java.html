@@ -1,0 +1,171 @@
+<!-- sccsid: @(#)java.html	1.2 95/05/16 --->
+<HTML><HEAD>
+<TITLE>java-The Java Interpreter</TITLE>
+</HEAD>
+<BODY>
+<h1> java-The Java Interpreter</h1>
+java interprets (executes) Java bytecodes.
+<h2>SYNOPSIS</h2>
+<pre>
+java [ <a href="java.html#Options">options</a> ] classname &lt;args&gt;
+<P>
+java_g [ <a href="java.html#Options">options</a> ] classname &lt;args&gt;
+<P>
+</pre>
+<P>
+<h2>DESCRIPTION</h2>
+<b>java</b> is the Java interpreter, which executes Java programs.
+<P>
+The <i>classname</i> argument is the name of a class.  
+<i>classname</i> must be fully qualifed by including its package in the name, 
+for example:
+<pre>
+    java java.lang.String
+</pre>
+<p>
+Note that any arguments that are after <i>classname</i> in the call to 
+java are passed to the class.
+<p>
+The bytecodes for the class are in a file called <i>classname.class</i> 
+generated 
+by compiling the corresponding class source file with <b>javac</b>. All Java 
+bytecode 
+files have .class as their extension, which the compiler automatically adds 
+when the 
+class is compiled. <i>classname</i> must contain a  <code>main()</code> 
+method, which 
+<b>java</b> executes and then exits, unless <code>main()</code> 
+creates one or more threads. If any threads are created by <code>main()</code>
+then <b>java</b> doesn't exit until the last thread exits. The 
+<code>main()</code> method is defined as follows:
+<pre>
+    class Aclass {
+        public static void main(String argv[]){ 
+            < main code >
+        }
+    }
+</pre>
+When you define your own classes you need to specify their location. 
+Use CLASSPATH to do this. 
+CLASSPATH consists of a semicolon separated list of directories that specifies the 
+path. 
+For example:<P>
+<pre>
+    .;C:\users\lindholm\classes
+</pre>
+Note that the system always appends the location of the system classes
+onto the end of the class path unless you use the <i>-classpath</i> option to 
+specify a path.
+<p>
+Ordinarily, source files are compiled using <b>javac</b> then the program is 
+run 
+using <b>java</b>. However, <b>java</b> can be used to compile and run 
+programs when the 
+<i>-cs</i> option is used. As each class is loaded its modification date is compared
+to the modification date of the class source file. If the source has been 
+modified more recently, it is recompiled and the new bytecode file is loaded. 
+<b>java</b> repeats this procedure until all the classes are correctly compiled
+and loaded.
+<p>
+The interpreter can determine whether a class is legitimate through the 
+mechanism of verification. Verification ensures that the byte
+codes being interpreted do not violate any language constraints.
+
+<P>
+<b>java_g</b> is a non-optimized version of <b>java</b> suitable for use with 
+debuggers like dbx or gdb.
+<P>
+<a name=Options><h2>OPTIONS</h2></a>
+<dl>
+<dt> -cs, -checksource
+<dd> When a compiled class is loaded, causes the modification time of the 
+class bytecode file to be compared to that of the class source file. If the 
+source has been modified more recently, it is recompiled and the new bytecode 
+file is loaded.<P>
+<dt>-classpath path
+<dd> Specifies the path <b>java</b> uses to look up classes. Overrides the default 
+or the CLASSPATH environment variable if it is set. Directories are separated by 
+semicolons. Thus the general format for <i>path</i> is:
+<pre>
+    .;&lt;your_path&gt;
+</pre>
+<p>
+For example:
+<pre>
+    .;C:\users\lindholm\classes;D:\java\classes
+</pre>
+<dt>-ms <i>x</i>
+<dd>Sets the size of the memory allocation pool (the garbage collected heap) 
+to <i>x</i>. The default units for <i>x</i> are bytes. <i>x</i> must 
+be &gt; 1000 bytes. 
+You can 
+modify the meaning of <i>x</i> by appending either the letter &quot;k&quot; 
+for kilobytes or the letter &quot;m&quot; for megabytes.
+The default is &quot;-ms3m", for 3 megabytes of memory.<P>
+<dt>-noasyncgc
+<dd>Turns off asynchronous garbage collection. When passed as an option no 
+garbage collection takes place unless it is explicitly called or the program 
+runs out of memory. Normally garbage collection runs as an asynchronous 
+thread in parallel with other threads.<P>
+<dt>-prof
+<dd>Causes <b>java</b> to produce profiling data. When used, <b>java</b>
+creates a file called "java.prof" in the current directory, when
+it exits. This file can be passed to <a href="javaprof.html"><b>javaprof</b></a> for prettyprinting.
+<dt>-ss <i>x</i>
+<dd>Each Java thread has two stacks: one for Java code and one for C code.
+The -ss option sets the maximum stack size that can be used by C code 
+in a thread to <i>x</i>. Every thread that is spawned during the execution of
+the program passed to
+<b>java</b> has <i>x</i> as its C stack size. The default units for <i>x</i>
+ are bytes. <i>x</i> must be 
+&gt; 1000 bytes. You can modify the meaning of <i>x</i> by appending either 
+the letter &quot;k&quot; for kilobytes or the letter &quot;m&quot; for 
+megabytes.
+The default stack size is 64 kilobytes ("-ss 64k").<p>
+<dt>-oss <i>x</i>
+<dd>Each Java thread has two stacks: one for Java code and one for C code.
+The -oss option sets the maximum stack size that can be used by Java code 
+in a thread to <i>x</i>.
+Every thread that is spawned during the execution of the program passed to
+<b>java</b> has <i>x</i> as its Java stack size. The default 
+units for <i>x</i> are bytes. <i>x</i> must be 
+&gt; 1000 bytes. You can modify the meaning of <i>x</i> by appending either 
+the letter &quot;k&quot; for kilobytes or the letter &quot;m&quot; for 
+megabytes.
+The default stack size is 400 kilobytes ("-ss400k").<p>
+This option is not supported in HotJava alpha 2 release for NT.<p>
+<dt>-t    
+<dd>Prints a trace of the instructions executed ( <b>java_g</b> only).<p>
+<dt>-v, -verbose
+<dd>Causes <b>java</b> to print a message to stdout each time a class file is 
+loaded.<P>
+<dt>-verify
+<dd>Runs the verifier on all code.
+<p>
+<dt>-verifyremote
+<dd>Runs the verifier on all code that is loaded into the system via a
+classloader. <i>verifyremote</i> is the default for the interpreter.
+<p>
+<dt>-noverify
+<dd>Turns verification off.
+<p>
+<dt>-verbosegc
+<dd>Causes the garbage collector to print out messages whenever it frees 
+memory.<P>
+</dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt>CLASSPATH
+<dd>Used to provide the system a path to user-defined classes. Directories are
+separated by semicolons, for example,
+<pre>
+    .;C:\users\lindholm\classes;D:\java\classes
+</pre>
+</dl>
+<h2>SEE ALSO</h2>
+<A HREF="javac.html">javac</A>,  <A HREF="javah.html">javah</A>,  
+<A HREF="javaprof.html">javaprof</A>, <A HREF="javap.html">javap</A>,  
+<A HREF="javadoc.html">javadoc</A>
+<a href="../javaspec/javaspec_1.html">The Java Language 
+Specification</a>
+</BODY></HTML>

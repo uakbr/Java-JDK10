@@ -1,0 +1,125 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Lexical Issues</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING2></A>
+<A HREF="javaspec_4.html">Next</A>       <A HREF="javaspec_2.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>2  Lexical Issues</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_3.html#HEADING3"><B> 2.1 </B> - Comments</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING4"><B> 2.2 </B> - Identifiers</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING5"><B> 2.3 </B> - Keywords</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING6"><B> 2.4 </B> - Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING7"><B>2.4.1 </B> - Integer Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING8"><B>2.4.2 </B> - Floating Point Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING9"><B>2.4.3 </B> - Boolean Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING10"><B>2.4.4 </B> - Character Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING11"><B>2.4.5 </B> - String Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING12"><B> 2.5 </B> - Operators and Miscellaneous Separators</A><DD>
+</DL>
+
+
+During compilation, the characters in Java source code are reduced to a series of tokens. The Java compiler recognizes five kinds of tokens: identifiers, keywords, literals, operators, and miscellaneous separators. Comments and white space such as blanks, tabs, line feeds, and are not tokens, but they often are used to separate tokens. <P>
+Java programs are written using the <A NAME=MARKER2_1></A>Unicode character set or some character set that is converted to Unicode before being compiled. <P>
+<A NAME=HEADING3></A>
+<HR>
+<H3> 2.1  Comments<A NAME=MARKER2_2></A></H3>
+The Java language has three styles of comments:<P>
+<DL>
+<I><DT>// text</I>
+<DD>All characters from // to the end of the line are ignored.
+<I><DT>/* text */</I>
+<DD>All characters from /* to */ are ignored.
+<I><DT>/** text */</I>
+<DD>These comments are treated specially when they occur immediately before any declaration. They should not be used any other place in the code. These comments indicate that the enclosed text should be included in automatically generated documentation as a description of the declared item.
+</DL>
+<A NAME=HEADING4></A>
+<HR>
+<H3> 2.2  Identifiers</H3>
+Identifiers must start with a letter, underscore ("_"), or dollar sign ("$"); subsequent characters can also contain digits (0-9). Java uses the Unicode character set. For the purposes of determining what is a legal identifier the following are considered "letters:"<P>
+<UL>
+<LI>The characters "A" through "Z" <P>
+<LI>The characters "a" through "z"<P>
+<LI>All Unicode characters with a character number above hex 00C0 <P>
+</UL>
+Other characters valid after the first letter of an identifier include every character except those in the segment of Unicode reserved for special characters.<P>
+Thus, "gar&ccedil;on" and "Mj&oslash;lner" are legal identifiers, but strings containing characters such as "xa6 " are not. <P>
+For more information on the Unicode standard, see The Unicode Standard, Worldwide Character Encoding, Version 1.0, Volumes 1&amp;2. The FTP address for Unicode, Inc. (formerly the Unicode Consortium) is unicode.org.<P>
+<A NAME=HEADING5></A>
+<HR>
+<H3> 2.3  Keywords</H3>
+The following identifiers are reserved for use as keywords. They cannot be used in any other way. <BR><IMG SRC="javaspec_Tbl_8.gif"><BR>
+<P>
+<A NAME=HEADING6></A>
+<HR>
+<H3> 2.4  <A NAME=MARKER2_3></A>Literals</H3>
+Literals are the basic representation of any integer, floating point, boolean, character, or string value. <P>
+<A NAME=HEADING7></A>
+<HR>
+<H4>2.4.1  Integer Literals</H4>
+Integers can be expressed in decimal (base 10), hexadecimal (base 16), or octal (base 8) format. A decimal integer literal consists of a sequence of digits (optionally suffixed as described below) without a leading 0 (zero). An integer can be expressed in octal or hexadecimal rather than decimal. A leading 0 (zero) on an integer literal means it is in octal; a leading 0x (or 0X) means hexadecimal. Hexadecimal integers can include digits (0-9) and the letters a-f and A-F. Octal integers can include only the digits 0-7.<P>
+Integer literals are of type int unless they are larger than 32-bits, in which case they are of type long (see <A HREF="javaspec_4.html#3">Integer Types</A>). A literal can be forced to be long by appending an L or l to its value.<P>
+The following are all legal integer literals:<P>
+<PRE>
+      2, 2L  0777  0xDeadBeef
+</PRE>
+<A NAME=HEADING8></A>
+<HR>
+<H4>2.4.2  <A NAME=MARKER2_4></A><A NAME=MARKER2_5></A>Floating Point Literals</H4>
+A floating point literal can have the following parts: a decimal integer, a decimal point ("."), a fraction (another decimal number), an exponent, and a type suffix. The exponent part is an e or E followed by an integer, which can be signed. A floating point literal must have at least one digit, plus either a decimal point or e (or E). Some examples of floating point literals are:<P>
+<PRE>
+    3.1415 3.1E12  .1e12  2E12
+</PRE>
+As described in <A HREF="javaspec_4.html#6">Floating Point Types</A>, the Java language has two floating point types: float (IEEE 754 single precision) and double (IEEE 754 double precision). You specify the type of a floating point literal as follows:<P>
+<PRE>
+    2.0d or 2.0D         double
+    2.0f or 2.0F or 2.0  float
+</PRE>
+<A NAME=HEADING9></A>
+<HR>
+<H4>2.4.3  Boolean Literals</H4>
+The <A NAME=MARKER2_6></A>boolean type has two literal values: true and false. See <A HREF="javaspec_4.html#12">Boolean Types</A> for more information on boolean values.<P>
+<A NAME=HEADING10></A>
+<HR>
+<H4>2.4.4  <A NAME=7>Character Literals</H4>
+A character literal is a character (or group of characters representing a single character) enclosed in single quotes. Characters have type char and are drawn from the Unicode character set (see <A HREF="javaspec_4.html#9">Character Types</A>). The following escape sequences allow for the representation of some non-graphic characters as well as the single quote, "`" and the backslash "\", in Java code:<BR><IMG SRC="javaspec_Tbl_10.gif"><BR>
+<P>
+<A NAME=HEADING11></A>
+<HR>
+<H4>2.4.5  <A NAME=8>String Literals</H4>
+A <A NAME=MARKER2_9></A>string literal is zero or more characters enclosed in double quotes. Each string literal is implemented as a <A NAME=MARKER2_10></A>String object (not as an array of characters). For example, "abc" creates an new instance of class String. The following are all legal string literals:<P>
+<PRE>
+    "" \\ the empty string
+    "\""
+    "This is a string"
+    "This is a \
+       two-line string"
+</PRE>
+<A NAME=HEADING12></A>
+<HR>
+<H3> 2.5  Operators and Miscellaneous Separators</H3>
+The following characters are used in source code as operators or separators:<P>
+<PRE>
+    +  -  !  %  ^  &amp;  *  |  ~  /  &gt;  &lt;  
+
+    (  )  {  }  [  ]  ;  ?  :  ,  .  = 
+</PRE>
+In addition, the following character combinations are used as operators:<P>
+<PRE>
+    ++ -- == &lt;= &gt;= != &lt;&lt; &gt;&gt; 
+
+    &gt;&gt;&gt; += -= *= /= &amp;=|= 
+
+    ^=  %= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;= || &amp;&amp;
+</PRE>
+For more information see <A HREF="javaspec_8.html#1">Operators</A>.<P>
+<HR>
+<A HREF="javaspec_4.html">Next</A>       <A HREF="javaspec_2.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

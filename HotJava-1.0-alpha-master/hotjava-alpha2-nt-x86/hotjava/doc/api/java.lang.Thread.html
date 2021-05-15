@@ -1,0 +1,1008 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.Thread
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.System.html#_top_">Previous</a>    <a href="java.lang.ThreadDeath.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.Thread
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.lang.Thread
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Thread</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+<dt>
+implements <a href="java.lang.Runnable.html#_top_">Runnable</a>
+</dl>
+Thread objects are the basis for multi-threaded programming.  To
+create a new thread of execution, declare a new class which is a
+subclass of Thread.  Override the run() method with a method whose
+body is the code you want to execute in the thread.  Then create
+an instance of the class and call the start() method to create the
+thread and run the run method. For example:<p>
+<pre>
+	class PrimeThread extends Thread {
+	    public void run() {
+		// compute primes...
+	    }
+	}
+</pre>
+To start this thread you need to do the following:
+<pre>
+	PrimeThread p = new PrimeThread();
+	p.start();
+	...
+</pre>
+Another way to create a thread is by using the Runnable interface.
+This way any object that implements the Runnable interface can be
+run in a thread. For example:
+<pre>
+	class Primes Implements Runnable {
+	    public void run() {
+		// compute primes...
+	    }
+	}
+</pre>
+To start this thread you need to do the following:
+<pre>
+	Primes p = new Primes();
+	new Thread(p).start();
+	...
+</pre>
+The interpreter runs until all threads that are not deamon threads
+have died. A thread dies when its run method returns, or when the
+stop method is called.<p>
+When a new thread is created, it inherits the priority and the
+daemon flag from its parent (ie: the thread that created it).
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.27, 12 May 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MAX_PRIORITY">MAX_PRIORITY</a>
+</b>
+<dd>
+The maximum priority that a Thread can have.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MIN_PRIORITY">MIN_PRIORITY</a>
+</b>
+<dd>
+The minimum priority that a Thread can have.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#NORM_PRIORITY">NORM_PRIORITY</a>
+</b>
+<dd>
+The default priority that is assigned to a Thread.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Thread()"><b>Thread</b></a>()
+<dd>
+Constructs a new thread.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Thread(java.lang.Runnable)"><b>Thread</b></a>(Runnable)
+<dd>
+Constructs a new thread that applies the run method to
+the specified target.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Thread(java.lang.String)"><b>Thread</b></a>(String)
+<dd>
+Constructs a new thread with the specified name.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Thread(java.lang.Runnable, java.lang.String)"><b>Thread</b></a>(Runnable, String)
+<dd>
+Constructs a new thread with the specified name and applies
+the run() method on the specified target.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#activeCount()"><b>activeCount</b></a>()
+<dd>
+Returns the current number of active threads.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#countStackFrames()"><b>countStackFrames</b></a>()
+<dd>
+Returns the number of stack frames in this thread.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#currentThread()"><b>currentThread</b></a>()
+<dd>
+Returns a reference to the currently executing thread object.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#dumpStack()"><b>dumpStack</b></a>()
+<dd>
+A debugging procedure to print a stack trace for the
+current thread.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#enumerate(java.lang.Thread[])"><b>enumerate</b></a>(Thread[])
+<dd>
+Copies references to every active thread into an array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getName()"><b>getName</b></a>()
+<dd>
+Returns the thread's name.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPriority()"><b>getPriority</b></a>()
+<dd>
+Returns the thread's priority.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isAlive()"><b>isAlive</b></a>()
+<dd>
+Returns a boolean indicating if the thread is active.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isDaemon()"><b>isDaemon</b></a>()
+<dd>
+Returns the deamon flag of the thread.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#join(int)"><b>join</b></a>(int)
+<dd>
+Waits for this thread to die.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#join()"><b>join</b></a>()
+<dd>
+Waits forever for this thread to die.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#postException(java.lang.Object)"><b>postException</b></a>(Object)
+<dd>
+Post an object to another thread, to be thrown when it
+resumes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resume()"><b>resume</b></a>()
+<dd>
+Resumes the thread execution.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#run()"><b>run</b></a>()
+<dd>
+The body of the thread.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setDaemon(boolean)"><b>setDaemon</b></a>(boolean)
+<dd>
+Marks this thread as a daemon thread or a user thread.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setName(java.lang.String)"><b>setName</b></a>(String)
+<dd>
+Sets the thread's name.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setPriority(int)"><b>setPriority</b></a>(int)
+<dd>
+Sets the thread's priority.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setThreadPriority(int)"><b>setThreadPriority</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#sleep(int)"><b>sleep</b></a>(int)
+<dd>
+Causes the currently executing thread to sleep for the specified
+number of milliseconds.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#start()"><b>start</b></a>()
+<dd>
+Starts a thread.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stop()"><b>stop</b></a>()
+<dd>
+
+Stops a thread by tossing an object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stop(java.lang.Object)"><b>stop</b></a>(Object)
+<dd>
+Stops a thread by tossing an object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#suspend()"><b>suspend</b></a>()
+<dd>
+Suspends the thread execution.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#yield()"><b>yield</b></a>()
+<dd>
+Causes the currently executing thread object to yield.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="MIN_PRIORITY">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MIN_PRIORITY
+</b>
+<pre>
+  public final static int MIN_PRIORITY
+</pre>
+<dl>
+<dd>
+The minimum priority that a Thread can have.
+</dl>
+<a name="NORM_PRIORITY">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+NORM_PRIORITY
+</b>
+<pre>
+  public final static int NORM_PRIORITY
+</pre>
+<dl>
+<dd>
+The default priority that is assigned to a Thread.
+</dl>
+<a name="MAX_PRIORITY">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MAX_PRIORITY
+</b>
+<pre>
+  public final static int MAX_PRIORITY
+</pre>
+<dl>
+<dd>
+The maximum priority that a Thread can have.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Thread"></a>
+<a name="Thread()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Thread
+</b>
+<pre>
+  public Thread()
+</pre>
+<dl>
+<dd>
+Constructs a new thread. Threads created this way must have
+overridden their run() method to actually do anything.
+</dl>
+<p>
+<a name="Thread(java.lang.Runnable)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Thread
+</b>
+<pre>
+  public Thread(<a href="java.lang.Runnable.html#_top_">Runnable</a> target)
+</pre>
+<dl>
+<dd>
+Constructs a new thread that applies the run method to
+the specified target.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+target
+-
+	the object who's run method is called
+</dl>
+</dl>
+<p>
+<a name="Thread(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Thread
+</b>
+<pre>
+  public Thread(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Constructs a new thread with the specified name.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+name
+-
+	the name of the new thread
+</dl>
+</dl>
+<p>
+<a name="Thread(java.lang.Runnable, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Thread
+</b>
+<pre>
+  public Thread(<a href="java.lang.Runnable.html#_top_">Runnable</a> target,
+                <a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Constructs a new thread with the specified name and applies
+the run() method on the specified target.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+target
+-
+	the object whose run method is called
+<dd>
+name
+-
+	the name of the new thread
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="currentThread()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="currentThread">
+<b>
+currentThread
+</b>
+</a>
+<pre>
+  public static <a href="#_top_">Thread</a> currentThread()
+</pre>
+<dl>
+<dd>
+Returns a reference to the currently executing thread object.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+ the current thread
+</dl>
+</dl>
+<p>
+<a name="yield()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="yield">
+<b>
+yield
+</b>
+</a>
+<pre>
+  public static void yield()
+</pre>
+<dl>
+<dd>
+Causes the currently executing thread object to yield.
+(i.e., if there are other runnable threads they will be
+scheduled next).
+</dl>
+<p>
+<a name="sleep(int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="sleep">
+<b>
+sleep
+</b>
+</a>
+<pre>
+  public static void sleep(int millis)
+</pre>
+<dl>
+<dd>
+Causes the currently executing thread to sleep for the specified
+number of milliseconds.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+
+-
+ millis	the length of time to sleep in milliseconds
+</dl>
+</dl>
+<p>
+<a name="start()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="start">
+<b>
+start
+</b>
+</a>
+<pre>
+  public synchronized void start()
+</pre>
+<dl>
+<dd>
+Starts a thread. This will cause the run() method to
+be called. This method will return immediately.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ The thread was already started
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#run">run</a>,
+<a href="#stop">stop</a>
+</dl>
+</dl>
+<p>
+<a name="postException(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="postException">
+<b>
+postException
+</b>
+</a>
+<pre>
+  public void postException(<a href="java.lang.Object.html#_top_">Object</a> exception)
+</pre>
+<dl>
+<dd>
+Post an object to another thread, to be thrown when it
+resumes.  If the object being posted is an instance of class
+Exception the stack trace of the thread being posted to will
+be filled in the instance.  This routine is used by
+Thread.stop() to asynchronously terminate threads.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+instance
+-
+ to post
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ If the target thread is not started
+</dl>
+</dl>
+<p>
+<a name="run()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="run">
+<b>
+run
+</b>
+</a>
+<pre>
+  public void run()
+</pre>
+<dl>
+<dd>
+The body of the thread. This method is called after
+the thread is started. You must either override this
+method by subclassing class Thread, or you must create
+the thread with a target.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#start">start</a>,
+<a href="#stop">stop</a>
+</dl>
+</dl>
+<p>
+<a name="stop()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stop">
+<b>
+stop
+</b>
+</a>
+<pre>
+  public synchronized void stop()
+</pre>
+<dl>
+<dd>
+Stops a thread by tossing an object.  By default this
+routine tosses a new instance of ThreadDeath to the target
+thread.  ThreadDeath is not actually a subclass of Exception,
+but is a subclass of Object.  Users should not normally try
+to catch ThreaDeath unless they must do some extraordinary
+cleanup operation.  If ThreadDeath is caught it is important
+to rethrow the object so that the thread will actually die.
+The top-level error handler will not print out a message if
+ThreadDeath falls through.
+The essential difference between this routine and
+postException() is that if the target thread has not yet
+started to run it will be killed imediately without trying to
+post the object instance as an error.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ If the thread is not started 
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#start ">start </a>,
+<a href="#run">run</a>
+</dl>
+</dl>
+<p>
+<a name="stop(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stop">
+<b>
+stop
+</b>
+</a>
+<pre>
+  public synchronized void stop(<a href="java.lang.Object.html#_top_">Object</a> o)
+</pre>
+<dl>
+<dd>
+Stops a thread by tossing an object.  Normally users should
+just call Thread.Stop() with no argument.  In some
+exceptional circumstances Used by Thread.Stop() to kill
+anothe is tossed, "ThreadDeath", is not actually a subclass
+of Exception, but is a subclass of Object.  The essential
+difference between this routine and postException() is that
+if the target thread has not yet started to run it will be
+killed imediately without trying to post the object instance
+as an error.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ If the thread is not started 
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#start ">start </a>,
+<a href="#run ">run </a>
+</dl>
+</dl>
+<p>
+<a name="isAlive()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isAlive">
+<b>
+isAlive
+</b>
+</a>
+<pre>
+  public boolean isAlive()
+</pre>
+<dl>
+<dd>
+Returns a boolean indicating if the thread is active.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	a boolean indicating whether the thread has been started
+</dl>
+</dl>
+<p>
+<a name="suspend()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="suspend">
+<b>
+suspend
+</b>
+</a>
+<pre>
+  public void suspend()
+</pre>
+<dl>
+<dd>
+Suspends the thread execution.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ The thread is not active.
+</dl>
+</dl>
+<p>
+<a name="resume()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resume">
+<b>
+resume
+</b>
+</a>
+<pre>
+  public void resume()
+</pre>
+<dl>
+<dd>
+Resumes the thread execution.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ The thread is not active.
+</dl>
+</dl>
+<p>
+<a name="setPriority(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setPriority">
+<b>
+setPriority
+</b>
+</a>
+<pre>
+  public void setPriority(int newPriority)
+</pre>
+<dl>
+<dd>
+Sets the thread's priority.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalArgumentException.html#_top_">IllegalArgumentException</a>
+<dd>
+ The priority is not within the
+		range MIN_PRIORITY, MAX_PRIORITY
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#MIN_PRIORITY">MIN_PRIORITY</a>,
+<a href="#MAX_PRIORITY">MAX_PRIORITY</a>,
+<a href="#getPriority">getPriority</a>
+</dl>
+</dl>
+<p>
+<a name="setThreadPriority(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setThreadPriority">
+<b>
+setThreadPriority
+</b>
+</a>
+<pre>
+  public void setThreadPriority(int newPriority)
+</pre>
+<a name="getPriority()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPriority">
+<b>
+getPriority
+</b>
+</a>
+<pre>
+  public int getPriority()
+</pre>
+<dl>
+<dd>
+Returns the thread's priority.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the priority of the thread
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#setPriority">setPriority</a>
+</dl>
+</dl>
+<p>
+<a name="setName(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setName">
+<b>
+setName
+</b>
+</a>
+<pre>
+  public void setName(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Sets the thread's name.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+name
+-
+	the new name of the thread
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#getName">getName</a>
+</dl>
+</dl>
+<p>
+<a name="getName()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getName">
+<b>
+getName
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getName()
+</pre>
+<dl>
+<dd>
+Returns the thread's name.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the name of the thread
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#setName">setName</a>
+</dl>
+</dl>
+<p>
+<a name="activeCount()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="activeCount">
+<b>
+activeCount
+</b>
+</a>
+<pre>
+  public static int activeCount()
+</pre>
+<dl>
+<dd>
+Returns the current number of active threads.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+integer count of active threads 
+</dl>
+</dl>
+<p>
+<a name="enumerate(java.lang.Thread[])">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="enumerate">
+<b>
+enumerate
+</b>
+</a>
+<pre>
+  public static int enumerate(<a href="#_top_">Thread</a> tarray[])
+</pre>
+<dl>
+<dd>
+Copies references to every active thread into an array.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+number of Threads put into the array
+</dl>
+</dl>
+<p>
+<a name="countStackFrames()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="countStackFrames">
+<b>
+countStackFrames
+</b>
+</a>
+<pre>
+  public int countStackFrames()
+</pre>
+<dl>
+<dd>
+Returns the number of stack frames in this thread. The thread
+must be suspended when this method is called.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ The thread is not suspended
+</dl>
+</dl>
+<p>
+<a name="join(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="join">
+<b>
+join
+</b>
+</a>
+<pre>
+  public synchronized void join(int millis)
+</pre>
+<dl>
+<dd>
+Waits for this thread to die.  A timeout in milliseconds can
+be specified.  A timeout of 0 milliseconds means to wait
+forever.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+millis
+-
+	the time to wait in milliseconds
+</dl>
+</dl>
+<p>
+<a name="join()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="join">
+<b>
+join
+</b>
+</a>
+<pre>
+  public void join()
+</pre>
+<dl>
+<dd>
+Waits forever for this thread to die.
+</dl>
+<p>
+<a name="dumpStack()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="dumpStack">
+<b>
+dumpStack
+</b>
+</a>
+<pre>
+  public static void dumpStack()
+</pre>
+<dl>
+<dd>
+A debugging procedure to print a stack trace for the
+current thread.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Exception.html#printStackTrace">printStackTrace</a>
+</dl>
+</dl>
+<p>
+<a name="setDaemon(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setDaemon">
+<b>
+setDaemon
+</b>
+</a>
+<pre>
+  public void setDaemon(boolean on)
+</pre>
+<dl>
+<dd>
+Marks this thread as a daemon thread or a user thread.
+When there are only daemon threads left running in the
+system, Java exits.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+on
+-
+	determines whether the thread will be a deamon thread
+<dt>
+<b>Throws:</b> <a href="java.lang.IllegalStateException.html#_top_">IllegalStateException</a>
+<dd>
+ The thread is active
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#isDaemon">isDaemon</a>
+</dl>
+</dl>
+<p>
+<a name="isDaemon()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isDaemon">
+<b>
+isDaemon
+</b>
+</a>
+<pre>
+  public boolean isDaemon()
+</pre>
+<dl>
+<dd>
+Returns the deamon flag of the thread.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+a boolean indicating wheter the thread is a deamon thread
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#setDaemon">setDaemon</a>
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.System.html#_top_">Previous</a>    <a href="java.lang.ThreadDeath.html#_top_">Next</a></pre>
+</body>
+</html>

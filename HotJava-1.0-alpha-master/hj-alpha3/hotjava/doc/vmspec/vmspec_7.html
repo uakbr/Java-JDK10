@@ -1,0 +1,29 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Registers</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING10></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_6.html">Prev</A>       <A HREF="vmspec_8.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Registers</H1>
+
+<HR>
+
+The registers of the Java virtual machine maintain machine state during its operation. They are directly analogous to the registers of a microprocessor. The Java virtual machine's registers include:<P>
+<UL>
+<LI>pc -- the Java program counter<P>
+<LI>optop -- a pointer to the top of the Java operand stack<P>
+<LI>frame -- a pointer to the execution environment of the currently executing method<P>
+<LI>vars -- a pointer to the 0th local variable of the currently executing method<P>
+</UL>
+The Java virtual machine defines each of its registers to be 32 bits wide. Some Java implementations may not use all of these registers: e.g. a compiler from Java source to native code does not maintain pc.<P>
+The Java virtual machine is stack-based, so it does not define or use registers for passing or receiving parameters. This is again a conscious decision in favor of instruction set simplicity and compactness, and efficient implementation on host processors without many registers (e.g. Intel 486).<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_6.html">Prev</A>       <A HREF="vmspec_8.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

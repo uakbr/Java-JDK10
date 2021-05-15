@@ -1,0 +1,50 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: - An Optimization- Pushing Constants onto the Stack (_quick variants)</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING300></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_42.html">Prev</A>       <A HREF="vmspec_44.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+<HR>
+<H2>- An Optimization</H2>
+<HR>
+<H1>Pushing Constants onto the Stack (_quick variants)</H1>
+<DL>
+<DT><A HREF="vmspec_43.html#HEADING301"><B></B>  ldc1_quick</A><DD>
+<DT><A HREF="vmspec_43.html#HEADING302"><B></B>  ldc2_quick</A><DD>
+<DT><A HREF="vmspec_43.html#HEADING303"><B></B>  ldc2w_quick</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING301></A>
+<H3>ldc1_quick</H3>
+Push item from constant pool onto stack<BR><IMG SRC="App_A_Tbl_13.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., item<P>
+</PRE>
+indexbyte1 is used as an unsigned 8-bit index into the constant pool of the current class. The item at that index is pushed onto the stack.<P>
+<A NAME=HEADING302></A>
+<H3>ldc2_quick</H3>
+Push item from constant pool onto stack<BR><IMG SRC="App_A_Tbl_4.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., item<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant at that index is resolved and the item at that index is pushed onto the stack.<P>
+<A NAME=HEADING303></A>
+<H3>ldc2w_quick</H3>
+Push long integer or double float from constant pool onto stack<BR><IMG SRC="App_A_Tbl_5.gif"><BR>
+<P>
+<PRE>
+... =&gt;=&gt; ..., constant-word1, constant-word2<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant at that index is pushed onto the stack. <P>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_42.html">Prev</A>       <A HREF="vmspec_44.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,242 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.RowColLayout
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Row.html#_top_">Previous</a>    <a href="awt.RowLayout.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.RowColLayout
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.ContainerLayout.html#_top_">awt.ContainerLayout</a>
+           |
+           +----<a href="awt.GapsLayout.html#_top_">awt.GapsLayout</a>
+                   |
+                   +----awt.RowColLayout
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+RowColLayout</b>
+<dt>
+extends <a href="awt.GapsLayout.html#_top_">GapsLayout</a>
+</dl>
+RowColLayout arranges components in rows and columns.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.18 17 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff, Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#oneColumn">oneColumn</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#splitHorz">splitHorz</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#splitVert">splitVert</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#RowColLayout(int, int)"><b>RowColLayout</b></a>(int, int)
+<dd>
+Constructor, rows can be 0, meaning any
+number of rows.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#RowColLayout(int, int, boolean)"><b>RowColLayout</b></a>(int, int, boolean)
+<dd>
+Constructor, rows can be 0, meaning any number of rows.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize(awt.Container)"><b>getPreferredSize</b></a>(Container)
+<dd>
+Preferred Dimension
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layout(awt.Container)"><b>layout</b></a>(Container)
+<dd>
+Layout the container
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="oneColumn">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+oneColumn
+</b>
+<pre>
+  public static <a href="#_top_">RowColLayout</a> oneColumn
+</pre>
+<a name="splitVert">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+splitVert
+</b>
+<pre>
+  public static <a href="#_top_">RowColLayout</a> splitVert
+</pre>
+<a name="splitHorz">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+splitHorz
+</b>
+<pre>
+  public static <a href="#_top_">RowColLayout</a> splitHorz
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="RowColLayout"></a>
+<a name="RowColLayout(int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+RowColLayout
+</b>
+<pre>
+  public RowColLayout(int pRows,
+                      int pCols)
+</pre>
+<dl>
+<dd>
+Constructor, rows can be 0, meaning any
+number of rows.
+</dl>
+<p>
+<a name="RowColLayout(int, int, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+RowColLayout
+</b>
+<pre>
+  public RowColLayout(int pRows,
+                      int pCols,
+                      boolean packed)
+</pre>
+<dl>
+<dd>
+Constructor, rows can be 0, meaning any number of rows. If
+packed is true then columns will vary in width according to the
+widest member in each column.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+pRows
+-
+ the number of rows, can be 0 for an arbitrary number.
+<dd>
+pCols
+-
+ the number of columns.
+<dd>
+packed
+-
+ if true then each column will have the width of
+its widest member rather than the width of the widest member for
+all the columns.
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getPreferredSize(awt.Container)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize(<a href="awt.Container.html#_top_">Container</a> pTarget)
+</pre>
+<dl>
+<dd>
+Preferred Dimension
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.ContainerLayout.html#getPreferredSize(awt.Container)">getPreferredSize</a> in class <a href="awt.ContainerLayout.html#_top_">ContainerLayout</a></dl>
+</dl>
+<p>
+<a name="layout(awt.Container)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layout">
+<b>
+layout
+</b>
+</a>
+<pre>
+  public void layout(<a href="awt.Container.html#_top_">Container</a> pTarget)
+</pre>
+<dl>
+<dd>
+Layout the container
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.ContainerLayout.html#layout(awt.Container)">layout</a> in class <a href="awt.ContainerLayout.html#_top_">ContainerLayout</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Row.html#_top_">Previous</a>    <a href="awt.RowLayout.html#_top_">Next</a></pre>
+</body>
+</html>

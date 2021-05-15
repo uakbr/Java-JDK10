@@ -1,0 +1,128 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Language Specification</TITLE>
+</HEAD>
+<BODY>
+<A HREF="javaspec_2.html">Next</A>     <P>
+<HR>
+<H1>The Java Language Specification</H1>
+<HR>
+This document is a preliminary specification of the JavaTM  language. Both the specification and the language are subject to change. When a feature that exists in both Java and ANSI C isn't explained fully in this specification, the feature should be assumed to work as it does in ANSI C. Send comments on the Java Language and specification to WebRunner@Sun.COM.<P>
+<H2>Table of Contents</H2>
+<DL>
+<DT><A HREF="javaspec_2.html#HEADING1"><B>1 </B> - Program Structure</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING2"><B>2 </B> - Lexical Issues</A><DD>
+<DL>
+<DT><A HREF="javaspec_3.html#HEADING3"><B> 2.1 </B> - Comments</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING4"><B> 2.2 </B> - Identifiers</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING5"><B> 2.3 </B> - Keywords</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING6"><B> 2.4 </B> - Literals</A><DD>
+<dl>
+<DT><A HREF="javaspec_3.html#HEADING7"><B>2.4.1 </B> - Integer Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING8"><B>2.4.2 </B> - Floating Point Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING9"><B>2.4.3 </B> - Boolean Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING10"><B>2.4.4 </B> - Character Literals</A><DD>
+<DT><A HREF="javaspec_3.html#HEADING11"><B>2.4.5 </B> - String Literals</A><DD>
+</dl>
+<DT><A HREF="javaspec_3.html#HEADING12"><B> 2.5 </B> - Operators and Miscellaneous Separators</A><DD>
+</DL>
+<DT><A HREF="javaspec_4.html#HEADING13"><B>3 </B> - Types</A><DD>
+<DL>
+<DT><A HREF="javaspec_4.html#HEADING14"><B> 3.1 </B> - Numeric Types</A><DD>
+<dl>
+<DT><A HREF="javaspec_4.html#HEADING15"><B>3.1.1 </B> - Integer Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING16"><B>3.1.2 </B> - Floating Point Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING17"><B>3.1.3 </B> - Character Types</A><DD>
+</dl>
+<DT><A HREF="javaspec_4.html#HEADING18"><B> 3.2 </B> - Boolean Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING19"><B> 3.3 </B> - Arrays</A><DD>
+<dl>
+<DT><A HREF="javaspec_4.html#HEADING20"><B>3.3.1 </B> - Array Detail</A><DD>
+</dl>
+</DL>
+<DT><A HREF="javaspec_5.html#HEADING21"><B>4 </B> - Classes</A><DD>
+<DL>
+<DT><A HREF="javaspec_5.html#HEADING22"><B> 4.1 </B> - Casting Between Class Types</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING23"><B> 4.2 </B> - Methods</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING24"><B>4.2.1 </B> - Instance Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING25"><B>4.2.2 </B> - The this and super Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING26"><B>4.2.3 </B> - Setting Local Variables</A><DD>
+</dl>
+<DT><A HREF="javaspec_5.html#HEADING27"><B> 4.3 </B> - Overriding Methods</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING28"><B> 4.4 </B> - Overload Resolution</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING29"><B> 4.5 </B> - Constructors</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING30"><B> 4.6 </B> - Object Creation--the new Operator</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING31"><B>4.6.1 </B> - Garbage Collection</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING32"><B>4.6.2 </B> - Finalization</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING33"><B>4.6.3 </B> - The null Reference</A><DD>
+</dl>
+<DT><A HREF="javaspec_5.html#HEADING34"><B> 4.7 </B> - Static Methods, Variables, and Initializers</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING35"><B>4.7.1 </B> - Order of Declarations</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING36"><B>4.7.2 </B> - Order of Initialization</A><DD>
+</dl>
+<DT><A HREF="javaspec_5.html#HEADING37"><B> 4.8 </B> - Access Specifiers</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING38"><B> 4.9 </B> - Variable Scoping Rules</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING39"><B> 4.10 </B> - Modifiers</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING40"><B>4.10.1 </B> - Threadsafe Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING41"><B>4.10.2 </B> - Transient Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING42"><B>4.10.3 </B> - Final Classes, Methods, and Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING43"><B>4.10.4 </B> - Native Methods</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING44"><B>4.10.5 </B> - Abstract Methods</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING45"><B>4.10.6 </B> - Synchronized Methods and Blocks</A><DD>
+</dl>
+</DL>
+<DT><A HREF="javaspec_6.html#HEADING46"><B>5 </B> - Interfaces</A><DD>
+<DL>
+<DT><A HREF="javaspec_6.html#HEADING47"><B> 5.1 </B> - Interfaces as Types</A><DD>
+<DT><A HREF="javaspec_6.html#HEADING48"><B> 5.2 </B> - Methods in Interfaces</A><DD>
+<DT><A HREF="javaspec_6.html#HEADING49"><B> 5.3 </B> - Variables in Interfaces</A><DD>
+<DT><A HREF="javaspec_6.html#HEADING50"><B> 5.4 </B> - Combining Interfaces</A><DD>
+</DL>
+<DT><A HREF="javaspec_7.html#HEADING51"><B>6 </B> - Packages</A><DD>
+<DL>
+<DT><A HREF="javaspec_7.html#HEADING52"><B> 6.1 </B> - Specifying a Compilation Unit's Package</A><DD>
+<DT><A HREF="javaspec_7.html#HEADING53"><B> 6.2 </B> - Using Classes and Interfaces from Other Packages</A><DD>
+</DL>
+<DT><A HREF="javaspec_8.html#HEADING54"><B>7 </B> - Expressions</A><DD>
+<DL>
+<DT><A HREF="javaspec_8.html#HEADING55"><B> 7.1 </B> - Operators </A><DD>
+<dl>
+<DT><A HREF="javaspec_8.html#HEADING56"><B>7.1.1 </B> - Operators on Integers</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING57"><B>7.1.2 </B> - Operators on Boolean Values</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING58"><B>7.1.3 </B> - Operators on Floating Point Values</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING59"><B>7.1.4 </B> - Operators on Arrays</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING60"><B>7.1.5 </B> - Operators on Strings</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING61"><B>7.1.6 </B> - Operators on Objects</A><DD>
+</dl>
+<DT><A HREF="javaspec_8.html#HEADING62"><B> 7.2 </B> - Casts and Conversions</A><DD>
+</DL>
+<DT><A HREF="javaspec_9.html#HEADING63"><B>8 </B> - Statements</A><DD>
+<DL>
+<DT><A HREF="javaspec_9.html#HEADING64"><B> 8.1 </B> - Declarations</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING65"><B> 8.2 </B> - Expressions</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING66"><B> 8.3 </B> - Control Flow</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING67"><B> 8.4 </B> - Exceptions</A><DD>
+<dl>
+<DT><A HREF="javaspec_9.html#HEADING68"><B>8.4.1 </B> - The finally Statement</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING69"><B>8.4.2 </B> - Runtime Exceptions</A><DD>
+</dl>
+</DL>
+<DT><A HREF="javaspec_10.html#HEADING70"><B>A </B> - Appendix: Floating Point</A><DD>
+<DL>
+<DT><A HREF="javaspec_10.html#HEADING71"><B> A.1 </B> - Special Values</A><DD>
+<DT><A HREF="javaspec_10.html#HEADING72"><B> A.2 </B> - Binary Format Conversion</A><DD>
+<DT><A HREF="javaspec_10.html#HEADING73"><B> A.3 </B> - Ordering</A><DD>
+<DT><A HREF="javaspec_10.html#HEADING74"><B> A.4 </B> - Summary of IEEE-754 Differences</A><DD>
+</DL>
+</DL>
+
+<HR>
+<A HREF="javaspec_2.html">Next</A>     <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

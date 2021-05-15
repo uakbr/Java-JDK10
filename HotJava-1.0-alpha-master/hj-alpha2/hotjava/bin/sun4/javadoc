@@ -1,0 +1,2 @@
+#!/bin/sh
+`dirname $0`/java -ms8m -verbosegc java.tools.javadoc.Main $*

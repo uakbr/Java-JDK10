@@ -1,0 +1,27 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Accessing C Code from Java</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING2></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_2.html">Prev</A> <A HREF="rpi_4.html">Next</A><P>
+<H1>1  Accessing C Code from Java</H1>
+<HR>
+
+
+The general procedure for accessing C code from Java is as follows:<P>
+<UL>
+<LI>Define your class in Java using  native methods to indicate  that their implementation is found externally in your C routines.<P>
+<LI>Compile the class source  creating the .class file. See javac for more information on compiling .java files.<P>
+<LI>Run javah on the class to generate a C structure that matches the Java class. (see javah for more information). javah creates a C header file that defines the data structures and function prototypes the C  routines will need to implement the Java native methods.<P>
+<LI>Run javah -stubs on the class to generate stub declarations (see javah for more information). The stubs are used by the Java interpreter to find the native method stub and marshal parameters between the Java interpreter and the C routines.<P>
+<LI>Create a C file from the stubs file by putting the include file StubPreamble.h followed by the javah-generated stubs into a C file. Next, compile this file and put it into a dynamically loadable module.<P>
+<LI>Define a C file that has the C routines that implement the native methods declared in  your Java class. Compile this C file and add it to the dynamically loadable library that contains your compiled C stubs.<P>
+<LI>The last step is  linking your library into Java so that your dependent Java class can resolve it's native methods and execute. This final step is achieved by using the Java dynamic linker class.  This class is   in the java.util package. You must be sure to use Linker to load your library before you use any native methods from your Java class or you'll receive an UnsatisfiedLinkException exception.<P>
+</UL>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_2.html">Prev</A> <A HREF="rpi_4.html">Next</A><P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

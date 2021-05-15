@@ -1,0 +1,190 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.ftp.IftpClient
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.ftp.html">This Package</a>    <a href="net.ftp.FtpInputStream.html#_top_">Previous</a>    <a href="net.ftp.html">Next</a></pre>
+<hr>
+<h1>
+Class net.ftp.IftpClient
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.NetworkClient.html#_top_">net.NetworkClient</a>
+           |
+           +----<a href="net.TransferProtocolClient.html#_top_">net.TransferProtocolClient</a>
+                   |
+                   +----<a href="net.ftp.FtpClient.html#_top_">net.ftp.FtpClient</a>
+                           |
+                           +----net.ftp.IftpClient
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+IftpClient</b>
+<dt>
+extends <a href="net.ftp.FtpClient.html#_top_">FtpClient</a>
+</dl>
+Create an FTP client that uses a proxy server to cross a network
+firewall boundary.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.9, 10 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne<dt>
+<b>See Also:</b>
+<dd>
+<a href="net.ftp.FtpClient.html#_top_">FtpClient</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#IftpClient(java.lang.String)"><b>IftpClient</b></a>(String)
+<dd>
+Create a new IftpClient handle.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#IftpClient()"><b>IftpClient</b></a>()
+<dd>
+Create an uninitialized client handle
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#login(java.lang.String, java.lang.String)"><b>login</b></a>(String, String)
+<dd>
+
+login user to a host with username <i>user</i> and password 
+<i>password</i> 
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openServer(java.lang.String)"><b>openServer</b></a>(String)
+<dd>
+Open an FTP connection to host <i>host</i>.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setProxyServer(java.lang.String)"><b>setProxyServer</b></a>(String)
+<dd>
+change the proxyserver from the default.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="IftpClient"></a>
+<a name="IftpClient(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+IftpClient
+</b>
+<pre>
+  public IftpClient(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<dl>
+<dd>
+Create a new IftpClient handle.
+</dl>
+<p>
+<a name="IftpClient()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+IftpClient
+</b>
+<pre>
+  public IftpClient()
+</pre>
+<dl>
+<dd>
+Create an uninitialized client handle
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="openServer(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openServer">
+<b>
+openServer
+</b>
+</a>
+<pre>
+  public void openServer(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<dl>
+<dd>
+Open an FTP connection to host <i>host</i>.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.ftp.FtpClient.html#openServer(java.lang.String)">openServer</a> in class <a href="net.ftp.FtpClient.html#_top_">FtpClient</a></dl>
+</dl>
+<p>
+<a name="login(java.lang.String, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="login">
+<b>
+login
+</b>
+</a>
+<pre>
+  public void login(<a href="java.lang.String.html#_top_">String</a> user,
+                    <a href="java.lang.String.html#_top_">String</a> password)
+</pre>
+<dl>
+<dd>
+login user to a host with username <i>user</i> and password 
+<i>password</i> 
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.ftp.FtpClient.html#login(java.lang.String, java.lang.String)">login</a> in class <a href="net.ftp.FtpClient.html#_top_">FtpClient</a></dl>
+</dl>
+<p>
+<a name="setProxyServer(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setProxyServer">
+<b>
+setProxyServer
+</b>
+</a>
+<pre>
+  public void setProxyServer(<a href="java.lang.String.html#_top_">String</a> proxy)
+</pre>
+<dl>
+<dd>
+change the proxyserver from the default.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.ftp.html">This Package</a>    <a href="net.ftp.FtpInputStream.html#_top_">Previous</a>    <a href="net.ftp.html">Next</a></pre>
+</body>
+</html>

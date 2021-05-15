@@ -1,0 +1,818 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.AppletDisplayItem
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.Applet.html#_top_">Previous</a>    <a href="browser.BasicStyle.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.AppletDisplayItem
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Observable.html#_top_">browser.Observable</a>
+           |
+           +----<a href="awt.DisplayItem.html#_top_">awt.DisplayItem</a>
+                   |
+                   +----browser.AppletDisplayItem
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+AppletDisplayItem</b>
+<dt>
+extends <a href="awt.DisplayItem.html#_top_">DisplayItem</a>
+<dt>
+implements <a href="browser.Alignable.html#_top_">Alignable</a>
+</dl>
+Class AppletDisplayItem is created as a place holder for all
+applets that appear in hotjava-aware html documents.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.26, 11 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#BORDER">BORDER</a>
+</b>
+<dd>
+Thickness of the load-status icon border.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#CREATED">CREATED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#DEFAULT_SIZE">DEFAULT_SIZE</a>
+</b>
+<dd>
+Size of status icons + border.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#DESTROYED">DESTROYED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ERROR">ERROR</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#INITIALIZING">INITIALIZING</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#LOADED">LOADED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#LOADING">LOADING</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#STARTED">STARTED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#STOPPED">STOPPED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#appletDelayedImage">appletDelayedImage</a>
+</b>
+<dd>
+"Applet Delayed" icon.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#appletFailedImage">appletFailedImage</a>
+</b>
+<dd>
+"Applet Failed" icon.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#appletLoadingImage">appletLoadingImage</a>
+</b>
+<dd>
+"Applet Loading" icon.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#AppletDisplayItem(awt.DisplayItemWindow, net.www.html.URL, net.www.html.TagRef)"><b>AppletDisplayItem</b></a>(DisplayItemWindow, URL, TagRef)
+<dd>
+Creates an applet display item, if possible use the width/height
+attributes to resize to the proper initial size.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#destroy()"><b>destroy</b></a>()
+<dd>
+Destroy the applet
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAlign()"><b>getAlign</b></a>()
+<dd>
+Get alignment for formatting.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getStatus()"><b>getStatus</b></a>()
+<dd>
+Get the status of the applet.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#gotFocus()"><b>gotFocus</b></a>()
+<dd>
+Got focus
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#init()"><b>init</b></a>()
+<dd>
+Initialize the applet.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keyPressed(int)"><b>keyPressed</b></a>(int)
+<dd>
+KeyPressed
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#load()"><b>load</b></a>()
+<dd>
+Load the applet
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lostFocus()"><b>lostFocus</b></a>()
+<dd>
+Lost focus
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint(awt.Window, int, int)"><b>paint</b></a>(Window, int, int)
+<dd>
+Paint the applet, after damage.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint(awt.Graphics)"><b>paint</b></a>(Graphics)
+<dd>
+	
+Paint the applet, given a graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#requestUpdate()"><b>requestUpdate</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#start()"><b>start</b></a>()
+<dd>
+Start the applet
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stop()"><b>stop</b></a>()
+<dd>
+Stop the applet
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackEnter(awt.Event)"><b>trackEnter</b></a>(Event)
+<dd>
+Mouse enter
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackExit(awt.Event)"><b>trackExit</b></a>(Event)
+<dd>
+Mouse exit
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackMotion(awt.Event)"><b>trackMotion</b></a>(Event)
+<dd>
+Mouse move
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStart(awt.Event)"><b>trackStart</b></a>(Event)
+<dd>
+Mouse down
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStop(awt.Event)"><b>trackStop</b></a>(Event)
+<dd>
+Mouse up
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update(awt.Window, int, int)"><b>update</b></a>(Window, int, int)
+<dd>
+Paint the applet, after damage.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update(awt.Graphics)"><b>update</b></a>(Graphics)
+<dd>
+	
+Paint the applet, given a graphics context.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="CREATED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+CREATED
+</b>
+<pre>
+  public final static int CREATED
+</pre>
+<a name="LOADING">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+LOADING
+</b>
+<pre>
+  public final static int LOADING
+</pre>
+<a name="LOADED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+LOADED
+</b>
+<pre>
+  public final static int LOADED
+</pre>
+<a name="INITIALIZING">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+INITIALIZING
+</b>
+<pre>
+  public final static int INITIALIZING
+</pre>
+<a name="STARTED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+STARTED
+</b>
+<pre>
+  public final static int STARTED
+</pre>
+<a name="STOPPED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+STOPPED
+</b>
+<pre>
+  public final static int STOPPED
+</pre>
+<a name="DESTROYED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+DESTROYED
+</b>
+<pre>
+  public final static int DESTROYED
+</pre>
+<a name="ERROR">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ERROR
+</b>
+<pre>
+  public final static int ERROR
+</pre>
+<a name="BORDER">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+BORDER
+</b>
+<pre>
+  public final static int BORDER
+</pre>
+<dl>
+<dd>
+Thickness of the load-status icon border.
+</dl>
+<a name="DEFAULT_SIZE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+DEFAULT_SIZE
+</b>
+<pre>
+  public final static int DEFAULT_SIZE
+</pre>
+<dl>
+<dd>
+Size of status icons + border.
+</dl>
+<a name="appletDelayedImage">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+appletDelayedImage
+</b>
+<pre>
+  public static <a href="awt.Image.html#_top_">Image</a> appletDelayedImage
+</pre>
+<dl>
+<dd>
+"Applet Delayed" icon.
+</dl>
+<a name="appletFailedImage">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+appletFailedImage
+</b>
+<pre>
+  public static <a href="awt.Image.html#_top_">Image</a> appletFailedImage
+</pre>
+<dl>
+<dd>
+"Applet Failed" icon.
+</dl>
+<a name="appletLoadingImage">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+appletLoadingImage
+</b>
+<pre>
+  public static <a href="awt.Image.html#_top_">Image</a> appletLoadingImage
+</pre>
+<dl>
+<dd>
+"Applet Loading" icon.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="AppletDisplayItem"></a>
+<a name="AppletDisplayItem(awt.DisplayItemWindow, net.www.html.URL, net.www.html.TagRef)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+AppletDisplayItem
+</b>
+<pre>
+  public AppletDisplayItem(<a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a> parent,
+                           <a href="net.www.html.URL.html#_top_">URL</a> documentURL,
+                           <a href="net.www.html.TagRef.html#_top_">TagRef</a> tag)
+</pre>
+<dl>
+<dd>
+Creates an applet display item, if possible use the width/height
+attributes to resize to the proper initial size.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getStatus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getStatus">
+<b>
+getStatus
+</b>
+</a>
+<pre>
+  public final int getStatus()
+</pre>
+<dl>
+<dd>
+Get the status of the applet.
+</dl>
+<p>
+<a name="getAlign()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAlign">
+<b>
+getAlign
+</b>
+</a>
+<pre>
+  public int getAlign()
+</pre>
+<dl>
+<dd>
+Get alignment for formatting.
+</dl>
+<p>
+<a name="requestUpdate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="requestUpdate">
+<b>
+requestUpdate
+</b>
+</a>
+<pre>
+  public void requestUpdate()
+</pre>
+<a name="load()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="load">
+<b>
+load
+</b>
+</a>
+<pre>
+  public void load()
+</pre>
+<dl>
+<dd>
+Load the applet
+</dl>
+<p>
+<a name="init()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="init">
+<b>
+init
+</b>
+</a>
+<pre>
+  public void init()
+</pre>
+<dl>
+<dd>
+Initialize the applet. This should be called after
+the parent of the display item is set. The font will
+be the default font of the applet.
+</dl>
+<p>
+<a name="start()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="start">
+<b>
+start
+</b>
+</a>
+<pre>
+  public void start()
+</pre>
+<dl>
+<dd>
+Start the applet
+</dl>
+<p>
+<a name="stop()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stop">
+<b>
+stop
+</b>
+</a>
+<pre>
+  public void stop()
+</pre>
+<dl>
+<dd>
+Stop the applet
+</dl>
+<p>
+<a name="destroy()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="destroy">
+<b>
+destroy
+</b>
+</a>
+<pre>
+  public void destroy()
+</pre>
+<dl>
+<dd>
+Destroy the applet
+</dl>
+<p>
+<a name="paint(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint(<a href="awt.Window.html#_top_">Window</a> w,
+                    int x,
+                    int y)
+</pre>
+<dl>
+<dd>
+Paint the applet, after damage.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#paint(awt.Window, int, int)">paint</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="update(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public void update(<a href="awt.Window.html#_top_">Window</a> w,
+                     int x,
+                     int y)
+</pre>
+<dl>
+<dd>
+Paint the applet, after damage.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#update(awt.Window, int, int)">update</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="paint(awt.Graphics)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint(<a href="awt.Graphics.html#_top_">Graphics</a> g)
+</pre>
+<dl>
+<dd>
+	
+Paint the applet, given a graphics context.
+</dl>
+<p>
+<a name="update(awt.Graphics)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public void update(<a href="awt.Graphics.html#_top_">Graphics</a> g)
+</pre>
+<dl>
+<dd>
+	
+Paint the applet, given a graphics context.
+</dl>
+<p>
+<a name="trackStart(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStart">
+<b>
+trackStart
+</b>
+</a>
+<pre>
+  public void trackStart(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Mouse down
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#trackStart(awt.Event)">trackStart</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="trackMotion(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackMotion">
+<b>
+trackMotion
+</b>
+</a>
+<pre>
+  public void trackMotion(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Mouse move
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#trackMotion(awt.Event)">trackMotion</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="trackStop(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStop">
+<b>
+trackStop
+</b>
+</a>
+<pre>
+  public void trackStop(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Mouse up
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#trackStop(awt.Event)">trackStop</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="trackEnter(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackEnter">
+<b>
+trackEnter
+</b>
+</a>
+<pre>
+  public void trackEnter(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Mouse enter
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#trackEnter(awt.Event)">trackEnter</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="trackExit(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackExit">
+<b>
+trackExit
+</b>
+</a>
+<pre>
+  public void trackExit(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Mouse exit
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#trackExit(awt.Event)">trackExit</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="gotFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="gotFocus">
+<b>
+gotFocus
+</b>
+</a>
+<pre>
+  public void gotFocus()
+</pre>
+<dl>
+<dd>
+Got focus
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#gotFocus()">gotFocus</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="lostFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lostFocus">
+<b>
+lostFocus
+</b>
+</a>
+<pre>
+  public void lostFocus()
+</pre>
+<dl>
+<dd>
+Lost focus
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#lostFocus()">lostFocus</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="keyPressed(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keyPressed">
+<b>
+keyPressed
+</b>
+</a>
+<pre>
+  public void keyPressed(int key)
+</pre>
+<dl>
+<dd>
+KeyPressed
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#keyPressed(int)">keyPressed</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.Applet.html#_top_">Previous</a>    <a href="browser.BasicStyle.html#_top_">Next</a></pre>
+</body>
+</html>

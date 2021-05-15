@@ -1,0 +1,24 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Internal Representation of Objects</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING23></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_14.html">Prev</A> <P>
+<H1>4  Internal Representation of Objects</H1>
+<HR>
+
+
+Objects in Java are internally represented as object handles. A handle is simply a two word chunk of memory, as illustrated below.<BR><IMG SRC="rpi-appendix_AFrame_1.gif"><BR>
+<P>
+<B>A Typical Object Handle</B><P>
+The first word points to the data portion of the object. That is, the instance variables but not any class variables or methods. The second word points to the class of the object. The class contains all the class, or "static", variables as well as all the code for the methods of that class.<P>
+Arrays are represented in a similar way. As with normal objects, the first word of an array handle points to the data portion of the array. The second word, however, does not contain a class pointer. Instead it contains the length of the array and some bits to indicate the type of the array, e.g. array of characters, integers, or objects.<BR><IMG SRC="rpi-appendix_AFrame_5.gif"><BR>
+<P>
+<B>An Array Handle</B><P>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_14.html">Prev</A> <P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

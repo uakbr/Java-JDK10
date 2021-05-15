@@ -1,0 +1,142 @@
+<!-- sccsid: @(#)javap.html	1.2 95/05/16 --->
+<HTML><HEAD>
+<TITLE>JAVAP - Java class file disassembler</TITLE>
+</HEAD><BODY>
+<H1>javap - Java
+ class file disassembler</H1>
+Disassembles class files.
+<P>
+<H2>SYNOPSIS</H2>
+javap [ <a href="javap.html#Options">options</a> ] class. . .
+<P>
+<H2>DESCRIPTION</H2>
+The <b>javap</b> command disassembles a class file. Its output depends on 
+the options used. If no options are used, <b>javap</b> prints out the public
+fields and methods of the classes passed to it. <b>javap</b> prints its output
+to stdout. 
+For example, compile the following class declaration:
+<pre>
+    class C {
+        static int a = 1;
+        static int b = 2;
+        static {
+	    System.out.println(a);
+        }
+        static {
+	    a++;
+	    b = 7;
+	    System.out.println(a);
+	    System.out.println(b);
+        }
+        static {
+	    System.out.println(b);
+        }
+        public static void main(String args[]) {
+	    C c = new C();
+        }
+    }
+</pre>
+<p>
+When the resulting class C is passed to <b>javap</b> using no options,
+output like the following results:
+<pre>
+    Compiled from C:\users\lindholm\C.java
+    private class C extends java/lang/Object {
+        static int a;
+        static int b;
+        public static void main(java/lang/String []);
+        public C();
+        static void <clinit>();
+    }
+</pre>
+<p>
+<a name=Options><h2>OPTIONS</h2></a>
+<dl>
+<dt>-p
+<dd> Prints out the private and protected methods and fields of the class in
+addition to the public ones. 
+<dt> -c
+<dd> Prints out disassembled code, i.e., the instructions that comprise the 
+JAVA bytecodes, for each of the methods in the class. For
+example, passing class C to <b>javap</b> using the <i>-c</i> flag results
+in output like the following:
+<pre>
+    Compiled from C:\users\lindholm/C.java
+    private class C extends java/lang/Object {
+        static int a;
+        static int b;
+        public static void main(java/lang/String []);
+        public C();
+        static void <clinit>();
+
+    Method void main(java/lang/String [])
+       0 new #4 <Class C>
+       3 invokenonvirtual #9 <Method C.<init>()V>
+       6 return
+
+    Method C()
+       0 aload_0 0
+       1 invokenonvirtual #10 <Method java/lang/Object.<init>()V>
+       4 return
+
+    Method void <clinit>()
+       0 iconst_1
+       1 putstatic #7 <Field C.a I>
+       4 getstatic #6 <Field java/lang/System.out Ljava/io/PrintStream;>
+       7 getstatic #7 <Field C.a I>
+      10 invokevirtual #8 <Method java/io/PrintStream.println(I)V>
+      13 getstatic #7 <Field C.a I>
+      16 iconst_1
+      17 iadd
+      18 putstatic #7 <Field C.a I>
+      21 bipush 7
+      23 putstatic #5 <Field C.b I>
+      26 getstatic #6 <Field java/lang/System.out Ljava/io/PrintStream;>
+      29 getstatic #7 <Field C.a I>
+      32 invokevirtual #8 <Method java/io/PrintStream.println(I)V>
+      35 getstatic #6 <Field java/lang/System.out Ljava/io/PrintStream;>
+      38 getstatic #5 <Field C.b I>
+      41 invokevirtual #8 <Method java/io/PrintStream.println(I)V>
+      44 iconst_2
+      45 putstatic #5 <Field C.b I>
+      48 getstatic #6 <Field java/lang/System.out Ljava/io/PrintStream;>
+      51 getstatic #5 <Field C.b I>
+      54 invokevirtual #8 <Method java/io/PrintStream.println(I)V>
+      57 return
+
+    }
+</pre>
+
+<p>
+<dt> -classpath path
+<dd> Specifies the path <b>javap</b> uses to look up classes. Overrides the default 
+or the CLASSPATH environment variable if it is set. Directories are separated by 
+semicolons. Thus the general format for <i>path</i> is:
+<pre>
+    .;&lt;your_path&gt;
+</pre>
+<p>
+For example:
+<pre>
+    .;C:\users\lindholm\classes;D:\java\classes
+</pre>
+</dl>
+<p>
+<H2>ENVIRONMENT VARIABLES</H2>
+<dl>
+<dt>CLASSPATH
+<dd>Used to provide the system a path to user-defined classes. Directories are
+separated by semicolons, for example,
+<pre>
+    .;C:\users\lindholm\classes;D:\java\classes
+</pre>
+</dl>
+<P>
+<H2>SEE ALSO</H2>
+<a HREF="java.html">java</A>,  <A HREF="javac.html">javac</A>,  
+<A HREF="javaprof.html">javaprof</A>, <A HREF="javah.html">javah</A>,  
+<A HREF="javadoc.html">javadoc</A>
+<a href="../javaspec/javaspec_1.html">The JAVA Language 
+Specification</a>,  <a href="../vmspec/vmspec_1.html"> The JAVA Virtual
+Machine Specification</a>
+</BODY></HTML>

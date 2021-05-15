@@ -1,0 +1,27 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- The Java Instruction Set</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING8></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_4.html">Prev</A>       <A HREF="vmspec_6.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>The Java Instruction Set</H1>
+
+<HR>
+
+The Java instruction set is the assembly-language equivalent of an Java application. Java applications are compiled down to the Java instruction set just like C applications are compiled down to the instruction set of a microprocessor. An instruction of the Java instruction set consists of an opcode specifying the operation to be performed, and zero or more operands supplying parameters or data that will be used by the operation. Many instructions have no operands and consist only of an opcode.<P>
+The opcodes of the Java instruction set are always one byte long, while operands may be of various sizes.<P>
+When operands are more than one byte long they are stored in "big-endian" order -- high order byte first. For example, a 16-bit parameter is stored as two bytes whose value is: <P>
+<PRE>
+<CODE>first_byte * 256 + second_byte</CODE><P>
+</PRE>
+Operands that are larger than 8 bits are typically constructed from byte-sized quantities at runtime -- the instruction stream is only byte-aligned and alignment of larger quantities is not guaranteed. (An exception to this rule are the tableswitch and lookupswitch instructions.) These decisions keep the virtual machine code for a compiled Java program compact and reflect a conscious bias in favor of compactness possibly at some cost in performance.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_4.html">Prev</A>       <A HREF="vmspec_6.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

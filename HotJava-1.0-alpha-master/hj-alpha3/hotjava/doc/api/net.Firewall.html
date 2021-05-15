@@ -1,0 +1,522 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.Firewall
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.html">Previous</a>    <a href="net.InetAddress.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.Firewall
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.Firewall
+</pre>
+<hr>
+<dl>
+<dt>
+public final class <b>
+Firewall</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.23 15 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ACCESS_ALL">ACCESS_ALL</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ACCESS_FIREWALL">ACCESS_FIREWALL</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ACCESS_NONE">ACCESS_NONE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ACCESS_SOURCE">ACCESS_SOURCE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#DNS_DOMAIN">DNS_DOMAIN</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#NIS_DOMAIN">NIS_DOMAIN</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Firewall()"><b>Firewall</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#addFirewallHost(java.lang.String)"><b>addFirewallHost</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#canOverrideFirewall()"><b>canOverrideFirewall</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#clearFirewallHosts()"><b>clearFirewallHosts</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getAccessMode()"><b>getAccessMode</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getAppletRestriction()"><b>getAppletRestriction</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getClassLoader()"><b>getClassLoader</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getDomainType()"><b>getDomainType</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getFirewallHost(int)"><b>getFirewallHost</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#nHosts()"><b>nHosts</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#readAccessMode()"><b>readAccessMode</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#readAccessModeFrom(java.lang.String, boolean)"><b>readAccessModeFrom</b></a>(String, boolean)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#readFirewallHosts()"><b>readFirewallHosts</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#securityError(java.lang.String)"><b>securityError</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#setAccessMode(int, boolean, int)"><b>setAccessMode</b></a>(int, boolean, int)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#setDomainType(int)"><b>setDomainType</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#setHandler(java.io.AccessErrorHandler)"><b>setHandler</b></a>(AccessErrorHandler)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#verifyAccess(java.lang.String, int)"><b>verifyAccess</b></a>(String, int)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#verifyAppletLoading(net.www.html.WWWClassLoader)"><b>verifyAppletLoading</b></a>(WWWClassLoader)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#verifyFileApplet(net.www.html.WWWClassLoader)"><b>verifyFileApplet</b></a>(WWWClassLoader)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#writeAccessMode()"><b>writeAccessMode</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#writeFirewallHosts()"><b>writeFirewallHosts</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="ACCESS_NONE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ACCESS_NONE
+</b>
+<pre>
+  public final static int ACCESS_NONE
+</pre>
+<a name="ACCESS_SOURCE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ACCESS_SOURCE
+</b>
+<pre>
+  public final static int ACCESS_SOURCE
+</pre>
+<a name="ACCESS_FIREWALL">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ACCESS_FIREWALL
+</b>
+<pre>
+  public final static int ACCESS_FIREWALL
+</pre>
+<a name="ACCESS_ALL">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ACCESS_ALL
+</b>
+<pre>
+  public final static int ACCESS_ALL
+</pre>
+<a name="DNS_DOMAIN">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+DNS_DOMAIN
+</b>
+<pre>
+  public final static int DNS_DOMAIN
+</pre>
+<a name="NIS_DOMAIN">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+NIS_DOMAIN
+</b>
+<pre>
+  public final static int NIS_DOMAIN
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Firewall"></a>
+<a name="Firewall()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Firewall
+</b>
+<pre>
+  public Firewall()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="securityError(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="securityError">
+<b>
+securityError
+</b>
+</a>
+<pre>
+  public static void securityError(<a href="java.lang.String.html#_top_">String</a> msg)
+</pre>
+<a name="getClassLoader()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getClassLoader">
+<b>
+getClassLoader
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.Object.html#_top_">Object</a> getClassLoader()
+</pre>
+<a name="setHandler(java.io.AccessErrorHandler)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="setHandler">
+<b>
+setHandler
+</b>
+</a>
+<pre>
+  public static void setHandler(<a href="java.io.AccessErrorHandler.html#_top_">AccessErrorHandler</a> f)
+</pre>
+<a name="canOverrideFirewall()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="canOverrideFirewall">
+<b>
+canOverrideFirewall
+</b>
+</a>
+<pre>
+  public static boolean canOverrideFirewall()
+</pre>
+<a name="clearFirewallHosts()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="clearFirewallHosts">
+<b>
+clearFirewallHosts
+</b>
+</a>
+<pre>
+  public static void clearFirewallHosts()
+</pre>
+<a name="addFirewallHost(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="addFirewallHost">
+<b>
+addFirewallHost
+</b>
+</a>
+<pre>
+  public static void addFirewallHost(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<a name="setDomainType(int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="setDomainType">
+<b>
+setDomainType
+</b>
+</a>
+<pre>
+  public static void setDomainType(int domainType)
+</pre>
+<a name="nHosts()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="nHosts">
+<b>
+nHosts
+</b>
+</a>
+<pre>
+  public static int nHosts()
+</pre>
+<a name="getFirewallHost(int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getFirewallHost">
+<b>
+getFirewallHost
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> getFirewallHost(int index)
+</pre>
+<a name="setAccessMode(int, boolean, int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="setAccessMode">
+<b>
+setAccessMode
+</b>
+</a>
+<pre>
+  public static boolean setAccessMode(int mode,
+                                      boolean applyToApplets,
+                                      int domainType)
+</pre>
+<a name="getAccessMode()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getAccessMode">
+<b>
+getAccessMode
+</b>
+</a>
+<pre>
+  public static int getAccessMode()
+</pre>
+<a name="getDomainType()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getDomainType">
+<b>
+getDomainType
+</b>
+</a>
+<pre>
+  public static int getDomainType()
+</pre>
+<a name="getAppletRestriction()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getAppletRestriction">
+<b>
+getAppletRestriction
+</b>
+</a>
+<pre>
+  public static boolean getAppletRestriction()
+</pre>
+<a name="verifyFileApplet(net.www.html.WWWClassLoader)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="verifyFileApplet">
+<b>
+verifyFileApplet
+</b>
+</a>
+<pre>
+  public static boolean verifyFileApplet(<a href="net.www.html.WWWClassLoader.html#_top_">WWWClassLoader</a> wl)
+</pre>
+<a name="verifyAppletLoading(net.www.html.WWWClassLoader)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="verifyAppletLoading">
+<b>
+verifyAppletLoading
+</b>
+</a>
+<pre>
+  public static boolean verifyAppletLoading(<a href="net.www.html.WWWClassLoader.html#_top_">WWWClassLoader</a> wl)
+</pre>
+<a name="verifyAccess(java.lang.String, int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="verifyAccess">
+<b>
+verifyAccess
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> verifyAccess(<a href="java.lang.String.html#_top_">String</a> host,
+                                    int port)
+</pre>
+<a name="writeFirewallHosts()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="writeFirewallHosts">
+<b>
+writeFirewallHosts
+</b>
+</a>
+<pre>
+  public static void writeFirewallHosts()
+</pre>
+<a name="readFirewallHosts()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="readFirewallHosts">
+<b>
+readFirewallHosts
+</b>
+</a>
+<pre>
+  public static boolean readFirewallHosts()
+</pre>
+<a name="writeAccessMode()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="writeAccessMode">
+<b>
+writeAccessMode
+</b>
+</a>
+<pre>
+  public static void writeAccessMode()
+</pre>
+<a name="readAccessModeFrom(java.lang.String, boolean)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="readAccessModeFrom">
+<b>
+readAccessModeFrom
+</b>
+</a>
+<pre>
+  public static boolean readAccessModeFrom(<a href="java.lang.String.html#_top_">String</a> dir,
+                                           boolean isSystem)
+</pre>
+<a name="readAccessMode()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="readAccessMode">
+<b>
+readAccessMode
+</b>
+</a>
+<pre>
+  public static boolean readAccessMode()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.html">Previous</a>    <a href="net.InetAddress.html#_top_">Next</a></pre>
+</body>
+</html>

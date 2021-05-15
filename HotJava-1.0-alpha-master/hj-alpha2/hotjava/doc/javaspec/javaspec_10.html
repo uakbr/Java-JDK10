@@ -1,0 +1,56 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Appendix: Floating Point</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING70></A>
+       <A HREF="javaspec_9.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>A  Appendix: Floating Point</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_10.html#HEADING71"><B> A.1 </B> - Special Values</A><DD>
+<DT><A HREF="javaspec_10.html#HEADING72"><B> A.2 </B> - Binary Format Conversion</A><DD>
+<DT><A HREF="javaspec_10.html#HEADING73"><B> A.3 </B> - Ordering</A><DD>
+<DT><A HREF="javaspec_10.html#HEADING74"><B> A.4 </B> - Summary of IEEE-754 Differences</A><DD>
+</DL>
+
+
+This appendix discusses properties of Java floating point arithmetic: general precision notes and special values, binary format conversion, ordering. At the end is a section summarizing the differences between Java arithmetic and the IEEE 754 standard. For more information on the IEEE 754 standard, see "IEEE Standard for Binary Floating-Point Arithmetic, ANSI/IEEE Std. 754-1985."<P>
+Operations involving only single-precision float and integer values are performed using at least single-precision arithmetic and produce a single-precision result. Other operations are performed in double precision and produce a double precision result. Java floating-point arithmetic produces no exceptions.<P>
+Underflow is gradual.<P>
+<A NAME=HEADING71></A>
+<HR>
+<H3> A.1  Special Values</H3>
+There is both a positive zero and a negative zero. The latter can be produced in a number of special circumstances: the total underflow of a * or / of terms of different sign; the addition of -0 to itself or subtraction of positive zero from it; the square root of -0. Converting -0 to a string results in a leading `-'. Apart from this, the two zeros are indistinguishable.<P>
+Calculations which would produce a value beyond the range of the arithmetic being used deliver a signed infinite result. An infinity (Inf) has a larger magnitude than any value with the same sign. Infinities of the same sign cannot be distinguished. Thus, for instance (1./0.) + (1./0.) == (1./0.). Division of a finite value by infinity yields a 0 result. <P>
+Calculations which cannot produce any meaningful numeric result deliver a distinguished result called Not A Number (NaN). Any operation having a NaN as an operand produces a NaN as the result. NaN is not signed and not ordered <A HREF="#1">(see "Ordering")</A>. Division of infinity by infinity yields NaN, as does subtraction of one infinity from another of the same sign.<P>
+<A NAME=HEADING72></A>
+<HR>
+<H3> A.2  Binary Format Conversion</H3>
+Converting a floating-point value to an integer format results in a value with the same sign as the argument value and having the largest magnitude less than or equal to that of the argument. In other words, conversion rounds towards zero. Converting infinity or any value beyond the range of the target integer type gives a result having the same sign as the argument and the maximum magnitude of that sign. Converting NaN results in 0.<P>
+Converting an integer to a floating format results in the closest possible value in the target format. Ties are broken in favor of the most even value (having 0 as the least-significant bit).<P>
+<A NAME=HEADING73></A>
+<HR>
+<H3> A.3  <A NAME=1>Ordering</H3>
+The usual relational operators can be applied to floating-point values. With the exception of NaN, all floating values are ordered, with -Inf &lt; all finite values &lt; Inf.<P>
+-Inf == -Inf, +Inf == +Inf, -0. == 0. The ordering relations are transitive. Equality and inequality are reflexive.<P>
+NaN is unordered. Thus the result of any order relation between NaN and any other value is false and produces 0. The one exception is that "NaN != anything" is true.<P>
+Note that, because NaN is unordered, Java's logical inversion operator, !, does not distribute over floating point relationals as it can over integers.<P>
+<A NAME=HEADING74></A>
+<HR>
+<H3> A.4  Summary of IEEE-754 Differences</H3>
+Java arithmetic is a subset of the IEEE-754 standard. Here is a summary of the key differences.<P>
+<UL>
+<LI>Nonstop Arithmetic--The Java system will not throw exceptions, traps, or otherwise signal the IEEE exceptional conditions: invalid operation, division by zero, overflow, underflow, or inexact. Java has no signaling NaN.<P>
+<LI>Rounding--Java rounds inexact results to the nearest representable value, with ties going to the value with a 0 least-significant bit. This is the IEEE default mode. But, Java rounds towards zero when converting a floating value to an integer. Java does not provide the user-selectable rounding modes for floating-point computations: up, down, or towards zero.<P>
+<LI>Relational set--Java has no relational predicates which include the unordered condition, except for !=. However, all cases but one can be constructed by the programmer, using the existing relations and logical inversion. The exception case is ordered but unequal. There is no specific IEEE requirement here.<P>
+<LI>Extended formats--Java does not support any extended formats, except that double will serve as single-extended. Other extended formats are not a requirement of the standard.<P>
+</UL>
+<HR>
+       <A HREF="javaspec_9.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

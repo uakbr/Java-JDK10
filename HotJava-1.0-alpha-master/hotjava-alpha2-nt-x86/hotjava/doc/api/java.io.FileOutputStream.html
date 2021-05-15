@@ -1,0 +1,353 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.FileOutputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.FileInputStream.html#_top_">Previous</a>    <a href="java.io.FilterInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.FileOutputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.OutputStream.html#_top_">java.io.OutputStream</a>
+           |
+           +----java.io.FileOutputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+FileOutputStream</b>
+<dt>
+extends <a href="java.io.OutputStream.html#_top_">OutputStream</a>
+</dl>
+File output stream; can be constructed from
+a file descriptor or a file name.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.FileInputStream.html#_top_">FileInputStream</a>,
+<a href="java.io.File.html#_top_">File</a><dt>
+<b>Version:</b>
+<dd>
+	1.12, 03 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FileOutputStream(java.lang.String)"><b>FileOutputStream</b></a>(String)
+<dd>
+Creates an output file given a file name.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FileOutputStream(int)"><b>FileOutputStream</b></a>(int)
+<dd>
+Creates an output file given a file descriptor.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FileOutputStream(java.io.File)"><b>FileOutputStream</b></a>(File)
+<dd>
+Creates an output file given a File object.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finalize()"><b>finalize</b></a>()
+<dd>
+Close the stream when garbage is collected.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFD()"><b>getFD</b></a>()
+<dd>
+Returns the file descriptor associated with this stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Write a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[])"><b>write</b></a>(byte[])
+<dd>
+Writes an array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[], int, int)"><b>write</b></a>(byte[], int, int)
+<dd>
+Writes a sub array of bytes.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="FileOutputStream"></a>
+<a name="FileOutputStream(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FileOutputStream
+</b>
+<pre>
+  public FileOutputStream(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Creates an output file given a file name.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+name
+-
+ the file name (very system dependent)
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred, file not found
+</dl>
+</dl>
+<p>
+<a name="FileOutputStream(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FileOutputStream
+</b>
+<pre>
+  public FileOutputStream(int fd)
+</pre>
+<dl>
+<dd>
+Creates an output file given a file descriptor.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+fd
+-
+	the file descriptor (very system dependent)
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="FileOutputStream(java.io.File)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FileOutputStream
+</b>
+<pre>
+  public FileOutputStream(<a href="java.io.File.html#_top_">File</a> file)
+</pre>
+<dl>
+<dd>
+Creates an output file given a File object.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+file
+-
+ the file to be opened for reading
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred, file not found
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(int b)
+</pre>
+<dl>
+<dd>
+Write a byte. Will block until the byte is actually
+written.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#write(int)">write</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="write(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(byte b[])
+</pre>
+<dl>
+<dd>
+Writes an array of bytes. Will block until the bytes
+are actually written.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the data to be written
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#write(byte[])">write</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="write(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(byte b[],
+                    int off,
+                    int len)
+</pre>
+<dl>
+<dd>
+Writes a sub array of bytes. To be efficient it should
+be overridden in a subclass. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the data to be written
+<dd>
+off
+-
+	the start offset in the data
+<dd>
+len
+-
+	the number of bytes that are written
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#write(byte[], int, int)">write</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public synchronized void close()
+</pre>
+<dl>
+<dd>
+Closes the stream. This method must be called
+to release any resources associated with the
+stream.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#close()">close</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="getFD()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFD">
+<b>
+getFD
+</b>
+</a>
+<pre>
+  public final int getFD()
+</pre>
+<dl>
+<dd>
+Returns the file descriptor associated with this stream.
+</dl>
+<p>
+<a name="finalize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finalize">
+<b>
+finalize
+</b>
+</a>
+<pre>
+  protected void finalize()
+</pre>
+<dl>
+<dd>
+Close the stream when garbage is collected.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.FileInputStream.html#_top_">Previous</a>    <a href="java.io.FilterInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

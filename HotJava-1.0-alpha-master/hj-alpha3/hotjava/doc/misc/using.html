@@ -1,0 +1,325 @@
+<html>
+<head>
+<title>Using HotJava</title>
+</head>
+<body>
+<IMG SRC="../../demo/images/sun.gif" align=middle><IMG SRC="../../demo/images/1inch.gif"><IMG SRC="../../demo/images/0.25inch.gif"><img src="../../demo/images/wrlogo-large.gif" align=middle>
+<br>
+<IMG SRC="../../demo/images/bar.gif">
+<br>
+<b>Version 1.0 Alpha3</b> 
+<h1>HotJava User's Guide</h1>
+
+
+<UL>
+<LI> <A Href="#features">HotJava Features</A>
+
+    
+    	<ul>
+	<li><A Href="#content">Runs Executable Content</A>
+	<li><A href="#security">Provides Network Security</a>
+	<li><A Href="#threads">Multithreaded Applications</A>
+	<li><A Href="#delay">Delayed Image and Applet Loading</a>
+	<li><a href="#extensions">Supports Most Netscape Extensions</a>
+	<li><A Href="#protocols">Supports Internet Protocols and Proxies</a>
+	<li><A Href="#open">Easy to Request URLs</a>
+	<li><a href="#documentation">Complete, Fully Indexed,On-Line
+		Documentation</a>
+	<li><A Href="#lists">Several URL List Managers:</a> History, Hotlist,
+Goto
+	</ul>
+   
+<LI> <A Href="#howto">How to Use HotJava</A>
+    <UL>
+    <LI> <A Href="#hints">Helpful Hints</A>
+    <LI> <A Href="#BMI">Buttons, Menus, and Icons </A>
+    <LI> <A href="#errors">Responding to Error Messages</a>
+    </UL>
+<li> <a href="#contact">Registering and Submitting Bugs</a>
+<li> <a href="#info">Information on URLs and HTML</a>
+
+</UL>
+
+
+<h2><a name=features>Features</a></h2> 
+
+
+The HotJava Internet Browser offers the following features: 
+<dl>
+<dt><b><a name=content>Runs Executable Content</a></b> <dd>
+<dd>HotJava can run executable content in the form of "applets" --
+Java programs tht can be included in an HTML page, much like images
+can be included.  When  you use the HotJava browser to view a pge that contains an applet, the applet's code is transferred to your system and executed by the HotJava browser. We provide several applets, including one that you
+can use to put <A Href="../appguide/Animation.html">animation</A>
+in a page, and another that plays <A
+Href="../appguide/Sound.html">sounds</A>.  For more information on
+applets, see <a href="../appguide/index.html">Writing and Using
+HotJava Applets</a>.
+
+<p><dt><b><a name=security></a>Provides Network Security</b><dd>Applets may not write to or change your files in any way unless you change your HOTJAVA_WRITE_PATH. (The write path is empty to start. See the <a href="../man/hotjava.html">hotjava manpage</a>.) On top of this basic security, you may further restrict the capabilities of incoming content. These options are configured by selecting <a href="#security_options">Security... </a>from the Options menu in the HotJava menu bar.
+
+<p><dt><b><a name=threads></a>Multithreaded Applications</b><dd>The
+Java language is multi-threaded. You will notice this when browsing
+HTML pages because HotJava can fetch multiple images at the same
+time. You can also start browsing immediately, while HotJava is
+fetching images. Try scrolling some of our demos as they are running
+or printing an applet as it is running!
+
+<p><dt><b><a name=delay> Delayed Image and
+Applet Loading</a></b><dd>You can elect to load images and applets
+"lazily" -- that is only when you click on them. HotJava also features incremental image
+loading.Web pages display incrementally as they are loading and can be
+scrolled while they are still being fetched. Special <a href="#status">status icons </a>indicate the 
+status of the image or applet.
+
+<p><dt><b><a name=extensions></a> Supports Most Netscape
+Extensions</b><dd>HotJava supports all of the Netscape HTML
+extensions to the IMG and HR tags except left and right.
+
+<p><dt><b><a name=protocols></a> Supports Internet
+Protocols</b><dd>HotJava supports the major Internet transfer
+protocols: HTTP, news,
+mailto, ftp and GOPHER. <p>
+
+<dl> <dt> <b>news:</b><dd>Make sure your NNTPSERVER environment variable is set to the name of your local NNTP server. Type "news:" in the Document URL window. Add this URL to your HotJava Goto list.To access your news reader, type the URL "news:" 
+ in the Document URL text area. To access a news group directly, type
+the name of the group after the colon, for example, news:rec.arts.cooking. News groups are
+indexed by name. Within a group, the entries are indexed by thread.
+To mark entries as read or unread, use the check box to the left of
+the entry. All articles are passed through the HTML formatter, and
+converted as appropriate (e.g., URLs are displayed as links).
+
+<dt> <b>mailto:</b><dd>To send mail from HotJava, type,<br> mailto:
+<em>subject/recipient's email address</em> in the "Document URL" text area. (You can omit 
+the subject and the address and type them instead in the mail window.) Inside
+the mail window, click the HTML box to indicate that the mail contains
+HTML markup. HTML-aware mail readers will then run the text through
+the HTML formatter before displaying it.  <p>To embed a mailto: URL in
+HTML, type: <br>&lt;A href="mailto: <em>subject/recipient's email
+address"&gt;</em>&lt;/a&gt;. It will look like this (for example). <a
+href="mailto:HotJava is awesome!/ java@java.sun.com"><em>java@java.sun.com</em></a>.
+
+<dt> <b>FTP Browsing:</b><dd> You can browse FTP directories. When you click
+on an FTP URL, HotJava displays the file icons in the window. Click
+on the file you want. If HotJava recognizes the file type it
+displays the file. If it does not recognize file type, it pops up a
+window allowing you to save the file.
+
+</dl> 
+<p><dt><b><a name=open></a>Easy to Request URLs</b> <dd>You can type directly into the Document URL window
+and hit Return. (Follow this link for more information on <a href="#URLs">URLs</a>.)
+
+<p><dt><b><a name=documentation></a>
+Complete, Fully-Indexed, On-Line Documentation</b><dd>The <a href="../index.html">Documentation Page</a> contains
+links to all documentation for the HotJava browser and the Java
+language. The Java Search Tool, accessed from the Help menu, supports text searches on the documentation.
+
+<p><dt><b><a name=lists></a>Several URL List Managers</b><dd>
+<dl>
+<dt><b>History List</b><dd>The <a href="#history">History list </a>displays every URL you have visited during the current HotJava session. You can select a URL and revisit it.
+<dt><b>Hotlist</b><dd>The <a href="#hotlist">Hotlist </a>is a place to store URLs you would like to revisit. Future releases will provide the capability to maintain multiple hotlists.
+<dt><b>Goto List</b><dd>The <a href="#goto">Goto list</a> is a place holder for a list of URL accessible directly from the menu bar. This is a good place to store a short list of frequently visited URLs.
+</dl>
+</dl>
+
+
+
+<h2><a name=howto></a>How to Use HotJava</h2>
+
+<b><A name=hints></a>Helpful Hints</b>
+<ul>
+<li><b>To open a new URL</b>, type directly into the "Document URL" text field at the top of the screen and hit Return. For the alpha release of HotJava, text in the Document URL field is selectable but text in the display window is not.
+<li><b>To stop fetching a URL</b> click on the <a name=stop></a><b>Stop button</b> or click on a new link. HotJava will immediately begin fetching the new link. The Stop button stops the loading of all images and HTML.The Stop button is not used to stop applets from running; it is used to stop HTML pages from loading.
+
+<li>If you have selected <b>delayed image or applet loading </b>from the HotJava Options menu, take a look at the <a href="#status">status icons </a>that support it.
+</ul>
+
+<dl>
+<dt><b><a name=BMI></a>Buttons, <a href="#menus"></a>Menus, and <a href="#icons"></a>Icons</b>
+
+<dt><b>HotJava Buttons</b>
+<pre><img src="../../demo/images/back.gif"><a href="#back">Back</a>   <img src="../../demo/images/fwd.gif"><a href="#forward">Forward</a>   <img src="../../demo/images/home.gif"><a href="#home">Home</a>   <img src="../../demo/images/reload.gif"><a href="#reload">Reload</a> <img src="../../demo/images/stop.gif"><a href="#stop">Stop</a> </pre>
+
+<dt><b>HotJava Menus<a name=menus></a></b><dd>
+<dl>
+<dt><b>File</b>
+<dd>
+<dl>
+	<dt><b>Open...</b> <dd>Displays a window in which you can type the text for a URL. To specify a new URL, you can also type directly into HotJava's "Document URL" text area.
+	<dt><b><a name=reload></a>Reload</b><dd>Reloads the current page. This is useful if you have made changes to the current HTML  source. You can also click on the Reload button at the bottom of the display.
+	<dt><b>Print...</b> <dd>Brings up the Print window. You can send output to a printer or a file.
+	<dt><b>View Source...</b> <dd>Opens a window in which the HTML markup text for the current page is displayed. You can save the HTML text to a file. The window contents do not change when the URL changes, enabling you to open multiple View Source windows. Follow this link for more information on <a href="#HTML">HTML</a>.
+	<dt><b>Quit</b><dd>Exits HotJava.
+	</dl>	
+</dl>	
+<dl>
+<dt><b>Options</b><dd> 
+<dl> <dt><a name=security_options></a><b>Security...</b><dd>
+
+Opens a dialog box in which you can specify the level of security to
+be applied to incoming executable content.  The dialog provides
+options for security mode: No access, Source only, Firewall, or
+Unrestricted. It also provides access to options to configure your
+firewall.
+
+<p>
+
+For information on HotJava security see
+
+<a href="SecurityDialogHelp.html">
+Configuring HotJava Security
+</a>. For information on configuring your
+firewall see <a href="FirewallHelp.html">Configuring the
+Firewall List</a>.<p>
+
+	<dt><b>Properties...</b><dd>Opens a dialog box which lets you change the HotJava Properties. For those properties with buttons, turn them on and off by selecting them. When text fields are displayed, you can type directly into them. To turn them off, delete the contents of the text field.
+
+<b>Firewall Proxy</b>
+This is the hostname and port number of a local proxy server.
+
+<b>FTP Proxy</b>
+
+This is the hostname and port number of an http proxy to use for all
+FTP URLs. When not set, $browser connects directly to the host
+specified in the URL. 
+
+<b>Caching Proxy</b>
+Specify a caching proxy when you are using a caching server and you want all requests to go through that caching server. If the caching server is also a firewall server, as it is at Sun, then it will be the only server used. <b>Important Note:</b> When Caching Server is "on," ALL requests are attempted through the caching server only. HotJava supports NCSA 1.3.A and CERN 3.0 proxy servers.<p>
+
+In the Properties sheet you can specify where each of these servers is, as well as the port under which they are to be used. By default, HotJava tries to connect directly to the machine specified in the URL. If that fails, and the Firewall Proxy button has been selected, HotJava will try again to connect to the host, this time using the Firewall Proxy.
+
+<b>Read Path/Write Path</b>
+Restriction on which directories may be accessed is controlled through two access control lists (ACLs). Any attempt to open a file for reading while executing an applet is first checked against the HOTJAVA_READ_PATH for permission to access the directory which contains the file. <p>
+
+Write accesses while in an applet are similarly checked against HOTJAVA_WRITE_PATH. These two ACLs may not be modified from the Properties sheet. You may only set their value when HotJava first starts up by setting the environment variables HOTJAVA_READ_PATH and HOTJAVA_WRITE_PATH. Another security protection is that applets will not be loaded from a filesystem that is writeable by applets.
+
+<b>Underline Anchors</b>
+Selecting this option causes the HTML anchors to be underlined.
+<b>Delay image/applet loading</b>
+Selecting this option stops HotJava from immediately loading all images/applets when you first visit a page. Instead, you can load them selectively  by clicking on them individually. This option is useful for slow connections.
+
+
+	<p><dt><b>Flush Cache</b><dd>Flushes any images and audio cached by HotJava. This is useful if you have changed an image on disk and want to reload it.
+
+	<p><dt><b>Progress Monitor</b><dd>An <em>experimental</em> tool to monitor the progress of http connections. To see how it works, bring up the tool and select a link on the Web page.
+	</dl>
+</dl>
+
+<dl>
+ <dt><b>Navigate</b><dd>
+	<dl>
+<dt><a name=forward></a><b>Forward</b><dd>Displays the URL  viewed prior to selecting the  Back button. Equivalent to the Forward button. Note: Forward works only after Back has been used.
+	<a name=back></a><dt><b>Back</b><dd>Displays the URL viewed last. Equivalent to the Back button.
+	<dt><a name=home></a><b>Home</b><dd>Loads the page <em>doc:index.html</em> or whatever you have specified in your WWW_HOME environment variable.
+	<dt><b><a name=history></a>History... </b><dd>Every time  you visit a page, its URL is automatically appended to the bottom of the history list. The History list is restarted for every HotJava session. To visit an entry on the list, select it and click "Visit." Entries cannot be deleted from this list.
+	<dt><b><a name=hotlist></a>Add Current to Hotlist</b><dd>Adds the current URL to your hotlist.
+	<dt><b>Show Hotlist</b><dd>Displays your hotlist.
+Double click on an entry to visit it, or select the entry and use the Visit button. At the bottom of the Hotlist window there is a checkbox to indicate whether you want the currently selected URL to be added or deleted from your Goto list.</dl>
+</dl>
+
+<dl>
+<dt><b><a name=goto></a>Goto</b>
+<dd>
+To add the currently displayed URL to the Goto list, select "Add Current" from the top of the Goto menu. To delete an entry from the list, deselect the "In Goto menu" check box in the Hotlist window.
+</dl>
+
+<dl>
+<dt><b>Help</b><dd>
+<dl>
+	<dt><b>README</b><dd>All about the 1.0Alpha3 release and the caveats that go with it.
+	<dt><b>Copyright Notice</b><dd>Our copyright notice. Important information about your rights and ours.
+	<dt><b>About HotJava</b><dd>Announcing... HotJava! The HotJava home page, with links to everything you'll want to know.
+	<dt><b>Using HotJava</b><dd>The HotJava User's Guide. What you're reading now.
+	<dt><b>Latest HotJava Info</b><dd>A link to our external home page.
+	<dt><b>HotJava Demos</b><dd>A picture is worth a thousand words. Exciting demos that showcase the potential of HotJava and the Java language.
+	<dt><b>Meet the People</b><dd>A picture of the team behind this product.
+	
+	<dt><b>Submit a Bug Report</b><dd>When this option is selected, a form is displayed on which you can submit a bug or feature request. The form is sent to us as mail. 
+
+	<dt><b>Register</b><dd>With this form you can register as a known user. We'll send you the latest information and notify you of new releases.  The more we hear from our users, the better we can support their needs.
+	
+	<dt><b>HotJava Documentation</b><dd>A link to all of the documentation for Java and HotJava.
+	<dt><b>How to Search the Documentation</b><dd>User's Guide for the Java Search Tool.
+
+	<dt><b>Search HotJava Documentation...</b><dd>Brings up the HotJava Search Tool window.
+	
+</dl>
+	</dl>
+<p>
+<dt><a name=status></a><a name=icons></a><b>Status Icons for Image and Applet Loading</b>
+
+<dd>HotJava provides feedback on the state of an image or applet as it is
+being loaded. If you have specified Delayed Image or Applet Loading in
+your HotJava Properties sheet, HotJava indicates the status of the
+image or applet so that you are better informed before making the
+decision to load it.  These icons appear where the image would be
+displayed.  They also provide some loading options, as follows:
+
+<dl>
+<dt><br><img src="../../demo/images/still-loading.gif"> <b>Still Loading</b>
+<dd>Image or applet is still being loaded.
+<dt><img src="../../demo/images/delayed-image.gif"> <b>Delayed Image Loading</b><dd>You have selected Delayed Image Loading. When you click on this icon the image is loaded.
+
+<dt><img src="../../demo/images/delayed-image-ref.gif"><b>Delayed Image Loading with Reference</b>
+<dd>If you click on the arrow, HotJava loads the page associated with the image. If you click anywhere else in the icon, HotJava loads the image.
+
+<dt><img src="../../demo/images/delayed-applet.gif"><b>Delayed Applet Loading</b>
+<dd>You have selected Delayed Applet Loading. When you click on this icon, the applet is loaded.
+<dt><img src="../../demo/images/failed-loading.gif"> <b>Failed Loading</b><dd>An error occurred while loading the image or applet.
+<dt><img src="../../demo/images/failed-image-ref.gif"> <b>Failed Delayed Image Reference</b><dd>You have selected Delayed Image Loading. The image HotJava is attempting to load has both an image and a page reference.In other words, the image is also a link to another image or a page. HotJava could not find the image.
+</dl>
+	</dl>
+	
+<dl>
+<dt><b><a name=errors></a>Responding to Error Messages</b><dd>
+<dl>
+<dt><b>Out of memory</b> <dd>If you receive this message when trying to fetch a URL, restart HotJava.<p>
+
+<dt><b>Can't find foo.bar</b><dd> (Where foo is a class.) You need to
+explicitly import the class that Java  can't find.
+</dl>
+</dl>
+
+<h2><a name=contact></a>Registering and Submitting Bugs</h2>
+
+<br>The Help menu provides options to Submit a Bug Report and to Register
+as a user. By submitting bugs (and feature requests) you're helping us
+to provide a better product. By registering, you help us understand who's
+using the product and make it easy for us to send you the latest information. 
+
+
+
+
+<h2><a name=info></a>Information on URLs and HTML</h2> 
+<dl>
+<dt><a href="http://www.ncsa.uiuc.edu/demoweb/url-primer.html">A
+Beginner's Guide to URLs</a><a name=URLs></a>
+<dd>Documentation on URLs (Uniform Resource Locators),
+which are the addresses you use to find documents.
+This documentation is provided by the National Center for
+Supercomputing Applications (NCSA).
+<p>
+<dt><a href="http://www.ncsa.uiuc.edu/demoweb/html-primer.html">A
+Beginner's Guide to HTML</a><a name=HTML></a>
+<dd>Documentation on HTML,
+which is the markup language for Web documents.
+This documentation is provided by the NCSA.
+
+</dl>
+
+<hr> 
+
+<a href="http://www.sun.com/"><IMG SRC="../../demo/images/sun.gif"
+align=bottom border=1></a> <a href="http://java.sun.com/"> <IMG
+SRC="../../demo/images/wrlogo.gif" align=bottom border=1></a> 
+
+<p>Send your comments or questions to the appropriate <a
+href="http://java.sun.com/mail.html">mailing list</a>. If you need to
+communicate directly and privately with the java development team,
+send mail to <A
+href="mailto:java@java.sun.com"><em>java@java.sun.com</em></A>.
+
+
+
+</body>
+</html>

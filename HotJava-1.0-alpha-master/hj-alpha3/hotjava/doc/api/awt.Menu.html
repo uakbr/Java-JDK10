@@ -1,0 +1,273 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Menu
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.List.html#_top_">Previous</a>    <a href="awt.MenuBar.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Menu
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.Menu
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Menu</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+A Menu that is a component of a menu bar.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.16 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#title">title</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Menu(java.lang.String, awt.MenuBar)"><b>Menu</b></a>(String, MenuBar)
+<dd>
+Constructs a new Menu with the given title.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Menu(java.lang.String, awt.MenuBar, boolean)"><b>Menu</b></a>(String, MenuBar, boolean)
+<dd>
+Constructs a new Menu with the given title.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addSeparator()"><b>addSeparator</b></a>()
+<dd>
+Adds a separator line to the menu at the current position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Destroys this menu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hide()"><b>hide</b></a>()
+<dd>
+Hides this menu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nItems()"><b>nItems</b></a>()
+<dd>
+Returns the number of elements in this menu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#selected(int)"><b>selected</b></a>(int)
+<dd>
+Override this method to handle any items that are selected.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#show()"><b>show</b></a>()
+<dd>
+Shows this menu.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="title">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+title
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> title
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Menu"></a>
+<a name="Menu(java.lang.String, awt.MenuBar)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Menu
+</b>
+<pre>
+  public Menu(<a href="java.lang.String.html#_top_">String</a> title,
+              <a href="awt.MenuBar.html#_top_">MenuBar</a> mb)
+</pre>
+<dl>
+<dd>
+Constructs a new Menu with the given title. It will be placed
+at the end of any existing menus in mb.
+</dl>
+<p>
+<a name="Menu(java.lang.String, awt.MenuBar, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Menu
+</b>
+<pre>
+  public Menu(<a href="java.lang.String.html#_top_">String</a> title,
+              <a href="awt.MenuBar.html#_top_">MenuBar</a> mb,
+              boolean tearOff)
+</pre>
+<dl>
+<dd>
+Constructs a new Menu with the given title. The menu will be able
+to be torn off if tearOff is true.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="nItems()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nItems">
+<b>
+nItems
+</b>
+</a>
+<pre>
+  public int nItems()
+</pre>
+<dl>
+<dd>
+Returns the number of elements in this menu.
+</dl>
+<p>
+<a name="addSeparator()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addSeparator">
+<b>
+addSeparator
+</b>
+</a>
+<pre>
+  public void addSeparator()
+</pre>
+<dl>
+<dd>
+Adds a separator line to the menu at the current position.
+</dl>
+<p>
+<a name="show()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="show">
+<b>
+show
+</b>
+</a>
+<pre>
+  public void show()
+</pre>
+<dl>
+<dd>
+Shows this menu.
+</dl>
+<p>
+<a name="hide()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hide">
+<b>
+hide
+</b>
+</a>
+<pre>
+  public void hide()
+</pre>
+<dl>
+<dd>
+Hides this menu.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Destroys this menu.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="selected(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="selected">
+<b>
+selected
+</b>
+</a>
+<pre>
+  public void selected(int index)
+</pre>
+<dl>
+<dd>
+Override this method to handle any items that are selected.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+index
+-
+ is the index of the item that was selected.
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.List.html#_top_">Previous</a>    <a href="awt.MenuBar.html#_top_">Next</a></pre>
+</body>
+</html>

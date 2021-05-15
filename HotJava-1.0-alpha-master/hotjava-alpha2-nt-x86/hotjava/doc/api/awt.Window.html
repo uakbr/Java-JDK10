@@ -1,0 +1,1420 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Window
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.WServer.html#_top_">Previous</a>    <a href="awt.XbmImage.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Window
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----<a href="awt.Container.html#_top_">awt.Container</a>
+                   |
+                   +----awt.Window
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Window</b>
+<dt>
+extends <a href="awt.Container.html#_top_">Container</a>
+<dt>
+implements <a href="awt.Scrollbarable.html#_top_">Scrollbarable</a>
+</dl>
+Window is a general purpose canvas that can contain other windows.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.66 23 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#background">background</a>
+</b>
+<dd>
+Background color for this window
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#foreground">foreground</a>
+</b>
+<dd>
+Foreground color for this window
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#graphics">graphics</a>
+</b>
+<dd>
+Default graphics object for this window.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#title">title</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Window(awt.Container, java.lang.String, awt.Color, int, int)"><b>Window</b></a>(Container, String, Color, int, int)
+<dd>
+Create a window that is a child of another window.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Window(awt.Window, java.lang.String, awt.Color, int, int)"><b>Window</b></a>(Window, String, Color, int, int)
+<dd>
+Backward compatibility with alpha1.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Window(awt.Frame, java.lang.String, awt.Color, int, int)"><b>Window</b></a>(Frame, String, Color, int, int)
+<dd>
+Backward compatibility with alpha1.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearClip()"><b>clearClip</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearRect(int, int, int, int)"><b>clearRect</b></a>(int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clipRect(int, int, int, int)"><b>clipRect</b></a>(int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copyArea(int, int, int, int, int, int)"><b>copyArea</b></a>(int, int, int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#createImage(awt.DIBitmap)"><b>createImage</b></a>(DIBitmap)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#createImage(awt.DIBitmap, int, int)"><b>createImage</b></a>(DIBitmap, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#disablePointerMotionEvents()"><b>disablePointerMotionEvents</b></a>()
+<dd>
+Disables notification of mouse motion without any buttons presed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this window and all the components it contains.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#disposeImage(awt.Image)"><b>disposeImage</b></a>(Image)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dragAbsolute(int)"><b>dragAbsolute</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawBytes(byte[], int, int, int, int)"><b>drawBytes</b></a>(byte[], int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawChars(char[], int, int, int, int)"><b>drawChars</b></a>(char[], int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawImage(awt.Image, int, int)"><b>drawImage</b></a>(Image, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawLine(int, int, int, int)"><b>drawLine</b></a>(int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawRect(int, int, int, int)"><b>drawRect</b></a>(int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawString(java.lang.String, int, int)"><b>drawString</b></a>(String, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#enablePointerMotionEvents()"><b>enablePointerMotionEvents</b></a>()
+<dd>
+Enables notification of mouse motion without any buttons presed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#expose(int, int, int, int)"><b>expose</b></a>(int, int, int, int)
+<dd>
+Override this method to repaint only a portion of the window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#fillRect(int, int, int, int)"><b>fillRect</b></a>(int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFrame()"><b>getFrame</b></a>()
+<dd>
+Returns the top-level window that contains this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getMenuBar()"><b>getMenuBar</b></a>()
+<dd>
+Returns the menubar object useable for this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#gotFocus()"><b>gotFocus</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleExpose(int, int, int, int)"><b>handleExpose</b></a>(int, int, int, int)
+<dd>
+Callback for exposing a region of a window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleKeyPress(int, int, int)"><b>handleKeyPress</b></a>(int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleKeyPress(char, boolean, int)"><b>handleKeyPress</b></a>(char, boolean, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleMouseDown(int, int, int)"><b>handleMouseDown</b></a>(int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleMouseDrag(int, int, int)"><b>handleMouseDrag</b></a>(int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleMouseEnter(int, int)"><b>handleMouseEnter</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleMouseLeave(int, int)"><b>handleMouseLeave</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleMouseMoved(int, int, int)"><b>handleMouseMoved</b></a>(int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleMouseUp(int, int, int)"><b>handleMouseUp</b></a>(int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleResize()"><b>handleResize</b></a>()
+<dd>
+Callback to override to take some action when the window is
+resized.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keyPressed(awt.Event)"><b>keyPressed</b></a>(Event)
+<dd>
+Override this method to take some action when a key is pressed
+in this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lineDown()"><b>lineDown</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lineUp()"><b>lineUp</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lostFocus()"><b>lostFocus</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Shows this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseDown(awt.Event)"><b>mouseDown</b></a>(Event)
+<dd>
+Override this method to take some action when the mouse is
+pressed over this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseDrag(awt.Event)"><b>mouseDrag</b></a>(Event)
+<dd>
+Override this method to take some action when the mouse is
+dragged with a button down over the window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseEnter(awt.Event)"><b>mouseEnter</b></a>(Event)
+<dd>
+Override this method to take some action when the mouse enters
+this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseLeave(awt.Event)"><b>mouseLeave</b></a>(Event)
+<dd>
+Override this method to take some action when the mouse leaves
+this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseMoved(awt.Event)"><b>mouseMoved</b></a>(Event)
+<dd>
+Override this method to take some action when the mouse is
+moved over the window without any buttons pressed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseUp(awt.Event)"><b>mouseUp</b></a>(Event)
+<dd>
+Override this method to take some action when the mouse button
+is released.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pageDown()"><b>pageDown</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pageUp()"><b>pageUp</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint()"><b>paint</b></a>()
+<dd>
+Override this method to repaint the window when needed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint3DRect(int, int, int, int, boolean, boolean)"><b>paint3DRect</b></a>(int, int, int, int, boolean, boolean)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#retrieveDIBitmap(awt.Image)"><b>retrieveDIBitmap</b></a>(Image)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#scrollHorizontally(int)"><b>scrollHorizontally</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#scrollVertically(int)"><b>scrollVertically</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#scrollWindow(int, int)"><b>scrollWindow</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setBackground(awt.Color)"><b>setBackground</b></a>(Color)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFont(awt.Font)"><b>setFont</b></a>(Font)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setForeground(awt.Color)"><b>setForeground</b></a>(Color)
+<dd>
+Sets the foreground color of this component (if applicable).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setMargin(int)"><b>setMargin</b></a>(int)
+<dd>
+Sets the thickness of the margin in this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update()"><b>update</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="title">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+title
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> title
+</pre>
+<a name="background">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+background
+</b>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> background
+</pre>
+<dl>
+<dd>
+Background color for this window
+</dl>
+<a name="foreground">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+foreground
+</b>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> foreground
+</pre>
+<dl>
+<dd>
+Foreground color for this window
+</dl>
+<a name="graphics">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+graphics
+</b>
+<pre>
+  public <a href="awt.Graphics.html#_top_">Graphics</a> graphics
+</pre>
+<dl>
+<dd>
+Default graphics object for this window.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Window"></a>
+<a name="Window(awt.Container, java.lang.String, awt.Color, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Window
+</b>
+<pre>
+  public Window(<a href="awt.Container.html#_top_">Container</a> w,
+                <a href="java.lang.String.html#_top_">String</a> name,
+                <a href="awt.Color.html#_top_">Color</a> bg,
+                int wd,
+                int ht)
+</pre>
+<dl>
+<dd>
+Create a window that is a child of another window.
+</dl>
+<p>
+<a name="Window(awt.Window, java.lang.String, awt.Color, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Window
+</b>
+<pre>
+  public Window(<a href="#_top_">Window</a> w,
+                <a href="java.lang.String.html#_top_">String</a> name,
+                <a href="awt.Color.html#_top_">Color</a> bg,
+                int wd,
+                int ht)
+</pre>
+<dl>
+<dd>
+Backward compatibility with alpha1. Takes a Window as a parent
+    	 instead of a container.
+</dl>
+<p>
+<a name="Window(awt.Frame, java.lang.String, awt.Color, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Window
+</b>
+<pre>
+  public Window(<a href="awt.Frame.html#_top_">Frame</a> w,
+                <a href="java.lang.String.html#_top_">String</a> name,
+                <a href="awt.Color.html#_top_">Color</a> bg,
+                int wd,
+                int ht)
+</pre>
+<dl>
+<dd>
+Backward compatibility with alpha1. Takes a Frame as a parent
+    	 instead of a container.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this window and all the components it contains.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#dispose()">dispose</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Shows this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#map()">map</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#unMap()">unMap</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="paint()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint()
+</pre>
+<dl>
+<dd>
+Override this method to repaint the window when needed.
+</dl>
+<p>
+<a name="expose(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="expose">
+<b>
+expose
+</b>
+</a>
+<pre>
+  public void expose(int x,
+                     int y,
+                     int w,
+                     int h)
+</pre>
+<dl>
+<dd>
+Override this method to repaint only a portion of the window.
+</dl>
+<p>
+<a name="gotFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="gotFocus">
+<b>
+gotFocus
+</b>
+</a>
+<pre>
+  public void gotFocus()
+</pre>
+<a name="lostFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lostFocus">
+<b>
+lostFocus
+</b>
+</a>
+<pre>
+  public void lostFocus()
+</pre>
+<a name="handleExpose(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleExpose">
+<b>
+handleExpose
+</b>
+</a>
+<pre>
+  public synchronized void handleExpose(int x,
+                                        int y,
+                                        int w,
+                                        int h)
+</pre>
+<dl>
+<dd>
+Callback for exposing a region of a window. Unless, you don't
+want this callback to set the clipping region you should only
+override expose, not handleExpose.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#expose">expose</a>
+</dl>
+</dl>
+<p>
+<a name="handleResize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleResize">
+<b>
+handleResize
+</b>
+</a>
+<pre>
+  public void handleResize()
+</pre>
+<dl>
+<dd>
+Callback to override to take some action when the window is
+resized.
+</dl>
+<p>
+<a name="getMenuBar()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getMenuBar">
+<b>
+getMenuBar
+</b>
+</a>
+<pre>
+  public <a href="awt.MenuBar.html#_top_">MenuBar</a> getMenuBar()
+</pre>
+<dl>
+<dd>
+Returns the menubar object useable for this window.
+</dl>
+<p>
+<a name="getFrame()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFrame">
+<b>
+getFrame
+</b>
+</a>
+<pre>
+  public <a href="awt.Frame.html#_top_">Frame</a> getFrame()
+</pre>
+<dl>
+<dd>
+Returns the top-level window that contains this window.
+</dl>
+<p>
+<a name="handleMouseDown(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleMouseDown">
+<b>
+handleMouseDown
+</b>
+</a>
+<pre>
+  public void handleMouseDown(int x,
+                              int y,
+                              int modifiers)
+</pre>
+<a name="handleMouseUp(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleMouseUp">
+<b>
+handleMouseUp
+</b>
+</a>
+<pre>
+  public void handleMouseUp(int x,
+                            int y,
+                            int modifiers)
+</pre>
+<a name="handleMouseDrag(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleMouseDrag">
+<b>
+handleMouseDrag
+</b>
+</a>
+<pre>
+  public void handleMouseDrag(int x,
+                              int y,
+                              int modifiers)
+</pre>
+<a name="handleMouseMoved(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleMouseMoved">
+<b>
+handleMouseMoved
+</b>
+</a>
+<pre>
+  public void handleMouseMoved(int x,
+                               int y,
+                               int modifiers)
+</pre>
+<a name="handleMouseEnter(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleMouseEnter">
+<b>
+handleMouseEnter
+</b>
+</a>
+<pre>
+  public void handleMouseEnter(int x,
+                               int y)
+</pre>
+<a name="handleMouseLeave(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleMouseLeave">
+<b>
+handleMouseLeave
+</b>
+</a>
+<pre>
+  public void handleMouseLeave(int x,
+                               int y)
+</pre>
+<a name="handleKeyPress(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleKeyPress">
+<b>
+handleKeyPress
+</b>
+</a>
+<pre>
+  public void handleKeyPress(int k,
+                             int isAscii,
+                             int modifiers)
+</pre>
+<a name="handleKeyPress(char, boolean, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleKeyPress">
+<b>
+handleKeyPress
+</b>
+</a>
+<pre>
+  public void handleKeyPress(char k,
+                             boolean isAscii,
+                             int modifiers)
+</pre>
+<a name="mouseDrag(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseDrag">
+<b>
+mouseDrag
+</b>
+</a>
+<pre>
+  public void mouseDrag(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the mouse is
+dragged with a button down over the window.
+</dl>
+<p>
+<a name="mouseMoved(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseMoved">
+<b>
+mouseMoved
+</b>
+</a>
+<pre>
+  public void mouseMoved(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the mouse is
+moved over the window without any buttons pressed. This will only
+be activated if enablePointerMotionEvents has been called on this
+window.
+</dl>
+<p>
+<a name="mouseDown(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseDown">
+<b>
+mouseDown
+</b>
+</a>
+<pre>
+  public void mouseDown(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the mouse is
+pressed over this window.
+</dl>
+<p>
+<a name="mouseUp(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseUp">
+<b>
+mouseUp
+</b>
+</a>
+<pre>
+  public void mouseUp(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the mouse button
+is released.
+</dl>
+<p>
+<a name="mouseEnter(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseEnter">
+<b>
+mouseEnter
+</b>
+</a>
+<pre>
+  public void mouseEnter(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the mouse enters
+this window.
+</dl>
+<p>
+<a name="mouseLeave(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseLeave">
+<b>
+mouseLeave
+</b>
+</a>
+<pre>
+  public void mouseLeave(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the mouse leaves
+this window.
+</dl>
+<p>
+<a name="keyPressed(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keyPressed">
+<b>
+keyPressed
+</b>
+</a>
+<pre>
+  public void keyPressed(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when a key is pressed
+in this window.
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int px,
+                   int py)
+</pre>
+<dl>
+<dd>
+Moves this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#move(int, int)">move</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="enablePointerMotionEvents()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="enablePointerMotionEvents">
+<b>
+enablePointerMotionEvents
+</b>
+</a>
+<pre>
+  public void enablePointerMotionEvents()
+</pre>
+<dl>
+<dd>
+Enables notification of mouse motion without any buttons presed.
+</dl>
+<p>
+<a name="disablePointerMotionEvents()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="disablePointerMotionEvents">
+<b>
+disablePointerMotionEvents
+</b>
+</a>
+<pre>
+  public void disablePointerMotionEvents()
+</pre>
+<dl>
+<dd>
+Disables notification of mouse motion without any buttons presed.
+</dl>
+<p>
+<a name="setMargin(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setMargin">
+<b>
+setMargin
+</b>
+</a>
+<pre>
+  public void setMargin(int margin)
+</pre>
+<dl>
+<dd>
+Sets the thickness of the margin in this window.
+</dl>
+<p>
+<a name="lineUp()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lineUp">
+<b>
+lineUp
+</b>
+</a>
+<pre>
+  public void lineUp()
+</pre>
+<a name="lineDown()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lineDown">
+<b>
+lineDown
+</b>
+</a>
+<pre>
+  public void lineDown()
+</pre>
+<a name="pageUp()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pageUp">
+<b>
+pageUp
+</b>
+</a>
+<pre>
+  public void pageUp()
+</pre>
+<a name="pageDown()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pageDown">
+<b>
+pageDown
+</b>
+</a>
+<pre>
+  public void pageDown()
+</pre>
+<a name="dragAbsolute(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dragAbsolute">
+<b>
+dragAbsolute
+</b>
+</a>
+<pre>
+  public void dragAbsolute(int value)
+</pre>
+<a name="scrollVertically(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="scrollVertically">
+<b>
+scrollVertically
+</b>
+</a>
+<pre>
+  public boolean scrollVertically(int dy)
+</pre>
+<a name="scrollHorizontally(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="scrollHorizontally">
+<b>
+scrollHorizontally
+</b>
+</a>
+<pre>
+  public boolean scrollHorizontally(int dx)
+</pre>
+<a name="scrollWindow(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="scrollWindow">
+<b>
+scrollWindow
+</b>
+</a>
+<pre>
+  public synchronized void scrollWindow(int dx,
+                                        int dy)
+</pre>
+<a name="copyArea(int, int, int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copyArea">
+<b>
+copyArea
+</b>
+</a>
+<pre>
+  public void copyArea(int X,
+                       int Y,
+                       int W,
+                       int H,
+                       int dx,
+                       int dy)
+</pre>
+<a name="drawImage(awt.Image, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawImage">
+<b>
+drawImage
+</b>
+</a>
+<pre>
+  public void drawImage(<a href="awt.Image.html#_top_">Image</a> I,
+                        int X,
+                        int Y)
+</pre>
+<a name="createImage(awt.DIBitmap)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="createImage">
+<b>
+createImage
+</b>
+</a>
+<pre>
+  public <a href="awt.Image.html#_top_">Image</a> createImage(<a href="awt.DIBitmap.html#_top_">DIBitmap</a> dib)
+</pre>
+<a name="createImage(awt.DIBitmap, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="createImage">
+<b>
+createImage
+</b>
+</a>
+<pre>
+  public <a href="awt.Image.html#_top_">Image</a> createImage(<a href="awt.DIBitmap.html#_top_">DIBitmap</a> dib,
+                           int w,
+                           int h)
+</pre>
+<a name="retrieveDIBitmap(awt.Image)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="retrieveDIBitmap">
+<b>
+retrieveDIBitmap
+</b>
+</a>
+<pre>
+  public <a href="awt.DIBitmap.html#_top_">DIBitmap</a> retrieveDIBitmap(<a href="awt.Image.html#_top_">Image</a> im)
+</pre>
+<a name="disposeImage(awt.Image)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="disposeImage">
+<b>
+disposeImage
+</b>
+</a>
+<pre>
+  public void disposeImage(<a href="awt.Image.html#_top_">Image</a> i)
+</pre>
+<a name="setFont(awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFont">
+<b>
+setFont
+</b>
+</a>
+<pre>
+  public void setFont(<a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<a name="setForeground(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setForeground">
+<b>
+setForeground
+</b>
+</a>
+<pre>
+  public void setForeground(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the foreground color of this component (if applicable).
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#setForeground(awt.Color)">setForeground</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="setBackground(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setBackground">
+<b>
+setBackground
+</b>
+</a>
+<pre>
+  public void setBackground(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<a name="clipRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clipRect">
+<b>
+clipRect
+</b>
+</a>
+<pre>
+  public void clipRect(int X,
+                       int Y,
+                       int W,
+                       int H)
+</pre>
+<a name="clearClip()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearClip">
+<b>
+clearClip
+</b>
+</a>
+<pre>
+  public void clearClip()
+</pre>
+<a name="clearRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearRect">
+<b>
+clearRect
+</b>
+</a>
+<pre>
+  public void clearRect(int X,
+                        int Y,
+                        int W,
+                        int H)
+</pre>
+<a name="fillRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="fillRect">
+<b>
+fillRect
+</b>
+</a>
+<pre>
+  public void fillRect(int X,
+                       int Y,
+                       int W,
+                       int H)
+</pre>
+<a name="drawRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawRect">
+<b>
+drawRect
+</b>
+</a>
+<pre>
+  public void drawRect(int X,
+                       int Y,
+                       int W,
+                       int H)
+</pre>
+<a name="drawString(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawString">
+<b>
+drawString
+</b>
+</a>
+<pre>
+  public void drawString(<a href="java.lang.String.html#_top_">String</a> str,
+                         int x,
+                         int y)
+</pre>
+<a name="drawChars(char[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawChars">
+<b>
+drawChars
+</b>
+</a>
+<pre>
+  public void drawChars(char buf[],
+                        int offset,
+                        int length,
+                        int x,
+                        int y)
+</pre>
+<a name="drawBytes(byte[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawBytes">
+<b>
+drawBytes
+</b>
+</a>
+<pre>
+  public void drawBytes(byte buf[],
+                        int offset,
+                        int length,
+                        int x,
+                        int y)
+</pre>
+<a name="drawLine(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawLine">
+<b>
+drawLine
+</b>
+</a>
+<pre>
+  public void drawLine(int x1,
+                       int y1,
+                       int x2,
+                       int y2)
+</pre>
+<dl>
+<dd>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.GenericGraphics.html#drawLine">drawLine</a>
+</dl>
+</dl>
+<p>
+<a name="paint3DRect(int, int, int, int, boolean, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint3DRect">
+<b>
+paint3DRect
+</b>
+</a>
+<pre>
+  public void paint3DRect(int x,
+                          int y,
+                          int w,
+                          int h,
+                          boolean fill,
+                          boolean raised)
+</pre>
+<dl>
+<dd>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.GenericGraphics.html#paint3DRect">paint3DRect</a>
+</dl>
+</dl>
+<p>
+<a name="update()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public void update()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.WServer.html#_top_">Previous</a>    <a href="awt.XbmImage.html#_top_">Next</a></pre>
+</body>
+</html>

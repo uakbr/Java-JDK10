@@ -1,0 +1,131 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Logical Instructions</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING118></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_23.html">Prev</A>       <A HREF="vmspec_25.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Logical Instructions</H1>
+<DL>
+<DT><A HREF="vmspec_24.html#HEADING119"><B></B>  ishl</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING120"><B></B>  ishr</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING121"><B></B>  iushr</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING122"><B></B>  lshl</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING123"><B></B>  lshr</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING124"><B></B>  lushr</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING125"><B></B>  iand</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING126"><B></B>  land</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING127"><B></B>  ior</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING128"><B></B>  lor</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING129"><B></B>  ixor</A><DD>
+<DT><A HREF="vmspec_24.html#HEADING130"><B></B>  lxor</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING119></A>
+<H3>ishl</H3>
+Integer shift left<BR><IMG SRC="instructions_only_Tbl_16.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be integers. value1 is shifted left by the amount indicated by the low five bits of value2. The integer result replaces both values on the stack.<P>
+<A NAME=HEADING120></A>
+<H3>ishr</H3>
+Integer arithmetic shift right<BR><IMG SRC="instructions_only_Tbl_134.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be integers. value1 is shifted right arithmetically (with sign extension) by the amount indicated by the low five bits of value2. The integer result replaces both values on the stack.<P>
+<A NAME=HEADING121></A>
+<H3>iushr</H3>
+Integer logical shift right<BR><IMG SRC="instructions_only_Tbl_117.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be integers. value1 is shifted right logically (with no sign extension) by the amount indicated by the low five bits of value2. The integer result replaces both values on the stack.<P>
+<A NAME=HEADING122></A>
+<H3>lshl</H3>
+Long integer shift left<BR><IMG SRC="instructions_only_Tbl_133.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 should be a long integer and value2 should be an integer. value1 is shifted left by the amount indicated by the low six bits of value2. The long integer result replaces both values on the stack.<P>
+<A NAME=HEADING123></A>
+<H3>lshr</H3>
+L<BR><IMG SRC="instructions_only_Tbl_116.gif"><BR>
+ong integer arithmetic shift right<P>
+<PRE>
+..., value1-word1, value1-word2, value2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 should be a long integer and value2 should be an integer. value1 is shifted right arithmetically (with sign extension) by the amount indicated by the low six bits of value2. The long integer result replaces both values on the stack.<P>
+<A NAME=HEADING124></A>
+<H3>lushr</H3>
+Long integer logical shift right<BR><IMG SRC="instructions_only_Tbl_135.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 should be a long integer and value2 should be an integer. value1 is shifted right logically (with no sign extension) by the amount indicated by the low six bits of value2. The long integer result replaces both values on the stack.<P>
+<A NAME=HEADING125></A>
+<H3>iand</H3>
+Integer boolean and<BR><IMG SRC="instructions_only_Tbl_128.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should both be integers. They are replaced on the stack by their bitwise conjunction (AND).<P>
+<A NAME=HEADING126></A>
+<H3>land</H3>
+Long integer boolean and<BR><IMG SRC="instructions_only_Tbl_118.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should both be long integers. They are replaced on the stack by their bitwise conjunction (AND).<P>
+<A NAME=HEADING127></A>
+<H3>ior</H3>
+Integer boolean or<BR><IMG SRC="instructions_only_Tbl_129.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should both be integers. They are replaced on the stack by their bitwise disjunction (OR).<P>
+<A NAME=HEADING128></A>
+<H3>lor</H3>
+Long integer boolean or<BR><IMG SRC="instructions_only_Tbl_119.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should both be long integers. They are replaced on the stack by their bitwise disjunction (OR).<P>
+<A NAME=HEADING129></A>
+<H3>ixor</H3>
+Integer boolean xor<BR><IMG SRC="instructions_only_Tbl_120.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should both be integers. They are replaced on the stack by their bitwise exclusive disjunction (XOR).<P>
+<A NAME=HEADING130></A>
+<H3>lxor</H3>
+Long integer boolean xor<BR><IMG SRC="instructions_only_Tbl_131.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should both be long integers. They are replaced on the stack by their bitwise exclusive disjunction (XOR).<P>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_23.html">Prev</A>       <A HREF="vmspec_25.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

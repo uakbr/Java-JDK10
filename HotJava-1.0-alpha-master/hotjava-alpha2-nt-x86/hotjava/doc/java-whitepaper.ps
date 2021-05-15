@@ -1,0 +1,3092 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 4.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 4.0, for use with Frame 4.0 products
+% This ps_prolog file is Copyright (c) 1986-1993 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameBuilder and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to True, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (4.0) def 
+/FMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	FMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto
+	show FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(PostScript Lang. Ref. Man., 2nd Ed., H.2.4 says EPS must not call X              )
+	dup dup (X) search pop exch pop exch pop length 
+	4 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+/concatprocs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin 
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/FrameNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		setrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+FMLevel1 not { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} if
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				FMPColor graymode and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not FMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	FMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgrxfer FMLOCAL
+	/orggxfer FMLOCAL
+	/orgbxfer FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/orgrproc FMLOCAL
+	/orggproc FMLOCAL
+	/orgbproc FMLOCAL
+	/organgle FMLOCAL
+	/orgrangle FMLOCAL
+	/orggangle FMLOCAL
+	/orgbangle FMLOCAL
+	/orgfreq FMLOCAL
+	/orgrfreq FMLOCAL
+	/orggfreq FMLOCAL
+	/orgbfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/edown FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /FrameNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	FMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{{1 dict dup /PageSize [paperwidth paperheight]put setpagedevice}stopped
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		 {1 dict dup /ManualFeed manualfeed put setpagedevice } stopped pop }
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			FrameNegative {
+				1 1 4 { 
+					pop { 1 exch sub } concatprocs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		FrameNegative {
+			{ 1 exch sub } concatprocs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/pagesave FMLOCAL
+/orgmatrix FMLOCAL
+/landscape FMLOCAL
+/pwid FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/initmatrix {(initmatrix) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setPatternMode {
+	FMLevel1 {
+		/bwidth  exch def
+		/bpside  exch def
+		/bstring exch def
+		/onbits 0 def  /offbits 0 def
+		freq sangle landscape {90 add} if 
+			{/y exch def
+			 /x exch def
+			 /xindex x 1 add 2 div bpside mul cvi def
+			 /yindex y 1 add 2 div bpside mul cvi def
+			 bstring yindex bwidth mul xindex 8 idiv add get
+			 1 7 xindex 8 mod sub bitshift and 0 ne FrameNegative {not} if
+			 {/onbits  onbits  1 add def 1}
+			 {/offbits offbits 1 add def 0}
+			 ifelse
+			}
+			setscreen
+		offbits offbits onbits add div FrameNegative {1.0 exch sub} if
+		/FrameCurGray exch def
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		FMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode FMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode FMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+	/rad FMLOCAL
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+      dup dup
+      24 eq { pop pop 3 mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+FMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch concatprocs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def
+	FMLevel1 {	
+		colorsetup
+		/is w d wbytes string def
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is w d wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	FMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {ip} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/d 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris} {gis} {bis} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/d 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris gis bis w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(4.0) FMVERSION
+1 1 0 0 612 792 0 1 11 FMDOCUMENT
+0 0 /AvantGarde-Book FMFONTDEFINE
+1 0 /Palatino-Italic FMFONTDEFINE
+2 0 /Palatino-BoldItalic FMFONTDEFINE
+3 0 /Palatino-Roman FMFONTDEFINE
+4 1 /ZapfDingbats FMFONTDEFINE
+5 0 /Palatino-Bold FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Introduction) 189 736.84 T
+(Copyright \251 1994, 1995  Sun Microsystems) 72 62.56 T
+(The Java Language: A White Paper) 324 62.56 T
+(1 of 8) 518.95 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 30 Q
+-1.5 (The Java) 189 664 S
+-1.5 ( Language:) 300.03 664 S
+-1.5 (A White Paper) 288 628 S
+72 554 540 572 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 563 540 563 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+2 14 Q
+0 X
+0 0 0 1 0 0 0 K
+(Intr) 72 544.67 T
+(oduction) 95.87 544.67 T
+3 10 Q
+(The Java pr) 189 544.67 T
+(ogramming language and envir) 239.5 544.67 T
+(onment is designed to solve a) 379.46 544.67 T
+(number of pr) 189 532.67 T
+(oblems in modern pr) 247.52 532.67 T
+(ogramming practice. It started as a part of a) 340.25 532.67 T
+(lar) 189 520.67 T
+(ger pr) 200.68 520.67 T
+(oject to develop advanced softwar) 227.26 520.67 T
+(e for consumer electr) 378.31 520.67 T
+(onics. These) 470.86 520.67 T
+(devices ar) 189 508.67 T
+(e small, r) 233.2 508.67 T
+(eliable, portable, distributed, r) 273.15 508.67 T
+(eal-time embedded systems.) 406.77 508.67 T
+(When we started the pr) 189 496.67 T
+(oject, we intended to use C++, but we encounter) 292.82 496.67 T
+(ed a) 505.97 496.67 T
+(number of pr) 189 484.67 T
+(oblems. Initially these wer) 247.52 484.67 T
+(e just compiler technology pr) 363.73 484.67 T
+(oblems,) 492.55 484.67 T
+(but as time passed we encounter) 189 472.67 T
+(ed a set of pr) 333.05 472.67 T
+(oblems that wer) 389.81 472.67 T
+(e best solved by) 460.81 472.67 T
+(changing the language.) 189 460.67 T
+(The companion paper) 189 441.67 T
+(,) 285.51 441.67 T
+1 F
+(The HotJava Br) 290.51 441.67 T
+(owser: A White Paper) 353.09 441.67 T
+3 F
+(, describes a powerful) 440.67 441.67 T
+(application that demonstrates the power of the Java language.) 189 429.67 T
+72 366.33 540 384.33 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 375.33 540 375.33 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+2 14 Q
+0 X
+0 0 0 1 0 0 0 K
+(Java) 72 357 T
+3 10 Q
+-0.01 (Java: A simple, object-oriented, distributed, interpr) 207 357 P
+-0.01 (eted, r) 431.74 357 P
+-0.01 (obust, secur) 459.45 357 P
+-0.01 (e,) 512.22 357 P
+(ar) 207 345 T
+(chitectur) 215.77 345 T
+(e neutral, portable, high-performance, multithr) 254.49 345 T
+(eaded, and) 462.05 345 T
+(dynamic language.) 207 333 T
+-0.2 (One way to characterize a system is with a set of buzzwor) 189 314 P
+-0.2 (ds. W) 442.39 314 P
+-0.2 (e use a standar) 466.62 314 P
+-0.2 (d) 531.59 314 P
+(set of them in describing Java. The r) 189 302 T
+(est of this section is an explanation of what) 347.26 302 T
+(we mean by those buzzwor) 189 290 T
+(ds and the pr) 310.36 290 T
+(oblems that we wer) 368.79 290 T
+(e trying to solve.) 455.42 290 T
+4 19.2 Q
+(\247) 207 266 T
+1 10 Q
+-0.26 (Ar) 225 272 P
+-0.26 (chimedes Inc. is a \336ctitious softwar) 235.93 272 P
+-0.26 (e company that pr) 375.26 272 P
+-0.26 (oduces softwar) 446.96 272 P
+-0.26 (e to) 505.86 272 P
+(teach about basic physics. This softwar) 225 260 T
+(e is designed to interact with the) 380.16 260 T
+(user) 225 248 T
+(, pr) 241.49 248 T
+(oviding not only text and illustrations in the manner of a) 255.2 248 T
+(traditional textbook, but also pr) 225 236 T
+(oviding a set of softwar) 351.55 236 T
+(e lab benches on) 444.69 236 T
+(which experiments can be set up and their behavior simulated. For) 225 224 T
+(example, the most basic one allows students to put together levers and) 225 212 T
+(pulleys and see how they act. The italicized narrative of the trials and) 225 200 T
+-0.08 (tribulations of the Ar) 225 188 P
+-0.08 (chimedes\325 designers is used her) 310.03 188 P
+-0.08 (e to pr) 434.18 188 P
+-0.08 (ovide examples) 459.39 188 P
+(of the language concepts pr) 225 176 T
+(esented.) 334.07 176 T
+5 F
+(Simple) 81 140 T
+3 F
+(W) 189 140 T
+(e wanted to build a system that could be pr) 198.08 140 T
+(ogrammed easily without a lot of) 389.21 140 T
+(esoteric training and which leveraged today\325s standar) 189 128 T
+(d practice. Most) 426.49 128 T
+(pr) 189 116 T
+(ogrammers working these days use C, and most pr) 198.78 116 T
+(ogrammers doing object-) 423.95 116 T
+(oriented pr) 189 104 T
+(ogramming use C++. So even though we found that C++ was) 238.37 104 T
+281.13 664 300.03 687.71 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(TM) 282.15 677.96 T
+0 0 612 792 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "1" 1
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Java) 189 736.84 T
+(2 of 8) 67.5 62.56 T
+(The Java Language: A White Paper) 189 62.56 T
+(Copyright \251 1994, 1995  Sun Microsystems) 378 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+-0.02 (unsuitable, we designed Java as closely to C++ as possible in or) 189 683.31 P
+-0.02 (der to make the) 468.47 683.31 P
+(system mor) 189 671.31 T
+(e compr) 240.48 671.31 T
+(ehensible.) 276.28 671.31 T
+-0.4 (Java omits many rar) 189 652.31 P
+-0.4 (ely used, poorly understood, confusing featur) 276.92 652.31 P
+-0.4 (es of C++ that) 477.22 652.31 P
+(in our experience bring mor) 189 640.31 T
+(e grief than bene\336t. These omitted featur) 312.45 640.31 T
+(es) 491.99 640.31 T
+(primarily consist of operator overloading \050although the Java language does) 189 628.31 T
+(have method overloading\051, multiple inheritance, and extensive automatic) 189 616.31 T
+(coer) 189 604.31 T
+(cions.) 207.46 604.31 T
+(W) 189 585.31 T
+(e added auto garbage collection ther) 198.08 585.31 T
+(eby simplifying the task of Java) 358.67 585.31 T
+(pr) 189 573.31 T
+(ogramming but making the system somewhat mor) 198.78 573.31 T
+(e complicated. A good) 422.79 573.31 T
+(example of a common sour) 189 561.31 T
+(ce of complexity in many C and C++ applications is) 308.62 561.31 T
+-0.15 (storage management: the allocation and fr) 189 549.31 P
+-0.15 (eeing of memory) 374.28 549.31 P
+-0.15 (. By virtue of having) 447.94 549.31 P
+(automatic garbage collection the Java language not only makes the) 189 537.31 T
+(pr) 189 525.31 T
+(ogramming task easier) 198.78 525.31 T
+(, it also dramatically cuts down on bugs.) 298.7 525.31 T
+4 19.2 Q
+(\247) 207 501.31 T
+1 10 Q
+(The folks at Ar) 225 507.31 T
+(chimedes wanted to spend their time thinking about levers) 284.53 507.31 T
+(and pulleys, but instead spent a lot of time on mundane pr) 225 495.31 T
+(ogramming) 459.47 495.31 T
+(tasks. Their central expertise was teaching, not pr) 225 483.31 T
+(ogramming. One of the) 424.34 483.31 T
+(most complicated of these pr) 225 471.31 T
+(ogramming tasks was \336guring out wher) 337.95 471.31 T
+(e) 498.88 471.31 T
+(memory was being wasted acr) 225 459.31 T
+(oss their 20K lines of code.) 345.18 459.31 T
+3 F
+(Another aspect of being simple is being small. One of the goals of Java is to) 189 440.31 T
+-0.06 (enable the constr) 189 428.31 P
+-0.06 (uction of softwar) 263.68 428.31 P
+-0.06 (e that can r) 338.67 428.31 P
+-0.06 (un stand-alone in small machines.) 387.24 428.31 P
+-0.4 (The size of the basic interpr) 189 416.31 P
+-0.4 (eter and class support is about 40K bytes; adding the) 308.49 416.31 P
+(basic standar) 189 404.31 T
+(d libraries and thr) 246.82 404.31 T
+(ead support \050essentially a self-contained) 326.4 404.31 T
+(micr) 189 392.31 T
+(okernel\051 adds an additional 175K.) 208.95 392.31 T
+5 F
+(Object-Oriented) 81 356.31 T
+3 F
+-0.08 (This is, unfortunately) 189 356.31 P
+-0.08 (, one of the most over) 282.7 356.31 P
+-0.08 (used buzzwor) 377.57 356.31 P
+-0.08 (ds in the industry) 440.29 356.31 P
+-0.08 (. But) 517.26 356.31 P
+-0.28 (object-oriented design is very powerful because it facilitates the clean de\336nition) 189 344.31 P
+(of interfaces and makes it possible to pr) 189 332.31 T
+(ovide r) 363.93 332.31 T
+(eusable \322softwar) 395.12 332.31 T
+(e ICs.\323) 469.31 332.31 T
+(Simply stated, object-oriented design is a technique that focuses design on the) 189 313.31 T
+(data \050=objects\051 and on the interfaces to it. T) 189 301.31 T
+(o make an analogy with carpentry) 378.36 301.31 T
+(,) 528.63 301.31 T
+(an \322object-oriented\323 carpenter would be mostly concerned with the chair he) 189 289.31 T
+(was building, and secondarily with the tools used to make it; a \322non-object-) 189 277.31 T
+(oriented\323 carpenter would think primarily of his tools. Object-oriented design) 189 265.31 T
+(is also the mechanism for de\336ning how modules \322plug and play) 189 253.31 T
+(.\323) 471.91 253.31 T
+(The object-oriented facilities of Java ar) 189 234.31 T
+(e essentially those of C++, with) 357.72 234.31 T
+(extensions fr) 189 222.31 T
+(om Objective C for mor) 245.09 222.31 T
+(e dynamic method r) 348.84 222.31 T
+(esolution.) 437.84 222.31 T
+4 19.2 Q
+(\247) 207 198.31 T
+1 10 Q
+(The folks at Ar) 225 204.31 T
+(chimedes had lots of things in their simulation, among) 284.53 204.31 T
+(them, r) 225 192.31 T
+(opes and elastic bands. In their initial C version of the pr) 253.71 192.31 T
+(oduct,) 481.13 192.31 T
+-0 (they ended up with a pr) 225 180.31 P
+-0 (etty big system because they had to write separate) 320.09 180.31 P
+(softwar) 225 168.31 T
+(e for describing r) 254.81 168.31 T
+(opes versus elastic bands. When they r) 322.51 168.31 T
+(ewr) 476.87 168.31 T
+(ote) 491.69 168.31 T
+(their application in an object-oriented style, they found they could de\336ne) 225 156.31 T
+(one basic object that r) 225 144.31 T
+(epr) 311.65 144.31 T
+(esented the common aspects of r) 324.25 144.31 T
+(opes and elastic) 451.93 144.31 T
+(bands, and then r) 225 132.31 T
+(opes and elastic bands wer) 295.01 132.31 T
+(e de\336ned as variation s) 400.75 132.31 T
+(\050subclasses\051 of the basic type. When it came time to add chains, it was a) 225 120.31 T
+(snap because they could build on what had been written befor) 225 108.31 T
+(e, rather) 470.93 108.31 T
+(than writing a whole new object simulation.) 225 96.31 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "2" 2
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Java) 189 736.84 T
+(Copyright \251 1994, 1995  Sun Microsystems) 72 62.56 T
+(The Java Language: A White Paper) 324 62.56 T
+(3 of 8) 518.95 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 10 Q
+(Distributed) 81 677.33 T
+3 F
+(Java has an extensive library of r) 189 677.33 T
+(outines for coping easily with TCP/IP) 332.64 677.33 T
+(pr) 189 665.33 T
+(otocols like HTTP and FTP) 198.78 665.33 T
+(. Java applications can open and access objects) 316.17 665.33 T
+-0.11 (acr) 189 653.33 P
+-0.11 (oss the net via URLs with the same ease that pr) 202.21 653.33 P
+-0.11 (ogrammers ar) 409.2 653.33 P
+-0.11 (e used to when) 470.97 653.33 P
+(accessing a local \336le system.) 189 641.33 T
+4 19.2 Q
+(\247) 207 617.33 T
+1 10 Q
+(The folks at Ar) 225 623.33 T
+(chimedes initially built their stuff for CD ROM. But they) 284.53 623.33 T
+(had some ideas for interactive learning games that they wanted to try out) 225 611.33 T
+(for their next pr) 225 599.33 T
+(oduct. For example, they wanted to allow students on) 288.99 599.33 T
+(differ) 225 587.33 T
+(ent computers to cooperate in building a machine to be simulated.) 245.94 587.33 T
+-0.2 (But all the networking systems they\325d seen wer) 225 575.33 P
+-0.2 (e complicated and r) 413.16 575.33 P
+-0.2 (equir) 490.24 575.33 P
+-0.2 (ed) 510.81 575.33 P
+(esoteric softwar) 225 563.33 T
+(e specialists. So they gave up.) 287.49 563.33 T
+5 F
+(Robust) 81 527.33 T
+3 F
+-0.16 (Java is intended for writing pr) 189 527.33 P
+-0.16 (ograms that must be r) 321.69 527.33 P
+-0.16 (eliable in a variety of ways.) 417.86 527.33 P
+(Java puts a lot of emphasis on early checking for possible pr) 189 515.33 T
+(oblems, later) 453.72 515.33 T
+(dynamic \050r) 189 503.33 T
+(untime\051 checking, and eliminating situations that ar) 237.37 503.33 T
+(e err) 466.07 503.33 T
+(or pr) 485.87 503.33 T
+(one.) 507.56 503.33 T
+(One of the advantages of a str) 189 484.33 T
+(ongly typed language \050like C++\051 is that it allows) 320.62 484.33 T
+(extensive compile-time checking so bugs can be found early) 189 472.33 T
+(. Unfortunately) 452.71 472.33 T
+(,) 519.57 472.33 T
+(C++ inherits a number of loopholes in compile-time checking fr) 189 460.33 T
+(om C, which is) 469.85 460.33 T
+-0.23 (r) 189 448.33 P
+-0.23 (elatively lax \050particularly method/pr) 192.77 448.33 P
+-0.23 (ocedur) 355.8 448.33 P
+-0.23 (e declarations\051. In Java, we r) 386.4 448.33 P
+-0.23 (equir) 509.84 448.33 P
+-0.23 (e) 532.94 448.33 P
+(declarations and do not support C-style implicit declarations.) 189 436.33 T
+(The linker understands the type system and r) 189 417.33 T
+(epeats many of the type checks) 389.66 417.33 T
+(done by the compiler to guar) 189 405.33 T
+(d against version mismatch pr) 317.02 405.33 T
+(oblems.) 450.85 405.33 T
+-0.29 (The single biggest dif) 189 386.33 P
+-0.29 (fer) 282.62 386.33 P
+-0.29 (ence between Java and C/C++ is that Java has a pointer) 294.51 386.33 P
+(model that eliminates the possibility of overwriting memory and corr) 189 374.33 T
+(upting) 495.67 374.33 T
+(data. Instead of pointer arithmetic, Java has tr) 189 362.33 T
+(ue arrays. This allows subscript) 390.79 362.33 T
+(checking to be performed. In addition, it is not possible to turn an arbitrary) 189 350.33 T
+(integer into a pointer by casting.) 189 338.33 T
+4 19.2 Q
+(\247) 207 314.33 T
+1 10 Q
+(The folks at Ar) 225 320.33 T
+(chimedes had their application basically working in C) 284.53 320.33 T
+(pr) 225 308.33 T
+(etty quickly) 233.71 308.33 T
+(. But their schedule kept slipping because of all the small) 280.65 308.33 T
+(bugs that kept slipping thr) 225 296.33 T
+(ough. They had lots of tr) 331.67 296.33 T
+(ouble with memory) 429.81 296.33 T
+(corruption, versions out-of-sync and interface mismatches. What they) 225 284.33 T
+-0.25 (gained because C let them pull strange tricks in their code, they paid for in) 225 272.33 P
+(quality assurance time. They also had to r) 225 260.33 T
+(eissue their softwar) 392.4 260.33 T
+(e after the) 470 260.33 T
+(\336rst r) 225 248.33 T
+(elease because of all the bugs that slipped thr) 247.6 248.33 T
+(ough.) 425.75 248.33 T
+3 F
+-0.05 (While Java doesn\325t make the QA pr) 189 229.33 P
+-0.05 (oblem go away) 345.01 229.33 P
+-0.05 (, it does make it signi\336cantly) 411.23 229.33 P
+(easier) 189 217.33 T
+(.) 213.94 217.33 T
+(V) 189 198.33 T
+(ery dynamic languages like Lisp, TCL and Smalltalk ar) 195.11 198.33 T
+(e often used for) 437.59 198.33 T
+(pr) 189 186.33 T
+(ototyping. One of the r) 198.78 186.33 T
+(easons for their success at this is that they ar) 299.48 186.33 T
+(e very) 494.6 186.33 T
+(r) 189 174.33 T
+(obust: you don\325t have to worry about fr) 192.77 174.33 T
+(eeing or corr) 367.39 174.33 T
+(upting memory) 423.39 174.33 T
+(.) 491.79 174.33 T
+(Pr) 189 162.33 T
+(ogrammers can be r) 198.81 162.33 T
+(elatively fearless about dealing with memory because) 286.27 162.33 T
+(they don\325t have to worry about it getting corr) 189 150.33 T
+(upted. Java has this pr) 389.43 150.33 T
+(operty and) 488.18 150.33 T
+(it has been found to be very liberating.) 189 138.33 T
+(One r) 189 119.33 T
+(eason that dynamic languages ar) 213.74 119.33 T
+(e good for pr) 358.74 119.33 T
+(ototyping is that they don\325t) 416.14 119.33 T
+(r) 189 107.33 T
+(equir) 192.77 107.33 T
+(e you to pin down decisions early on. Java has exactly the opposite) 215.87 107.33 T
+(pr) 189 95.33 T
+(operty; it for) 198.78 95.33 T
+(ces you to make choices explicitly) 254.04 95.33 T
+(. Along with these choices) 401.81 95.33 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "3" 3
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Java) 189 736.84 T
+(4 of 8) 67.5 62.56 T
+(The Java Language: A White Paper) 189 62.56 T
+(Copyright \251 1994, 1995  Sun Microsystems) 378 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(come a lot of assistance: you can write method invocations and if you get) 189 683.31 T
+-0.14 (something wr) 189 671.31 P
+-0.14 (ong, you ar) 250.16 671.31 P
+-0.14 (e informed about it at compile time. Y) 300.04 671.31 P
+-0.14 (ou don\325t have to) 465.66 671.31 P
+(worry about method invocation err) 189 659.31 T
+(or) 345.05 659.31 T
+(. Y) 353.72 659.31 T
+(ou can also get a lot of \337exibility by) 364.47 659.31 T
+(using interfaces instead of classes.) 189 647.31 T
+5 F
+(Secure) 81 611.31 T
+3 F
+(Java is intended to be used in networked/distributed envir) 189 611.31 T
+(onments. T) 449.86 611.31 T
+(owar) 498.29 611.31 T
+(d) 520.86 611.31 T
+(that end, a lot of emphasis has been placed on security) 189 599.31 T
+(. Java enables the) 428.42 599.31 T
+(constr) 189 587.31 T
+(uction of vir) 216.09 587.31 T
+(us-fr) 270.23 587.31 T
+(ee, tamper) 290.93 587.31 T
+(-fr) 337.17 587.31 T
+(ee systems. The authentication technique s) 347.6 587.31 T
+(ar) 189 575.31 T
+(e based on public-key encryption.) 197.77 575.31 T
+(Ther) 189 556.31 T
+(e is a str) 209.51 556.31 T
+(ong interplay between \322r) 245.22 556.31 T
+(obust\323 and \322secur) 355.86 556.31 T
+(e.\323 For example, the) 435.58 556.31 T
+-0.39 (changes to the semantics of pointers make it impossible for applications to for) 189 544.31 P
+-0.39 (ge) 527.54 544.31 P
+(access to data str) 189 532.31 T
+(uctur) 263.11 532.31 T
+(es or to access private data in objects that they do have) 286.64 532.31 T
+(access to. This closes the door on most activities of vir) 189 520.31 T
+(uses.) 426.06 520.31 T
+4 19.2 Q
+(\247) 207 496.31 T
+1 10 Q
+(Someone wr) 225 502.31 T
+(ote an inter) 273.99 502.31 T
+(esting \322patch\323 to the PC version of the) 319.92 502.31 T
+(Ar) 225 490.31 T
+(chimedes system. They posted this patch to one of the major bulletin) 235.93 490.31 T
+-0.38 (boards. Since it was easily available and added some inter) 225 478.31 P
+-0.38 (esting featur) 451.93 478.31 P
+-0.38 (es to) 502.21 478.31 P
+(the system, lots of people downloaded it. It hadn\325) 225 466.31 T
+(t been checked out by the) 419.61 466.31 T
+-0.17 (folks at Ar) 225 454.31 P
+-0.17 (chimedes, but it seemed to work. Until the next April 1st, when) 266.69 454.31 P
+(thousands of folks discover) 225 442.31 T
+(ed rude pictur) 331.94 442.31 T
+(es popping up in their childr) 388.62 442.31 T
+(en\325) 502.81 442.31 T
+(s) 514.49 442.31 T
+(lessons. Needless to say) 225 430.31 T
+(, even though they wer) 319.08 430.31 T
+(e in no way r) 410.29 430.31 T
+(esponsible for) 462.89 430.31 T
+(the incident, the folks at Ar) 225 418.31 T
+(chimedes still had a lot of damage to contr) 334.44 418.31 T
+(ol.) 502.38 418.31 T
+5 F
+(Architecture Neutral) 81 382.31 T
+3 F
+(Java was designed to support applications on networks. In general, networks) 189 382.31 T
+(ar) 189 370.31 T
+(e composed of a variety of systems with a variety of CPU and operating) 197.77 370.31 T
+(system ar) 189 358.31 T
+(chitectur) 231.19 358.31 T
+(es. T) 269.91 358.31 T
+(o enable a Java application to execute anywher) 289.15 358.31 T
+(e on the) 495.74 358.31 T
+(network, the compiler generates an ar) 189 346.31 T
+(chitectur) 356.14 346.31 T
+(e neutral object \336le format -- the) 394.86 346.31 T
+-0.16 (compiled code is executable on many pr) 189 334.31 P
+-0.16 (ocessors, given the pr) 365.42 334.31 P
+-0.16 (esence of the Java) 460.13 334.31 P
+(r) 189 322.31 T
+(untime system.) 192.87 322.31 T
+(This is useful not only for networks but also for single system softwar) 189 303.31 T
+(e) 496.75 303.31 T
+-0.19 (distribution. In the pr) 189 291.31 P
+-0.19 (esent personal computer market, application writers have) 283.66 291.31 P
+(to pr) 189 279.31 T
+(oduce versions of their application that ar) 210 279.31 T
+(e compatible with the IBM PC) 394.25 279.31 T
+(and with the Apple Macintosh. W) 189 267.31 T
+(ith the PC market \050thr) 338.49 267.31 T
+(ough W) 435.05 267.31 T
+(indows/NT\051) 469.87 267.31 T
+(diversifying into many CPU ar) 189 255.31 T
+(chitectur) 325.08 255.31 T
+(es, and Apple moving of) 363.8 255.31 T
+(f the 68000) 472.6 255.31 T
+(towar) 189 243.31 T
+(ds the PowerPC, this makes the pr) 214.83 243.31 T
+(oduction of softwar) 366.56 243.31 T
+(e that r) 453.24 243.31 T
+(uns on all) 484.24 243.31 T
+(platforms almost impossible. W) 189 231.31 T
+(ith Java, the same version of the application) 328.97 231.31 T
+(r) 189 219.31 T
+(uns on all platforms.) 192.87 219.31 T
+(The Java compiler does this by generating bytecode instr) 189 200.31 T
+(uctions which have) 439.44 200.31 T
+-0.41 (nothing to do with a particular computer ar) 189 188.31 P
+-0.41 (chitectur) 378.93 188.31 P
+-0.41 (e. Rather) 417.65 188.31 P
+-0.41 (, they ar) 455.8 188.31 P
+-0.41 (e designed) 490.69 188.31 P
+(to be both easy to interpr) 189 176.31 T
+(et on any machine and easily translated into native) 299.43 176.31 T
+(machine code on the \337y) 189 164.31 T
+(.) 293.09 164.31 T
+4 19.2 Q
+(\247) 207 140.31 T
+1 10 Q
+-0.34 (Ar) 225 146.31 P
+-0.34 (chimedes is a small company) 235.93 146.31 P
+-0.34 (. They started out pr) 349.57 146.31 P
+-0.34 (oducing their softwar) 430.52 146.31 P
+-0.34 (e) 515.95 146.31 P
+(for the PC since that was the lar) 225 134.31 T
+(gest market. After a while, they wer) 353.6 134.31 T
+(e a) 496.74 134.31 T
+(lar) 225 122.31 T
+(ge enough company that they could afford to do a port to the) 235.93 122.31 T
+(Macintosh, but it was a pr) 225 110.31 T
+(etty big effort and didn\325) 331.28 110.31 T
+(t r) 426.1 110.31 T
+(eally pay off. They) 435.64 110.31 T
+(couldn\325) 225 98.31 T
+(t afford to port to the PowerPC Macintosh or MIPS NT machine.) 254.82 98.31 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "4" 4
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Java) 189 736.84 T
+(Copyright \251 1994, 1995  Sun Microsystems) 72 62.56 T
+(The Java Language: A White Paper) 324 62.56 T
+(5 of 8) 518.95 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 10 Q
+(They couldn\325) 225 677.33 T
+(t \322catch the new wave\323 as it was happening, and a) 277.32 677.33 T
+(competitor jumped in ...) 225 665.33 T
+5 F
+(Portable) 81 629.33 T
+3 F
+-0.29 (Being ar) 189 629.33 P
+-0.29 (chitectur) 225.17 629.33 P
+-0.29 (e neutral is a big chunk of being portable, but ther) 263.89 629.33 P
+-0.29 (e\325s mor) 481.61 629.33 P
+-0.29 (e to it) 513.69 629.33 P
+-0.13 (than that. Unlike C and C++, ther) 189 617.33 P
+-0.13 (e ar) 336.08 617.33 P
+-0.13 (e no \322implementation dependent\323 aspects) 352.01 617.33 P
+(of the speci\336cation. The sizes of the primitive data types ar) 189 605.33 T
+(e speci\336ed, as is the) 448.29 605.33 T
+(behavior of arithmetic on them. For example, \322int\323 always means a signed) 189 593.33 T
+(two\325s complement 32 bit integer) 189 581.33 T
+(, and \322\337oat\323 always means a 32-bit IEEE 754) 330.26 581.33 T
+(\337oating point number) 189 569.33 T
+(. Making these choices is feasible in this day and age) 285.76 569.33 T
+(because essentially all inter) 189 557.33 T
+(esting CPU\325s shar) 309.12 557.33 T
+(e these characteristics.) 387.46 557.33 T
+(The libraries that ar) 189 538.33 T
+(e a part of the system de\336ne portable interfaces. For) 275.54 538.33 T
+(example, ther) 189 526.33 T
+(e is an abstract W) 249.13 526.33 T
+(indow class and implementations of it for Unix,) 326.02 526.33 T
+(W) 189 514.33 T
+(indows and the Macintosh.) 198.45 514.33 T
+3 8 Q
+(\240) 318.54 518.33 T
+3 10 Q
+-0.19 (The Java system itself is quite portable. The new compiler is written in Java and) 189 495.33 P
+(the r) 189 483.33 T
+(untime is written in ANSI C with a clean portability boundary) 209.24 483.33 T
+(. The) 483.29 483.33 T
+(portability boundary is essentially POSIX.) 189 471.33 T
+5 F
+(Interpreted) 81 435.33 T
+3 F
+(The Java interpr) 189 435.33 T
+(eter can execute Java bytecodes dir) 260.23 435.33 T
+(ectly on any machine to) 413.99 435.33 T
+(which the interpr) 189 423.33 T
+(eter has been ported. And since linking is a mor) 265.71 423.33 T
+(e incr) 476.68 423.33 T
+(emental) 500.91 423.33 T
+-0.19 (and lightweight pr) 189 411.33 P
+-0.19 (ocess, the development pr) 271.48 411.33 P
+-0.19 (ocess can be much mor) 386.17 411.33 P
+-0.19 (e rapid and) 487.36 411.33 P
+(exploratory) 189 399.33 T
+(.) 239.4 399.33 T
+-0.3 (As a part of the bytecode str) 189 380.33 P
+-0.3 (eam, mor) 311.29 380.33 P
+-0.3 (e compile-time information is carried over) 352.66 380.33 P
+-0.3 (and available at r) 189 368.33 P
+-0.3 (untime. This is what the linker) 264.36 368.33 P
+-0.3 (\325s type checks ar) 398.73 368.33 P
+-0.3 (e based on, and) 470.03 368.33 P
+(what the RPC pr) 189 356.33 T
+(otocol derivation is based on. It also makes pr) 262.38 356.33 T
+(ograms mor) 464.27 356.33 T
+(e) 517.87 356.33 T
+(amenable to debugging.) 189 344.33 T
+4 19.2 Q
+(\247) 207 320.33 T
+1 10 Q
+(The pr) 225 326.33 T
+(ogrammers at Ar) 251.21 326.33 T
+(chimedes spent a lot of time waiting for pr) 319.91 326.33 T
+(ograms) 488.8 326.33 T
+(to compile and link. They also spent a lot of time tracking down senseless) 225 314.33 T
+-0.02 (bugs because some changed sour) 225 302.33 P
+-0.02 (ce \336les didn\325) 354.92 302.33 P
+-0.02 (t get compiled \050despite using) 404.42 302.33 P
+(a fancy \322make\323 facility\051, which caused version mismatches; and they had) 225 290.33 T
+(to track down pr) 225 278.33 T
+(ocedur) 291.37 278.33 T
+(es that wer) 318.04 278.33 T
+(e declar) 361.74 278.33 T
+(ed inconsistently in various) 392.02 278.33 T
+(parts of their pr) 225 266.33 T
+(ograms. Another couple of months lost in the schedule.) 287.87 266.33 T
+5 F
+(High Performance) 81 230.33 T
+3 F
+-0.12 (While the performance of interpr) 189 230.33 P
+-0.12 (eted bytecodes is usually mor) 334.51 230.33 P
+-0.12 (e than adequate,) 465.07 230.33 P
+-0.4 (ther) 189 218.33 P
+-0.4 (e ar) 206.64 218.33 P
+-0.4 (e situations wher) 222.3 218.33 P
+-0.4 (e higher performance is r) 297.15 218.33 P
+-0.4 (equir) 406.49 218.33 P
+-0.4 (ed. The bytecodes can be) 429.59 218.33 P
+(translated on the \337y \050at r) 189 206.33 T
+(untime\051 into machine code for the particular CPU the) 298.09 206.33 T
+(application is r) 189 194.33 T
+(unning on. For those accustomed to the normal design of a) 254.75 194.33 T
+(compiler and dynamic loader) 189 182.33 T
+(, this is somewhat like putting the \336nal machine) 318.88 182.33 T
+(code generator in the dynamic loader) 189 170.33 T
+(.) 353.63 170.33 T
+(The bytecode format was designed with generating machine codes in mind, so) 189 151.33 T
+(the actual pr) 189 139.33 T
+(ocess of generating machine code is generally simple. Reasonably) 244.29 139.33 T
+72 94.01 540 114.1 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+198 96.1 540 96.1 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+3 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(\240) 198 88.67 T
+(The W) 207 88.67 T
+(indows and Macintosh versions ar) 229.95 88.67 T
+(en\325t complete yet.) 351.59 88.67 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "5" 5
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Java) 189 736.84 T
+(6 of 8) 67.5 62.56 T
+(The Java Language: A White Paper) 189 62.56 T
+(Copyright \251 1994, 1995  Sun Microsystems) 378 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(good code is pr) 189 683.31 T
+(oduced: it does automatic r) 256.82 683.31 T
+(egister allocation and the compiler) 376.99 683.31 T
+(does some optimization when it pr) 189 671.31 T
+(oduces the bytecodes.) 342.97 671.31 T
+(In interpr) 189 652.31 T
+(eted code we\325r) 231.2 652.31 T
+(e getting about 300,000 method calls per second on an) 295.63 652.31 T
+(Sun Micr) 189 640.31 T
+(osystems SP) 229.18 640.31 T
+(ARCStation 10. The performance of bytecodes converted) 282.67 640.31 T
+(to machine code is almost indistinguishable fr) 189 628.31 T
+(om native C or C++.) 391.85 628.31 T
+4 19.2 Q
+(\247) 207 604.31 T
+1 10 Q
+-0.37 (When Ar) 225 610.31 P
+-0.37 (chimedes was starting up, they did a pr) 261.95 610.31 P
+-0.37 (ototype in Smalltalk. This) 417.11 610.31 P
+(impr) 225 598.31 T
+(essed the investors enough that they got funded, but it didn\325) 244.27 598.31 T
+(t r) 484.93 598.31 T
+(eally) 494.47 598.31 T
+(help them pr) 225 586.31 T
+(oduce their pr) 275.38 586.31 T
+(oduct: in order to make their simulations fast) 330.94 586.31 T
+(enough and the system small enough, it had to be r) 225 574.31 T
+(ewritten in C.) 428.62 574.31 T
+5 F
+(Multithreaded) 81 538.31 T
+3 F
+(Ther) 189 538.31 T
+(e ar) 209.51 538.31 T
+(e many things going on at the same time in the world ar) 225.57 538.31 T
+(ound us.) 472.69 538.31 T
+(Multithr) 189 526.31 T
+(eading is a way of building applications with multiple thr) 226.42 526.31 T
+(eads) 481.53 526.31 T
+3 8 Q
+(\240) 501.67 530.31 T
+3 10 Q
+-0.2 (Unfortunately) 189 514.31 P
+-0.2 (, writing pr) 250.86 514.31 P
+-0.2 (ograms that deal with many things happening at once) 300.48 514.31 P
+(can be much mor) 189 502.31 T
+(e dif) 265.26 502.31 T
+(\336cult than writing in the conventional single-thr) 284.72 502.31 T
+(eaded C) 497.41 502.31 T
+(and C++ style.) 189 490.31 T
+(Java has a sophisticated set of synchr) 189 471.31 T
+(onization primitives that ar) 352.22 471.31 T
+(e based on the) 472.93 471.31 T
+(widely used monitor and condition variable paradigm that was intr) 189 459.31 T
+(oduced by) 487.89 459.31 T
+(C.A.R.Hoar) 189 447.31 T
+(e) 240.6 447.31 T
+3 8 Q
+(\340) 245.39 451.31 T
+3 10 Q
+(. By integrating these concepts into the language they become) 249.39 447.31 T
+(much easier to use and ar) 189 435.31 T
+(e mor) 301.78 435.31 T
+(e r) 327.13 435.31 T
+(obust. Much of the style of this integration) 338.19 435.31 T
+(came fr) 189 423.31 T
+(om Xer) 221.66 423.31 T
+(ox\325s Cedar/Mesa system.) 253.68 423.31 T
+(Other bene\336ts of multithr) 189 404.31 T
+(eading ar) 302.24 404.31 T
+(e better interactive r) 343.7 404.31 T
+(esponsiveness and r) 432.12 404.31 T
+(eal-) 520.82 404.31 T
+(time behavior) 189 392.31 T
+(. This is limited, however) 249.66 392.31 T
+(, by the underlying platform: stand-) 360.69 392.31 T
+(alone Java r) 189 380.31 T
+(untime envir) 240.83 380.31 T
+(onments have good r) 297.91 380.31 T
+(eal-time behavior) 391.25 380.31 T
+(. Running on) 467.94 380.31 T
+-0.2 (top of other systems like Unix, W) 189 368.31 P
+-0.2 (indows, the Macintosh, or W) 334.53 368.31 P
+-0.2 (indows NT limits) 460.73 368.31 P
+(the r) 189 356.31 T
+(eal-time r) 209.14 356.31 T
+(esponsiveness to that of the underlying system.) 251.23 356.31 T
+4 19.2 Q
+(\247) 207 332.31 T
+1 10 Q
+(Lots of things wer) 225 338.31 T
+(e going on at once in their simulations. Ropes wer) 297.32 338.31 T
+(e) 497.89 338.31 T
+-0.39 (being pulled, wheels wer) 225 326.31 P
+-0.39 (e turning, levers wer) 322.2 326.31 P
+-0.39 (e r) 404.77 326.31 P
+-0.39 (ocking, and input fr) 414.48 326.31 P
+-0.39 (om the) 493.33 326.31 P
+(user was being tracked. Because they had to write all this in a single) 225 314.31 T
+(thr) 225 302.31 T
+(eaded form, all the things that happen at the same time, even though) 237.04 302.31 T
+(they had nothing to do with each other) 225 290.31 T
+(, had to be manually intermixed.) 378.58 290.31 T
+-0.08 (Using an \322event loop\323 made things a little cleaner) 225 278.31 P
+-0.08 (, but it was still a mess.) 425.45 278.31 P
+(The system became fragile and hard to understand. They wer) 225 266.31 T
+(e pulling in) 469.08 266.31 T
+-0.23 (data fr) 225 254.31 P
+-0.23 (om all over the net. But originally they wer) 250.97 254.31 P
+-0.23 (e doing it one chunk at a) 422.58 254.31 P
+(time. This serialized network communication was very slow) 225 242.31 T
+(. When they) 464.81 242.31 T
+(converted to a multithr) 225 230.31 T
+(eaded style, it was trivial to overlap all of their) 318.05 230.31 T
+(network communication.) 225 218.31 T
+5 F
+(Dynamic) 81 182.31 T
+3 F
+(In a number of ways, Java is a mor) 189 182.31 T
+(e dynamic language than C or C++. It was) 341.76 182.31 T
+(designed to adapt to an evolving envir) 189 170.31 T
+(onment.) 359.66 170.31 T
+72 123 540 143.09 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+198 125.09 540 125.09 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+3 8 Q
+0 X
+0 0 0 1 0 0 0 K
+(\240) 198 117.67 T
+(Thr) 207 117.67 T
+(eads ar) 219.58 117.67 T
+(e sometimes also called lightweight pr) 244.7 117.67 T
+(ocesses or execution contexts.) 380.17 117.67 T
+(\340) 198 105.67 T
+(1974. Hoar) 207 105.67 T
+(e, C.A.R.) 245.04 105.67 T
+1 F
+(Monitors: An Operating System Structuring Concept) 278.11 105.67 T
+3 F
+(, Comm. ACM) 452.64 105.67 T
+5 F
+(17) 506.27 105.67 T
+3 F
+(,) 514.27 105.67 T
+(10:549-557 \050October\051) 207 96.67 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "6" 6
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Java) 189 736.84 T
+(Copyright \251 1994, 1995  Sun Microsystems) 72 62.56 T
+(The Java Language: A White Paper) 324 62.56 T
+(7 of 8) 518.95 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(For example, one major pr) 189 677.33 T
+(oblem with using C++ in a pr) 305.39 677.33 T
+(oduction envir) 435.52 677.33 T
+(onment) 500.45 677.33 T
+(is a side-ef) 189 665.33 T
+(fect of the way that code is always implemented. If company A) 235.47 665.33 T
+(pr) 189 653.33 T
+(oduces a class library \050a library of plug and play components\051 and company) 198.78 653.33 T
+(B buys it and uses it in their pr) 189 641.33 T
+(oduct, then if A changes it\325s library and) 324.28 641.33 T
+(distributes a new r) 189 629.33 T
+(elease, B will almost certainly have to r) 271.45 629.33 T
+(ecompile and) 443.24 629.33 T
+(r) 189 617.33 T
+(edistribute their own softwar) 192.77 617.33 T
+(e. In an envir) 321.8 617.33 T
+(onment wher) 379.54 617.33 T
+(e the end user gets A) 438.74 617.33 T
+(and B\325s softwar) 189 605.33 T
+(e independently \050say A is an OS vendor and B is an application) 257.46 605.33 T
+(vendor\051 pr) 189 593.33 T
+(oblems can r) 236.39 593.33 T
+(esult.) 292.18 593.33 T
+(For example, if A distributes an upgrade to its libraries then all of the softwar) 189 574.33 T
+(e) 530.37 574.33 T
+(fr) 189 562.33 T
+(om B will br) 196.1 562.33 T
+(eak. It is possible to avoid this pr) 250.37 562.33 T
+(oblem in C++, but it is) 395.45 562.33 T
+-0.3 (extraor) 189 550.33 P
+-0.3 (dinarily dif) 220.39 550.33 P
+-0.3 (\336cult and it ef) 269.93 550.33 P
+-0.3 (fectively means not using any of the language\325s) 330.26 550.33 P
+(OO featur) 189 538.33 T
+(es dir) 233.4 538.33 T
+(ectly) 257.72 538.33 T
+(.) 277.57 538.33 T
+4 19.2 Q
+(\247) 207 514.33 T
+1 10 Q
+(Ar) 225 520.33 T
+(chimedes built their pr) 235.93 520.33 T
+(oduct using the object-oriented graphics library) 326.41 520.33 T
+(fr) 225 508.33 T
+(om 3DPC Inc. 3DPC r) 231.49 508.33 T
+(eleased a new version of the graphics library) 324 508.33 T
+-0.05 (which several computer manufactur) 225 496.33 P
+-0.05 (ers bundled with their new machines.) 369.4 496.33 P
+(Customers of Ar) 225 484.33 T
+(chimedes that bought these new machines discover) 291.49 484.33 T
+(ed to) 493.71 484.33 T
+(their dismay that their old softwar) 225 472.33 T
+(e no longer worked. \050In r) 362.3 472.33 T
+(eal life, this) 461.56 472.33 T
+-0.17 (only happens on Unix systems. In the PC world, 3DPC would never have) 225 460.33 P
+-0.27 (r) 225 448.33 P
+-0.27 (eleased such a library: their ability to change their pr) 228.71 448.33 P
+-0.27 (oduct and use C++\325) 437.42 448.33 P
+-0.27 (s) 515.88 448.33 P
+(object oriented featur) 225 436.33 T
+(es is sever) 309.63 436.33 T
+(ely hinder) 349.46 436.33 T
+(ed.\051) 389.57 436.33 T
+3 F
+(By making these inter) 189 417.33 T
+(connections between modules later) 285.3 417.33 T
+(, Java completely) 440.12 417.33 T
+-0.37 (avoids these pr) 189 405.33 P
+-0.37 (oblems and makes the use of the object-oriented paradigm much) 255.3 405.33 P
+(mor) 189 393.33 T
+(e straightforwar) 207.06 393.33 T
+(d. Libraries can fr) 278.2 393.33 T
+(eely add new methods and instance) 356.06 393.33 T
+(variables without any ef) 189 381.33 T
+(fect on their clients.) 295.88 381.33 T
+(Java understands interfaces\321 a concept borr) 189 362.33 T
+(owed fr) 386.31 362.33 T
+(om Objective C which is) 420.61 362.33 T
+(similar to a class. An interface is simply a speci\336cation of a set of methods that) 189 350.33 T
+(an object r) 189 338.33 T
+(esponds to. It does not include any instance variables or) 234.41 338.33 T
+-0.05 (implementations. Interfaces can be multiply-inherited \050unlike classes\051 and they) 189 326.33 P
+(can be used in a mor) 189 314.33 T
+(e \337exible way than the usual rigid class inheritance) 280.04 314.33 T
+(str) 189 302.33 T
+(uctur) 200.37 302.33 T
+(e.) 223.9 302.33 T
+-0.25 (Classes have a r) 189 283.33 P
+-0.25 (untime r) 258.4 283.33 P
+-0.25 (epr) 296.06 283.33 P
+-0.25 (esentation: ther) 310.63 283.33 P
+-0.25 (e is a class named Class, instances of) 378.37 283.33 P
+(which contain r) 189 271.33 T
+(untime class de\336nitions. If, in a C or C++ pr) 257.91 271.33 T
+(ogram, you have a) 451.17 271.33 T
+-0.24 (pointer to an object but you don\325t know what type of object it is, ther) 189 259.33 P
+-0.24 (e is no way) 488.83 259.33 P
+(to \336nd out. However) 189 247.33 T
+(, in Java, \336nding out based on the r) 281.01 247.33 T
+(untime type) 435.43 247.33 T
+(information is straightforwar) 189 235.33 T
+(d. Because casts ar) 317.75 235.33 T
+(e checked at both compile-time) 399.21 235.33 T
+(and r) 189 223.33 T
+(untime, you can tr) 212.3 223.33 T
+(ust a cast in Java On the other hand in C and C++, the) 293.38 223.33 T
+(compiler just tr) 189 211.33 T
+(usts that you\325r) 256.3 211.33 T
+(e doing the right thing.) 320.01 211.33 T
+-0.21 (It is also possible to look up the de\336nition of a class given a string containing its) 189 192.33 P
+(name. This means that you can compute a data type name and have it easily) 189 180.33 T
+(dynamically-linked into the r) 189 168.33 T
+(unning system.) 318.17 168.33 T
+4 19.2 Q
+(\247) 207 144.33 T
+1 10 Q
+(T) 225 150.33 T
+(o expand their r) 230 150.33 T
+(evenue str) 293.43 150.33 T
+(eam, the folks at Ar) 334.65 150.33 T
+(chimedes wanted to) 412.51 150.33 T
+(ar) 225 138.33 T
+(chitect their pr) 233.15 138.33 T
+(oduct so that new aftermarket plug-in modules could be) 292.22 138.33 T
+(added to extend the system. This was possible on the PC, but just bar) 225 126.33 T
+(ely) 501.76 126.33 T
+(.) 513.06 126.33 T
+(They had to hir) 225 114.33 T
+(e a couple of new pr) 286.2 114.33 T
+(ogrammers because it was so) 365.37 114.33 T
+(complicated. This also added pr) 225 102.33 T
+(oblems when debugging.) 350.45 102.33 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "7" 7
+%%Page: "8" 8
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0.5 0.5 0 1 0.5 0.5]
+[ 0 0 0 0.12 0.88 0.88 0.88]
+ 9 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 8 Q
+0 X
+0 0 0 1 0 0 0 K
+( Summary) 189 736.84 T
+(8 of 8) 67.5 62.56 T
+(The Java Language: A White Paper) 189 62.56 T
+(Copyright \251 1994, 1995  Sun Microsystems) 378 62.56 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 671.98 540 689.98 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 680.98 540 680.98 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+2 14 Q
+0 X
+0 0 0 1 0 0 0 K
+(Summary) 72 662.64 T
+3 10 Q
+(The Java language pr) 189 662.64 T
+(ovides a powerful addition to the tools that pr) 282.67 662.64 T
+(ogrammers) 486.27 662.64 T
+(have at their disposal. Java makes pr) 189 650.64 T
+(ogramming easier because it is object-) 350.81 650.64 T
+(oriented and has automatic garbage collection. In addition, because compiled) 189 638.64 T
+(Java code is ar) 189 626.64 T
+(chitectur) 252.2 626.64 T
+(e-neutral, Java applications ar) 290.92 626.64 T
+(e ideal for a diverse) 422.52 626.64 T
+(envir) 189 614.64 T
+(onment like the Internet. For mor) 211.94 614.64 T
+(e information send mail to) 359.05 614.64 T
+(HotJava@java.sun.com.) 189 602.64 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "8" 8
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%PageOrder: Ascend
+%%Pages: 8
+%%DocumentFonts: AvantGarde-Book
+%%+ Palatino-Italic
+%%+ Palatino-BoldItalic
+%%+ Palatino-Roman
+%%+ ZapfDingbats
+%%+ Palatino-Bold
+%%EOF

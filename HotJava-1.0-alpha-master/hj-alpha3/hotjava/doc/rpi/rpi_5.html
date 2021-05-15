@@ -1,0 +1,231 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Defining The Java Classes</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING5></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_4.html">Prev</A> <A HREF="rpi_6.html">Next</A><P>
+<H1>3  Defining The Java Classes</H1>
+<HR>
+<DL>
+<DT><A HREF="rpi_5.html#HEADING6"><B> 3.1 </B> - InputFile.java</A><DD>
+<DT><A HREF="rpi_5.html#HEADING7"><B> 3.2 </B> - OutputFile.java</A><DD>
+</DL>
+
+
+You may bind any Java method to a C method. The way you indicate that a particular method is defined in C is by declaring the method native. In the sample application we define two Java classes with native methods: Inputfile.java and Outputfile.java.<P>
+<A NAME=HEADING6></A>
+<HR>
+<H3>InputFile.java</H3>
+<PRE>
+/*
+ * Copyright (c) 1994, 1995 by Sun Microsystems, Inc.
+ * All Rights Reserved.
+ *
+ * @(#)InputFile.java 94/12/08 1.2
+ *
+ * December 1994, Eugene Kuerner
+ *
+ * This file extends the File class by adding file manipulation 
+ * methods creating a readonly input file abstraction.  We 
+ * leverage the path manipulation code provided in the File 
+ * superclass and extend that code with support for opening and 
+ * reading files.
+ *
+ * version 	1.0, 01 Dec 1994
+ * author	Eugene Kuerner
+ *
+ */
+
+
+/*
+ * Because this class depends on native methods (i.e. methods 
+ * actually implemented in some other language such as C), we 
+ * need to ensure that these functions are loaded into the 
+ * Java interpreter at runtime.  We use the Java Linker 
+ * class for this task.We need to "include" the class 
+ * definitions for the JavaLinker object.  The Linker class 
+ * gets loaded in by the import statment.  And the loadLibrary 
+ * call that's used later in this class is a static method that 
+ * operates on the global class and not a specific object 
+ * instance.  Please refer to the Java language
+ * specification for more information on static methods and 
+ * variables.
+ *
+ */
+import java.util.Linker;
+
+
+/*
+ * Since we want this file to be part of the "demo" package we 
+ * direct the compiler to associate this class with the other 
+ * "demo" packageclasses.
+ *
+ */
+package demo;
+
+
+/**
+ * Define class InputFile that presents a simple readonly input 
+ * file abstraction.  Note that we use native or non-Java 
+ * methods to implement some of the methods.
+ *
+ */
+public
+class InputFile extends File {
+
+    /**
+     * Link in the native library that we depends on.  If we 
+     * cannot link this in, an exception is generated and the    
+     * class loading fails.  We have arbitrarily named the 
+     * library "file" at the Java level (or libfile.so at the 
+     * solaris level). Additionally, the Linker call is part of 
+     * the static initializer for the class. Thus, the library 
+     * is loaded as part of this class being loaded.
+     *
+     */
+    static {
+        Linker.loadLibrary("file");
+    }
+
+    /**
+     * Holds the system dependent handle to the file resource.
+     *
+     */
+    protected int fd;
+
+    /**
+     * Constructor for the input file object.  Initializes the
+     * parent class with the path name.
+     *
+     */
+    public InputFile(String path) {
+		super(path);
+    }
+
+    /**
+     * Attempts to open the file for reading.  Returns
+     * TRUE on success and FALSE on failure.  Alternatively, 
+     * we could throw an exception and catch it.
+     *
+     */
+    public native boolean open();
+
+    /**
+     * Attempts to close the previously opened file.  Has
+     * no return value.
+     */
+    public native void close();
+
+    /**
+     * Reads some number of bytes from the opened file.  Returns
+     * the number of bytes read or -1 when the file is empty.
+     *
+     */
+    public native int read(byte b[], int len);
+}
+</PRE>
+<A NAME=HEADING7></A>
+<HR>
+<H3>OutputFile.java</H3>
+<PRE>
+/*
+ * Copyright (c) 1994, 1995 by Sun Microsystems, Inc.
+ * All Rights Reserved.
+ *
+ * @(#)OutputFile.java 94/12/08 1.2
+ *
+ * December 1994, Eugene Kuerner
+ *
+ * This file defines class OutputFile which implementa a write 
+ * only output file abstraction.  Like class InputFile, class 
+ * OutputFile subclasses of class File to obtain simple file and 
+ * path name functions.
+ *
+ * @version 	1.0, 01 Dec 1994
+ * @author	Eugene Kuerner
+ *
+ */
+
+
+/*
+ * Because we depend on native code to implement some of the 
+ * methods in this class, we need to refer to the system's 
+ * Linker object.
+ *
+ */
+import java.util.Linker;
+
+
+/*
+ * Associate this class with classes File and InputFile (already 
+ * part of package demo) into package demo.
+ *
+ */
+package demo;
+
+
+/**
+ * This class defines a simple writeonly file by extending class 
+ * File.
+ *
+ */
+public
+class OutputFile extends File {
+
+    /**
+     * Link in the native library that this class depends on.  We
+     * bind this class loading to the library loading by making    
+     * the Linker.loadLibrary() call part of the static 
+     * initializer for the class.  That is, if the loadLibary() 
+     * call fails this class fails to load.
+     *
+     */
+    static {
+        Linker.loadLibrary("file");
+    }
+
+    /**
+     * Holds the system dependent handle to the file resource.
+     *
+     */
+    protected int fd;
+
+    /**
+     * Constructor for the output file object.  Initializes the
+     * parent class with the path name.
+     *
+     */
+    public OutputFile(String path) {
+		super(path);
+    }
+
+    /**
+     * Attempts to open the file for writing.  If the file does 
+     * not exist one is created.  Returns TRUE on success and 
+     * FALSE on failure.
+     *
+     */
+    public native boolean open();
+
+    /**
+     * Attempts to close the previously opened file.  Has
+     * no return value.
+     */
+    public native void close();
+
+    /**
+     * Writes some number of bytes to the opened file.  Returns
+     * the number of bytes written.
+     *
+     */
+    public native int write(byte b[], int len);
+}
+</PRE>
+The three classes, File.java, InputFile.java, and OutputFile.java are compiled using javac to create the class files. The classes created by compiling InputFile.java and OutputFile.java are passed to javah to create header files and stub files. File.java contains no native methods and its compiled class does not need to be passed to javah. <P>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_4.html">Prev</A> <A HREF="rpi_6.html">Next</A><P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,90 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Interface java.io.FilenameFilter
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.html">Previous</a>    <a href="java.io.html">Next</a></pre>
+<hr>
+<h1>
+Interface java.io.FilenameFilter
+</h1>
+<dl>
+<dt>
+public interface <b>
+FilenameFilter</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A filter interface for file names.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.File.html#_top_">File</a><dt>
+<b>Version:</b>
+<dd>
+	1.9, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne,
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#accept(java.io.File, java.lang.String)"><b>accept</b></a>(File, String)
+<dd>
+Determines whether a name should be included in a file list.
+</dl>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="accept(java.io.File, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="accept">
+<b>
+accept
+</b>
+</a>
+<pre>
+  public abstract boolean accept(<a href="java.io.File.html#_top_">File</a> dir,
+                                 <a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Determines whether a name should be included in a file list.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+dir
+-
+	the directory in which the file was found
+<dd>
+name
+-
+ the name of the file
+<dt>
+<b>Returns:</b>
+<dd>
+true if name should be included in file list
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.html">Previous</a>    <a href="java.io.html">Next</a></pre>
+</body>
+</html>

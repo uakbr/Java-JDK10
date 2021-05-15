@@ -1,0 +1,123 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Loading Local Variables Onto the Stack</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING38></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_18.html">Prev</A>       <A HREF="vmspec_20.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Loading Local Variables Onto the Stack</H1>
+<DL>
+<DT><A HREF="vmspec_19.html#HEADING39"><B></B>  iload</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING40"><B></B>  iload_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING41"><B></B>  lload</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING42"><B></B>  lload_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING43"><B></B>  fload</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING44"><B></B>  fload_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING45"><B></B>  dload</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING46"><B></B>  dload_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING47"><B></B>  aload</A><DD>
+<DT><A HREF="vmspec_19.html#HEADING48"><B></B>  aload_&lt;n&gt;</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING39></A>
+<H3>iload</H3>
+Load integer from local variable<BR><IMG SRC="instructions_only_Tbl_6.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value<P>
+</PRE>
+Local variable vindex in the current Java frame should contain an integer. The value of that variable is pushed onto the operand stack.<P>
+<A NAME=HEADING40></A>
+<H3>iload_&lt;n&gt;</H3>
+Load integer from local variable<BR><IMG SRC="instructions_only_Tbl_24.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value<P>
+</PRE>
+Forms: iload_0 = 27, iload_1 = 27, iload_2 = 28, iload_3 = 29<P>
+Local variable &lt;n&gt;in the current Java frame should contain an integer. The value of that variable is pushed onto the operand stack.<P>
+This instruction is the same as iload with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING41></A>
+<H3>lload</H3>
+Load long integer from local variable<BR><IMG SRC="instructions_only_Tbl_48.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value-word1, value-word2<P>
+</PRE>
+Local variables vindex and vindex+1 in the current Java frame should together contain a long integer. The value of contained in those variables is pushed onto the operand stack.<P>
+<A NAME=HEADING42></A>
+<H3>lload_&lt;n&gt;</H3>
+Load long integer from local variable<BR><IMG SRC="instructions_only_Tbl_50.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value-word1, value-word2<P>
+</PRE>
+Forms: lload_0 = 30, lload_1 = 31, lload_2 = 32, lload_3 = 33<P>
+Local variables &lt;n&gt; and &lt;n&gt;+1 in the current Java frame should together contain a long integer. The value contained in those variables is pushed onto the operand stack.<P>
+This opcode is the same as lload with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING43></A>
+<H3>fload</H3>
+Load single float from local variable<BR><IMG SRC="instructions_only_Tbl_25.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value<P>
+</PRE>
+Local variable vindex in the current Java frame should contain a single precision floating point number. The value of that variable is pushed onto the operand stack.<P>
+<A NAME=HEADING44></A>
+<H3>fload_&lt;n&gt;</H3>
+Load single float from local variable<BR><IMG SRC="instructions_only_Tbl_19.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value<P>
+</PRE>
+Forms: fload_0 = 34, fload_1 = 35, fload_2 = 36, fload_3 = 37<P>
+Local variable &lt;n&gt; in the current Java frame should contain a single precision floating point number. The value of that variable is pushed onto the operand stack.<P>
+This opcode is the same as fload with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING45></A>
+<H3>dload</H3>
+Load double float from local variable<BR><IMG SRC="instructions_only_Tbl_51.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value-word1, value-word2<P>
+</PRE>
+Local variables vindex and vindex+1 in the current Java frame should together contain a double precision float point number. The value contained in those variables is pushed onto the operand stack.<P>
+<A NAME=HEADING46></A>
+<H3>dload_&lt;n&gt;</H3>
+Load double float from local variable<BR><IMG SRC="instructions_only_Tbl_58.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value-word1, value-word2<P>
+</PRE>
+Forms: dload_0 = 38, dload_1 = 39, dload_2 = 40, dload_3 = 41<P>
+Local variables &lt;n&gt; and &lt;n&gt;+1 in the current Java frame should together contain a double precision floating point number. The value contained in those variables is pushed onto the operand stack.<P>
+This opcode is the same as dload with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING47></A>
+<H3>aload</H3>
+Load local object variable<BR><IMG SRC="instructions_only_Tbl_23.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value<P>
+</PRE>
+Local variable vindex in the current Java frame should contain a handle to an object or to an array. The value of that variable is pushed onto the operand stack.<P>
+<A NAME=HEADING48></A>
+<H3>aload_&lt;n&gt;</H3>
+Load object reference from local variable<BR><IMG SRC="instructions_only_Tbl_15.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., value<P>
+</PRE>
+Forms: aload_0 = 42, aload_1 = 43, aload_2 = 44, aload_3 = 45<P>
+Local variable n in the current Java frame should contain a handle to an object or to an array. The value of that variable is pushed onto the operand stack.<P>
+This opcode is the same as aload with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_18.html">Prev</A>       <A HREF="vmspec_20.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

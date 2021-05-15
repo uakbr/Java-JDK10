@@ -1,0 +1,175 @@
+<!-- sccsid: @(#)javadoc.html	1.2 94/12/12 --->
+
+<HTML><HEAD>
+<TITLE>javadoc-The Java API Documentation Generator</TITLE>
+</HEAD><BODY>
+<H1>JAVADOC-The Java API Documentation Generator</H1>
+Generates  API documentation from source files.
+<P>
+<H2>SYNOPSIS</H2>
+ javadoc [ <a href="javadoc.html#Options">options</a> ] package | filename.java...
+<P>
+<H2>DESCRIPTION</H2>
+<b>javadoc</b> parses the declarations and doc comments in Java source files 
+and formats the public API into a hypertext document.
+You can pass either a package or specific Java source files to <b.javadoc</b>.
+ In addition to 
+the usual comments, <b>javadoc</b> uses a special
+set of tags that it recognizes in the doc comments. 
+<p>
+<i>package</i> must be 
+in your
+CLASSPATH. Note that <b>javadoc</b> uses .java files not .class files. 
+<p>
+<b>javadoc</b> reformats and displays all public and protected declarations 
+for, 
+
+<ul>
+<li>Classes and interfaces
+<li>Methods
+<li>Variables
+</ul>
+<h3>Doc Comments</h3>
+Java source files can include doc comments. Doc comments begin with
+//* and indicate text to be included automatically in generated 
+documentation.
+<h3>Standard HTML</h3>
+
+You can embed standard html tags within a doc comment. Don't use
+tags like &lt;h1&gt; and &lt;hr&gt;,etc. <b>javadoc</b> creates an entire 
+structured document and these structural tags interfere with the
+formatting of the generated document.
+
+<h3>javadoc Tags</h3>
+
+<b>javadoc</b> parses special tags that are recognized when they are embedded
+within an Java doc comment. These doc tags enable you to autogenerate a
+complete, well-formatted API from your source code. The tags start
+with an @.
+
+Tags must start at the beginning of a line.  Keep tags with the same
+name together within a doc comment.  For example, put all your @author
+tags together so <b>javadoc</b> can tell where the list ends.<p>
+
+<h3>Class Documentation Tags</h3>
+<dl>
+<dt><code>@see classname</code>
+<dd>Adds a hyperlinked "See Also" entry to the class.
+<p>
+<dt><code>@see fully-qualified-classname</code>
+<dd>Adds a hyperlinked "See Also" entry to the class.
+<p>
+<dt><code>@see fully-qualified-classname#method-name</code>
+<dd>Adds a hyperlinked "See Also" entry to the method in the specified class.
+<p>
+<dt><code>@version version-text</code>
+<dd>Adds a "Version" entry. 
+<p>
+<dt><code>@author your-name</code>
+<dd>Creates an "Author" entry. There can be multiple author tags.
+</dl>
+<h4>An example of a class comment:</h4>
+<pre>
+/**
+ * A class representing a window on the screen.
+ * For example:
+ * &lt;pre&gt;
+ *    Window win = new Window(parent);
+ *    win.show();
+ * &lt;/pre&gt;
+ *
+ * @see            awt.BaseWindow
+ * @see            awt.Button
+ * @version        1.2 12 Dec 1994
+ * @author         Sami Shaio
+ */
+class Window extends BaseWindow {
+        ...
+}
+</pre>
+
+<h3>Variable Documentation Tags</h3>
+
+In addition to HTML text, variable comments can contain only the 
+<code>@see</code> tag (see above).
+
+<h4>An example of a variable comment:</h4>
+
+<pre>
+/**
+ * The X-coordinate of the window
+ * @see window#1
+ */
+int x = 1263732;
+</pre>
+
+<h3>Method Documentation Tags</h3>
+
+Can contain <code>@see</code> tags, as well as:
+
+<dl>
+<dt><code>@param parameter-name description...</code>
+<dd>Adds a parameter to the "Parameters" section. The description may
+be continued on the next line.
+<p>
+<dt><code>@return  description...</code>
+<dd>Adds a "Returns" section, which contains the description of the return value.
+<p>
+<dt><code>@exception fully-qualified-class-name description...</code>
+<dd>Adds a "Throws" entry, which contains the name of the exception that may be
+thrown by the method. The exception is linked to its class documentation.
+</dl>
+
+<h4>An example of a method comment:</h4>
+
+<pre>
+/**
+ * Return the character at the specified index. An index ranges
+ * from &lt;tt&gt;0&lt;/tt&gt; to &lt;tt&gt;length() - 1&lt;/tt&gt;.
+ * @param index      The index of the desired character
+ * @return           The desired character
+ * @exception        StringIndexOutOfRangeException When the index 
+ *                   is not in the range &lt;tt&gt;0&lt;/tt&gt;&gt; to &lt;tt&gt;length() - 1&lt;/tt&gt;.
+ */
+public char charAt(int index) {
+    ...
+}
+</pre>
+<a name=Options><h2>OPTIONS</h2></a>
+<dl>
+<dt> -classpath path
+<dd> Specifies the path javadoc uses to look up the .java files. Overrides 
+the default or the CLASSPATH environment variable, if it is set. Directories 
+are separated by colons, for example:<P>
+<pre>
+    .:/home/avh/classes/:/usr/local/java/classes
+</pre>
+<dt>-d directory
+<dd> Specifies the directory where <b>javadoc</b> stores the generated HTML files.
+For example:
+<pre>
+    javadoc -d ~/public_html/doc java.lang
+</pre>
+<p>
+<dt>-verbose
+<dd> Causes the compiler and linker to print out messages about what source 
+files are being compiled and what object files are being loaded.<P>
+</dl>
+<P>
+<H2>ENVIRONMENT VARIABLES</H2>
+<dl>
+<dt>CLASSPATH
+<dd>Used to provide the system a path to user-defined classes. Directories are
+separated by colons, for example,
+<pre>
+    .:/home/avh/classes:/usr/local/java/classes
+</pre>
+</dl>
+<P>
+<H2>SEE ALSO</H2>
+<A HREF="javac.html">javac</A>,  
+<a HREF="java.html">java</A>,  <A HREF="javah.html">javah</A>,  
+<A HREF="javaprof.html">javaprof</A>, <A HREF="javap.html">javap</A>,  
+<A HREF="../javaspec/javaspec_1.html">The Java Language 
+Specification</a>
+</BODY></HTML>

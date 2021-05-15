@@ -1,0 +1,56 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- About the Spec</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING2></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_2.html">Prev</A>       <A HREF="vmspec_4.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>About the Spec</H1>
+<DL>
+<DT><A HREF="vmspec_3.html#HEADING3"><B></B>  Format</A><DD>
+<DT><A HREF="vmspec_3.html#HEADING4"><B></B>  Purpose and Vision</A><DD>
+<DT><A HREF="vmspec_3.html#HEADING5"><B></B>  The Java Interchange Specification</A><DD>
+<DT><A HREF="vmspec_3.html#HEADING6"><B></B>  Abstractions Left to the Implementor</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING3></A>
+<H3>Format</H3>
+This document describes the Java virtual machine and the instruction set. In this introduction, each component of the machine is briefly described. This introduction includes a description of the format used to present the opcode instructions. The next chapter is the instructions themselves.<P>
+Chapter 3 is the spec for the Java class file format, the binary file produced by the Java compiler.  The file will contain information about the class, its fields, its methods, and the virtual machine code required to execute the methods.<P>
+Appendix A contains some instructions used internally on the WebRunner/Java project for compiler optimization.<P>
+<A NAME=HEADING4></A>
+<H3>Purpose and Vision</H3>
+The Java virtual machine specification has a purpose that is both like and unlike equivalent documents for other languages and abstract machines. It is intended to present an abstract, logical machine design free from the distraction of inconsequential details of any implementation. It does not anticipate an implementation technology, or an implementation host. At the same time it gives a reader sufficient information to enable implementation of the abstract design in a range of technologies.<P>
+However, the intent of the WebRunner/Java project is to create a language and application that will allow the interchange over the Internet of "executable content," which will be embodied by compiled Java code. The project specifically does not want Java to be a proprietary language, and does not want to be the sole purveyor of Java language implementations. Rather, we hope to make documents like this one, and source code for our implementation, freely available for people to use as they choose.<P>
+This vision for WebRunner can only be achieved if the executable content can be reliably shared between different Java implementations. These intentions prohibit the definition of the Java virtual machine from being fully abstract. Rather, relevant logical elements of the design have to be made sufficiently concrete to enable the interchange of compiled Java code. This does not collapse the Java virtual machine specification to a description of an Java implementation; elements of the design that do not play a part in the interchange of executable content remain abstract. But it does force us to specify, in addition to the abstract machine design, a concrete interchange format for compiled Java code.<P>
+<A NAME=HEADING5></A>
+<H3>The Java Interchange Specification</H3>
+The Java interchange specification must contain the following components:<P>
+<UL>
+<LI>the instruction set syntax, including opcode and operand sizes and types, alignment and endian-ness<P>
+<LI>the instruction set opcode values<P>
+<LI>the values of any identifiers (e.g. type identifiers) in instructions or in supporting structures<P>
+<LI>the layout of supporting structures that appear in compiled Java code (e.g. the constant pool)<P>
+<LI>the Java object format (the .class file format).<P>
+</UL>
+In this version of the Java virtual machine specification, many of these have not yet been described, and are priorities for the next release of the document.<P>
+<A NAME=HEADING6></A>
+<H3>Abstractions Left to the Implementor</H3>
+Elements of the design unrelated to the interchange of compiled Java code remain abstract, including:<P>
+<UL>
+<LI>layout and management of the runtime data areas<P>
+<LI>garbage collection algorithms, strategies and constraints<P>
+<LI>the compiler, development environment, and runtime (apart from the need to generate and read valid compiled Java code)<P>
+<LI>optimizations that can be performed once compiled Java code is received.<P>
+</UL>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_2.html">Prev</A>       <A HREF="vmspec_4.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

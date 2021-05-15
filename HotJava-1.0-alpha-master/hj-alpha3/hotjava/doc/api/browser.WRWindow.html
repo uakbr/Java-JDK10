@@ -1,0 +1,616 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.WRWindow
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRTextItem.html#_top_">Previous</a>    <a href="browser.hotjava.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.WRWindow
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----<a href="awt.Container.html#_top_">awt.Container</a>
+                   |
+                   +----<a href="awt.Window.html#_top_">awt.Window</a>
+                           |
+                           +----<a href="awt.DisplayItemWindow.html#_top_">awt.DisplayItemWindow</a>
+                                   |
+                                   +----<a href="awt.TextWindow.html#_top_">awt.TextWindow</a>
+                                           |
+                                           +----browser.WRWindow
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+WRWindow</b>
+<dt>
+extends <a href="awt.TextWindow.html#_top_">TextWindow</a>
+</dl>
+A Window subclass that contains hotjava documents.
+html.Document objects are assigned to WRWindow's, which causes
+those documents to be displayed in the window.  WRWindow also
+serves as the focal point for handling document actions, such as
+following links, or moving up and down the document stack.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="net.www.html.Document.html#_top_">Document</a>,
+<a href="browser.Document.html#_top_">Document</a>,
+<a href="awt.Window.html#_top_">Window</a><dt>
+<b>Version:</b>
+<dd>
+1.92, 04 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+ Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WRWindow(awt.Window, java.lang.String)"><b>WRWindow</b></a>(Window, String)
+<dd>
+Constructs a new WRWindow as the named child of another
+Window.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WRWindow(awt.Frame, java.lang.String)"><b>WRWindow</b></a>(Frame, String)
+<dd>
+Constructs a new WRWindow as the named child of a Frame.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#allowStop(boolean)"><b>allowStop</b></a>(boolean)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#backup()"><b>backup</b></a>()
+<dd>
+Handles the callback from pressing the Back button in the main
+window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#destroyApplets()"><b>destroyApplets</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#document()"><b>document</b></a>()
+<dd>
+Returns the current document being displayed in this Window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dumpStack(java.lang.String)"><b>dumpStack</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#fetching(java.lang.String)"><b>fetching</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#flushImages()"><b>flushImages</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#forward()"><b>forward</b></a>()
+<dd>
+Handles the callback from pressing the Forward button in the main
+window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleResize()"><b>handleResize</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#imageProgress(int)"><b>imageProgress</b></a>(int)
+<dd>
+Notice the completion of background image reading, and
+reformat the current document if there are no more pending
+images.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#preserveScrolling()"><b>preserveScrolling</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pushURL(net.www.html.URL)"><b>pushURL</b></a>(URL)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#relayout()"><b>relayout</b></a>()
+<dd>
+Relays out the current document, trying to preserve the current
+position in the document.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reload()"><b>reload</b></a>()
+<dd>
+Handles the callback from pressing the reload button in the main
+window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#scrollToTextPosition(int)"><b>scrollToTextPosition</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setButtonStates()"><b>setButtonStates</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setDelayAppletLoading(boolean)"><b>setDelayAppletLoading</b></a>(boolean)
+<dd>
+Turn on or off delayed applet loading.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setDelayImageLoading(boolean)"><b>setDelayImageLoading</b></a>(boolean)
+<dd>
+Turn on or off delayed image loading.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setDocument(browser.DocumentInfo, boolean)"><b>setDocument</b></a>(DocumentInfo, boolean)
+<dd>
+Set the current document displayed by this window to the
+specified DocumentInfo.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startApplets()"><b>startApplets</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#status(java.lang.String)"><b>status</b></a>(String)
+<dd>
+Display a status message in the frame that contains this
+WRWindow.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stopApplets()"><b>stopApplets</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stopFetch()"><b>stopFetch</b></a>()
+<dd>
+Stop the document fetch now in progress.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#uncacheCurrentDocument()"><b>uncacheCurrentDocument</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#validate()"><b>validate</b></a>()
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="WRWindow"></a>
+<a name="WRWindow(awt.Window, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WRWindow
+</b>
+<pre>
+  public WRWindow(<a href="awt.Window.html#_top_">Window</a> parent,
+                  <a href="java.lang.String.html#_top_">String</a> client)
+</pre>
+<dl>
+<dd>
+Constructs a new WRWindow as the named child of another
+Window.
+</dl>
+<p>
+<a name="WRWindow(awt.Frame, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WRWindow
+</b>
+<pre>
+  public WRWindow(<a href="awt.Frame.html#_top_">Frame</a> parent,
+                  <a href="java.lang.String.html#_top_">String</a> client)
+</pre>
+<dl>
+<dd>
+Constructs a new WRWindow as the named child of a Frame.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="status(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="status">
+<b>
+status
+</b>
+</a>
+<pre>
+  public void status(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Display a status message in the frame that contains this
+WRWindow.
+</dl>
+<p>
+<a name="setDelayImageLoading(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setDelayImageLoading">
+<b>
+setDelayImageLoading
+</b>
+</a>
+<pre>
+  public void setDelayImageLoading(boolean on)
+</pre>
+<dl>
+<dd>
+Turn on or off delayed image loading.  If delayed image
+loading is turned on, and there are currently delayed images
+being fetched, they are flushed.  If delayed image loading is
+turned off, and there are images that need loading in the
+current document, they are fetched now.
+</dl>
+<p>
+<a name="setDelayAppletLoading(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setDelayAppletLoading">
+<b>
+setDelayAppletLoading
+</b>
+</a>
+<pre>
+  public void setDelayAppletLoading(boolean on)
+</pre>
+<dl>
+<dd>
+Turn on or off delayed applet loading.  If delayed applet
+loading is turned on, and there are currently delayed applets
+being fetched, they are flushed.  If delayed applet loading is
+turned off, and there are applets that need loading in the
+current document, they are feteched now.
+</dl>
+<p>
+<a name="imageProgress(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="imageProgress">
+<b>
+imageProgress
+</b>
+</a>
+<pre>
+  public void imageProgress(int pending)
+</pre>
+<dl>
+<dd>
+Notice the completion of background image reading, and
+reformat the current document if there are no more pending
+images.
+</dl>
+<p>
+<a name="scrollToTextPosition(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="scrollToTextPosition">
+<b>
+scrollToTextPosition
+</b>
+</a>
+<pre>
+  public synchronized void scrollToTextPosition(int pos)
+</pre>
+<a name="stopApplets()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stopApplets">
+<b>
+stopApplets
+</b>
+</a>
+<pre>
+  protected void stopApplets()
+</pre>
+<a name="startApplets()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startApplets">
+<b>
+startApplets
+</b>
+</a>
+<pre>
+  protected void startApplets()
+</pre>
+<a name="destroyApplets()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="destroyApplets">
+<b>
+destroyApplets
+</b>
+</a>
+<pre>
+  protected void destroyApplets()
+</pre>
+<a name="flushImages()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="flushImages">
+<b>
+flushImages
+</b>
+</a>
+<pre>
+  protected void flushImages()
+</pre>
+<a name="setDocument(browser.DocumentInfo, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setDocument">
+<b>
+setDocument
+</b>
+</a>
+<pre>
+  protected boolean setDocument(<a href="browser.DocumentInfo.html#_top_">DocumentInfo</a> newDoc,
+                                boolean restore)
+</pre>
+<dl>
+<dd>
+Set the current document displayed by this window to the
+specified DocumentInfo.  If this document has been visited
+previously, this scrolls to the last position at which this
+document was displayed.  If the document contains a #ref,
+that is also handled here.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="browser.DocumentInfo.html#_top_">DocumentInfo</a>,
+<a href="net.www.html.URL.html#_top_">URL</a>
+</dl>
+</dl>
+<p>
+<a name="document()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="document">
+<b>
+document
+</b>
+</a>
+<pre>
+  public <a href="browser.Document.html#_top_">Document</a> document()
+</pre>
+<dl>
+<dd>
+Returns the current document being displayed in this Window.
+</dl>
+<p>
+<a name="pushURL(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pushURL">
+<b>
+pushURL
+</b>
+</a>
+<pre>
+  public synchronized void pushURL(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<a name="fetching(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="fetching">
+<b>
+fetching
+</b>
+</a>
+<pre>
+  public void fetching(<a href="java.lang.String.html#_top_">String</a> msg)
+</pre>
+<a name="setButtonStates()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setButtonStates">
+<b>
+setButtonStates
+</b>
+</a>
+<pre>
+  public void setButtonStates()
+</pre>
+<a name="allowStop(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="allowStop">
+<b>
+allowStop
+</b>
+</a>
+<pre>
+  public void allowStop(boolean yes)
+</pre>
+<a name="reload()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reload">
+<b>
+reload
+</b>
+</a>
+<pre>
+  public void reload()
+</pre>
+<dl>
+<dd>
+Handles the callback from pressing the reload button in the main
+window.
+</dl>
+<p>
+<a name="backup()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="backup">
+<b>
+backup
+</b>
+</a>
+<pre>
+  public void backup()
+</pre>
+<dl>
+<dd>
+Handles the callback from pressing the Back button in the main
+window.
+</dl>
+<p>
+<a name="forward()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="forward">
+<b>
+forward
+</b>
+</a>
+<pre>
+  public void forward()
+</pre>
+<dl>
+<dd>
+Handles the callback from pressing the Forward button in the main
+window.
+</dl>
+<p>
+<a name="dumpStack(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dumpStack">
+<b>
+dumpStack
+</b>
+</a>
+<pre>
+  public void dumpStack(<a href="java.lang.String.html#_top_">String</a> msg)
+</pre>
+<a name="stopFetch()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stopFetch">
+<b>
+stopFetch
+</b>
+</a>
+<pre>
+  public synchronized void stopFetch()
+</pre>
+<dl>
+<dd>
+Stop the document fetch now in progress.  Invoked by the stop button.
+Try to restore as much of the previous state as possible.
+</dl>
+<p>
+<a name="uncacheCurrentDocument()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="uncacheCurrentDocument">
+<b>
+uncacheCurrentDocument
+</b>
+</a>
+<pre>
+  public void uncacheCurrentDocument()
+</pre>
+<a name="relayout()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="relayout">
+<b>
+relayout
+</b>
+</a>
+<pre>
+  public void relayout()
+</pre>
+<dl>
+<dd>
+Relays out the current document, trying to preserve the current
+position in the document.
+</dl>
+<p>
+<a name="preserveScrolling()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="preserveScrolling">
+<b>
+preserveScrolling
+</b>
+</a>
+<pre>
+  public void preserveScrolling()
+</pre>
+<a name="handleResize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleResize">
+<b>
+handleResize
+</b>
+</a>
+<pre>
+  public void handleResize()
+</pre>
+<a name="validate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="validate">
+<b>
+validate
+</b>
+</a>
+<pre>
+  public void validate()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRTextItem.html#_top_">Previous</a>    <a href="browser.hotjava.html#_top_">Next</a></pre>
+</body>
+</html>

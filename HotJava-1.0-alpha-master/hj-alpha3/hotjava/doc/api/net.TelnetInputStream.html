@@ -1,0 +1,230 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.TelnetInputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.Socket.html#_top_">Previous</a>    <a href="net.TelnetOutputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.TelnetInputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----<a href="java.io.FilterInputStream.html#_top_">java.io.FilterInputStream</a>
+                   |
+                   +----net.TelnetInputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+TelnetInputStream</b>
+<dt>
+extends <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>
+</dl>
+This class provides input and output streams for telnet clients.
+This class overrides read to do CRLF processing as specified in
+RFC 854. The class assumes it is running on a system where lines
+are terminated with a single newline <LF> character.
+This is the relevant section of RFC 824 regarding CRLF processing:
+<pre>
+The sequence "CR LF", as defined, will cause the NVT to be
+positioned at the left margin of the next print line (as would,
+for example, the sequence "LF CR").  However, many systems and
+terminals do not treat CR and LF independently, and will have to
+go to some effort to simulate their effect.  (For example, some
+terminals do not have a CR independent of the LF, but on such
+terminals it may be possible to simulate a CR by backspacing.)
+Therefore, the sequence "CR LF" must be treated as a single "new
+line" character and used whenever their combined action is
+intended; the sequence "CR NUL" must be used where a carriage
+return alone is actually desired; and the CR character must be
+avoided in other contexts.  This rule gives assurance to systems
+which must decide whether to perform a "new line" function or a
+multiple-backspace that the TELNET stream contains a character
+following a CR that will allow a rational decision.
+   Note that "CR LF" or "CR NUL" is required in both directions
+   (in the default ASCII mode), to preserve the symmetry of the
+   NVT model.  Even though it may be known in some situations
+   (e.g., with remote echo and suppress go ahead options in
+   effect) that characters are not being sent to an actual
+   printer, nonetheless, for the sake of consistency, the protocol
+   requires that a NUL be inserted following a CR not followed by
+   a LF in the data stream.  The converse of this is that a NUL
+   received in the data stream after a CR (in the absence of
+   options negotiations which explicitly specify otherwise) should
+   be stripped out prior to applying the NVT to local character
+   set mapping.
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.11, 10 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#binaryMode">binaryMode</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TelnetInputStream(java.io.InputStream, boolean)"><b>TelnetInputStream</b></a>(InputStream, boolean)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[])"><b>read</b></a>(byte[])
+<dd>
+read into a byte array
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+
+Read into a byte array at offset <i>off</i> for length <i>length</i>
+bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setStickyCRLF(boolean)"><b>setStickyCRLF</b></a>(boolean)
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="binaryMode">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+binaryMode
+</b>
+<pre>
+  public boolean binaryMode
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="TelnetInputStream"></a>
+<a name="TelnetInputStream(java.io.InputStream, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TelnetInputStream
+</b>
+<pre>
+  public TelnetInputStream(<a href="java.io.InputStream.html#_top_">InputStream</a> fd,
+                           boolean binary)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setStickyCRLF(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setStickyCRLF">
+<b>
+setStickyCRLF
+</b>
+</a>
+<pre>
+  public void setStickyCRLF(boolean on)
+</pre>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read()
+</pre>
+<a name="read(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte bytes[])
+</pre>
+<dl>
+<dd>
+read into a byte array
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#read(byte[])">read</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte bytes[],
+                  int off,
+                  int length)
+</pre>
+<dl>
+<dd>
+Read into a byte array at offset <i>off</i> for length <i>length</i>
+bytes.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.Socket.html#_top_">Previous</a>    <a href="net.TelnetOutputStream.html#_top_">Next</a></pre>
+</body>
+</html>

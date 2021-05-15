@@ -1,0 +1,47 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING1></A>
+<A HREF="rpi_3.html">Next</A> <P>
+<HR>
+<H1>Implementing Native Methods</H1>
+<HR>
+
+This document explains how to implement native methods in Java applications. The demo application shown here does some simple file I/O. The sources for the demo application are available in:<P>
+<PRE>
+<em>hotjava_install_dir</em>/doc/native/
+</PRE>
+When writing native methods certain Java header files must be included. These header files are in:<P>
+<PRE>
+<em>hotjava_install_dir</em>/include
+</PRE>
+Please see the Makefile, included as part of the demo application, for a sample of which header files you need to include to implement native methods.<P>
+In addition to the files shown in this document the demo application also includes:<P>
+<UL>
+<LI>Replace.class (and .java). Replace.class is the main program that you pass to java, which is the interpreter.<P>
+<LI>A Makefile<P>
+<LI>The dynamic library, called libfile.so<P>
+<LI>libstubs*, which is a file that contains the javah-generated stubs and includes some important Java source header files.<P>
+</UL>
+The native modifier  applies to methods and indicates that a method is implemented in C. (See The Java Language Specification for information on native methods.) <P>
+The reason you may need native methods is that Java applications sometimes require system resources and functions that are unavailable from the Java language and base classes. To accomodate this, Java provides for runtime native library loading for libraries written in C. To include a native library written in C into Java you create an Java class wrapper for the C code and dynamically link the  library into the Java interpreter via the Linker class.  <P>
+<H2>Table of Contents</H2>
+<DL>
+<DT><A HREF="rpi_3.html#HEADING2"><B>1 </B> - Accessing C Code from Java</A><DD>
+<DT><A HREF="rpi_4.html#HEADING3"><B>2 </B> - Beginning the Sample Application</A><DD>
+<DT><A HREF="rpi_5.html#HEADING5"><B>3 </B> - Defining The Java Classes</A><DD>
+<DT><A HREF="rpi_6.html#HEADING8"><B>4 </B> -  Generating Header Files</A><DD>
+<DT><A HREF="rpi_7.html#HEADING11"><B>5 </B> - Generating C Stubs</A><DD>
+<DT><A HREF="rpi_8.html#HEADING15"><B>6 </B> - Defining the C Interface</A><DD>
+<DT><A HREF="rpi_9.html#HEADING17"><B>7 </B> - Building the Library</A><DD>
+<DT><A HREF="rpi_10.html#HEADING18"><B>8 </B> - Linking the C Library into Java</A><DD>
+</DL>
+
+<HR>
+<A HREF="rpi_3.html">Next</A> <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

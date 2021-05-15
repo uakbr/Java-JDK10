@@ -1,0 +1,40 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: Class File Format- Overview</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING206></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_36.html">Prev</A>       <A HREF="vmspec_38.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+<HR>
+<H2>Class File Format</H2>
+<HR>
+<H1>Overview</H1>
+
+<HR>
+
+Class files are used to hold compiled versions of both Java classes and Java Interfaces. Compliant Java interpreters must be capable of dealing with all class files that conform to the following specification. <P>
+An Java .class file consists of a stream of 8-bit bytes. All 16-bit and 32-bit quantities are constructed by reading in two or four 8-bit bytes, respectively. The bytes are joined together in big-endian order. <P>
+The class file format is described in terms similar to a C structure. However, unlike a C structure, <P>
+<UL>
+<LI>  There is no "padding" or "alignment" between pieces of the structure.<P>
+<LI>Each field of the structure may be of variable size. <P>
+<LI>An array may be of variable size. In this case, some field prior to the array will give the array's dimension.<P>
+</UL>
+We use the types u1, u2, and u4 to mean an unsigned one-, two-, or four-byte quantity, respectively.<P>
+Attributes are used at several different places in the class format. All attributes have the following format:<P>
+<PRE>
+<CODE>GenericAttribute_info {</CODE><P>
+<CODE>	u2	attribute_name;</CODE><P>
+<CODE>	u4	attribute_length;</CODE><P>
+<CODE>	u1	info[attribute_length];</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+</PRE>
+The attribute_name is a 16-bit index into the class's constant pool; the value of constant_pool[attribute_name] will be a string giving the name of the attribute. The field attribute_length gives the length of the subsequent information in bytes. This length does not include the four bytes of the attribute_name and attribute_length.<P>
+In the following text, whenever we allow attributes, we give the name of the attributes that are currently understood. In the future, more attributes will be added. Class file readers are expected to skip over and ignore the information in any attributes that they do not understand.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_36.html">Prev</A>       <A HREF="vmspec_38.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,241 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.FormTagRef
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.DocumentRef.html#_top_">Previous</a>    <a href="browser.HRDisplayItem.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.FormTagRef
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.www.html.TagRef.html#_top_">net.www.html.TagRef</a>
+           |
+           +----<a href="browser.WRTagRef.html#_top_">browser.WRTagRef</a>
+                   |
+                   +----browser.FormTagRef
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+FormTagRef</b>
+<dt>
+extends <a href="browser.WRTagRef.html#_top_">WRTagRef</a>
+</dl>
+An instance of class FormTagRef is created for each occurrence of
+a &lt;form&gt; tag in an html document.  It serves as the definition of
+an html FORM object as it appears in an html document.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.15, 07 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FormTagRef(net.www.html.Tag, int, boolean)"><b>FormTagRef</b></a>(Tag, int, boolean)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addInputItem(browser.forms.FormItem)"><b>addInputItem</b></a>(FormItem)
+<dd>
+Adds an input item to this form.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#apply(browser.WRFormatter)"><b>apply</b></a>(WRFormatter)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getInputItem()"><b>getInputItem</b></a>()
+<dd>
+Get the current select tag or return null if we're currently
+not processing one.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getRadioGroup(java.lang.String)"><b>getRadioGroup</b></a>(String)
+<dd>
+Returns the radio group associated with the specified name.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+Resets all the form input items to their default value.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setInputItem(net.www.html.TagRef)"><b>setInputItem</b></a>(TagRef)
+<dd>
+Set the current input item tag.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#submit()"><b>submit</b></a>()
+<dd>
+Submits this form.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="FormTagRef"></a>
+<a name="FormTagRef(net.www.html.Tag, int, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FormTagRef
+</b>
+<pre>
+  public FormTagRef(<a href="net.www.html.Tag.html#_top_">Tag</a> t,
+                    int pos,
+                    boolean isEnd)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="apply(browser.WRFormatter)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="apply">
+<b>
+apply
+</b>
+</a>
+<pre>
+  public void apply(<a href="browser.WRFormatter.html#_top_">WRFormatter</a> f)
+</pre>
+<a name="addInputItem(browser.forms.FormItem)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addInputItem">
+<b>
+addInputItem
+</b>
+</a>
+<pre>
+  public void addInputItem(<a href="browser.forms.FormItem.html#_top_">FormItem</a> item)
+</pre>
+<dl>
+<dd>
+Adds an input item to this form.  This is called by input
+items which are created as a result of &lt;input&gt; tags that
+appear in html documents.
+</dl>
+<p>
+<a name="getRadioGroup(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getRadioGroup">
+<b>
+getRadioGroup
+</b>
+</a>
+<pre>
+  public <a href="awt.RadioGroup.html#_top_">RadioGroup</a> getRadioGroup(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Returns the radio group associated with the specified name.
+If there is no RadioGroup by that name, one is created.
+</dl>
+<p>
+<a name="setInputItem(net.www.html.TagRef)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setInputItem">
+<b>
+setInputItem
+</b>
+</a>
+<pre>
+  public void setInputItem(<a href="net.www.html.TagRef.html#_top_">TagRef</a> r)
+</pre>
+<dl>
+<dd>
+Set the current input item tag.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.Exception.html#_top_">Exception</a>
+<dd>
+ if there's already a select tag
+</dl>
+</dl>
+<p>
+<a name="getInputItem()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getInputItem">
+<b>
+getInputItem
+</b>
+</a>
+<pre>
+  public <a href="net.www.html.TagRef.html#_top_">TagRef</a> getInputItem()
+</pre>
+<dl>
+<dd>
+Get the current select tag or return null if we're currently
+not processing one.
+</dl>
+<p>
+<a name="submit()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="submit">
+<b>
+submit
+</b>
+</a>
+<pre>
+  public void submit()
+</pre>
+<dl>
+<dd>
+Submits this form.  It walks through each input item asking
+it for its FormString.  Some form items may choose not to
+return a value.
+</dl>
+<p>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  public void reset()
+</pre>
+<dl>
+<dd>
+Resets all the form input items to their default value.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.DocumentRef.html#_top_">Previous</a>    <a href="browser.HRDisplayItem.html#_top_">Next</a></pre>
+</body>
+</html>

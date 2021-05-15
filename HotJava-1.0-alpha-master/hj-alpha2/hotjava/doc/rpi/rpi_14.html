@@ -1,0 +1,53 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Using Java Strings from C</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING22></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_13.html">Prev</A> <A HREF="rpi_15.html">Next</A><P>
+<H1>3  Using Java Strings from C</H1>
+<HR>
+
+
+This section describes a set of utility functions useful when accessing Java String objects from C.<P>
+<B>javaStringPrint</B><P>
+<PRE>
+void javaStringPrint(Hjava_lang_String *s)
+</PRE>
+Print the String object, just like the regular java "print()" function does.<P>
+<B>javaStringLength</B><P>
+<PRE>
+int javaStringLength(Hjava_lang_String *s)
+</PRE>
+Return the length of the String object.<P>
+<B>makejavaString</B><P>
+<PRE>
+Hjava_lang_String *makejavaString(char *str, int len)
+</PRE>
+Create and return a new Java String object, initialized from the C string. <P>
+<B>makeCString<BR>
+allocCString</B><P>
+<PRE>
+char *makeCString(Hjava_lang_String *s)
+char *allocCString(Hjava_lang_String *s)
+</PRE>
+Create a new C string initialized from the specified Java string, and return a pointer to the C string.<P>
+For makeCString, temporary storage is allocated and released automatically when all references to the returned value are eliminated. WARNING: You must keep this pointer in a variable to prevent the storage from getting garbage collected.<P>
+For allocCString, a "malloc" is used to get the storage; the caller is responsible for "free"ing the pointer that is returned.<P>
+<B>javaString2unicode</B><P>
+<PRE>
+unicode *javaString2unicode(Hjava_lang_String *s, unicode *buf, int len)
+</PRE>
+Get the characters of the String object into a unicode string buffer. No allocation occurs. Assumes that len is less than or equal to the length of the string, and that the buf is at least len+1 unicodes in size. The unicode buffer's address is returned.<P>
+<B>javaString2CString</B><P>
+<PRE>
+char *javaString2CString(Hjava_lang_String *s, char *buf, int len)
+</PRE>
+Get the characters of the String object into a C string buffer. No allocation occurs. Assumes that len is less than or equal to the length of the string, and that the buf is at least len+1 bytes in size. The C string's address is returned. <P>
+len does not indicate the maximum number of characters to copy (a la strncpy)! It indicates the exact number of characters to copy, which most commonly will be javaStringLength(s)).<P>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_13.html">Prev</A> <A HREF="rpi_15.html">Next</A><P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,269 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.WServer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.WSFontMetrics.html#_top_">Previous</a>    <a href="awt.Window.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.WServer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.lang.Thread.html#_top_">java.lang.Thread</a>
+           |
+           +----awt.WServer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+WServer</b>
+<dt>
+extends <a href="java.lang.Thread.html#_top_">Thread</a>
+</dl>
+WServer is the class that interacts directly with the native GUI
+system. The set of native methods it contains defines the
+platform-independent api that must be implemented for all the
+platforms it is to run on. Because the platform may necessitate
+a different division between what is native or not (and what is
+synchronized or not), this file is platform-dependent. However, all
+of the public awt classes are always the same and implemented only in
+Java.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.78 13 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fonts">fonts</a>
+</b>
+<dd>
+Use this field to create new fonts.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#theServer">theServer</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WServer()"><b>WServer</b></a>()
+<dd>
+Constructs a new WServer.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFontMetrics(awt.Window, awt.Font)"><b>getFontMetrics</b></a>(Window, Font)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#run()"><b>run</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#start()"><b>start</b></a>()
+<dd>
+Starts the thread but waits until it's done initializing
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#sync()"><b>sync</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toggleGetState(awt.Toggle)"><b>toggleGetState</b></a>(Toggle)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toggleMoveTo(awt.Toggle, int, int)"><b>toggleMoveTo</b></a>(Toggle, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toggleSetState(awt.Toggle, boolean)"><b>toggleSetState</b></a>(Toggle, boolean)
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="theServer">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+theServer
+</b>
+<pre>
+  public static <a href="#_top_">WServer</a> theServer
+</pre>
+<a name="fonts">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fonts
+</b>
+<pre>
+  public <a href="awt.FontTable.html#_top_">FontTable</a> fonts
+</pre>
+<dl>
+<dd>
+Use this field to create new fonts.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.FontTable.html#_top_">FontTable</a>
+</dl>
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="WServer"></a>
+<a name="WServer()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WServer
+</b>
+<pre>
+  public WServer()
+</pre>
+<dl>
+<dd>
+Constructs a new WServer.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="start()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="start">
+<b>
+start
+</b>
+</a>
+<pre>
+  public synchronized void start()
+</pre>
+<dl>
+<dd>
+Starts the thread but waits until it's done initializing
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Thread.html#start()">start</a> in class <a href="java.lang.Thread.html#_top_">Thread</a></dl>
+</dl>
+<p>
+<a name="run()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="run">
+<b>
+run
+</b>
+</a>
+<pre>
+  public void run()
+</pre>
+<a name="sync()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="sync">
+<b>
+sync
+</b>
+</a>
+<pre>
+  public synchronized void sync()
+</pre>
+<a name="getFontMetrics(awt.Window, awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFontMetrics">
+<b>
+getFontMetrics
+</b>
+</a>
+<pre>
+  public <a href="awt.FontMetrics.html#_top_">FontMetrics</a> getFontMetrics(<a href="awt.Window.html#_top_">Window</a> w,
+                                    <a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<a name="toggleSetState(awt.Toggle, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toggleSetState">
+<b>
+toggleSetState
+</b>
+</a>
+<pre>
+  public synchronized void toggleSetState(<a href="awt.Toggle.html#_top_">Toggle</a> t,
+                                          boolean state)
+</pre>
+<a name="toggleGetState(awt.Toggle)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toggleGetState">
+<b>
+toggleGetState
+</b>
+</a>
+<pre>
+  public synchronized boolean toggleGetState(<a href="awt.Toggle.html#_top_">Toggle</a> t)
+</pre>
+<a name="toggleMoveTo(awt.Toggle, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toggleMoveTo">
+<b>
+toggleMoveTo
+</b>
+</a>
+<pre>
+  public synchronized void toggleMoveTo(<a href="awt.Toggle.html#_top_">Toggle</a> t,
+                                        int x,
+                                        int y)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.WSFontMetrics.html#_top_">Previous</a>    <a href="awt.Window.html#_top_">Next</a></pre>
+</body>
+</html>

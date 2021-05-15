@@ -1,0 +1,74 @@
+#! /bin/ksh
+# @(#)hotjava.sh	1.17 95/03/22
+# Set up default variable values if not supplied by the user.
+
+export JAVA_HOME
+JAVA_HOME=`whence $0` >/dev/null 2>&1
+
+export HOTJAVA_HOME
+if [ -z "$HOTJAVA_HOME" ]
+then
+    HOTJAVA_HOME=`dirname ${JAVA_HOME}`/..
+fi
+
+
+export CLASSPATH
+if [ -z "$CLASSPATH" ]
+then
+    CLASSPATH="."
+fi
+
+CLASSPATH="$CLASSPATH:$HOTJAVA_HOME/classes"
+
+export LD_LIBRARY_PATH
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOTJAVA_HOME/lib"
+      
+progname=java
+prog=$HOTJAVA_HOME/bin/`/usr/ucb/arch`/${progname}
+
+for i in $@
+do
+    if [ "`expr $i : '\(.\).*'" = '-' ]; then
+	opts="$opts $i"
+    else
+	args="$args $i"
+    fi
+done
+
+if [ -f $prog ]
+then 
+    if [ -d $HOME/.webrunner ]
+    then
+	echo "You have an old .webrunner directory."
+	if [ -d $HOME/.hotjava ]
+	then
+		echo "You also have a new-style .hotjava directory."
+		echo "Saving $HOME/.hotjava in $HOME/hotjava.$$"
+		/bin/mv $HOME/.hotjava $HOME/hotjava.$$
+	fi
+        echo "Moving $HOME/.webrunner to $HOME/.hotjava"
+	mv $HOME/.webrunner $HOME/.hotjava
+	if [ -f $HOME/.hotjava/hotlist-default ]
+	then
+	    sed '1s/webrunner-hotlist-version/hotjava-hotlist-version/' <$HOME/.hotjava/hotlist-default >$HOME/.hotjava/list.$$
+	    mv $HOME/.hotjava/list.$$ $HOME/.hotjava/hotlist-default
+	fi
+    fi
+
+    WEBLOG=${WEBLOG:-${HOME}/.hotjava/weblog}
+    export WEBLOG
+    if [ ! -d $HOME/.hotjava ]
+    then
+	/usr/bin/mkdir -p $HOME/.hotjava
+    fi
+    if [ -w ${WEBLOG} ]
+    then
+	echo "Moving ${WEBLOG} to ${WEBLOG}.bak"
+        /bin/mv ${WEBLOG} ${WEBLOG}.bak
+    fi
+    echo "Redirecting stdout and stderr to ${WEBLOG}"
+    eval exec $prog $opts browser.hotjava $args >${WEBLOG} 2>&1 
+else
+    echo >&2 "$progname was not found in ${prog}"
+    exit 1
+fi

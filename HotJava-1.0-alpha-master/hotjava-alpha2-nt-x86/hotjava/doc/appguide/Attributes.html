@@ -1,0 +1,87 @@
+<Html>
+<Head>
+<Title>Getting Attribute Values</Title> 
+</Head>
+
+<Body>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+href="AppletSubclass.html">Previous</A>    <A 
+href="TestingCode.html">Next</A></PRE>   
+<HR>
+
+<H4><em>Writing an Applet</em></H4>  
+<H1>Getting Attribute Values</H1>
+
+You need to determine which applet-specific <em>attributes</em> --
+name-value pairs specified in the
+<SAMP>APP</SAMP> HTML tag --
+your applet will interpret.
+Attributes let your applet's users
+customize the execution of the applet.
+Attributes can also be useful for
+<A Href="TestingCode.html">debugging applets</A>.
+<P>
+
+Applets get the values of attributes
+using the getAttribute() method of the Applet class,
+as shown in this 
+<A Href="classes/AppWithAttribute.java">code example</A>.
+(For a hint on viewing code examples, 
+see the
+<A Href="Examples.html">Code Examples</A>
+page.)
+This example reads the value 
+of an applet-specific attribute called COLOR,
+which can have a value of "white" or "red",
+and displays a string in that color.
+<P>
+
+Here's an example of including the applet,
+specifying "red" for COLOR:
+<PRE>
+    &lt;APP CLASS="AppWithAttribute" COLOR="red"&gt;
+</PRE>
+Here (if you're using HotJava) is the result:
+<App Class="AppWithAttribute" color="red">
+<P>
+
+The getAttribute() method returns a String,
+which you can convert to other formats.
+For example, to convert an attribute value into a float:
+<PRE>
+    float someFloat;
+    String attributeValue = getAttribute("SOMEFLOAT");
+    if (attributeValue != null) 
+        someFloat = Float.valueOf(attributeValue).floatValue();
+</PRE>
+<P>
+
+
+Some attributes are standard.
+CLASS, SRC, ALIGN, WIDTH, and HEIGHT
+all have special meanings to the
+<A Href="AppTag.html"><SAMP>APP</SAMP> HTML tag</A>
+and shouldn't be used in other ways.
+You should also try not to use other HTML tags and attributes
+in ways inconsistent with their common use (see
+<A Href="http://www.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimer.html">
+<CITE>A Beginner's Guide to HTML</CITE></A>,
+provided by NCSA).
+<P>
+
+<Strong>Note:</Strong> Attributes are case-insensitive,
+but attribute values are case-<em>sensitive</em>
+by default.
+For example, the user can use either color or COLOR
+for the attribute name,
+but (as written) the example applet accepts "red" but not "RED"
+for the attribute value.
+<P>
+
+<HR>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+href="AppletSubclass.html">Previous</A>    <A 
+href="TestingCode.html">Next</A></PRE>   
+
+</Body>
+</Html>

@@ -1,0 +1,68 @@
+<Html>
+<Head>
+<Title>Performing Animation</Title>
+</Head>
+
+<Body>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+Href="AddingApplet.html">Previous</A>    <A 
+Href="Sound.html">Next</A></PRE>   
+<HR>
+
+<H4><em>Adding an Applet to a Page</em></H4>
+<H1><App class="ImageLoopItem" src="doc:/demo/"
+img="images/jon" width=65 height=72
+pause=0>Performing Animation</H1>
+
+The ImageLoopItem applet lets you put animation into an HTML page.
+When someone visits the page containing the animation,
+the animation plays continuously for as long as the page is visited.
+By default, the animation pauses whenever it displays the first frame.
+<P>
+
+To put an animation into an HTML page:
+<P>
+
+<OL>
+<LI> Create a series of pictures,
+     with one picture per "frame" of animation.
+     An animation sequence can contain up to 40 pictures in a row.
+     <!XXX Maybe refer to some animation books, programs>
+<LI> Save each picture as a GIF (Graphics Interchange Format) file.
+     Name the files T1.gif, T2.gif, ...
+     (where T1.gif is the first picture in the sequence,
+     T2.gif is the second, and so on). 
+<LI> Create a directory (folder) in a place that can be published --
+     for example, at the same level as the HTML page
+     that will display the animation.
+<LI> Put the GIF files in the directory.
+<LI> Add the animation to the HTML page, using
+     <A Href="AppTag.html">the <SAMP>APP</SAMP> HTML tag</A>.
+     For example, if the files are in a directory named MyCartoon
+     at the same level as the HTML file:
+<PRE>
+&lt;APP CLASS="ImageLoopItem"
+     SRC="doc:/demo/"
+     IMG="MyCartoon"&gt;
+</PRE>
+</OL>
+
+To make the animation repeat without pausing,
+specify the <SAMP>PAUSE</SAMP> attribute with a value of 0.
+For example, the animation playing at the top of this page
+(if you're using HotJava)
+was specified with the following:
+<PRE>
+  &lt;APP CLASS="ImageLoopItem"
+       SRC="doc:/demo/"
+       IMG="images/jon"
+       PAUSE=0&gt;
+</PRE>
+
+<HR>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+Href="AddingApplet.html">Previous</A>    <A 
+Href="Sound.html">Next</A></PRE>   
+
+</Body>
+</Html>

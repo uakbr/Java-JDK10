@@ -1,0 +1,268 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.WRTextItem
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRTagRef.html#_top_">Previous</a>    <a href="browser.WRWindow.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.WRTextItem
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Observable.html#_top_">browser.Observable</a>
+           |
+           +----<a href="awt.DisplayItem.html#_top_">awt.DisplayItem</a>
+                   |
+                   +----<a href="awt.TextDisplayItem.html#_top_">awt.TextDisplayItem</a>
+                           |
+                           +----browser.WRTextItem
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+WRTextItem</b>
+<dt>
+extends <a href="awt.TextDisplayItem.html#_top_">TextDisplayItem</a>
+</dl>
+An instance of class WRTextItem is created for each piece of text
+in an html document.  WRTextItem handles following links to other
+documents.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.22, 10 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#underlineAnchors">underlineAnchors</a>
+</b>
+<dd>
+Whether or not to underline anchors.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WRTextItem(java.lang.String)"><b>WRTextItem</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WRTextItem(awt.DisplayItemWindow, byte[], int, int, net.www.html.TagRef)"><b>WRTextItem</b></a>(DisplayItemWindow, byte[], int, int, TagRef)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getText()"><b>getText</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint(awt.Window, int, int)"><b>paint</b></a>(Window, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setup(awt.Font, awt.Color, int, int, int, int)"><b>setup</b></a>(Font, Color, int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackEnter(awt.Event)"><b>trackEnter</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackExit(awt.Event)"><b>trackExit</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStart(awt.Event)"><b>trackStart</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStop(awt.Event)"><b>trackStop</b></a>(Event)
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="underlineAnchors">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+underlineAnchors
+</b>
+<pre>
+  public static boolean underlineAnchors
+</pre>
+<dl>
+<dd>
+Whether or not to underline anchors.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="WRTextItem"></a>
+<a name="WRTextItem(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WRTextItem
+</b>
+<pre>
+  public WRTextItem(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<a name="WRTextItem(awt.DisplayItemWindow, byte[], int, int, net.www.html.TagRef)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WRTextItem
+</b>
+<pre>
+  public WRTextItem(<a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a> w,
+                    byte text[],
+                    int offset1,
+                    int offset2,
+                    <a href="net.www.html.TagRef.html#_top_">TagRef</a> a)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getText()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getText">
+<b>
+getText
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getText()
+</pre>
+<a name="setup(awt.Font, awt.Color, int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setup">
+<b>
+setup
+</b>
+</a>
+<pre>
+  public void setup(<a href="awt.Font.html#_top_">Font</a> f,
+                    <a href="awt.Color.html#_top_">Color</a> c,
+                    int x,
+                    int y,
+                    int w,
+                    int h)
+</pre>
+<a name="trackStart(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStart">
+<b>
+trackStart
+</b>
+</a>
+<pre>
+  public void trackStart(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackEnter(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackEnter">
+<b>
+trackEnter
+</b>
+</a>
+<pre>
+  public void trackEnter(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackExit(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackExit">
+<b>
+trackExit
+</b>
+</a>
+<pre>
+  public void trackExit(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackStop(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStop">
+<b>
+trackStop
+</b>
+</a>
+<pre>
+  public void trackStop(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="paint(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint(<a href="awt.Window.html#_top_">Window</a> window,
+                    int x,
+                    int y)
+</pre>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRTagRef.html#_top_">Previous</a>    <a href="browser.WRWindow.html#_top_">Next</a></pre>
+</body>
+</html>

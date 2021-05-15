@@ -1,0 +1,33 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Linking the C Library into Java</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING18></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_9.html">Prev</A> <A HREF="rpi_11.html">Next</A><P>
+<H1>8  Linking the C Library into Java</H1>
+<HR>
+
+
+Ultimately, we need to link our C library into Java or our native methods will not be resolved at runtime. There are two mechanisms for extending the Java interpreter by including native code into Java  One way is to statically link in our native C code in the same way that the standard Java classes with native method support are linked in. Details on how to do this can be observed in the sources and build scripts for Java . Since statically linking C libraries into Java is obscure and limiting, we've provided a more dynamic way to bring C code into the Java interpreter. By using the Java dynamic linker class, you can load in a dynamic library at runtime when the class that depends on the native library is actually needed.<P>
+The trick is binding our Java class that depends on the library to the actual loading of that library. This way, if Java is unable to find the dependent C library the loading of the dependent Java class will fail. Here's an example:<P>
+<PRE>
+import java.util.Linker;
+
+public class Demo {
+	static {
+		Linker.loadLibrary("demo");
+	}
+
+	public native void close();
+	public native int read(byte b[], int len);
+. . .
+}
+</PRE>
+By using the Linker.loadLibrary() method in the dependent Java class's static initializer, class Demo's loading will fail if we are unable to find the "demo" library. It's worth noting that Linker.loadLibrary takes the library name and builds a system dependent dynamically loadable library name out of it. For example, on Solaris it looks for libdemo.so. The Linker uses LD_LIBRARY_PATH to search for the dynamic library.<P>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_9.html">Prev</A> <A HREF="rpi_11.html">Next</A><P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

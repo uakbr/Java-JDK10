@@ -1,0 +1,204 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.CharacterDecoder
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Cache.html#_top_">Previous</a>    <a href="java.util.CharacterEncoder.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.CharacterDecoder
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.CharacterDecoder
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+CharacterDecoder</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+This class defines the decoding half of character encoders.
+A character decoder is an algorithim for transforming 8 bit
+binary data that has been encoded into text by a character
+encoder, back into original binary form.
+The character encoders, in general, have been structured 
+around a central theme that binary data can be encoded into
+text that has the form:
+<pre>
+	[Buffer Prefix]
+	[Line Prefix][encoded data atoms][Line Suffix]
+	[Buffer Suffix]
+</pre>
+Of course in the simplest encoding schemes, the buffer has no
+distinct prefix of suffix, however all have some fixed relationship
+between the text in an 'atom' and the binary data itself.
+In the CharacterEncoder and CharacterDecoder classes, one complete
+chunk of data is referred to as a <i>buffer</i>. Encoded buffers 
+are all text, and decoded buffers (sometimes just referred to as 
+buffers) are binary octets.
+To create a custom decoder, you must, at a minimum,  overide three
+abstract methods in this class.
+<DL>
+<DD>bytesPerAtom which tells the decoder how many bytes to 
+expect from decodeAtom
+<DD>decodeAtom which decodes the bytes sent to it as text.
+<DD>bytesPerLine which tells the encoder the maximum number of
+bytes per line.
+</DL>
+In general, the character decoders return error in the form of a
+CEFormatException. The syntax of the detail string is
+<pre>
+	DecoderClassName: Error message.
+</pre>
+Several useful decoders have already been written and are 
+referenced in the See Also list below.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+29 Mar 1995, 1.2
+<dt>
+<b>Author:</b>
+<dd>
+Chuck McManis<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.CEFormatException.html#_top_">CEFormatException</a>,
+<a href="java.util.CharacterEncoder.html#_top_">CharacterEncoder</a>,
+<a href="java.util.UCDecoder.html#_top_">UCDecoder</a>,
+<a href="java.util.UUDecoder.html#_top_">UUDecoder</a>,
+<a href="java.util.BASE64Decoder.html#_top_">BASE64Decoder</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#CharacterDecoder()"><b>CharacterDecoder</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#decodeBuffer(java.io.InputStream, java.io.OutputStream)"><b>decodeBuffer</b></a>(InputStream, OutputStream)
+<dd>
+Decode the text from the InputStream and write the decoded
+octets to the OutputStream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#decodeBuffer(java.lang.String)"><b>decodeBuffer</b></a>(String)
+<dd>
+Alternate decode interface that takes a String containing the encoded
+buffer and returns a byte array containing the data.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#decodeBuffer(java.io.InputStream)"><b>decodeBuffer</b></a>(InputStream)
+<dd>
+Decode the contents of the inputstream into a buffer.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="CharacterDecoder"></a>
+<a name="CharacterDecoder()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+CharacterDecoder
+</b>
+<pre>
+  public CharacterDecoder()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="decodeBuffer(java.io.InputStream, java.io.OutputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="decodeBuffer">
+<b>
+decodeBuffer
+</b>
+</a>
+<pre>
+  public void decodeBuffer(<a href="java.io.InputStream.html#_top_">InputStream</a> aStream,
+                           <a href="java.io.OutputStream.html#_top_">OutputStream</a> bStream)
+</pre>
+<dl>
+<dd>
+Decode the text from the InputStream and write the decoded
+octets to the OutputStream. This method runs until the stream
+is exhausted.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.util.CEFormatException.html#_top_">CEFormatException</a>
+<dd>
+ An error has occured while decoding
+<dt>
+<b>Throws:</b> <a href="java.util.CEStreamExhausted.html#_top_">CEStreamExhausted</a>
+<dd>
+ The input stream is unexpectedly out of data
+</dl>
+</dl>
+<p>
+<a name="decodeBuffer(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="decodeBuffer">
+<b>
+decodeBuffer
+</b>
+</a>
+<pre>
+  public byte decodeBuffer(<a href="java.lang.String.html#_top_">String</a> inputString)
+</pre>
+<dl>
+<dd>
+Alternate decode interface that takes a String containing the encoded
+buffer and returns a byte array containing the data.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.util.CEFormatException.html#_top_">CEFormatException</a>
+<dd>
+ An error has occured while decoding
+</dl>
+</dl>
+<p>
+<a name="decodeBuffer(java.io.InputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="decodeBuffer">
+<b>
+decodeBuffer
+</b>
+</a>
+<pre>
+  public byte decodeBuffer(<a href="java.io.InputStream.html#_top_">InputStream</a> in)
+</pre>
+<dl>
+<dd>
+Decode the contents of the inputstream into a buffer.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Cache.html#_top_">Previous</a>    <a href="java.util.CharacterEncoder.html#_top_">Next</a></pre>
+</body>
+</html>

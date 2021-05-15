@@ -1,0 +1,5052 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 4.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 4.0, for use with Frame 4.0 products
+% This ps_prolog file is Copyright (c) 1986-1993 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameBuilder and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to True, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (4.0) def 
+/FMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	FMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto
+	show FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(PostScript Lang. Ref. Man., 2nd Ed., H.2.4 says EPS must not call X              )
+	dup dup (X) search pop exch pop exch pop length 
+	4 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+/concatprocs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin 
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/FrameNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		setrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+FMLevel1 not { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} if
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				FMPColor graymode and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not FMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	FMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgrxfer FMLOCAL
+	/orggxfer FMLOCAL
+	/orgbxfer FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/orgrproc FMLOCAL
+	/orggproc FMLOCAL
+	/orgbproc FMLOCAL
+	/organgle FMLOCAL
+	/orgrangle FMLOCAL
+	/orggangle FMLOCAL
+	/orgbangle FMLOCAL
+	/orgfreq FMLOCAL
+	/orgrfreq FMLOCAL
+	/orggfreq FMLOCAL
+	/orgbfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/edown FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /FrameNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	FMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{{1 dict dup /PageSize [paperwidth paperheight]put setpagedevice}stopped
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		 {1 dict dup /ManualFeed manualfeed put setpagedevice } stopped pop }
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			FrameNegative {
+				1 1 4 { 
+					pop { 1 exch sub } concatprocs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		FrameNegative {
+			{ 1 exch sub } concatprocs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/pagesave FMLOCAL
+/orgmatrix FMLOCAL
+/landscape FMLOCAL
+/pwid FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/initmatrix {(initmatrix) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setPatternMode {
+	FMLevel1 {
+		/bwidth  exch def
+		/bpside  exch def
+		/bstring exch def
+		/onbits 0 def  /offbits 0 def
+		freq sangle landscape {90 add} if 
+			{/y exch def
+			 /x exch def
+			 /xindex x 1 add 2 div bpside mul cvi def
+			 /yindex y 1 add 2 div bpside mul cvi def
+			 bstring yindex bwidth mul xindex 8 idiv add get
+			 1 7 xindex 8 mod sub bitshift and 0 ne FrameNegative {not} if
+			 {/onbits  onbits  1 add def 1}
+			 {/offbits offbits 1 add def 0}
+			 ifelse
+			}
+			setscreen
+		offbits offbits onbits add div FrameNegative {1.0 exch sub} if
+		/FrameCurGray exch def
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		FMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode FMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode FMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+	/rad FMLOCAL
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+      dup dup
+      24 eq { pop pop 3 mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+FMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch concatprocs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def
+	FMLevel1 {	
+		colorsetup
+		/is w d wbytes string def
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is w d wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	FMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {ip} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/d 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris} {gis} {bis} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/d 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris gis bis w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(4.0) FMVERSION
+1 1 0 0 612 792 0 1 10 FMDOCUMENT
+0 0 /Palatino-Roman FMFONTDEFINE
+1 0 /Palatino-Italic FMFONTDEFINE
+2 0 /Palatino-Bold FMFONTDEFINE
+3 1 /Symbol FMFONTDEFINE
+4 0 /Times-Roman FMFONTDEFINE
+5 0 /Times-Italic FMFONTDEFINE
+6 0 /Courier FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "65" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (65) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 30 Q
+-1.5 (Appendix A - An Optimization) 54 700 S
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(The following set of pseudo-instr) 54 647.33 T
+(uctions suf) 200.59 647.33 T
+(\336xed by) 248.67 647.33 T
+1 F
+(_quick) 286.87 647.33 T
+0 F
+(ar) 315.85 647.33 T
+(e variants of Java virtual machine instr) 324.62 647.33 T
+(uctions.) 495.43 647.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(They ar) 54 637.33 T
+(e used by the LiveOak pr) 87.57 637.33 T
+(oject to impr) 198.65 637.33 T
+(ove the execution of compiled code on our bytecode interpr) 254.18 637.33 T
+(eter) 517.33 637.33 T
+(.) 533.38 637.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(They ar) 54 627.33 T
+(e not part of the virtual machine speci\336cation or instr) 87.57 627.33 T
+(uction set, and ar) 322.44 627.33 T
+(e invisible outside of an Java) 398.35 627.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(virtual machine implementation. However) 54 617.33 T
+(, inside a virtual machine implementation they have pr) 242.48 617.33 T
+(oven to be) 485.15 617.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(an ef) 54 607.33 T
+(fective optimization.) 75.26 607.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(A compiler fr) 54 591.33 T
+(om Java to the Java virtual machine instr) 113.18 591.33 T
+(uction set emits only non-) 292.94 591.33 T
+1 F
+(_quick) 407.36 591.33 T
+0 F
+( instr) 433.84 591.33 T
+(uctions. If the) 456.44 591.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(_quick) 54 581.33 T
+0 F
+( pseudo-instr) 80.48 581.33 T
+(uctions ar) 139.05 581.33 T
+(e used, each instance of a non-) 182.48 581.33 T
+1 F
+(_quick) 316.49 581.33 T
+0 F
+( instr) 342.97 581.33 T
+(uction with a) 365.57 581.33 T
+1 F
+(_quick) 426.32 581.33 T
+0 F
+( variant is) 452.8 581.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(overwritten on execution by its) 54 571.33 T
+1 F
+(_quick) 194.12 571.33 T
+0 F
+( variant. Subsequent execution of that instr) 220.6 571.33 T
+(uction instance will be of the) 409.92 571.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(_quick) 54 561.33 T
+0 F
+( variant.) 80.48 561.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(In all cases, if an instr) 54 545.33 T
+(uction has an alternative version with the suf) 148.88 545.33 T
+(\336x) 347.96 545.33 T
+1 F
+(_quick,) 361.67 545.33 T
+0 F
+(the instr) 393.15 545.33 T
+(uction r) 429.62 545.33 T
+(efer) 463.81 545.33 T
+(ences the) 480.49 545.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.02 (constant pool. If the) 54 535.33 P
+1 F
+-0.02 (_quick) 144.13 535.33 P
+0 F
+-0.02 ( optimization is used, each non) 170.62 535.33 P
+1 F
+-0.02 (_quick) 307.82 535.33 P
+0 F
+-0.02 ( instr) 334.3 535.33 P
+-0.02 (uction with a) 356.88 535.33 P
+1 F
+-0.02 (_quick) 417.58 535.33 P
+0 F
+-0.02 ( variant performs the) 444.05 535.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(following:) 54 525.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245 Resolves the speci\336ed item in the constant pool) 90 509.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245 Signals an err) 90 493.33 T
+(or if the item in the constant pool could not be r) 158.58 493.33 T
+(esolved for some r) 368.71 493.33 T
+(eason) 449.99 493.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245 T) 90 477.33 T
+(urns itself into the) 103.79 477.33 T
+1 F
+(_quick) 186.59 477.33 T
+0 F
+( version of the instr) 213.07 477.33 T
+(uction. The instr) 298.65 477.33 T
+(uctions) 370.91 477.33 T
+2 F
+(putstatic) 405.57 477.33 T
+0 F
+(,) 444.99 477.33 T
+2 F
+(getstatic) 449.99 477.33 T
+0 F
+(,) 487.75 477.33 T
+2 F
+(put\336eld) 492.75 477.33 T
+0 F
+(,) 528.85 477.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(and) 90 467.33 T
+2 F
+(get\336eld) 109.43 467.33 T
+0 F
+( each have two) 143.87 467.33 T
+1 F
+(_quick) 212.24 467.33 T
+0 F
+(versions.) 241.22 467.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245 Performs its intended operation) 90 451.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(This is identical to the action of the instr) 54 435.33 T
+(uction without the) 230.64 435.33 T
+1 F
+(_quick) 315.01 435.33 T
+0 F
+( optimization, except for the additional step) 341.49 435.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(in which the instr) 54 425.33 T
+(uction overwrites itself with its) 131.53 425.33 T
+1 F
+(_quick) 271.47 425.33 T
+0 F
+( variant.) 297.95 425.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The) 54 409.33 T
+1 F
+(_quick) 73.24 409.33 T
+0 F
+( variant of an instr) 99.72 409.33 T
+(uction assumes that the item in the constant pool has alr) 181.02 409.33 T
+(eady been r) 428.79 409.33 T
+(esolved, and) 479.95 409.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(that this r) 54 399.33 T
+(esolution did not generate any err) 96.34 399.33 T
+(ors. It simply performs the intended operation on the r) 246.24 399.33 T
+(esolved) 487.6 399.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(item.) 54 389.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Pushing Constants onto the Stack \050_quick variants\051) 54 354.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(ldc1_quick) 54 323 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Push item fr) 90 308.33 T
+(om constant pool onto stack) 144.02 308.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...) 90 244.33 T
+3 F
+(=>) 131.01 244.33 T
+0 F
+( ...,) 141.99 244.33 T
+1 F
+(item) 156.99 244.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.26 (indexbyte1) 90 226.33 P
+0 F
+-0.26 ( is used as an unsigned 8-bit index into the constant pool of the curr) 134.08 226.33 P
+-0.26 (ent class. The) 429.24 226.33 P
+1 F
+-0.26 (item) 489.9 226.33 P
+0 F
+-0.26 ( at that) 507.68 226.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(index is pushed onto the stack.) 90 216.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 292.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(ldc1_quick) 153.74 280.33 T
+4 F
+( = 199) 197.62 280.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 166.84 267.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 288.75 144 263.25 2 L
+V
+0.5 H
+0 Z
+N
+232.99 288.75 232.99 263.25 2 L
+V
+N
+143.75 289 233.24 289 2 L
+V
+N
+143.75 276 233.24 276 2 L
+V
+N
+143.75 263 233.24 263 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "65" 1
+%%Page: "66" 2
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(66) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 474.01 29.33 T
+(ch 15, 1995) 492.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(ldc2_quick) 54 712 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Push item fr) 90 697.33 T
+(om constant pool onto stack) 144.02 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...) 90 620.33 T
+3 F
+(=>) 131.01 620.33 T
+0 F
+( ...,) 141.99 620.33 T
+1 F
+(item) 156.99 620.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.18 (indexbyte1) 90 602.33 P
+0 F
+-0.18 ( and) 134.08 602.33 P
+1 F
+-0.18 (indexbyte2) 155.65 602.33 P
+0 F
+-0.18 ( ar) 199.73 602.33 P
+-0.18 (e used to constr) 210.82 602.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 602.33 P
+-0.18 (ent class. The) 479.1 602.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(constant) 90 592.33 T
+0 F
+(at that index is r) 127.12 592.33 T
+(esolved and the) 198.43 592.33 T
+1 F
+(item) 270.68 592.33 T
+0 F
+( at that index is pushed onto the stack.) 288.46 592.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(ldc2w_quick) 54 562 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Push long integer or double \337oat fr) 90 547.33 T
+(om constant pool onto stack) 245.1 547.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...) 90 470.33 T
+3 F
+(=>=>) 131.01 470.33 T
+0 F
+( ...,) 152.97 470.33 T
+1 F
+( constant) 165.47 470.33 T
+0 F
+(-word1,) 202.59 470.33 T
+1 F
+(constant) 239.78 470.33 T
+0 F
+(-word2) 274.4 470.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.18 (indexbyte1) 90 452.33 P
+0 F
+-0.18 ( and) 134.08 452.33 P
+1 F
+-0.18 (indexbyte2) 155.65 452.33 P
+0 F
+-0.18 ( ar) 199.73 452.33 P
+-0.18 (e used to constr) 210.82 452.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 452.33 P
+-0.18 (ent class. The) 479.1 452.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(constant) 90 442.33 T
+0 F
+( at that index is pushed onto the stack.) 124.62 442.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Managing Arrays \050_quick variants\051) 54 391.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(anewarray_quick) 54 360 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Allocate new array of objects) 90 345.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 268.33 T
+1 F
+(size) 133.51 268.33 T
+3 F
+(=>) 151.01 268.33 T
+1 F
+(result) 164.49 268.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(size) 90 250.33 T
+0 F
+( should be an integer) 105 250.33 T
+(. It r) 197.05 250.33 T
+(epr) 214.95 250.33 T
+(esents the number of elements in the new array) 229.52 250.33 T
+(.) 437.6 250.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0 (indexbyte1) 90 234.33 P
+0 F
+-0 ( and) 134.08 234.33 P
+1 F
+-0 (indexbyte2) 156.01 234.33 P
+0 F
+-0 (ar) 202.58 234.33 P
+-0 (e ar) 211.35 234.33 P
+-0 (e used to constr) 227.41 234.33 P
+-0 (uct an index into the constant pool of the curr) 296.67 234.33 P
+-0 (ent class.) 497.8 234.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The entry should be a class.) 90 224.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.13 (A new array of the indicated class type and capable of holding) 90 208.33 P
+1 F
+-0.13 (size) 367.08 208.33 P
+0 F
+-0.13 (elements is allocated. Allocation of) 384.45 208.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(an array lar) 90 198.33 T
+(ge enough to contain) 140.96 198.33 T
+1 F
+(nelem) 236.22 198.33 T
+0 F
+( items of the given class type is attempted. All elements of the) 260.12 198.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(array ar) 90 188.33 T
+(e initialized to zer) 124.73 188.33 T
+(o.) 203.83 188.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.08 (If) 90 172.33 P
+1 F
+-0.08 (size) 99.12 172.33 P
+0 F
+-0.08 (is less than zer) 116.54 172.33 P
+-0.08 (o, a) 180.59 172.33 P
+6 F
+-0.19 (NegativeArraySizeException) 198.39 172.33 P
+0 F
+-0.08 ( is thr) 354.39 172.33 P
+-0.08 (own. If ther) 379.22 172.33 P
+-0.08 (e is not enough memory) 430.52 172.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(to allocate the array) 90 162.33 T
+(, an) 176.21 162.33 T
+6 F
+(OutOfMemoryException) 194.53 162.33 T
+0 F
+( is thr) 314.53 162.33 T
+(own.) 339.53 162.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 681.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(ldc2_quick) 153.74 669.33 T
+4 F
+( = 200) 197.62 669.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 166.84 656.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 166.84 643.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 531.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(ldc2w_quick) 150.4 519.33 T
+4 F
+( = 201) 200.95 519.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 166.84 506.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 166.84 493.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 329.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(anewarray_quick) 150.18 317.33 T
+4 F
+( = 216) 220.18 317.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 176.34 304.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 176.34 291.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 677.75 144 639.25 2 L
+V
+0.5 H
+0 Z
+N
+232.99 677.75 232.99 639.25 2 L
+V
+N
+143.75 678 233.24 678 2 L
+V
+N
+143.75 665 233.24 665 2 L
+V
+N
+143.75 652 233.24 652 2 L
+V
+N
+143.75 639 233.24 639 2 L
+V
+N
+144 527.75 144 489.25 2 L
+V
+N
+232.99 527.75 232.99 489.25 2 L
+V
+N
+143.75 528 233.24 528 2 L
+V
+N
+143.75 515 233.24 515 2 L
+V
+N
+143.75 502 233.24 502 2 L
+V
+N
+143.75 489 233.24 489 2 L
+V
+N
+144 325.75 144 287.25 2 L
+V
+N
+252 325.75 252 287.25 2 L
+V
+N
+143.75 326 252.25 326 2 L
+V
+N
+143.75 313 252.25 313 2 L
+V
+N
+143.75 300 252.25 300 2 L
+V
+N
+143.75 287 252.25 287 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "66" 2
+%%Page: "67" 3
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (67) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Manipulating Object Fields \050_quick variants\051) 54 710.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(put\336eld_quick) 54 679 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Set \336eld in object) 90 664.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 587.33 T
+1 F
+(handle) 133.51 587.33 T
+0 F
+(,) 160.18 587.33 T
+1 F
+(value) 165.18 587.33 T
+3 F
+(=>) 189.35 587.33 T
+0 F
+( ...) 200.33 587.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 569.33 T
+0 F
+(should be a handle to an object.) 119.17 569.33 T
+1 F
+(value) 260.87 569.33 T
+0 F
+(should be a value of a type appr) 285.04 569.33 T
+(opriate for the speci\336ed) 427.01 569.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\336eld.) 90 559.33 T
+1 F
+(offset) 114.86 559.33 T
+0 F
+(is the of) 138.47 559.33 T
+(fset for the \336eld in that object.) 173.1 559.33 T
+1 F
+(value) 307.08 559.33 T
+0 F
+( is written at) 328.75 559.33 T
+1 F
+(offset) 386.49 559.33 T
+0 F
+( into the object r) 407.6 559.33 T
+(efer) 478.51 559.33 T
+(enced by) 495.19 559.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 549.33 T
+0 F
+(. Both) 116.67 549.33 T
+1 F
+(handle) 144.82 549.33 T
+0 F
+( and) 171.49 549.33 T
+1 F
+(value) 193.42 549.33 T
+0 F
+( ar) 215.09 549.33 T
+(e popped fr) 226.36 549.33 T
+(om the stack.) 277.64 549.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If) 90 533.33 T
+1 F
+(handle) 99.2 533.33 T
+0 F
+( is null, a) 125.87 533.33 T
+6 F
+(NullPointerException) 168.19 533.33 T
+0 F
+( exception is generated.) 288.19 533.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(put\336eld2_quick) 54 503 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Set long integer or double \337oat \336eld in object) 90 488.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 411.33 T
+1 F
+(handle) 133.51 411.33 T
+0 F
+(,) 160.18 411.33 T
+1 F
+(value) 165.18 411.33 T
+0 F
+(-word1,) 186.85 411.33 T
+1 F
+(value) 224.04 411.33 T
+0 F
+(-word2) 245.71 411.33 T
+3 F
+(=>) 277.9 411.33 T
+0 F
+( ...) 288.88 411.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 393.33 T
+0 F
+( should be a handle to an object.) 116.67 393.33 T
+1 F
+(value) 260.87 393.33 T
+0 F
+(should be a value of a type appr) 285.04 393.33 T
+(opriate for the speci\336ed) 427.01 393.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\336eld.) 90 383.33 T
+1 F
+(offset) 114.86 383.33 T
+0 F
+(is the of) 138.47 383.33 T
+(fset for the \336eld in that object.) 173.1 383.33 T
+1 F
+(value) 307.08 383.33 T
+0 F
+( is written at) 328.75 383.33 T
+1 F
+(offset) 386.49 383.33 T
+0 F
+( into the object r) 407.6 383.33 T
+(efer) 478.51 383.33 T
+(enced by) 495.19 383.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 373.33 T
+0 F
+(. Both) 116.67 373.33 T
+1 F
+(handle) 144.82 373.33 T
+0 F
+( and) 171.49 373.33 T
+1 F
+(value) 193.42 373.33 T
+0 F
+( ar) 215.09 373.33 T
+(e popped fr) 226.36 373.33 T
+(om the stack.) 277.64 373.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If) 90 357.33 T
+1 F
+(handle) 99.2 357.33 T
+0 F
+( is null, a) 125.87 357.33 T
+6 F
+(NullPointerException) 168.19 357.33 T
+0 F
+( exception is generated.) 288.19 357.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(get\336eld_quick) 54 327 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Fetch \336eld fr) 90 312.33 T
+(om object) 145.83 312.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 235.33 T
+1 F
+(handle) 133.51 235.33 T
+3 F
+(=>) 162.68 235.33 T
+0 F
+( ...,) 173.66 235.33 T
+1 F
+(value) 188.66 235.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(handle) 90 217.33 T
+0 F
+( should be a handle to an object. The value at) 116.67 217.33 T
+1 F
+(offset) 317.75 217.33 T
+0 F
+( into the object r) 338.86 217.33 T
+(efer) 409.77 217.33 T
+(enced by) 426.45 217.33 T
+1 F
+(handle) 468.49 217.33 T
+0 F
+( r) 495.16 217.33 T
+(eplaces) 501.43 217.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 207.33 T
+0 F
+( on the top of the stack.) 116.67 207.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If) 90 191.33 T
+1 F
+(handle) 99.2 191.33 T
+0 F
+( is null, a) 125.87 191.33 T
+6 F
+(NullPointerException) 168.19 191.33 T
+0 F
+( exception is generated.) 288.19 191.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 648.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(putfield_quick) 147.07 636.33 T
+4 F
+( = 203) 204.29 636.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(offset) 177.66 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(unused) 174.33 610.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 472.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(putfield2_quick) 154.07 460.33 T
+4 F
+( = 205) 216.29 460.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(offset) 187.16 447.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(unused) 183.84 434.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 296.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(getfield_quick) 147.35 284.33 T
+4 F
+( = 202) 204.01 284.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(offset) 177.66 271.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(unused) 174.33 258.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 644.75 144 606.25 2 L
+V
+0.5 H
+0 Z
+N
+232.99 644.75 232.99 606.25 2 L
+V
+N
+143.75 645 233.24 645 2 L
+V
+N
+143.75 632 233.24 632 2 L
+V
+N
+143.75 619 233.24 619 2 L
+V
+N
+143.75 606 233.24 606 2 L
+V
+N
+144 468.75 144 430.25 2 L
+V
+N
+252 468.75 252 430.25 2 L
+V
+N
+143.75 469 252.25 469 2 L
+V
+N
+143.75 456 252.25 456 2 L
+V
+N
+143.75 443 252.25 443 2 L
+V
+N
+143.75 430 252.25 430 2 L
+V
+N
+144 292.75 144 254.25 2 L
+V
+N
+232.99 292.75 232.99 254.25 2 L
+V
+N
+143.75 293 233.24 293 2 L
+V
+N
+143.75 280 233.24 280 2 L
+V
+N
+143.75 267 233.24 267 2 L
+V
+N
+143.75 254 233.24 254 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "67" 3
+%%Page: "68" 4
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(68) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 474.01 29.33 T
+(ch 15, 1995) 492.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(get\336eld2_quick) 54 712 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Fetch \336eld fr) 90 697.33 T
+(om object) 145.83 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 620.33 T
+1 F
+(handle) 133.51 620.33 T
+3 F
+(=>) 162.68 620.33 T
+0 F
+( ...,) 173.66 620.33 T
+1 F
+(value) 188.66 620.33 T
+0 F
+(-word1,) 210.33 620.33 T
+1 F
+(value) 247.52 620.33 T
+0 F
+(-word2) 269.19 620.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 602.33 T
+0 F
+( should be a handle to an object. The value at) 116.67 602.33 T
+1 F
+(offset) 317.75 602.33 T
+0 F
+( into the object r) 338.86 602.33 T
+(efer) 409.77 602.33 T
+(enced by) 426.45 602.33 T
+1 F
+(handle) 468.49 602.33 T
+0 F
+( r) 495.16 602.33 T
+(eplaces) 501.43 602.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 592.33 T
+0 F
+( on the top of the stack.) 116.67 592.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If) 90 576.33 T
+1 F
+(handle) 99.2 576.33 T
+0 F
+( is null, a) 125.87 576.33 T
+6 F
+(NullPointerException) 168.19 576.33 T
+0 F
+( exception is generated.) 288.19 576.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(putstatic_quick) 54 546 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Set static \336eld in class) 90 531.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 454.33 T
+1 F
+(value) 133.51 454.33 T
+3 F
+(=>) 157.68 454.33 T
+0 F
+( ...) 168.66 454.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.18 (indexbyte1) 90 436.33 P
+0 F
+-0.18 ( and) 134.08 436.33 P
+1 F
+-0.18 (indexbyte2) 155.65 436.33 P
+0 F
+-0.18 ( ar) 199.73 436.33 P
+-0.18 (e used to constr) 210.82 436.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 436.33 P
+-0.18 (ent class. The) 479.1 436.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constant pool item will be a \336eld r) 90 426.33 T
+(efer) 240.45 426.33 T
+(ence to a static \336eld of a class.) 257.13 426.33 T
+1 F
+(value) 390.78 426.33 T
+0 F
+( should be the type) 412.45 426.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(appr) 90 416.33 T
+(opriate to that \336eld. That \336eld will be set to have the value) 110.79 416.33 T
+1 F
+(value.) 371.07 416.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(putstatic2_quick) 54 386 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Set static \336eld in class) 90 371.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 294.33 T
+1 F
+(value) 133.51 294.33 T
+0 F
+(-word1,) 155.18 294.33 T
+1 F
+(value) 192.37 294.33 T
+0 F
+(-word2) 214.04 294.33 T
+3 F
+(=>) 248.73 294.33 T
+0 F
+( ...) 259.71 294.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.18 (indexbyte1) 90 276.33 P
+0 F
+-0.18 ( and) 134.08 276.33 P
+1 F
+-0.18 (indexbyte2) 155.65 276.33 P
+0 F
+-0.18 ( ar) 199.73 276.33 P
+-0.18 (e used to constr) 210.82 276.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 276.33 P
+-0.18 (ent class. The) 479.1 276.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constant pool item will be a \336eld r) 90 266.33 T
+(efer) 240.45 266.33 T
+(ence to a static \336eld of a class. That \336eld should either be a long) 257.13 266.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0 (integer or a double pr) 90 256.33 P
+-0 (ecision \337oating point number) 186.08 256.33 P
+-0 (.) 315.9 256.33 P
+1 F
+-0 (value) 320.9 256.33 P
+0 F
+-0 ( should be the type appr) 342.57 256.33 P
+-0 (opriate to that \336eld.) 450.22 256.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(That \336eld will be set to have the value) 90 246.33 T
+1 F
+(value.) 260.48 246.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(getstatic_quick) 54 216 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Get static \336eld fr) 90 201.33 T
+(om class) 163.25 201.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 124.33 T
+3 F
+(=>) 133.51 124.33 T
+0 F
+( ...,) 144.49 124.33 T
+1 F
+(value) 159.49 124.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.18 (indexbyte1) 90 106.33 P
+0 F
+-0.18 ( and) 134.08 106.33 P
+1 F
+-0.18 (indexbyte2) 155.65 106.33 P
+0 F
+-0.18 ( ar) 199.73 106.33 P
+-0.18 (e used to constr) 210.82 106.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 106.33 P
+-0.18 (ent class. The) 479.1 106.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (constant pool item will be a \336eld r) 90 96.33 P
+-0.19 (efer) 239.12 96.33 P
+-0.19 (ence to a static \336eld of a class. The value of that \336eld will r) 255.8 96.33 P
+-0.19 (eplace) 509.75 96.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(handle) 90 86.33 T
+0 F
+( on the stack.) 116.67 86.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 681.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(getfield2_quick) 154.35 669.33 T
+4 F
+( = 204) 216.01 669.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(offset) 187.16 656.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(unused) 183.84 643.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 515.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(putstatic_quick) 150.12 503.33 T
+4 F
+( = 207) 211.24 503.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 171.84 490.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 171.84 477.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 355.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(putstatic2_quick) 156.62 343.33 T
+4 F
+( = 209) 222.74 343.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 180.84 330.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 180.84 317.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 185.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(getstatic_quick) 163.9 173.33 T
+4 F
+( = 206) 224.46 173.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 185.34 160.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 185.34 147.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 677.75 144 639.25 2 L
+V
+0.5 H
+0 Z
+N
+252 677.75 252 639.25 2 L
+V
+N
+143.75 678 252.25 678 2 L
+V
+N
+143.75 665 252.25 665 2 L
+V
+N
+143.75 652 252.25 652 2 L
+V
+N
+143.75 639 252.25 639 2 L
+V
+N
+144 511.75 144 473.25 2 L
+V
+N
+243 511.75 243 473.25 2 L
+V
+N
+143.75 512 243.25 512 2 L
+V
+N
+143.75 499 243.25 499 2 L
+V
+N
+143.75 486 243.25 486 2 L
+V
+N
+143.75 473 243.25 473 2 L
+V
+N
+144 351.75 144 313.25 2 L
+V
+N
+261 351.75 261 313.25 2 L
+V
+N
+143.75 352 261.25 352 2 L
+V
+N
+143.75 339 261.25 339 2 L
+V
+N
+143.75 326 261.25 326 2 L
+V
+N
+143.75 313 261.25 313 2 L
+V
+N
+144 181.75 144 143.25 2 L
+V
+N
+270 181.75 270 143.25 2 L
+V
+N
+143.75 182 270.25 182 2 L
+V
+N
+143.75 169 270.25 169 2 L
+V
+N
+143.75 156 270.25 156 2 L
+V
+N
+143.75 143 270.25 143 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "68" 4
+%%Page: "69" 5
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (69) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(getstatic2_quick) 54 712 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Get static \336eld fr) 90 697.33 T
+(om class) 163.25 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 620.33 T
+3 F
+(=>) 133.51 620.33 T
+0 F
+( ...,) 144.49 620.33 T
+1 F
+(value) 159.49 620.33 T
+0 F
+(-word1,) 181.16 620.33 T
+1 F
+(value) 218.35 620.33 T
+0 F
+(-word2) 240.02 620.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.18 (indexbyte1) 90 602.33 P
+0 F
+-0.18 ( and) 134.08 602.33 P
+1 F
+-0.18 (indexbyte2) 155.65 602.33 P
+0 F
+-0.18 ( ar) 199.73 602.33 P
+-0.18 (e used to constr) 210.82 602.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 602.33 P
+-0.18 (ent class. The) 479.1 602.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.07 (constant pool item will be a \336eld r) 90 592.33 P
+-0.07 (efer) 239.94 592.33 P
+-0.07 (ence to a static \336eld of a class. The \336eld should be a long integer) 256.62 592.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(or a double pr) 90 582.33 T
+(ecision \337oating point number) 152.52 582.33 T
+(. The value of that \336eld will r) 282.35 582.33 T
+(eplace) 410.3 582.33 T
+1 F
+(handle) 440.74 582.33 T
+0 F
+( on the stack) 467.41 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Method Invocation \050_quick variants\051) 54 547.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(invokevirtual_quick) 54 516 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Invoke class method) 90 501.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:) 90 424.33 T
+1 F
+(..., handle) 121.01 424.33 T
+0 F
+(, [) 160.18 424.33 T
+1 F
+(arg1) 168.51 424.33 T
+0 F
+(, [) 186.84 424.33 T
+1 F
+(arg2) 195.17 424.33 T
+0 F
+( ...]]) 213.5 424.33 T
+3 F
+(=>) 232.66 424.33 T
+1 F
+( ...) 243.64 424.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.03 (The operand stack is assumed to contain a) 90 406.33 P
+1 F
+-0.03 (handle) 278.99 406.33 P
+0 F
+-0.03 ( to an object and) 305.66 406.33 P
+1 F
+-0.03 (nar) 380.32 406.33 P
+-0.03 (gs) 394.03 406.33 P
+0 F
+-0.03 ( ar) 402.92 406.33 P
+-0.03 (guments. The method block) 414.16 406.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(at) 90 396.33 T
+1 F
+(offset) 100.76 396.33 T
+0 F
+( in the object\325s method table is r) 121.87 396.33 T
+(etrieved. The method block indicates the type of method) 261.49 396.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\050native, synchr) 90 386.33 T
+(onized, etc.\051 and the number of ar) 155.41 386.33 T
+(guments \050) 304.63 386.33 T
+1 F
+(nar) 348.99 386.33 T
+(gs) 362.7 386.33 T
+0 F
+(\051 expected on the operand stack.) 371.59 386.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (If the method is marked) 90 370.33 P
+1 F
+-0.19 (synchr) 197.77 370.33 P
+-0.19 (onized) 225 370.33 P
+0 F
+-0.19 ( the monitor associated with) 251.11 370.33 P
+1 F
+-0.19 (handle) 378 370.33 P
+0 F
+-0.19 (is enter) 406.98 370.33 P
+-0.19 (ed. The exact behavior) 438.86 370.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(of monitors and their interactions with thr) 90 360.33 T
+(eads is a r) 276.42 360.33 T
+(untime issue.) 320.08 360.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The base of the local variables array for the new Java stack frame is set to point to) 90 344.33 T
+1 F
+(handle) 451.4 344.33 T
+0 F
+( on the stac) 478.07 344.33 T
+1 F
+(k,) 527.66 344.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(making) 90 334.33 T
+1 F
+(handle) 126.18 334.33 T
+0 F
+(and the supplied ar) 155.35 334.33 T
+(guments \050) 241.43 334.33 T
+1 F
+(ar) 285.79 334.33 T
+(g1) 293.94 334.33 T
+0 F
+(,) 303.94 334.33 T
+1 F
+(ar) 308.94 334.33 T
+(g2) 317.09 334.33 T
+0 F
+(, ...\051 the \336rst) 327.09 334.33 T
+1 F
+(nar) 381.79 334.33 T
+(gs) 395.5 334.33 T
+0 F
+( local variables of the new) 404.39 334.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(frame. The total number of local variables used by the method is determined, and the execution) 90 324.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(envir) 90 314.33 T
+(onment of the new frame is pushed after leaving suf) 112.94 314.33 T
+(\336cient r) 343.47 314.33 T
+(oom for the locals. The base of the) 377.01 314.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(operand stack for this method invocation is set to the \336rst wor) 90 304.33 T
+(d after the execution envir) 364.21 304.33 T
+(onment.) 480.12 304.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Finally) 90 294.33 T
+(, execution continues with the \336rst instr) 119.56 294.33 T
+(uction of the matched method.) 294.29 294.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the object handle on the operand stack is null, a) 90 278.33 T
+6 F
+(NullPointerException) 311.45 278.33 T
+0 F
+( is thr) 431.45 278.33 T
+(own. If during the) 456.45 278.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method invocation a stack over\337ow is detected, a) 90 268.33 T
+6 F
+(StackOverf) 310.43 268.33 T
+(lowException) 370.43 268.33 T
+0 F
+( is thr) 442.43 268.33 T
+(own.) 467.43 268.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(invokevirtualobject_quick) 54 238 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Invoke class method) 90 223.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:) 90 146.33 T
+1 F
+(..., handle) 121.01 146.33 T
+0 F
+(, [) 160.18 146.33 T
+1 F
+(arg1) 168.51 146.33 T
+0 F
+(, [) 186.84 146.33 T
+1 F
+(arg2) 195.17 146.33 T
+0 F
+( ...]]) 213.5 146.33 T
+3 F
+(=>) 232.66 146.33 T
+1 F
+( ...) 243.64 146.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The operand stack is assumed to contain a) 90 128.33 T
+1 F
+(handle) 279.2 128.33 T
+0 F
+( to an object or to an array and) 305.87 128.33 T
+1 F
+(nar) 443.07 128.33 T
+(gs) 456.78 128.33 T
+0 F
+( ar) 465.67 128.33 T
+(guments. The) 476.94 128.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0 (method block at) 90 118.33 P
+1 F
+-0 (offset) 163.92 118.33 P
+0 F
+-0 ( in the object\325s method table is r) 185.03 118.33 P
+-0 (etrieved. The method block indicates the type of) 324.61 118.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 681.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(getstatic2_quick) 161.4 669.33 T
+4 F
+( = 208) 226.96 669.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 185.34 656.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 185.34 643.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 485.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(invokevirtual_quick) 154.46 473.33 T
+4 F
+( = 210) 233.9 473.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(offset) 196.16 460.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(nargs) 195.61 447.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 207.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(invokevirtualobject_quick) 155.74 195.33 T
+4 F
+( = 214) 259.61 195.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(offset) 209.66 182.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(nargs) 209.11 169.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 677.75 144 639.25 2 L
+V
+0.5 H
+0 Z
+N
+270 677.75 270 639.25 2 L
+V
+N
+143.75 678 270.25 678 2 L
+V
+N
+143.75 665 270.25 665 2 L
+V
+N
+143.75 652 270.25 652 2 L
+V
+N
+143.75 639 270.25 639 2 L
+V
+N
+144 481.75 144 443.25 2 L
+V
+N
+270 481.75 270 443.25 2 L
+V
+N
+143.75 482 270.25 482 2 L
+V
+N
+143.75 469 270.25 469 2 L
+V
+N
+143.75 456 270.25 456 2 L
+V
+N
+143.75 443 270.25 443 2 L
+V
+N
+144 203.75 144 165.25 2 L
+V
+N
+297 203.75 297 165.25 2 L
+V
+N
+143.75 204 297.25 204 2 L
+V
+N
+143.75 191 297.25 191 2 L
+V
+N
+143.75 178 297.25 178 2 L
+V
+N
+143.75 165 297.25 165 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "69" 5
+%%Page: "70" 6
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(70) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 474.01 29.33 T
+(ch 15, 1995) 492.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method \050native, synchr) 90 713.33 T
+(onized, etc.\051 and the number of ar) 192.18 713.33 T
+(guments \050) 341.4 713.33 T
+1 F
+(nar) 385.76 713.33 T
+(gs) 399.47 713.33 T
+0 F
+(\051 expected on the operand) 408.36 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(stack.) 90 703.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (If the method is marked) 90 687.33 P
+1 F
+-0.19 (synchr) 197.77 687.33 P
+-0.19 (onized) 225 687.33 P
+0 F
+-0.19 ( the monitor associated with) 251.11 687.33 P
+1 F
+-0.19 (handle) 378 687.33 P
+0 F
+-0.19 (is enter) 406.98 687.33 P
+-0.19 (ed. The exact behavior) 438.86 687.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(of monitors and their interactions with thr) 90 677.33 T
+(eads is a r) 276.42 677.33 T
+(untime issue.) 320.08 677.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The base of the local variables array for the new Java stack frame is set to point to) 90 661.33 T
+1 F
+(handle) 451.4 661.33 T
+0 F
+( on the stac) 478.07 661.33 T
+1 F
+(k,) 527.66 661.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(making) 90 651.33 T
+1 F
+(handle) 126.18 651.33 T
+0 F
+(and the supplied ar) 155.35 651.33 T
+(guments \050) 241.43 651.33 T
+1 F
+(ar) 285.79 651.33 T
+(g1) 293.94 651.33 T
+0 F
+(,) 303.94 651.33 T
+1 F
+(ar) 308.94 651.33 T
+(g2) 317.09 651.33 T
+0 F
+(, ...\051 the \336rst) 327.09 651.33 T
+1 F
+(nar) 381.79 651.33 T
+(gs) 395.5 651.33 T
+0 F
+( local variables of the new) 404.39 651.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(frame. The total number of local variables used by the method is determined, and the execution) 90 641.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(envir) 90 631.33 T
+(onment of the new frame is pushed after leaving suf) 112.94 631.33 T
+(\336cient r) 343.47 631.33 T
+(oom for the locals. The base of the) 377.01 631.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(operand stack for this method invocation is set to the \336rst wor) 90 621.33 T
+(d after the execution envir) 364.21 621.33 T
+(onment.) 480.12 621.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Finally) 90 611.33 T
+(, execution continues with the \336rst instr) 119.56 611.33 T
+(uction of the matched method.) 294.29 611.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the object handle on the operand stack is null, a) 90 595.33 T
+6 F
+(NullPointerException) 311.45 595.33 T
+0 F
+( is thr) 431.45 595.33 T
+(own. If during the) 456.45 595.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method invocation a stack over\337ow is detected, a) 90 585.33 T
+6 F
+(StackOverf) 310.43 585.33 T
+(lowException) 370.43 585.33 T
+0 F
+( is thr) 442.43 585.33 T
+(own.) 467.43 585.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(invokenonvirtual_quick) 54 555 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Invoke super) 90 540.33 T
+(class method) 147.99 540.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:) 90 463.33 T
+1 F
+(..., handle) 121.01 463.33 T
+0 F
+(, [) 160.18 463.33 T
+1 F
+(arg1) 168.51 463.33 T
+0 F
+(, [) 186.84 463.33 T
+1 F
+(arg2) 195.17 463.33 T
+0 F
+( ...]]) 213.5 463.33 T
+3 F
+(=>) 232.66 463.33 T
+1 F
+( ...) 243.64 463.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The operand stack is assumed to contain a) 90 445.33 T
+1 F
+(handle) 279.2 445.33 T
+0 F
+( to an object and some number of ar) 305.87 445.33 T
+(guments.) 463.99 445.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.18 (indexbyte1) 90 435.33 P
+0 F
+-0.18 ( and) 134.08 435.33 P
+1 F
+-0.18 (indexbyte2) 155.65 435.33 P
+0 F
+-0.18 ( ar) 199.73 435.33 P
+-0.18 (e used to constr) 210.82 435.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 435.33 P
+-0.18 (ent class. The) 479.1 435.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(item at that index in the constant pool contains a method slot index and a pointer to a class. The) 90 425.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method block at the method slot index in the indicated class is r) 90 415.33 T
+(etrieved. The method block indicates) 370.93 415.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the type of method \050native, synchr) 90 405.33 T
+(onized, etc.\051 and the number of ar) 241.96 405.33 T
+(guments \050) 391.18 405.33 T
+1 F
+(nar) 435.54 405.33 T
+(gs) 449.25 405.33 T
+0 F
+(\051 expected on the) 458.14 405.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(operand stack.) 90 395.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (If the method is marked) 90 379.33 P
+1 F
+-0.19 (synchr) 197.77 379.33 P
+-0.19 (onized) 225 379.33 P
+0 F
+-0.19 ( the monitor associated with) 251.11 379.33 P
+1 F
+-0.19 (handle) 378 379.33 P
+0 F
+-0.19 (is enter) 406.98 379.33 P
+-0.19 (ed. The exact behavior) 438.86 379.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(of monitors and their interactions with thr) 90 369.33 T
+(eads is a r) 276.42 369.33 T
+(untime issue.) 320.08 369.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The base of the local variables array for the new Java stack frame is set to point to) 90 353.33 T
+1 F
+(handle) 451.4 353.33 T
+0 F
+( on the stac) 478.07 353.33 T
+1 F
+(k,) 527.66 353.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(making) 90 343.33 T
+1 F
+(handle) 126.18 343.33 T
+0 F
+(and the supplied ar) 155.35 343.33 T
+(guments \050) 241.43 343.33 T
+1 F
+(ar) 285.79 343.33 T
+(g1) 293.94 343.33 T
+0 F
+(,) 303.94 343.33 T
+1 F
+(ar) 308.94 343.33 T
+(g2) 317.09 343.33 T
+0 F
+(, ...\051 the \336rst) 327.09 343.33 T
+1 F
+(nar) 381.79 343.33 T
+(gs) 395.5 343.33 T
+0 F
+( local variables of the new) 404.39 343.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(frame. The total number of local variables used by the method is determined, and the execution) 90 333.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(envir) 90 323.33 T
+(onment of the new frame is pushed after leaving suf) 112.94 323.33 T
+(\336cient r) 343.47 323.33 T
+(oom for the locals. The base of the) 377.01 323.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(operand stack for this method invocation is set to the \336rst wor) 90 313.33 T
+(d after the execution envir) 364.21 313.33 T
+(onment.) 480.12 313.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Finally) 90 303.33 T
+(, execution continues with the \336rst instr) 119.56 303.33 T
+(uction of the matched method.) 294.29 303.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the object handle on the operand stack is null, a) 90 287.33 T
+6 F
+(NullPointerException) 311.45 287.33 T
+0 F
+( is thr) 431.45 287.33 T
+(own. If during the) 456.45 287.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method invocation a stack over\337ow is detected, a) 90 277.33 T
+6 F
+(StackOverf) 310.43 277.33 T
+(lowException) 370.43 277.33 T
+0 F
+( is thr) 442.43 277.33 T
+(own.) 467.43 277.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(invokestatic_quick) 54 247 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Invoke a static method) 90 232.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:) 90 155.33 T
+1 F
+(...,) 121.01 155.33 T
+0 F
+([) 133.51 155.33 T
+1 F
+(arg1) 136.84 155.33 T
+0 F
+(, [) 155.17 155.33 T
+1 F
+(arg2) 163.5 155.33 T
+0 F
+( ...]]) 181.83 155.33 T
+3 F
+(=>) 200.99 155.33 T
+1 F
+( ...) 211.97 155.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The operand stack is assumed to contain some number of ar) 90 137.33 T
+(guments.) 355.03 137.33 T
+1 F
+(indexbyte1) 398.56 137.33 T
+0 F
+( and) 442.64 137.33 T
+1 F
+(indexbyte2) 464.57 137.33 T
+0 F
+( ar) 508.65 137.33 T
+(e) 519.92 137.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(used to constr) 90 127.33 T
+(uct an index into the constant pool of the curr) 151.98 127.33 T
+(ent class. The item at that index in the) 353.13 127.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constant pool contains a method slot index and a pointer to a class. The method block at the method) 90 117.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 524.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(invokenonvirtual_quick) 151.46 512.33 T
+4 F
+( = 211) 245.9 512.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 189.84 499.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 189.84 486.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 216.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(invokenstatic_quick) 149.96 204.33 T
+4 F
+( = 212) 229.4 204.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 180.84 191.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 180.84 178.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 520.75 144 482.25 2 L
+V
+0.5 H
+0 Z
+N
+279 520.75 279 482.25 2 L
+V
+N
+143.75 521 279.25 521 2 L
+V
+N
+143.75 508 279.25 508 2 L
+V
+N
+143.75 495 279.25 495 2 L
+V
+N
+143.75 482 279.25 482 2 L
+V
+N
+144 212.75 144 174.25 2 L
+V
+N
+261 212.75 261 174.25 2 L
+V
+N
+143.75 213 261.25 213 2 L
+V
+N
+143.75 200 261.25 200 2 L
+V
+N
+143.75 187 261.25 187 2 L
+V
+N
+143.75 174 261.25 174 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "70" 6
+%%Page: "71" 7
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (71) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(slot index in the indicated class is r) 90 713.33 T
+(etrieved. The method block indicates the type of method \050native,) 243.86 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(synchr) 90 703.33 T
+(onized, etc.\051 and the number of ar) 119.65 703.33 T
+(guments \050) 268.87 703.33 T
+1 F
+(nar) 313.23 703.33 T
+(gs) 326.94 703.33 T
+0 F
+(\051 expected on the operand stack.) 335.83 703.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the method is marked) 90 687.33 T
+1 F
+(synchr) 198.73 687.33 T
+(onized) 225.96 687.33 T
+0 F
+( the monitor associated with the method\325s class is enter) 252.07 687.33 T
+(ed. The) 495.48 687.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(exact behavior of monitors and their interactions with thr) 90 677.33 T
+(eads is a r) 343.18 677.33 T
+(untime issue.) 386.84 677.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.32 (The base of the local variables array for the new Java stack frame is set to point to the \336rst ar) 90 661.33 P
+-0.32 (gument on) 490.08 661.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.38 (the stac) 90 651.33 P
+1 F
+-0.38 (k,) 122.93 651.33 P
+0 F
+-0.38 (making the supplied ar) 132 651.33 P
+-0.38 (guments \050) 233.71 651.33 P
+1 F
+-0.38 (ar) 277.69 651.33 P
+-0.38 (g1) 285.84 651.33 P
+0 F
+-0.38 (,) 295.84 651.33 P
+1 F
+-0.38 (ar) 300.46 651.33 P
+-0.38 (g2) 308.61 651.33 P
+0 F
+-0.38 (, ...\051 the \336rst) 318.61 651.33 P
+1 F
+-0.38 (nar) 371.82 651.33 P
+-0.38 (gs) 385.52 651.33 P
+0 F
+-0.38 ( local variables of the new frame.) 394.42 651.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.18 (The total number of local variables used by the method is determined, and the execution envir) 90 641.33 P
+-0.18 (onment) 503.7 641.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(of the new frame is pushed after leaving suf) 90 631.33 T
+(\336cient r) 284.05 631.33 T
+(oom for the locals. The base of the operand stack) 317.59 631.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(for this method invocation is set to the \336rst wor) 90 621.33 T
+(d after the execution envir) 299.57 621.33 T
+(onment. Finally) 415.48 621.33 T
+(, execution) 484.02 621.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(continues with the \336rst instr) 90 611.33 T
+(uction of the matched method.) 214.57 611.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the object handle on the operand stack is null, a) 90 595.33 T
+6 F
+(NullPointerException) 311.45 595.33 T
+0 F
+( is thr) 431.45 595.33 T
+(own. If during the) 456.45 595.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method invocation a stack over\337ow is detected, a) 90 585.33 T
+6 F
+(StackOverf) 310.43 585.33 T
+(lowException) 370.43 585.33 T
+0 F
+( is thr) 442.43 585.33 T
+(own.) 467.43 585.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(invokeinterface_quick) 54 555 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Invoke interface method) 90 540.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:) 90 437.33 T
+1 F
+(..., handle) 121.01 437.33 T
+0 F
+(, [) 160.18 437.33 T
+1 F
+(arg1) 168.51 437.33 T
+0 F
+(, [) 186.84 437.33 T
+1 F
+(arg2) 195.17 437.33 T
+0 F
+( ...]]) 213.5 437.33 T
+3 F
+(=>) 232.66 437.33 T
+1 F
+( ...) 243.64 437.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The operand stack is assumed to contain a) 90 419.33 T
+1 F
+(handle) 279.2 419.33 T
+0 F
+( to an object and) 305.87 419.33 T
+1 F
+(nar) 380.66 419.33 T
+(gs) 394.37 419.33 T
+0 F
+(-1 ar) 403.26 419.33 T
+(guments.) 422.86 419.33 T
+1 F
+(idbyte1) 466.39 419.33 T
+0 F
+(and) 498.52 419.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.15 (idbyte2) 90 409.33 P
+0 F
+-0.15 (ar) 121.98 409.33 P
+-0.15 (e used to constr) 130.75 409.33 P
+-0.15 (uct an index into the constant pool of the curr) 199.58 409.33 P
+-0.15 (ent class. The item at that index) 399.41 409.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0 (in the constant pool contains the complete method signatur) 90 399.33 P
+-0 (e. A pointer to the object\325s method table is) 351.9 399.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(r) 90 389.33 T
+(etrieved fr) 93.77 389.33 T
+(om the object) 139.62 389.33 T
+1 F
+(handle) 201.1 389.33 T
+0 F
+(.) 227.77 389.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.37 (The method signatur) 90 373.33 P
+-0.37 (e is sear) 181.86 373.33 P
+-0.37 (ched for in the object\325s method table. As a short-cut, the method signatur) 215.87 373.33 P
+-0.37 (e) 533.08 373.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(at slot) 90 363.33 T
+1 F
+(guess) 119.13 363.33 T
+0 F
+( is sear) 141.36 363.33 T
+(ched \336rst. If that fails, a complete sear) 171.31 363.33 T
+(ch of the method table is performed. The) 338.19 363.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method signatur) 90 353.33 T
+(e is guaranteed to exactly match one of the method signatur) 163.36 353.33 T
+(es in the table.) 427.39 353.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The r) 90 337.33 T
+(esult of the lookup is a method block. The method block indicates the type of method \050native,) 113.01 337.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.18 (synchr) 90 327.33 P
+-0.18 (onized, etc.\051 but unlike) 119.65 327.33 P
+1 F
+-0.18 (invokemethod) 222.68 327.33 P
+0 F
+-0.18 ( and) 278.23 327.33 P
+1 F
+-0.18 (invokesuper) 299.8 327.33 P
+0 F
+-0.18 (, the number of available ar) 347.39 327.33 P
+-0.18 (guments \050) 467.57 327.33 P
+1 F
+-0.18 (nar) 511.75 327.33 P
+-0.18 (gs) 525.46 327.33 P
+0 F
+-0.18 (\051) 534.35 327.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(is taken fr) 90 317.33 T
+(om the bytecode.) 133.68 317.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (If the method is marked) 90 301.33 P
+1 F
+-0.19 (synchr) 197.77 301.33 P
+-0.19 (onized) 225 301.33 P
+0 F
+-0.19 ( the monitor associated with) 251.11 301.33 P
+1 F
+-0.19 (handle) 378 301.33 P
+0 F
+-0.19 (is enter) 406.98 301.33 P
+-0.19 (ed. The exact behavior) 438.86 301.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(of monitors and their interactions with thr) 90 291.33 T
+(eads is a r) 276.42 291.33 T
+(untime issue.) 320.08 291.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The base of the local variables array for the new Java stack frame is set to point to) 90 275.33 T
+1 F
+(handle) 451.4 275.33 T
+0 F
+( on the stac) 478.07 275.33 T
+1 F
+(k,) 527.66 275.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(making) 90 265.33 T
+1 F
+(handle) 126.18 265.33 T
+0 F
+(and the supplied ar) 155.35 265.33 T
+(guments \050) 241.43 265.33 T
+1 F
+(ar) 285.79 265.33 T
+(g1) 293.94 265.33 T
+0 F
+(,) 303.94 265.33 T
+1 F
+(ar) 308.94 265.33 T
+(g2) 317.09 265.33 T
+0 F
+(, ...\051 the \336rst) 327.09 265.33 T
+1 F
+(nar) 381.79 265.33 T
+(gs) 395.5 265.33 T
+0 F
+( local variables of the new) 404.39 265.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(frame. The total number of local variables used by the method is determined, and the execution) 90 255.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(envir) 90 245.33 T
+(onment of the new frame is pushed after leaving suf) 112.94 245.33 T
+(\336cient r) 343.47 245.33 T
+(oom for the locals. The base of the) 377.01 245.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(operand stack for this method invocation is set to the \336rst wor) 90 235.33 T
+(d after the execution envir) 364.21 235.33 T
+(onment.) 480.12 235.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Finally) 90 225.33 T
+(, execution continues with the \336rst instr) 119.56 225.33 T
+(uction of the matched method.) 294.29 225.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the object handle on the operand stack is null, a) 90 209.33 T
+6 F
+(NullPointerException) 311.45 209.33 T
+0 F
+( is thr) 431.45 209.33 T
+(own. If during the) 456.45 209.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method invocation a stack over\337ow is detected, a) 90 199.33 T
+6 F
+(StackOverf) 310.43 199.33 T
+(lowException) 370.43 199.33 T
+0 F
+( is thr) 442.43 199.33 T
+(own.) 467.43 199.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+(guess) 90 183.33 T
+0 F
+( is the last guess. Each time thr) 112.23 183.33 T
+(ough, guess is set to the method of) 247.53 183.33 T
+(fset that was used.) 400.17 183.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 524.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(invokeinterface_quick) 154.52 512.33 T
+4 F
+( = 213) 242.84 512.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(idbyte1) 196.78 499.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(idbyte2) 196.78 486.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(nargs) 200.11 473.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(guess) 200.39 460.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 520.75 144 456.25 2 L
+V
+0.5 H
+0 Z
+N
+279 520.75 279 456.25 2 L
+V
+N
+143.75 521 279.25 521 2 L
+V
+N
+143.75 508 279.25 508 2 L
+V
+N
+143.75 495 279.25 495 2 L
+V
+N
+143.75 482 279.25 482 2 L
+V
+N
+143.75 469 279.25 469 2 L
+V
+N
+143.75 456 279.25 456 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "71" 7
+%%Page: "72" 8
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(72) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 474.01 29.33 T
+(ch 15, 1995) 492.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Miscellaneous Object Operations \050_quick variants\051) 54 710.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(new_quick) 54 679 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Cr) 90 664.33 T
+(eate new object) 100.86 664.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...) 90 587.33 T
+3 F
+(=>) 131.01 587.33 T
+0 F
+( ...,) 141.99 587.33 T
+1 F
+(handle) 156.99 587.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.18 (indexbyte1) 90 569.33 P
+0 F
+-0.18 ( and) 134.08 569.33 P
+1 F
+-0.18 (indexbyte2) 155.65 569.33 P
+0 F
+-0.18 ( ar) 199.73 569.33 P
+-0.18 (e used to constr) 210.82 569.33 P
+-0.18 (uct an index into the constant pool of the curr) 279.56 569.33 P
+-0.18 (ent class. The) 479.1 569.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(item at that index should be a class. A new instance of that class is then cr) 90 559.33 T
+(eated and a) 414.42 559.33 T
+1 F
+(handle) 467.8 559.33 T
+0 F
+( for it) 494.47 559.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(pushed on the stack.) 90 549.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(checkcast_quick) 54 519 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Make sur) 90 504.33 T
+(e object is of given type) 131.35 504.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 427.33 T
+1 F
+(handle) 133.51 427.33 T
+3 F
+(=>) 162.68 427.33 T
+0 F
+( ...,) 173.66 427.33 T
+1 F
+(handle) 188.66 427.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.25 (handle) 90 409.33 P
+0 F
+-0.25 (should be a handle to an object. i) 118.92 409.33 P
+1 F
+-0.25 (ndexbyte1) 261.76 409.33 P
+0 F
+-0.25 ( and) 303.06 409.33 P
+1 F
+-0.25 (indexbyte2) 324.49 409.33 P
+0 F
+-0.25 ( ar) 368.57 409.33 P
+-0.25 (e used to constr) 379.59 409.33 P
+-0.25 (uct an index into the) 448.1 409.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constant pool of the curr) 90 399.33 T
+(ent class. The object at that index of the constant pool should have alr) 197.99 399.33 T
+(eady) 503.95 399.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(been r) 90 389.33 T
+(esolved.) 117.2 389.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.18 (checkcast) 90 373.33 P
+0 F
+-0.18 ( then determines whether) 127.2 373.33 P
+1 F
+-0.18 (handle) 242.44 373.33 P
+0 F
+-0.18 (can be cast to an object of class) 271.44 373.33 P
+1 F
+-0.18 (class) 407.52 373.33 P
+0 F
+-0.18 (. A null) 426.6 373.33 P
+1 F
+-0.18 (handle) 461.52 373.33 P
+0 F
+-0.18 (can be cast) 490.51 373.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.03 (to any) 90 363.33 P
+1 F
+-0.03 (class) 120.04 363.33 P
+0 F
+-0.03 (, and otherwise the super) 139.11 363.33 P
+-0.03 (classes of) 250.68 363.33 P
+1 F
+-0.03 (handle) 294.27 363.33 P
+0 F
+-0.03 (ar) 323.4 363.33 P
+-0.03 (e sear) 332.17 363.33 P
+-0.03 (ched for) 357.23 363.33 P
+1 F
+-0.03 (class) 396.07 363.33 P
+0 F
+-0.03 (. If class is determined to be) 415.14 363.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(a super) 90 353.33 T
+(class of) 122.34 353.33 T
+1 F
+(handle) 156.96 353.33 T
+0 F
+(, or if) 183.63 353.33 T
+1 F
+(handle) 209.28 353.33 T
+0 F
+(is null,) 238.45 353.33 T
+1 F
+(object) 270.77 353.33 T
+0 F
+( can be cast to) 293.91 353.33 T
+1 F
+(class) 357.65 353.33 T
+0 F
+( and execution pr) 376.72 353.33 T
+(oceeds at the next) 453.59 353.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(instr) 90 343.33 T
+(uction, and the handle for) 110.1 343.33 T
+1 F
+(handle) 227.01 343.33 T
+0 F
+( r) 253.68 343.33 T
+(emains on the stack.) 259.95 343.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If) 90 327.33 T
+1 F
+(handle) 99.2 327.33 T
+0 F
+(cannot be cast to) 128.37 327.33 T
+1 F
+(class) 204.15 327.33 T
+0 F
+(, a) 223.22 327.33 T
+6 F
+(ClassCastException) 235.72 327.33 T
+0 F
+( is thr) 343.72 327.33 T
+(own.) 368.72 327.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(instanceof_quick) 54 297 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Determine if object is of given type) 90 282.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Stack:  ...,) 90 205.33 T
+1 F
+(handle) 133.51 205.33 T
+3 F
+(=>) 162.68 205.33 T
+0 F
+( ...,) 173.66 205.33 T
+1 F
+(result) 188.66 205.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.25 (handle) 90 187.33 P
+0 F
+-0.25 ( should be a handle to an object. i) 116.67 187.33 P
+1 F
+-0.25 (ndexbyte1) 261.76 187.33 P
+0 F
+-0.25 ( and) 303.06 187.33 P
+1 F
+-0.25 (indexbyte2) 324.49 187.33 P
+0 F
+-0.25 ( ar) 368.57 187.33 P
+-0.25 (e used to constr) 379.59 187.33 P
+-0.25 (uct an index into the) 448.1 187.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constant pool of the curr) 90 177.33 T
+(ent class. The item of class) 197.99 177.33 T
+1 F
+(class) 316.34 177.33 T
+0 F
+( at that index of the constant pool is assumed) 335.41 177.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(to have alr) 90 167.33 T
+(eady been r) 136.66 167.33 T
+(esolved.) 187.82 167.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 F
+-0.06 (instanceof) 90 151.33 P
+0 F
+-0.06 ( determines whether) 130.74 151.33 P
+1 F
+-0.06 (handle) 224.31 151.33 P
+0 F
+-0.06 (can be cast to an object of the class) 253.42 151.33 P
+1 F
+-0.06 (class) 406.73 151.33 P
+0 F
+-0.06 (. A null) 425.8 151.33 P
+1 F
+-0.06 (handle) 461.06 151.33 P
+0 F
+-0.06 (can be cast) 490.17 151.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(to any) 90 141.33 T
+1 F
+(class) 120.1 141.33 T
+0 F
+(, and otherwise the super) 139.17 141.33 T
+(classes of) 250.87 141.33 T
+1 F
+(handle) 294.52 141.33 T
+0 F
+(ar) 323.69 141.33 T
+(e sear) 332.46 141.33 T
+(ched for) 357.55 141.33 T
+1 F
+(class) 396.45 141.33 T
+0 F
+(. If) 415.52 141.33 T
+1 F
+(class) 429.72 141.33 T
+0 F
+( is determined to be) 448.79 141.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.31 (a super) 90 131.33 P
+-0.31 (class of) 122.03 131.33 P
+1 F
+-0.31 (handle) 156.03 131.33 P
+0 F
+-0.31 (, or if) 182.7 131.33 P
+1 F
+-0.31 (handle) 207.41 131.33 P
+0 F
+-0.31 (is null,) 236.27 131.33 P
+1 F
+-0.31 (handle) 267.97 131.33 P
+0 F
+-0.31 (is overwritten by 1. Otherwise,) 296.83 131.33 P
+1 F
+-0.31 (handle) 434.15 131.33 P
+0 F
+-0.31 ( is overwritten by) 460.82 131.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(0.) 90 121.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 648.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(new_quick) 154.29 636.33 T
+4 F
+( = 215) 197.06 636.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 166.84 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 166.84 610.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 488.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(checkcast_quick) 152.41 476.33 T
+4 F
+( = 217) 217.95 476.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 176.34 463.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 176.34 450.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Syntax:) 90 266.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(instanceof_quick) 151.29 254.33 T
+4 F
+( = 218) 219.07 254.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 F
+(indexbyte1) 176.34 241.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(indexbyte2) 176.34 228.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+144 644.75 144 606.25 2 L
+V
+0.5 H
+0 Z
+N
+232.99 644.75 232.99 606.25 2 L
+V
+N
+143.75 645 233.24 645 2 L
+V
+N
+143.75 632 233.24 632 2 L
+V
+N
+143.75 619 233.24 619 2 L
+V
+N
+143.75 606 233.24 606 2 L
+V
+N
+144 484.75 144 446.25 2 L
+V
+N
+252 484.75 252 446.25 2 L
+V
+N
+143.75 485 252.25 485 2 L
+V
+N
+143.75 472 252.25 472 2 L
+V
+N
+143.75 459 252.25 459 2 L
+V
+N
+143.75 446 252.25 446 2 L
+V
+N
+144 262.75 144 224.25 2 L
+V
+N
+252 262.75 252 224.25 2 L
+V
+N
+143.75 263 252.25 263 2 L
+V
+N
+143.75 250 252.25 250 2 L
+V
+N
+143.75 237 252.25 237 2 L
+V
+N
+143.75 224 252.25 224 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "72" 8
+%%Page: "73" 9
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (73) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Constant Pool Resolution) 54 710.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(When the class is r) 54 692.33 T
+(ead in, an array) 136.05 692.33 T
+6 F
+(constant_pool[]) 207.46 692.33 T
+0 F
+( of size) 297.46 692.33 T
+6 F
+(nconstants) 330.69 692.33 T
+0 F
+( is cr) 390.69 692.33 T
+(eated and assigned to a \336eld) 411.05 692.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(in the class.) 54 682.33 T
+6 F
+(constant_pool[0]) 107.43 682.33 T
+0 F
+( is set to point to a malloc-ed array which indicates which \336elds in the) 203.43 682.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.49 (constant_pool have alr) 54 672.33 P
+-0.49 (eady been r) 153.11 672.33 P
+-0.49 (esolved.) 203.3 672.33 P
+6 F
+-1.16 (constant_pool[1]) 241.76 672.33 P
+0 F
+-0.49 (thr) 342.6 672.33 P
+-0.49 (ough) 355.45 672.33 P
+6 F
+-1.16 (constant_pool[nconstants -) 380.33 672.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(1]) 54 662.33 T
+0 F
+( ar) 66 662.33 T
+(e set to point at the \322type\323 \336eld that corr) 77.27 662.33 T
+(esponds to this constant item.) 255.6 662.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(When an instr) 54 646.33 T
+(uction is executed that r) 116.35 646.33 T
+(efer) 221.9 646.33 T
+(ences the constant pool, an index is generated, and) 238.58 646.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+6 F
+(constant_pool[0]) 54 636.33 T
+0 F
+( is checked to see if the index has alr) 150 636.33 T
+(eady been r) 309.78 636.33 T
+(esolved. If so, the value of) 360.94 636.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+6 F
+(constant_pool[index]) 54 626.33 T
+0 F
+( is r) 174 626.33 T
+(eturned. If not, the value of) 189.92 626.33 T
+6 F
+(constant_pool[index]) 312.95 626.33 T
+0 F
+( is r) 432.95 626.33 T
+(esolved to be the) 448.87 626.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(actual pointer or data, and overwrites whatever value was alr) 54 616.33 T
+(eady in) 326.13 616.33 T
+6 F
+(constant_pool[index].) 361.32 616.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "73" 9
+%%Page: "74" 10
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Appendix A - An Optimization) 227.74 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(74) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 474.01 29.33 T
+(ch 15, 1995) 492.24 29.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "74" 10
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%PageOrder: Ascend
+%%Pages: 10
+%%DocumentFonts: Palatino-Roman
+%%+ Palatino-Italic
+%%+ Palatino-Bold
+%%+ Symbol
+%%+ Times-Roman
+%%+ Times-Italic
+%%+ Courier
+%%EOF

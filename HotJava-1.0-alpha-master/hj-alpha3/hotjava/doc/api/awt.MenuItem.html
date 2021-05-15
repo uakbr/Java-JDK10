@@ -1,0 +1,310 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.MenuItem
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.MenuBar.html#_top_">Previous</a>    <a href="awt.MessageDialog.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.MenuItem
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.MenuItem
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+MenuItem</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A string item that represents a choice in a menu.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.14 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#index">index</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#label">label</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#menu">menu</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#MenuItem()"><b>MenuItem</b></a>()
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#MenuItem(java.lang.String, awt.Menu)"><b>MenuItem</b></a>(String, Menu)
+<dd>
+Constructs a MenuItem.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#MenuItem(java.lang.String, awt.Menu, boolean)"><b>MenuItem</b></a>(String, Menu, boolean)
+<dd>
+Constructs a MenuItem that has a checkmark associated with it.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#disable()"><b>disable</b></a>()
+<dd>
+Makes this menu item unselectable by the user.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Dispose of this menu item.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#enable()"><b>enable</b></a>()
+<dd>
+Makes this menu item selectable by the user.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getMarkState()"><b>getMarkState</b></a>()
+<dd>
+Returns the state of this MenuItem.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#selected()"><b>selected</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setMark(boolean)"><b>setMark</b></a>(boolean)
+<dd>
+Sets the state of this MenuItem if it is a toggle.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="index">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+index
+</b>
+<pre>
+  public int index
+</pre>
+<a name="menu">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+menu
+</b>
+<pre>
+  public <a href="awt.Menu.html#_top_">Menu</a> menu
+</pre>
+<a name="label">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+label
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> label
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="MenuItem"></a>
+<a name="MenuItem()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+MenuItem
+</b>
+<pre>
+  protected MenuItem()
+</pre>
+<a name="MenuItem(java.lang.String, awt.Menu)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+MenuItem
+</b>
+<pre>
+  public MenuItem(<a href="java.lang.String.html#_top_">String</a> l,
+                  <a href="awt.Menu.html#_top_">Menu</a> m)
+</pre>
+<dl>
+<dd>
+Constructs a MenuItem.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+l
+-
+ is the label for this menu item.
+<dd>
+m
+-
+ is the menu to add this item to.
+</dl>
+</dl>
+<p>
+<a name="MenuItem(java.lang.String, awt.Menu, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+MenuItem
+</b>
+<pre>
+  public MenuItem(<a href="java.lang.String.html#_top_">String</a> l,
+                  <a href="awt.Menu.html#_top_">Menu</a> m,
+                  boolean isToggle)
+</pre>
+<dl>
+<dd>
+Constructs a MenuItem that has a checkmark associated with it.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setMark(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setMark">
+<b>
+setMark
+</b>
+</a>
+<pre>
+  public void setMark(boolean t)
+</pre>
+<dl>
+<dd>
+Sets the state of this MenuItem if it is a toggle.
+</dl>
+<p>
+<a name="getMarkState()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getMarkState">
+<b>
+getMarkState
+</b>
+</a>
+<pre>
+  public boolean getMarkState()
+</pre>
+<dl>
+<dd>
+Returns the state of this MenuItem. Only valid for a toggle.
+</dl>
+<p>
+<a name="enable()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="enable">
+<b>
+enable
+</b>
+</a>
+<pre>
+  public void enable()
+</pre>
+<dl>
+<dd>
+Makes this menu item selectable by the user.
+</dl>
+<p>
+<a name="disable()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="disable">
+<b>
+disable
+</b>
+</a>
+<pre>
+  public void disable()
+</pre>
+<dl>
+<dd>
+Makes this menu item unselectable by the user.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Dispose of this menu item. This removes it from the menu which
+contains it.
+</dl>
+<p>
+<a name="selected()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="selected">
+<b>
+selected
+</b>
+</a>
+<pre>
+  public void selected()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.MenuBar.html#_top_">Previous</a>    <a href="awt.MessageDialog.html#_top_">Next</a></pre>
+</body>
+</html>

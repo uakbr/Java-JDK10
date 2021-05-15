@@ -1,0 +1,22 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Conventions</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING24></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_15.html">Prev</A>       <A HREF="vmspec_17.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Conventions</H1>
+
+<HR>
+
+Operations of the Java virtual machine most often take their operands from the stack and put their results back on the stack. As a convention, the descriptions do not usually mention when the stack is the source or destination of an operation, but will always mention when it is not. For instance, the iload instruction has the short description "Load integer from local variable." Implicitly, the integer is loaded onto the stack. The iadd instruction is described as "Integer add"; both its source and destination are the stack.<P>
+Instructions that do not affect the control flow of a computation may be assumed to always advance the virtual machine pc to the opcode of the following instruction. Only instructions that do affect control flow will explicitly mention the effect they have on pc.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_15.html">Prev</A>       <A HREF="vmspec_17.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

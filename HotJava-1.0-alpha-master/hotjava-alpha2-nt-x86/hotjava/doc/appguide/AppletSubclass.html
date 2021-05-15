@@ -1,0 +1,91 @@
+<Html>
+<Head>
+<Title>Writing a Subclass of Applet</Title> 
+</Head>
+
+<Body>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+href="StepByStep.html">Previous</A>    <A 
+href="Attributes.html">Next</A></PRE>   
+<HR>
+
+<H4><em>Writing an Applet</em></H4> 
+<H1>Writing a Subclass of Applet</H1>
+
+To write an applet,
+you need to implement a subclass of the
+<A Href="../api/browser.Applet.html">Applet class</A>.
+This page describes the Applet methods
+that your subclass might need to implement.
+To see how other programmers have implemented Applet subclasses,
+go to the
+<A Href="Examples.html">code examples</A>.
+<P>
+
+Three methods perform much of an applet's work:
+<P>
+<DL>
+<DT>init()
+<DD>Called just after the applet is created,
+this method is useful for resizing the applet's display area,
+downloading resources,
+<A Href="Attributes.html">getting attribute values</A>,
+getting fonts and colors,
+and so on.
+<DT>start()
+<DD>This method typically performs
+(or starts a
+<A Href="../api/java.lang.Thread.html">thread</A>
+to perform)
+the real work of the applet.
+By default, this method is called
+every time the applet's page is visited,
+whether or not the applet is visible.
+However, the user can specify
+that applet execution be delayed
+until the user requests it.
+<DT>paint()
+<DD>Called automatically
+every time the applet's screen display needs to be drawn
+-- such as when the applet first becomes visible,
+when it's scrolled,
+or when the applet requests to be repainted --
+this method should simply draw the applet's representation onscreen.
+</DL>
+
+Two more methods clean up after the applet:
+<P>
+
+<DL>
+<DT>stop()
+<DD>Called when the user leaves the applet's page,
+this method should stop the applet's execution.
+<DT>destroy()
+<DD>Called when the applet is discarded
+(such as when the applet is reloaded,
+which requires it to be unloaded first),
+this method should release the applet's resources.
+</DL>
+
+Your Applet subclass can use many Applet utility methods to:
+<UL>
+<LI>use certain resources (such as fonts and colors)
+<LI>handle events (such as mouse clicks)
+<LI>perform common operations (such as play a sound or display an image)
+</UL>
+
+See the
+<A Href="../api/browser.Applet.html">Applet class documentation</A>
+for information on all Applet methods and variables.
+See the
+<A Href="Examples.html">code examples</A>
+for examples of creating Applet subclasses.
+<P>
+
+<HR>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+href="StepByStep.html">Previous</A>    <A 
+href="Attributes.html">Next</A></PRE>   
+
+</Body>
+</Html>

@@ -1,0 +1,634 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.WRImageItem
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRFormatter.html#_top_">Previous</a>    <a href="browser.WRListRef.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.WRImageItem
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Observable.html#_top_">browser.Observable</a>
+           |
+           +----<a href="awt.DisplayItem.html#_top_">awt.DisplayItem</a>
+                   |
+                   +----<a href="awt.ImageDisplayItem.html#_top_">awt.ImageDisplayItem</a>
+                           |
+                           +----browser.WRImageItem
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+WRImageItem</b>
+<dt>
+extends <a href="awt.ImageDisplayItem.html#_top_">ImageDisplayItem</a>
+<dt>
+implements <a href="browser.Alignable.html#_top_">Alignable</a>, <a href="browser.Observer.html#_top_">Observer</a>
+</dl>
+Class WRImageItem is the display item for all images that appear
+in HotJava documents.  It handles alignment queries, delayed
+image loading, image caching and following hypertext links if the
+image is part of an anchor.
+Instances of this class are observers of instances of
+ImageHandle.  That way this display item will get notified
+when the ImageHandle finishes reading an image across the net.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.51, 20 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne,
+Chris Warth</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#anchorUrl">anchorUrl</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#borderThickness">borderThickness</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#imageUrl">imageUrl</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#imgTag">imgTag</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ismap">ismap</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#paintImage">paintImage</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#tagHeight">tagHeight</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#tagWidth">tagWidth</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WRImageItem(browser.WRWindow, net.www.html.TagRef, java.lang.String)"><b>WRImageItem</b></a>(WRWindow, TagRef, String)
+<dd>
+Creates a new WRImageItem in the specified WRWindow.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#checkImage(awt.Window)"><b>checkImage</b></a>(Window)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#convertAlign(java.lang.String)"><b>convertAlign</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#deactivate()"><b>deactivate</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#executeClick(awt.Event)"><b>executeClick</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAlign()"><b>getAlign</b></a>()
+<dd>
+Get alignment for formatting.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getImageUrl(net.www.html.URL, browser.WRWindow, net.www.html.TagRef)"><b>getImageUrl</b></a>(URL, WRWindow, TagRef)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#initializeBorderThickness()"><b>initializeBorderThickness</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#kickImage(browser.WRWindow, browser.ImgTagRef)"><b>kickImage</b></a>(WRWindow, ImgTagRef)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint(awt.Window, int, int)"><b>paint</b></a>(Window, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resizeFromImage(awt.Image)"><b>resizeFromImage</b></a>(Image)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resizeFromImageSize(int, int)"><b>resizeFromImageSize</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setAnchor(java.lang.String)"><b>setAnchor</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setColor(awt.Color)"><b>setColor</b></a>(Color)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setImage(awt.Image)"><b>setImage</b></a>(Image)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackEnter(awt.Event)"><b>trackEnter</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackExit(awt.Event)"><b>trackExit</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackMotion(awt.Event)"><b>trackMotion</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStart(awt.Event)"><b>trackStart</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStop(awt.Event)"><b>trackStop</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update(awt.Window, int, int)"><b>update</b></a>(Window, int, int)
+<dd>
+Update is called when the mouse is clicked over an image.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update(browser.Observable)"><b>update</b></a>(Observable)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#waitForImage()"><b>waitForImage</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#waitForImageSize()"><b>waitForImageSize</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="paintImage">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+paintImage
+</b>
+<pre>
+  protected boolean paintImage
+</pre>
+<a name="imgTag">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+imgTag
+</b>
+<pre>
+  protected <a href="net.www.html.TagRef.html#_top_">TagRef</a> imgTag
+</pre>
+<a name="imageUrl">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+imageUrl
+</b>
+<pre>
+  protected <a href="net.www.html.URL.html#_top_">URL</a> imageUrl
+</pre>
+<a name="anchorUrl">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+anchorUrl
+</b>
+<pre>
+  protected <a href="net.www.html.URL.html#_top_">URL</a> anchorUrl
+</pre>
+<a name="ismap">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+ismap
+</b>
+<pre>
+  protected boolean ismap
+</pre>
+<a name="borderThickness">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+borderThickness
+</b>
+<pre>
+  protected byte borderThickness
+</pre>
+<a name="tagWidth">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+tagWidth
+</b>
+<pre>
+  protected int tagWidth
+</pre>
+<a name="tagHeight">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+tagHeight
+</b>
+<pre>
+  protected int tagHeight
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="WRImageItem"></a>
+<a name="WRImageItem(browser.WRWindow, net.www.html.TagRef, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WRImageItem
+</b>
+<pre>
+  public WRImageItem(<a href="browser.WRWindow.html#_top_">WRWindow</a> w,
+                     <a href="net.www.html.TagRef.html#_top_">TagRef</a> imgTag,
+                     <a href="java.lang.String.html#_top_">String</a> href)
+</pre>
+<dl>
+<dd>
+Creates a new WRImageItem in the specified WRWindow.  The
+image source is retrieved from the specified TagRef which
+must contain a "src" attribute.  If this image contains a
+reference to another URL, then that is specified by the href
+argument.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="convertAlign(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="convertAlign">
+<b>
+convertAlign
+</b>
+</a>
+<pre>
+  public static int convertAlign(<a href="java.lang.String.html#_top_">String</a> align)
+</pre>
+<a name="checkImage(awt.Window)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="checkImage">
+<b>
+checkImage
+</b>
+</a>
+<pre>
+  public void checkImage(<a href="awt.Window.html#_top_">Window</a> w)
+</pre>
+<a name="getImageUrl(net.www.html.URL, browser.WRWindow, net.www.html.TagRef)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getImageUrl">
+<b>
+getImageUrl
+</b>
+</a>
+<pre>
+  public static <a href="net.www.html.URL.html#_top_">URL</a> getImageUrl(<a href="net.www.html.URL.html#_top_">URL</a> context,
+                                <a href="browser.WRWindow.html#_top_">WRWindow</a> w,
+                                <a href="net.www.html.TagRef.html#_top_">TagRef</a> ref)
+</pre>
+<a name="kickImage(browser.WRWindow, browser.ImgTagRef)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="kickImage">
+<b>
+kickImage
+</b>
+</a>
+<pre>
+  public static void kickImage(<a href="browser.WRWindow.html#_top_">WRWindow</a> w,
+                               <a href="browser.ImgTagRef.html#_top_">ImgTagRef</a> ref)
+</pre>
+<a name="setAnchor(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setAnchor">
+<b>
+setAnchor
+</b>
+</a>
+<pre>
+  public void setAnchor(<a href="java.lang.String.html#_top_">String</a> href)
+</pre>
+<a name="getAlign()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAlign">
+<b>
+getAlign
+</b>
+</a>
+<pre>
+  public int getAlign()
+</pre>
+<dl>
+<dd>
+Get alignment for formatting.
+</dl>
+<p>
+<a name="initializeBorderThickness()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="initializeBorderThickness">
+<b>
+initializeBorderThickness
+</b>
+</a>
+<pre>
+  protected void initializeBorderThickness()
+</pre>
+<a name="resizeFromImage(awt.Image)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resizeFromImage">
+<b>
+resizeFromImage
+</b>
+</a>
+<pre>
+  public void resizeFromImage(<a href="awt.Image.html#_top_">Image</a> img)
+</pre>
+<a name="resizeFromImageSize(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resizeFromImageSize">
+<b>
+resizeFromImageSize
+</b>
+</a>
+<pre>
+  public void resizeFromImageSize(int w,
+                                  int h)
+</pre>
+<a name="paint(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public synchronized void paint(<a href="awt.Window.html#_top_">Window</a> w,
+                                 int x,
+                                 int y)
+</pre>
+<a name="update(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public synchronized void update(<a href="awt.Window.html#_top_">Window</a> w,
+                                  int x,
+                                  int y)
+</pre>
+<dl>
+<dd>
+Update is called when the mouse is clicked over an image.
+	When that occurs, we just repaint the border, if we have
+	one.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#update(awt.Window, int, int)">update</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="trackEnter(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackEnter">
+<b>
+trackEnter
+</b>
+</a>
+<pre>
+  public void trackEnter(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackMotion(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackMotion">
+<b>
+trackMotion
+</b>
+</a>
+<pre>
+  public void trackMotion(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackExit(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackExit">
+<b>
+trackExit
+</b>
+</a>
+<pre>
+  public void trackExit(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="setColor(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setColor">
+<b>
+setColor
+</b>
+</a>
+<pre>
+  public void setColor(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<a name="trackStart(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStart">
+<b>
+trackStart
+</b>
+</a>
+<pre>
+  public void trackStart(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackStop(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStop">
+<b>
+trackStop
+</b>
+</a>
+<pre>
+  public void trackStop(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="executeClick(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="executeClick">
+<b>
+executeClick
+</b>
+</a>
+<pre>
+  protected void executeClick(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="update(browser.Observable)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public synchronized void update(<a href="browser.Observable.html#_top_">Observable</a> o)
+</pre>
+<a name="deactivate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="deactivate">
+<b>
+deactivate
+</b>
+</a>
+<pre>
+  public void deactivate()
+</pre>
+<a name="waitForImageSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="waitForImageSize">
+<b>
+waitForImageSize
+</b>
+</a>
+<pre>
+  public synchronized void waitForImageSize()
+</pre>
+<a name="waitForImage()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="waitForImage">
+<b>
+waitForImage
+</b>
+</a>
+<pre>
+  public synchronized void waitForImage()
+</pre>
+<a name="setImage(awt.Image)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setImage">
+<b>
+setImage
+</b>
+</a>
+<pre>
+  public synchronized void setImage(<a href="awt.Image.html#_top_">Image</a> i)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRFormatter.html#_top_">Previous</a>    <a href="browser.WRListRef.html#_top_">Next</a></pre>
+</body>
+</html>

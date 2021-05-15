@@ -1,0 +1,1324 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.Applet
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.AppTagRef.html#_top_">Previous</a>    <a href="browser.AppletDisplayItem.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.Applet
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----browser.Applet
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Applet</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Base applet class. All applets are subclasses of this class.
+Once the applet is loaded it is associated with an AppletDisplayItem
+in which it can draw. An applet's life is summarized by four methods:
+<dl>
+<dt>init()<dd>This method is called after the applet is created.
+The applet can use this method to resize itself, download resources, get fonts,
+get colors, etc.
+<dt>start()<dd>This method is called when the applet's document is visited.
+The applet can use this method to start a background thread for animation, to  play
+a sound etc.
+<dt>stop()<dd>This method is called when the applet's document is no longer on
+the screen. The applet should stop any thread it has forked and any long sounds
+that are playing. It is garanteed to be called before the applet is destroyed.
+<dt>destroy()<dd>This method is called when the applet is discarded. It is the
+last opportunity for the applet to clean up its act! Calls stop() if the applet
+is still active.
+</dl>
+When an applet is started it cannot directly draw to the screen. Instead it needs
+to call repaint(). This will cause the paint(Graphics) method of the applet to be
+called as soon as possible. This mechanism is needed so that the applet will not
+get confused when the document in which it is embedded is scrolled or resized.
+<p>
+The applet class contains various method that help you get images, get fonts,
+play audio, etc. If you can use these methods instead of doing the work yourself,
+they are more likely to be supported in the future.
+<p>
+Here is a very simple example of an applet.
+<pre>
+	import awt.*;
+	import browser.*;
+	public class HelloInternet extends Applet {
+	    public void init() {
+		resize(150, 25);
+	    }
+	    public void paint(Graphics g) {
+		g.drawString("Hello Internet!", 5, 20);
+	    }
+	}
+</pre>
+To try it out you need to add this in an html file.
+<pre>
+	&lt;app class="HelloInternet"&gt;
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="browser.AppletDisplayItem.html#_top_">AppletDisplayItem</a><dt>
+<b>Author:</b>
+<dd>
+Chris Warth,
+Arthur van Hoff<dt>
+<b>Version:</b>
+<dd>
+	1.32, 20 Mar 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#appletURL">appletURL</a>
+</b>
+<dd>
+The URL of the applet.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#bgColor">bgColor</a>
+</b>
+<dd>
+The background color of the applet.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#documentURL">documentURL</a>
+</b>
+<dd>
+The URL of the document in which the applet is embedded.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fgColor">fgColor</a>
+</b>
+<dd>
+The foreground color of the applet.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#font">font</a>
+</b>
+<dd>
+The font of the applet.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#height">height</a>
+</b>
+<dd>
+The height of the applet.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#item">item</a>
+</b>
+<dd>
+The display item in which this applet is being displayed.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#tag">tag</a>
+</b>
+<dd>
+The tag.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#width">width</a>
+</b>
+<dd>
+The width of the applet.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Applet()"><b>Applet</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#destroy()"><b>destroy</b></a>()
+<dd>
+Cleans up whatever resources are being held.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAttribute(java.lang.String)"><b>getAttribute</b></a>(String)
+<dd>
+Gets an attribute out of theapplet's app tag.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAudioData(java.lang.String)"><b>getAudioData</b></a>(String)
+<dd>
+Gets audio data given a name.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAudioData(net.www.html.URL)"><b>getAudioData</b></a>(URL)
+<dd>
+Gets audio data given a url.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAudioStream(net.www.html.URL)"><b>getAudioStream</b></a>(URL)
+<dd>
+Gets an audio stream given a url.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getColor(int, int, int)"><b>getColor</b></a>(int, int, int)
+<dd>
+Gets a Color.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getContinuousAudioStream(net.www.html.URL)"><b>getContinuousAudioStream</b></a>(URL)
+<dd>
+Gets a continuous audio stream given a URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFocus()"><b>getFocus</b></a>()
+<dd>
+Gets the focus.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFont(java.lang.String, int)"><b>getFont</b></a>(String, int)
+<dd>
+Gets a font with the given  font name and size.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFont(java.lang.String, int, int)"><b>getFont</b></a>(String, int, int)
+<dd>
+Gets a font with the given  font name, style, and size.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getImage(java.lang.String)"><b>getImage</b></a>(String)
+<dd>
+Gets an image given an image name.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getImage(net.www.html.URL)"><b>getImage</b></a>(URL)
+<dd>
+Gets an image given a URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#gotFocus()"><b>gotFocus</b></a>()
+<dd>
+Got focus.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#init()"><b>init</b></a>()
+<dd>
+Initializes the applet.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isActive()"><b>isActive</b></a>()
+<dd>
+Returns true if the applet is started.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keyDown(int)"><b>keyDown</b></a>(int)
+<dd>
+A character is typed inside the applet and it has
+the focus.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lostFocus()"><b>lostFocus</b></a>()
+<dd>
+Lost focus.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseDown(int, int)"><b>mouseDown</b></a>(int, int)
+<dd>
+Mouse down.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseDrag(int, int)"><b>mouseDrag</b></a>(int, int)
+<dd>
+Mouse drag (the mouse button is down).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseEnter()"><b>mouseEnter</b></a>()
+<dd>
+Called when the mouse enters the applet (regardless of
+the mouse button state).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseExit()"><b>mouseExit</b></a>()
+<dd>
+Called when the mouse exits the applet (regardless of
+the mouse button state).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseMove(int, int)"><b>mouseMove</b></a>(int, int)
+<dd>
+Mouse move (the mouse button is up).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseUp(int, int)"><b>mouseUp</b></a>(int, int)
+<dd>
+Mouse up.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint(awt.Graphics)"><b>paint</b></a>(Graphics)
+<dd>
+	
+Paints the applet, given a graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#play(java.lang.String)"><b>play</b></a>(String)
+<dd>
+Plays an audio sample.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#play(browser.audio.AudioData)"><b>play</b></a>(AudioData)
+<dd>
+Plays an audio sample.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#repaint()"><b>repaint</b></a>()
+<dd>
+Repaints the applet, this will actually happen at
+some later time.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resize(int, int)"><b>resize</b></a>(int, int)
+<dd>
+Resizes the applet.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#showDocument(net.www.html.URL)"><b>showDocument</b></a>(URL)
+<dd>
+Shows a Document.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#showStatus(java.lang.String)"><b>showStatus</b></a>(String)
+<dd>
+Shows a status string at the bottom of the HotJava window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#start()"><b>start</b></a>()
+<dd>
+Called to start the applet.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startPlaying(java.io.InputStream)"><b>startPlaying</b></a>(InputStream)
+<dd>
+Starts playing a stream of audio data.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stop()"><b>stop</b></a>()
+<dd>
+Called to stop the applet.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stopPlaying(java.io.InputStream)"><b>stopPlaying</b></a>(InputStream)
+<dd>
+Stops playing a stream of audio data.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update(awt.Graphics)"><b>update</b></a>(Graphics)
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="item">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+item
+</b>
+<pre>
+  public <a href="browser.AppletDisplayItem.html#_top_">AppletDisplayItem</a> item
+</pre>
+<dl>
+<dd>
+The display item in which this applet is being displayed.
+Don't modify it.
+</dl>
+<a name="documentURL">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+documentURL
+</b>
+<pre>
+  public <a href="net.www.html.URL.html#_top_">URL</a> documentURL
+</pre>
+<dl>
+<dd>
+The URL of the document in which the applet is embedded.
+Don't modify it.
+</dl>
+<a name="appletURL">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+appletURL
+</b>
+<pre>
+  public <a href="net.www.html.URL.html#_top_">URL</a> appletURL
+</pre>
+<dl>
+<dd>
+The URL of the applet. This can differ from the documentURL
+when a "src" attribute is specified in the app tag.
+Don't modify it.
+</dl>
+<a name="tag">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+tag
+</b>
+<pre>
+  public <a href="net.www.html.TagRef.html#_top_">TagRef</a> tag
+</pre>
+<dl>
+<dd>
+The tag. Use getAttribute() to get attributes in the tag.
+Don't modify it.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#getAttribute">getAttribute</a>
+</dl>
+</dl>
+<a name="width">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+width
+</b>
+<pre>
+  public int width
+</pre>
+<dl>
+<dd>
+The width of the applet. Use resize() to change the size of
+the applet and the display item in which it is located.
+You can change it by calling resize().
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#resize">resize</a>
+</dl>
+</dl>
+<a name="height">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+height
+</b>
+<pre>
+  public int height
+</pre>
+<dl>
+<dd>
+The height of the applet. Use resize() to change the size of
+the applet and the display item in which it is located.
+You can change it by calling resize().
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#resize">resize</a>
+</dl>
+</dl>
+<a name="font">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+font
+</b>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> font
+</pre>
+<dl>
+<dd>
+The font of the applet. This font will be set when the paint()
+method is called. If you want to modify it, you need to do this
+in the init() method. This variable is initialized to an initial
+value, feel free to modify it.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#paint">paint</a>,
+<a href="#init">init</a>
+</dl>
+</dl>
+<a name="fgColor">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fgColor
+</b>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> fgColor
+</pre>
+<dl>
+<dd>
+The foreground color of the applet. This color will be the foreground
+color when the paint() method is called. This variable is initialized
+to an initial value, feel free to modify it.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#paint">paint</a>
+</dl>
+</dl>
+<a name="bgColor">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+bgColor
+</b>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> bgColor
+</pre>
+<dl>
+<dd>
+The background color of the applet. This color is the background
+color of the window the applet is in when the applet was created.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#paint">paint</a>
+</dl>
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Applet"></a>
+<a name="Applet()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Applet
+</b>
+<pre>
+  public Applet()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="repaint()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="repaint">
+<b>
+repaint
+</b>
+</a>
+<pre>
+  public void repaint()
+</pre>
+<dl>
+<dd>
+Repaints the applet, this will actually happen at
+some later time. To actually paint the applet HotJava
+will call the paint() method.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#paint">paint</a>
+</dl>
+</dl>
+<p>
+<a name="resize(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resize">
+<b>
+resize
+</b>
+</a>
+<pre>
+  public void resize(int width,
+                     int height)
+</pre>
+<dl>
+<dd>
+Resizes the applet. You should resize the applet in the init() method.
+Resizing the applet at another time may cause the document to be reformatted.
+Don't worry about calling repaint(), resize will do the right thing for you.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#repaint">repaint</a>
+</dl>
+</dl>
+<p>
+<a name="isActive()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isActive">
+<b>
+isActive
+</b>
+</a>
+<pre>
+  public boolean isActive()
+</pre>
+<dl>
+<dd>
+Returns true if the applet is started. This will be true from just before
+start() is called until just after stop() is called.
+</dl>
+<p>
+<a name="getAttribute(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAttribute">
+<b>
+getAttribute
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getAttribute(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Gets an attribute out of theapplet's app tag. Note that the
+width and height attributes are used to determine the initial
+dimensions of the applet.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the attribute value or null if the attribute is not defined.
+</dl>
+</dl>
+<p>
+<a name="getImage(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getImage">
+<b>
+getImage
+</b>
+</a>
+<pre>
+  public <a href="awt.Image.html#_top_">Image</a> getImage(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Gets an image given an image name. The name is assumed to be
+relative to the appletURL. If the image can't be found there,
+the documentURL is  used.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the image or null if something went wrong.
+</dl>
+</dl>
+<p>
+<a name="getImage(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getImage">
+<b>
+getImage
+</b>
+</a>
+<pre>
+  public <a href="awt.Image.html#_top_">Image</a> getImage(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<dl>
+<dd>
+Gets an image given a URL.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the image or null if something went wrong.
+</dl>
+</dl>
+<p>
+<a name="getAudioData(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAudioData">
+<b>
+getAudioData
+</b>
+</a>
+<pre>
+  public <a href="browser.audio.AudioData.html#_top_">AudioData</a> getAudioData(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Gets audio data given a name. The name is assumed to be
+relative to the appletURL. If the data can't be found there,
+the documentURL is  used.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the audio data or null if it could not be found.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#play">play</a>
+</dl>
+</dl>
+<p>
+<a name="getAudioData(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAudioData">
+<b>
+getAudioData
+</b>
+</a>
+<pre>
+  public <a href="browser.audio.AudioData.html#_top_">AudioData</a> getAudioData(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<dl>
+<dd>
+Gets audio data given a url.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the audio data or null if the URL is invalid.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#play">play</a>
+</dl>
+</dl>
+<p>
+<a name="getAudioStream(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAudioStream">
+<b>
+getAudioStream
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> getAudioStream(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<dl>
+<dd>
+Gets an audio stream given a url. The actual audio data
+can be very large because it will be read as the audio
+is being played.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the stream or null if the URL is invalid.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#startPlaying">startPlaying</a>
+</dl>
+</dl>
+<p>
+<a name="getContinuousAudioStream(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getContinuousAudioStream">
+<b>
+getContinuousAudioStream
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> getContinuousAudioStream(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<dl>
+<dd>
+Gets a continuous audio stream given a URL. Note that
+all of the data will read before the stream can be used.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the stream or null if the URL is invalid.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#startPlaying">startPlaying</a>
+</dl>
+</dl>
+<p>
+<a name="play(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="play">
+<b>
+play
+</b>
+</a>
+<pre>
+  public void play(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Plays an audio sample. The data is obtained using
+getAudioData(). Nothing happens if the data could not
+be found.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#getAudioData">getAudioData</a>
+</dl>
+</dl>
+<p>
+<a name="play(browser.audio.AudioData)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="play">
+<b>
+play
+</b>
+</a>
+<pre>
+  public void play(<a href="browser.audio.AudioData.html#_top_">AudioData</a> data)
+</pre>
+<dl>
+<dd>
+Plays an audio sample.
+</dl>
+<p>
+<a name="startPlaying(java.io.InputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startPlaying">
+<b>
+startPlaying
+</b>
+</a>
+<pre>
+  public void startPlaying(<a href="java.io.InputStream.html#_top_">InputStream</a> stream)
+</pre>
+<dl>
+<dd>
+Starts playing a stream of audio data. Use stopPlaying to
+stop the audio from playing.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#getAudioStream">getAudioStream</a>,
+<a href="#stopPlaying">stopPlaying</a>
+</dl>
+</dl>
+<p>
+<a name="stopPlaying(java.io.InputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stopPlaying">
+<b>
+stopPlaying
+</b>
+</a>
+<pre>
+  public void stopPlaying(<a href="java.io.InputStream.html#_top_">InputStream</a> stream)
+</pre>
+<dl>
+<dd>
+Stops playing a stream of audio data.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#startPlaying">startPlaying</a>
+</dl>
+</dl>
+<p>
+<a name="showStatus(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="showStatus">
+<b>
+showStatus
+</b>
+</a>
+<pre>
+  public void showStatus(<a href="java.lang.String.html#_top_">String</a> msg)
+</pre>
+<dl>
+<dd>
+Shows a status string at the bottom of the HotJava window.
+</dl>
+<p>
+<a name="showDocument(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="showDocument">
+<b>
+showDocument
+</b>
+</a>
+<pre>
+  public void showDocument(<a href="net.www.html.URL.html#_top_">URL</a> doc)
+</pre>
+<dl>
+<dd>
+Shows a Document.
+</dl>
+<p>
+<a name="getFont(java.lang.String, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFont">
+<b>
+getFont
+</b>
+</a>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> getFont(<a href="java.lang.String.html#_top_">String</a> name,
+                      int size)
+</pre>
+<dl>
+<dd>
+Gets a font with the given  font name and size.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Font.html#_top_">Font</a>
+</dl>
+</dl>
+<p>
+<a name="getFont(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFont">
+<b>
+getFont
+</b>
+</a>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> getFont(<a href="java.lang.String.html#_top_">String</a> name,
+                      int style,
+                      int size)
+</pre>
+<dl>
+<dd>
+Gets a font with the given  font name, style, and size.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Font.html#_top_">Font</a>
+</dl>
+</dl>
+<p>
+<a name="getColor(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getColor">
+<b>
+getColor
+</b>
+</a>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> getColor(int r,
+                        int g,
+                        int b)
+</pre>
+<dl>
+<dd>
+Gets a Color.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Color.html#_top_">Color</a>
+</dl>
+</dl>
+<p>
+<a name="init()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="init">
+<b>
+init
+</b>
+</a>
+<pre>
+  protected void init()
+</pre>
+<dl>
+<dd>
+Initializes the applet.
+You never need to call this directly, it is called automatically
+by HotJava once the applet is created.
+</dl>
+<p>
+<a name="start()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="start">
+<b>
+start
+</b>
+</a>
+<pre>
+  protected void start()
+</pre>
+<dl>
+<dd>
+Called to start the applet. You never need to call this method
+directly it is called when the applet's document is visited.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href=".html#stop">stop</a>
+</dl>
+</dl>
+<p>
+<a name="stop()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stop">
+<b>
+stop
+</b>
+</a>
+<pre>
+  protected void stop()
+</pre>
+<dl>
+<dd>
+Called to stop the applet. It is called when the applet's document is
+no longer on the screen. It is guaranteed to be called before destroy()
+is called. You never need to call this method directly.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href=".html#start">start</a>,
+<a href=".html#destroy">destroy</a>
+</dl>
+</dl>
+<p>
+<a name="destroy()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="destroy">
+<b>
+destroy
+</b>
+</a>
+<pre>
+  protected void destroy()
+</pre>
+<dl>
+<dd>
+Cleans up whatever resources are being held. If the applet is active
+it is first stopped.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href=".html#stop">stop</a>
+</dl>
+</dl>
+<p>
+<a name="paint(awt.Graphics)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint(<a href="awt.Graphics.html#_top_">Graphics</a> g)
+</pre>
+<dl>
+<dd>
+	
+Paints the applet, given a graphics context.
+The origin will be in the topleft corner of the applet.
+The clipping area is set to the exact size of the applet.
+The font, foreground color and  background color are set to
+default values.<p>
+<em>You never have to call this method explicitly!</e>
+It will be called automatically by HotJava in response
+to damage or expose events, or when you call repaint().
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#repaint">repaint</a>
+</dl>
+</dl>
+<p>
+<a name="update(awt.Graphics)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public void update(<a href="awt.Graphics.html#_top_">Graphics</a> g)
+</pre>
+<a name="mouseDown(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseDown">
+<b>
+mouseDown
+</b>
+</a>
+<pre>
+  public void mouseDown(int x,
+                        int y)
+</pre>
+<dl>
+<dd>
+Mouse down. The x,y coordinates are relative to the
+applet's top left corner. A call to mouseUp() is
+guaranteed to follow when the mouse is released.
+mouseDrag is called when the mouse is moved.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href=".html#mouseUp">mouseUp</a>,
+<a href=".html#mouseDrag">mouseDrag</a>
+</dl>
+</dl>
+<p>
+<a name="mouseDrag(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseDrag">
+<b>
+mouseDrag
+</b>
+</a>
+<pre>
+  public void mouseDrag(int x,
+                        int y)
+</pre>
+<dl>
+<dd>
+Mouse drag (the mouse button is down). The x,y coordinates
+are relative to the applet's top left corner.
+</dl>
+<p>
+<a name="mouseUp(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseUp">
+<b>
+mouseUp
+</b>
+</a>
+<pre>
+  public void mouseUp(int x,
+                      int y)
+</pre>
+<dl>
+<dd>
+Mouse up. The x,y coordinates are relative to the
+applet's top left corner. This must have been preceded by
+a call to mouseDown().
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href=".html#mouseDown">mouseDown</a>
+</dl>
+</dl>
+<p>
+<a name="mouseMove(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseMove">
+<b>
+mouseMove
+</b>
+</a>
+<pre>
+  public void mouseMove(int x,
+                        int y)
+</pre>
+<dl>
+<dd>
+Mouse move (the mouse button is up). The x,y coordinates
+are relative to the applet's top left corner.
+</dl>
+<p>
+<a name="mouseEnter()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseEnter">
+<b>
+mouseEnter
+</b>
+</a>
+<pre>
+  public void mouseEnter()
+</pre>
+<dl>
+<dd>
+Called when the mouse enters the applet (regardless of
+the mouse button state). A call to mouseExit is guaranteed
+to follow.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href=".html#mouseExit">mouseExit</a>
+</dl>
+</dl>
+<p>
+<a name="mouseExit()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseExit">
+<b>
+mouseExit
+</b>
+</a>
+<pre>
+  public void mouseExit()
+</pre>
+<dl>
+<dd>
+Called when the mouse exits the applet (regardless of
+the mouse button state). Must have been preceded by a
+call to mouseEnter().
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href=".html#mouseEnter">mouseEnter</a>
+</dl>
+</dl>
+<p>
+<a name="getFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFocus">
+<b>
+getFocus
+</b>
+</a>
+<pre>
+  public void getFocus()
+</pre>
+<dl>
+<dd>
+Gets the focus. This is usually called in the
+mouseDown() method. A gotFocus() call will follow.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#gotFocus">gotFocus</a>,
+<a href="#mouseDown">mouseDown</a>
+</dl>
+</dl>
+<p>
+<a name="gotFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="gotFocus">
+<b>
+gotFocus
+</b>
+</a>
+<pre>
+  public void gotFocus()
+</pre>
+<dl>
+<dd>
+Got focus. The user can now type into the applet.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#keyDown">keyDown</a>
+</dl>
+</dl>
+<p>
+<a name="lostFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lostFocus">
+<b>
+lostFocus
+</b>
+</a>
+<pre>
+  public void lostFocus()
+</pre>
+<dl>
+<dd>
+Lost focus.
+</dl>
+<p>
+<a name="keyDown(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keyDown">
+<b>
+keyDown
+</b>
+</a>
+<pre>
+  public void keyDown(int key)
+</pre>
+<dl>
+<dd>
+A character is typed inside the applet and it has
+the focus.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.AppTagRef.html#_top_">Previous</a>    <a href="browser.AppletDisplayItem.html#_top_">Next</a></pre>
+</body>
+</html>

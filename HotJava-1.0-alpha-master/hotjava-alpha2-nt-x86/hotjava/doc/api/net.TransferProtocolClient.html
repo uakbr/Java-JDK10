@@ -1,0 +1,247 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.TransferProtocolClient
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.TelnetOutputStream.html#_top_">Previous</a>    <a href="net.html">Next</a></pre>
+<hr>
+<h1>
+Class net.TransferProtocolClient
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.NetworkClient.html#_top_">net.NetworkClient</a>
+           |
+           +----net.TransferProtocolClient
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+TransferProtocolClient</b>
+<dt>
+extends <a href="net.NetworkClient.html#_top_">NetworkClient</a>
+</dl>
+This class implements that basic intefaces of transfer protocols.
+It is used by subclasses implementing specific protocols.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.17, 10 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+	Jonathan Payne<dt>
+<b>See Also:</b>
+<dd>
+<a href="FtpClient.html#_top_">FtpClient</a>,
+<a href="NntpClient.html#_top_">NntpClient</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lastReplyCode">lastReplyCode</a>
+</b>
+<dd>
+code for last reply
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#serverResponse">serverResponse</a>
+</b>
+<dd>
+Array of strings (usually 1 entry) for the last reply
+	from the server.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TransferProtocolClient(java.lang.String, int)"><b>TransferProtocolClient</b></a>(String, int)
+<dd>
+standard constructor to host <i>host</i>, port <i>port</i>.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TransferProtocolClient()"><b>TransferProtocolClient</b></a>()
+<dd>
+creates an uninitialized instance of this class.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getResponseString()"><b>getResponseString</b></a>()
+<dd>
+converts the server response into a string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getResponseStrings()"><b>getResponseStrings</b></a>()
+<dd>
+Returns all server response strings.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readServerResponse()"><b>readServerResponse</b></a>()
+<dd>
+Pulls the response from the server and returns the code as a
+number.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#sendServer(java.lang.String)"><b>sendServer</b></a>(String)
+<dd>
+Sends command <i>cmd</i> to the server.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="serverResponse">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+serverResponse
+</b>
+<pre>
+  protected <a href="java.util.Vector.html#_top_">Vector</a> serverResponse
+</pre>
+<dl>
+<dd>
+Array of strings (usually 1 entry) for the last reply
+	from the server.
+</dl>
+<a name="lastReplyCode">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lastReplyCode
+</b>
+<pre>
+  protected int lastReplyCode
+</pre>
+<dl>
+<dd>
+code for last reply
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="TransferProtocolClient"></a>
+<a name="TransferProtocolClient(java.lang.String, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TransferProtocolClient
+</b>
+<pre>
+  public TransferProtocolClient(<a href="java.lang.String.html#_top_">String</a> host,
+                                int port)
+</pre>
+<dl>
+<dd>
+standard constructor to host <i>host</i>, port <i>port</i>.
+</dl>
+<p>
+<a name="TransferProtocolClient()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TransferProtocolClient
+</b>
+<pre>
+  public TransferProtocolClient()
+</pre>
+<dl>
+<dd>
+creates an uninitialized instance of this class.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="readServerResponse()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readServerResponse">
+<b>
+readServerResponse
+</b>
+</a>
+<pre>
+  public int readServerResponse()
+</pre>
+<dl>
+<dd>
+Pulls the response from the server and returns the code as a
+number. Returns -1 on failure.
+</dl>
+<p>
+<a name="sendServer(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="sendServer">
+<b>
+sendServer
+</b>
+</a>
+<pre>
+  public void sendServer(<a href="java.lang.String.html#_top_">String</a> cmd)
+</pre>
+<dl>
+<dd>
+Sends command <i>cmd</i> to the server.
+</dl>
+<p>
+<a name="getResponseString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getResponseString">
+<b>
+getResponseString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getResponseString()
+</pre>
+<dl>
+<dd>
+converts the server response into a string.
+</dl>
+<p>
+<a name="getResponseStrings()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getResponseStrings">
+<b>
+getResponseStrings
+</b>
+</a>
+<pre>
+  public <a href="java.util.Vector.html#_top_">Vector</a> getResponseStrings()
+</pre>
+<dl>
+<dd>
+Returns all server response strings.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.TelnetOutputStream.html#_top_">Previous</a>    <a href="net.html">Next</a></pre>
+</body>
+</html>

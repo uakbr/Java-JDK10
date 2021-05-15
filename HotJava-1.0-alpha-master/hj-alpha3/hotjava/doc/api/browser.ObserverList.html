@@ -1,0 +1,93 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.ObserverList
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.Observable.html#_top_">Previous</a>    <a href="browser.OptionTagRef.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.ObserverList
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.util.Vector.html#_top_">java.util.Vector</a>
+           |
+           +----browser.ObserverList
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+ObserverList</b>
+<dt>
+extends <a href="java.util.Vector.html#_top_">Vector</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#ObserverList()"><b>ObserverList</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#notifyObservers(browser.Observable)"><b>notifyObservers</b></a>(Observable)
+<dd>
+Notifies all the observers in the list.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="ObserverList"></a>
+<a name="ObserverList()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+ObserverList
+</b>
+<pre>
+  public ObserverList()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="notifyObservers(browser.Observable)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="notifyObservers">
+<b>
+notifyObservers
+</b>
+</a>
+<pre>
+  public void notifyObservers(<a href="browser.Observable.html#_top_">Observable</a> who)
+</pre>
+<dl>
+<dd>
+Notifies all the observers in the list.  This goes from
+	back to front, so that it's OK to remove Observers from
+	the list as a result of this call.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.Observable.html#_top_">Previous</a>    <a href="browser.OptionTagRef.html#_top_">Next</a></pre>
+</body>
+</html>

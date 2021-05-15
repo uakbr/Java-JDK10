@@ -1,0 +1,399 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.Cache
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.CRC16.html#_top_">Previous</a>    <a href="java.util.CharacterDecoder.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.Cache
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.Cache
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Cache</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Cache class. Maps keys to values. Any object can be used as
+a key and/or value.  This is very similar to the Hashtable
+class, except that after putting an object into the Cache,
+it is not guranteed that a subsequent get will return it.
+The cache will automatically remove entries if memory is
+getting tight and the entry isn't referenced from outside
+the cache.<p>
+To sucessfully store and retrieve objects from a hash table the
+object used as the key must implement the hashCode() and equals()
+methods.<p>
+This example creates a cache of numbers. It uses the names of
+the numbers as keys:
+<pre>
+	Cache numbers = new Cache();
+	numbers.put("one", new Integer(1));
+	numbers.put("two", new Integer(1));
+	numbers.put("three", new Integer(1));
+</pre>
+To retrieve a number use:
+<pre>
+	Integer n = (Integer)numbers.get("two");
+	if (n != null) {
+	    System.out.println("two = " + n);
+	}
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Object.html#hashCode">hashCode</a>,
+<a href="java.lang.Object.html#equals">equals</a>,
+<a href="java.lang.Ref.html#_top_">Ref</a><dt>
+<b>Version:</b>
+<dd>
+	1.20, 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Cache(int, float)"><b>Cache</b></a>(int, float)
+<dd>
+Construct a new, empty cache with the specified initial capacity
+and the specified load factor.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Cache(int)"><b>Cache</b></a>(int)
+<dd>
+Constructs a new, empty cache with the specified initial capacity.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Cache()"><b>Cache</b></a>()
+<dd>
+Constructs a new, empty cache.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#elements()"><b>elements</b></a>()
+<dd>
+Returns an enumeration of the elements.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#get(java.lang.Object)"><b>get</b></a>(Object)
+<dd>
+Gets the object associated with a key in the cache.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isEmpty()"><b>isEmpty</b></a>()
+<dd>
+Returns true if the cache contains no elements.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keys()"><b>keys</b></a>()
+<dd>
+Returns an enumeration of the cache's keys.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#put(java.lang.Object, java.lang.Object)"><b>put</b></a>(Object, Object)
+<dd>
+Puts the specified element into the cache, using the specified
+key.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#rehash()"><b>rehash</b></a>()
+<dd>
+Rehashes the content of the table into a bigger table.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#remove(java.lang.Object)"><b>remove</b></a>(Object)
+<dd>
+Removes the element corresponding to the key.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#size()"><b>size</b></a>()
+<dd>
+Returns the cache's size (the number of elements it contains).
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Cache"></a>
+<a name="Cache(int, float)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Cache
+</b>
+<pre>
+  public Cache(int initialCapacity,
+               float loadFactor)
+</pre>
+<dl>
+<dd>
+Construct a new, empty cache with the specified initial capacity
+and the specified load factor.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+initialCapacity
+-
+ the initial number of buckets
+<dd>
+loadFactor
+-
+ a number between 0.0 and 1.0, it defines
+		the threshold for rehashing the cache into
+		a bigger one.
+</dl>
+</dl>
+<p>
+<a name="Cache(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Cache
+</b>
+<pre>
+  public Cache(int initialCapacity)
+</pre>
+<dl>
+<dd>
+Constructs a new, empty cache with the specified initial capacity.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+initialCapacity
+-
+ the initial number of buckets
+</dl>
+</dl>
+<p>
+<a name="Cache()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Cache
+</b>
+<pre>
+  public Cache()
+</pre>
+<dl>
+<dd>
+Constructs a new, empty cache. A default capacity and load factor
+is used. Note that the cache will automatically grow when it gets
+full.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="size()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="size">
+<b>
+size
+</b>
+</a>
+<pre>
+  public int size()
+</pre>
+<dl>
+<dd>
+Returns the cache's size (the number of elements it contains).
+</dl>
+<p>
+<a name="isEmpty()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isEmpty">
+<b>
+isEmpty
+</b>
+</a>
+<pre>
+  public boolean isEmpty()
+</pre>
+<dl>
+<dd>
+Returns true if the cache contains no elements.
+</dl>
+<p>
+<a name="keys()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keys">
+<b>
+keys
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.util.Enumeration.html#_top_">Enumeration</a> keys()
+</pre>
+<dl>
+<dd>
+Returns an enumeration of the cache's keys.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#elements">elements</a>,
+<a href="java.util.Enumeration.html#_top_">Enumeration</a>
+</dl>
+</dl>
+<p>
+<a name="elements()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="elements">
+<b>
+elements
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.util.Enumeration.html#_top_">Enumeration</a> elements()
+</pre>
+<dl>
+<dd>
+Returns an enumeration of the elements. Use the Enumeration methods on
+the returned object to fetch the elements sequentially.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#keys">keys</a>,
+<a href="java.util.Enumeration.html#_top_">Enumeration</a>
+</dl>
+</dl>
+<p>
+<a name="get(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="get">
+<b>
+get
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> get(<a href="java.lang.Object.html#_top_">Object</a> key)
+</pre>
+<dl>
+<dd>
+Gets the object associated with a key in the cache.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+ the element for the key or null if the key
+		is not defined in the hash table.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#put">put</a>
+</dl>
+</dl>
+<p>
+<a name="rehash()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="rehash">
+<b>
+rehash
+</b>
+</a>
+<pre>
+  protected void rehash()
+</pre>
+<dl>
+<dd>
+Rehashes the content of the table into a bigger table.
+This is method called automatically when the cache's
+size exeeds a threshold.
+</dl>
+<p>
+<a name="put(java.lang.Object, java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="put">
+<b>
+put
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> put(<a href="java.lang.Object.html#_top_">Object</a> key,
+                                 <a href="java.lang.Object.html#_top_">Object</a> value)
+</pre>
+<dl>
+<dd>
+Puts the specified element into the cache, using the specified
+key.  The element may be retrieved by doing a get() with the same key.
+The key can't be null and the element can't be null.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#get">get</a><dt>
+<b>Returns:</b>
+<dd>
+the old value of the key, or null if it didn't have one
+</dl>
+</dl>
+<p>
+<a name="remove(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="remove">
+<b>
+remove
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> remove(<a href="java.lang.Object.html#_top_">Object</a> key)
+</pre>
+<dl>
+<dd>
+Removes the element corresponding to the key. Does nothing if the
+key isn't present.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+key
+-
+ the key that needs to be removed
+<dt>
+<b>Returns:</b>
+<dd>
+the value of key, or null if the key was not found
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.CRC16.html#_top_">Previous</a>    <a href="java.util.CharacterDecoder.html#_top_">Next</a></pre>
+</body>
+</html>

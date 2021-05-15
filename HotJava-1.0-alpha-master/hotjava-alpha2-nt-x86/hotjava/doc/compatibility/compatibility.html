@@ -1,0 +1,119 @@
+<html>
+<title>HotJava Applet Compatibility</title>
+<body>
+<h1>HotJava Applet Compatibility</h1>
+
+This page briefly describes the guarantees we give about
+<em>upward compatibility</em> --
+running applets without recompilation in future releases of 
+<a href="../using.html">HotJava</a>.
+
+<h2>Java Versioning Support</h2>
+
+<a href="../overview/java/index.html">Java</a> 
+is a late-bound, dynamic language. All methods,
+variables, and classes are resolved dynamically the first time
+they are used.  Instance variables and methods can be added to
+classes without recompiling any of the code that uses the class.  This makes
+Java much less susceptible to API changes than statically linked
+languages such as C and C++.
+
+<p>We have been coding in Java since 1991 and the language is stable.
+Both the 
+<a href="../javaspec/javaspec_1.html">language specification</a> 
+and the 
+<a href="../vmspec/vmspec_1.html">binary class specification</a> 
+are finished and stable. Any extensions of these specifications will be made
+so that older classes will be upward compatible.
+
+<h2>Alpha1 to Alpha2 Compatibility</h2>
+
+Alpha1 applets are upward compatible with the alpha2 release of
+HotJava. This means that most applets developed and compiled with the
+alpha1 release will run in the alpha2 browser <em>without</em> recompilation.
+
+<p>Note that we changed the language name from "O.A.K." to "Java",
+which has affected some APIs. We have managed to maintain upward
+compatibility despite these changes. The interpreter and the class
+loader automatically upgrade alpha1 applets to use the new naming
+scheme.
+
+<p>We have also made changes to some APIs. The components exposed to
+alpha1 applets have remained stable so that simple applets compiled
+for the alpha1 release continue to work in the alpha2 browser.
+
+<h2>Alpha2 to Beta Compatibility</h2>
+
+<em>We are committed to keeping the impact of API changes to a
+minimum. However, we do NOT guarantee complete upward
+compatibility between the alpha2 and beta releases. We reserve
+the right to make changes that will break upward compatibility.</em>
+
+<p>We hope to make some major improvements and simplifications to
+the HotJava APIs in the beta release. This will unfortunately
+mean that some or all alpha2 applets will not run in the beta release browser
+without recompilation.
+
+<p>This is the bottom line with regards to upward compatibility 
+of alpha2 applets:
+
+<ul>
+<li> Very simple alpha2 applets may continue to
+     work in the beta release.
+<li> Most alpha2 applets will have to be recompiled to
+     work with the beta release.
+<li> Some APIs used by alpha2 applets will be extended and some
+     code modifications will be required.
+<li> Alpha1 applets will have to be recompiled
+     and are likely to require code modifications. 
+</ul>
+
+There are certain things that you should avoid when 
+<a href="../appguide/index.html">writing Applets</a>. 
+Please stick to the APIs defined in the
+<a href="../api/browser.Applet.html">Applet</a> 
+class. Don't assume that the Applet's 
+<a href="../api/browser.Applet.html#item">item</a> 
+field will be available in future releases.
+Don't rely on APIs that are not documented.
+
+<h2>Anticipated Changes Between Alpha2 and Beta</h2>
+
+We intend to implement a model-view architecture that will allow the
+same page to be visible in more than one window. Simple applets won't
+be affected; they will simply be asked to paint once in each window in
+which they are visible.
+
+<p>The applet API will be extended to allow applets to use the
+model-view architecture. Applets will be able to have a "view" part as
+well as a "model" part. Alpha2 applets are equivalent to the "model"
+part of beta applets.
+
+<p>The 
+<a href="../api/awt.html">AWT</a> 
+(Abstract Window Toolkit) will be greatly
+improved. The graphics API will be extended, the interface to image
+manipulation will be improved, more components will be added, etc.
+
+<p>The APIs for 
+<a href="../api/browser.audio.html">audio</a> 
+are likely to change. They
+will be updated to support more than one audio format.
+
+<p>This list is by no means complete. We hope to extend and improve the
+HotJava functionality in many ways that won't affect applets
+directly.
+
+<h2>Upward Compatibility After the Beta Release</h2>
+
+<em>We are fully committed to supporting the beta release applet APIs
+<b>indefinitely</b>. We realize that the stability of the APIs in a widely
+distributed system like HotJava is of crucial importance to its
+success.</em>
+
+<hr>
+<address>
+<a href="mailto:avh@eng.sun.com">Arthur van Hoff</a>
+</address>
+</body>
+</html>

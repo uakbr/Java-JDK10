@@ -1,0 +1,32 @@
+#! /bin/ksh
+#
+#     @(#)java_wrapper.sh	1.9 95/03/20
+#
+
+# Set up default variable values if not supplied by the user.
+
+export HOTJAVA_HOME
+PRG=`whence $0` >/dev/null 2>&1
+HOTJAVA_HOME=`dirname $PRG`/..
+
+export CLASSPATH
+if [ -z "$CLASSPATH" ]
+then
+    CLASSPATH="."
+fi
+
+CLASSPATH="$CLASSPATH:$HOTJAVA_HOME/classes"
+
+export LD_LIBRARY_PATH
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOTJAVA_HOME/lib"
+      
+progname=`basename $0`
+prog=$HOTJAVA_HOME/bin/`/usr/ucb/arch`/${progname}
+
+if [ -f $prog ]
+then
+    eval exec $prog $opts '"$@"'
+else
+    echo >&2 "$progname was not found in ${prog}"
+    exit 1
+fi

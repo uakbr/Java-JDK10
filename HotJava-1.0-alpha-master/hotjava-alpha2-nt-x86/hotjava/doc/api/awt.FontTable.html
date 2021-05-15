@@ -1,0 +1,262 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.FontTable
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FontSpec.html#_top_">Previous</a>    <a href="awt.Formatter.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.FontTable
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.FontTable
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+FontTable</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A class that creates native fonts. Fonts are addressed by names in
+the FontTable. These names may not be the actual name of the font.
+By default, the names "Helvetica", "TimesRoman", "ZapfDingbats",
+"Dialog", "DialogInput", and "Courier" are always available.
+"Dialog" is bound to a native font that is appropriate for dialog
+components such as buttons or menus. In each font category, the
+sizes 8, 10, 12, 14, 24, 36 are always available. Other sizes may
+be specified and will work if the requested font is bound to a
+scalable font on the local platform or if the platform can do
+font-scaling. If scaling is not available, then the closest match
+is returned. 
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.10 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FontTable(awt.WServer)"><b>FontTable</b></a>(WServer)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addMapping(java.lang.String, java.lang.String)"><b>addMapping</b></a>(String, String)
+<dd>
+Add a mapping from a generic name to a native fontname.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#compoundName(java.lang.String, int, int)"><b>compoundName</b></a>(String, int, int)
+<dd>
+Returns a string representation of a font-name, style and height.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFont(java.lang.String, int, int)"><b>getFont</b></a>(String, int, int)
+<dd>
+Return a platform-specific font given a generic name.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFont(java.lang.String)"><b>getFont</b></a>(String)
+<dd>
+Return a platform-specific font given a name of the form
+<generic_name>:style:size where style can be "plain",
+"bold", "italic" or "bolditalic".
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getNativeFont(int)"><b>getNativeFont</b></a>(int)
+<dd>
+Return the name of the native font with the given index.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getNativeFontCount()"><b>getNativeFontCount</b></a>()
+<dd>
+List the number of fonts on the native platform.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mapName(java.lang.String)"><b>mapName</b></a>(String)
+<dd>
+Map a generic font name to the native font it represents.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#parseCompoundName(java.lang.String)"><b>parseCompoundName</b></a>(String)
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="FontTable"></a>
+<a name="FontTable(awt.WServer)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FontTable
+</b>
+<pre>
+  public FontTable(<a href="awt.WServer.html#_top_">WServer</a> ws)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getFont(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFont">
+<b>
+getFont
+</b>
+</a>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> getFont(<a href="java.lang.String.html#_top_">String</a> name,
+                      int style,
+                      int height)
+</pre>
+<dl>
+<dd>
+Return a platform-specific font given a generic name. See Font
+class for the appropriate values for style.
+</dl>
+<p>
+<a name="getFont(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFont">
+<b>
+getFont
+</b>
+</a>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> getFont(<a href="java.lang.String.html#_top_">String</a> compoundName)
+</pre>
+<dl>
+<dd>
+Return a platform-specific font given a name of the form
+<generic_name>:style:size where style can be "plain",
+"bold", "italic" or "bolditalic".
+</dl>
+<p>
+<a name="mapName(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mapName">
+<b>
+mapName
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.String.html#_top_">String</a> mapName(<a href="java.lang.String.html#_top_">String</a> genName)
+</pre>
+<dl>
+<dd>
+Map a generic font name to the native font it represents.
+</dl>
+<p>
+<a name="addMapping(java.lang.String, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addMapping">
+<b>
+addMapping
+</b>
+</a>
+<pre>
+  public synchronized void addMapping(<a href="java.lang.String.html#_top_">String</a> genName,
+                                      <a href="java.lang.String.html#_top_">String</a> platformName)
+</pre>
+<dl>
+<dd>
+Add a mapping from a generic name to a native fontname. Passing
+in null for platformName clears the mapping.
+</dl>
+<p>
+<a name="getNativeFontCount()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getNativeFontCount">
+<b>
+getNativeFontCount
+</b>
+</a>
+<pre>
+  public int getNativeFontCount()
+</pre>
+<dl>
+<dd>
+List the number of fonts on the native platform.
+</dl>
+<p>
+<a name="getNativeFont(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getNativeFont">
+<b>
+getNativeFont
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getNativeFont(int index)
+</pre>
+<dl>
+<dd>
+Return the name of the native font with the given index.
+</dl>
+<p>
+<a name="compoundName(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="compoundName">
+<b>
+compoundName
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> compoundName(<a href="java.lang.String.html#_top_">String</a> name,
+                             int style,
+                             int height)
+</pre>
+<dl>
+<dd>
+Returns a string representation of a font-name, style and height.
+</dl>
+<p>
+<a name="parseCompoundName(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="parseCompoundName">
+<b>
+parseCompoundName
+</b>
+</a>
+<pre>
+  public static <a href="awt.FontSpec.html#_top_">FontSpec</a> parseCompoundName(<a href="java.lang.String.html#_top_">String</a> cname)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FontSpec.html#_top_">Previous</a>    <a href="awt.Formatter.html#_top_">Next</a></pre>
+</body>
+</html>

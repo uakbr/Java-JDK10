@@ -1,0 +1,206 @@
+# Copyright (c) 1994 by FirstPerson, Inc.
+# All rights reserved.
+#
+# @(#)strings.rsrc	1.23 95/02/11 July 1994
+#
+#	Arthur van Hoff, July 1994
+#
+# This file contains strings used by the Java compiler
+#
+
+# System errors
+*0
+Internal error.
+
+# Scanner errors
+*1
+Comment not terminated at end of input.
+String not terminated at end of input.
+String not terminated at end of line.
+Invalid character constant.
+
+*5
+Unbalanced bracket.
+Invalid escape character.
+Invalid character in input.
+Invalid floating point format.
+
+# Parser errors
+*10
+'%s' expected.
+Statement expected.
+Type expected.
+Identifier expected.
+'class' or 'interface' keyword expected.
+
+*15
+Class or interface definition expected.
+
+*20
+Missing term.
+'else' without 'if'.
+'catch' without 'try'.
+'finally' without 'try'.
+'case' outside switch statement.
+
+*25
+'default' outside switch statement.
+
+*100
+Array index required.
+[] can only be applied to arrays. It can't be applied to %s.
+Can't specify array dimension in a declaration.
+Can't specify array dimension in a type expression.
+Array constants can only be used in initializers.
+
+*105
+Invalid initializer for type %s.
+Invalid left hand side of assignment.
+Invalid arguments to %s.
+Invalid cast from %s to %s.
+Invalid type expression.
+
+*111
+Attempt to reference variable %s in a %s.
+No variable %s defined in %s.
+Variable %s in %s not accessible from %s.
+Can't make a static reference to non static variable %s in %s.
+
+*115
+Reference to %s is ambiguous. It is defined in %s and %s.
+Attempt to reference method %s in %s as an instance variable.
+Can't assign values to final variables: %s
+Undefined variable: %s
+Variable %s may not have been initialized.
+
+*120
+Can't reference %s before the super class constructor has been called.
+Ambiguous class: %s and %s
+Invalid argument to %s.
+Invalid argument type %s for %s.
+'length' applied to %s, which is not an array.
+
+*125
+Only constructors can invoke constructors.
+Constructor invocation must be the first thing in a method.
+Can't invoke a method on a %s.
+Method %s not found in %s.
+Method %s in %s is not accessible from %s.
+
+*130
+Can't make static reference to method %s in %s.
+Reference to variable %s in %s as if it was a method.
+Invalid array dimension.
+No such constructor for %s.
+Constructor is ambiguous: %s, %s
+
+*135
+Incompatible type for %s. Explicit cast needed to convert %s to %s.
+Incompatible type for %s. Can't convert %s to %s.
+invalid term.
+%s is an abstract class. It does not define %s from %s.
+%s is an interface. It can't be instantiated.
+
+*140
+Can't directly invoke abstract method %s in %s.
+No method matching %s found in %s.
+No constructor matching %s found in %s.
+Can't make forward reference to %s in %s.
+Array dimension missing.
+
+*200
+No label definition found for %s.
+'break' must be in loop or switch.
+'continue' must be in loop.
+Invalid declaration.
+
+*205
+'return' with value from %s.
+'return' without value from %s.
+Invalid label.
+Return required at end of %s.
+Duplicate case label: %s
+
+*210
+Constant expression required.
+Duplicate 'default' label.
+'%s' not supported.
+'return' with value from constructor: %s
+
+*300
+Only one package declaration allowed.
+Class %s already defined in %s.
+Final methods can't be overriden. Method %s is final in %s.
+Method redefined with different return type: %s was %s
+Static methods can't be overridden. Method %s is static in %s.
+
+*305
+Methods can't be overridden to be more private. Method %s is public in %s.
+Methods can't be overridden to be more private. Method %s is protected in %s.
+Methods can't be overridden to be more private. Method %s is not private in %s.
+Interfaces can't have constructors.
+Constructors can't be native, abstract, static, synchronized or final: %s
+
+*310
+Interfaces can't have static initializers.
+Interface methods can't be static, synchronized, native or final: %s
+Method %s can't be transient. Only variables can be transient.
+Method %s can't be threadsafe. Only variables can be threadsafe. Methods can be synchronized.
+Static methods can't be abstract: %s
+
+*315
+Abstract and native methods can't have a body: %s
+Variables can't be synchronized, abstract or native: %s
+Transient variables can't be final or static: %s
+Final variables must be initialized: %s
+Duplicate method declaration: %s
+
+*320
+Methods can't be redefined with a different return type: %s was %s
+Duplicate variable declaration: %s was %s
+Superclass of %s can't be an interface: %s
+Can't access %s. Only public classes and interfaces in other packages can be accessed.
+Repeated modifier.
+
+*325
+Can't subclass final classes: %s
+Can't subclass interfaces: %s
+Cyclic class inheritance.
+Cyclic interface inheritance.
+%s must be an interface.
+
+*330
+Interfaces can't be final: %s
+Class %s not found in %s.
+An interface can't implement anything, it can only extend other interfaces.
+Multiple inheritance is not supported.
+Interface %s repeated.
+
+*335
+Invalid class file format: %s, %s
+%s must have a default constructor.
+Can't access the default constructor of %s.
+Method %s requires a method body. Otherwise declare it as abstract.
+Instance variables can't be void: %s
+
+*340
+Invalid method declaration, return type required.
+Super class %s of %s not found.
+Interface %s of %s not found.
+Final %s can't be abstract. It does not define %s from %s.
+Abstract method %s can't override non-abstract method %s from %s.
+
+*500
+%s
+
+*1000
+Warning: Statement not reached.
+Warning: Public %s should be defined in a file called "%s".
+Warning: Possible loss of precision. Use an explicit cast to convert %s to %s.
+Warning: Variable '%s' is already defined in this method.
+Warning: Classes can't be private. Classes are always accessible within the current package.
+
+*1005
+Warning: 'const' is no longer supported, use 'final' instead.
+Warning: Value computed but not used.
+Warning: Recursive constructor invokation: %s.

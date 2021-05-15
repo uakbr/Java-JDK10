@@ -1,0 +1,52 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: - An Optimization- Miscellaneous Object Operations (_quick variants)</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING321></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_46.html">Prev</A>       <A HREF="vmspec_48.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+<HR>
+<H2>- An Optimization</H2>
+<HR>
+<H1>Miscellaneous Object Operations (_quick variants)</H1>
+<DL>
+<DT><A HREF="vmspec_47.html#HEADING322"><B></B>  new_quick</A><DD>
+<DT><A HREF="vmspec_47.html#HEADING323"><B></B>  checkcast_quick</A><DD>
+<DT><A HREF="vmspec_47.html#HEADING324"><B></B>  instanceof_quick</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING322></A>
+<H3>new_quick</H3>
+Create new object<BR><IMG SRC="App_A_Tbl_14.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., handle<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index should be a class. A new instance of that class is then created and a handle for it pushed on the stack.<P>
+<A NAME=HEADING323></A>
+<H3>checkcast_quick</H3>
+Make sure object is of given type<BR><IMG SRC="App_A_Tbl_15.gif"><BR>
+<P>
+<PRE>
+..., handle =&gt; ..., handle<P>
+</PRE>
+handle should be a handle to an object. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The object at that index of the constant pool should have already been resolved.<P>
+checkcast then determines whether handle can be cast to an object of class class. A null handle can be cast to any class, and otherwise the superclasses of handle are searched for class. If class is determined to be a superclass of handle, or if handle is null, object can be cast to class and execution proceeds at the next instruction, and the handle for handle remains on the stack.<P>
+If handle cannot be cast to class, a ClassCastException is thrown.<P>
+<A NAME=HEADING324></A>
+<H3>instanceof_quick</H3>
+<BR><IMG SRC="App_A_Tbl_16.gif"><BR>
+Determine if object is of given type<P>
+<PRE>
+..., handle =&gt; ..., result<P>
+</PRE>
+handle should be a handle to an object. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item of class class at that index of the constant pool is assumed to have already been resolved.<P>
+instanceof determines whether handle can be cast to an object of the class class. A null handle can be cast to any class, and otherwise the superclasses of handle are searched for class. If class is determined to be a superclass of handle, or if handle is null, handle is overwritten by 1. Otherwise, handle is overwritten by 0.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_46.html">Prev</A>       <A HREF="vmspec_48.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

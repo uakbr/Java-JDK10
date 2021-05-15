@@ -1,0 +1,432 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.DataInputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.BufferedOutputStream.html#_top_">Previous</a>    <a href="java.io.DataOutputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.DataInputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----<a href="java.io.FilterInputStream.html#_top_">java.io.FilterInputStream</a>
+                   |
+                   +----java.io.DataInputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+DataInputStream</b>
+<dt>
+extends <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>
+</dl>
+A data input stream that lets you read primitive Java data types
+from a stream in a portable way.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.DataOutputStream.html#_top_">DataOutputStream</a><dt>
+<b>Version:</b>
+<dd>
+	1.16, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DataInputStream(java.io.InputStream)"><b>DataInputStream</b></a>(InputStream)
+<dd>
+Create a new DataInputStream.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readBoolean()"><b>readBoolean</b></a>()
+<dd>
+Reads a boolean.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readByte()"><b>readByte</b></a>()
+<dd>
+Reads an 8 bit byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readBytes(byte[])"><b>readBytes</b></a>(byte[])
+<dd>
+Reads bytes, blocking until all bytes are read.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readBytes(byte[], int, int)"><b>readBytes</b></a>(byte[], int, int)
+<dd>
+Reads bytes, blocking until all bytes are read.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readChar()"><b>readChar</b></a>()
+<dd>
+Reads a 16 bit char.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readDouble()"><b>readDouble</b></a>()
+<dd>
+Reads a 64 bit double.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readFloat()"><b>readFloat</b></a>()
+<dd>
+Reads a 32 bit float.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readInt()"><b>readInt</b></a>()
+<dd>
+Reads a 32 bit int.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readLine()"><b>readLine</b></a>()
+<dd>
+Reads a line terminated by a '\n' or EOF.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readLong()"><b>readLong</b></a>()
+<dd>
+Reads a 64 bit long.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readShort()"><b>readShort</b></a>()
+<dd>
+Reads 16 bit short.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readUTF()"><b>readUTF</b></a>()
+<dd>
+Reads a UTF format string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#skipBytes(int)"><b>skipBytes</b></a>(int)
+<dd>
+Skips bytes, block until all bytes are skipped.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="DataInputStream"></a>
+<a name="DataInputStream(java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DataInputStream
+</b>
+<pre>
+  public DataInputStream(<a href="java.io.InputStream.html#_top_">InputStream</a> in)
+</pre>
+<dl>
+<dd>
+Create a new DataInputStream.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+in
+-
+ 	the input stream
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="readBytes(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readBytes">
+<b>
+readBytes
+</b>
+</a>
+<pre>
+  public final int readBytes(byte b[])
+</pre>
+<dl>
+<dd>
+Reads bytes, blocking until all bytes are read.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="readBytes(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readBytes">
+<b>
+readBytes
+</b>
+</a>
+<pre>
+  public final int readBytes(byte b[],
+                             int off,
+                             int len)
+</pre>
+<dl>
+<dd>
+Reads bytes, blocking until all bytes are read.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dd>
+off
+-
+ the start offset of the data
+<dd>
+len
+-
+ the maximum number of bytes read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="skipBytes(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="skipBytes">
+<b>
+skipBytes
+</b>
+</a>
+<pre>
+  public final int skipBytes(int n)
+</pre>
+<dl>
+<dd>
+Skips bytes, block until all bytes are skipped.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+n
+-
+ 	bytes to be skipped
+<dt>
+<b>Returns:</b>
+<dd>
+actual number of bytes skipped
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="readBoolean()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readBoolean">
+<b>
+readBoolean
+</b>
+</a>
+<pre>
+  public final boolean readBoolean()
+</pre>
+<dl>
+<dd>
+Reads a boolean.
+</dl>
+<p>
+<a name="readByte()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readByte">
+<b>
+readByte
+</b>
+</a>
+<pre>
+  public final byte readByte()
+</pre>
+<dl>
+<dd>
+Reads an 8 bit byte.
+</dl>
+<p>
+<a name="readShort()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readShort">
+<b>
+readShort
+</b>
+</a>
+<pre>
+  public final short readShort()
+</pre>
+<dl>
+<dd>
+Reads 16 bit short.
+</dl>
+<p>
+<a name="readChar()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readChar">
+<b>
+readChar
+</b>
+</a>
+<pre>
+  public final char readChar()
+</pre>
+<dl>
+<dd>
+Reads a 16 bit char.
+</dl>
+<p>
+<a name="readInt()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readInt">
+<b>
+readInt
+</b>
+</a>
+<pre>
+  public final int readInt()
+</pre>
+<dl>
+<dd>
+Reads a 32 bit int.
+</dl>
+<p>
+<a name="readLong()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readLong">
+<b>
+readLong
+</b>
+</a>
+<pre>
+  public final long readLong()
+</pre>
+<dl>
+<dd>
+Reads a 64 bit long.
+</dl>
+<p>
+<a name="readFloat()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readFloat">
+<b>
+readFloat
+</b>
+</a>
+<pre>
+  public final float readFloat()
+</pre>
+<dl>
+<dd>
+Reads a 32 bit float.
+</dl>
+<p>
+<a name="readDouble()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readDouble">
+<b>
+readDouble
+</b>
+</a>
+<pre>
+  public final double readDouble()
+</pre>
+<dl>
+<dd>
+Reads a 64 bit double.
+</dl>
+<p>
+<a name="readLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readLine">
+<b>
+readLine
+</b>
+</a>
+<pre>
+  public final <a href="java.lang.String.html#_top_">String</a> readLine()
+</pre>
+<dl>
+<dd>
+Reads a line terminated by a '\n' or EOF.
+</dl>
+<p>
+<a name="readUTF()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readUTF">
+<b>
+readUTF
+</b>
+</a>
+<pre>
+  public final <a href="java.lang.String.html#_top_">String</a> readUTF()
+</pre>
+<dl>
+<dd>
+Reads a UTF format string.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.BufferedOutputStream.html#_top_">Previous</a>    <a href="java.io.DataOutputStream.html#_top_">Next</a></pre>
+</body>
+</html>

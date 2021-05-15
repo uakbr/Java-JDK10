@@ -1,0 +1,580 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.PrintStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PipedOutputStream.html#_top_">Previous</a>    <a href="java.io.PushbackInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.PrintStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.OutputStream.html#_top_">java.io.OutputStream</a>
+           |
+           +----<a href="java.io.FilterOutputStream.html#_top_">java.io.FilterOutputStream</a>
+                   |
+                   +----java.io.PrintStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+PrintStream</b>
+<dt>
+extends <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a>
+</dl>
+This class implements an output stream that has
+additional methods for printing. You can specify
+that the stream should be flushed every time a
+newline character is written.<p>
+<em>The top byte of 16 bit characters is discarded.</em><p>
+Example:
+<pre>
+	System.out.println("Hello world!");
+	System.out.print("x = ");
+	System.out.println(x);
+	System.out.println("y = " + y);
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.15, 21 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PrintStream(java.io.OutputStream)"><b>PrintStream</b></a>(OutputStream)
+<dd>
+Creates a new PrintStream.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PrintStream(java.io.OutputStream, boolean)"><b>PrintStream</b></a>(OutputStream, boolean)
+<dd>
+Creates a new PrintStream, with auto flushing.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(java.lang.Object)"><b>print</b></a>(Object)
+<dd>
+Prints an object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(java.lang.String)"><b>print</b></a>(String)
+<dd>
+Prints a String.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(char[])"><b>print</b></a>(char[])
+<dd>
+Prints an array of characters.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(int)"><b>print</b></a>(int)
+<dd>
+Prints an integer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(long)"><b>print</b></a>(long)
+<dd>
+Prints a long.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(float)"><b>print</b></a>(float)
+<dd>
+Prints a float.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(double)"><b>print</b></a>(double)
+<dd>
+Prints a double.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(boolean)"><b>print</b></a>(boolean)
+<dd>
+Prints a boolean.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println()"><b>println</b></a>()
+<dd>
+Prints a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(java.lang.Object)"><b>println</b></a>(Object)
+<dd>
+Prints an object followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(java.lang.String)"><b>println</b></a>(String)
+<dd>
+Prints a string followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(char[])"><b>println</b></a>(char[])
+<dd>
+Prints an array of characters followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(int)"><b>println</b></a>(int)
+<dd>
+Prints an integer followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(long)"><b>println</b></a>(long)
+<dd>
+Prints a long followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(float)"><b>println</b></a>(float)
+<dd>
+Prints a float followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(double)"><b>println</b></a>(double)
+<dd>
+Prints a double followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#println(boolean)"><b>println</b></a>(boolean)
+<dd>
+Prints a boolean followed by a newline.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Writes a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[], int, int)"><b>write</b></a>(byte[], int, int)
+<dd>
+Writes a sub array of bytes.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="PrintStream"></a>
+<a name="PrintStream(java.io.OutputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PrintStream
+</b>
+<pre>
+  public PrintStream(<a href="java.io.OutputStream.html#_top_">OutputStream</a> out)
+</pre>
+<dl>
+<dd>
+Creates a new PrintStream.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+out
+-
+	the output stream
+</dl>
+</dl>
+<p>
+<a name="PrintStream(java.io.OutputStream, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PrintStream
+</b>
+<pre>
+  public PrintStream(<a href="java.io.OutputStream.html#_top_">OutputStream</a> out,
+                     boolean autoflush)
+</pre>
+<dl>
+<dd>
+Creates a new PrintStream, with auto flushing.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+out
+-
+	the output stream
+<dd>
+autoflush
+-
+ if true the stream automatically flushes
+		its output when a newline character is printed.
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(int b)
+</pre>
+<dl>
+<dd>
+Writes a byte. Will block until the byte is actually
+written.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+ the byte
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#write(int)">write</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="write(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(byte b[],
+                    int off,
+                    int len)
+</pre>
+<dl>
+<dd>
+Writes a sub array of bytes. To be efficient it should
+be overridden in a subclass. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the data to be written
+<dd>
+off
+-
+	the start offset in the data
+<dd>
+len
+-
+	the number of bytes that are written
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#write(byte[], int, int)">write</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="print(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(<a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Prints an object.
+</dl>
+<p>
+<a name="print(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public synchronized void print(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Prints a String.
+</dl>
+<p>
+<a name="print(char[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public synchronized void print(char s[])
+</pre>
+<dl>
+<dd>
+Prints an array of characters.
+</dl>
+<p>
+<a name="print(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(int i)
+</pre>
+<dl>
+<dd>
+Prints an integer.
+</dl>
+<p>
+<a name="print(long)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(long l)
+</pre>
+<dl>
+<dd>
+Prints a long.
+</dl>
+<p>
+<a name="print(float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(float f)
+</pre>
+<dl>
+<dd>
+Prints a float.
+</dl>
+<p>
+<a name="print(double)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(double d)
+</pre>
+<dl>
+<dd>
+Prints a double.
+</dl>
+<p>
+<a name="print(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(boolean b)
+</pre>
+<dl>
+<dd>
+Prints a boolean.
+</dl>
+<p>
+<a name="println()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public void println()
+</pre>
+<dl>
+<dd>
+Prints a newline.
+</dl>
+<p>
+<a name="println(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(<a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Prints an object followed by a newline.
+</dl>
+<p>
+<a name="println(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Prints a string followed by a newline.
+</dl>
+<p>
+<a name="println(char[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(char s[])
+</pre>
+<dl>
+<dd>
+Prints an array of characters followed by a newline.
+</dl>
+<p>
+<a name="println(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(int i)
+</pre>
+<dl>
+<dd>
+Prints an integer followed by a newline.
+</dl>
+<p>
+<a name="println(long)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(long l)
+</pre>
+<dl>
+<dd>
+Prints a long followed by a newline.
+</dl>
+<p>
+<a name="println(float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(float f)
+</pre>
+<dl>
+<dd>
+Prints a float followed by a newline.
+</dl>
+<p>
+<a name="println(double)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(double d)
+</pre>
+<dl>
+<dd>
+Prints a double followed by a newline.
+</dl>
+<p>
+<a name="println(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="println">
+<b>
+println
+</b>
+</a>
+<pre>
+  public synchronized void println(boolean b)
+</pre>
+<dl>
+<dd>
+Prints a boolean followed by a newline.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PipedOutputStream.html#_top_">Previous</a>    <a href="java.io.PushbackInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

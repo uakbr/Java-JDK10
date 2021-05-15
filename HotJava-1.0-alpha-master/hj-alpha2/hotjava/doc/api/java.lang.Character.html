@@ -1,0 +1,448 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.Character
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Boolean.html#_top_">Previous</a>    <a href="java.lang.Class.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.Character
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.lang.Character
+</pre>
+<hr>
+<dl>
+<dt>
+public final class <b>
+Character</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+The Character class provides an object wrapper for character data values,
+and serves as a place for character-oriented operations.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.13, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Lee Boynton</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MAX_RADIX">MAX_RADIX</a>
+</b>
+<dd>
+The maximum radix available for conversion to/from strings.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MIN_RADIX">MIN_RADIX</a>
+</b>
+<dd>
+The minimum radix available for conversion to/from strings.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Character(char)"><b>Character</b></a>(char)
+<dd>
+Constructs a Character object with the specified value.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#charValue()"><b>charValue</b></a>()
+<dd>
+Returns the value of this Character object.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#digit(char, int)"><b>digit</b></a>(char, int)
+<dd>
+Returns the numeric value of the character digit using the specified
+radix.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#forDigit(int, int)"><b>forDigit</b></a>(int, int)
+<dd>
+Returns the character value for the specified digit in the specified
+radix.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#isDigit(char)"><b>isDigit</b></a>(char)
+<dd>
+Determines if a character is a digit.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#isLowerCase(char)"><b>isLowerCase</b></a>(char)
+<dd>
+Determines if a character is lower case.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#isUpperCase(char)"><b>isUpperCase</b></a>(char)
+<dd>
+Determines if a character is upper case.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#toLowerCase(char)"><b>toLowerCase</b></a>(char)
+<dd>
+Returns the lower case character value of the specified character
+value.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Returns a String object representing this character's value.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#toUpperCase(char)"><b>toUpperCase</b></a>(char)
+<dd>
+Returns the upper case character value of the specified character
+value.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="MIN_RADIX">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MIN_RADIX
+</b>
+<pre>
+  public final static int MIN_RADIX
+</pre>
+<dl>
+<dd>
+The minimum radix available for conversion to/from strings.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Integer.html#toString">toString</a>
+</dl>
+</dl>
+<a name="MAX_RADIX">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MAX_RADIX
+</b>
+<pre>
+  public final static int MAX_RADIX
+</pre>
+<dl>
+<dd>
+The maximum radix available for conversion to/from strings.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Integer.html#toString">toString</a>
+</dl>
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Character"></a>
+<a name="Character(char)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Character
+</b>
+<pre>
+  public Character(char value)
+</pre>
+<dl>
+<dd>
+Constructs a Character object with the specified value.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="isLowerCase(char)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="isLowerCase">
+<b>
+isLowerCase
+</b>
+</a>
+<pre>
+  public static boolean isLowerCase(char ch)
+</pre>
+<dl>
+<dd>
+Determines if a character is lower case.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+	the character to be tested
+<dt>
+<b>Returns:</b>
+<dd>
+	true if the character is lower case.
+</dl>
+</dl>
+<p>
+<a name="isDigit(char)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="isDigit">
+<b>
+isDigit
+</b>
+</a>
+<pre>
+  public static boolean isDigit(char ch)
+</pre>
+<dl>
+<dd>
+Determines if a character is a digit.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+	the character to be tested
+<dt>
+<b>Returns:</b>
+<dd>
+	true if the character is a digit.
+</dl>
+</dl>
+<p>
+<a name="isUpperCase(char)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="isUpperCase">
+<b>
+isUpperCase
+</b>
+</a>
+<pre>
+  public static boolean isUpperCase(char ch)
+</pre>
+<dl>
+<dd>
+Determines if a character is upper case.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+	the character to be tested
+<dt>
+<b>Returns:</b>
+<dd>
+	true if the character is upper case.
+</dl>
+</dl>
+<p>
+<a name="toLowerCase(char)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="toLowerCase">
+<b>
+toLowerCase
+</b>
+</a>
+<pre>
+  public static char toLowerCase(char ch)
+</pre>
+<dl>
+<dd>
+Returns the lower case character value of the specified character
+value. Characters that are not upper case letters are returned
+unmodified.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+	the character to be converted
+<dt>
+<b>Returns:</b>
+<dd>
+the lower case version of ch
+</dl>
+</dl>
+<p>
+<a name="toUpperCase(char)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="toUpperCase">
+<b>
+toUpperCase
+</b>
+</a>
+<pre>
+  public static char toUpperCase(char ch)
+</pre>
+<dl>
+<dd>
+Returns the upper case character value of the specified character
+value. Characters that are not lower case letters are returned
+unmodified.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+	the character to be converted
+<dt>
+<b>Returns:</b>
+<dd>
+the upper case version of ch
+</dl>
+</dl>
+<p>
+<a name="digit(char, int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="digit">
+<b>
+digit
+</b>
+</a>
+<pre>
+  public static int digit(char ch,
+                          int radix)
+</pre>
+<dl>
+<dd>
+Returns the numeric value of the character digit using the specified
+radix. If the character is not a valid digit, return -1.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+		the character to be converted
+<dd>
+radix
+-
+ 	the radix
+<dt>
+<b>Returns:</b>
+<dd>
+	the corresponding numeric value
+</dl>
+</dl>
+<p>
+<a name="forDigit(int, int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="forDigit">
+<b>
+forDigit
+</b>
+</a>
+<pre>
+  public static char forDigit(int digit,
+                              int radix)
+</pre>
+<dl>
+<dd>
+Returns the character value for the specified digit in the specified
+radix. If the digit is not valid in that radix, the 0 character
+is returned.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+digit
+-
+	the digit
+<dd>
+radix
+-
+ 	the radix
+<dt>
+<b>Returns:</b>
+<dd>
+	the corresponding character
+</dl>
+</dl>
+<p>
+<a name="charValue()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="charValue">
+<b>
+charValue
+</b>
+</a>
+<pre>
+  public char charValue()
+</pre>
+<dl>
+<dd>
+Returns the value of this Character object.
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Returns a String object representing this character's value.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+a String representing the value of the character.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Boolean.html#_top_">Previous</a>    <a href="java.lang.Class.html#_top_">Next</a></pre>
+</body>
+</html>

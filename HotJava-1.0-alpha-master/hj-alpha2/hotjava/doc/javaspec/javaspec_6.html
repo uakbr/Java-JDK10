@@ -1,0 +1,83 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Interfaces</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING46></A>
+<A HREF="javaspec_7.html">Next</A>       <A HREF="javaspec_5.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>5  Interfaces</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_6.html#HEADING47"><B> 5.1 </B> - Interfaces as Types</A><DD>
+<DT><A HREF="javaspec_6.html#HEADING48"><B> 5.2 </B> - Methods in Interfaces</A><DD>
+<DT><A HREF="javaspec_6.html#HEADING49"><B> 5.3 </B> - Variables in Interfaces</A><DD>
+<DT><A HREF="javaspec_6.html#HEADING50"><B> 5.4 </B> - Combining Interfaces</A><DD>
+</DL>
+
+
+An interface specifies a collection of methods without implementing their bodies. Interfaces provide encapsulation of method protocols without restricting the implementation to one inheritance tree. When a class implements an interface, it generally must implement the bodies of all the methods described in the interface. (If the implementing class is abstract--never implemented--it can leave the implementation of some or all of the interface methods to its subclasses.) <P>
+Interfaces solve some of the same problems that multiple inheritance does without as much overhead at runtime. However, because interfaces involve dynamic method binding, there is a small performance penalty to using them.<P>
+Using interfaces allows several classes to share a programming interface without having to be fully aware of each other's implementation. The following example shows an interface declaration (with the <A NAME=MARKER2_1></A>interface keyword) and a class that implements the interface:<P>
+<PRE>
+    public interface Storing {
+        void freezeDry(Stream s); 
+        void reconstitute(Stream s); 
+    }
+    public class Image implements Storing, Painting {
+        ...
+        void freezeDry(Stream s) { 
+            // JPEG compress image before storing
+            ... 
+        }
+        void reconstitute (Stream s) { 
+            // JPEG decompress image before reading
+            ... 
+        }
+    }
+</PRE>
+Like classes, interfaces are either private (the default) or public. The scope of public and private interfaces is the same as that of public and private classes, respectively. Methods in an interface are always public. Variables are public, static, and final.<P>
+<A NAME=HEADING47></A>
+<HR>
+<H3> 5.1  Interfaces as Types</H3>
+The declaration syntax interfaceName variableName declares a variable or parameter to be an instance of some class that implements interfaceName. Interfaces behave exactly as classes when used as a type. This lets the programmer specify that an object must implement a given interface, without having to know the exact type or inheritance of that object. Using interfaces makes it unnecessary to force related classes to share a common abstract superclass or to add methods to Object.<P>
+The following pseudocode illustrates the interfaceName variableName syntax:<P>
+<PRE>
+    class StorageManager {
+        Stream stream;
+        ...
+        // Storing is the interface name
+        void pickle(Storing obj) { 
+            obj.freezeDry(stream);
+        }
+    }
+</PRE>
+<A NAME=HEADING48></A>
+<HR>
+<H3> 5.2  Methods in Interfaces</H3>
+Methods in interfaces are declared as follows:<P>
+<PRE>
+<I>     returnType methodName ( parameterList );</I><P>
+</PRE>
+The declaration contains no modifiers. All methods specified in an interface are public and abstract and no other modifiers may be applied. <P>
+See <A HREF="javaspec_5.html#27">"Abstract Methods" on page 22</A> for more information on abstract methods.<P>
+<A NAME=HEADING49></A>
+<HR>
+<H3> 5.3  Variables in Interfaces</H3>
+Variables declared in interfaces are final, public, and static. No modifiers can be applied. Variables in interfaces must be initialized.<P>
+<A NAME=HEADING50></A>
+<HR>
+<H3> 5.4  <A NAME=2>Combining Interfaces</H3>
+Interfaces can incorporate one or more other interfaces, using the extends keyword as follows:<P>
+<PRE>
+    interface DoesItAll extends Storing, Painting {
+        void doesSomethingElse();
+    }
+</PRE>
+<HR>
+<A HREF="javaspec_7.html">Next</A>       <A HREF="javaspec_5.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

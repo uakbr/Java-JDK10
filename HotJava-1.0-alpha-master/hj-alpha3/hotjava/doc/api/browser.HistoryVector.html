@@ -1,0 +1,184 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.HistoryVector
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.HRTagRef.html#_top_">Previous</a>    <a href="browser.ImageCache.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.HistoryVector
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.util.Vector.html#_top_">java.util.Vector</a>
+           |
+           +----browser.HistoryVector
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+HistoryVector</b>
+<dt>
+extends <a href="java.util.Vector.html#_top_">Vector</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#HistoryVector(int)"><b>HistoryVector</b></a>(int)
+<dd>
+HistoryVector(maxSize): create a vector of maximum size maxSize.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#HistoryVector()"><b>HistoryVector</b></a>()
+<dd>
+HistoryVector(): create a HistoryVector that grows indefinitely.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#deltaSelect(int)"><b>deltaSelect</b></a>(int)
+<dd>
+selectElement: adds delta to the current element.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getCurrent()"><b>getCurrent</b></a>()
+<dd>
+getCurrent: returns the current element to be highlighted
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getTimeStamp()"><b>getTimeStamp</b></a>()
+<dd>
+getTimeStamp: returns the current timeStamp.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pushElement(java.lang.Object)"><b>pushElement</b></a>(Object)
+<dd>
+pushElement: like addElement (which I can't override, since it's final!)
+but throws out the first element when the vector reaches sizeRestriction
+elements.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="HistoryVector"></a>
+<a name="HistoryVector(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+HistoryVector
+</b>
+<pre>
+  public HistoryVector(int maxSize)
+</pre>
+<dl>
+<dd>
+HistoryVector(maxSize): create a vector of maximum size maxSize.
+</dl>
+<p>
+<a name="HistoryVector()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+HistoryVector
+</b>
+<pre>
+  public HistoryVector()
+</pre>
+<dl>
+<dd>
+HistoryVector(): create a HistoryVector that grows indefinitely.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getTimeStamp()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getTimeStamp">
+<b>
+getTimeStamp
+</b>
+</a>
+<pre>
+  public final synchronized int getTimeStamp()
+</pre>
+<dl>
+<dd>
+getTimeStamp: returns the current timeStamp.
+</dl>
+<p>
+<a name="getCurrent()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getCurrent">
+<b>
+getCurrent
+</b>
+</a>
+<pre>
+  public final synchronized int getCurrent()
+</pre>
+<dl>
+<dd>
+getCurrent: returns the current element to be highlighted
+</dl>
+<p>
+<a name="deltaSelect(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="deltaSelect">
+<b>
+deltaSelect
+</b>
+</a>
+<pre>
+  public final synchronized void deltaSelect(int delta)
+</pre>
+<dl>
+<dd>
+selectElement: adds delta to the current element.  Callers make sure
+not to underflow or overflow.
+</dl>
+<p>
+<a name="pushElement(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pushElement">
+<b>
+pushElement
+</b>
+</a>
+<pre>
+  public synchronized void pushElement(<a href="java.lang.Object.html#_top_">Object</a> info)
+</pre>
+<dl>
+<dd>
+pushElement: like addElement (which I can't override, since it's final!)
+but throws out the first element when the vector reaches sizeRestriction
+elements.  If sizeRestriction set to -1, list will grow forever.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.HRTagRef.html#_top_">Previous</a>    <a href="browser.ImageCache.html#_top_">Next</a></pre>
+</body>
+</html>

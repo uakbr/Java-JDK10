@@ -1,0 +1,153 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.audio.AudioStreamSequence
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioStream.html#_top_">Previous</a>    <a href="browser.audio.ContinuousAudioDataStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.audio.AudioStreamSequence
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----browser.audio.AudioStreamSequence
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+AudioStreamSequence</b>
+<dt>
+extends <a href="java.io.InputStream.html#_top_">InputStream</a>
+</dl>
+Convert a sequence of input streams into a single InputStream.
+This class can be used to play two audio clips in sequence.<p>
+For example:
+<pre>
+	Vector v = new Vector();
+	v.addElement(audiostream1);
+	v.addElement(audiostream2);
+	AudioStreamSequence audiostream = new AudioStreamSequence(v.elements());
+	AudioPlayer.player.start(audiostream);
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="browser.audio.AudioPlayer.html#_top_">AudioPlayer</a><dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff<dt>
+<b>Version:</b>
+<dd>
+	1.9, 14 Mar 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#AudioStreamSequence(java.util.Enumeration)"><b>AudioStreamSequence</b></a>(Enumeration)
+<dd>
+Create an AudioStreamSequence given an
+enumeration of streams.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Read, when reaching an EOF, flip to the next stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+Read, when reaching an EOF, flip to the next stream.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="AudioStreamSequence"></a>
+<a name="AudioStreamSequence(java.util.Enumeration)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+AudioStreamSequence
+</b>
+<pre>
+  public AudioStreamSequence(<a href="java.util.Enumeration.html#_top_">Enumeration</a> e)
+</pre>
+<dl>
+<dd>
+Create an AudioStreamSequence given an
+enumeration of streams.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read()
+</pre>
+<dl>
+<dd>
+Read, when reaching an EOF, flip to the next stream.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read()">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte buf[],
+                  int pos,
+                  int len)
+</pre>
+<dl>
+<dd>
+Read, when reaching an EOF, flip to the next stream.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioStream.html#_top_">Previous</a>    <a href="browser.audio.ContinuousAudioDataStream.html#_top_">Next</a></pre>
+</body>
+</html>

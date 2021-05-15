@@ -1,0 +1,172 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.InputStreamSequence
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.InputStreamBuffer.html#_top_">Previous</a>    <a href="java.io.InputStreamStringBuffer.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.InputStreamSequence
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----java.io.InputStreamSequence
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+InputStreamSequence</b>
+<dt>
+extends <a href="java.io.InputStream.html#_top_">InputStream</a>
+</dl>
+Converts a sequence of input streams into an InputStream
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#InputStreamSequence(java.util.Enumeration)"><b>InputStreamSequence</b></a>(Enumeration)
+<dd>
+Constructor
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#InputStreamSequence(java.io.InputStream, java.io.InputStream)"><b>InputStreamSequence</b></a>(InputStream, InputStream)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Reads, upon reaching an EOF, flips to the next stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+Reads, upon reaching an EOF, flips to the next stream.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="InputStreamSequence"></a>
+<a name="InputStreamSequence(java.util.Enumeration)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+InputStreamSequence
+</b>
+<pre>
+  public InputStreamSequence(<a href="java.util.Enumeration.html#_top_">Enumeration</a> e)
+</pre>
+<dl>
+<dd>
+Constructor
+</dl>
+<p>
+<a name="InputStreamSequence(java.io.InputStream, java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+InputStreamSequence
+</b>
+<pre>
+  public InputStreamSequence(<a href="java.io.InputStream.html#_top_">InputStream</a> s1,
+                             <a href="java.io.InputStream.html#_top_">InputStream</a> s2)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read()
+</pre>
+<dl>
+<dd>
+Reads, upon reaching an EOF, flips to the next stream.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read()">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte buf[],
+                  int pos,
+                  int len)
+</pre>
+<dl>
+<dd>
+Reads, upon reaching an EOF, flips to the next stream.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public void close()
+</pre>
+<dl>
+<dd>
+Closes the input stream.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#close()">close</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.InputStreamBuffer.html#_top_">Previous</a>    <a href="java.io.InputStreamStringBuffer.html#_top_">Next</a></pre>
+</body>
+</html>

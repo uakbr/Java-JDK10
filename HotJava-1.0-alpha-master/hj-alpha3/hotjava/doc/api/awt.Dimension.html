@@ -1,0 +1,306 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Dimension
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.DIWUpdateRequest.html#_top_">Previous</a>    <a href="awt.DisplayItem.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Dimension
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.Dimension
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Dimension</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A class to encapsulate objects that have a width and a height.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.6 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff, Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#height">height</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#width">width</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Dimension()"><b>Dimension</b></a>()
+<dd>
+Constructors
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Dimension(awt.Dimension)"><b>Dimension</b></a>(Dimension)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Dimension(int, int)"><b>Dimension</b></a>(int, int)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#add(awt.Dimension)"><b>add</b></a>(Dimension)
+<dd>
+Add the width and height of "other" to this dimension.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addDim(boolean, int)"><b>addDim</b></a>(boolean, int)
+<dd>
+If h is true then add value to the height otherwise add it to 
+the width 
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addDim(boolean, awt.Dimension)"><b>addDim</b></a>(boolean, Dimension)
+<dd>
+The same as addDim with an integer value but takes a Dimension.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clone()"><b>clone</b></a>()
+<dd>
+Clone this dimension.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#max(awt.Dimension)"><b>max</b></a>(Dimension)
+<dd>
+Set "other" to be the max of this dimension with itself.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#set(int, int)"><b>set</b></a>(int, int)
+<dd>
+Change it
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="width">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+width
+</b>
+<pre>
+  public int width
+</pre>
+<a name="height">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+height
+</b>
+<pre>
+  public int height
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Dimension"></a>
+<a name="Dimension()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Dimension
+</b>
+<pre>
+  public Dimension()
+</pre>
+<dl>
+<dd>
+Constructors
+</dl>
+<p>
+<a name="Dimension(awt.Dimension)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Dimension
+</b>
+<pre>
+  public Dimension(<a href="#_top_">Dimension</a> d)
+</pre>
+<a name="Dimension(int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Dimension
+</b>
+<pre>
+  public Dimension(int w,
+                   int h)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="set(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="set">
+<b>
+set
+</b>
+</a>
+<pre>
+  public void set(int w,
+                  int h)
+</pre>
+<dl>
+<dd>
+Change it
+</dl>
+<p>
+<a name="max(awt.Dimension)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="max">
+<b>
+max
+</b>
+</a>
+<pre>
+  public <a href="#_top_">Dimension</a> max(<a href="#_top_">Dimension</a> other)
+</pre>
+<dl>
+<dd>
+Set "other" to be the max of this dimension with itself.
+</dl>
+<p>
+<a name="add(awt.Dimension)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="add">
+<b>
+add
+</b>
+</a>
+<pre>
+  public void add(<a href="#_top_">Dimension</a> other)
+</pre>
+<dl>
+<dd>
+Add the width and height of "other" to this dimension.
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<a name="addDim(boolean, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addDim">
+<b>
+addDim
+</b>
+</a>
+<pre>
+  public void addDim(boolean h,
+                     int value)
+</pre>
+<dl>
+<dd>
+If h is true then add value to the height otherwise add it to 
+the width 
+</dl>
+<p>
+<a name="addDim(boolean, awt.Dimension)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addDim">
+<b>
+addDim
+</b>
+</a>
+<pre>
+  public void addDim(boolean h,
+                     <a href="#_top_">Dimension</a> s)
+</pre>
+<dl>
+<dd>
+The same as addDim with an integer value but takes a Dimension.
+</dl>
+<p>
+<a name="clone()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clone">
+<b>
+clone
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> clone()
+</pre>
+<dl>
+<dd>
+Clone this dimension.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#clone()">clone</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.DIWUpdateRequest.html#_top_">Previous</a>    <a href="awt.DisplayItem.html#_top_">Next</a></pre>
+</body>
+</html>

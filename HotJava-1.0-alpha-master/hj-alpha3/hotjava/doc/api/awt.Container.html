@@ -1,0 +1,555 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Container
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Component.html#_top_">Previous</a>    <a href="awt.ContainerLayout.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Container
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.Container
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Container</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+A container object is a component that can contain other
+components. Examples are windows, and frames.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.17 16 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff, Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#children">children</a>
+</b>
+<dd>
+The member objects (only nmembers are used)
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#insets">insets</a>
+</b>
+<dd>
+The insets (distances from the sides) of this
+container.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#theLayout">theLayout</a>
+</b>
+<dd>
+A layout object (or 0).
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#wServer">wServer</a>
+</b>
+<dd>
+The window server associated with this component.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Container(awt.Container, java.lang.String)"><b>Container</b></a>(Container, String)
+<dd>
+Contructor
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addChild(awt.Layoutable, java.lang.String)"><b>addChild</b></a>(Layoutable, String)
+<dd>
+Add a named child to the container (at the end,
+front most).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addChild(awt.Layoutable)"><b>addChild</b></a>(Layoutable)
+<dd>
+Add an unnamed child to the container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addInsets(int, int, int, int)"><b>addInsets</b></a>(int, int, int, int)
+<dd>
+Change the insets of this container
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Dispose of the container and its members, releasing
+all of its resources.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getChild(java.lang.String)"><b>getChild</b></a>(String)
+<dd>
+Find a member component by name.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getChild(int)"><b>getChild</b></a>(int)
+<dd>
+Find a member component by position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Return the preferred size for this container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layout()"><b>layout</b></a>()
+<dd>
+Layout the container and its members.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Map the container and its members, note that
+super.Map() will layout the member object if
+needed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#minDimension()"><b>minDimension</b></a>()
+<dd>
+Return the minimum acceptable size for this container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Move the container to the given position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nChildren()"><b>nChildren</b></a>()
+<dd>
+
+Return the number of children in this container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setInsets(int, int, int, int)"><b>setInsets</b></a>(int, int, int, int)
+<dd>
+Set the insets of this container
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setLayout(awt.ContainerLayout)"><b>setLayout</b></a>(ContainerLayout)
+<dd>
+Change the layout of the container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+UnMap the container and its members.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="wServer">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+wServer
+</b>
+<pre>
+  public <a href="awt.WServer.html#_top_">WServer</a> wServer
+</pre>
+<dl>
+<dd>
+The window server associated with this component.
+</dl>
+<a name="children">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+children
+</b>
+<pre>
+  public <a href="awt.ChildList.html#_top_">ChildList</a> children
+</pre>
+<dl>
+<dd>
+The member objects (only nmembers are used)
+</dl>
+<a name="theLayout">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+theLayout
+</b>
+<pre>
+  public <a href="awt.ContainerLayout.html#_top_">ContainerLayout</a> theLayout
+</pre>
+<dl>
+<dd>
+A layout object (or 0). Used to layout the
+member object when the container is untidy.
+</dl>
+<a name="insets">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+insets
+</b>
+<pre>
+  public int insets[]
+</pre>
+<dl>
+<dd>
+The insets (distances from the sides) of this
+container.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Container"></a>
+<a name="Container(awt.Container, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Container
+</b>
+<pre>
+  public Container(<a href="#_top_">Container</a> pParent,
+                   <a href="java.lang.String.html#_top_">String</a> pName)
+</pre>
+<dl>
+<dd>
+Contructor
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="addChild(awt.Layoutable, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addChild">
+<b>
+addChild
+</b>
+</a>
+<pre>
+  public void addChild(<a href="awt.Layoutable.html#_top_">Layoutable</a> c,
+                       <a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Add a named child to the container (at the end,
+front most).
+</dl>
+<p>
+<a name="addChild(awt.Layoutable)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addChild">
+<b>
+addChild
+</b>
+</a>
+<pre>
+  public void addChild(<a href="awt.Layoutable.html#_top_">Layoutable</a> c)
+</pre>
+<dl>
+<dd>
+Add an unnamed child to the container.
+</dl>
+<p>
+<a name="getChild(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getChild">
+<b>
+getChild
+</b>
+</a>
+<pre>
+  public <a href="awt.Layoutable.html#_top_">Layoutable</a> getChild(<a href="java.lang.String.html#_top_">String</a> pName)
+</pre>
+<dl>
+<dd>
+Find a member component by name.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#getChild(java.lang.String)">getChild</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="getChild(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getChild">
+<b>
+getChild
+</b>
+</a>
+<pre>
+  public <a href="awt.Layoutable.html#_top_">Layoutable</a> getChild(int pos)
+</pre>
+<dl>
+<dd>
+Find a member component by position.
+</dl>
+<p>
+<a name="nChildren()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nChildren">
+<b>
+nChildren
+</b>
+</a>
+<pre>
+  public int nChildren()
+</pre>
+<dl>
+<dd>
+Return the number of children in this container.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Dispose of the container and its members, releasing
+all of its resources.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Return the preferred size for this container.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#getPreferredSize()">getPreferredSize</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="minDimension()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="minDimension">
+<b>
+minDimension
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> minDimension()
+</pre>
+<dl>
+<dd>
+Return the minimum acceptable size for this container.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#minDimension()">minDimension</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public synchronized void map()
+</pre>
+<dl>
+<dd>
+Map the container and its members, note that
+super.Map() will layout the member object if
+needed.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public synchronized void unMap()
+</pre>
+<dl>
+<dd>
+UnMap the container and its members.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="setLayout(awt.ContainerLayout)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setLayout">
+<b>
+setLayout
+</b>
+</a>
+<pre>
+  public synchronized void setLayout(<a href="awt.ContainerLayout.html#_top_">ContainerLayout</a> pLayout)
+</pre>
+<dl>
+<dd>
+Change the layout of the container.
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int pX,
+                   int pY)
+</pre>
+<dl>
+<dd>
+Move the container to the given position.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="layout()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layout">
+<b>
+layout
+</b>
+</a>
+<pre>
+  public synchronized void layout()
+</pre>
+<dl>
+<dd>
+Layout the container and its members.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#layout()">layout</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="setInsets(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setInsets">
+<b>
+setInsets
+</b>
+</a>
+<pre>
+  public void setInsets(int n,
+                        int e,
+                        int s,
+                        int w)
+</pre>
+<dl>
+<dd>
+Set the insets of this container
+</dl>
+<p>
+<a name="addInsets(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addInsets">
+<b>
+addInsets
+</b>
+</a>
+<pre>
+  public void addInsets(int n,
+                        int e,
+                        int s,
+                        int w)
+</pre>
+<dl>
+<dd>
+Change the insets of this container
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Component.html#_top_">Previous</a>    <a href="awt.ContainerLayout.html#_top_">Next</a></pre>
+</body>
+</html>

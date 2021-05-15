@@ -1,0 +1,117 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Interface awt.DialogHandler
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Dialog.html#_top_">Previous</a>    <a href="awt.EventHandler.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Interface awt.DialogHandler
+</h1>
+<dl>
+<dt>
+public interface <b>
+DialogHandler</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+DialogHandler is an interface used by users of the MessageDialog
+class. It defines three callbacks which are invoked by MessageDialog
+in response to clicking on one of the three buttons, "ok", "cancel",
+and "help".
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.MessageDialog.html#_top_">MessageDialog</a><dt>
+<b>Version:</b>
+<dd>
+1.3 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#cancelCallback(awt.Dialog)"><b>cancelCallback</b></a>(Dialog)
+<dd>
+Invoked when the user presses the "Cancel" button.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#helpCallback(awt.Dialog)"><b>helpCallback</b></a>(Dialog)
+<dd>
+Invoked when the user presses the "Help" button.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#okCallback(awt.Dialog)"><b>okCallback</b></a>(Dialog)
+<dd>
+Invoked when the user presses the "Ok" button.
+</dl>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="okCallback(awt.Dialog)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="okCallback">
+<b>
+okCallback
+</b>
+</a>
+<pre>
+  public abstract void okCallback(<a href="awt.Dialog.html#_top_">Dialog</a> m)
+</pre>
+<dl>
+<dd>
+Invoked when the user presses the "Ok" button.
+</dl>
+<p>
+<a name="cancelCallback(awt.Dialog)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="cancelCallback">
+<b>
+cancelCallback
+</b>
+</a>
+<pre>
+  public abstract void cancelCallback(<a href="awt.Dialog.html#_top_">Dialog</a> m)
+</pre>
+<dl>
+<dd>
+Invoked when the user presses the "Cancel" button.
+</dl>
+<p>
+<a name="helpCallback(awt.Dialog)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="helpCallback">
+<b>
+helpCallback
+</b>
+</a>
+<pre>
+  public abstract void helpCallback(<a href="awt.Dialog.html#_top_">Dialog</a> m)
+</pre>
+<dl>
+<dd>
+Invoked when the user presses the "Help" button.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Dialog.html#_top_">Previous</a>    <a href="awt.EventHandler.html#_top_">Next</a></pre>
+</body>
+</html>

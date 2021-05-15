@@ -1,0 +1,167 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.www.html.WWWClassLoader
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.UnknownContentHandler.html#_top_">Previous</a>    <a href="net.www.html.Win32MimeTable.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.www.html.WWWClassLoader
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.lang.ClassLoader.html#_top_">java.lang.ClassLoader</a>
+           |
+           +----net.www.html.WWWClassLoader
+</pre>
+<hr>
+<dl>
+<dt>
+public final class <b>
+WWWClassLoader</b>
+<dt>
+extends <a href="java.lang.ClassLoader.html#_top_">ClassLoader</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ctx">ctx</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WWWClassLoader(net.www.html.URL)"><b>WWWClassLoader</b></a>(URL)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#loadClass(java.lang.String)"><b>loadClass</b></a>(String)
+<dd>
+Load a class from this class loader.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#loadClass(java.lang.String, boolean)"><b>loadClass</b></a>(String, boolean)
+<dd>
+This method has to be synchronized to avoid two threads
+loading the same class at the same time...
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#localPackage(java.lang.String)"><b>localPackage</b></a>(String)
+<dd>
+Check if a package is local.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="ctx">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+ctx
+</b>
+<pre>
+  public <a href="net.www.html.URL.html#_top_">URL</a> ctx
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="WWWClassLoader"></a>
+<a name="WWWClassLoader(net.www.html.URL)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WWWClassLoader
+</b>
+<pre>
+  public WWWClassLoader(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="localPackage(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="localPackage">
+<b>
+localPackage
+</b>
+</a>
+<pre>
+  public static synchronized boolean localPackage(<a href="java.lang.String.html#_top_">String</a> pkg)
+</pre>
+<dl>
+<dd>
+Check if a package is local. The package name is
+seperated by /'s.
+</dl>
+<p>
+<a name="loadClass(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="loadClass">
+<b>
+loadClass
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Class.html#_top_">Class</a> loadClass(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Load a class from this class loader.
+</dl>
+<p>
+<a name="loadClass(java.lang.String, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="loadClass">
+<b>
+loadClass
+</b>
+</a>
+<pre>
+  protected synchronized <a href="java.lang.Class.html#_top_">Class</a> loadClass(<a href="java.lang.String.html#_top_">String</a> name,
+                                         boolean resolve)
+</pre>
+<dl>
+<dd>
+This method has to be synchronized to avoid two threads
+loading the same class at the same time...
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.ClassLoader.html#loadClass(java.lang.String, boolean)">loadClass</a> in class <a href="java.lang.ClassLoader.html#_top_">ClassLoader</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.UnknownContentHandler.html#_top_">Previous</a>    <a href="net.www.html.Win32MimeTable.html#_top_">Next</a></pre>
+</body>
+</html>

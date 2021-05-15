@@ -1,0 +1,59 @@
+<Html>
+<Head>
+<Title>Testing an Applet</Title> 
+</Head>
+
+<Body>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+href="Attributes.html">Previous</A>    <A 
+href="AppTag.html">Next</A></PRE>   
+<HR>
+
+<H4><em>Writing an Applet</em></H4>  
+<H1>Testing an Applet</H1>
+
+To test an applet, you need to compile it,
+add it to an HTML page, and view the page in HotJava.
+These are steps 3, 4, and 5 of
+<A Href="StepByStep.html">writing an applet.</A>
+<P>
+
+Since no Java debugger exists yet, 
+status strings are important debugging tools.
+The rough equivalent of <SAMP>printf()</SAMP> is
+<P>
+<PRE>
+    System.out.println("...");
+</PRE>
+
+which prints the specified string to the standard output.
+<A Href=TestingCode_1.html>(Here are the platform-specific details.)</A>
+<P>
+
+To get input -- 
+so you can vary values used in your applet without recompiling --
+you can use
+<A Href="Attributes.html">attributes</A>.
+<P>
+
+To load recompiled code or read changed attribute values,
+press the reload button
+(the far right button at the bottom of the HotJava window)
+or choose the Reload item from the File menu.
+<P>
+
+<strong>Important:</strong>
+Do <strong>NOT</strong> invoke hotjava
+from the <strong>classes</strong> directory.
+Due to a bug, HotJava can't reload an applet
+when you invoke hotjava from the same directory   
+that the applet's compiled code is in. 
+<P>
+
+<HR>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+href="Attributes.html">Previous</A>    <A 
+href="AppTag.html">Next</A></PRE>   
+
+</Body>
+</Html>

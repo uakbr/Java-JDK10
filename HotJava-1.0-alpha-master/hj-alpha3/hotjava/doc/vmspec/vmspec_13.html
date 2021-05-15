@@ -1,0 +1,32 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Limitations</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING19></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_12.html">Prev</A>       <A HREF="vmspec_14.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Limitations</H1>
+
+<HR>
+
+The Java virtual machine design imposes some limitations on Java implementations based on it.<P>
+<UL>
+<LI>32-bit pointers and stacks limit the Java virtual machine's internal addressing to 4G<P>
+<LI>Signed 16-bit offsets (e.g. ifeq) for branch and jump instructions limit the size of an Java method to 32k<P>
+<LI>Unsigned 8-bit local variable indices limit the number of local variables per Java stack frame to 256<P>
+<LI>Signed 16-bit indices into the constant pool limit the number of constant pool entries per method to 32k<P>
+</UL>
+For _quick instructions only [See Appendix A]:<P>
+<UL>
+<LI>Unsigned 8-bit offsets into objects (e.g. invokemethod_quick) limit the number of methods in a class to 256<P>
+<LI>Unsigned 8-bit argument counts (e.g. invokemethod_quick) limits the size of a method call's parameters to 256 32 bit words, where a long or double parameters occupy two words each.<P>
+</UL>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_12.html">Prev</A>       <A HREF="vmspec_14.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,150 @@
+<Html>
+<Head>
+<Title>Writing an Applet</Title>
+</Head>
+
+<Body>
+<PRE><a href="TOC.html">Contents</a>    <a
+href="Sound.html">Previous</a>    <a
+href="AppletSubclass.html">Next</a></PRE>
+<HR>
+
+<H1>Writing an Applet</H1>
+
+By following the steps on this page,
+you can create and use an applet.
+Each step has links to
+where you can find more information about it.
+When you've followed all the steps,
+your directory (folder) structure should look something like this:
+<PRE>
+Html--+--Hello.html <em>(an HTML file you create)</em>
+      |
+      +--classes--+--HelloWorld.java <em>(a Java source file you create)</em>
+	          |
+	          +--HelloWorld.class <em>(created by the compiler)</em>
+</PRE>
+<P>
+
+<OL>
+<LI> <A name = "Directory">
+Create a directory to hold your HTML pages,
+if you don't already have one.
+Put a directory named <strong>classes</strong> under it.
+<A Href=StepByStep_1.html>(Here are the platform-specific details.)</A>
+<P>
+
+<strong>Important:</strong>
+Do <strong>NOT</strong> invoke hotjava
+from the <strong>classes</strong> directory.
+Due to a bug, HotJava can't reload an applet
+(for example, after you make changes to its code)
+when you invoke hotjava from the directory 
+that contains the applet's compiled code.
+<P>
+
+<LI> 
+Create a file named <SAMP>HelloWorld.java</SAMP>
+in the <strong>classes</strong> directory
+with the Java code shown here:
+<PRE>
+    import browser.Applet;    
+    import awt.Graphics; 
+    class HelloWorld extends Applet {
+        public void init() {
+	    resize(150, 25);
+        }
+        public void paint(Graphics g) {
+	    g.drawString(&quot;Hello world!&quot;, 50, 25);
+        }
+    }
+</PRE>
+<strong>Note:</strong>
+When creating the Java source files,
+be sure to use an editor that can save files
+with mixed-case names and 4-letter suffixes.
+<p>
+Details of 
+<A HREF="AppletSubclass.html">creating an Applet subclass</A>
+(which is what the above code does)
+are discussed elsewhere in this document.
+To see implementations of Applet subclasses,
+look at the
+<A Href="Examples.html">code examples</A>.
+<P>
+
+<LI> <A name = "Compile">
+Compile the file.
+<a href="StepByStep_2.html">(Here are the platform-specific details.)</A>
+<P>
+
+If compilation succeeds,
+the compiler creates a file named <SAMP>HelloWorld.class</SAMP>.
+If compilation fails,
+make sure you typed in and named the program
+exactly as shown above.
+See the <A HREF="../man/javac.html">Java compiler documentation</A>
+for more information on compiling Java code, and the 
+<A HREF="../javaspec/javaspec_1.html">
+<CITE>Java Language Specification</CITE></A>
+for information on the Java language.
+<P>
+
+<LI>
+Create a file 
+named <SAMP>Hello.html</SAMP>
+in your HTML directory
+containing the following text:
+<PRE>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt; A Simple Program &lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    
+    &lt;BODY&gt;
+    Here is the output of my program:
+    &lt;APP CLASS=&quot;HelloWorld&quot;&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+</PRE>
+The
+<A HREF="AppTag.html"><SAMP>APP</SAMP> HTML tag</A>
+(which you use to add applets to a page)
+is discussed later in this document.
+<P>
+
+<LI>
+Load the new HTML file into HotJava by entering its URL
+in the <SAMP>Document URL</SAMP> field
+near the top of the HotJava window.
+For example:
+<PRE>
+    file:/home/kwalrath/Html/Hello.html
+</PRE>
+<em>or</em>, for files on Windows NT:
+<PRE>
+    file:///c:/Html/Hello.html
+</PRE>
+Information on URLs is available in various places on the Internet,
+such as from the NCSA in 
+<A HREF=http://www.ncsa.uiuc.edu/demoweb/url-primer.html><CITE>A
+Beginner's Guide to URLs</CITE></A>.
+</OL>
+
+Once you've successfully completed these steps,
+you should see the following
+in the HotJava page that comes up:
+<DL>
+<DT>
+<DD>Here is the output of my program:
+<APP CLASS="MinimalApp">
+</DL>
+</OL>
+
+<HR>
+<PRE><a href="TOC.html">Contents</a>    <a
+href="Sound.html">Previous</a>    <a
+href="AppletSubclass.html">Next</a></PRE>
+
+</Body>
+</Html>

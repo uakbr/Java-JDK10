@@ -1,0 +1,58 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: Class File Format- Signatures</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING298></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_40.html">Prev</A>       <A HREF="vmspec_42.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+<HR>
+<H2>Class File Format</H2>
+<HR>
+<H1>Signatures</H1>
+
+<HR>
+
+A signature is a string representing the type of a method or field.<P>
+The field signature represents the value of an argument to a function or the value of a variable. It is a series of bytes in the following grammar:<P>
+<PRE>
+<CODE>&lt;field signature&gt;	:=	&lt;field_type&gt;</CODE><P>
+<CODE>&lt;field type&gt;	:=	&lt;base_type&gt;|&lt;object_type&gt;|&lt;array_type&gt;</CODE><P>
+<CODE>&lt;base_type&gt;	:=	B|C|D|F|I|J|S|Z</CODE><P>
+<CODE>&lt;object_type&gt;	:=	L&lt;fullclassname&gt;;</CODE><P>
+<CODE>&lt;array_type&gt;	:=	[&lt;optional-size&gt;&lt;field_type&gt;</CODE><P>
+<CODE>&lt;optional_size&gt;	:=	[0-9]*</CODE><P>
+</PRE>
+The meaning of the base types is as follows:<P>
+<PRE>
+	B			signed byte
+	C			character
+	D			double precision floating point number
+	F			single precision floating point number
+	I			integer
+	J			long integer
+	L&lt;fullclassname&gt;;			an object of the given class
+	S			nsigned short
+	Z			boolean
+	[&lt;length&gt;&lt;field sig&gt;			array<P>
+</PRE>
+A return-type signature represents the return value from a method. It is a series of bytes in the following grammar:<P>
+<PRE>
+<CODE>&lt;return signature&gt;	:=	&lt;field type&gt; | V</CODE><P>
+</PRE>
+The character V indicates that the method returns no value. Otherwise, the signature indicates the type of the return value.<P>
+An argument signature represents an argument passed to a method:<P>
+<PRE>
+<CODE>&lt;argument signature&gt;	:=	&lt;field type&gt;</CODE><P>
+</PRE>
+A method signature represents the arguments that the method expects, and the value that it returns.<P>
+<PRE>
+<CODE>&lt;method_signature&gt;	:=	(&lt;arguments signature&gt;) &lt;return signature&gt;</CODE><P>
+<CODE>&lt;arguments signature&gt;	:=	&lt;argument signature&gt;*</CODE><P>
+<CODE></CODE><P>
+</PRE>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_40.html">Prev</A>       <A HREF="vmspec_42.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

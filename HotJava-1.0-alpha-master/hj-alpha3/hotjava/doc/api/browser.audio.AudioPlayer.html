@@ -1,0 +1,203 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.audio.AudioPlayer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioDataStream.html#_top_">Previous</a>    <a href="browser.audio.AudioStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.audio.AudioPlayer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.lang.Thread.html#_top_">java.lang.Thread</a>
+           |
+           +----browser.audio.AudioPlayer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+AudioPlayer</b>
+<dt>
+extends <a href="java.lang.Thread.html#_top_">Thread</a>
+</dl>
+This classprovides an interface to play multiple
+channels of 8 bit ulaw encoded, 8000hz, single channel audio.
+Note that it provides a temporary and very Solaris
+specific solution, the APIs are likely to change when this
+is generalize to work on different platforms.<p>
+To play an audio stream use:
+<pre>
+	AudioPlayer.player.start(audiostream);
+</pre>
+To stop playing an audio stream use:
+<pre>
+	AudioPlayer.player.stop(audiostream);
+</pre>
+To play an audio stream from a URL use:
+<pre>
+	AudioStream audiostream = new AudioStream(url.openStream());
+	AudioPlayer.player.start(audiostream);
+</pre>
+To play a continuous sound you first have to
+create an AudioData instance and use it to construct a
+ContinuousAudioDataStream.
+For example:
+<pre>
+	AudoData data = new AudioStream(url.openStream()).getData();
+	ContinuousAudioDataStream audiostream = new ContinuousAudioDataStream(data);
+	AudioPlayer.player.stop(audiostream);
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="browser.audio.AudioData.html#_top_">AudioData</a>,
+<a href="browser.audio.AudioDataStream.html#_top_">AudioDataStream</a>,
+<a href="browser.audio.AudioStream.html#_top_">AudioStream</a>,
+<a href="browser.audio.AudioStreamSequence.html#_top_">AudioStreamSequence</a>,
+<a href="browser.audio.ContinuousAudioDataStream.html#_top_">ContinuousAudioDataStream</a><dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff<dt>
+<b>Version:</b>
+<dd>
+	1.19, 14 Mar 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#player">player</a>
+</b>
+<dd>
+The default audio player.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#run()"><b>run</b></a>()
+<dd>
+Main mixing loop.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#start(java.io.InputStream)"><b>start</b></a>(InputStream)
+<dd>
+Start playing a stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stop(java.io.InputStream)"><b>stop</b></a>(InputStream)
+<dd>
+Stop playing a stream.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="player">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+player
+</b>
+<pre>
+  public final static <a href="#_top_">AudioPlayer</a> player
+</pre>
+<dl>
+<dd>
+The default audio player. This audio player is initialized
+automatically.
+</dl>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="start(java.io.InputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="start">
+<b>
+start
+</b>
+</a>
+<pre>
+  public synchronized void start(<a href="java.io.InputStream.html#_top_">InputStream</a> in)
+</pre>
+<dl>
+<dd>
+Start playing a stream. The stream will continue to play
+until the stream runs out of data, or it is stopped.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#stop">stop</a>
+</dl>
+</dl>
+<p>
+<a name="stop(java.io.InputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stop">
+<b>
+stop
+</b>
+</a>
+<pre>
+  public synchronized void stop(<a href="java.io.InputStream.html#_top_">InputStream</a> in)
+</pre>
+<dl>
+<dd>
+Stop playing a stream. The stream will stop playing,
+nothing happens if the stream wasn't playing in the
+first place.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#start">start</a>
+</dl>
+</dl>
+<p>
+<a name="run()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="run">
+<b>
+run
+</b>
+</a>
+<pre>
+  public void run()
+</pre>
+<dl>
+<dd>
+Main mixing loop. This is called automatically when the AudioPlayer
+is created.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Thread.html#run()">run</a> in class <a href="java.lang.Thread.html#_top_">Thread</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioDataStream.html#_top_">Previous</a>    <a href="browser.audio.AudioStream.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.DIBitmap
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ContainerLayout.html#_top_">Previous</a>    <a href="awt.DIWUpdateRequest.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.DIBitmap
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Observable.html#_top_">browser.Observable</a>
+           |
+           +----awt.DIBitmap
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+DIBitmap</b>
+<dt>
+extends <a href="browser.Observable.html#_top_">Observable</a>
+</dl>
+This class holds a device independant 8 bit deep image and its colormap.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.9 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Patrick Naughton</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#blue">blue</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#generation">generation</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#green">green</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#height">height</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#num_colors">num_colors</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#raster">raster</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#red">red</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#trans_index">trans_index</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#width">width</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DIBitmap()"><b>DIBitmap</b></a>()
+<dd>
+This constructor is dangerous in that it creates a DIBitmap with
+invalid fields.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DIBitmap(int, int, int, byte[], byte[], byte[], byte[])"><b>DIBitmap</b></a>(int, int, int, byte[], byte[], byte[], byte[])
+<dd>
+This constructor takes the passed in raster as the correct bits for an
+image.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DIBitmap(int, int)"><b>DIBitmap</b></a>(int, int)
+<dd>
+This constructor allocates the space for an image of the specified
+size.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#touch()"><b>touch</b></a>()
+<dd>
+Touches this bitmap, ie, if it is cached anywhere it
+must be reloaded.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="width">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+width
+</b>
+<pre>
+  public int width
+</pre>
+<a name="height">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+height
+</b>
+<pre>
+  public int height
+</pre>
+<a name="num_colors">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+num_colors
+</b>
+<pre>
+  public int num_colors
+</pre>
+<a name="red">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+red
+</b>
+<pre>
+  public byte red[]
+</pre>
+<a name="green">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+green
+</b>
+<pre>
+  public byte green[]
+</pre>
+<a name="blue">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+blue
+</b>
+<pre>
+  public byte blue[]
+</pre>
+<a name="raster">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+raster
+</b>
+<pre>
+  public byte raster[]
+</pre>
+<a name="trans_index">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+trans_index
+</b>
+<pre>
+  public int trans_index
+</pre>
+<a name="generation">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+generation
+</b>
+<pre>
+  public int generation
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="DIBitmap"></a>
+<a name="DIBitmap()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DIBitmap
+</b>
+<pre>
+  public DIBitmap()
+</pre>
+<dl>
+<dd>
+This constructor is dangerous in that it creates a DIBitmap with
+invalid fields. However, it is needed by subclassers who cannot
+provide the necessary information at construction time, since they are
+reading the image from a file, for example.
+</dl>
+<p>
+<a name="DIBitmap(int, int, int, byte[], byte[], byte[], byte[])">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DIBitmap
+</b>
+<pre>
+  public DIBitmap(int w,
+                  int h,
+                  int n,
+                  byte r[],
+                  byte g[],
+                  byte b[],
+                  byte d[])
+</pre>
+<dl>
+<dd>
+This constructor takes the passed in raster as the correct bits for an
+image.
+</dl>
+<p>
+<a name="DIBitmap(int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DIBitmap
+</b>
+<pre>
+  public DIBitmap(int w,
+                  int h)
+</pre>
+<dl>
+<dd>
+This constructor allocates the space for an image of the specified
+size.  The contents of the image and colormap are undefined.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="touch()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="touch">
+<b>
+touch
+</b>
+</a>
+<pre>
+  public void touch()
+</pre>
+<dl>
+<dd>
+Touches this bitmap, ie, if it is cached anywhere it
+must be reloaded.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ContainerLayout.html#_top_">Previous</a>    <a href="awt.DIWUpdateRequest.html#_top_">Next</a></pre>
+</body>
+</html>

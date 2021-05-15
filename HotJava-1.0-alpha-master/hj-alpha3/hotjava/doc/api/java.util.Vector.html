@@ -1,0 +1,887 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.Vector
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UUEncoder.html#_top_">Previous</a>    <a href="java.util.html">Next</a></pre>
+<hr>
+<h1>
+Class java.util.Vector
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.Vector
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Vector</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Vector class (a growable array).<p>
+Each vector tries to optimize storage management by maintaining
+a capacity and a capacityIncrement. The capacity is always at
+least as large as the vector size; it is usually larger because
+as elements are added to the vector, the vector's
+storage increases in chunks the size of capacityIncrement. Setting
+the capacity to what you want before inserting a large number of
+objects will reduce the amount of incremental reallocation.
+You can safely ignore the capacity and the vector will still work
+correctly.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.19, 11 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne,
+Lee Boynton</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#capacityIncrement">capacityIncrement</a>
+</b>
+<dd>
+The size of the increment.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#elementCount">elementCount</a>
+</b>
+<dd>
+The number of elements.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#elementData">elementData</a>
+</b>
+<dd>
+The buffer.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Vector(int, int)"><b>Vector</b></a>(int, int)
+<dd>
+Constructs a vector with zero elements and the specified storage capacity
+and the specified capacityIncrement.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Vector(int)"><b>Vector</b></a>(int)
+<dd>
+Constructs an empty vector with the specified storage capacity.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Vector()"><b>Vector</b></a>()
+<dd>
+Construct an empty vector.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addElement(java.lang.Object)"><b>addElement</b></a>(Object)
+<dd>
+Adds the specified object as the last element of the vector.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#capacity()"><b>capacity</b></a>()
+<dd>
+Returns the current capacity of the vector.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clone()"><b>clone</b></a>()
+<dd>
+Clone this vector.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#contains(java.lang.Object)"><b>contains</b></a>(Object)
+<dd>
+Returns true if the specified object a a value of the collection.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copyInto(java.lang.Object[])"><b>copyInto</b></a>(Object[])
+<dd>
+Copies the elements of this vector into the specified array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#elementAt(int)"><b>elementAt</b></a>(int)
+<dd>
+Returns the element at the specified index.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#elements()"><b>elements</b></a>()
+<dd>
+Returns an enumeration of the elements.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#ensureCapacity(int)"><b>ensureCapacity</b></a>(int)
+<dd>
+Ensures that the vector has at least the specified capacity.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#firstElement()"><b>firstElement</b></a>()
+<dd>
+Returns the first element of the sequence.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#indexOf(java.lang.Object)"><b>indexOf</b></a>(Object)
+<dd>
+Searches for the specified object, starting from the first position
+and returns an index to it.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#indexOf(java.lang.Object, int)"><b>indexOf</b></a>(Object, int)
+<dd>
+Searches for the specified object, starting from the specified position
+and return an index to it.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insertElementAt(java.lang.Object, int)"><b>insertElementAt</b></a>(Object, int)
+<dd>
+Inserts the specified object as an element at the specified index.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isEmpty()"><b>isEmpty</b></a>()
+<dd>
+Returns true if the collection contains no values.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lastElement()"><b>lastElement</b></a>()
+<dd>
+Returns the last element of the sequence.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lastIndexOf(java.lang.Object)"><b>lastIndexOf</b></a>(Object)
+<dd>
+Searches backwards for the specified object, starting from the last
+position and returns an index to it.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lastIndexOf(java.lang.Object, int)"><b>lastIndexOf</b></a>(Object, int)
+<dd>
+Searches backwards for the specified object, starting from the specified
+position and returns an index to it.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#removeAllElements()"><b>removeAllElements</b></a>()
+<dd>
+Removes all elements of the vector.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#removeElement(java.lang.Object)"><b>removeElement</b></a>(Object)
+<dd>
+Removes the element from the vector.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#removeElementAt(int)"><b>removeElementAt</b></a>(int)
+<dd>
+Deletes the element at the specified index.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setElementAt(java.lang.Object, int)"><b>setElementAt</b></a>(Object, int)
+<dd>
+Sets the element at the specified index to be the specified object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setSize(int)"><b>setSize</b></a>(int)
+<dd>
+Sets the size of the vector.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#size()"><b>size</b></a>()
+<dd>
+Returns the number of elements in the vector.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Converts the vector to a string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trimToSize()"><b>trimToSize</b></a>()
+<dd>
+Trims the vector's capacity down to size.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="elementData">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+elementData
+</b>
+<pre>
+  protected <a href="java.lang.Object.html#_top_">Object</a> elementData[]
+</pre>
+<dl>
+<dd>
+The buffer.
+</dl>
+<a name="elementCount">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+elementCount
+</b>
+<pre>
+  protected int elementCount
+</pre>
+<dl>
+<dd>
+The number of elements.
+</dl>
+<a name="capacityIncrement">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+capacityIncrement
+</b>
+<pre>
+  protected int capacityIncrement
+</pre>
+<dl>
+<dd>
+The size of the increment. If it is 0 the size of the
+the buffer is doubled everytime it needs to grow.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Vector"></a>
+<a name="Vector(int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Vector
+</b>
+<pre>
+  public Vector(int initialCapacity,
+                int capacityIncrement)
+</pre>
+<dl>
+<dd>
+Constructs a vector with zero elements and the specified storage capacity
+and the specified capacityIncrement.
+</dl>
+<p>
+<a name="Vector(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Vector
+</b>
+<pre>
+  public Vector(int initialCapacity)
+</pre>
+<dl>
+<dd>
+Constructs an empty vector with the specified storage capacity.
+</dl>
+<p>
+<a name="Vector()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Vector
+</b>
+<pre>
+  public Vector()
+</pre>
+<dl>
+<dd>
+Construct an empty vector.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="copyInto(java.lang.Object[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copyInto">
+<b>
+copyInto
+</b>
+</a>
+<pre>
+  public final synchronized void copyInto(<a href="java.lang.Object.html#_top_">Object</a> anArray[])
+</pre>
+<dl>
+<dd>
+Copies the elements of this vector into the specified array.
+</dl>
+<p>
+<a name="trimToSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trimToSize">
+<b>
+trimToSize
+</b>
+</a>
+<pre>
+  public final synchronized void trimToSize()
+</pre>
+<dl>
+<dd>
+Trims the vector's capacity down to size. Use this operation to
+minimize the storage of a vector. Subsequent insertions will
+cause reallocation.
+</dl>
+<p>
+<a name="ensureCapacity(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="ensureCapacity">
+<b>
+ensureCapacity
+</b>
+</a>
+<pre>
+  public final synchronized void ensureCapacity(int minCapacity)
+</pre>
+<dl>
+<dd>
+Ensures that the vector has at least the specified capacity.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+minCapacity
+-
+ the desired minimum capacity
+</dl>
+</dl>
+<p>
+<a name="setSize(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setSize">
+<b>
+setSize
+</b>
+</a>
+<pre>
+  public final synchronized void setSize(int newSize)
+</pre>
+<dl>
+<dd>
+Sets the size of the vector. If the size shrinks, the extra elements
+(at the end of the vector) are lost; if the size increases, the
+new elements are set to null.
+</dl>
+<p>
+<a name="capacity()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="capacity">
+<b>
+capacity
+</b>
+</a>
+<pre>
+  public final int capacity()
+</pre>
+<dl>
+<dd>
+Returns the current capacity of the vector.
+</dl>
+<p>
+<a name="size()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="size">
+<b>
+size
+</b>
+</a>
+<pre>
+  public final int size()
+</pre>
+<dl>
+<dd>
+Returns the number of elements in the vector.
+Note that this is not the same as the vector's capacity.
+</dl>
+<p>
+<a name="isEmpty()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isEmpty">
+<b>
+isEmpty
+</b>
+</a>
+<pre>
+  public final boolean isEmpty()
+</pre>
+<dl>
+<dd>
+Returns true if the collection contains no values.
+</dl>
+<p>
+<a name="elements()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="elements">
+<b>
+elements
+</b>
+</a>
+<pre>
+  public final synchronized <a href="java.util.Enumeration.html#_top_">Enumeration</a> elements()
+</pre>
+<dl>
+<dd>
+Returns an enumeration of the elements. Use the Enumeration methods on
+the returned object to fetch the elements sequentially.
+</dl>
+<p>
+<a name="contains(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="contains">
+<b>
+contains
+</b>
+</a>
+<pre>
+  public final boolean contains(<a href="java.lang.Object.html#_top_">Object</a> elem)
+</pre>
+<dl>
+<dd>
+Returns true if the specified object a a value of the collection.
+</dl>
+<p>
+<a name="indexOf(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="indexOf">
+<b>
+indexOf
+</b>
+</a>
+<pre>
+  public final int indexOf(<a href="java.lang.Object.html#_top_">Object</a> elem)
+</pre>
+<dl>
+<dd>
+Searches for the specified object, starting from the first position
+and returns an index to it.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+elem
+-
+ the desired element
+<dt>
+<b>Returns:</b>
+<dd>
+the index of the element, or -1 if it was not found
+</dl>
+</dl>
+<p>
+<a name="indexOf(java.lang.Object, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="indexOf">
+<b>
+indexOf
+</b>
+</a>
+<pre>
+  public final synchronized int indexOf(<a href="java.lang.Object.html#_top_">Object</a> elem,
+                                        int index)
+</pre>
+<dl>
+<dd>
+Searches for the specified object, starting from the specified position
+and return an index to it.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+elem
+-
+ the desired element
+<dd>
+index
+-
+ the index where to start searching
+<dt>
+<b>Returns:</b>
+<dd>
+the index of the element, or -1 if it was not found
+</dl>
+</dl>
+<p>
+<a name="lastIndexOf(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lastIndexOf">
+<b>
+lastIndexOf
+</b>
+</a>
+<pre>
+  public final int lastIndexOf(<a href="java.lang.Object.html#_top_">Object</a> elem)
+</pre>
+<dl>
+<dd>
+Searches backwards for the specified object, starting from the last
+position and returns an index to it. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+elem
+-
+ the desired element
+<dt>
+<b>Returns:</b>
+<dd>
+the index of the element, or -1 if it was not found
+</dl>
+</dl>
+<p>
+<a name="lastIndexOf(java.lang.Object, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lastIndexOf">
+<b>
+lastIndexOf
+</b>
+</a>
+<pre>
+  public final synchronized int lastIndexOf(<a href="java.lang.Object.html#_top_">Object</a> elem,
+                                            int index)
+</pre>
+<dl>
+<dd>
+Searches backwards for the specified object, starting from the specified
+position and returns an index to it. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+elem
+-
+ the desired element
+<dd>
+index
+-
+ the index where to start searching
+<dt>
+<b>Returns:</b>
+<dd>
+the index of the element, or -1 if it was not found
+</dl>
+</dl>
+<p>
+<a name="elementAt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="elementAt">
+<b>
+elementAt
+</b>
+</a>
+<pre>
+  public final synchronized <a href="java.lang.Object.html#_top_">Object</a> elementAt(int index)
+</pre>
+<dl>
+<dd>
+Returns the element at the specified index.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+index
+-
+ the index of the desired element
+<dt>
+<b>Returns:</b>
+<dd>
+the desired element
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid index
+</dl>
+</dl>
+<p>
+<a name="firstElement()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="firstElement">
+<b>
+firstElement
+</b>
+</a>
+<pre>
+  public final synchronized <a href="java.lang.Object.html#_top_">Object</a> firstElement()
+</pre>
+<dl>
+<dd>
+Returns the first element of the sequence.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.NoSuchElementException.html#_top_">NoSuchElementException</a>
+<dd>
+ The sequence is empty.
+</dl>
+</dl>
+<p>
+<a name="lastElement()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lastElement">
+<b>
+lastElement
+</b>
+</a>
+<pre>
+  public final synchronized <a href="java.lang.Object.html#_top_">Object</a> lastElement()
+</pre>
+<dl>
+<dd>
+Returns the last element of the sequence.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.NoSuchElementException.html#_top_">NoSuchElementException</a>
+<dd>
+ The sequence is empty.
+</dl>
+</dl>
+<p>
+<a name="setElementAt(java.lang.Object, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setElementAt">
+<b>
+setElementAt
+</b>
+</a>
+<pre>
+  public final synchronized void setElementAt(<a href="java.lang.Object.html#_top_">Object</a> obj,
+                                              int index)
+</pre>
+<dl>
+<dd>
+Sets the element at the specified index to be the specified object.
+The previous element at that position is discarded.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid index
+</dl>
+</dl>
+<p>
+<a name="removeElementAt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="removeElementAt">
+<b>
+removeElementAt
+</b>
+</a>
+<pre>
+  public final synchronized void removeElementAt(int index)
+</pre>
+<dl>
+<dd>
+Deletes the element at the specified index. Elements with an index
+greater than index are moved down.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+index
+-
+ the element to remove
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid index
+</dl>
+</dl>
+<p>
+<a name="insertElementAt(java.lang.Object, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insertElementAt">
+<b>
+insertElementAt
+</b>
+</a>
+<pre>
+  public final synchronized void insertElementAt(<a href="java.lang.Object.html#_top_">Object</a> obj,
+                                                 int index)
+</pre>
+<dl>
+<dd>
+Inserts the specified object as an element at the specified index.
+Elements with an index greater or equal to the index are shifted up.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+obj
+-
+ the element to insert
+<dd>
+index
+-
+ where to insert the new element
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ invalid index
+</dl>
+</dl>
+<p>
+<a name="addElement(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addElement">
+<b>
+addElement
+</b>
+</a>
+<pre>
+  public final synchronized void addElement(<a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Adds the specified object as the last element of the vector.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+obj
+-
+ the element to be added
+</dl>
+</dl>
+<p>
+<a name="removeElement(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="removeElement">
+<b>
+removeElement
+</b>
+</a>
+<pre>
+  public final synchronized boolean removeElement(<a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Removes the element from the vector. If the object occurs more
+than once, only the first is removed. If the object is not an
+element, returns false.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+obj
+-
+ the element to be removed
+<dt>
+<b>Returns:</b>
+<dd>
+true if the element was actually removed
+</dl>
+</dl>
+<p>
+<a name="removeAllElements()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="removeAllElements">
+<b>
+removeAllElements
+</b>
+</a>
+<pre>
+  public final synchronized void removeAllElements()
+</pre>
+<dl>
+<dd>
+Removes all elements of the vector. The vector becomes empty.
+</dl>
+<p>
+<a name="clone()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clone">
+<b>
+clone
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> clone()
+</pre>
+<dl>
+<dd>
+Clone this vector. The elements are not cloned.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#clone()">clone</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public final synchronized <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Converts the vector to a string. Useful for debugging.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UUEncoder.html#_top_">Previous</a>    <a href="java.util.html">Next</a></pre>
+</body>
+</html>

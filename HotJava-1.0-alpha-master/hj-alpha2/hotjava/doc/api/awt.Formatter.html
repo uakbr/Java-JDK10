@@ -1,0 +1,866 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Formatter
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FontTable.html#_top_">Previous</a>    <a href="awt.FormattingParameters.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Formatter
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.Formatter
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Formatter</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A class that knows how to layout a set of DisplayItems inside a
+window.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.29 23 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#breakSoFar">breakSoFar</a>
+</b>
+<dd>
+This is used to combine requests to break a paragraph.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#color">color</a>
+</b>
+<dd>
+Current color as determined by the current FormattingParameters.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#currentParameters">currentParameters</a>
+</b>
+<dd>
+Current formatting parameters.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#font">font</a>
+</b>
+<dd>
+Current font as determined by the current FormattingParameters.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fontAscent">fontAscent</a>
+</b>
+<dd>
+Current maximum font ascent.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fpStack">fpStack</a>
+</b>
+<dd>
+This is the stack of formatting parameters.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#itemCount">itemCount</a>
+</b>
+<dd>
+Total number of items we think we've added to the window.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lineAscent">lineAscent</a>
+</b>
+<dd>
+Current lineAscent for this line.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lineDescent">lineDescent</a>
+</b>
+<dd>
+Current lineDescent for this line.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lineStartIndex">lineStartIndex</a>
+</b>
+<dd>
+The display item index of the first item on this line.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#notRendering">notRendering</a>
+</b>
+<dd>
+This is true when we're in a section that doesn't render.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#win">win</a>
+</b>
+<dd>
+This is the window we're laying objects out in.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#x">x</a>
+</b>
+<dd>
+Current X coordinate, where next display item will
+	be added.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#xlimit">xlimit</a>
+</b>
+<dd>
+Current X limit for the right margin.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#y">y</a>
+</b>
+<dd>
+Current Y coordinate.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Formatter(awt.TextWindow)"><b>Formatter</b></a>(TextWindow)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addCharacterSpacing(char)"><b>addCharacterSpacing</b></a>(char)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addDisplayItem(awt.DisplayItem, boolean)"><b>addDisplayItem</b></a>(DisplayItem, boolean)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#adjustItem(awt.DisplayItem, int)"><b>adjustItem</b></a>(DisplayItem, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#atBeginningOfLine()"><b>atBeginningOfLine</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#breakLine(int)"><b>breakLine</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#charAt(int)"><b>charAt</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finishCurrentLine()"><b>finishCurrentLine</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getColor()"><b>getColor</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFont()"><b>getFont</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getLeftMargin()"><b>getLeftMargin</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getLength()"><b>getLength</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getParameters()"><b>getParameters</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getRightMargin()"><b>getRightMargin</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getXCoordinate()"><b>getXCoordinate</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getYCoordinate()"><b>getYCoordinate</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layout()"><b>layout</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#makeTextItem(int, int)"><b>makeTextItem</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#outputString(int, int, int)"><b>outputString</b></a>(int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#popParameters()"><b>popParameters</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#processStyleRefs(int)"><b>processStyleRefs</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pushParameters(awt.FormattingParameters)"><b>pushParameters</b></a>(FormattingParameters)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setBreakSoFar(int)"><b>setBreakSoFar</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setLeftMargin(int)"><b>setLeftMargin</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setParameters(awt.FormattingParameters)"><b>setParameters</b></a>(FormattingParameters)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setXCoordinate(int)"><b>setXCoordinate</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startRendering()"><b>startRendering</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stopRendering()"><b>stopRendering</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#wrapLine()"><b>wrapLine</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="currentParameters">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+currentParameters
+</b>
+<pre>
+  protected <a href="awt.FormattingParameters.html#_top_">FormattingParameters</a> currentParameters
+</pre>
+<dl>
+<dd>
+Current formatting parameters.
+</dl>
+<a name="x">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+x
+</b>
+<pre>
+  protected int x
+</pre>
+<dl>
+<dd>
+Current X coordinate, where next display item will
+	be added.
+</dl>
+<a name="xlimit">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+xlimit
+</b>
+<pre>
+  protected int xlimit
+</pre>
+<dl>
+<dd>
+Current X limit for the right margin.  If a display item
+	moves beyond xlimit, we wrap.
+</dl>
+<a name="y">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+y
+</b>
+<pre>
+  protected int y
+</pre>
+<dl>
+<dd>
+Current Y coordinate.  This is the value of Y for the top
+	of the current line we're building.
+</dl>
+<a name="lineAscent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lineAscent
+</b>
+<pre>
+  protected int lineAscent
+</pre>
+<dl>
+<dd>
+Current lineAscent for this line.
+</dl>
+<a name="lineDescent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lineDescent
+</b>
+<pre>
+  protected int lineDescent
+</pre>
+<dl>
+<dd>
+Current lineDescent for this line.
+</dl>
+<a name="fontAscent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fontAscent
+</b>
+<pre>
+  protected int fontAscent
+</pre>
+<dl>
+<dd>
+Current maximum font ascent.
+</dl>
+<a name="font">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+font
+</b>
+<pre>
+  protected <a href="awt.Font.html#_top_">Font</a> font
+</pre>
+<dl>
+<dd>
+Current font as determined by the current FormattingParameters.
+</dl>
+<a name="color">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+color
+</b>
+<pre>
+  protected <a href="awt.Color.html#_top_">Color</a> color
+</pre>
+<dl>
+<dd>
+Current color as determined by the current FormattingParameters.
+</dl>
+<a name="lineStartIndex">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lineStartIndex
+</b>
+<pre>
+  protected int lineStartIndex
+</pre>
+<dl>
+<dd>
+The display item index of the first item on this line.  This is
+	used to go back to position all the items we accumulate on the
+	line we're laying out right now.
+</dl>
+<a name="itemCount">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+itemCount
+</b>
+<pre>
+  protected int itemCount
+</pre>
+<dl>
+<dd>
+Total number of items we think we've added to the window.
+</dl>
+<a name="fpStack">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fpStack
+</b>
+<pre>
+  protected <a href="java.util.Stack.html#_top_">Stack</a> fpStack
+</pre>
+<dl>
+<dd>
+This is the stack of formatting parameters.
+</dl>
+<a name="notRendering">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+notRendering
+</b>
+<pre>
+  protected int notRendering
+</pre>
+<dl>
+<dd>
+This is true when we're in a section that doesn't render.
+</dl>
+<a name="breakSoFar">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+breakSoFar
+</b>
+<pre>
+  protected int breakSoFar
+</pre>
+<dl>
+<dd>
+This is used to combine requests to break a paragraph.  This
+	is how much of a break we have accumulated so far since we last
+	wrapped.  If a request to break is greater than this number, we
+	bump the new Y position by that much further.
+</dl>
+<a name="win">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+win
+</b>
+<pre>
+  public <a href="awt.TextWindow.html#_top_">TextWindow</a> win
+</pre>
+<dl>
+<dd>
+This is the window we're laying objects out in.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Formatter"></a>
+<a name="Formatter(awt.TextWindow)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Formatter
+</b>
+<pre>
+  public Formatter(<a href="awt.TextWindow.html#_top_">TextWindow</a> w)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setParameters(awt.FormattingParameters)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setParameters">
+<b>
+setParameters
+</b>
+</a>
+<pre>
+  public void setParameters(<a href="awt.FormattingParameters.html#_top_">FormattingParameters</a> fp)
+</pre>
+<a name="finishCurrentLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finishCurrentLine">
+<b>
+finishCurrentLine
+</b>
+</a>
+<pre>
+  protected void finishCurrentLine()
+</pre>
+<a name="adjustItem(awt.DisplayItem, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="adjustItem">
+<b>
+adjustItem
+</b>
+</a>
+<pre>
+  protected void adjustItem(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di,
+                            int x)
+</pre>
+<a name="getLength()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getLength">
+<b>
+getLength
+</b>
+</a>
+<pre>
+  protected abstract int getLength()
+</pre>
+<a name="charAt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="charAt">
+<b>
+charAt
+</b>
+</a>
+<pre>
+  protected abstract int charAt(int i)
+</pre>
+<a name="makeTextItem(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="makeTextItem">
+<b>
+makeTextItem
+</b>
+</a>
+<pre>
+  protected abstract <a href="awt.TextDisplayItem.html#_top_">TextDisplayItem</a> makeTextItem(int pos0,
+                                                  int pos1)
+</pre>
+<a name="outputString(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="outputString">
+<b>
+outputString
+</b>
+</a>
+<pre>
+  protected boolean outputString(int pos0,
+                                 int pos1,
+                                 int width)
+</pre>
+<a name="processStyleRefs(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="processStyleRefs">
+<b>
+processStyleRefs
+</b>
+</a>
+<pre>
+  protected int processStyleRefs(int pos)
+</pre>
+<a name="setBreakSoFar(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setBreakSoFar">
+<b>
+setBreakSoFar
+</b>
+</a>
+<pre>
+  protected void setBreakSoFar(int value)
+</pre>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  protected void reset()
+</pre>
+<a name="layout()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layout">
+<b>
+layout
+</b>
+</a>
+<pre>
+  public void layout()
+</pre>
+<a name="pushParameters(awt.FormattingParameters)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pushParameters">
+<b>
+pushParameters
+</b>
+</a>
+<pre>
+  public void pushParameters(<a href="awt.FormattingParameters.html#_top_">FormattingParameters</a> p)
+</pre>
+<a name="popParameters()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="popParameters">
+<b>
+popParameters
+</b>
+</a>
+<pre>
+  public void popParameters()
+</pre>
+<a name="getParameters()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getParameters">
+<b>
+getParameters
+</b>
+</a>
+<pre>
+  public <a href="awt.FormattingParameters.html#_top_">FormattingParameters</a> getParameters()
+</pre>
+<a name="addDisplayItem(awt.DisplayItem, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addDisplayItem">
+<b>
+addDisplayItem
+</b>
+</a>
+<pre>
+  public boolean addDisplayItem(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di,
+                                boolean checkWrap)
+</pre>
+<a name="setLeftMargin(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setLeftMargin">
+<b>
+setLeftMargin
+</b>
+</a>
+<pre>
+  public void setLeftMargin(int lm)
+</pre>
+<a name="atBeginningOfLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="atBeginningOfLine">
+<b>
+atBeginningOfLine
+</b>
+</a>
+<pre>
+  public boolean atBeginningOfLine()
+</pre>
+<a name="getLeftMargin()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getLeftMargin">
+<b>
+getLeftMargin
+</b>
+</a>
+<pre>
+  public int getLeftMargin()
+</pre>
+<a name="getRightMargin()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getRightMargin">
+<b>
+getRightMargin
+</b>
+</a>
+<pre>
+  public int getRightMargin()
+</pre>
+<a name="setXCoordinate(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setXCoordinate">
+<b>
+setXCoordinate
+</b>
+</a>
+<pre>
+  public void setXCoordinate(int x)
+</pre>
+<a name="getXCoordinate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getXCoordinate">
+<b>
+getXCoordinate
+</b>
+</a>
+<pre>
+  public int getXCoordinate()
+</pre>
+<a name="getYCoordinate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getYCoordinate">
+<b>
+getYCoordinate
+</b>
+</a>
+<pre>
+  public int getYCoordinate()
+</pre>
+<a name="addCharacterSpacing(char)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addCharacterSpacing">
+<b>
+addCharacterSpacing
+</b>
+</a>
+<pre>
+  public void addCharacterSpacing(char c)
+</pre>
+<a name="wrapLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="wrapLine">
+<b>
+wrapLine
+</b>
+</a>
+<pre>
+  public void wrapLine()
+</pre>
+<a name="breakLine(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="breakLine">
+<b>
+breakLine
+</b>
+</a>
+<pre>
+  public void breakLine(int extra)
+</pre>
+<a name="getFont()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFont">
+<b>
+getFont
+</b>
+</a>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> getFont()
+</pre>
+<a name="getColor()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getColor">
+<b>
+getColor
+</b>
+</a>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> getColor()
+</pre>
+<a name="stopRendering()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stopRendering">
+<b>
+stopRendering
+</b>
+</a>
+<pre>
+  public void stopRendering()
+</pre>
+<a name="startRendering()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startRendering">
+<b>
+startRendering
+</b>
+</a>
+<pre>
+  public void startRendering()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FontTable.html#_top_">Previous</a>    <a href="awt.FormattingParameters.html#_top_">Next</a></pre>
+</body>
+</html>

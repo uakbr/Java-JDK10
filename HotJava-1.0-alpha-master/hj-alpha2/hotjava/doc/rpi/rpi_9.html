@@ -1,0 +1,18 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Building the Library</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING17></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_8.html">Prev</A> <A HREF="rpi_10.html">Next</A><P>
+<H1>7  Building the Library</H1>
+<HR>
+
+
+Building the library has three main parts to it. First, we need to create a real C file from the javah generated stubs file(s). We do this by placing an "include StubPreable.h" into the stub C file followed by one or more of the actual stub files. Once we have this C stub file we move on to building our native method C implementation. With these C files in hand we compile and link them into a dynamically loadable library. Now we're ready to run our Java code that depends on native C functions.<P>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_8.html">Prev</A> <A HREF="rpi_10.html">Next</A><P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

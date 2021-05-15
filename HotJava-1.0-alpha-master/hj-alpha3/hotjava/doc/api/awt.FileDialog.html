@@ -1,0 +1,173 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.FileDialog
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.EventRepeater.html#_top_">Previous</a>    <a href="awt.FlowLayout.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.FileDialog
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.FileDialog
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+FileDialog</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A class that brings up a file dialog using the native gui
+platform's dialog.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.10 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#parent">parent</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#title">title</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FileDialog(java.lang.String, awt.Frame)"><b>FileDialog</b></a>(String, Frame)
+<dd>
+Create a FileDialog, str is the title of the FileDialog.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#chooseFile(java.lang.String)"><b>chooseFile</b></a>(String)
+<dd>
+Put up a FileDialog and wait for the user to either select a
+file or cancel.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this FileDialog.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="title">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+title
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> title
+</pre>
+<a name="parent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+parent
+</b>
+<pre>
+  public <a href="awt.Frame.html#_top_">Frame</a> parent
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="FileDialog"></a>
+<a name="FileDialog(java.lang.String, awt.Frame)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FileDialog
+</b>
+<pre>
+  public FileDialog(<a href="java.lang.String.html#_top_">String</a> str,
+                    <a href="awt.Frame.html#_top_">Frame</a> p)
+</pre>
+<dl>
+<dd>
+Create a FileDialog, str is the title of the FileDialog. It can
+be null in which case a default title is chosen.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="chooseFile(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="chooseFile">
+<b>
+chooseFile
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> chooseFile(<a href="java.lang.String.html#_top_">String</a> initValue)
+</pre>
+<dl>
+<dd>
+Put up a FileDialog and wait for the user to either select a
+file or cancel. If a file was chosen it will be returned,
+otherwise, null is returned. If initValue is not null, then it
+will be used as the initial value for the file dialog.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this FileDialog.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.EventRepeater.html#_top_">Previous</a>    <a href="awt.FlowLayout.html#_top_">Next</a></pre>
+</body>
+</html>

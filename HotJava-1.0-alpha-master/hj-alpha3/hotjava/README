@@ -1,0 +1,53 @@
+This directory and all the directories below it contain the
+complete HotJava 1.0alpha3 and the Java language 1.0alpha3 binary
+release.
+
+To run this release of HotJava you will need:
+ 
+        - A Sun sparcstation
+ 
+        - A version of Solaris 2.3 or above (SunOS 5.3 or above)
+ 
+        - OpenWindows 3.0 or above.
+ 
+HotJava will run on monochrome and 24-bit framebuffers but
+works best on 8-bit framebuffers.
+Sorry, this release of HotJava does not run under X11R6. 
+
+To execute HotJava from the same directory where this README file
+is located, simply type:
+ 
+        ./bin/hotjava
+ 
+You can also add hotjava/bin to your path if you choose.
+
+Getting more information:
+
+In addition to the documentation included in this release, the latest
+information about Java and HotJava is available from
+http://java.sun.com. This includes announcements about new releases,
+an FAQ, a known bugs list, links to Java applets developed at other
+sites, and much more. 
+ 
+The group at Sun working on HotJava has ports underway to MacOS 7.5,
+Windows NT, and Windows-95. When they are available they will be
+announced on the Java home page and to the "java-announce" mailing
+list.
+
+A source code release is available.  See
+http://java.sun.com/source.html for full details.
+ 
+A bug submittal form has been included in this release.  To file a bug
+or request a new feature choose "Submit a Bug Report" from the "Help"
+menu. Known bugs and frequently requested features pages are
+maintained at http://java.sun.com/bugsandfeatures.html
+
+Several mailing lists are maintained by the Java team. See
+http://java.sun.com/mail.html for information on what is offered and
+how to subscribe.  Please send your comments or questions to the
+appropriate mailing list. If you need to communicate directly and
+privately with the Java development team, send mail to
+java@java.sun.com
+
+Please indicate that you are using the 1.0alpha3 version of the
+software when you write to us. 

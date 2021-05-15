@@ -1,0 +1,144 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.audio.AudioStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioPlayer.html#_top_">Previous</a>    <a href="browser.audio.AudioStreamSequence.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.audio.AudioStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----<a href="java.io.FilterInputStream.html#_top_">java.io.FilterInputStream</a>
+                   |
+                   +----browser.audio.AudioStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+AudioStream</b>
+<dt>
+extends <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>
+</dl>
+Convert an InputStream to an AudioInputStream. It can only
+read SUN .au files, 8 bit ulaw, 8000hz. one channel.
+It eats the header information.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="browser.audio.AudioPlayer.html#_top_">AudioPlayer</a><dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff<dt>
+<b>Version:</b>
+<dd>
+	1.7, 14 Mar 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#AudioStream(java.io.InputStream)"><b>AudioStream</b></a>(InputStream)
+<dd>
+Read header, only sun 8 bit, ulaw encoded, single channel,
+8000hz is supported
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getData()"><b>getData</b></a>()
+<dd>
+Get the data.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+A blocking read.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="AudioStream"></a>
+<a name="AudioStream(java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+AudioStream
+</b>
+<pre>
+  public AudioStream(<a href="java.io.InputStream.html#_top_">InputStream</a> in)
+</pre>
+<dl>
+<dd>
+Read header, only sun 8 bit, ulaw encoded, single channel,
+8000hz is supported
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte buf[],
+                  int pos,
+                  int len)
+</pre>
+<dl>
+<dd>
+A blocking read.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="getData()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getData">
+<b>
+getData
+</b>
+</a>
+<pre>
+  public <a href="browser.audio.AudioData.html#_top_">AudioData</a> getData()
+</pre>
+<dl>
+<dd>
+Get the data.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioPlayer.html#_top_">Previous</a>    <a href="browser.audio.AudioStreamSequence.html#_top_">Next</a></pre>
+</body>
+</html>

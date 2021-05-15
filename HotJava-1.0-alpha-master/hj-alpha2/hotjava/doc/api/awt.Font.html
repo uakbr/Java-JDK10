@@ -1,0 +1,392 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Font
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FocusManager.html#_top_">Previous</a>    <a href="awt.FontSpec.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Font
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.Font
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Font</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A font object. Use FontTable to create new fonts.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.FontTable.html#_top_">FontTable</a><dt>
+<b>Version:</b>
+<dd>
+1.19 23 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#BOLD">BOLD</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ITALIC">ITALIC</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#PLAIN">PLAIN</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#UNDERLINE">UNDERLINE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#actualHeight">actualHeight</a>
+</b>
+<dd>
+The actual height of the font.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ascent">ascent</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#descent">descent</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#family">family</a>
+</b>
+<dd>
+The family name of this font.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#height">height</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#style">style</a>
+</b>
+<dd>
+The style of the font.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#widths">widths</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#bytesWidth(byte[], int, int)"><b>bytesWidth</b></a>(byte[], int, int)
+<dd>
+Return the width of the specified byte[] in this Font.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#charWidth(int)"><b>charWidth</b></a>(int)
+<dd>
+Return the width of the specified character in this Font.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#charsWidth(char[], int, int)"><b>charsWidth</b></a>(char[], int, int)
+<dd>
+Return the width of the specified char[] in this Font.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Dispose of this font.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stringWidth(java.lang.String)"><b>stringWidth</b></a>(String)
+<dd>
+Return the width of the specified string in this Font.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Convert this object to a string representation.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="PLAIN">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+PLAIN
+</b>
+<pre>
+  public final static int PLAIN
+</pre>
+<a name="BOLD">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+BOLD
+</b>
+<pre>
+  public final static int BOLD
+</pre>
+<a name="ITALIC">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ITALIC
+</b>
+<pre>
+  public final static int ITALIC
+</pre>
+<a name="UNDERLINE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+UNDERLINE
+</b>
+<pre>
+  public final static int UNDERLINE
+</pre>
+<a name="widths">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+widths
+</b>
+<pre>
+  public int widths[]
+</pre>
+<a name="ascent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+ascent
+</b>
+<pre>
+  public int ascent
+</pre>
+<a name="descent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+descent
+</b>
+<pre>
+  public int descent
+</pre>
+<a name="height">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+height
+</b>
+<pre>
+  public int height
+</pre>
+<a name="actualHeight">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+actualHeight
+</b>
+<pre>
+  public int actualHeight
+</pre>
+<dl>
+<dd>
+The actual height of the font. It may be different than the
+height field because of font substitutions.
+</dl>
+<a name="family">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+family
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> family
+</pre>
+<dl>
+<dd>
+The family name of this font.
+</dl>
+<a name="style">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+style
+</b>
+<pre>
+  public int style
+</pre>
+<dl>
+<dd>
+The style of the font. This is the sum of the
+constants PLAIN, BOLD, ITALIC, and UNDERLINE.
+</dl>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Convert this object to a string representation.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="charWidth(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="charWidth">
+<b>
+charWidth
+</b>
+</a>
+<pre>
+  public int charWidth(int ch)
+</pre>
+<dl>
+<dd>
+Return the width of the specified character in this Font.
+</dl>
+<p>
+<a name="stringWidth(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stringWidth">
+<b>
+stringWidth
+</b>
+</a>
+<pre>
+  public int stringWidth(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Return the width of the specified string in this Font.
+</dl>
+<p>
+<a name="charsWidth(char[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="charsWidth">
+<b>
+charsWidth
+</b>
+</a>
+<pre>
+  public int charsWidth(char data[],
+                        int off,
+                        int len)
+</pre>
+<dl>
+<dd>
+Return the width of the specified char[] in this Font.
+</dl>
+<p>
+<a name="bytesWidth(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="bytesWidth">
+<b>
+bytesWidth
+</b>
+</a>
+<pre>
+  public int bytesWidth(byte data[],
+                        int off,
+                        int len)
+</pre>
+<dl>
+<dd>
+Return the width of the specified byte[] in this Font.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Dispose of this font. The use of the font after calling
+dispose is undefined.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FocusManager.html#_top_">Previous</a>    <a href="awt.FontSpec.html#_top_">Next</a></pre>
+</body>
+</html>

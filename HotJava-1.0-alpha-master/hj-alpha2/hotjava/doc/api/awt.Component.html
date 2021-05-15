@@ -1,0 +1,576 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Component
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ColumnLayout.html#_top_">Previous</a>    <a href="awt.Container.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Component
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.Component
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Component</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+<dt>
+implements <a href="awt.EventHandler.html#_top_">EventHandler</a>, <a href="awt.Layoutable.html#_top_">Layoutable</a>
+</dl>
+The parent class of all native GUI components.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.15 03 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff, Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#dim">dim</a>
+</b>
+<dd>
+If not 0, then this is the minimum dimension.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#height">height</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#mapped">mapped</a>
+</b>
+<dd>
+True when the object is mapped.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#marginHeight">marginHeight</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#marginWidth">marginWidth</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#name">name</a>
+</b>
+<dd>
+The symbolic name of the object.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#parent">parent</a>
+</b>
+<dd>
+The parent of the object, this may be 0 for windows.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#tidy">tidy</a>
+</b>
+<dd>
+True when the object is tidy (layed out).
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#width">width</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#x">x</a>
+</b>
+<dd>
+The dimensions of the object.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#y">y</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getChild(java.lang.String)"><b>getChild</b></a>(String)
+<dd>
+Returns child by name, only valid for containers.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Returns the natural size of the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleEvent(awt.Event)"><b>handleEvent</b></a>(Event)
+<dd>
+Handle Events
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layout()"><b>layout</b></a>()
+<dd>
+Calls layout() on the component (most commonly used by
+container objects).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Maps the object (called automatically when the
+parent is mapped).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#minDimension()"><b>minDimension</b></a>()
+<dd>
+Returns the minimum size of the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves the component to a new location.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#postEvent(awt.Event)"><b>postEvent</b></a>(Event)
+<dd>
+Posting Events
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes the component.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resize(int, int)"><b>resize</b></a>(int, int)
+<dd>
+Changes the size of the component.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setDimension(awt.Dimension)"><b>setDimension</b></a>(Dimension)
+<dd>
+Sets the dimension of the component.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setDimension(int, int)"><b>setDimension</b></a>(int, int)
+<dd>
+Sets the dimension of the component.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setForeground(awt.Color)"><b>setForeground</b></a>(Color)
+<dd>
+Sets the foreground color of this component (if applicable).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+UnMaps the object (called automatically when the
+parent is unmapped).
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="parent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+parent
+</b>
+<pre>
+  public <a href="awt.Container.html#_top_">Container</a> parent
+</pre>
+<dl>
+<dd>
+The parent of the object, this may be 0 for windows.
+</dl>
+<a name="name">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+name
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> name
+</pre>
+<dl>
+<dd>
+The symbolic name of the object. Often used for layout.
+</dl>
+<a name="x">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+x
+</b>
+<pre>
+  public int x
+</pre>
+<dl>
+<dd>
+The dimensions of the object.
+</dl>
+<a name="y">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+y
+</b>
+<pre>
+  public int y
+</pre>
+<a name="width">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+width
+</b>
+<pre>
+  public int width
+</pre>
+<a name="height">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+height
+</b>
+<pre>
+  public int height
+</pre>
+<a name="marginHeight">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+marginHeight
+</b>
+<pre>
+  public int marginHeight
+</pre>
+<a name="marginWidth">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+marginWidth
+</b>
+<pre>
+  public int marginWidth
+</pre>
+<a name="mapped">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+mapped
+</b>
+<pre>
+  public boolean mapped
+</pre>
+<dl>
+<dd>
+True when the object is mapped.
+</dl>
+<a name="tidy">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+tidy
+</b>
+<pre>
+  protected boolean tidy
+</pre>
+<dl>
+<dd>
+True when the object is tidy (layed out).
+</dl>
+<a name="dim">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+dim
+</b>
+<pre>
+  protected <a href="awt.Dimension.html#_top_">Dimension</a> dim
+</pre>
+<dl>
+<dd>
+If not 0, then this is the minimum dimension.
+</dl>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Maps the object (called automatically when the
+parent is mapped). This has no effect if the parent
+is not mapped.
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+UnMaps the object (called automatically when the
+parent is unmapped).
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int pX,
+                      int pY,
+                      int pW,
+                      int pH)
+</pre>
+<dl>
+<dd>
+Reshapes the component. Leaves the object untidy. This
+means that Layout must be called to tidy it up.
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int pX,
+                   int pY)
+</pre>
+<dl>
+<dd>
+Moves the component to a new location.
+</dl>
+<p>
+<a name="resize(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resize">
+<b>
+resize
+</b>
+</a>
+<pre>
+  public void resize(int pW,
+                     int pH)
+</pre>
+<dl>
+<dd>
+Changes the size of the component.
+</dl>
+<p>
+<a name="layout()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layout">
+<b>
+layout
+</b>
+</a>
+<pre>
+  public void layout()
+</pre>
+<dl>
+<dd>
+Calls layout() on the component (most commonly used by
+container objects).
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Returns the natural size of the object.
+</dl>
+<p>
+<a name="getChild(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getChild">
+<b>
+getChild
+</b>
+</a>
+<pre>
+  public <a href="awt.Layoutable.html#_top_">Layoutable</a> getChild(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Returns child by name, only valid for containers. Override if
+needed. 
+</dl>
+<p>
+<a name="minDimension()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="minDimension">
+<b>
+minDimension
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> minDimension()
+</pre>
+<dl>
+<dd>
+Returns the minimum size of the object.
+</dl>
+<p>
+<a name="setDimension(awt.Dimension)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setDimension">
+<b>
+setDimension
+</b>
+</a>
+<pre>
+  public void setDimension(<a href="awt.Dimension.html#_top_">Dimension</a> d)
+</pre>
+<dl>
+<dd>
+Sets the dimension of the component.
+</dl>
+<p>
+<a name="setForeground(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setForeground">
+<b>
+setForeground
+</b>
+</a>
+<pre>
+  public void setForeground(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the foreground color of this component (if applicable).
+</dl>
+<p>
+<a name="setDimension(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setDimension">
+<b>
+setDimension
+</b>
+</a>
+<pre>
+  public void setDimension(int pW,
+                           int pH)
+</pre>
+<dl>
+<dd>
+Sets the dimension of the component.
+</dl>
+<p>
+<a name="postEvent(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="postEvent">
+<b>
+postEvent
+</b>
+</a>
+<pre>
+  public boolean postEvent(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Posting Events
+</dl>
+<p>
+<a name="handleEvent(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleEvent">
+<b>
+handleEvent
+</b>
+</a>
+<pre>
+  public boolean handleEvent(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Handle Events
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ColumnLayout.html#_top_">Previous</a>    <a href="awt.Container.html#_top_">Next</a></pre>
+</body>
+</html>

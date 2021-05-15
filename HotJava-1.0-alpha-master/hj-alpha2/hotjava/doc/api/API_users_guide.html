@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>
+ API User's Guide
+</title>
+</head>
+<body>
+
+<a href="packages.html"> Java API</a>
+<h1>Java Application Programming Interface</h1> 
+<h1>User's Guide </h1>
+
+<h2>How the API Is Organized</h2>
+
+There are three levels to the API: 
+
+<ul>
+<li>All Packages
+<li>All Classes (within a package)
+<li>This Class (selected class).
+</ul>
+
+<h3>Level 1 - All Packages</h3>
+This level of the API provides links to the packages in the 1.0 release.
+
+<h3>Level 2 - This Package</h3>
+This level provides links to the classes and interfaces in a given package. There are three catogories in the listing:
+<ul>
+<li>Interfaces
+<li>Classes
+<li>Exceptions
+</ul>
+
+<h3>Level 3 - This Class/Interface</h3>
+This level begins with an index, followed by the detailed API. There are three categories at the class level. 
+<ul>
+<li>Variables
+<li>Constructors
+<li>Methods
+</ul>
+A category is omitted when a class has no applicable entries.<p>
+
+Within these categories there is additional color coding as follows:
+<dl>
+<dd><img src="images/magenta-ball.gif"> Instance Variables 
+<dd><img src="images/blue-ball.gif"> Static Variables
+<dd><img src="images/yellow-ball.gif"> Constructors
+<dd><img src="images/red-ball.gif"> Instance Methods
+<dd><img src="images/green-ball.gif"> Static Methods
+</dl>
+
+<h2>How to Locate Items</h2>
+<ul>
+<li>To Browse A Package
+<menu>
+	<li>Select a package from the list of All Packages.
+	This list is the home page for the the Java API.
+</menu>
+<li>To Locate a Class
+<menu>
+	<li>Use the searchable index tool.
+	<li>Or, select its package.
+	<li>Select the class from the alphabetical index.
+</menu>
+<li>To Browse a Class
+<menu>
+	<li>Use the Next/Previous anchors to browse alphabetically.
+	<li>Or, traverse the links within the class.
+</menu>
+
+<li>To Locate a Method
+<menu>
+	<li>Use the searchable index tool.
+	<li>Or, scroll through the alphabetical class index to locate a method.
+</menu>
+</ul>
+
+
+<h3>A Closer Look at the Class-Level API</h3>
+
+Take a look at class String in the package java.lang. The navigational anchors are at the top. This is followed by the fully qualified class name and a representation of its position in the
+class hierarchy.<p>
+
+The next entries are links to the superclass and the interfaces, if
+any. This is followed by a description of the class, taken from the
+class comment. Notice how the programmer has embedded some code
+samples using html tags.<p>
+
+The author also chose to include a See Also entry to another
+class. Following the class-level entries for See Also, Version, and Author,
+the index begins.
+
+<h3>The Index</h3>
+
+Each class/interface begins with an index of its variables, constructors and methods, sorted alphabetically. The entry consists of the declaration and  short description. The  description is the first sentence of the doc comment for that item. The index entries are linked to their corresponding entries in the application programming inteface which immediately follows. <p>
+
+<h3>The Detailed API</h3>
+
+The index is followed by the complete API for
+each entry. 
+Within the three categories: Variables, Constructors, and Methods, the entries are presented in the order they
+appear in the source. This is done to preserve the logical groupings established by the
+programmer.
+
+<h3>Where Are All the Links in the API?</h3>
+
+<ul>
+<li>At the top of each class/interface there are navigational anchors to the other levels and to Previous and Next (class or interface). 
+<li>There are links in the class type of every method and variable definition.
+<li>At the top of each class/interface there is a drawing of the tree structure down to the current class/interface, in which each superclass is a link.
+<li>Every method contains a list of exceptions that it may throw.
+These are linked to the appropriate class.
+<li>The superclass and interface references at the beginning of the class are links.
+<li>Every See Also is a link.
+<li>When a method overrides a method in the superclass, the API has the  entry "Overrides: foo in class bar." Both foo (the method name) and bar (the class name) are links.
+</ul>
+
+<hr>
+</body>

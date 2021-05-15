@@ -1,0 +1,129 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.AnchorTagRef
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.AnchorStyle.html#_top_">Previous</a>    <a href="browser.AppTagRef.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.AnchorTagRef
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.www.html.TagRef.html#_top_">net.www.html.TagRef</a>
+           |
+           +----<a href="browser.WRTagRef.html#_top_">browser.WRTagRef</a>
+                   |
+                   +----<a href="browser.StyleTagRef.html#_top_">browser.StyleTagRef</a>
+                           |
+                           +----browser.AnchorTagRef
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+AnchorTagRef</b>
+<dt>
+extends <a href="browser.StyleTagRef.html#_top_">StyleTagRef</a>
+</dl>
+An instance of class AnchorTagRef is created for each occurrence
+of <a ...> tags in an html document.  An AnchorTagRef is either
+an anchor (i.e., it points to another document) or it's an endpoint
+for some other document (i.e., it has no "href" attribute).
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.8, 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#AnchorTagRef(net.www.html.Tag, int, boolean, browser.Style)"><b>AnchorTagRef</b></a>(Tag, int, boolean, Style)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#apply(browser.WRFormatter)"><b>apply</b></a>(WRFormatter)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isLink()"><b>isLink</b></a>()
+<dd>
+Returns true if this anchor contains a link to another
+document.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="AnchorTagRef"></a>
+<a name="AnchorTagRef(net.www.html.Tag, int, boolean, browser.Style)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+AnchorTagRef
+</b>
+<pre>
+  public AnchorTagRef(<a href="net.www.html.Tag.html#_top_">Tag</a> t,
+                      int pos,
+                      boolean isEnd,
+                      <a href="browser.Style.html#_top_">Style</a> s)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="apply(browser.WRFormatter)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="apply">
+<b>
+apply
+</b>
+</a>
+<pre>
+  public void apply(<a href="browser.WRFormatter.html#_top_">WRFormatter</a> f)
+</pre>
+<a name="isLink()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isLink">
+<b>
+isLink
+</b>
+</a>
+<pre>
+  public boolean isLink()
+</pre>
+<dl>
+<dd>
+Returns true if this anchor contains a link to another
+document.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.AnchorStyle.html#_top_">Previous</a>    <a href="browser.AppTagRef.html#_top_">Next</a></pre>
+</body>
+</html>

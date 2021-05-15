@@ -1,0 +1,310 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.TextWindow
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.TextField.html#_top_">Previous</a>    <a href="awt.Toggle.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.TextWindow
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----<a href="awt.Container.html#_top_">awt.Container</a>
+                   |
+                   +----<a href="awt.Window.html#_top_">awt.Window</a>
+                           |
+                           +----<a href="awt.DisplayItemWindow.html#_top_">awt.DisplayItemWindow</a>
+                                   |
+                                   +----awt.TextWindow
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+TextWindow</b>
+<dt>
+extends <a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a>
+</dl>
+A class that displays formatted text in a window. Also has a
+SmoothScroller associated with it.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Formatter.html#_top_">Formatter</a>,
+<a href="awt.Text.html#_top_">Text</a>,
+<a href="awt.SmoothScroller.html#_top_">SmoothScroller</a><dt>
+<b>Version:</b>
+<dd>
+1.25 23 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#formatter">formatter</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TextWindow(awt.Window, java.lang.String)"><b>TextWindow</b></a>(Window, String)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TextWindow(awt.Frame, java.lang.String)"><b>TextWindow</b></a>(Frame, String)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearItems()"><b>clearItems</b></a>()
+<dd>
+Clears the list of DisplayItems for this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dumpItemInfo()"><b>dumpItemInfo</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keyPressed(awt.Event)"><b>keyPressed</b></a>(Event)
+<dd>
+Override this method to take some action when a key is pressed
+in this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layoutDocument()"><b>layoutDocument</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(awt.PSGraphics)"><b>print</b></a>(PSGraphics)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFormatter(awt.Formatter)"><b>setFormatter</b></a>(Formatter)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startNewLine(int)"><b>startNewLine</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startNewLine(int, int)"><b>startNewLine</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#validate()"><b>validate</b></a>()
+<dd>
+Marks this window as valid (not in need of repainting)
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="formatter">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+formatter
+</b>
+<pre>
+  public <a href="awt.Formatter.html#_top_">Formatter</a> formatter
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="TextWindow"></a>
+<a name="TextWindow(awt.Window, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TextWindow
+</b>
+<pre>
+  public TextWindow(<a href="awt.Window.html#_top_">Window</a> parent,
+                    <a href="java.lang.String.html#_top_">String</a> client)
+</pre>
+<a name="TextWindow(awt.Frame, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TextWindow
+</b>
+<pre>
+  public TextWindow(<a href="awt.Frame.html#_top_">Frame</a> parent,
+                    <a href="java.lang.String.html#_top_">String</a> client)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setFormatter(awt.Formatter)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFormatter">
+<b>
+setFormatter
+</b>
+</a>
+<pre>
+  public synchronized void setFormatter(<a href="awt.Formatter.html#_top_">Formatter</a> f)
+</pre>
+<a name="validate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="validate">
+<b>
+validate
+</b>
+</a>
+<pre>
+  public void validate()
+</pre>
+<dl>
+<dd>
+Marks this window as valid (not in need of repainting)
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItemWindow.html#validate()">validate</a> in class <a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a></dl>
+</dl>
+<p>
+<a name="clearItems()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearItems">
+<b>
+clearItems
+</b>
+</a>
+<pre>
+  public void clearItems()
+</pre>
+<dl>
+<dd>
+Clears the list of DisplayItems for this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItemWindow.html#clearItems()">clearItems</a> in class <a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a></dl>
+</dl>
+<p>
+<a name="layoutDocument()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layoutDocument">
+<b>
+layoutDocument
+</b>
+</a>
+<pre>
+  protected void layoutDocument()
+</pre>
+<a name="startNewLine(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startNewLine">
+<b>
+startNewLine
+</b>
+</a>
+<pre>
+  public void startNewLine(int n)
+</pre>
+<a name="startNewLine(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startNewLine">
+<b>
+startNewLine
+</b>
+</a>
+<pre>
+  public void startNewLine(int n,
+                           int y)
+</pre>
+<a name="print(awt.PSGraphics)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public synchronized void print(<a href="awt.PSGraphics.html#_top_">PSGraphics</a> pg)
+</pre>
+<a name="dumpItemInfo()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dumpItemInfo">
+<b>
+dumpItemInfo
+</b>
+</a>
+<pre>
+  public void dumpItemInfo()
+</pre>
+<a name="keyPressed(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keyPressed">
+<b>
+keyPressed
+</b>
+</a>
+<pre>
+  public void keyPressed(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when a key is pressed
+in this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItemWindow.html#keyPressed(awt.Event)">keyPressed</a> in class <a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.TextField.html#_top_">Previous</a>    <a href="awt.Toggle.html#_top_">Next</a></pre>
+</body>
+</html>

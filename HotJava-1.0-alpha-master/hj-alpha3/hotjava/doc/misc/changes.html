@@ -1,0 +1,206 @@
+<html>
+<head><title>Changes Since the Last Release</title></head>
+
+<body>
+<h1><img src="../../demo/images/wrlogo.gif"></h1>
+<img src="../../demo/images/bar.gif">
+<br>
+<b>Version 1.0 Alpha3</b>
+
+<h1>Changes Since the Last Release</h1>
+The current (1.0 Alpha3) release of HotJava
+fixes many bugs and adds some features.
+This page lists the changes that you might notice.
+First, it lists the changes that HotJava 
+<a href="#User">users</a> might notice.
+Then it lists the changes that only 
+<a href="#Programmer">programmers</A> would notice.
+If you want to see how the Alpha2 release differed from Alpha1, see
+<a href="http://java.sun.com/1.0alpha2/doc/changes/changes.html>the
+previous version of this document</a>.
+<p>
+
+<a name=User><h2>Changes Visible to HotJava Users</h2></A>
+
+Details of the 1.0 Alpha3 changes to HotJava are listed below.
+For information on how to use new and changed features,
+refer to the 
+<A Href="using.html">HotJava User's Guide</A>.
+<P>
+
+<ul>
+<li> Added a STOP button.
+     This button cancels the fetching of a page or image;
+     it doesn't affect applets.
+<li> Editable text fields now have white backgrounds.
+<li> Buttons look different.
+<li> Applets can now write to files, as determined by your write path.
+     By default, the write path is empty.
+     For security reasons, an applet won't be loaded from a filesystem
+     that is writable by applets.
+<li> Added an experimental version of a Progress Monitor (available through the
+     Options menu).
+<li> Implemented the gopher protocol.
+<li> Changed the default font from 17 point to 14 point.
+<li> User documentation updated to include new Alpha3 features.
+     Also, the documentation hierarchy has been reorganized.
+     The <a href="../index.html">Documentation Home Page</a>
+     now has links to the latest draft documentation
+     and to the user documentation.
+<li> Mail composition and message posting dialogs now have a "From" field
+     that lets you enter your e-mail address.
+<li> The mail composition window has a "Cc" field.
+<li> Submitting a form via a mailto URL causes a confirmation dialog to appear.
+<li> News protocol handling works better now.
+<li> Added suspend/resume feature to the ImageLoopItem applet.
+     Click the applet's display area to suspend/resume the animation.
+<li> When a documentation file doesn't exist on the user's system,
+     HotJava now looks for the document under http://java.sun.com/1.0alpha3.
+     (Last release, it looked under 1.0alpha2.)
+     You can override which directory (instead of 1.0alpha3)
+     HotJava looks under by setting the HOTJAVA_RELEASE environment variable.
+</ul>
+
+<a name=Programmer><h2>Changes Visible to Programmers</h2></a>
+Details of the 1.0 Alpha3 changes are listed below.
+For more details on the API,
+refer to
+<A Href="../api/packages.html">The Java Class API</A>.
+For information about the Java language, refer to
+<a href="../javaspec/javaspec_1.html">The Java Language Specification</a>.
+For information on compatibility between releases, refer to
+<a href="compatibility.html">HotJava Applet Compatibility</a>.
+<P>
+
+<ul>
+<li> The Java Language Specification has been revised.
+     It's now clearer, describes the new language features (listed below),
+     and has a new appendix that formally describes the Java grammar.
+<li> Java language changes:
+     <ul>
+     <li> Added a new declaration syntax for arrays,
+          which makes it easier to declare a method that returns an array:
+<pre>
+int[] i;
+int[] method();
+</pre>
+     <li>Both catch and finally are now allowed in a single try statement:
+<pre>
+try{...}catch(e){...}finally{...}
+</pre>
+     <li> Allow trailing ',' in static array initializers.
+     </ul>
+<li> Added double-buffering to allow you to improve animation performance.
+     You do this by creating an image and drawing to it directly
+     using a Graphics object.
+     Double-buffering is NOT backwards compatibile --
+     applets that use it can't be executed by the Alpha2 release of
+     the HotJava browser.
+     You can work around this with code such as the following:
+<pre>
+class MyApplet extends Applet {
+    Image		im;
+    Graphics	offscreen;
+
+    public void init() {
+    	...
+    	resize(400, 500); // or whatever
+    	...
+
+    	try {
+    	   im = createImage(width, height);
+    	   offscreen = new Graphics(im);
+    	} catch (Exception e) {
+    	   // double-buffering not available
+    	   offscreen = null;
+    	}
+    }
+
+    public void paintApplet(Graphics g) {
+    	... code to paint your applet ...
+    }
+
+    public void update(Graphics g) {
+    	paint(g);
+    }
+
+    public void paint(Graphics g) {
+    	if (offscreen != null) { 
+            // double-buffering available
+	    paintApplet(offscreen);
+	    g.drawImage(im, 0, 0);
+	} else {
+            // no double-buffering
+	    paintApplet(g);
+	}
+    }
+
+    public void destroy() {
+    	if (offscreen != null) {
+            offscreen.dispose();
+	    im.dispose();
+	}
+    }
+}
+</pre>
+<li> New font metrics interfaces (awt.FontMetrics).
+     The metrics interfaces in awt.Font will go away in the beta release.
+<li> javah has been changed, so that the process of writing native methods
+     has been simplified.
+     The javah man page has been updated to reflect these changes.  
+<li> Made static initializer public so the URL class can be used from
+     outside the net.www.html package.
+<li> Date: deals with timezone-independent times; can deal with GMT.
+<li> System: added a time-of-day method that actually works.
+<li> Fixed Color class so you can initialize it without having
+     a WServer object around. 
+<li> Switched to dithering intensities instead of RGB on grayscale displays.
+     This is a big improvement in image quality on mono and grayscale displays.
+<li> Made Socket.connect method public (with some security checks of course).
+<li> Improved support for doubles and long long's on machines that insist
+     these be 8-byte aligned.
+     (This change is visible only to porters.)
+<li> Added support for binding a socket to any local address.
+     Creating an InetAddress with a hostname of null means
+     "any of the local machine's network addresses."
+<li> Fixed a core dumper in the Date class.
+<li> Fixed a javah bug that caused byte, char and short fields
+     to be majorly messed up.
+<li> Compiler/run-time fixes:
+     <ul>
+     <li> >>=, <<=, >>>= were not compiling properly for longs.
+     <li> Compiler didn't like unused variables with array initialize.
+     <li> Methods and ivars were confused.
+     <li> String += object didn't work.
+     <li> Wrapping code in a try-finally caused undefined variable error.
+     <li> Null Pointer exception in compiler when compiling 0.0/0.0.
+     <li> Class resolution deadlock.
+     <li> Compiler didn't accept   0X1 and 0x1L.
+     <li> javac not multi-thread safe.
+     <li> Compiler did not insist that the package be the first thing
+          in the file.
+     </ul>
+<li> Added the following classes and interfaces:
+     <dl>
+     <dt> In awt:
+     <dd> FontMetrics
+
+     <dt> In java.io:
+     <dd> StringBufferPrintStream, StringInputStream, TextInputStream
+
+     <dt> In java.util:
+     <dd> BASE64Decoder, BASE64Encoder, BitSet, CRC16, Cache,
+          CharacterDecoder, CharacterEncoder, HexDumpEncoder,
+	  UCDecoder, UCEncoder, UUDecode, UUEncoder, CEFormatException,
+	  CEStreamExhausted, EmptyStackException
+
+    </dl>
+</ul>
+
+<hr>
+<address>
+Send your comments or questions to <A
+href="mailto:java@java.sun.com"><em>java@java.sun.com</em></A>
+</address>
+</body>
+</html>

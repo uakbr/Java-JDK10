@@ -1,0 +1,247 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.InetAddress
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.Firewall.html#_top_">Previous</a>    <a href="net.NetworkClient.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.InetAddress
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.InetAddress
+</pre>
+<hr>
+<dl>
+<dt>
+public final class <b>
+InetAddress</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#address">address</a>
+</b>
+<dd>
+Address number of this host in network byte order.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#hostName">hostName</a>
+</b>
+<dd>
+Hostname this address is for - also the key in the
+	above hash table.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#localHostName">localHostName</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#InetAddress(java.lang.String)"><b>InetAddress</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#InetAddress(java.lang.String, net.InetAddress)"><b>InetAddress</b></a>(String, InetAddress)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#equals(java.lang.Object)"><b>equals</b></a>(Object)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getByName(java.lang.String)"><b>getByName</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getByName(java.lang.String, net.InetAddress)"><b>getByName</b></a>(String, InetAddress)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getLocalHostName()"><b>getLocalHostName</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getPortByName(java.lang.String)"><b>getPortByName</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="localHostName">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+localHostName
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> localHostName
+</pre>
+<a name="hostName">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+hostName
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> hostName
+</pre>
+<dl>
+<dd>
+Hostname this address is for - also the key in the
+	above hash table.
+</dl>
+<a name="address">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+address
+</b>
+<pre>
+  public int address
+</pre>
+<dl>
+<dd>
+Address number of this host in network byte order.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="InetAddress"></a>
+<a name="InetAddress(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+InetAddress
+</b>
+<pre>
+  public InetAddress(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<a name="InetAddress(java.lang.String, net.InetAddress)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+InetAddress
+</b>
+<pre>
+  public InetAddress(<a href="java.lang.String.html#_top_">String</a> host,
+                     <a href="#_top_">InetAddress</a> DNShost)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getByName(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getByName">
+<b>
+getByName
+</b>
+</a>
+<pre>
+  public static <a href="#_top_">InetAddress</a> getByName(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<a name="getByName(java.lang.String, net.InetAddress)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getByName">
+<b>
+getByName
+</b>
+</a>
+<pre>
+  public static <a href="#_top_">InetAddress</a> getByName(<a href="java.lang.String.html#_top_">String</a> host,
+                                      <a href="#_top_">InetAddress</a> DNSHost)
+</pre>
+<a name="getLocalHostName()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getLocalHostName">
+<b>
+getLocalHostName
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> getLocalHostName()
+</pre>
+<a name="getPortByName(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getPortByName">
+<b>
+getPortByName
+</b>
+</a>
+<pre>
+  public static synchronized int getPortByName(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<a name="equals(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="equals">
+<b>
+equals
+</b>
+</a>
+<pre>
+  public boolean equals(<a href="java.lang.Object.html#_top_">Object</a> o)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.Firewall.html#_top_">Previous</a>    <a href="net.NetworkClient.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Conversion Operations</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING131></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_24.html">Prev</A>       <A HREF="vmspec_26.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Conversion Operations</H1>
+<DL>
+<DT><A HREF="vmspec_25.html#HEADING132"><B></B>  i2l</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING133"><B></B>  i2f</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING134"><B></B>  i2d</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING135"><B></B>  l2i</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING136"><B></B>  l2f</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING137"><B></B>  l2d</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING138"><B></B>  f2i</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING139"><B></B>  f2l</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING140"><B></B>  f2d</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING141"><B></B>  d2i</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING142"><B></B>  d2l</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING143"><B></B>  d2f</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING144"><B></B>  int2byte</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING145"><B></B>  int2char</A><DD>
+<DT><A HREF="vmspec_25.html#HEADING146"><B></B>  int2short</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING132></A>
+<H3>i2l</H3>
+Integer to long integer conversion<BR><IMG SRC="instructions_only_Tbl_70.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be an integer. It is converted to a long integer. The result replaces value on the stack.<P>
+<A NAME=HEADING133></A>
+<H3>i2f</H3>
+Integer to single float<BR><IMG SRC="instructions_only_Tbl_110.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result<P>
+</PRE>
+value should be an integer. It is converted to a single precision floating point number. The result replaces value on the stack.<P>
+<A NAME=HEADING134></A>
+<H3>i2d</H3>
+Integer to double float<BR><IMG SRC="instructions_only_Tbl_71.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be an integer. It is converted to a double precision floating point number. The result replaces value on the stack.<P>
+<A NAME=HEADING135></A>
+<H3>l2i</H3>
+Long integer to integer<BR><IMG SRC="instructions_only_Tbl_74.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result<P>
+</PRE>
+value should be a long integer. It is converted to a integer. The result replaces value on the stack.<P>
+<A NAME=HEADING136></A>
+<H3>l2f</H3>
+Long integer to single float<BR><IMG SRC="instructions_only_Tbl_75.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result<P>
+</PRE>
+value should be a long integer. It is converted to a single precision floating point number. The result replaces value on the stack.<P>
+<A NAME=HEADING137></A>
+<H3>l2d</H3>
+Long integer to double float<BR><IMG SRC="instructions_only_Tbl_76.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be a long integer. It is converted to a double precision floating point number. The result replaces value on the stack.<P>
+<A NAME=HEADING138></A>
+<H3>f2i</H3>
+Single float to integer<BR><IMG SRC="instructions_only_Tbl_109.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result<P>
+</PRE>
+value should be a single precision floating point number. It is converted to an integer. The result replaces value on the stack.<P>
+<A NAME=HEADING139></A>
+<H3>f2l</H3>
+Single float to long integer<BR><IMG SRC="instructions_only_Tbl_72.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be a single precision floating point number. It is converted to a long integer. The result replaces value on the stack.<P>
+<A NAME=HEADING140></A>
+<H3>f2d</H3>
+Single float to double float<BR><IMG SRC="instructions_only_Tbl_73.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be a single precision floating point number. It is converted to a double precision floating point number. The result replaces value on the stack.<P>
+<A NAME=HEADING141></A>
+<H3>d2i</H3>
+Double float to integer<BR><IMG SRC="instructions_only_Tbl_77.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result<P>
+</PRE>
+value should be a double precision floating point number. It is converted to an integer. The result replaces value on the stack.<P>
+<A NAME=HEADING142></A>
+<H3>d2l</H3>
+Double float to long integer<BR><IMG SRC="instructions_only_Tbl_78.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be a double precision floating point number. It is converted to a long integer. The result replaces value on the stack.<P>
+<A NAME=HEADING143></A>
+<H3>d2f</H3>
+Double float to single float<BR><IMG SRC="instructions_only_Tbl_79.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result<P>
+</PRE>
+value should be a double precision floating point number. It is converted to a single precision floating point number. The result replaces value on the stack.<P>
+<A NAME=HEADING144></A>
+<H3>int2byte</H3>
+Integer to signed byte<BR><IMG SRC="instructions_only_Tbl_108.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be an integer. It is truncated to a signed 8-bit result, then sign extended to an integer. The result replaces value on the stack.<P>
+<A NAME=HEADING145></A>
+<H3>int2char</H3>
+<BR><IMG SRC="instructions_only_Tbl_107.gif"><BR>
+Integer to char<P>
+<PRE>
+..., &lt;int&gt; =&gt; ..., &lt;result&gt;<P>
+</PRE>
+value should be an integer. It is truncated to an unsigned 16-bit result, then sign extended to an integer. The result replaces value on the stack.<P>
+<A NAME=HEADING146></A>
+<H3>int2short</H3>
+<BR><IMG SRC="instructions_only_Tbl_52.gif"><BR>
+Integer to char<P>
+<PRE>
+..., &lt;int&gt; =&gt; ..., &lt;result&gt;<P>
+</PRE>
+value should be an integer. It is truncated to a signed 16-bit result, then sign extended to an integer. The result replaces value on the stack.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_24.html">Prev</A>       <A HREF="vmspec_26.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,166 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.ObjectScope
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Lock.html#_top_">Previous</a>    <a href="java.util.Stack.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.ObjectScope
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.ObjectScope
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+ObjectScope</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Routines to be used by debuggers to examine objects.  This class
+<em>definitely</em> needs access security. Fields are accessed by their
+"slot number."  Routines which return arrays of strings are indexed
+ by slot number.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.7, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+	James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#ObjectScope()"><b>ObjectScope</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getFields(java.lang.Object)"><b>getFields</b></a>(Object)
+<dd>
+Gets the names of all the fields in an Object.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getMethods(java.lang.Object)"><b>getMethods</b></a>(Object)
+<dd>
+Gets the names of all the methods in an Object.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getObject(java.lang.Object, int)"><b>getObject</b></a>(Object, int)
+<dd>
+Gets the value in slot n of Object o.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getValues(java.lang.Object)"><b>getValues</b></a>(Object)
+<dd>
+Gets the values of all the fields in an Object.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="ObjectScope"></a>
+<a name="ObjectScope()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+ObjectScope
+</b>
+<pre>
+  public ObjectScope()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getObject(java.lang.Object, int)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getObject">
+<b>
+getObject
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.Object.html#_top_">Object</a> getObject(<a href="java.lang.Object.html#_top_">Object</a> o,
+                                 int n)
+</pre>
+<dl>
+<dd>
+Gets the value in slot n of Object o.
+</dl>
+<p>
+<a name="getFields(java.lang.Object)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getFields">
+<b>
+getFields
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> getFields(<a href="java.lang.Object.html#_top_">Object</a> o)
+</pre>
+<dl>
+<dd>
+Gets the names of all the fields in an Object.
+</dl>
+<p>
+<a name="getMethods(java.lang.Object)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getMethods">
+<b>
+getMethods
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> getMethods(<a href="java.lang.Object.html#_top_">Object</a> o)
+</pre>
+<dl>
+<dd>
+Gets the names of all the methods in an Object.
+</dl>
+<p>
+<a name="getValues(java.lang.Object)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getValues">
+<b>
+getValues
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> getValues(<a href="java.lang.Object.html#_top_">Object</a> o)
+</pre>
+<dl>
+<dd>
+Gets the values of all the fields in an Object.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Lock.html#_top_">Previous</a>    <a href="java.util.Stack.html#_top_">Next</a></pre>
+</body>
+</html>

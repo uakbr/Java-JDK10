@@ -1,0 +1,289 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.PushbackInputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PrintStream.html#_top_">Previous</a>    <a href="java.io.RandomAccessFile.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.PushbackInputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----<a href="java.io.FilterInputStream.html#_top_">java.io.FilterInputStream</a>
+                   |
+                   +----java.io.PushbackInputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+PushbackInputStream</b>
+<dt>
+extends <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>
+</dl>
+An input stream that has a 1 byte push back buffer.
+It also keeps track of line numbers.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.6, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lineNumber">lineNumber</a>
+</b>
+<dd>
+The current line number.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#pushBack">pushBack</a>
+</b>
+<dd>
+Push back character.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PushbackInputStream(java.io.InputStream)"><b>PushbackInputStream</b></a>(InputStream)
+<dd>
+Creates a PushbackInputStream.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#currentLine()"><b>currentLine</b></a>()
+<dd>
+Returns the current line number.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Reads a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+Reads into an array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unread(int)"><b>unread</b></a>(int)
+<dd>
+Pushes back a character.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="pushBack">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+pushBack
+</b>
+<pre>
+  protected int pushBack
+</pre>
+<dl>
+<dd>
+Push back character.
+</dl>
+<a name="lineNumber">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lineNumber
+</b>
+<pre>
+  protected int lineNumber
+</pre>
+<dl>
+<dd>
+The current line number.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="PushbackInputStream"></a>
+<a name="PushbackInputStream(java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PushbackInputStream
+</b>
+<pre>
+  public PushbackInputStream(<a href="java.io.InputStream.html#_top_">InputStream</a> in)
+</pre>
+<dl>
+<dd>
+Creates a PushbackInputStream.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+in
+-
+ the input stream
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read()
+</pre>
+<dl>
+<dd>
+Reads a byte. Will block if no input is available.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the byte read, or -1 if the end of the
+		stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#read()">read</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte bytes[],
+                  int offset,
+                  int length)
+</pre>
+<dl>
+<dd>
+Reads into an array of bytes.
+Blocks until some input is available.
+This method should be overridden in a subclass for
+efficiency (the default implementation reads 1 byte
+at a time).
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dd>
+off
+-
+ the start offset of the data
+<dd>
+len
+-
+ the maximum number of bytes read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="unread(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unread">
+<b>
+unread
+</b>
+</a>
+<pre>
+  public void unread(int ch)
+</pre>
+<dl>
+<dd>
+Pushes back a character. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+ the character to push back.
+<dt>
+<b>Throws:</b> <a href="java.lang.Exception.html#_top_">Exception</a>
+<dd>
+ Attempt to push back more than one character.
+</dl>
+</dl>
+<p>
+<a name="currentLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="currentLine">
+<b>
+currentLine
+</b>
+</a>
+<pre>
+  public int currentLine()
+</pre>
+<dl>
+<dd>
+Returns the current line number.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PrintStream.html#_top_">Previous</a>    <a href="java.io.RandomAccessFile.html#_top_">Next</a></pre>
+</body>
+</html>

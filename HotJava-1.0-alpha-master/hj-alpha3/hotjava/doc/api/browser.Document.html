@@ -1,0 +1,379 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.Document
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.DisplayItemTagRef.html#_top_">Previous</a>    <a href="browser.DocumentManager.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.Document
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.www.html.Document.html#_top_">net.www.html.Document</a>
+           |
+           +----browser.Document
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Document</b>
+<dt>
+extends <a href="net.www.html.Document.html#_top_">Document</a>
+</dl>
+Class Document extends the generic html.Document class to use
+TagRef subclasses that contain information about formatting the
+document.  This is the class which associates particular style
+changes with particular html tags.  Many of the html tags are
+associated with a single TagRef subclass called StyleTagRef,
+which knows how to apply a style to the formatter when the
+formatter encounters that tag.  But many other tags have their
+own special subclass of TagRef, and it's this class which
+associates those TagRef subclasses with the html tag.<p> This
+also handles creation, starting, stopping and destruction of
+hotjava applets.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="browser.Applet.html#_top_">Applet</a>,
+<a href="browser.Style.html#_top_">Style</a>,
+<a href="net.www.html.Document.html#_top_">Document</a><dt>
+<b>Version:</b>
+<dd>
+1.50, 10 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#displayItem">displayItem</a>
+</b>
+<dd>
+If an html document is transformed into a DisplayItem
+	(rather than being a normal text document) then this points
+	to that DisplayItem and the other parts of the document are
+	ignored
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Document(net.www.html.URL, java.io.InputStream)"><b>Document</b></a>(URL, InputStream)
+<dd>
+Creates a new Document with the specified URL and InputStream.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Document(net.www.html.URL, java.lang.String)"><b>Document</b></a>(URL, String)
+<dd>
+Creates a new Document with the specified URL with its
+contents initialized by the specified String.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addApplet(browser.AppletDisplayItem)"><b>addApplet</b></a>(AppletDisplayItem)
+<dd>
+Add an applet to this document
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#destroyApplets()"><b>destroyApplets</b></a>()
+<dd>
+Send destroy()s to all the Applets in our hashtable.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#endTag(net.www.html.Tag, int)"><b>endTag</b></a>(Tag, int)
+<dd>
+Creates and returns a new TagRef for the specified html end tag.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#flushImages()"><b>flushImages</b></a>()
+<dd>
+Nuke all the images in a document
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setURL(net.www.html.URL)"><b>setURL</b></a>(URL)
+<dd>
+Sets the URL that is associated with this document.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startApplets()"><b>startApplets</b></a>()
+<dd>
+Send start()s to all the Applets in our hashtable.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startTag(net.www.html.Tag, int)"><b>startTag</b></a>(Tag, int)
+<dd>
+Creates and returns a new TagRef for the specified html start tag.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#stopApplets()"><b>stopApplets</b></a>()
+<dd>
+Send stop()s to all the Applets in our hashtable.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#url()"><b>url</b></a>()
+<dd>
+Returns the URL that is associated with this document.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="displayItem">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+displayItem
+</b>
+<pre>
+  public <a href="awt.DisplayItem.html#_top_">DisplayItem</a> displayItem
+</pre>
+<dl>
+<dd>
+If an html document is transformed into a DisplayItem
+	(rather than being a normal text document) then this points
+	to that DisplayItem and the other parts of the document are
+	ignored
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Document"></a>
+<a name="Document(net.www.html.URL, java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Document
+</b>
+<pre>
+  public Document(<a href="net.www.html.URL.html#_top_">URL</a> url,
+                  <a href="java.io.InputStream.html#_top_">InputStream</a> is)
+</pre>
+<dl>
+<dd>
+Creates a new Document with the specified URL and InputStream.
+</dl>
+<p>
+<a name="Document(net.www.html.URL, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Document
+</b>
+<pre>
+  public Document(<a href="net.www.html.URL.html#_top_">URL</a> u,
+                  <a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Creates a new Document with the specified URL with its
+contents initialized by the specified String.  Unless the
+string starts with "<html>", the document
+is a plain text document, which means it contains no html
+tags in it, exception for the &lt;plaintext&gt; tag at the very
+beginning.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<a name="startTag(net.www.html.Tag, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startTag">
+<b>
+startTag
+</b>
+</a>
+<pre>
+  public <a href="net.www.html.TagRef.html#_top_">TagRef</a> startTag(<a href="net.www.html.Tag.html#_top_">Tag</a> t,
+                         int offset)
+</pre>
+<dl>
+<dd>
+Creates and returns a new TagRef for the specified html start tag.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.www.html.Document.html#startTag(net.www.html.Tag, int)">startTag</a> in class <a href="net.www.html.Document.html#_top_">Document</a></dl>
+</dl>
+<p>
+<a name="endTag(net.www.html.Tag, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="endTag">
+<b>
+endTag
+</b>
+</a>
+<pre>
+  public <a href="net.www.html.TagRef.html#_top_">TagRef</a> endTag(<a href="net.www.html.Tag.html#_top_">Tag</a> t,
+                       int offset)
+</pre>
+<dl>
+<dd>
+Creates and returns a new TagRef for the specified html end tag.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.www.html.Document.html#endTag(net.www.html.Tag, int)">endTag</a> in class <a href="net.www.html.Document.html#_top_">Document</a></dl>
+</dl>
+<p>
+<a name="url()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="url">
+<b>
+url
+</b>
+</a>
+<pre>
+  public <a href="net.www.html.URL.html#_top_">URL</a> url()
+</pre>
+<dl>
+<dd>
+Returns the URL that is associated with this document.
+</dl>
+<p>
+<a name="setURL(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setURL">
+<b>
+setURL
+</b>
+</a>
+<pre>
+  public void setURL(<a href="net.www.html.URL.html#_top_">URL</a> u)
+</pre>
+<dl>
+<dd>
+Sets the URL that is associated with this document.
+</dl>
+<p>
+<a name="addApplet(browser.AppletDisplayItem)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addApplet">
+<b>
+addApplet
+</b>
+</a>
+<pre>
+  public synchronized void addApplet(<a href="browser.AppletDisplayItem.html#_top_">AppletDisplayItem</a> item)
+</pre>
+<dl>
+<dd>
+Add an applet to this document
+</dl>
+<p>
+<a name="startApplets()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startApplets">
+<b>
+startApplets
+</b>
+</a>
+<pre>
+  public synchronized void startApplets()
+</pre>
+<dl>
+<dd>
+Send start()s to all the Applets in our hashtable.
+</dl>
+<p>
+<a name="stopApplets()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="stopApplets">
+<b>
+stopApplets
+</b>
+</a>
+<pre>
+  public synchronized void stopApplets()
+</pre>
+<dl>
+<dd>
+Send stop()s to all the Applets in our hashtable.
+</dl>
+<p>
+<a name="destroyApplets()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="destroyApplets">
+<b>
+destroyApplets
+</b>
+</a>
+<pre>
+  public synchronized void destroyApplets()
+</pre>
+<dl>
+<dd>
+Send destroy()s to all the Applets in our hashtable.
+</dl>
+<p>
+<a name="flushImages()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="flushImages">
+<b>
+flushImages
+</b>
+</a>
+<pre>
+  public synchronized void flushImages()
+</pre>
+<dl>
+<dd>
+Nuke all the images in a document
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.DisplayItemTagRef.html#_top_">Previous</a>    <a href="browser.DocumentManager.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<Html>
+<Head>
+<Title>The APP HTML Tag</Title> 
+</Head>
+
+<Body>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+Href="TestingCode.html">Previous</A>    <A
+Href="Examples.html">Next</A></pre>
+<HR>
+
+<H1>The APP HTML Tag</H1>
+
+To add an applet to an HTML page,
+you need to use the <SAMP>APP</SAMP> HTML tag.
+This page discusses the general syntax of this tag.
+<A Href="AddingApplet.html">Examples of its use</A>
+are elsewhere in this document.
+<P>
+
+The general syntax of the <SAMP>APP</SAMP> HTML tag:
+<P>
+<PRE>
+    &lt;APP CLASS=&quot;<VAR>ClassName</VAR>&quot;
+         SRC=&quot;<VAR>URL</VAR>&quot;
+         ALIGN=<VAR>alignment</VAR>
+         WIDTH=<VAR>widthInPixels</VAR>
+         HEIGHT=<VAR>heightInPixels</VAR>
+         <VAR>AppletSpecificAttribute</VAR>=<VAR>aValue</VAR>
+         ...&gt;
+</PRE>
+
+<SAMP>CLASS</SAMP>, <SAMP>SRC</SAMP>, and so on
+are <Em>attributes</Em>; they give HotJava information
+about the applet.
+The only mandatory attribute is <SAMP>CLASS</SAMP>.
+The rest of this page discusses the values each attribute can have.
+
+<DL>
+<DT> <VAR>ClassName</VAR>
+<DD> is the name of an applet (either
+<A Href="AppletSubclass.html">written by you</A>
+or provided to you).
+This name is the name of the Applet subclass.
+For example, if you write an Applet subclass named MyApplet,
+then to include it in an HTML page
+you should specify:
+<PRE>
+    CLASS=&quot;MyApplet&quot;
+</PRE>
+<P>
+
+<DT> <VAR>URL</VAR>
+<DD> specifies the directory (folder) containing the 
+<samp>classes</samp> directory
+that contains the compiled Applet subclass.
+(If the Applet subclass is named MyApplet,
+then its compiled file is named <SAMP>MyApplet.class</SAMP>.)
+If you don't specify this attribute,
+HotJava looks for the <SAMP>".class"</SAMP>
+file in the <SAMP>classes</SAMP> directory
+under the directory that the HTML file
+containing the <SAMP>APP</SAMP> tag is in.
+To specify one of the applets provided in this release, use:
+<PRE>
+    SRC="doc:/demo/"
+</PRE>
+<strong>Note: </strong>You must include the final slash ("/").
+<P>
+
+<DT> <VAR>alignment</VAR>
+<DD> is a way to specify how the applet's image should be aligned with the
+text that follows.
+If you don't specify this attribute,
+then the bottom of the applet's image is aligned with the following text.
+If you specify <SAMP>ALIGN=TOP</SAMP>,
+then adjacent text is aligned with the top of the image.
+Specify <SAMP>ALIGN=MIDDLE</SAMP>
+to align the text with the center of the image.
+<P>
+
+<DT> <VAR>widthInPixels</VAR> and <VAR>heightInPixels</VAR>
+<DD> are hints to the browser
+indicating how much space the applet will require.
+HotJava uses these to lay out the page properly
+while it's waiting for the applet to draw itself.
+<P>
+
+<DT> <VAR>AppletSpecificAttribute</VAR>
+<DD> is any attribute name the applet allows.
+The <A Href="Attributes.html">applet writer specifies</A>
+what (if any) attributes the applet accepts.
+Some applets have no attributes;
+others might require that you specify several.
+For example, the <A Href="Animation.html">ImageLoopItem</A> applet
+has two applet-specific attributes:  IMG and PAUSE.
+<!! AudioItem, BounceItem, ImageLoopItem, SampleApplet, SortItem, TicTacToe>
+<P>
+
+<DT> <VAR>aValue</VAR>
+<DD> is a string that should be enclosed in quotation marks
+(but doesn't necessarily have to be).
+The applet determines how to interpret this string.
+</DL>
+
+<HR>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+Href="TestingCode.html">Previous</A>    <A
+Href="Examples.html">Next</A>
+
+</Body>
+</Html>

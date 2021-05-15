@@ -1,0 +1,23 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Operand Stack</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING15></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_8.html">Prev</A>       <A HREF="vmspec_10.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Operand Stack</H1>
+
+<HR>
+
+The operand stack is a 32 bit wide FIFO stack used to store arguments and return values of many of the virtual machine instructions. For example, the iadd instruction adds two integers together. It expects that the integers to be added are the top two words on the operand stack, pushed there by previous instructions. Both integers are popped from the stack, added, and their sum pushed back onto the operand stack. Subcomputations may be nested on the operand stack, and result in a single operand that can be used by the nesting computation. <P>
+Long integers and double-precision floating point numbers, while logically a single virtual machine operand, take two physical entries on the operand stack. Each primitive data type has specialized instructions that know how to operate on operands of that type. Operands must be operated on by operators appropriate to their type. It is illegal, for example, to push two integers and treat them as a long.<P>
+In most circumstances the top of the operand stack and the top of the Java stack are the same thing. As a result, we can simply refer to pushing or popping from the "stack"; the context and data of the operation make clear what we mean.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_8.html">Prev</A>       <A HREF="vmspec_10.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

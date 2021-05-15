@@ -1,0 +1,231 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.NetworkClient
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.InetAddress.html#_top_">Previous</a>    <a href="net.NetworkServer.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.NetworkClient
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.NetworkClient
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+NetworkClient</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+This is the base class for network clients.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.15, 12 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#serverInput">serverInput</a>
+</b>
+<dd>
+Buffered stream for reading replies from server.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#serverOutput">serverOutput</a>
+</b>
+<dd>
+Stream for printing to the server.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#serverSocket">serverSocket</a>
+</b>
+<dd>
+Socket for communicating with server.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NetworkClient(java.lang.String, int)"><b>NetworkClient</b></a>(String, int)
+<dd>
+Create connection with host <i>host</i> on port <i>port</i>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NetworkClient()"><b>NetworkClient</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#closeServer()"><b>closeServer</b></a>()
+<dd>
+Close an open connection to the server.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openServer(java.lang.String, int)"><b>openServer</b></a>(String, int)
+<dd>
+Open a connection to the server.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#serverIsOpen()"><b>serverIsOpen</b></a>()
+<dd>
+Return server connection status
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="serverSocket">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+serverSocket
+</b>
+<pre>
+  protected <a href="net.Socket.html#_top_">Socket</a> serverSocket
+</pre>
+<dl>
+<dd>
+Socket for communicating with server.
+</dl>
+<a name="serverOutput">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+serverOutput
+</b>
+<pre>
+  public <a href="java.io.PrintStream.html#_top_">PrintStream</a> serverOutput
+</pre>
+<dl>
+<dd>
+Stream for printing to the server.
+</dl>
+<a name="serverInput">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+serverInput
+</b>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> serverInput
+</pre>
+<dl>
+<dd>
+Buffered stream for reading replies from server.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="NetworkClient"></a>
+<a name="NetworkClient(java.lang.String, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NetworkClient
+</b>
+<pre>
+  public NetworkClient(<a href="java.lang.String.html#_top_">String</a> host,
+                       int port)
+</pre>
+<dl>
+<dd>
+Create connection with host <i>host</i> on port <i>port</i>
+</dl>
+<p>
+<a name="NetworkClient()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NetworkClient
+</b>
+<pre>
+  public NetworkClient()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="openServer(java.lang.String, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openServer">
+<b>
+openServer
+</b>
+</a>
+<pre>
+  public void openServer(<a href="java.lang.String.html#_top_">String</a> server,
+                         int port)
+</pre>
+<dl>
+<dd>
+Open a connection to the server.
+</dl>
+<p>
+<a name="closeServer()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="closeServer">
+<b>
+closeServer
+</b>
+</a>
+<pre>
+  public void closeServer()
+</pre>
+<dl>
+<dd>
+Close an open connection to the server.
+</dl>
+<p>
+<a name="serverIsOpen()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="serverIsOpen">
+<b>
+serverIsOpen
+</b>
+</a>
+<pre>
+  public boolean serverIsOpen()
+</pre>
+<dl>
+<dd>
+Return server connection status
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.InetAddress.html#_top_">Previous</a>    <a href="net.NetworkServer.html#_top_">Next</a></pre>
+</body>
+</html>

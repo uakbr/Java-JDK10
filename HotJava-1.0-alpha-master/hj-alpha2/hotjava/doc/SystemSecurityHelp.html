@@ -1,0 +1,42 @@
+<html>
+<head> <title> Specifying the System Security Configuration</title> </head>
+
+<body>
+<h1>Specifying the System Security Configuration</h1>
+<img src="../demo/images/bar.gif">
+<p>
+
+One of the problems with any security mechanism is that it won't
+protect you if it isn't configured properly. Another problem is that
+an organization may wish to impose a certain security policy and be
+reasonably certain that the policy will be followed inside the
+organization.<p>
+
+To address these problems,
+you can set up a system security configuration.
+You do so by copying security files into a special directory.
+The security files are the same as those
+that are written by the dialogs for individual user security.
+The difference is that users are
+prevented from weakening the security specified in these files.
+In effect, these files override the users' choices,
+except for users who have specified a more restrictive security policy.
+<p>
+
+To set up your system security configuration,
+complete the following steps:
+
+<ol>
+<li> Configure your personal security files using the normal dialogs.
+<li> Create a directory called "security_config"
+in the HotJava/Java installation directory.
+(This directory is pointed to by the HOTJAVA_HOME environment variable.
+It contains directories named demo, doc, and classes,
+as well as the bin directory
+that contains the hotjava and java executable files.)
+<li> Copy the files "access_mode" and "firewall_hosts" from your
+$HOME/.hotjava directory into the security_config directory.
+</ol>
+
+</body>
+

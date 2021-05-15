@@ -1,0 +1,141 @@
+<!-- sccsid: @(#)mem4.html	1.1 95/05/11 --->
+<HTML>
+
+<HEAD>
+<TITLE>mem4 - The HTML Macro Processor</TITLE>
+</HEAD>
+
+<BODY>
+
+<h1>mem4 - The HTML Macro Processor</h1>
+ 
+<p>
+<b>mem4</b> processes macros embedded in HTML files.
+<h2>SYNOPSIS</h2>
+<pre>
+    java mem4 filename &gt outfile
+</pre>
+<P>
+<h2>DESCRIPTION</h2>
+<b>mem4</b> is the HTML Macro Processor written in the Java language.
+<P>
+The <i>filename</i> argument is the name of a file that contains
+special <b>mem4</b> macro directives embedded within HTML.
+By default <b>mem4</b> writes its output to the standard output stream.
+To cause <b>mem4</b> to write an output file instead, redirect its output to a file.
+Although <b>mem4</b> doesn't require it, your input files should have a <i>.mem4</i> filename
+extenstion, and your output files should have a <i>.html</i> filename extension.
+
+<h2>MACROS</h2>
+<h3>Defining a Variable</h3>
+<b>mem4</b> let's you define and use variables.
+To define a variable:
+<pre>
+    #define VARIABLE value
+</pre>
+When defining a variable:
+<ul>
+<li>
+<i>#define</i> must appear as the very first thing on a line
+<li>
+<i>VARIABLE</i> is a string of any length that contains only alphanumeric characters
+<li>
+<i>value</i> is everything else on the line, trimmed of leading and
+trailing whitespace.
+<li>
+<i>#define</i> is separated from <i>VARIABLE</i> with a space and
+<i>VARIABLE</i> is separated from <i>value</i> with a space
+</ul>
+
+<h3>Using a Variable Definition</h3>
+To use a variable:
+<pre>
+    $VARIABLE
+</pre>
+You can use a variable
+<ul>
+<li>
+in the <i>value</i> of any definition that occurs after the variable
+has been defined.
+For example:
+<pre>
+    #define PATH /some/thing/blah/blah
+    #define FILE $PATH/filename
+</pre>
+defines
+<pre>
+    PATH = /some/thing/blah/blah
+    FILE = /some/thing/blah/blah/filename
+</pre>
+<li>
+anywhere on a line. For example:
+<pre>
+    create a directory named $PATH
+</pre>
+yields
+<pre>
+    create a directory named /some/thing/blah/blah
+</pre>
+</ul>
+
+<b>Note:</b> you can redefine a variable simply by defining it again.
+
+<b>Note:</b> if you really want the string $VARIABLE to be in the result
+use '\' to escape the variable name. For example:
+<i>$\VARIABLE</i> yields <i>$VARIABLE</i> in the output.
+
+<p>
+<b>Note:</b> if you reference a variable that has not been defined
+the variable name is used as its value. For example, if VARIABLE
+had not been defined, <i>$VARIABLE</i> would yield <i>VARIABLE</i>
+in the output.
+
+<p>
+<b>Note:</b> you can't concatenate the value of a variable
+with regular text. For example, if you use <i>$VARIABLEsometext</i>
+<b>mem4</b> will actually look up <i>VARIABLEsometext</i> in its dictionary,
+rather than concatenate the value of <i>VARIABLE</i> and the following text.
+In other words the variable name must be followed by
+a non-alphanumeric character that separates it from
+whatever follows it.
+
+<h3>Including Files</h3>
+<b>mem4</b> let's you include the contents of other files.
+To include a file:
+<pre>
+    #include filename
+</pre>
+When including files:
+<ul>
+<li>
+<i>#include</i> must appear as the very first thing on a line.
+<li>
+<i>filename</i> is everything else on the line, trimmed of leading and
+trailing whitespace.
+<li>
+<i>#include</i> is separated from <i>filename</i> with a space.
+<li>
+the included file can use variables defined within the current file
+and can add definitions to the current dictionary.
+<li>
+the filename is either an absolute path, or relative to the
+current directory.
+</ul>
+
+<h2>BUGS</h2>
+<p>
+Need to allow users to concatenate a variable with regular text.
+One possibility is to use the '\' character to separate
+the variable name from the text, so that:
+<i>$VARIABLE\sometext</i> yields <i>valuesometext</i>.
+
+<h2>STAY TUNED FOR</h2>
+<h3>#include features</h3>
+Ability to extract lines from an included file.<br>
+Ability to make certain lines from an include file bold.<br>
+Ability to make certain lines from an include file italic.<br>
+<h3>#undefine features</h3>
+Ability to undefine variables.
+
+</BODY>
+</HTML>

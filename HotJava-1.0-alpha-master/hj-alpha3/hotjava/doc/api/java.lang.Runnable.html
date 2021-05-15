@@ -1,0 +1,84 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Interface java.lang.Runnable
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.html">Previous</a>    <a href="java.lang.html">Next</a></pre>
+<hr>
+<h1>
+Interface java.lang.Runnable
+</h1>
+<dl>
+<dt>
+public interface <b>
+Runnable</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+This interface is designed to provide a common protocol for Objects
+that want to execute code while they are active. For example, Runnable
+is implemented by class Thread. <p>
+In addition, Runnable provides the means for a class to be active while 
+not subclassing Thread. A class that implements Runnable can run without
+subclassing Thread by instantiating a Thread instance and passing itself in
+as the target.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Thread.html#_top_">Thread</a><dt>
+<b>Version:</b>
+<dd>
+	1.8, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#run()"><b>run</b></a>()
+<dd>
+The method that is executed when a runnable object is activated.
+</dl>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="run()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="run">
+<b>
+run
+</b>
+</a>
+<pre>
+  public abstract void run()
+</pre>
+<dl>
+<dd>
+The method that is executed when a runnable object is activated.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Thread.html#run">run</a>
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.html">Previous</a>    <a href="java.lang.html">Next</a></pre>
+</body>
+</html>

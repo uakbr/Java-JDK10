@@ -1,0 +1,169 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.BreakingStyle
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.BasicStyle.html#_top_">Previous</a>    <a href="browser.DDTagRef.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.BreakingStyle
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Style.html#_top_">browser.Style</a>
+           |
+           +----<a href="browser.BasicStyle.html#_top_">browser.BasicStyle</a>
+                   |
+                   +----browser.BreakingStyle
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+BreakingStyle</b>
+<dt>
+extends <a href="browser.BasicStyle.html#_top_">BasicStyle</a>
+</dl>
+Class BreakingStyle is a BasicStyle which also allows for
+paragraph breaks.  This style is associated with such tags as
+&lt;p>, &lt;h1>, &lt;li>, and so on.  A break size may be
+specified in the constructor.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.10, 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BreakingStyle(java.lang.String)"><b>BreakingStyle</b></a>(String)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finish(browser.WRFormatter, net.www.html.TagRef)"><b>finish</b></a>(WRFormatter, TagRef)
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleStyleSpec(java.lang.String)"><b>handleStyleSpec</b></a>(String)
+<dd>
+Handles the initialization string described in the constructor.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#start(browser.WRFormatter, net.www.html.TagRef)"><b>start</b></a>(WRFormatter, TagRef)
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="BreakingStyle"></a>
+<a name="BreakingStyle(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BreakingStyle
+</b>
+<pre>
+  public BreakingStyle(<a href="java.lang.String.html#_top_">String</a> spec)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="handleStyleSpec(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleStyleSpec">
+<b>
+handleStyleSpec
+</b>
+</a>
+<pre>
+  protected void handleStyleSpec(<a href="java.lang.String.html#_top_">String</a> spec)
+</pre>
+<dl>
+<dd>
+Handles the initialization string described in the constructor.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="browser.BasicStyle.html#handleStyleSpec(java.lang.String)">handleStyleSpec</a> in class <a href="browser.BasicStyle.html#_top_">BasicStyle</a></dl>
+</dl>
+<p>
+<a name="start(browser.WRFormatter, net.www.html.TagRef)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="start">
+<b>
+start
+</b>
+</a>
+<pre>
+  public void start(<a href="browser.WRFormatter.html#_top_">WRFormatter</a> f,
+                    <a href="net.www.html.TagRef.html#_top_">TagRef</a> ref)
+</pre>
+<dl>
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="browser.BasicStyle.html#start(browser.WRFormatter, net.www.html.TagRef)">start</a> in class <a href="browser.BasicStyle.html#_top_">BasicStyle</a></dl>
+</dl>
+<p>
+<a name="finish(browser.WRFormatter, net.www.html.TagRef)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finish">
+<b>
+finish
+</b>
+</a>
+<pre>
+  public void finish(<a href="browser.WRFormatter.html#_top_">WRFormatter</a> f,
+                     <a href="net.www.html.TagRef.html#_top_">TagRef</a> ref)
+</pre>
+<dl>
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="browser.BasicStyle.html#finish(browser.WRFormatter, net.www.html.TagRef)">finish</a> in class <a href="browser.BasicStyle.html#_top_">BasicStyle</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.BasicStyle.html#_top_">Previous</a>    <a href="browser.DDTagRef.html#_top_">Next</a></pre>
+</body>
+</html>

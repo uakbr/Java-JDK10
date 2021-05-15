@@ -1,0 +1,407 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.OutputStreamBuffer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.OutputStream.html#_top_">Previous</a>    <a href="java.io.PipedInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.OutputStreamBuffer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.OutputStream.html#_top_">java.io.OutputStream</a>
+           |
+           +----java.io.OutputStreamBuffer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+OutputStreamBuffer</b>
+<dt>
+extends <a href="java.io.OutputStream.html#_top_">OutputStream</a>
+</dl>
+This class implements a buffer that can be
+used as an OutputStream. The buffer automatically
+grows when data is written to the stream.
+The data can be retrieved using toByteArray() and
+toString().
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.12, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#buf">buf</a>
+</b>
+<dd>
+
+The buffer
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#count">count</a>
+</b>
+<dd>
+The number of bytes in the buffer
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#OutputStreamBuffer()"><b>OutputStreamBuffer</b></a>()
+<dd>
+Create a new OutputStreamBuffer
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#OutputStreamBuffer(int)"><b>OutputStreamBuffer</b></a>(int)
+<dd>
+Creates a new OutputStreamBuffer, given an initial size.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+Resets the buffer so that you can use it again without
+throwing away the already allocated buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#size()"><b>size</b></a>()
+<dd>
+Returns the current size of the buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toByteArray()"><b>toByteArray</b></a>()
+<dd>
+Returns a copy of the input data.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Converts input data to a string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString(int)"><b>toString</b></a>(int)
+<dd>
+Converts input data to a string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Writes a byte to the buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[], int, int)"><b>write</b></a>(byte[], int, int)
+<dd>
+Writes bytes to the buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeTo(java.io.OutputStream)"><b>writeTo</b></a>(OutputStream)
+<dd>
+Writes the contents of the buffer to another stream.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="buf">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+buf
+</b>
+<pre>
+  protected byte buf[]
+</pre>
+<dl>
+<dd>
+The buffer
+</dl>
+<a name="count">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+count
+</b>
+<pre>
+  protected int count
+</pre>
+<dl>
+<dd>
+The number of bytes in the buffer
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="OutputStreamBuffer"></a>
+<a name="OutputStreamBuffer()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+OutputStreamBuffer
+</b>
+<pre>
+  public OutputStreamBuffer()
+</pre>
+<dl>
+<dd>
+Create a new OutputStreamBuffer
+</dl>
+<p>
+<a name="OutputStreamBuffer(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+OutputStreamBuffer
+</b>
+<pre>
+  public OutputStreamBuffer(int size)
+</pre>
+<dl>
+<dd>
+Creates a new OutputStreamBuffer, given an initial size.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+size
+-
+ initial size
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public synchronized void write(int b)
+</pre>
+<dl>
+<dd>
+Writes a byte to the buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the byte
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#write(int)">write</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="write(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public synchronized void write(byte b[],
+                                 int off,
+                                 int len)
+</pre>
+<dl>
+<dd>
+Writes bytes to the buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the data to be written
+<dd>
+off
+-
+	the start offset in the data
+<dd>
+len
+-
+	the number of bytes that are written
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#write(byte[], int, int)">write</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="writeTo(java.io.OutputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeTo">
+<b>
+writeTo
+</b>
+</a>
+<pre>
+  public synchronized void writeTo(<a href="java.io.OutputStream.html#_top_">OutputStream</a> out)
+</pre>
+<dl>
+<dd>
+Writes the contents of the buffer to another stream.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+out
+-
+	the output stream to write to
+</dl>
+</dl>
+<p>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  public synchronized void reset()
+</pre>
+<dl>
+<dd>
+Resets the buffer so that you can use it again without
+throwing away the already allocated buffer.
+</dl>
+<p>
+<a name="toByteArray()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toByteArray">
+<b>
+toByteArray
+</b>
+</a>
+<pre>
+  public synchronized byte toByteArray()
+</pre>
+<dl>
+<dd>
+Returns a copy of the input data.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+a copy of the the buffered data
+</dl>
+</dl>
+<p>
+<a name="size()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="size">
+<b>
+size
+</b>
+</a>
+<pre>
+  public int size()
+</pre>
+<dl>
+<dd>
+Returns the current size of the buffer.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the number of bytes in the buffer
+</dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Converts input data to a string.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the string
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="toString(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString(int hibyte)
+</pre>
+<dl>
+<dd>
+Converts input data to a string. The top 8 bits of 
+each 16 bit UNICODE character are set to hibyte.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the string
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.OutputStream.html#_top_">Previous</a>    <a href="java.io.PipedInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<html>
+<head> <title> Searching the Documentation</title> </head>
+
+<body>
+<IMG SRC="../../demo/images/sun.gif" align=middle><IMG SRC="../../demo/images/1inch.gif"><IMG SRC="../../demo/images/0.25inch.gif"><img src="../../demo/images/wrlogo-large.gif" align=middle>
+<br>
+<IMG SRC="../../demo/images/bar.gif">
+<br>
+<b>Version 1.0 Alpha3</b> 
+
+<h1> How to Search the Documentation </h1>
+
+<p>
+This tool is used to search through the HotJava/Java
+documentation. To access  the tool, select
+"Search HotJava Documentation..." from the HotJava
+"Help" menu.
+
+<p>
+Java documentation is divided into <em> pages </em> and related pages are
+grouped together into <em>books</em>.  For example,
+the Java language specification is a book that contains a set
+of pages that describe the language; The Java class documentation (A.P.I.) 
+is made up of a set of pages where each page describes a different
+class.
+
+<p>
+Use the tool to locate occurences of specific keywords in the documentation.  You submit a query and the
+tool  returns all pages that satisfy the query 
+(see <a href="#Queries"> Queries</a>.)
+For example, the query "hello world" yields a list of
+all pages that contain the word "hello" or the word "world".  
+The query "hello and world" yields a list of all pages that
+contain both the word "hello" and the word "world".
+You can select a page from the resulting list and that page is 
+displayed in HotJava.
+
+<p>
+You can restrict a search to a particular book or you can 
+search all books.  You cannot search through a particular set of books.<p>
+
+<h3>Stoplist</h3>The Search Tool uses a stoplist to shorten search time and reduce the size of the stored indexes. A stoplist is a list of words that are excluded when the documentation is indexed for searching. You can include these words in your query and the tool will not search on them. This allows you to use a more natural language syntax in your query. It is important to note however, that you cannot search on these words (nor should you need to). <p>The words on the stoplist are as follows:<p>
+
+a, an, and, as at, be, but, by, do, for, from, have, he, in, it, not, of, on, or, she, that, the, there, to, we, which, with, you.
+
+<a name="Queries"></a>
+<h2> Queries </h2>
+
+A query has the form 
+<pre>
+    word
+    word  op  word
+    word  op  word  op  word
+    ...
+</pre>
+
+that is, one word, or two words separated by a boolean operator
+(<em>op</em>), or three words separated by two boolean operators, etc.
+A boolean operator can be one of 
+<b> and</b>, 
+<b> or</b>, or 
+<b> not</b>.
+
+<p>
+A word must be longer than a single character and must not contain any
+punctuation characters except for quote (').  Also, all characters in
+the query are converted to lowercase before the query is applied.
+
+<p>
+Here's what the boolean operators mean:
+
+<dl>
+<dt>
+word1
+<dd>
+yields all pages that contain word1.
+
+<p>
+<dt>
+word1 <b>and</b> word2
+<dd>
+yields all pages that contain both word1 and word2.
+
+<p>
+<dt>
+word1 <b>or</b> word2
+<dd>
+yields all pages that contain either word1 or word2.  
+The <b>or</b> operator is optional and can be omitted.
+
+<p>
+<dt>
+word1 <b>not</b> word2
+<dd>
+yields all pages that contain word1 but not word2.
+
+<p>
+<dt>
+word1 word2
+<dd>
+The <b>or</b> is optional.  This is 
+exactly the same as saying word1 <b>or</b> word2.
+
+</dl>
+
+<p>
+When a query has more than than one boolean operator, the operators
+are applied one at a time from left to right.  For example,
+in the query "word1 and word2 or word3 not word4", "word1 and word2"
+is done first.  This yields a set of pages that contain word1 and
+word2.  Next, the set is expanded to also include all pages
+that contain word3.  Finally, the set is reduced by removing
+all pages that contain word4.
+
+<p>
+As was mentioned above, a word must be longer than a single character
+and must not contain any punctuation marks besides quote (').  Here's
+precisely how a page is broken into words.
+First, all text between two angle brackets (&lt; text &gt;) and the angle 
+brackets themselves are turned into whitespace 
+(this step is done only on html pages.)
+Then, all punctuation except for quote (') is turned 
+into whitespace.  Next, all characters are made lowercase.  
+Finally, all single letter and duplicate words are removed. 
+The resulting set of words defines the words on that page.
+
+<h2>Results</h2>
+ When you have completed your query select
+the Search button. The result of the query is displayed in the Search
+Tool window. It consists of a list of selectable links to pages which
+satisfy the query,
+
+<h3> Results list </h3>
+The result of  a query is a set of pages.  The titles
+of those pages are displayed in the Results list.
+You can click on an item in this list and HotJava displays
+the page.  The Results list shows at most 100 page titles.  The number
+of actual pages that satisfy the query appears in the Status bar.
+
+<h2> User Interface Elements</h2>
+<h3>     Query </h3>
+You type your query in this editable text field.  Queries are described
+in <a href="#Queries"> Queries</a>.
+
+<h3>     Books to Search </h3>
+This is a menu of available books that can be searched.  If you
+are interested in searching a particular book, select the book
+and make the query.  The query is only be applied to that book.
+If you're interested in searching through all books, select "All Books".
+
+<h3>     Status bar </h3>
+The Status bar is the area at the very bottom of the window.
+In this area, the Search window displays informational messages.  For
+example, when a query is made, the Status bar displays the number
+of documents which satisfy the query.  
+
+<h3>     Help </h3>
+Causes HotJava to display this page.
+
+<h3>     Cancel </h3>
+Closes the search window.
+
+</body>
+
+<hr> <address> 
+ 
+<a href="http://www.sun.com/"><IMG SRC="../../demo/images/sun.gif"
+align=bottom border=1></a> <a href="http://java.sun.com/"> <IMG
+SRC="../../demo/images/wrlogo.gif" align=bottom border=1></a><p>Send your comments
+or questions to <A
+href="mailto:java@java.sun.com"><em>java@java.sun.com</em></A>
+ 
+</address>

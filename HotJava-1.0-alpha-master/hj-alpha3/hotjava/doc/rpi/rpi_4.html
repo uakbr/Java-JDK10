@@ -1,0 +1,107 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Beginning the Sample Application</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING3></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_3.html">Prev</A> <A HREF="rpi_5.html">Next</A><P>
+<H1>2  Beginning the Sample Application</H1>
+<HR>
+<DL>
+<DT><A HREF="rpi_4.html#HEADING4"><B> 2.1 </B> - File.java</A><DD>
+</DL>
+
+
+For the purposes of the sample application, we create an abstract superclass, called File and defined in File.java.<P>
+<A NAME=HEADING4></A>
+<HR>
+<H3>File.java</H3>
+<PRE>
+/*
+ * This file defines the superclass for the classes used in the   
+ * native library example.  The File class defined here is 
+ * loosely based on the File classes provided as part of the 
+ * Java base IO classes.This File superclass provides basic 
+ * file and path manipulation with the expectation that
+ * subclasses will provide the actual file management code 
+ * depending on the file semantics they want to present.
+ * For example, read only input files and read and write output 
+ * files.
+ *
+ */
+
+/*
+ * We created a demo package for convenience. See The Java
+ * Language Specification for moreinformation on packages.
+ *
+ */
+package demo;
+
+
+/**
+ * The File superclass defines an interface for manipulating 
+ * path and file names.  
+ *
+ */
+public
+class File {
+
+    /**
+     * The file path.  We want to use an abstract path separator
+     * in Java that is converted to the system dependent path
+     * separator.
+     *
+     */
+    protected String path;
+
+    /**
+     * The class File's notion of a path separator character.  
+     * This
+     * will be the Java path separator.  Note that this will be
+     * converted to the system dependent path separator at 
+     * runtime
+     * by code in the native library.
+     *
+     */
+    public static final char separatorChar = `:';
+
+    /**
+     * The constructor, initializes the class with the given 
+     * path.  Note
+     * that we use the String class found in the Java core 
+     * classes.
+     *
+     */
+    public File(String path) {
+		if (path == null) {
+	    		throw new NullPointerException();
+		}
+		this.path = path;
+    }	
+
+    /**
+     * Get the name of the file, not including the directory 
+     * path.
+     *
+     */
+    public String getFileName() {
+		int index = path.lastIndexOf(separatorChar);
+		return (index &lt; 0) ? path : path.substring(index + 1);
+    }
+
+    /**
+     * Get the name of the file including the full directory 
+     * path.
+     *
+     */
+    public String getPath() {
+		return path;
+    }
+}
+</PRE>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_3.html">Prev</A> <A HREF="rpi_5.html">Next</A><P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

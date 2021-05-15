@@ -1,0 +1,300 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.NativeDisplayItem
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.MessageDialog.html#_top_">Previous</a>    <a href="awt.OptionMenu.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.NativeDisplayItem
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Observable.html#_top_">browser.Observable</a>
+           |
+           +----<a href="awt.DisplayItem.html#_top_">awt.DisplayItem</a>
+                   |
+                   +----awt.NativeDisplayItem
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+NativeDisplayItem</b>
+<dt>
+extends <a href="awt.DisplayItem.html#_top_">DisplayItem</a>
+</dl>
+This class is used to create a DisplayItem object that encapsulates a
+native gui element. It translates the protocols used on DisplayItem
+to those that Component understands.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.DisplayItem.html#_top_">DisplayItem</a>,
+<a href="awt.Component.html#_top_">Component</a><dt>
+<b>Version:</b>
+<dd>
+1.17 02 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NativeDisplayItem()"><b>NativeDisplayItem</b></a>()
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NativeDisplayItem(awt.Component)"><b>NativeDisplayItem</b></a>(Component)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#deactivate()"><b>deactivate</b></a>()
+<dd>
+Called when this item is no longer needed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#destroy()"><b>destroy</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getComponent()"><b>getComponent</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint(awt.Window, int, int)"><b>paint</b></a>(Window, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resize(int, int)"><b>resize</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setColor(awt.Color)"><b>setColor</b></a>(Color)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setComponent(awt.Component)"><b>setComponent</b></a>(Component)
+<dd>
+Sets the component for this item.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="NativeDisplayItem"></a>
+<a name="NativeDisplayItem()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NativeDisplayItem
+</b>
+<pre>
+  public NativeDisplayItem()
+</pre>
+<a name="NativeDisplayItem(awt.Component)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NativeDisplayItem
+</b>
+<pre>
+  public NativeDisplayItem(<a href="awt.Component.html#_top_">Component</a> c)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setComponent(awt.Component)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setComponent">
+<b>
+setComponent
+</b>
+</a>
+<pre>
+  public void setComponent(<a href="awt.Component.html#_top_">Component</a> c)
+</pre>
+<dl>
+<dd>
+Sets the component for this item.
+</dl>
+<p>
+<a name="getComponent()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getComponent">
+<b>
+getComponent
+</b>
+</a>
+<pre>
+  public <a href="awt.Component.html#_top_">Component</a> getComponent()
+</pre>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int x,
+                   int y)
+</pre>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<a name="resize(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resize">
+<b>
+resize
+</b>
+</a>
+<pre>
+  public void resize(int w,
+                     int h)
+</pre>
+<a name="deactivate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="deactivate">
+<b>
+deactivate
+</b>
+</a>
+<pre>
+  public void deactivate()
+</pre>
+<dl>
+<dd>
+Called when this item is no longer needed.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.DisplayItem.html#deactivate()">deactivate</a> in class <a href="awt.DisplayItem.html#_top_">DisplayItem</a></dl>
+</dl>
+<p>
+<a name="setColor(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setColor">
+<b>
+setColor
+</b>
+</a>
+<pre>
+  public void setColor(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<a name="destroy()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="destroy">
+<b>
+destroy
+</b>
+</a>
+<pre>
+  public void destroy()
+</pre>
+<a name="paint(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint(<a href="awt.Window.html#_top_">Window</a> window,
+                    int x,
+                    int y)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.MessageDialog.html#_top_">Previous</a>    <a href="awt.OptionMenu.html#_top_">Next</a></pre>
+</body>
+</html>

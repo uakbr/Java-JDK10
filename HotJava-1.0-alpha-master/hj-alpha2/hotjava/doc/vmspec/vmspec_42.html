@@ -1,0 +1,36 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec: - An Optimization</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING299></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_41.html">Prev</A>       <A HREF="vmspec_43.html">Next</A>       <A HREF="vmspec_1.html">Up</A>       <P>
+<HR>
+<H1>Appendix A  <A NAME=0>- An Optimization</H1>
+<HR>
+The following set of pseudo-instructions suffixed by _quick are variants of Java virtual machine instructions. They are used by the WebRunner/Java project to improve the execution of compiled code on our bytecode interpreter. They are not part of the virtual machine specification or instruction set, and are invisible outside of an Java virtual machine implementation. However, inside a virtual machine implementation they have proven to be an effective optimization.<P>
+A compiler from Java to the Java virtual machine instruction set emits only non-_quick instructions. If the _quick pseudo-instructions are used, each instance of a non-_quick instruction with a _quick variant is overwritten on execution by its _quick variant. Subsequent execution of that instruction instance will be of the _quick variant.<P>
+In all cases, if an instruction has an alternative version with the suffix _quick, the instruction references the constant pool. If the _quick optimization is used, each non_quick instruction with a _quick variant performs the following:<P>
+<UL>
+<LI>Resolves the specified item in the constant pool<P>
+<LI>Signals an error if the item in the constant pool could not be resolved for some reason<P>
+<LI>Turns itself into the _quick version of the instruction. The instructions putstatic, getstatic, putfield, and getfield each have two _quick versions.<P>
+<LI>Performs its intended operation<P>
+</UL>
+This is identical to the action of the instruction without the _quick optimization, except for the additional step in which the instruction overwrites itself with its _quick variant. <P>
+The _quick variant of an instruction assumes that the item in the constant pool has already been resolved, and that this resolution did not generate any errors. It simply performs the intended operation on the resolved item.<P>
+<DL>
+<DT><A HREF="vmspec_43.html#HEADING300"><B></B>  Pushing Constants onto the Stack (_quick variants)</A><DD>
+<DT><A HREF="vmspec_44.html#HEADING304"><B></B>  Managing Arrays (_quick variants)</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING306"><B></B>  Manipulating Object Fields (_quick variants)</A><DD>
+<DT><A HREF="vmspec_46.html#HEADING315"><B></B>  Method Invocation (_quick variants)</A><DD>
+<DT><A HREF="vmspec_47.html#HEADING321"><B></B>  Miscellaneous Object Operations (_quick variants)</A><DD>
+<DT><A HREF="vmspec_48.html#HEADING325"><B></B>  Constant Pool Resolution</A><DD>
+</DL>
+
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_41.html">Prev</A>       <A HREF="vmspec_43.html">Next</A>       <A HREF="vmspec_1.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

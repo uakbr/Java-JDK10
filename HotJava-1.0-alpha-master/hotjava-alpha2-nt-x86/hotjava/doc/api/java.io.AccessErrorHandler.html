@@ -1,0 +1,224 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.AccessErrorHandler
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.html">Previous</a>    <a href="java.io.BufferedInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.AccessErrorHandler
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.io.AccessErrorHandler
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+AccessErrorHandler</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+This class is used by the File access-control mechanism. If an
+access control exception occurs and an error handler was installed
+using the File.setAccessErrorHandler method, then the handler will
+get invoked to determine what course of action to take.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.File.html#setAccessErrorHandler">setAccessErrorHandler</a>,
+<a href="java.io.File.html#_top_">File</a><dt>
+<b>Version:</b>
+<dd>
+1.4 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ALLOW_ACCESS">ALLOW_ACCESS</a>
+</b>
+<dd>
+Allow the current access and all subsequent ones.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ALLOW_THIS_ACCESS">ALLOW_THIS_ACCESS</a>
+</b>
+<dd>
+Allow the current access only.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#DENY_ACCESS">DENY_ACCESS</a>
+</b>
+<dd>
+Deny the current access.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#AccessErrorHandler()"><b>AccessErrorHandler</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readException(java.lang.String)"><b>readException</b></a>(String)
+<dd>
+This method is invoked if a read operation was attempted on the
+given file and the acl check failed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeException(java.lang.String)"><b>writeException</b></a>(String)
+<dd>
+This method is invoked if a write operation was attempted on the
+given file and the acl check failed.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="ALLOW_ACCESS">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ALLOW_ACCESS
+</b>
+<pre>
+  public final static int ALLOW_ACCESS
+</pre>
+<dl>
+<dd>
+Allow the current access and all subsequent ones.
+</dl>
+<a name="ALLOW_THIS_ACCESS">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ALLOW_THIS_ACCESS
+</b>
+<pre>
+  public final static int ALLOW_THIS_ACCESS
+</pre>
+<dl>
+<dd>
+Allow the current access only.
+</dl>
+<a name="DENY_ACCESS">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+DENY_ACCESS
+</b>
+<pre>
+  public final static int DENY_ACCESS
+</pre>
+<dl>
+<dd>
+Deny the current access.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="AccessErrorHandler"></a>
+<a name="AccessErrorHandler()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+AccessErrorHandler
+</b>
+<pre>
+  public AccessErrorHandler()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="readException(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readException">
+<b>
+readException
+</b>
+</a>
+<pre>
+  public int readException(<a href="java.lang.String.html#_top_">String</a> f)
+</pre>
+<dl>
+<dd>
+This method is invoked if a read operation was attempted on the
+given file and the acl check failed.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+f
+-
+ the File to be accessed.
+<dt>
+<b>Returns:</b>
+<dd>
+ one of ALLOW_ACCESS, ALLOW_THIS_ACCESS, or DENY_ACCESS
+</dl>
+</dl>
+<p>
+<a name="writeException(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeException">
+<b>
+writeException
+</b>
+</a>
+<pre>
+  public int writeException(<a href="java.lang.String.html#_top_">String</a> f)
+</pre>
+<dl>
+<dd>
+This method is invoked if a write operation was attempted on the
+given file and the acl check failed.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+f
+-
+ the File to be accessed.
+<dt>
+<b>Returns:</b>
+<dd>
+ one of ALLOW_ACCESS, ALLOW_THIS_ACCESS, or DENY_ACCESS
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.html">Previous</a>    <a href="java.io.BufferedInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

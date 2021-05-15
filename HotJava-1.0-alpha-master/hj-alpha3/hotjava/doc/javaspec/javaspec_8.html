@@ -1,0 +1,121 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Expressions</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING54></A>
+<A HREF="javaspec_9.html">Next</A>       <A HREF="javaspec_7.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>7  Expressions</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_8.html#HEADING55"><B> 7.1 </B> - Operators </A><DD>
+<DT><A HREF="javaspec_8.html#HEADING56"><B>7.1.1 </B> - Operators on Integers</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING57"><B>7.1.2 </B> - Operators on Boolean Values</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING58"><B>7.1.3 </B> - Operators on Floating Point Values</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING59"><B>7.1.4 </B> - Operators on Arrays</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING60"><B>7.1.5 </B> - Operators on Strings</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING61"><B>7.1.6 </B> - Operators on Objects</A><DD>
+<DT><A HREF="javaspec_8.html#HEADING62"><B> 7.2 </B> - Casts and Conversions</A><DD>
+</DL>
+
+
+Expressions in the language are much like expressions in C.<P>
+<A NAME=HEADING55></A>
+<HR>
+<H3> 7.1  <A NAME=1>Operators </H3>
+The operators, from highest to lowest precedence, are:<P>
+<PRE>
+. [] ()
+++ -- ! ~ instanceof
+* / %
++ -
+&lt;&lt; &gt;&gt; &gt;&gt;&gt;
+&lt; &gt; &lt;= &gt;=
+== !=
+&amp;
+^
+|
+&amp;&amp;
+||
+?:
+= op=
+,
+</PRE>
+<A NAME=HEADING56></A>
+<HR>
+<H4>7.1.1  <A NAME=MARKER2_2></A><A NAME=3>Operators on Integers</H4>
+For operators with integer results, if any operand is long, the result type is long. Otherwise the result type is int--never byte, short, or char. Thus, if a variable i is declared a short or a byte, i+1 would be an int. When a result outside an operator's range would be produced, the result is reduced modulo the range of the result type. <P>
+The unary integer operators are:<BR><IMG SRC="javaspec_Tbl_5.gif"><BR>
+<P>
+The ++ operator is used to express incrementing directly. Incrementing can also be expressed indirectly using addition and assignment. ++lvalue means lvalue+=1. ++lvalue also means lvalue=lvalue+1 (as long as lvalue has no side effects). The -- operator is used to express decrementing. The ++ and -- operators can be used as both prefix and postfix operators. <P>
+The binary integer operators are:<BR><IMG SRC="javaspec_Tbl_6.gif"><BR>
+<P>
+Integer division rounds toward zero. Division and modulus obey the identity (a/b)*b + (a%b) == a. <P>
+The only exceptions for integer arithmetic are caused by a divide or modulus by zero, which throw the ArithmeticException. An underflow generates zero. An overflow leads to wrap-around, i.e.,  adding 1 to the maximum integer wraps around to the minimum integer.<P>
+An op= assignment operator corresponds to each of the binary operators in the above table.<P>
+The integer relational operators <A NAME=MARKER2_34></A>&lt;, <A NAME=MARKER2_33></A>&gt;, <A NAME=MARKER2_36></A>&lt;=, <A NAME=MARKER2_35></A>&gt;=, <A NAME=MARKER2_37></A>==, and <A NAME=MARKER2_38></A>!= produce boolean results. <P>
+<A NAME=HEADING57></A>
+<HR>
+<H4>7.1.2  Operators on Boolean Values</H4>
+Variables or expressions that are boolean can be combined to yield other boolean values. The unary operator <A NAME=MARKER2_10></A>! is boolean negation. The binary operators <A NAME=MARKER2_11></A>&amp;, <A NAME=MARKER2_12></A>|, and <A NAME=MARKER2_13></A>^ are the logical AND,<A NAME=MARKER2_14></A> OR, and <A NAME=MARKER2_15></A>XOR operators; they force evaluation of both operands. To avoid evaluation of right-hand operands, you can use the short-cut evaluation operators <A NAME=MARKER2_16></A>&amp;&amp; and <A NAME=MARKER2_17></A>||. You can also use == and !=. The assignment operators also work: <A NAME=MARKER2_18></A>&amp;=, <A NAME=MARKER2_19></A>|=, <A NAME=MARKER2_20></A>^=. The ternary conditional operator ?: works as it does in C.<P>
+<A NAME=HEADING58></A>
+<HR>
+<H4>7.1.3  <A NAME=MARKER2_21></A><A NAME=MARKER2_22></A><A NAME=23>Operators on Floating Point Values</H4>
+Floating point values can be combined using the usual operators: unary <A NAME=MARKER2_24></A>-; binary <A NAME=MARKER2_42></A>+, <A NAME=MARKER2_26></A>-, <A NAME=MARKER2_27></A>*, and <A NAME=MARKER2_28></A>/; and the assignment operators <A NAME=MARKER2_29></A>+=, <A NAME=MARKER2_30></A>-=, <A NAME=MARKER2_31></A>*=, and <A NAME=MARKER2_32></A>/=. The ++ and -- operators also work on floating point values (they add or subtract 1.0). In addition, % and %= work on floating point values, i.e., <P>
+<PRE>
+    a % b 
+</PRE>
+is the same as:<P>
+<PRE>
+    a - ((int)(a / b) * b)
+</PRE>
+This means that a%b is the floating point equivalent of the remainder after division.<P>
+Floating point expressions involving only single-precision operands are evaluated using single-precision operations and produce single-precision results. Floating point expressions that involve at least one double-precision operand are evaluated using double-precision operations and produce double-precision results. <P>
+The language has no arithmetic exceptions for floating point  arithmetic. Following the IEEE 754 floating point  specification, the distinguished values Inf and NaN are used  instead. Overflow generates Inf. Underflow generates 0. Divide  by zero generates Inf.<P>
+The usual relational operators are also available and produce boolean results: <A NAME=MARKER2_33></A>&gt;, <A NAME=MARKER2_34></A>&lt;, <A NAME=MARKER2_35></A>&gt;=, <A NAME=MARKER2_36></A>&lt;=, <A NAME=MARKER2_37></A>==, <A NAME=MARKER2_38></A>!=. Because of the properties of NaN, <A NAME=MARKER2_39></A>floating point values are not fully ordered, so care must be taken in comparison. For instance, if a&lt;b is not true, it does not follow that a&gt;=b. Likewise, a!=b does not imply that a&gt;b || a&lt;b. In fact, there may no ordering at all. <P>
+Floating point arithmetic and data formats are defined by IEEE 754, "Standard for Floating Point Arithmetic." See <A HREF="javaspec_10.html#0">Appendix: Floating Point</A> for details on the language's floating point implementation.<P>
+<A NAME=HEADING59></A>
+<HR>
+<H4>7.1.4  Operators on Arrays</H4>
+The following:<P>
+<PRE>
+    &lt;expression&gt;[&lt;expression&gt;]
+</PRE>
+gets the value of an element of an array. Legal ranges for the expression are from 0 to the length of the array minus 1. The range is checked only at runtime.<P>
+<A NAME=HEADING60></A>
+<HR>
+<H4>7.1.5  Operators on <A NAME=MARKER2_40></A><A NAME=MARKER2_41></A>Strings</H4>
+Strings are implemented as String objects (see <A HREF="javaspec_3.html#8">String Literals</A> for more information). The operator <A NAME=MARKER2_42></A>+ concatenates Strings, automatically converting operands into Strings if necessary. If the operand is an object it can define a method call toString() that returns a String in the class of the object.<P>
+<PRE>
+    // Examples of the + operator used with strings
+    float a = 1.0;
+    print("The value of a is " + a + "\n");
+    String s = "a = " + a;
+</PRE>
+The += operator works on Strings. Note, that the left hand side (s1 in the following example) is evaluated only once.<P>
+<PRE>
+    s1 += a; //s1 = s1 + a; // a is converted to String if necessary
+</PRE>
+<A NAME=HEADING61></A>
+<HR>
+<H4>7.1.6  <A NAME=44><A NAME=MARKER2_44></A>Operators on Objects</H4>
+The binary operator <A NAME=MARKER2_45></A>instanceof tests whether the specified object is an instance of the specified class or one of its subclasses. For example:<P>
+<PRE>
+    if (thermostat instanceof MeasuringDevice) {
+        MeasuringDevice dev = (MeasuringDevice)thermostat;
+          ...
+    }
+</PRE>
+determines whether thermostat is a MeasuringDevice object (an instance of MeasuringDevice or one of its subclasses).<P>
+<A NAME=HEADING62></A>
+<HR>
+<H3> 7.2  <A NAME=MARKER2_46></A>Casts and Conversions</H3>
+The Java language and runtime system restrict casts and conversions to help prevent the possibility of corrupting the system. Integers and floating point numbers can be cast back and forth, but integers cannot be cast to arrays or objects. Objects cannot be cast to base types. An instance can be cast to a superclass with no penalty, but casting to a subclass generates a runtime check. If the object being cast to a subclass is not an instance of the subclass (or one of its subclasses), the runtime system throws a ClassCastException. <P>
+<HR>
+<A HREF="javaspec_9.html">Next</A>       <A HREF="javaspec_7.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

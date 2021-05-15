@@ -1,0 +1,201 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.nntp.NewsgroupInfo
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.nntp.html">This Package</a>    <a href="net.nntp.html">Previous</a>    <a href="net.nntp.NntpClient.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.nntp.NewsgroupInfo
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.nntp.NewsgroupInfo
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+NewsgroupInfo</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+This class manages information related to the current status of 
+newsgroups. 
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.5, 12 Dec 1994
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne, James Gosling<dt>
+<b>See Also:</b>
+<dd>
+<a href="net.nntp.NntpClient.html#_top_">NntpClient</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#firstArticle">firstArticle</a>
+</b>
+<dd>
+Number of the first and last articles in the group
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lastArticle">lastArticle</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#name">name</a>
+</b>
+<dd>
+This newsgroup's name in network form (eg rec.pets)
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NewsgroupInfo(java.lang.String, int, int)"><b>NewsgroupInfo</b></a>(String, int, int)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reload(net.nntp.NntpClient)"><b>reload</b></a>(NntpClient)
+<dd>
+Reload news in the group using nntp.getGroup(this.name)
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+convert the information to a printable string of the form:
+ <p>
+ NewsgroupInfo[name=<i>name</i>[<i>firstArticle</i>,<i>lastArticle</i>]
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="name">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+name
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> name
+</pre>
+<dl>
+<dd>
+This newsgroup's name in network form (eg rec.pets)
+</dl>
+<a name="firstArticle">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+firstArticle
+</b>
+<pre>
+  public int firstArticle
+</pre>
+<dl>
+<dd>
+Number of the first and last articles in the group
+</dl>
+<a name="lastArticle">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lastArticle
+</b>
+<pre>
+  public int lastArticle
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="NewsgroupInfo"></a>
+<a name="NewsgroupInfo(java.lang.String, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NewsgroupInfo
+</b>
+<pre>
+  public NewsgroupInfo(<a href="java.lang.String.html#_top_">String</a> name,
+                       int start,
+                       int end)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+convert the information to a printable string of the form:
+ <p>
+ NewsgroupInfo[name=<i>name</i>[<i>firstArticle</i>,<i>lastArticle</i>]
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="reload(net.nntp.NntpClient)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reload">
+<b>
+reload
+</b>
+</a>
+<pre>
+  public void reload(<a href="net.nntp.NntpClient.html#_top_">NntpClient</a> nntp)
+</pre>
+<dl>
+<dd>
+Reload news in the group using nntp.getGroup(this.name)
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.nntp.html">This Package</a>    <a href="net.nntp.html">Previous</a>    <a href="net.nntp.NntpClient.html#_top_">Next</a></pre>
+</body>
+</html>

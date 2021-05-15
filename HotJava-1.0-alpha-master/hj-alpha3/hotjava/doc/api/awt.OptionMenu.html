@@ -1,0 +1,457 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.OptionMenu
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.NativeDisplayItem.html#_top_">Previous</a>    <a href="awt.PSGraphics.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.OptionMenu
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.OptionMenu
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+OptionMenu</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+OptionMenu is a pop-up menu of choices. The current choice is
+displayed as the title of the menu.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.15 03 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#selectedIndex">selectedIndex</a>
+</b>
+<dd>
+the index of the current choice for this OptionMenu
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#OptionMenu(awt.Container, java.lang.String, java.lang.String)"><b>OptionMenu</b></a>(Container, String, String)
+<dd>
+Constructs an OptionMenu.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addItem(java.lang.String)"><b>addItem</b></a>(String)
+<dd>
+Adds an item to this OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addSeparator()"><b>addSeparator</b></a>()
+<dd>
+Adds a separator line to the current position in the OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Returns the natural size of the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#itemAt(int)"><b>itemAt</b></a>(int)
+<dd>
+Returns the String at the given index in the OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Shows this OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves this OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nItems()"><b>nItems</b></a>()
+<dd>
+Returns the number of items in this OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this OptionMenu.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#select(int)"><b>select</b></a>(int)
+<dd>
+Select the given item.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#selected(int)"><b>selected</b></a>(int)
+<dd>
+Overrides this method to take some action whenever the current
+choice for the OptionMenu changes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#selectedItem()"><b>selectedItem</b></a>()
+<dd>
+Returns the current choice as a String.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this OptionMenu.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="selectedIndex">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+selectedIndex
+</b>
+<pre>
+  public int selectedIndex
+</pre>
+<dl>
+<dd>
+the index of the current choice for this OptionMenu
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="OptionMenu"></a>
+<a name="OptionMenu(awt.Container, java.lang.String, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+OptionMenu
+</b>
+<pre>
+  public OptionMenu(<a href="awt.Container.html#_top_">Container</a> p,
+                    <a href="java.lang.String.html#_top_">String</a> label,
+                    <a href="java.lang.String.html#_top_">String</a> pName)
+</pre>
+<dl>
+<dd>
+Constructs an OptionMenu.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+p
+-
+ is the parent window to contain this OptionMenu
+<dd>
+label
+-
+ is a string describing the OptionMenu. It can be
+null. 
+<dd>
+pName
+-
+ is the name of this OptionMenu. This name may be
+signficant for layout purposes. 
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.BorderLayout.html#_top_">BorderLayout</a>
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="addItem(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addItem">
+<b>
+addItem
+</b>
+</a>
+<pre>
+  public void addItem(<a href="java.lang.String.html#_top_">String</a> item)
+</pre>
+<dl>
+<dd>
+Adds an item to this OptionMenu.
+</dl>
+<p>
+<a name="addSeparator()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addSeparator">
+<b>
+addSeparator
+</b>
+</a>
+<pre>
+  public void addSeparator()
+</pre>
+<dl>
+<dd>
+Adds a separator line to the current position in the OptionMenu.
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Returns the natural size of the object.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#getPreferredSize()">getPreferredSize</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="nItems()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nItems">
+<b>
+nItems
+</b>
+</a>
+<pre>
+  public int nItems()
+</pre>
+<dl>
+<dd>
+Returns the number of items in this OptionMenu. Separators
+don't count.
+</dl>
+<p>
+<a name="itemAt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="itemAt">
+<b>
+itemAt
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> itemAt(int index)
+</pre>
+<dl>
+<dd>
+Returns the String at the given index in the OptionMenu.
+</dl>
+<p>
+<a name="selected(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="selected">
+<b>
+selected
+</b>
+</a>
+<pre>
+  public void selected(int index)
+</pre>
+<dl>
+<dd>
+Overrides this method to take some action whenever the current
+choice for the OptionMenu changes.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+index
+-
+ is the index of the current choice.
+</dl>
+</dl>
+<p>
+<a name="selectedItem()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="selectedItem">
+<b>
+selectedItem
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> selectedItem()
+</pre>
+<dl>
+<dd>
+Returns the current choice as a String.
+</dl>
+<p>
+<a name="select(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="select">
+<b>
+select
+</b>
+</a>
+<pre>
+  public void select(int pos)
+</pre>
+<dl>
+<dd>
+Select the given item.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this OptionMenu. It should not be used afterwards.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int X,
+                   int Y)
+</pre>
+<dl>
+<dd>
+Moves this OptionMenu.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this OptionMenu.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Shows this OptionMenu.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this OptionMenu.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.NativeDisplayItem.html#_top_">Previous</a>    <a href="awt.PSGraphics.html#_top_">Next</a></pre>
+</body>
+</html>

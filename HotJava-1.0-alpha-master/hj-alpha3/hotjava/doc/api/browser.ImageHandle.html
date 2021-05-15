@@ -1,0 +1,320 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.ImageHandle
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.ImageCache.html#_top_">Previous</a>    <a href="browser.ImageReader.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.ImageHandle
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Observable.html#_top_">browser.Observable</a>
+           |
+           +----browser.ImageHandle
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+ImageHandle</b>
+<dt>
+extends <a href="browser.Observable.html#_top_">Observable</a>
+<dt>
+implements <a href="browser.Observer.html#_top_">Observer</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fetching">fetching</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addObserver(browser.Observer)"><b>addObserver</b></a>(Observer)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#checkForImage(browser.Observer)"><b>checkForImage</b></a>(Observer)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#deleteObserver(browser.Observer)"><b>deleteObserver</b></a>(Observer)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#fetchImage()"><b>fetchImage</b></a>()
+<dd>
+This routine is called by the ImageReader.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getImage(browser.Observer, boolean)"><b>getImage</b></a>(Observer, boolean)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getURL()"><b>getURL</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#height()"><b>height</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isFetching()"><b>isFetching</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFetching()"><b>setFetching</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setImage(java.lang.Object)"><b>setImage</b></a>(Object)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update(browser.Observable)"><b>update</b></a>(Observable)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#waitForImage()"><b>waitForImage</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#waitForSize()"><b>waitForSize</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#width()"><b>width</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="fetching">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fetching
+</b>
+<pre>
+  protected boolean fetching
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getURL()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getURL">
+<b>
+getURL
+</b>
+</a>
+<pre>
+  public <a href="net.www.html.URL.html#_top_">URL</a> getURL()
+</pre>
+<a name="getImage(browser.Observer, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getImage">
+<b>
+getImage
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> getImage(<a href="browser.Observer.html#_top_">Observer</a> o,
+                         boolean waitForIt)
+</pre>
+<a name="setImage(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setImage">
+<b>
+setImage
+</b>
+</a>
+<pre>
+  public void setImage(<a href="java.lang.Object.html#_top_">Object</a> img)
+</pre>
+<a name="checkForImage(browser.Observer)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="checkForImage">
+<b>
+checkForImage
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> checkForImage(<a href="browser.Observer.html#_top_">Observer</a> o)
+</pre>
+<a name="waitForImage()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="waitForImage">
+<b>
+waitForImage
+</b>
+</a>
+<pre>
+  public synchronized void waitForImage()
+</pre>
+<a name="waitForSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="waitForSize">
+<b>
+waitForSize
+</b>
+</a>
+<pre>
+  public synchronized void waitForSize()
+</pre>
+<a name="width()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="width">
+<b>
+width
+</b>
+</a>
+<pre>
+  public int width()
+</pre>
+<a name="height()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="height">
+<b>
+height
+</b>
+</a>
+<pre>
+  public int height()
+</pre>
+<a name="isFetching()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isFetching">
+<b>
+isFetching
+</b>
+</a>
+<pre>
+  public boolean isFetching()
+</pre>
+<a name="setFetching()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFetching">
+<b>
+setFetching
+</b>
+</a>
+<pre>
+  public void setFetching()
+</pre>
+<a name="deleteObserver(browser.Observer)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="deleteObserver">
+<b>
+deleteObserver
+</b>
+</a>
+<pre>
+  public synchronized void deleteObserver(<a href="browser.Observer.html#_top_">Observer</a> o)
+</pre>
+<a name="fetchImage()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="fetchImage">
+<b>
+fetchImage
+</b>
+</a>
+<pre>
+  public void fetchImage()
+</pre>
+<dl>
+<dd>
+This routine is called by the ImageReader.  The getImage()
+	waits around for this method to complete.
+</dl>
+<p>
+<a name="update(browser.Observable)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public synchronized void update(<a href="browser.Observable.html#_top_">Observable</a> o)
+</pre>
+<a name="addObserver(browser.Observer)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addObserver">
+<b>
+addObserver
+</b>
+</a>
+<pre>
+  public void addObserver(<a href="browser.Observer.html#_top_">Observer</a> o)
+</pre>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.ImageCache.html#_top_">Previous</a>    <a href="browser.ImageReader.html#_top_">Next</a></pre>
+</body>
+</html>

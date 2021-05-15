@@ -1,0 +1,165 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.UUDecoder
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UCEncoder.html#_top_">Previous</a>    <a href="java.util.UUEncoder.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.UUDecoder
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.util.CharacterDecoder.html#_top_">java.util.CharacterDecoder</a>
+           |
+           +----java.util.UUDecoder
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+UUDecoder</b>
+<dt>
+extends <a href="java.util.CharacterDecoder.html#_top_">CharacterDecoder</a>
+</dl>
+This class implements a Berkeley uu character decoder. This decoder
+was made famous by the uudecode program.
+The basic character coding is algorithmic, taking 6 bits of binary
+data and adding it to an ASCII ' ' (space) character. This converts
+these six bits into a printable representation. Note that it depends
+on the ASCII character encoding standard for english. Groups of three
+bytes are converted into 4 characters by treating the three bytes
+a four 6 bit groups, group 1 is byte 1's most significant six bits,
+group 2 is byte 1's least significant two bits plus byte 2's four
+most significant bits. etc.
+In this encoding, the buffer prefix is:
+<pre>
+    begin [mode] [filename]
+</pre>
+This is followed by one or more lines of the form:
+<pre>
+	(len)(data)(data)(data) ...
+</pre>
+where (len) is the number of bytes on this line. Note that groupings
+are always four characters, even if length is not a multiple of three
+bytes. When less than three characters are encoded, the values of the
+last remaining bytes is undefined and should be ignored.
+The last line of data in a uuencoded buffer is represented by a single
+space character. This is translated by the decoding engine to a line
+length of zero. This is immediately followed by a line which contains
+the word 'end[newline]'
+If an error is encountered during decoding this class throws a
+CEFormatException. The specific detail messages are:
+<pre>
+	"UUDecoder: No begin line."
+	"UUDecoder: Malformed begin line."
+	"UUDecoder: Short Buffer."
+	"UUDecoder: Bad Line Length."
+	"UUDecoder: Missing 'end' line."
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+    1.1, 16 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+     Chuck McManis<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.CharacterDecoder.html#_top_">CharacterDecoder</a>,
+<a href="java.util.UUEncoder.html#_top_">UUEncoder</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#bufferName">bufferName</a>
+</b>
+<dd>
+
+This string contains the name that was in the buffer being decoded.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#mode">mode</a>
+</b>
+<dd>
+Represents UNIX(tm) mode bits.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#UUDecoder()"><b>UUDecoder</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="bufferName">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+bufferName
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> bufferName
+</pre>
+<dl>
+<dd>
+This string contains the name that was in the buffer being decoded.
+</dl>
+<a name="mode">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+mode
+</b>
+<pre>
+  public int mode
+</pre>
+<dl>
+<dd>
+Represents UNIX(tm) mode bits. Generally three octal digits 
+representing read, write, and execute permission of the owner, 
+group owner, and  others. They should be interpreted as the bit groups:
+<pre>
+(owner) (group) (others)
+	rwx      rwx     rwx 	(r = read, w = write, x = execute)
+</pre>
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="UUDecoder"></a>
+<a name="UUDecoder()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+UUDecoder
+</b>
+<pre>
+  public UUDecoder()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UCEncoder.html#_top_">Previous</a>    <a href="java.util.UUEncoder.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Exception Handling</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING190></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_30.html">Prev</A>       <A HREF="vmspec_32.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Exception Handling</H1>
+<DL>
+<DT><A HREF="vmspec_31.html#HEADING191"><B></B>  The virtual machine support for exceptions documented here is likely to change in the near future but reflects the current Java implementation. The instructions here also assume that asynchronous exceptions are not supported.</A><DD>
+<DT><A HREF="vmspec_31.html#HEADING192"><B></B>  athrow</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING191></A>
+<H3>The virtual machine support for exceptions documented here is likely to change in the near future but reflects the current Java implementation. The instructions here also assume that asynchronous exceptions are not supported.</H3>
+<A NAME=HEADING192></A>
+<H3>athrow</H3>
+Throw exception<BR><IMG SRC="instructions_only_Tbl_40.gif"><BR>
+<P>
+<PRE>
+..., handle =&gt; [undefined]<P>
+</PRE>
+handle should be a handle to an object. The handle should be of an exception object, which is thrown. The current Java stack frame is searched for the most recent catch clause that handles this exception. A catch clause can handle an exception if the object in the constant pool at for that entry is a superclass of the thrown object.) If a matching catch list entry is found, the pc is reset to the address indicated by the catch-list pointer, and execution continues there. <P>
+If no appropriate catch clause is found in the current stack frame, that frame is popped and the exception is rethrown. If one is found, it contains the location of the code for this exception. The pc is reset to that location and execution continues. If no appropriate catch is found in the current stack frame, that frame is popped and the exception is rethrown.<P>
+If handle is null, then a NullPointerException is thrown instead.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_30.html">Prev</A>       <A HREF="vmspec_32.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

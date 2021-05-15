@@ -1,0 +1,110 @@
+<Html>
+<Head>
+<Title>Adding an Applet to a Page</Title>
+</Head>
+
+<Body>
+<PRE><A Href="TOC.html">Contents</A>    <A
+Href="index.html">Previous</A>    <A
+Href="Animation.html">Next</A></PRE>
+<HR>
+
+<H1>Adding an Applet to a Page</H1>
+
+By following the steps on this page,
+you can add an applet to an HTML page.
+This example uses the ImageLoopItem applet,
+which performs <A Href="Animation.html">animation</A>.
+We supply another applet, AudioItem,
+that you can use to play <A Href="Sound.html">sounds</A>.
+<P>
+
+<OL>
+<LI> 
+If you don't already have a directory (folder) for your HTML pages,
+create one.
+<A Href="AddingApplet_1.html">(Here are the platform-specific details.)</A>
+<P>
+
+<LI>
+In the HTML directory you created in step 1,
+create a file named <SAMP>AnApplet.html</SAMP>.
+Put the following text in it:
+<PRE>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt; An Applet &lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    
+    &lt;BODY&gt;
+    Here is an applet:
+    &lt;APP CLASS="ImageLoopItem"
+         SRC="doc:/demo/"
+         IMG="images/duke"&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+</PRE>
+The general syntax of the
+<A HREF="AppTag.html"><SAMP>APP</SAMP> HTML tag</A>
+(which you use to add applets to a page)
+is discussed later in this document.
+<P>
+
+<LI>
+Load the new file into HotJava by entering its URL
+in the <SAMP>Document URL</SAMP> field
+near the top of the HotJava window.
+For example:
+<PRE>
+    file:/home/kwalrath/Html/AnApplet.html
+</PRE>
+Information on URLs is available in various places on the Internet,
+such as from the NCSA in 
+<A HREF="http://www.ncsa.uiuc.edu/demoweb/url-primer.html"><CITE>A
+Beginner's Guide to URLs</CITE></A>.
+</OL>
+
+Once you've successfully completed these steps,
+you should see the following
+in the HotJava page that comes up:
+<DL>
+<DT>
+<DD>Here is an applet:
+<app class="ImageLoopItem"
+     src="doc:/demo/"
+     img="doc:/demo/images/duke">
+</DL>
+<P>
+
+You can sometimes make
+the display of an applet more attractive
+by specifying the width and height of the applet's display area.
+For example, the following HTML text
+<PRE>
+    &lt;APP CLASS="ImageLoopItem"
+         SRC="doc:/demo/"
+         IMG="doc:/demo/images/duke"
+	 WIDTH=55
+	 HEIGHT=68&gt;
+</PRE>
+results in a better page layout when the applet's display is delayed:
+    <APP CLASS="ImageLoopItem"
+         SRC="doc:/demo/"
+         IMG="images/duke"
+	 WIDTH=55
+	 HEIGHT=68>
+<P>
+
+For more information on applets provided with this release,
+choose the <samp>Next</samp> link below.
+Or, you can skip forward to learn about
+<A Href="StepByStep.html">writing applets</A>.
+<P>
+
+<HR>
+<PRE><A Href="TOC.html">Contents</A>    <A
+Href="index.html">Previous</A>    <A
+Href="Animation.html">Next</A></PRE>
+
+</Body>
+</Html>

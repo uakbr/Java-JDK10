@@ -1,0 +1,78 @@
+<Html>
+<Head>
+<Title>Performing Sounds</Title>
+</Head>
+
+<Body>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+Href="Animation.html">Previous</A>    <A 
+Href="StepByStep.html">Next</A></PRE>   
+<HR>
+
+<h4><em>Adding an Applet to a Page</em></h4>
+<H1><App class="AudioItem" src="doc:/demo/"
+     snd="Hello.au|Welcome.au" height=12 width=10
+     >Performing Sounds</H1>
+
+The AudioItem applet lets you put sound
+into an HTML page.
+By default, the sound file you specify
+plays once each time the page is visited
+or the user clicks the sound icon.
+If you specify a list of sounds to play,
+then the first sound is played the first time the page is visited
+(or icon clicked),
+the second sound is played the second time,
+and so on.
+After the AudioItem has played every sound in the list,
+it plays the last sound for all subsequent visits of the page
+(or clicks of the icon).
+<P>
+
+To put sound into an HTML page:
+
+<OL>
+<LI> Create one or more sounds.
+     Currently, they must be 
+     8 bit &#181;law, 8000Hz, one channel, Sun &quot;.au&quot; files.
+     You can create these on a Sun workstation
+     using the <SAMP>audiotool</SAMP> application.
+     You can convert files from other sound formats 
+     using an audio format conversion program.
+<LI> Put the sound files into a place where they can be published --
+     for example, in the same directory (folder)
+     as the HTML page that will play them.
+<LI> Add the sounds to the HTML page, using
+     <A Href="AppTag.html">the <SAMP>APP</SAMP> HTML tag</A>.
+     Separate file names with a vertical bar ("|").
+     <P>
+     For example, to play one sound every time the reader
+     visits the page (or clicks the sound icon):
+<PRE>
+&lt;APP CLASS="AudioItem"
+     SRC="doc:/demo/"
+     SND="Hello.au"&gt;
+</PRE>
+</OL>
+
+If you want the last (or only) sound in the list
+to be played only once,
+then end the list with a vertical bar ("|").
+<P>
+
+The sounds this page plays
+(if you're using HotJava)
+were specified with the following:
+<PRE>
+  &lt;APP CLASS="AudioItem"
+       SRC="doc:/demo/"
+       SND="Hello.au|Welcome.au"&gt;
+</PRE>
+
+<HR>
+<PRE><A Href="TOC.html">Contents</A>    <A 
+Href="Animation.html">Previous</A>    <A 
+Href="StepByStep.html">Next</A></PRE>   
+
+</Body>
+</Html>

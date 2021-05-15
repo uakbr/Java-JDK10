@@ -1,0 +1,216 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.StringInputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.StringBufferPrintStream.html#_top_">Previous</a>    <a href="java.io.TextInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.StringInputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----java.io.StringInputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+StringInputStream</b>
+<dt>
+extends <a href="java.io.InputStream.html#_top_">InputStream</a>
+</dl>
+String input stream, can be constructed from a String.
+Allows a String to be read as though it's a Stream.
+<dl>
+<dt>
+<b>Author:</b>
+<dd>
+James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringInputStream(java.lang.String)"><b>StringInputStream</b></a>(String)
+<dd>
+Creates an input file given a string.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#available()"><b>available</b></a>()
+<dd>
+Returns the number of bytes that can be read
+without blocking.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Reads a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#skip(int)"><b>skip</b></a>(int)
+<dd>
+Skips bytes of input.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="StringInputStream"></a>
+<a name="StringInputStream(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringInputStream
+</b>
+<pre>
+  public StringInputStream(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Creates an input file given a string.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public synchronized int read()
+</pre>
+<dl>
+<dd>
+Reads a byte.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the byte read, or -1 if the end of the
+		stream is reached.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read()">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="skip(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="skip">
+<b>
+skip
+</b>
+</a>
+<pre>
+  public synchronized int skip(int n)
+</pre>
+<dl>
+<dd>
+Skips bytes of input.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+n
+-
+ 	bytes to be skipped
+<dt>
+<b>Returns:</b>
+<dd>
+actual number of bytes skipped
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#skip(int)">skip</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="available()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="available">
+<b>
+available
+</b>
+</a>
+<pre>
+  public synchronized int available()
+</pre>
+<dl>
+<dd>
+Returns the number of bytes that can be read
+without blocking.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the number of available bytes, which is initially
+		equal to the file size
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#available()">available</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public synchronized void close()
+</pre>
+<dl>
+<dd>
+Closes the input stream.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#close()">close</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.StringBufferPrintStream.html#_top_">Previous</a>    <a href="java.io.TextInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

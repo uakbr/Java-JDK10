@@ -1,0 +1,125 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Types</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING13></A>
+<A HREF="javaspec_5.html">Next</A>       <A HREF="javaspec_3.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>3  Types</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_4.html#HEADING14"><B> 3.1 </B> - Numeric Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING15"><B>3.1.1 </B> - Integer Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING16"><B>3.1.2 </B> - Floating Point Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING17"><B>3.1.3 </B> - Character Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING18"><B> 3.2 </B> - Boolean Types</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING19"><B> 3.3 </B> - Arrays</A><DD>
+<DT><A HREF="javaspec_4.html#HEADING20"><B>3.3.1 </B> - Array Detail</A><DD>
+</DL>
+
+
+Every variable and every expression has a type. Type determines the allowable range of values a variable can hold, allowable operations on those values, and the meanings of the operations. Built-in types are provided by the Java language. Programmers can compose new types using the <A NAME=MARKER2_17></A>class and interface mechanisms (see <A HREF="javaspec_5.html#0">Classes</A> and <A HREF="javaspec_6.html#0">Interfaces</A>).<P>
+The Java language has two kinds of types: simple and composite. Simple types are those that cannot be broken down; they are atomic. The integer, floating point, boolean, and character types are all simple types. Composite types are built on simple types. The language has three kinds of composite types: arrays, classes, and interfaces. Simple types and arrays are discussed in this section. <P>
+<A NAME=HEADING14></A>
+<HR>
+<H3> 3.1  Numeric Types</H3>
+<A NAME=HEADING15></A>
+<HR>
+<H4>3.1.1  <A NAME=3><A NAME=MARKER2_3></A>Integer Types</H4>
+Integers are similar to those in C and C++, with two exceptions: all integer types are machine independent, and some of the traditional definitions have been changed to reflect changes in the world since C was introduced. The four integer types have widths of 8, 16, 32, and 64 bits and are signed. <BR><IMG SRC="javaspec_Tbl_4.gif"><BR>
+ <P>
+A variable's type does not directly affect its storage allocation. Type only determines a variable's arithmetic properties and legal range of values. If a value is assigned to a variable that is outside the legal range of the variable, the value is reduced modulo the range.<P>
+<A NAME=HEADING16></A>
+<HR>
+<H4>3.1.2  <A NAME=6><A NAME=MARKER2_5></A><A NAME=MARKER2_6></A>Floating Point Types</H4>
+The <A NAME=MARKER2_7></A>float keyword denotes single precision (32 bit); <A NAME=MARKER2_8></A>double denotes double precision (64 bit). The result of a binary operator on two float operands is a float. If either operand is a double, the result is a double.<P>
+Floating point arithmetic and data formats are defined by IEEE 754. See <A HREF="javaspec_10.html#0">Appendix: Floating Point</A> for details on the floating point implementation.<P>
+<A NAME=HEADING17></A>
+<HR>
+<H4>3.1.3  <A NAME=9>Character Types</H4>
+The language uses the <A NAME=MARKER2_10></A>Unicode character set throughout. Consequently the <A NAME=MARKER2_11></A>char data type is defined as a 16-bit unsigned integer.<P>
+<A NAME=HEADING18></A>
+<HR>
+<H3> 3.2  <A NAME=12>Boolean Types</H3>
+The boolean type is used for variables that can be either true or false, and for methods that return true and false values. It's also the type that is returned by the relational operators (e.g., "&gt;="). <P>
+Boolean values are not numbers and cannot be converted into numbers by casting.<P>
+<A NAME=HEADING19></A>
+<HR>
+<H3> 3.3  <A NAME=14><A NAME=MARKER2_14></A>Arrays</H3>
+Arrays in the language are first class objects. They replace pointer arithmetic. All objects (including arrays) are referred to by pointers that cannot be damaged by being manipulated as numbers. Arrays are created using the new operator:<P>
+<PRE>
+    char s[] = new char[30];
+</PRE>
+The first element of an array is at index 0 (zero). Specifying dimensions in the declarations is not allowed. Every allocation of an array must be explicit--use new every time: <P>
+<PRE>
+    int i[] = new int[3];
+</PRE>
+The language does not support multi-dimensional arrays. Instead, programmers can create arrays of arrays:<P>
+<PRE>
+   int i[][] = new int[3][4];
+</PRE>
+At least one dimension must be specified but other dimensions can be explicitly allocated by a program at a later time. For example:<P>
+<PRE>
+   int i[][] = new int[3][];
+</PRE>
+is a legal declaration. <P>
+In addition to the C-style array declaration, where brackets follow the name of the variable or method, Java allows brackets following the array element type. The following two lines are equivalent:<P>
+<PRE>
+int iarray[];			
+int[] iarray;	
+</PRE>
+as are the following method declarations:<P>
+<PRE>
+byte 	f( int n )[];
+byte[]	f( int n );	
+</PRE>
+Subscripts are checked to make sure they're valid:<P>
+<PRE>
+   int a[] = new int[10];
+   a[5] = 1;
+   a[1] = a[0] + a[2];
+   a[-1]	 = 4;         // Throws an ArrayIndexOutOfBoundsException
+                        // at runtime
+   a[10] = 2;           // Throws an ArrayIndexOutOfBoundsException
+                        // at runtime
+</PRE>
+Array dimensions must be integer expressions:<P>
+<PRE>
+   int n;
+   ...
+   float arr[] = new float[n + 1];
+</PRE>
+The length of any array can be found by using <A NAME=MARKER2_15></A>.length:<P>
+<PRE>
+   int a[][] = new int[10][3];
+   println(a.length);           // prints 10
+   println(a[0].length);        // prints 3
+</PRE>
+<A NAME=HEADING20></A>
+<HR>
+<H4>3.3.1  Array Detail</H4>
+Arrays are instances of subclasses of class Object. In the class hierarchy there is a class named Array, which has one instance variable, "length". For each primitive type there is a corresponding subclass of Array. Similarly, for all classes a corresponding subclass of Array implicitly exists. For example:<P>
+<PRE>
+   new Thread[n]
+</PRE>
+creates an instance of Thread[]. If class A is a superclass of class B (i.e., B extends A) then A[] is a superclass of B[] (see the diagram below).<BR><IMG SRC="javaspec_AFrame_1.gif"><BR>
+<P>
+Hence, you can assign an array to an Object:<P>
+<PRE>
+   Object o;
+   int a[] = new int[10];
+   o = a;
+</PRE>
+and you can cast an Object to an array:<P>
+<PRE>
+   a = (int[])o;	
+</PRE>
+Array classes cannot be explicitly subclassed.<P>
+<HR>
+<A HREF="javaspec_5.html">Next</A>       <A HREF="javaspec_3.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

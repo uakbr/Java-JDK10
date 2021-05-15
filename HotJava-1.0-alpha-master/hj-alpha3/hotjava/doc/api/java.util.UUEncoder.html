@@ -1,0 +1,165 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.UUEncoder
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UUDecoder.html#_top_">Previous</a>    <a href="java.util.Vector.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.UUEncoder
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.util.CharacterEncoder.html#_top_">java.util.CharacterEncoder</a>
+           |
+           +----java.util.UUEncoder
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+UUEncoder</b>
+<dt>
+extends <a href="java.util.CharacterEncoder.html#_top_">CharacterEncoder</a>
+</dl>
+This class implements a Berkeley uu character encoder. This encoder
+was made famous by uuencode program.
+The basic character coding is algorithmic, taking 6 bits of binary
+data and adding it to an ASCII ' ' (space) character. This converts
+these six bits into a printable representation. Note that it depends
+on the ASCII character encoding standard for english. Groups of three
+bytes are converted into 4 characters by treating the three bytes
+a four 6 bit groups, group 1 is byte 1's most significant six bits,
+group 2 is byte 1's least significant two bits plus byte 2's four
+most significant bits. etc.
+In this encoding, the buffer prefix is:
+<pre>
+    begin [mode] [filename]
+</pre>
+This is followed by one or more lines of the form:
+<pre>
+	(len)(data)(data)(data) ...
+</pre>
+where (len) is the number of bytes on this line. Note that groupings
+are always four characters, even if length is not a multiple of three
+bytes. When less than three characters are encoded, the values of the
+last remaining bytes is undefined and should be ignored.
+The last line of data in a uuencoded file is represented by a single
+space character. This is translated by the decoding engine to a line
+length of zero. This is immediately followed by a line which contains
+the word 'end[newline]'
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+    1.3, 16 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+     Chuck McManis<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.CharacterEncoder.html#_top_">CharacterEncoder</a>,
+<a href="java.util.UUDecoder.html#_top_">UUDecoder</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#UUEncoder()"><b>UUEncoder</b></a>()
+<dd>
+Default - buffer begin line will be:
+<pre>
+	begin 644 encoder.buf
+</pre>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#UUEncoder(java.lang.String)"><b>UUEncoder</b></a>(String)
+<dd>
+Specifies a name for the encoded bufer, begin line will be:
+<pre>
+	begin 644 [FNAME]
+</pre>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#UUEncoder(java.lang.String, int)"><b>UUEncoder</b></a>(String, int)
+<dd>
+Specifies a name and mode for the encoded bufer, begin line will be:
+<pre>
+	begin [MODE] [FNAME]
+</pre>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="UUEncoder"></a>
+<a name="UUEncoder()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+UUEncoder
+</b>
+<pre>
+  public UUEncoder()
+</pre>
+<dl>
+<dd>
+Default - buffer begin line will be:
+<pre>
+	begin 644 encoder.buf
+</pre>
+</dl>
+<p>
+<a name="UUEncoder(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+UUEncoder
+</b>
+<pre>
+  public UUEncoder(<a href="java.lang.String.html#_top_">String</a> fname)
+</pre>
+<dl>
+<dd>
+Specifies a name for the encoded bufer, begin line will be:
+<pre>
+	begin 644 [FNAME]
+</pre>
+</dl>
+<p>
+<a name="UUEncoder(java.lang.String, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+UUEncoder
+</b>
+<pre>
+  public UUEncoder(<a href="java.lang.String.html#_top_">String</a> fname,
+                   int newMode)
+</pre>
+<dl>
+<dd>
+Specifies a name and mode for the encoded bufer, begin line will be:
+<pre>
+	begin [MODE] [FNAME]
+</pre>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UUDecoder.html#_top_">Previous</a>    <a href="java.util.Vector.html#_top_">Next</a></pre>
+</body>
+</html>

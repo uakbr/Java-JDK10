@@ -1,0 +1,24 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Constant Pool</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING18></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_11.html">Prev</A>       <A HREF="vmspec_13.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Constant Pool</H1>
+
+<HR>
+
+Associated with each class is a constant pool. The constant pool contains the names of all fields, methods, and other such information that is used by any method in the class. At the end of the chapter containing the class file format there is a table of the constant pool types and their associated values.<P>
+ When the class is first read in from memory, the class structure has two fields related to the constant pool. The nconstants field indicates the number of constants in this classes constant pool. The constant_info.constants_offset field contains an integer offset (in bytes) from the start of the class to the data which describes the constants in the class. <P>
+constant_pool[0] may be used by the implementation for whatever purposes it wishes.<P>
+constant_pool[1] ... constant_pool[nconstants - 1] are described by the sequence of bytes beginning at the byte indicated by constant_info.constants_offset in the class object. Each sequence of bytes contains a "type" field, followed by one or more type-dependent bytes, describing in more detail the specific field. <P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_11.html">Prev</A>       <A HREF="vmspec_13.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

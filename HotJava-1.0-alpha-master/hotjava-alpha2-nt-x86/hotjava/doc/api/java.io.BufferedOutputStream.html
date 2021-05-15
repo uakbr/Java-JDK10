@@ -1,0 +1,293 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.BufferedOutputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.BufferedInputStream.html#_top_">Previous</a>    <a href="java.io.DataInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.BufferedOutputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.OutputStream.html#_top_">java.io.OutputStream</a>
+           |
+           +----<a href="java.io.FilterOutputStream.html#_top_">java.io.FilterOutputStream</a>
+                   |
+                   +----java.io.BufferedOutputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+BufferedOutputStream</b>
+<dt>
+extends <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a>
+</dl>
+A buffered output stream. This stream lets you write characters
+to a stream without causing a write every time. The data
+is first written into a buffer. It is written to the
+actual stream when the buffer is full, or when the stream is
+flushed.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.12, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#buf">buf</a>
+</b>
+<dd>
+The buffer.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#count">count</a>
+</b>
+<dd>
+The number of bytes in the buffer.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BufferedOutputStream(java.io.OutputStream)"><b>BufferedOutputStream</b></a>(OutputStream)
+<dd>
+Creates a new buffered stream with a default
+buffer size.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BufferedOutputStream(java.io.OutputStream, int)"><b>BufferedOutputStream</b></a>(OutputStream, int)
+<dd>
+Creates a new buffered stream with a given
+buffer size.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#flush()"><b>flush</b></a>()
+<dd>
+Flushes the stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Writes a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[], int, int)"><b>write</b></a>(byte[], int, int)
+<dd>
+Writes a sub array of bytes.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="buf">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+buf
+</b>
+<pre>
+  protected byte buf[]
+</pre>
+<dl>
+<dd>
+The buffer.
+</dl>
+<a name="count">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+count
+</b>
+<pre>
+  protected int count
+</pre>
+<dl>
+<dd>
+The number of bytes in the buffer.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="BufferedOutputStream"></a>
+<a name="BufferedOutputStream(java.io.OutputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BufferedOutputStream
+</b>
+<pre>
+  public BufferedOutputStream(<a href="java.io.OutputStream.html#_top_">OutputStream</a> out)
+</pre>
+<dl>
+<dd>
+Creates a new buffered stream with a default
+buffer size.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+in
+-
+ 	the input stream
+</dl>
+</dl>
+<p>
+<a name="BufferedOutputStream(java.io.OutputStream, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BufferedOutputStream
+</b>
+<pre>
+  public BufferedOutputStream(<a href="java.io.OutputStream.html#_top_">OutputStream</a> out,
+                              int size)
+</pre>
+<dl>
+<dd>
+Creates a new buffered stream with a given
+buffer size.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+in
+-
+ 		the input stream
+<dd>
+size
+-
+	the buffer size
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public synchronized void write(int b)
+</pre>
+<dl>
+<dd>
+Writes a byte. Will block until the byte is actually
+written.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#write(int)">write</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="write(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public synchronized void write(byte b[],
+                                 int off,
+                                 int len)
+</pre>
+<dl>
+<dd>
+Writes a sub array of bytes. To be efficient it should
+be overridden in a subclass. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the data to be written
+<dd>
+off
+-
+	the start offset in the data
+<dd>
+len
+-
+	the number of bytes that are written
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#write(byte[], int, int)">write</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="flush()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="flush">
+<b>
+flush
+</b>
+</a>
+<pre>
+  public synchronized void flush()
+</pre>
+<dl>
+<dd>
+Flushes the stream. This will write any buffered
+output bytes.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#flush()">flush</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.BufferedInputStream.html#_top_">Previous</a>    <a href="java.io.DataInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

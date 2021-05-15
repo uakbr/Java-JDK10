@@ -1,0 +1,210 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.CharacterEncoder
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.CharacterDecoder.html#_top_">Previous</a>    <a href="java.util.ConditionLock.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.CharacterEncoder
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.CharacterEncoder
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+CharacterEncoder</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+This class defines the encoding half of character encoders.
+A character encoder is an algorithim for transforming 8 bit binary
+data into text (generally 7 bit ASCII or 8 bit ISO-Latin-1 text)
+for transmition over text channels such as e-mail and network news.
+The character encoders have been structured around a central theme
+that, in general, the encoded text has the form:
+<pre>
+	[Buffer Prefix]
+	[Line Prefix][encoded data atoms][Line Suffix]
+	[Buffer Suffix]
+</pre>
+In the CharacterEncoder and CharacterDecoder classes, one complete
+chunk of data is referred to as a <i>buffer</i>. Encoded buffers 
+are all text, and decoded buffers (sometimes just referred to as 
+buffers) are binary octets.
+To create a custom encoder, you must, at a minimum,  overide three
+abstract methods in this class.
+<DL>
+<DD>bytesPerAtom which tells the encoder how many bytes to 
+send to encodeAtom
+<DD>encodeAtom which encodes the bytes sent to it as text.
+<DD>bytesPerLine which tells the encoder the maximum number of
+bytes per line.
+</DL>
+Several useful encoders have already been written and are 
+referenced in the See Also list below.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+02 Apr 1995, 1.6
+<dt>
+<b>Author:</b>
+<dd>
+Chuck McManis<dt>
+<b>See Also:</b>
+<dd>
+<a href="CharacterDecoder;.html#_top_">CharacterDecoder;</a>,
+<a href="java.util.UCEncoder.html#_top_">UCEncoder</a>,
+<a href="java.util.UUEncoder.html#_top_">UUEncoder</a>,
+<a href="java.util.BASE64Encoder.html#_top_">BASE64Encoder</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#pStream">pStream</a>
+</b>
+<dd>
+Stream that understands "printing"
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#CharacterEncoder()"><b>CharacterEncoder</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#encodeBuffer(java.io.InputStream, java.io.OutputStream)"><b>encodeBuffer</b></a>(InputStream, OutputStream)
+<dd>
+Encode bytes from the input stream, and write them as text characters
+to the output stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#encodeBuffer(byte[], java.io.OutputStream)"><b>encodeBuffer</b></a>(byte[], OutputStream)
+<dd>
+Encode the buffer in <i>aBuffer</i> and write the encoded
+result to the OutputStream <i>aStream</i>.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#encodeBuffer(byte[])"><b>encodeBuffer</b></a>(byte[])
+<dd>
+A 'streamless' version of encode that simply takes a buffer of
+bytes and returns a string containing the encoded buffer.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="pStream">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+pStream
+</b>
+<pre>
+  protected <a href="java.io.PrintStream.html#_top_">PrintStream</a> pStream
+</pre>
+<dl>
+<dd>
+Stream that understands "printing"
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="CharacterEncoder"></a>
+<a name="CharacterEncoder()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+CharacterEncoder
+</b>
+<pre>
+  public CharacterEncoder()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="encodeBuffer(java.io.InputStream, java.io.OutputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="encodeBuffer">
+<b>
+encodeBuffer
+</b>
+</a>
+<pre>
+  public void encodeBuffer(<a href="java.io.InputStream.html#_top_">InputStream</a> inStream,
+                           <a href="java.io.OutputStream.html#_top_">OutputStream</a> outStream)
+</pre>
+<dl>
+<dd>
+Encode bytes from the input stream, and write them as text characters
+to the output stream. This method will run until it exhausts the
+input stream.
+</dl>
+<p>
+<a name="encodeBuffer(byte[], java.io.OutputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="encodeBuffer">
+<b>
+encodeBuffer
+</b>
+</a>
+<pre>
+  public void encodeBuffer(byte aBuffer[],
+                           <a href="java.io.OutputStream.html#_top_">OutputStream</a> aStream)
+</pre>
+<dl>
+<dd>
+Encode the buffer in <i>aBuffer</i> and write the encoded
+result to the OutputStream <i>aStream</i>.
+</dl>
+<p>
+<a name="encodeBuffer(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="encodeBuffer">
+<b>
+encodeBuffer
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> encodeBuffer(byte aBuffer[])
+</pre>
+<dl>
+<dd>
+A 'streamless' version of encode that simply takes a buffer of
+bytes and returns a string containing the encoded buffer.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.CharacterDecoder.html#_top_">Previous</a>    <a href="java.util.ConditionLock.html#_top_">Next</a></pre>
+</body>
+</html>

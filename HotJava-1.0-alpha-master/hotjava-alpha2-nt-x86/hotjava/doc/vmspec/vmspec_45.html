@@ -1,0 +1,98 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: - An Optimization- Manipulating Object Fields (_quick variants)</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING306></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_44.html">Prev</A>       <A HREF="vmspec_46.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+<HR>
+<H2>- An Optimization</H2>
+<HR>
+<H1>Manipulating Object Fields (_quick variants)</H1>
+<DL>
+<DT><A HREF="vmspec_45.html#HEADING307"><B></B>  putfield_quick</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING308"><B></B>  putfield2_quick</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING309"><B></B>  getfield_quick</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING310"><B></B>  getfield2_quick</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING311"><B></B>  putstatic_quick</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING312"><B></B>  putstatic2_quick</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING313"><B></B>  getstatic_quick</A><DD>
+<DT><A HREF="vmspec_45.html#HEADING314"><B></B>  getstatic2_quick</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING307></A>
+<H3>putfield_quick</H3>
+Set field in object<BR><IMG SRC="App_A_Tbl_9.gif"><BR>
+<P>
+<PRE>
+..., handle, value =&gt; ...<P>
+</PRE>
+handle should be a handle to an object. value should be a value of a type appropriate for the specified field. offset is the offset for the field in that object. value is written at offset into the object referenced by handle. Both handle and value are popped from the stack.<P>
+If handle is null, a NullPointerException exception is generated.<P>
+<A NAME=HEADING308></A>
+<H3>putfield2_quick</H3>
+Set long integer or double float field in object<BR><IMG SRC="App_A_Tbl_17.gif"><BR>
+<P>
+<PRE>
+..., handle, value-word1, value-word2=&gt; ...<P>
+</PRE>
+handle should be a handle to an object. value should be a value of a type appropriate for the specified field. offset is the offset for the field in that object. value is written at offset into the object referenced by handle. Both handle and value are popped from the stack.<P>
+If handle is null, a NullPointerException exception is generated.<P>
+<A NAME=HEADING309></A>
+<H3>getfield_quick</H3>
+Fetch field from object<BR><IMG SRC="App_A_Tbl_8.gif"><BR>
+<P>
+<PRE>
+..., handle =&gt; ..., value <P>
+</PRE>
+handle should be a handle to an object. The value at offset into the object referenced by handle replaces handle on the top of the stack.<P>
+If handle is null, a NullPointerException exception is generated.<P>
+<A NAME=HEADING310></A>
+<H3>getfield2_quick</H3>
+Fetch field from object<BR><IMG SRC="App_A_Tbl_18.gif"><BR>
+<P>
+<PRE>
+..., handle =&gt; ..., value-word1, value-word2<P>
+</PRE>
+handle should be a handle to an object. The value at offset into the object referenced by handle replaces handle on the top of the stack.<P>
+If handle is null, a NullPointerException exception is generated.<P>
+<A NAME=HEADING311></A>
+<H3>putstatic_quick</H3>
+Set static field in class<BR><IMG SRC="App_A_Tbl_10.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a static field of a class. value should be the type appropriate to that field. That field will be set to have the value value.<P>
+<A NAME=HEADING312></A>
+<H3>putstatic2_quick</H3>
+Set static field in class<BR><IMG SRC="App_A_Tbl_19.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ...<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a static field of a class. That field should either be a long integer or a double precision floating point number. value should be the type appropriate to that field. That field will be set to have the value value.<P>
+<A NAME=HEADING313></A>
+<H3>getstatic_quick</H3>
+Get static field from class<BR><IMG SRC="App_A_Tbl_11.gif"><BR>
+<P>
+<PRE>
+..., =&gt; ..., value <P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a static field of a class. The value of that field will replace handle on the stack.<P>
+<A NAME=HEADING314></A>
+<H3>getstatic2_quick</H3>
+Get static field from class<BR><IMG SRC="App_A_Tbl_20.gif"><BR>
+<P>
+<PRE>
+..., =&gt; ..., value-word1, value-word2<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a static field of a class. The field should be a long integer or a double precision floating point number. The value of that field will replace handle on the stack<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_44.html">Prev</A>       <A HREF="vmspec_46.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

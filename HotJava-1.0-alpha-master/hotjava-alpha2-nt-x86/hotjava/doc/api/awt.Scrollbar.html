@@ -1,0 +1,425 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Scrollbar
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.RowLayout.html#_top_">Previous</a>    <a href="awt.ScrollbarAction.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Scrollbar
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.Scrollbar
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Scrollbar</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+A Class that represents a native scrollbar object.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.18 03 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#HORIZONTAL">HORIZONTAL</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#VERTICAL">VERTICAL</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Scrollbar(awt.Window, java.lang.String, int, boolean)"><b>Scrollbar</b></a>(Window, String, int, boolean)
+<dd>
+Constructs a scrollbar.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Shows this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#maximum()"><b>maximum</b></a>()
+<dd>
+Returns the maximum value of this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#minimum()"><b>minimum</b></a>()
+<dd>
+Returns the minimum value of this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setScrollTarget(awt.Scrollbarable)"><b>setScrollTarget</b></a>(Scrollbarable)
+<dd>
+Sets the object which will handle callbacks for this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setValues(int, int, int, int)"><b>setValues</b></a>(int, int, int, int)
+<dd>
+Sets the values for this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this scrollbar.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#value()"><b>value</b></a>()
+<dd>
+Returns the current value of this scrollbar.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="HORIZONTAL">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+HORIZONTAL
+</b>
+<pre>
+  public final static int HORIZONTAL
+</pre>
+<a name="VERTICAL">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+VERTICAL
+</b>
+<pre>
+  public final static int VERTICAL
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Scrollbar"></a>
+<a name="Scrollbar(awt.Window, java.lang.String, int, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Scrollbar
+</b>
+<pre>
+  public Scrollbar(<a href="awt.Window.html#_top_">Window</a> parent,
+                   <a href="java.lang.String.html#_top_">String</a> name,
+                   int orientation,
+                   boolean manageScrollbar)
+</pre>
+<dl>
+<dd>
+Constructs a scrollbar.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+parent
+-
+ the parent window which will contain this scrollbar.
+<dd>
+name
+-
+ the name of the scrollbar. May be significant
+according to the layout method in parent.
+<dd>
+orientation
+-
+ either Scrollbar.HORIZONTAL or Scrollbar.VERTICAL
+<dd>
+manageScrollbar
+-
+ if true then parent will automatically
+layout this scrollbar according to the platform's toolkit conventions.
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setScrollTarget(awt.Scrollbarable)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setScrollTarget">
+<b>
+setScrollTarget
+</b>
+</a>
+<pre>
+  public void setScrollTarget(<a href="awt.Scrollbarable.html#_top_">Scrollbarable</a> target)
+</pre>
+<dl>
+<dd>
+Sets the object which will handle callbacks for this scrollbar.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Scrollbarable.html#_top_">Scrollbarable</a>
+</dl>
+</dl>
+<p>
+<a name="setValues(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setValues">
+<b>
+setValues
+</b>
+</a>
+<pre>
+  public void setValues(int newValue,
+                        int visible,
+                        int minimum,
+                        int maximum)
+</pre>
+<dl>
+<dd>
+Sets the values for this scrollbar.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+newValue
+-
+ is the position in the current window.
+<dd>
+visible
+-
+ is the amount visible per page
+<dd>
+minimum
+-
+ is the minimum value of the scrollbar
+<dd>
+maximum
+-
+ is the maximum value of the scrollbar
+</dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Shows this scrollbar.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this scrollbar.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="minimum()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="minimum">
+<b>
+minimum
+</b>
+</a>
+<pre>
+  public int minimum()
+</pre>
+<dl>
+<dd>
+Returns the minimum value of this scrollbar.
+</dl>
+<p>
+<a name="maximum()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="maximum">
+<b>
+maximum
+</b>
+</a>
+<pre>
+  public int maximum()
+</pre>
+<dl>
+<dd>
+Returns the maximum value of this scrollbar.
+</dl>
+<p>
+<a name="value()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="value">
+<b>
+value
+</b>
+</a>
+<pre>
+  public int value()
+</pre>
+<dl>
+<dd>
+Returns the current value of this scrollbar.
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this scrollbar. This will not work if the scrollbar is
+being managed by the window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="#Scrollbar">Scrollbar</a>
+</dl>
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int x,
+                   int y)
+</pre>
+<dl>
+<dd>
+Moves this scrollbar. This will not work if the scrollbar is
+being managed by the window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this scrollbar. It should not be used afterwards.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.RowLayout.html#_top_">Previous</a>    <a href="awt.ScrollbarAction.html#_top_">Next</a></pre>
+</body>
+</html>

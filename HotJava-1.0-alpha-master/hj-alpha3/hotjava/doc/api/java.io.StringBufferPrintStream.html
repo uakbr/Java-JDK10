@@ -1,0 +1,261 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.StringBufferPrintStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.StreamTokenizer.html#_top_">Previous</a>    <a href="java.io.StringInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.StringBufferPrintStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.OutputStream.html#_top_">java.io.OutputStream</a>
+           |
+           +----<a href="java.io.FilterOutputStream.html#_top_">java.io.FilterOutputStream</a>
+                   |
+                   +----<a href="java.io.PrintStream.html#_top_">java.io.PrintStream</a>
+                           |
+                           +----java.io.StringBufferPrintStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+StringBufferPrintStream</b>
+<dt>
+extends <a href="java.io.PrintStream.html#_top_">PrintStream</a>
+</dl>
+File output stream constructed from a StringBuffer.
+This lets you create an output stream and capture its output in
+a String or StringBuffer.
+<dl>
+<dt>
+<b>Author:</b>
+<dd>
+James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringBufferPrintStream(java.lang.StringBuffer)"><b>StringBufferPrintStream</b></a>(StringBuffer)
+<dd>
+Creates an output file given a StringBuffer.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringBufferPrintStream()"><b>StringBufferPrintStream</b></a>()
+<dd>
+    /**
+Creates an output file and a StringBuffer.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getStringBuffer()"><b>getStringBuffer</b></a>()
+<dd>
+Return the string buffer associated with the output stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(java.lang.String)"><b>print</b></a>(String)
+<dd>
+Prints a String.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(char[])"><b>print</b></a>(char[])
+<dd>
+Prints an array of characters.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Return the contents of the output stream as a String
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Write a byte.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="StringBufferPrintStream"></a>
+<a name="StringBufferPrintStream(java.lang.StringBuffer)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringBufferPrintStream
+</b>
+<pre>
+  public StringBufferPrintStream(<a href="java.lang.StringBuffer.html#_top_">StringBuffer</a> fsb)
+</pre>
+<dl>
+<dd>
+Creates an output file given a StringBuffer.
+</dl>
+<p>
+<a name="StringBufferPrintStream()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringBufferPrintStream
+</b>
+<pre>
+  public StringBufferPrintStream()
+</pre>
+<dl>
+<dd>
+    /**
+Creates an output file and a StringBuffer.
+Use toString or getStringBuffer to fetch the results.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(int b)
+</pre>
+<dl>
+<dd>
+Write a byte.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.PrintStream.html#write(int)">write</a> in class <a href="java.io.PrintStream.html#_top_">PrintStream</a></dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public void close()
+</pre>
+<dl>
+<dd>
+Closes the stream.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#close()">close</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Return the contents of the output stream as a String
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="getStringBuffer()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getStringBuffer">
+<b>
+getStringBuffer
+</b>
+</a>
+<pre>
+  public <a href="java.lang.StringBuffer.html#_top_">StringBuffer</a> getStringBuffer()
+</pre>
+<dl>
+<dd>
+Return the string buffer associated with the output stream.
+</dl>
+<p>
+<a name="print(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Prints a String.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.PrintStream.html#print(java.lang.String)">print</a> in class <a href="java.io.PrintStream.html#_top_">PrintStream</a></dl>
+</dl>
+<p>
+<a name="print(char[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(char s[])
+</pre>
+<dl>
+<dd>
+Prints an array of characters.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.PrintStream.html#print(char[])">print</a> in class <a href="java.io.PrintStream.html#_top_">PrintStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.StreamTokenizer.html#_top_">Previous</a>    <a href="java.io.StringInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

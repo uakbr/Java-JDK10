@@ -1,0 +1,91 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>Implementing Native Methods: Useful Routines in C</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING21></A>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_12.html">Prev</A> <A HREF="rpi_14.html">Next</A><P>
+<H1>2  Useful Routines in C</H1>
+<HR>
+
+
+A number of Java interpreter internal macros and functions are available for accessing Java structures. Note that these functions and macros are internal and subject to change at any time. It's recommended that you actually verify the macro and function prototypes before using them in your C code by looking at the Java sources.<P>
+<B>unhand</B><P>
+<PRE>
+Object *unhand(Handle *)
+</PRE>
+A macro to dereference an object handle. This returns a pointer to the data portion of an object. <P>
+<B>obj_length</B><P>
+<PRE>
+int obj_length(HArray *)
+</PRE>
+Given a pointer to an array handle this macro returns the maximum length of the array.<P>
+<B>bodyof</B><P>
+<PRE>
+Object *bodyof(HArray *)
+</PRE>
+Given a pointer to an array handle this macro returns a pointer to the data portion of the array. As with unhand(), the return type depends on the type of the array .<BR><IMG SRC="rpi-appendix_Tbl_10.gif"><BR>
+<P>
+<B>FindClass</B><P>
+<PRE>
+ClassClass* FindClass(struct execenv *ee, char *name, bool_t resolve)
+</PRE>
+Find the class with the given name. If "resolve" is true, then we completely resolve the class which entails loading all of the class's superclasses etc. If "resolve" is false and the requested class is not loaded the function returns null.<P>
+<B>MakeString</B><P>
+<PRE>
+HArrayOfChar *MakeString(char *str, int len)
+</PRE>
+Creates a Java array of characters of length len and initializes it from the values pointed to by str. Note that Java strings are strings of 16-bit Unicode values. Only the low-order byte of the Java characters are initialized and the high-order bytes are set to `\0'.<P>
+<B>ArrayAlloc</B><P>
+<PRE>
+Handle *ArrayAlloc(int type, int len)
+</PRE>
+Allocates an Java array of a given type and length len. The type field must be one of the following:<BR><IMG SRC="rpi-appendix_Tbl_11.gif"><BR>
+<P>
+<B>execute_method</B><P>
+<PRE>
+long execute_method(struct execenv *current, void *obj, char *method, ...)
+</PRE>
+This routine allows you to call an Java method from C. The first parameter is the current Java environment. If you pass in null or "0" the Java interpreter uses the current environment by default. The object instance on which you want to call the method is passed as a "void *" in the second parameter to the routine. The name of the method to call is passed as the third parameter. Finally, any subsequent arguments are passed to the method. The Java method may have any number of arguments and may return a single 4 byte value which may be an integer, a pointer to an object handle, or any other 4 byte C type. The method name must be the complete internal method signature name as described previously. See execute_static_method() if you need to call a static (or class) method; execute_method() only works on instance methods. Finally, note that this function may throw an exception which we cannot catch in our C code. Below is an example of calling an Java method from C.<P>
+<PRE>
+void
+DeliverData(HActivityRecord *arh, Ptype ptype, HArrayOfByte *buf, int len)
+{
+    execute_method(0, arh, "DeliverData(I[BI)V", ptype, buf, len);
+}
+</PRE>
+<B>exectute_static_method</B><P>
+<PRE>
+long execute_static_method(struct execenv *current, ClassClass *cb, 
+char *method, ...)
+</PRE>
+This routine is used to call a static (class) method from C. It is exactly analogous to execute_method() above, except you provide a Class instead of an object.<P>
+<B>execute_constructor</B><P>
+<PRE>
+HObject *execute_constructor(struct execenv *current, char *method, ...)
+</PRE>
+This routine allows you to easily create a new Java object from C.The arguments to the constructor are determined by looking at the signature of the constructor. The new object is returned if all is OK, 0 is returned in case of an error. Example:<P>
+<PRE>
+    HObject * obj;
+    int x, y;
+
+    obj = execute_constructor(0, "&lt;init&gt;(II)Lfp/ade/gui/MouseEvent;", x, y);
+</PRE>
+<BR>
+Note that execute_constructor is a wrapper for the internal exec_constructor function. Also note that this function may throw an exception.<P>
+<B>SignalError</B><P>
+<PRE>
+SignalError(0, JAVAPKG "Exception Name", "message");
+</PRE>
+Basically, SignalError() throws an Java exception on the thread that called into your C code. This routine does not return! It does a non-local goto and continues execution as if the Java code had done a  <P>
+<PRE>
+throw new exception_name("details_message");
+
+</PRE>
+Valid values for the exception_name argument are any valid exception class name (see the Java class documentation for more information).<P>
+<A HREF="rpi_1.html">Contents</A> <A HREF="rpi_12.html">Prev</A> <A HREF="rpi_14.html">Next</A><P>
+<B>Implementing Native Methods</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

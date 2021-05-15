@@ -1,0 +1,266 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.NetworkServer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.NetworkClient.html#_top_">Previous</a>    <a href="net.ProgressData.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.NetworkServer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.NetworkServer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+NetworkServer</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+<dt>
+implements <a href="java.lang.Runnable.html#_top_">Runnable</a>
+</dl>
+This is the base class for network servers.  To define a new type
+of server define a new subclass of NetworkServer with a serviceRequest
+method that services one request.  Start the server by executing:
+<pre>
+	new MyServerClass().startServer(port);
+</pre>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#clientInput">clientInput</a>
+</b>
+<dd>
+Buffered stream for reading replies from client.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#clientOutput">clientOutput</a>
+</b>
+<dd>
+Stream for printing to the client.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#clientSocket">clientSocket</a>
+</b>
+<dd>
+Socket for communicating with client.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NetworkServer()"><b>NetworkServer</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clientIsOpen()"><b>clientIsOpen</b></a>()
+<dd>
+Return client connection status
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Close an open connection to the client.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#main(java.lang.String[])"><b>main</b></a>(String[])
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#run()"><b>run</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#serviceRequest()"><b>serviceRequest</b></a>()
+<dd>
+Service one request.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startServer(int)"><b>startServer</b></a>(int)
+<dd>
+Start a server on port <i>port</i>.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="clientSocket">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+clientSocket
+</b>
+<pre>
+  public <a href="net.Socket.html#_top_">Socket</a> clientSocket
+</pre>
+<dl>
+<dd>
+Socket for communicating with client.
+</dl>
+<a name="clientOutput">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+clientOutput
+</b>
+<pre>
+  public <a href="java.io.PrintStream.html#_top_">PrintStream</a> clientOutput
+</pre>
+<dl>
+<dd>
+Stream for printing to the client.
+</dl>
+<a name="clientInput">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+clientInput
+</b>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> clientInput
+</pre>
+<dl>
+<dd>
+Buffered stream for reading replies from client.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="NetworkServer"></a>
+<a name="NetworkServer()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NetworkServer
+</b>
+<pre>
+  public NetworkServer()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public void close()
+</pre>
+<dl>
+<dd>
+Close an open connection to the client.
+</dl>
+<p>
+<a name="clientIsOpen()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clientIsOpen">
+<b>
+clientIsOpen
+</b>
+</a>
+<pre>
+  public boolean clientIsOpen()
+</pre>
+<dl>
+<dd>
+Return client connection status
+</dl>
+<p>
+<a name="run()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="run">
+<b>
+run
+</b>
+</a>
+<pre>
+  public final void run()
+</pre>
+<a name="startServer(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startServer">
+<b>
+startServer
+</b>
+</a>
+<pre>
+  public final void startServer(int port)
+</pre>
+<dl>
+<dd>
+Start a server on port <i>port</i>.  It will call serviceRequest()
+        for each new connection.
+</dl>
+<p>
+<a name="serviceRequest()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="serviceRequest">
+<b>
+serviceRequest
+</b>
+</a>
+<pre>
+  public void serviceRequest()
+</pre>
+<dl>
+<dd>
+Service one request.  It is invoked with the clientInput and
+	clientOutput streams initialized.  This method handles one client
+	connection. When it is done, it can simply exit. The default
+	server just echoes it's input. It is invoked in it's own private
+	thread.
+</dl>
+<p>
+<a name="main(java.lang.String[])">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="main">
+<b>
+main
+</b>
+</a>
+<pre>
+  public static void main(<a href="java.lang.String.html#_top_">String</a> argv[])
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.NetworkClient.html#_top_">Previous</a>    <a href="net.ProgressData.html#_top_">Next</a></pre>
+</body>
+</html>

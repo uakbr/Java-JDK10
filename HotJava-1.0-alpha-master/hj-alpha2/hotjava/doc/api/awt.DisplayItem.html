@@ -1,0 +1,705 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.DisplayItem
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Dimension.html#_top_">Previous</a>    <a href="awt.DisplayItemUpdateRequest.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.DisplayItem
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Observable.html#_top_">browser.Observable</a>
+           |
+           +----awt.DisplayItem
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+DisplayItem</b>
+<dt>
+extends <a href="browser.Observable.html#_top_">Observable</a>
+<dt>
+implements <a href="awt.Layoutable.html#_top_">Layoutable</a>
+</dl>
+DisplayItem is an object that can be embedded inside a
+DisplayItemWindow. It is essentially a virtual window inside another
+window that allows painting and input handling.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a><dt>
+<b>Version:</b>
+<dd>
+1.13 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fgColor">fgColor</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#height">height</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#parent">parent</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#valid">valid</a>
+</b>
+<dd>
+Item is not valid if it has been resized.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#width">width</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#x">x</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#y">y</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DisplayItem()"><b>DisplayItem</b></a>()
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DisplayItem(int, int, int, int)"><b>DisplayItem</b></a>(int, int, int, int)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#containsPoint(int, int)"><b>containsPoint</b></a>(int, int)
+<dd>
+Return true if x,y are contained inside this DisplayItem.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#deactivate()"><b>deactivate</b></a>()
+<dd>
+Called when this item is no longer needed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getChild(java.lang.String)"><b>getChild</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFGColor()"><b>getFGColor</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#gotFocus()"><b>gotFocus</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#invalidate()"><b>invalidate</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keyPressed(int)"><b>keyPressed</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layout()"><b>layout</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lostFocus()"><b>lostFocus</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#minDimension()"><b>minDimension</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint(awt.Window, int, int)"><b>paint</b></a>(Window, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#refresh()"><b>refresh</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#requestUpdate()"><b>requestUpdate</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resize(int, int)"><b>resize</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setColor(awt.Color)"><b>setColor</b></a>(Color)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setParent(awt.DisplayItemWindow)"><b>setParent</b></a>(DisplayItemWindow)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackEnter(awt.Event)"><b>trackEnter</b></a>(Event)
+<dd>
+Enter with mouse button already down.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackExit(awt.Event)"><b>trackExit</b></a>(Event)
+<dd>
+Exit with mouse button already down.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackMotion(awt.Event)"><b>trackMotion</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStart(awt.Event)"><b>trackStart</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#trackStop(awt.Event)"><b>trackStop</b></a>(Event)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#update(awt.Window, int, int)"><b>update</b></a>(Window, int, int)
+<dd>
+This is called when the display item needs updating.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#validate()"><b>validate</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="parent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+parent
+</b>
+<pre>
+  public <a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a> parent
+</pre>
+<a name="x">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+x
+</b>
+<pre>
+  public int x
+</pre>
+<a name="y">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+y
+</b>
+<pre>
+  public int y
+</pre>
+<a name="width">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+width
+</b>
+<pre>
+  public int width
+</pre>
+<a name="height">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+height
+</b>
+<pre>
+  public int height
+</pre>
+<a name="fgColor">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fgColor
+</b>
+<pre>
+  protected <a href="awt.Color.html#_top_">Color</a> fgColor
+</pre>
+<a name="valid">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+valid
+</b>
+<pre>
+  protected boolean valid
+</pre>
+<dl>
+<dd>
+Item is not valid if it has been resized.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="DisplayItem"></a>
+<a name="DisplayItem()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DisplayItem
+</b>
+<pre>
+  public DisplayItem()
+</pre>
+<a name="DisplayItem(int, int, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DisplayItem
+</b>
+<pre>
+  public DisplayItem(int x,
+                     int y,
+                     int width,
+                     int height)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setParent(awt.DisplayItemWindow)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setParent">
+<b>
+setParent
+</b>
+</a>
+<pre>
+  public void setParent(<a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a> p)
+</pre>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<a name="minDimension()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="minDimension">
+<b>
+minDimension
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> minDimension()
+</pre>
+<a name="layout()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layout">
+<b>
+layout
+</b>
+</a>
+<pre>
+  public void layout()
+</pre>
+<a name="getFGColor()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFGColor">
+<b>
+getFGColor
+</b>
+</a>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> getFGColor()
+</pre>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int x,
+                   int y)
+</pre>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int width,
+                      int height)
+</pre>
+<a name="getChild(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getChild">
+<b>
+getChild
+</b>
+</a>
+<pre>
+  public <a href="awt.Layoutable.html#_top_">Layoutable</a> getChild(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<a name="resize(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resize">
+<b>
+resize
+</b>
+</a>
+<pre>
+  public void resize(int w,
+                     int h)
+</pre>
+<a name="setColor(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setColor">
+<b>
+setColor
+</b>
+</a>
+<pre>
+  public void setColor(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<a name="refresh()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="refresh">
+<b>
+refresh
+</b>
+</a>
+<pre>
+  public void refresh()
+</pre>
+<a name="containsPoint(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="containsPoint">
+<b>
+containsPoint
+</b>
+</a>
+<pre>
+  public boolean containsPoint(int x,
+                               int y)
+</pre>
+<dl>
+<dd>
+Return true if x,y are contained inside this DisplayItem. By
+default, this method will test x,y against the bounding box
+for this item.
+</dl>
+<p>
+<a name="deactivate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="deactivate">
+<b>
+deactivate
+</b>
+</a>
+<pre>
+  public void deactivate()
+</pre>
+<dl>
+<dd>
+Called when this item is no longer needed.  This is used,
+	for example, to cancel backgroud tasks associated with
+	animations
+</dl>
+<p>
+<a name="invalidate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="invalidate">
+<b>
+invalidate
+</b>
+</a>
+<pre>
+  public void invalidate()
+</pre>
+<a name="validate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="validate">
+<b>
+validate
+</b>
+</a>
+<pre>
+  public void validate()
+</pre>
+<a name="paint(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint(<a href="awt.Window.html#_top_">Window</a> window,
+                    int x,
+                    int y)
+</pre>
+<a name="update(awt.Window, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="update">
+<b>
+update
+</b>
+</a>
+<pre>
+  public void update(<a href="awt.Window.html#_top_">Window</a> window,
+                     int x,
+                     int y)
+</pre>
+<dl>
+<dd>
+This is called when the display item needs updating.  The
+	background is not cleared, so it is possible for the display
+	item to do incremental updating with no flashing.  By default,
+	this clears the background and calls paint.
+</dl>
+<p>
+<a name="requestUpdate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="requestUpdate">
+<b>
+requestUpdate
+</b>
+</a>
+<pre>
+  public void requestUpdate()
+</pre>
+<a name="trackStart(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStart">
+<b>
+trackStart
+</b>
+</a>
+<pre>
+  public void trackStart(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackMotion(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackMotion">
+<b>
+trackMotion
+</b>
+</a>
+<pre>
+  public void trackMotion(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackStop(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackStop">
+<b>
+trackStop
+</b>
+</a>
+<pre>
+  public void trackStop(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<a name="trackEnter(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackEnter">
+<b>
+trackEnter
+</b>
+</a>
+<pre>
+  public void trackEnter(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Enter with mouse button already down.  Only possible
+	if sticky tracking is turned off.
+</dl>
+<p>
+<a name="trackExit(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="trackExit">
+<b>
+trackExit
+</b>
+</a>
+<pre>
+  public void trackExit(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Exit with mouse button already down.  Only possible
+	if sticky tracking is turned off.
+</dl>
+<p>
+<a name="gotFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="gotFocus">
+<b>
+gotFocus
+</b>
+</a>
+<pre>
+  public void gotFocus()
+</pre>
+<a name="lostFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lostFocus">
+<b>
+lostFocus
+</b>
+</a>
+<pre>
+  public void lostFocus()
+</pre>
+<a name="keyPressed(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keyPressed">
+<b>
+keyPressed
+</b>
+</a>
+<pre>
+  public void keyPressed(int key)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Dimension.html#_top_">Previous</a>    <a href="awt.DisplayItemUpdateRequest.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Statements</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING63></A>
+<A HREF="javaspec_10.html">Next</A>       <A HREF="javaspec_8.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>8  Statements</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_9.html#HEADING64"><B> 8.1 </B> - Declarations</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING65"><B> 8.2 </B> - Expressions</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING66"><B> 8.3 </B> - Control Flow</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING67"><B> 8.4 </B> - Exceptions</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING68"><B>8.4.1 </B> - The finally Statement</A><DD>
+<DT><A HREF="javaspec_9.html#HEADING69"><B>8.4.2 </B> - Runtime Exceptions</A><DD>
+</DL>
+
+
+<A NAME=HEADING64></A>
+<HR>
+<H3> 8.1  <A NAME=1>Declarations</H3>
+Declarations can appear anywhere that a statement is allowed. The scope of the declaration ends at the end of the enclosing block.<P>
+In addition, declarations are allowed at the head of <A NAME=MARKER2_12></A>for statements, as shown below:<P>
+<PRE>
+    for (int i = 0; i &lt; 10; i++) {
+        ...
+    }
+</PRE>
+Items declared in this way are valid only within the scope of the for statement. For example, the preceding code sample is equivalent to the following:<P>
+<PRE>
+    {
+        int i = 0;
+        for (; i &lt; 10; i++) {
+        ...
+        }
+    }
+</PRE>
+<A NAME=HEADING65></A>
+<HR>
+<H3> 8.2  Expressions</H3>
+Expressions are statements: <P>
+<PRE>
+    a = 3;
+    print(23);
+    foo.bar();
+</PRE>
+<A NAME=HEADING66></A>
+<HR>
+<H3> 8.3  Control Flow</H3>
+The following is a summary of control flow:<P>
+<PRE>
+<A NAME=MARKER2_3></A>if(<A NAME=MARKER2_4></A>boolean) statement
+<A NAME=MARKER2_5></A>else statement
+<A NAME=MARKER2_6></A>switch(e1) {
+	<A NAME=MARKER2_7></A>case e2: statements
+	<A NAME=MARKER2_8></A>default: statements
+}
+<A NAME=MARKER2_9></A>break [label];
+<A NAME=MARKER2_10></A>continue [label];
+<A NAME=MARKER2_11></A>return e1;
+<A NAME=MARKER2_12></A>for([e1]; [e2]; [e3]) statement
+<A NAME=MARKER2_13></A>while(boolean) statement
+<A NAME=MARKER2_14></A>do statement while(boolean);
+label:statement
+</PRE>
+The language supports labeled loops and labeled breaks, for example: <P>
+<PRE>
+    outer:   // the label
+        for (int i = 0; i &lt; 10; i++) {
+            for (int j= 0; j&lt; 10; j++) {
+                if (...) {
+                    break outer;
+                }
+                if (...) {
+                }
+            }
+    }
+</PRE>
+The use of labels in loops and breaks has the following rules:<P>
+<UL>
+<LI>Any statement can have a label.<P>
+<LI>If a break statement has a label it must be the label of an enclosing statement.<P>
+<LI>If a continue statement has a label it must be the label of an enclosing loop.<P>
+</UL>
+<A NAME=HEADING67></A>
+<HR>
+<H3> 8.4  <A NAME=16><A NAME=MARKER2_16></A>Exceptions</H3>
+When an error occurs in an Java program--for example, when an argument has an invalid value--the code that detects the error can throw an exception<A NAME=javaspec_FootNote_60 HREF=javaspec_FootNote_60.html>*1</A>. By default, exceptions result in the thread terminating after printing an error message. However, programs can have exception handlers that catch the exception and recover from the error. <P>
+Some exceptions are thrown by the Java runtime system. However, any class can define its own exceptions and cause them to occur using <A NAME=MARKER2_17></A>throw statements. A throw statement consists of the throw keyword followed by an object. By convention, the object should be an instance of Exception or one of its subclasses. The throw statement causes execution to switch to the appropriate exception handler. When a throw statement is executed, any code following it is not executed, and no value is returned by its enclosing method. The following example shows how to create a subclass of Exception and throw an exception.<P>
+<PRE>
+    class MyException extends Exception {
+    }
+
+    class MyClass {
+        void oops() {
+            if (/* no error occurred */) {
+                ...
+            } else { /* error occurred */
+            throw new MyException();
+            }
+        }
+    }
+</PRE>
+To define an exception handler, the program must first surround the code that can cause the exception with a <A NAME=MARKER2_18></A>try statement. After the try statement come one or more <A NAME=MARKER2_19></A>catch statements--one per exception class that the program can handle at that point. In each catch statement is exception handling code. For example:<P>
+<PRE>
+    try {
+        p.a = 10;
+    } catch (NullPointerException e) {
+        println("p was null");
+    } catch (Exception e) {
+        println("other error occurred");
+    } catch (Object obj) {
+        println("Who threw that object?");
+    }
+</PRE>
+A catch statement is like a method definition with exactly one parameter and no return type. The parameter can be either a class or an interface. When an exception occurs, the nested try/catch statements are searched for a parameter that matches the exception class. The parameter is said to match the exception if it:<P>
+<UL>
+<LI>is the same class as the exception; or<P>
+<LI>is a superclass of the exception; or<P>
+<LI>if the parameter is an interface, the exception class implements the interface.<P>
+</UL>
+The first try/catch statement that has a parameter that matches the exception has its catch statement executed. After the catch statement executes, execution resumes after the try/catch statement. It is not possible for an exception handler to resume execution at the point that the exception occurred. For example, this code fragment:<P>
+<PRE>
+    print("now ");
+    try {
+        print("is ");
+        throw new MyException();
+        print("a ");
+    } catch(MyException e) {
+        print("the ");
+    }
+    print("time\n");
+</PRE>
+prints "now is the time". As this example shows, exceptions don't have to be used only for error handling, but any other use is likely to result in code that's hard to understand. <P>
+Exception handlers can be nested, allowing exception handling to happen in more than one place. Nested exception handling is often used when the first handler can't recover completely from the error, yet needs to execute some cleanup code (as shown in the following code example). To pass exception handling up to the next higher handler, use the throw keyword using the same object that was caught. Note that the method that rethrows the exception stops executing after the throw statement; it never returns. <P>
+<PRE>
+    try {
+        f.open();
+    } catch(Exception e) {
+        f.close();
+        throw e;
+    }
+</PRE>
+<A NAME=HEADING68></A>
+<HR>
+<H4>8.4.1  The finally Statement</H4>
+The following example shows the use of a <A NAME=MARKER2_20></A>finally statement that is useful for guaranteeing that some code gets executed whether or not an exception occurs. For example, the following code example:<P>
+<PRE>
+    try {
+        // do something
+    } finally {
+        // clean up after it
+    }
+</PRE>
+is similar to:<P>
+<PRE>
+    try {
+        // do something
+    } catch(Object e){
+        // clean up after it
+        throw e;
+    }
+    // clean up after it
+</PRE>
+The finally statement is executed even if the try block contains a return, break, continue, or throw statement. For example, the following code example always results in "finally" being printed, but "after try" is printed only if a != 10.<P>
+<PRE>
+    try {
+        if (a == 10) {
+            return;
+        }
+    } finally {
+        print("finally\n");
+    }
+    print("after try\n");
+</PRE>
+<A NAME=HEADING69></A>
+<HR>
+<H4>8.4.2  Runtime Exceptions</H4>
+This section contains a list of the exceptions that the Java runtime throws when it encounters various errors.<P>
+<B>ArithmeticException</B><P>
+Attempting to divide an integer by zero or take a modulus by zero throw the ArithmeticException--no other arithmetic operation in Java throws an exception. For information on how Java handles other arithmetic errors see <A HREF="javaspec_8.html#3">Operators on Integers</A> and <A HREF="javaspec_8.html#23">Operators on Floating Point Values</A>. <P>
+For example, the following code causes an ArithmeticException to be thrown:<P>
+<PRE>
+    class Arith {
+        public static void main(String args[]) {
+            int j = 0;
+            j = j / j;
+        }
+    }
+</PRE>
+<B>NullPointerException</B><P>
+An attempt to access a variable or method in a null object or a element in a null array throws a NullPointerException. For example, the accesses o.length and a[0] in the following class declaration throws a NullPointerException at runtime.<P>
+<PRE>
+    class Null {
+        public static void main(String args[]) {
+            String o = null;
+            int a[] = null;
+            o.length();
+            a[0] = 0;
+        }
+    }
+</PRE>
+It is interesting to note that if you throw a null object you actually throw a NullPointerException.<P>
+<B>IncompatibleClassChangeException</B><P>
+In general the IncompatibleClassChangeException is thrown whenever one class's definition changes but other classes that reference the first class aren't recompiled. Four specific changes that throw a IncompatibleClassChangeException at rutime are: <P>
+<UL>
+<LI>A variable's declaration is changed from static to non-static in one class but other classes that access the changed variable aren't recompiled.<P>
+<LI>A variable's declaration is changed from non-static to static in one class but other classes that access the changed variable aren't recompiled.<P>
+<LI>A field that is declared in one class is deleted but other classes that access the field aren't recompiled. <P>
+<LI>A method that is declared in one class is deleted but other classes that access the method aren't recompiled. <P>
+</UL>
+<B>ClassCastException</B><P>
+A ClassCastException is thrown if an attempt is made to cast an object O into a class C and O is neither C nor a subclass of C. For more information on casting see <A HREF="javaspec_5.html#4">Casting Between Class Types</A>.<P>
+The following class declaration results in a ClassCastException at runtime:<P>
+<PRE>
+    class ClassCast {
+        public static void main(String args[]) {
+            Object o = new Object();
+            String s = (String)o;           // the cast attempt
+            s.length();
+        }
+    }
+</PRE>
+<B>NegativeArraySizeException</B><P>
+A NegativeArraySizeException is thrown if an array is created with a negative size. For example, the following class definition throws a NegativeArraySizeException at runtime:<P>
+<PRE>
+    class NegArray {
+        public static void main(String args[]) {
+            int a[] = new int[-1];
+            a[0] = 0;
+        }
+    }
+</PRE>
+<B>OutOfMemoryException</B><P>
+An OutOfMemoryException is thrown when the system can no longer suppy the application with memory. The OutOfMemoryException can only occur during the creation of an object, i.e., when new is called. For example, the following code results in an OutOfMemoryException at runtime:<P>
+<PRE>
+    class Link {
+        int a[] = new int[1000000];
+        Link l;
+    }
+    class OutOfMem {
+        public static void main(String args[]) {
+            Link root = new Link();
+            Link cur = root;
+            while(true) {
+                cur.l = new Link();
+                cur = cur.l;
+            }
+        }
+    }
+</PRE>
+<B>NoClassDefFoundException</B><P>
+A NoClassDefFoundException is thrown if a class is referenced but the runtime system cannot find the referenced class. <P>
+For example, class NoClass is declared:<P>
+<PRE>
+    class NoClass {
+        public static void main(String args[]) {
+            C c = new C();
+        }
+    }
+</PRE>
+When NoClass is run, if the runtime system can't find C.class it throws the NoClassDefFoundException.<P>
+C.class must have existed at the time NoClass is compiled.<P>
+<B>IncompatibleTypeException</B><P>
+An IncompatibleTypeException is thrown if an attempt is made to instantiate an interface. For example, the following code causes an IncompatibleTypeException to be thrown.<P>
+<PRE>
+    interface I {
+    }
+
+    class IncompType {
+        public static void main(String args[]) {
+            I r = (I)new("I");
+        }
+    }
+</PRE>
+<B>ArrayIndexOutOfBoundsException</B><P>
+An attempt to access an invalid element in an array throws an ArrayIndexOutOfBoundsException. For example:<P>
+<PRE>
+    class ArrayOut {
+        public static void main(String args[]) {
+            int a[] = new int[0];
+            a[0] = 0;
+        }
+    }
+</PRE>
+<B>UnsatisfiedLinkException</B><P>
+An UnsatisfiedLinkException is thrown if a method is declared native and the method cannot be linked to a routine in the runtime.  <P>
+<PRE>
+    class NoLink {
+        static native void foo();
+ 
+        public static void main(String args[]) {
+            foo();
+        }
+    }
+</PRE>
+<B>InternalException</B><P>
+An InternalException should never be thrown. It's only thrown if some consistency check in the runtime fails. Please send mail to <BR>
+java@java.Sun.COM if you have a reproducible case that throws this exception. <P>
+<HR>
+<A HREF="javaspec_10.html">Next</A>       <A HREF="javaspec_8.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

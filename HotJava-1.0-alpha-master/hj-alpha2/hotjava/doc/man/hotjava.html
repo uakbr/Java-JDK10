@@ -1,0 +1,95 @@
+<!-- sccsid: @(#)hotjava.html	1.3 94/12/12 --->
+<HTML>
+<HEAD>
+<TITLE>HotJava - The JAVA World Wide Web Browser</TITLE>
+</HEAD>
+<BODY>
+<H1>HotJava - The JAVA World Wide Web Browser</H1>
+HotJava allows browsing of the World Wide Web and provides the 
+ability to present interactive content across platforms. Interactive
+content is in the form of applets. Applets are programs written in the
+JAVA language to run within HotJava.
+<p>
+<H2>SYNOPSIS</H2>
+hotjava [ url ]
+<p>
+<H2>DESCRIPTION</H2>
+The <b>hotjava</b> command starts the HotJava browser and connects to the 
+document or resource  designated by <I>url</I>. If <I>url</I> is not supplied 
+then HotJava goes to either:
+<ul>
+<li>
+the page designated by the value of the environment variable WWW_HOME; or
+<li>
+<code>file://~/demo</code> if WWW_HOME is unset.
+</ul>
+<H2>ENVIRONMENT VARIABLES</H2>
+<dl>
+<dt>HOTJAVA_HOME
+<dd>The directory where HotJava looks for resources that it needs to run
+itself. By default this is set to the installation directory when the 
+system is first installed.
+<dt>WWW_HOME
+<dd>The default home page.
+<a name=HOTJAVA_READ_PATH><dt>HOTJAVA_READ_PATH</a>
+<dd>Used by HotJava to determine whether any applet
+has permission read a file. The value of HOTJAVA_READ_PATH is a 
+colon-separated list of files or directories. By default HOTJAVA_READ_PATH
+is set to:
+<pre>
+     &lt;hotjava-install-dir&gt;:$HOME/public_html/
+</pre>
+Each component of the path is used as a prefix to compare 
+against the file that the applet wants to open for reading. Applets are 
+allowed to read from 
+<ul>
+<li>files in matching directories 
+<li>files in subdirectories of matching directories
+<li>files that match a component exactly
+</ul>
+<p>
+For example, let's say you have a directory:
+<pre>
+     $HOME/Images
+</pre>
+<p>
+As subdirectories under "Images" you have a "Private" subdirectory and a
+"Public" subdirectory. If you set HOTJAVA_READ_PATH to:
+<pre>
+     &lt;hotjava-install-dir&gt;:$HOME/public_html/:$HOME/Images/
+</pre>
+<p>
+an applet would be able to read the "Private" subdirectory. If you wanted to
+prevent applets from reading the "Private" subdirectory but allow them to
+read the "Public" one  then you would set HOTJAVA_READ_PATH to:
+<pre>
+     &lt;hotjava-install-dir&gt;:$HOME/public_html/:$HOME/Images/Public/
+</pre>
+<p>
+In this way the directory "$HOME/Images/Private" won't match any component of
+HOTJAVA_READ_PATH and applets can't read files in it.
+<p>
+Setting HOTJAVA_READ_PATH to "*" disables file checking for reads. The
+* should be quoted so the shell doesn't expand it.
+<p>
+<dt>HOTJAVA_WRITE_PATH
+<dd>Used by HotJava to determine whether an applet has permission
+to write to a file. The value of HOTJAVA_WRITE_PATH is a 
+colon-separated list of files or directories. By default HOTJAVA_WRITE_PATH
+is set to:
+<pre>
+     /tmp/:/devices/:/dev/:~/.hotjava/
+</pre>
+The components of the path are used as a prefix to 
+compare 
+against the file that the applet wants to open for writing.
+<p>
+See <a href="hotjava.html#HOTJAVA_READ_PATH">HOTJAVA_READ_PATH</a>
+for an example of how matching components works. The
+* should be quoted so the shell doesn't expand it.
+<p>
+Setting HOTJAVA_WRITE_PATH to "*" disables file checking for writes.
+
+</dl>
+</BODY>
+</HTML>

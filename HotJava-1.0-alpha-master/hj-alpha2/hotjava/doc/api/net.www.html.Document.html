@@ -1,0 +1,402 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.www.html.Document
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.ContentHandler.html#_top_">Previous</a>    <a href="net.www.html.MessageHeader.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.www.html.Document
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.www.html.Document
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Document</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+net.ww.html.Document is a class which holds an html document.
+    An html document is parsed text, a vector of tags, and
+    optional html source text.  Document is used by html.Parser to
+    store parsed documents, but it is also used to help
+    programatically generate html documents.  E.g., the ftp
+    protocol handler might generate an html document out of a
+    directory listing.
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#htmlSource">htmlSource</a>
+</b>
+<dd>
+If this is non-null, it contains the htmlSource that this
+	document was built from.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#inPREelement">inPREelement</a>
+</b>
+<dd>
+This is whether or not we're in a &lt;pre> section.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#tags">tags</a>
+</b>
+<dd>
+This is an array of tag references into the text string.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#text">text</a>
+</b>
+<dd>
+This is the text of the html document, with the tags and
+	extra white space removed.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#title">title</a>
+</b>
+<dd>
+Title of this html document, or null if not known yet.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Document()"><b>Document</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addTagRef(net.www.html.TagRef, int)"><b>addTagRef</b></a>(TagRef, int)
+<dd>
+This adds a pre-made TagRef to the document, and sets
+	its position to the current position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#endTag(net.www.html.Tag, int)"><b>endTag</b></a>(Tag, int)
+<dd>
+Create a new end tag ref at the current position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getTags()"><b>getTags</b></a>()
+<dd>
+Return the vector of tag refs.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getText()"><b>getText</b></a>()
+<dd>
+Return the text array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getTitle()"><b>getTitle</b></a>()
+<dd>
+This returns the title for this document, as defined by
+	the &lt;title> &lt;/title> tag pairs.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setSource(java.lang.String)"><b>setSource</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setText(byte[])"><b>setText</b></a>(byte[])
+<dd>
+Set the text array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setText(java.lang.String)"><b>setText</b></a>(String)
+<dd>
+Set the text.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startTag(net.www.html.Tag, int)"><b>startTag</b></a>(Tag, int)
+<dd>
+Create a new start tag ref at the current position.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="htmlSource">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+htmlSource
+</b>
+<pre>
+  protected <a href="java.lang.String.html#_top_">String</a> htmlSource
+</pre>
+<dl>
+<dd>
+If this is non-null, it contains the htmlSource that this
+	document was built from.
+</dl>
+<a name="text">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+text
+</b>
+<pre>
+  protected byte text[]
+</pre>
+<dl>
+<dd>
+This is the text of the html document, with the tags and
+	extra white space removed.
+</dl>
+<a name="tags">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+tags
+</b>
+<pre>
+  protected <a href="java.util.Vector.html#_top_">Vector</a> tags
+</pre>
+<dl>
+<dd>
+This is an array of tag references into the text string.
+</dl>
+<a name="title">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+title
+</b>
+<pre>
+  protected <a href="java.lang.String.html#_top_">String</a> title
+</pre>
+<dl>
+<dd>
+Title of this html document, or null if not known yet.
+</dl>
+<a name="inPREelement">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+inPREelement
+</b>
+<pre>
+  protected boolean inPREelement
+</pre>
+<dl>
+<dd>
+This is whether or not we're in a &lt;pre> section.  &lt;pre>
+	sections cannot be nested, and we enforce that here, so we
+	don't need to keep a count.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Document"></a>
+<a name="Document()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Document
+</b>
+<pre>
+  public Document()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setSource(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setSource">
+<b>
+setSource
+</b>
+</a>
+<pre>
+  public final void setSource(<a href="java.lang.String.html#_top_">String</a> source)
+</pre>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  public void reset()
+</pre>
+<a name="addTagRef(net.www.html.TagRef, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addTagRef">
+<b>
+addTagRef
+</b>
+</a>
+<pre>
+  protected final <a href="net.www.html.TagRef.html#_top_">TagRef</a> addTagRef(<a href="net.www.html.TagRef.html#_top_">TagRef</a> ref,
+                                   int offset)
+</pre>
+<dl>
+<dd>
+This adds a pre-made TagRef to the document, and sets
+	its position to the current position.
+</dl>
+<p>
+<a name="startTag(net.www.html.Tag, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startTag">
+<b>
+startTag
+</b>
+</a>
+<pre>
+  public <a href="net.www.html.TagRef.html#_top_">TagRef</a> startTag(<a href="net.www.html.Tag.html#_top_">Tag</a> t,
+                         int offset)
+</pre>
+<dl>
+<dd>
+Create a new start tag ref at the current position.  This
+	creates a generic TagRef object, but can be subclassed to
+	create specific TagRef subclasses.
+</dl>
+<p>
+<a name="endTag(net.www.html.Tag, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="endTag">
+<b>
+endTag
+</b>
+</a>
+<pre>
+  public <a href="net.www.html.TagRef.html#_top_">TagRef</a> endTag(<a href="net.www.html.Tag.html#_top_">Tag</a> t,
+                       int offset)
+</pre>
+<dl>
+<dd>
+Create a new end tag ref at the current position.  This
+	creates a generic TagRef object, but can be subclassed to
+	create specific TagRef subclasses.
+</dl>
+<p>
+<a name="getTags()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getTags">
+<b>
+getTags
+</b>
+</a>
+<pre>
+  public <a href="java.util.Vector.html#_top_">Vector</a> getTags()
+</pre>
+<dl>
+<dd>
+Return the vector of tag refs.
+</dl>
+<p>
+<a name="getText()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getText">
+<b>
+getText
+</b>
+</a>
+<pre>
+  public byte getText()
+</pre>
+<dl>
+<dd>
+Return the text array.
+</dl>
+<p>
+<a name="setText(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setText">
+<b>
+setText
+</b>
+</a>
+<pre>
+  public void setText(byte text[])
+</pre>
+<dl>
+<dd>
+Set the text array. It is not copied.
+</dl>
+<p>
+<a name="setText(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setText">
+<b>
+setText
+</b>
+</a>
+<pre>
+  public void setText(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Set the text.
+</dl>
+<p>
+<a name="getTitle()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getTitle">
+<b>
+getTitle
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getTitle()
+</pre>
+<dl>
+<dd>
+This returns the title for this document, as defined by
+	the &lt;title> &lt;/title> tag pairs.  If no title is found,
+	"" is returned.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.ContentHandler.html#_top_">Previous</a>    <a href="net.www.html.MessageHeader.html#_top_">Next</a></pre>
+</body>
+</html>

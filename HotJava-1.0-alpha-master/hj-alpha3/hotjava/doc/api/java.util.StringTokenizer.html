@@ -1,0 +1,262 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.StringTokenizer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Stack.html#_top_">Previous</a>    <a href="java.util.UCDecoder.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.StringTokenizer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.StringTokenizer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+StringTokenizer</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+<dt>
+implements <a href="java.util.Enumeration.html#_top_">Enumeration</a>
+</dl>
+A class to tokenize a string.
+StringTokenizer is a class that controls simple linear tokenization
+of a string. The set of delimiters, which defaults to common whitespace
+characters, may be specified at creation time or on a per-token basis.<p>
+Example usage:
+<pre>
+	String s = "this is a test";
+	StringTokenizer st = new StringTokenizer(s);
+	while (st.hasMoreTokens()) {
+		println(st.nextToken());
+	}
+</pre>
+Prints the following on the console:
+<pre>
+	this
+	is
+	a
+	test
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.8, 31 Jan 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringTokenizer(java.lang.String, java.lang.String)"><b>StringTokenizer</b></a>(String, String)
+<dd>
+Constructs a StringTokenizer on the specified string, using the
+specified delimiter set.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringTokenizer(java.lang.String)"><b>StringTokenizer</b></a>(String)
+<dd>
+Constructs a StringTokenizer on the specified string, using the
+default delimiter set (which is "\t\n\r").
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hasMoreElements()"><b>hasMoreElements</b></a>()
+<dd>
+Returns true if the Enumeration has more elements.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hasMoreTokens()"><b>hasMoreTokens</b></a>()
+<dd>
+Returns true if more tokens exist.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nextElement()"><b>nextElement</b></a>()
+<dd>
+Returns the next element in the Enumeration.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nextToken()"><b>nextToken</b></a>()
+<dd>
+Returns the next token of the string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nextToken(java.lang.String)"><b>nextToken</b></a>(String)
+<dd>
+Returns the next token, after switching to the new delimiter set.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="StringTokenizer"></a>
+<a name="StringTokenizer(java.lang.String, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringTokenizer
+</b>
+<pre>
+  public StringTokenizer(<a href="java.lang.String.html#_top_">String</a> str,
+                         <a href="java.lang.String.html#_top_">String</a> delim)
+</pre>
+<dl>
+<dd>
+Constructs a StringTokenizer on the specified string, using the
+specified delimiter set.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+str
+-
+	the input string
+<dd>
+delim
+-
+ the delimiter string
+</dl>
+</dl>
+<p>
+<a name="StringTokenizer(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringTokenizer
+</b>
+<pre>
+  public StringTokenizer(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Constructs a StringTokenizer on the specified string, using the
+default delimiter set (which is "\t\n\r").
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="hasMoreTokens()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hasMoreTokens">
+<b>
+hasMoreTokens
+</b>
+</a>
+<pre>
+  public boolean hasMoreTokens()
+</pre>
+<dl>
+<dd>
+Returns true if more tokens exist.
+</dl>
+<p>
+<a name="nextToken()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nextToken">
+<b>
+nextToken
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> nextToken()
+</pre>
+<dl>
+<dd>
+Returns the next token of the string.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.NoSuchElementException.html#_top_">NoSuchElementException</a>
+<dd>
+ there are no more tokens in the string
+</dl>
+</dl>
+<p>
+<a name="nextToken(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nextToken">
+<b>
+nextToken
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> nextToken(<a href="java.lang.String.html#_top_">String</a> delim)
+</pre>
+<dl>
+<dd>
+Returns the next token, after switching to the new delimiter set.
+The new delimiter set remains the default after this call.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+delim
+-
+ the new delimiters
+</dl>
+</dl>
+<p>
+<a name="hasMoreElements()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hasMoreElements">
+<b>
+hasMoreElements
+</b>
+</a>
+<pre>
+  public boolean hasMoreElements()
+</pre>
+<dl>
+<dd>
+Returns true if the Enumeration has more elements.
+</dl>
+<p>
+<a name="nextElement()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nextElement">
+<b>
+nextElement
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> nextElement()
+</pre>
+<dl>
+<dd>
+Returns the next element in the Enumeration.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.NoSuchElementException.html#_top_">NoSuchElementException</a>
+<dd>
+ There are no more elements in the enumeration
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Stack.html#_top_">Previous</a>    <a href="java.util.UCDecoder.html#_top_">Next</a></pre>
+</body>
+</html>

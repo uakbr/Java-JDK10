@@ -1,0 +1,1614 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.www.html.URL
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.TagRef.html#_top_">Previous</a>    <a href="net.www.html.URLStreamHandler.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.www.html.URL
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.www.html.URL
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+URL</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Class URL represents a Uniform Reference Locator -- a textual reference
+to an object on the World Wide Web.  The public instance variables contains
+the broken apart fields of the parsed url.
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_aiff">content_aiff</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_anymap">content_anymap</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_basic">content_basic</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_bcpio">content_bcpio</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_bitmap">content_bitmap</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_cpio">content_cpio</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_dvi">content_dvi</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_gif">content_gif</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_graymap">content_graymap</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_gtar">content_gtar</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_hdf">content_hdf</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_html">content_html</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_ief">content_ief</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_jpeg">content_jpeg</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_latex">content_latex</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_man">content_man</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_me">content_me</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_movie">content_movie</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_mpeg">content_mpeg</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_ms">content_ms</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_msvideo">content_msvideo</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_netcdf">content_netcdf</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_octet">content_octet</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_oda">content_oda</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_pdf">content_pdf</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_pixmap">content_pixmap</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_plain">content_plain</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_postscript">content_postscript</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_quicktime">content_quicktime</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_rast">content_rast</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_rfc822">content_rfc822</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_rgb">content_rgb</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_richtext">content_richtext</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_setext">content_setext</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_shar">content_shar</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_source">content_source</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_sv4cpio">content_sv4cpio</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_sv4crc">content_sv4crc</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_tar">content_tar</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_tex">content_tex</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_texinfo">content_texinfo</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_tiff">content_tiff</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_troff">content_troff</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_type">content_type</a>
+</b>
+<dd>
+Format of media, only valid after the stream has been opened
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_unknown">content_unknown</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_ustar">content_ustar</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_values">content_values</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_wav">content_wav</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_xbitmap">content_xbitmap</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_xpixmap">content_xpixmap</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_xwindowdump">content_xwindowdump</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#content_zip">content_zip</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#file">file</a>
+</b>
+<dd>
+"File name" on that host
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fromUrl">fromUrl</a>
+</b>
+<dd>
+only relevant if we're a post url
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#host">host</a>
+</b>
+<dd>
+Host name to which to connect
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#port">port</a>
+</b>
+<dd>
+Protocol port to connect to
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#postData">postData</a>
+</b>
+<dd>
+only relevant if we're a post url
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#protocol">protocol</a>
+</b>
+<dd>
+What protocol to use (ftp, http, nntp, ...
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ref">ref</a>
+</b>
+<dd>
+# reference
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#URL(java.lang.String, java.lang.String, java.lang.String)"><b>URL</b></a>(String, String, String)
+<dd>
+Create an absolute URL from the specified protocol,
+	host, and file.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#URL(net.www.html.URL, java.lang.String, net.www.html.URL)"><b>URL</b></a>(URL, String, URL)
+<dd>
+Create a POST URL
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#URL(net.www.html.URL, java.lang.String)"><b>URL</b></a>(URL, String)
+<dd>
+Create a URL from the unparsed url in the context of
+	the specified context.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#New(java.lang.String)"><b>New</b></a>(String)
+<dd>
+Create an instance of a named class using a classloader that
+references this URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#canCache()"><b>canCache</b></a>()
+<dd>
+Returns true if the data associated with this URL can be cached.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copyURL(net.www.html.URL)"><b>copyURL</b></a>(URL)
+<dd>
+Copy another URL's "vital statistics" into us.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#equals(java.lang.Object)"><b>equals</b></a>(Object)
+<dd>
+Compare two URLs.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#flushClassLoader()"><b>flushClassLoader</b></a>()
+<dd>
+Flush the classloader cache.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getContent()"><b>getContent</b></a>()
+<dd>
+Get the object referred to by this URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getContent(java.io.InputStream, browser.Observer)"><b>getContent</b></a>(InputStream, Observer)
+<dd>
+Get the object referred to by this URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPort()"><b>getPort</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hashCode()"><b>hashCode</b></a>()
+<dd>
+Create an integer suitable for hash table indexing
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isPostURL()"><b>isPostURL</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#main(java.lang.String[])"><b>main</b></a>(String[])
+<dd>
+A simple main program for testing: fetches the object referenced by this URL
+and prints it.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mimeToContent(java.lang.String)"><b>mimeToContent</b></a>(String)
+<dd>
+Given a mime content type String (e.g.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openStream()"><b>openStream</b></a>()
+<dd>
+Open an input stream to the object references by the URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openStreamInteractively()"><b>openStreamInteractively</b></a>()
+<dd>
+Similar to openStream except that it allows the stream handler
+to interact with the user to resolve certain problems.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#sameFile(net.www.html.URL)"><b>sameFile</b></a>(URL)
+<dd>
+Compare two URLs, excluding the "ref" field: sameFile is true
+if the true reference the same remote object, but not necessarily
+the same subpiece of that object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setType(java.lang.String)"><b>setType</b></a>(String)
+<dd>
+Force the content type of this URL to a specific value.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toExternalForm()"><b>toExternalForm</b></a>()
+<dd>
+Reverse the parsing of the URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Convert to a human-readable form.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="content_unknown">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_unknown
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_unknown
+</pre>
+<a name="content_octet">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_octet
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_octet
+</pre>
+<a name="content_oda">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_oda
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_oda
+</pre>
+<a name="content_pdf">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_pdf
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_pdf
+</pre>
+<a name="content_postscript">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_postscript
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_postscript
+</pre>
+<a name="content_richtext">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_richtext
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_richtext
+</pre>
+<a name="content_bcpio">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_bcpio
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_bcpio
+</pre>
+<a name="content_cpio">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_cpio
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_cpio
+</pre>
+<a name="content_dvi">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_dvi
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_dvi
+</pre>
+<a name="content_gtar">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_gtar
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_gtar
+</pre>
+<a name="content_hdf">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_hdf
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_hdf
+</pre>
+<a name="content_latex">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_latex
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_latex
+</pre>
+<a name="content_netcdf">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_netcdf
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_netcdf
+</pre>
+<a name="content_shar">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_shar
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_shar
+</pre>
+<a name="content_sv4cpio">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_sv4cpio
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_sv4cpio
+</pre>
+<a name="content_sv4crc">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_sv4crc
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_sv4crc
+</pre>
+<a name="content_tar">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_tar
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_tar
+</pre>
+<a name="content_tex">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_tex
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_tex
+</pre>
+<a name="content_texinfo">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_texinfo
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_texinfo
+</pre>
+<a name="content_troff">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_troff
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_troff
+</pre>
+<a name="content_man">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_man
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_man
+</pre>
+<a name="content_me">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_me
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_me
+</pre>
+<a name="content_ms">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_ms
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_ms
+</pre>
+<a name="content_ustar">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_ustar
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_ustar
+</pre>
+<a name="content_source">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_source
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_source
+</pre>
+<a name="content_zip">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_zip
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_zip
+</pre>
+<a name="content_basic">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_basic
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_basic
+</pre>
+<a name="content_aiff">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_aiff
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_aiff
+</pre>
+<a name="content_wav">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_wav
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_wav
+</pre>
+<a name="content_gif">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_gif
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_gif
+</pre>
+<a name="content_ief">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_ief
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_ief
+</pre>
+<a name="content_jpeg">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_jpeg
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_jpeg
+</pre>
+<a name="content_tiff">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_tiff
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_tiff
+</pre>
+<a name="content_rast">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_rast
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_rast
+</pre>
+<a name="content_anymap">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_anymap
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_anymap
+</pre>
+<a name="content_bitmap">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_bitmap
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_bitmap
+</pre>
+<a name="content_graymap">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_graymap
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_graymap
+</pre>
+<a name="content_pixmap">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_pixmap
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_pixmap
+</pre>
+<a name="content_rgb">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_rgb
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_rgb
+</pre>
+<a name="content_xbitmap">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_xbitmap
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_xbitmap
+</pre>
+<a name="content_xpixmap">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_xpixmap
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_xpixmap
+</pre>
+<a name="content_xwindowdump">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_xwindowdump
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_xwindowdump
+</pre>
+<a name="content_rfc822">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_rfc822
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_rfc822
+</pre>
+<a name="content_html">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_html
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_html
+</pre>
+<a name="content_plain">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_plain
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_plain
+</pre>
+<a name="content_values">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_values
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_values
+</pre>
+<a name="content_setext">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_setext
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_setext
+</pre>
+<a name="content_mpeg">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_mpeg
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_mpeg
+</pre>
+<a name="content_quicktime">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_quicktime
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_quicktime
+</pre>
+<a name="content_msvideo">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_msvideo
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_msvideo
+</pre>
+<a name="content_movie">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+content_movie
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> content_movie
+</pre>
+<a name="postData">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+postData
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> postData
+</pre>
+<dl>
+<dd>
+only relevant if we're a post url
+</dl>
+<a name="fromUrl">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fromUrl
+</b>
+<pre>
+  public <a href="#_top_">URL</a> fromUrl
+</pre>
+<dl>
+<dd>
+only relevant if we're a post url
+</dl>
+<a name="protocol">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+protocol
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> protocol
+</pre>
+<dl>
+<dd>
+What protocol to use (ftp, http, nntp, ... etc)
+</dl>
+<a name="host">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+host
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> host
+</pre>
+<dl>
+<dd>
+Host name to which to connect
+</dl>
+<a name="file">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+file
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> file
+</pre>
+<dl>
+<dd>
+"File name" on that host
+</dl>
+<a name="ref">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+ref
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> ref
+</pre>
+<dl>
+<dd>
+# reference
+</dl>
+<a name="port">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+port
+</b>
+<pre>
+  public int port
+</pre>
+<dl>
+<dd>
+Protocol port to connect to
+</dl>
+<a name="content_type">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+content_type
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> content_type
+</pre>
+<dl>
+<dd>
+Format of media, only valid after the stream has been opened
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="URL"></a>
+<a name="URL(java.lang.String, java.lang.String, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+URL
+</b>
+<pre>
+  public URL(<a href="java.lang.String.html#_top_">String</a> p,
+             <a href="java.lang.String.html#_top_">String</a> h,
+             <a href="java.lang.String.html#_top_">String</a> f)
+</pre>
+<dl>
+<dd>
+Create an absolute URL from the specified protocol,
+	host, and file.
+</dl>
+<p>
+<a name="URL(net.www.html.URL, java.lang.String, net.www.html.URL)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+URL
+</b>
+<pre>
+  public URL(<a href="#_top_">URL</a> url,
+             <a href="java.lang.String.html#_top_">String</a> post,
+             <a href="#_top_">URL</a> from)
+</pre>
+<dl>
+<dd>
+Create a POST URL
+</dl>
+<p>
+<a name="URL(net.www.html.URL, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+URL
+</b>
+<pre>
+  public URL(<a href="#_top_">URL</a> context,
+             <a href="java.lang.String.html#_top_">String</a> spec)
+</pre>
+<dl>
+<dd>
+Create a URL from the unparsed url in the context of
+	the specified context.  If spec is an absolute URL,
+	cool, otherwise, parse it in terms of the context.
+	Context may be null (indicating no context).
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="isPostURL()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isPostURL">
+<b>
+isPostURL
+</b>
+</a>
+<pre>
+  public boolean isPostURL()
+</pre>
+<a name="copyURL(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copyURL">
+<b>
+copyURL
+</b>
+</a>
+<pre>
+  protected void copyURL(<a href="#_top_">URL</a> url)
+</pre>
+<dl>
+<dd>
+Copy another URL's "vital statistics" into us.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+url
+-
+ The URL to copy.
+</dl>
+</dl>
+<p>
+<a name="equals(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="equals">
+<b>
+equals
+</b>
+</a>
+<pre>
+  public boolean equals(<a href="java.lang.Object.html#_top_">Object</a> o)
+</pre>
+<dl>
+<dd>
+Compare two URLs.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+o
+-
+	The URL to compare against.
+<dt>
+<b>Returns:</b>
+<dd>
+true iff they are equal, false otherwise.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#equals(java.lang.Object)">equals</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="hashCode()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hashCode">
+<b>
+hashCode
+</b>
+</a>
+<pre>
+  public int hashCode()
+</pre>
+<dl>
+<dd>
+Create an integer suitable for hash table indexing
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#hashCode()">hashCode</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="sameFile(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="sameFile">
+<b>
+sameFile
+</b>
+</a>
+<pre>
+  public boolean sameFile(<a href="#_top_">URL</a> other)
+</pre>
+<dl>
+<dd>
+Compare two URLs, excluding the "ref" field: sameFile is true
+if the true reference the same remote object, but not necessarily
+the same subpiece of that object.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+other
+-
+	The URL to compare against.
+<dt>
+<b>Returns:</b>
+<dd>
+true iff they are equal, false otherwise.
+</dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Convert to a human-readable form.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+The textual representation.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="toExternalForm()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toExternalForm">
+<b>
+toExternalForm
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toExternalForm()
+</pre>
+<dl>
+<dd>
+Reverse the parsing of the URL.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+The textual representation of the fully qualified URL (ie.
+		after the context and canonicalization have been applied).
+</dl>
+</dl>
+<p>
+<a name="getPort()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPort">
+<b>
+getPort
+</b>
+</a>
+<pre>
+  public int getPort()
+</pre>
+<a name="openStream()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openStream">
+<b>
+openStream
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> openStream()
+</pre>
+<dl>
+<dd>
+Open an input stream to the object references by the URL.  Invokes the
+appropriate protocol handler.  Failure is indicated by throwing an
+exception.  The act of opening this stream determines, in a protocol
+specific way, the content type of the object associated with this URL.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+The opened input stream.  A value of null indicates that while
+the open was successful, there is no useful data provided by this
+protocol, it's done for side-effect only (the usual example is the
+"mailto" protocol).
+</dl>
+</dl>
+<p>
+<a name="openStreamInteractively()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openStreamInteractively">
+<b>
+openStreamInteractively
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> openStreamInteractively()
+</pre>
+<dl>
+<dd>
+Similar to openStream except that it allows the stream handler
+to interact with the user to resolve certain problems.  For
+example, the http handler will prompt for a user name and
+password to handle authentication failures.  In these cases,
+openStream would just toss an exception.
+</dl>
+<p>
+<a name="setType(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setType">
+<b>
+setType
+</b>
+</a>
+<pre>
+  public void setType(<a href="java.lang.String.html#_top_">String</a> type)
+</pre>
+<dl>
+<dd>
+Force the content type of this URL to a specific value.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+type
+-
+	The content type to use.  One of the
+			content_* static variables in this
+			class should be used.
+			eg. setType(URL.content_html);
+</dl>
+</dl>
+<p>
+<a name="mimeToContent(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mimeToContent">
+<b>
+mimeToContent
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> mimeToContent(<a href="java.lang.String.html#_top_">String</a> type)
+</pre>
+<dl>
+<dd>
+Given a mime content type String (e.g. image/x-gif) produce the
+internal URL type atom for that type.
+</dl>
+<p>
+<a name="canCache()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="canCache">
+<b>
+canCache
+</b>
+</a>
+<pre>
+  public boolean canCache()
+</pre>
+<dl>
+<dd>
+Returns true if the data associated with this URL can be cached.
+</dl>
+<p>
+<a name="getContent()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getContent">
+<b>
+getContent
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> getContent()
+</pre>
+<dl>
+<dd>
+Get the object referred to by this URL.  For example, if it refers to an image
+the object will be some subclass if DIBitmap.  The instanceof operator should
+be used to determine what kind of object was returned.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the object that was fetched.
+</dl>
+</dl>
+<p>
+<a name="getContent(java.io.InputStream, browser.Observer)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getContent">
+<b>
+getContent
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> getContent(<a href="java.io.InputStream.html#_top_">InputStream</a> is,
+                           <a href="browser.Observer.html#_top_">Observer</a> o)
+</pre>
+<dl>
+<dd>
+Get the object referred to by this URL.  For example, if it refers to an image
+the object will be some subclass if DIBitmap.  The instanceof operator should
+be used to determine what kind of object was returned.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+is
+-
+	the stream to the Object.  It must have been created by an
+			earlier call to openStream.
+<dt>
+<b>Returns:</b>
+<dd>
+the object that was fetched.  If there is no handler for the object,
+		a stream is returned (logically the unmodified original stream, but
+		it may have had another stream layered on top of it).  Generally the
+		caller should prompt to save the file locally if they get a stream back.
+</dl>
+</dl>
+<p>
+<a name="main(java.lang.String[])">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="main">
+<b>
+main
+</b>
+</a>
+<pre>
+  public static void main(<a href="java.lang.String.html#_top_">String</a> args[])
+</pre>
+<dl>
+<dd>
+A simple main program for testing: fetches the object referenced by this URL
+and prints it.
+</dl>
+<p>
+<a name="New(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="New">
+<b>
+New
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> New(<a href="java.lang.String.html#_top_">String</a> clname)
+</pre>
+<dl>
+<dd>
+Create an instance of a named class using a classloader that
+references this URL.  It is similar to new(clname) except that
+it specifies a URL to search.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+clname
+-
+	The name of the class.
+<dt>
+<b>Returns:</b>
+<dd>
+	The new instance of the class.
+</dl>
+</dl>
+<p>
+<a name="flushClassLoader()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="flushClassLoader">
+<b>
+flushClassLoader
+</b>
+</a>
+<pre>
+  public static synchronized void flushClassLoader()
+</pre>
+<dl>
+<dd>
+Flush the classloader cache.  This is only used when reloading a
+document which went we want to force the system to reload all the
+applets on that document.  Flushing the cache is not the most
+efficient mechanism but it is the most expedient.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.TagRef.html#_top_">Previous</a>    <a href="net.www.html.URLStreamHandler.html#_top_">Next</a></pre>
+</body>
+</html>

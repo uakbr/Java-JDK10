@@ -1,0 +1,527 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Classes</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING21></A>
+<A HREF="javaspec_6.html">Next</A>       <A HREF="javaspec_4.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>4  Classes</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_5.html#HEADING22"><B> 4.1 </B> - Casting Between Class Types</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING23"><B> 4.2 </B> - Methods</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING24"><B>4.2.1 </B> - Instance Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING25"><B>4.2.2 </B> - The this and super Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING26"><B>4.2.3 </B> - Setting Local Variables</A><DD>
+</dl>
+<DT><A HREF="javaspec_5.html#HEADING27"><B> 4.3 </B> - Overriding Methods</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING28"><B> 4.4 </B> - Overload Resolution</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING29"><B> 4.5 </B> - Constructors</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING30"><B> 4.6 </B> - Object Creation--the new Operator</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING31"><B>4.6.1 </B> - Garbage Collection</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING32"><B>4.6.2 </B> - Finalization</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING33"><B>4.6.3 </B> - The null Reference</A><DD>
+</dl>
+<DT><A HREF="javaspec_5.html#HEADING34"><B> 4.7 </B> - Static Methods, Variables, and Initializers</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING35"><B>4.7.1 </B> - Order of Declarations</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING36"><B>4.7.2 </B> - Order of Initialization</A><DD>
+</dl>
+<DT><A HREF="javaspec_5.html#HEADING37"><B> 4.8 </B> - Access Specifiers</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING38"><B> 4.9 </B> - Variable Scoping Rules</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING39"><B> 4.10 </B> - Modifiers</A><DD>
+<dl>
+<DT><A HREF="javaspec_5.html#HEADING40"><B>4.10.1 </B> - Threadsafe Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING41"><B>4.10.2 </B> - Transient Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING42"><B>4.10.3 </B> - Final Classes, Methods, and Variables</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING43"><B>4.10.4 </B> - Native Methods</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING44"><B>4.10.5 </B> - Abstract Methods</A><DD>
+<DT><A HREF="javaspec_5.html#HEADING45"><B>4.10.6 </B> - Synchronized Methods and Blocks</A><DD>
+</dl>
+</DL>
+
+
+Classes represent the classical object oriented programming model. They support data abstraction and implementations tied to data. In Java, each new class creates a new type.<P>
+To make a new class, the programmer must base it on an existing class. The new class is said to be derived from the existing class. The derived class is also called a subclass of the other, which is known as a superclass. Class derivation is transitive: if B is a subclass of A, and C is a subclass of B, then C is a subclass of A.<P>
+The immediate superclass of a class and the <A NAME=MARKER2_31></A>interfaces (see <A HREF="javaspec_6.html#0">"Interfaces" on page 23</A>) that the class implements (if any) are indicated in the class declaration by the keywords <A NAME=MARKER2_2></A>extends and <A NAME=MARKER2_3></A>implements, respectively:<P>
+<PRE>
+<I>    [Doc comment] [Modifiers] class Classname</I><P>
+<I>       extends Superclassname]</I><P>
+<I>       implements Interface{, Interface}] {</I><P>
+<I>           ClassBody</I><P>
+<I>   }</I><P>
+</PRE>
+For example:<P>
+<PRE>
+    /** 2 dimensional point */
+    public class Point {
+        float x, y;
+        ...
+    }
+
+    /** Printable point */
+    class PrintablePoint extends Points implements Printable {
+        ...
+        public void print() {
+            ...
+        }
+    }
+</PRE>
+All classes are derived from a single root class: Object. Every class except Object has exactly one immediate superclass. If a class is declared without specifying an immediate superclass, Object is assumed. For example, the following:<P>
+<PRE>
+    class Point { 
+        float x, y;
+    }
+</PRE>
+is the same as:<P>
+<PRE>
+    class Point extends Object { 
+        float x, y;
+    }
+</PRE>
+The language supports only single inheritance. Through a feature known as interfaces, it supports some features that in other languages are supported through multiple inheritance (see <A HREF="javaspec_6.html#0">"Interfaces" on page 23</A>).<P>
+<A NAME=HEADING22></A>
+<HR>
+<H3> 4.1  <A NAME=4>Casting Between Class Types</H3>
+The language supports casting between types and because each class is a new type, Java supports casting between class types. If B is a subclass of A, then an instance of B can be used as an instance of A. No explicit cast is required, but an explicit cast is legal--this is called widening. If an instance of A needs to be used as if it were an instance of B, the programmer can write a type conversion or <A NAME=MARKER2_5></A>cast--this is called narrowing. Casts from a class to a subclass are always checked at runtime to make sure that the object is actually an instance of the subclass (or one of its subclasses). Casting between sibling classes is a compile-time error. The syntax of a class cast is:<P>
+<PRE>
+    (classname)ref
+</PRE>
+where (classname) is the object being cast to and ref is the object being cast.<P>
+Casting affects only the reference to the object, not the object itself. However, access to instance variables is affected by the type of the object reference. Casting an object from one type to another may result in a different instance variable being accessed even though the same variable name is used. <P>
+<PRE>
+    class ClassA {
+        String name = "ClassA";
+    }
+
+    class ClassB extends ClassA {  // ClassB is a subclass of ClassA
+        String name= "ClassB";
+    }
+
+    class AccessTest {
+        void test() {
+            ClassB b = new ClassB();
+            println(b.name);         // print: ClassB
+
+            ClassA a;
+            a = (ClassA)b;
+            println(a.name);         // print: ClassA
+        }
+    }
+</PRE>
+<A NAME=HEADING23></A>
+<HR>
+<H3> 4.2  <A NAME=MARKER2_6></A>Methods</H3>
+Methods are the operations that can be performed on an object or class. They can be declared in either classes or interfaces, but they can be implemented only in classes. (All user-defined operations in the language are implemented with methods.) <P>
+A method declaration in a class has the following form (native and abstract methods have no method body):<P>
+<PRE>
+<I>    [Doc comment] [Modifiers] returnType methodName ( parameterList ) {</I><P>
+<I>           [methodBody]</I><P>
+<I>   }</I><P>
+</PRE>
+Methods:<P>
+<UL>
+<LI>Have a return type unless they're constructors, in which case they have no return type. If a non-constructor method does not return any value, it must have a <A NAME=MARKER2_7></A>void return type.<P>
+<LI>Have a parameter list consisting of comma-separated pairs of types and parameter names. The parameter list should be empty if the method has no parameters.<P>
+</UL>
+Variables declared in methods (local variables) can't hide other local variables or parameters in the same method. For example, if a method is implemented with a parameter named i, it's a compile-time error for the method to declare a local variable named i. In the following example:<P>
+<PRE>
+    class Rectangle {
+        void vertex(int i, int j) {
+            for (int i = 0; i &lt;= 100; i++) {	// ERROR
+            ...
+            }
+        }
+    }
+</PRE>
+the declaration of "i" in the for loop of the method body of "vertex" is a compile-time error.<P>
+The language allows polymorphic method naming--declaring a method with a name that has already been used in the class or its superclass--for overriding and overloading methods. Overriding means providing a different implementation of an inherited method. Overloading means declaring a method that has the same name as another method, but a different parameter list.<P>
+Note: Return types are not used to distinguish methods. Within a class scope, methods that have the same name and parameter list, i.e., the same number, position, and types of parameters, must return the same type. It is a compile-time error to declare such a method with a different return type.<P>
+<A NAME=HEADING24></A>
+<HR>
+<H4>4.2.1  Instance Variables</H4>
+All variables in a class declared outside the scope of a method and not marked static (see <A HREF="#17">"Static Methods, Variables, and Initializers" on page 18</A>) are instance variables. (Variables declared inside the scope of a method are considered local variables.) Instance variables can have modifiers (see <A HREF="#23">"Modifiers" on page 21</A>).<P>
+Instance variables can be of any type and can have initializers. (If an instance variable does not have an initializer, it is initialized to zero; boolean variables are initialized to false; and objects are initialized to null. An example of an initializer for an instance variable named j is:<P>
+<PRE>
+    class A {
+        int j = 23;
+        ...
+    }
+</PRE>
+<A NAME=HEADING25></A>
+<HR>
+<H4>4.2.2  The this and super Variables</H4>
+<A NAME=MARKER2_8></A>Inside the scope of a non-static method, the name this represents the current object. For example, an object may need to pass itself as an argument to another object's method:<P>
+<PRE>
+    class MyClass {
+        void aMethod(OtherClass obj) {
+            ...
+            obj.Method(this);
+                ...
+        }
+    }
+</PRE>
+Any time a method refers to its own instance variables or methods, an implicit "this." is in front of each reference:<P>
+<PRE>
+    class Foo {
+        int a, b, c;
+            ...
+        void myPrint(){
+            print(a + "\n");     // a == "this.a"
+        }
+            ...
+    }
+</PRE>
+The super variable is similar to the this variable. The this variable contains a reference to the current object; its type is the class containing the currently executing method. The super variable contains a reference which has the type of the superclass.<P>
+<A NAME=HEADING26></A>
+<HR>
+<H4>4.2.3  Setting Local Variables</H4>
+Methods are rigorously checked to be sure that all local variables (variables declared inside a method) are set before they are referenced. Using a local variable before it is initialized is a compile-time error.<P>
+<A NAME=HEADING27></A>
+<HR>
+<H3> 4.3  Overriding Methods</H3>
+To override a method, a subclass of the class that originally declared the method must declare a method with the same name, return type (or a subclass), and parameter list. When the method is invoked on an instance of the subclass, the new method is called rather than the original method. The overridden method can be invoked using the super variable such that:<P>
+<PRE>
+    setThermostat(...)         // refers to the overriding method
+    super.setThermostat(...)   // refers to the overridden method
+</PRE>
+<A NAME=HEADING28></A>
+<HR>
+<H3> 4.4  Overload Resolution</H3>
+Overloaded methods have the same name as an existing method, but differ in the number and/or the types of arguments. Overload resolution involves determining which overloaded method to invoke. The return type is not considered when resolving overloaded methods. Methods may be overloaded within the same class. The order of method declaration within a class is not significant.<P>
+Methods may be overloaded by varying both the number and the type of arguments. The compiler determines which matching method has the lowest type conversion cost. Only methods with the same name and number of arguments are considered for matching. The cost of matching a method is the maximum cost of converting any one of its arguments. There are two types of arguments to consider:, object types and base types.<P>
+The cost of converting among object types is the number of links in the class tree between the actual parameter's class and the prototype parameter's class. Only widening conversions are considered. (See <A HREF="#4">"Casting Between Class Types" on page 12</A> for more information on object conversion.) No conversion is necessary for argument types that match exactly, making their cost 0.<P>
+The cost of converting base types is calculated from the table below. Exact matches cost 0.<BR><IMG SRC="javaspec_Tbl_11.gif"><BR>
+<P>
+Cost &gt;= 10 causes data loss.<P>
+Once a conversion cost is assigned to each matching method, the compiler chooses the method which has the lowest conversion cost. If there is more than one potential method with the same lowest cost the match is ambiguous and a compile-time error occurs. <P>
+For example:<P>
+<PRE>
+    class A {
+        int method(Object o, Thread t);
+        int method(Thread t, Object o);
+
+        void g(Object o, Thread t) {
+            method(o, t);     // calls the first method.
+            method(t, o);     // calls the second method.
+            method(o, o);     // ambiguous - compile-time error
+        }
+    }
+</PRE>
+Note: The names of parameters are not significant. Only the number, type, and order are.<P>
+<A NAME=HEADING29></A>
+<HR>
+<H3> 4.5  <A NAME=MARKER2_9></A><A NAME=10>Constructors</H3>
+Constructors are special methods provided for initialization. They are distinguished by having the same name as their class and by not having any return type. Constructors are automatically called upon the creation of an object. They cannot be called explicitly through an object. If you want to be able to call the constructor outside the package, make the constructor public (see <A HREF="#22">"Access Specifiers" on page 20</A> for more information).<P>
+Constructors can be overloaded by varying the number and types of parameters, just as any other method can be overloaded.<P>
+<PRE>
+    class Foo {
+        int x;
+        float y;
+        Foo() {
+            x = 0;
+            y = 0.0;
+        }
+        Foo(int a) {
+            x = a;
+            y = 0.0;
+        }
+        Foo(float a) {
+            x = 0;
+            y = a;
+        }
+        Foo(int a, float b) {
+            x = a;
+            y = b;
+        }
+        static void myFoo() {
+            Foo obj1 = new Foo();       //calls Foo();
+            Foo obj2 = new Foo(4);      //calls Foo(int a);
+            Foo obj3 = new Foo(4.0);    //calls Foo(float a);
+            Foo obj4 = new Foo(4, 4.0); //calls Foo(int a, float b);
+        }
+    }
+</PRE>
+The instance variables of superclasses are initialized by calling either a constructor for the immediate superclass or a constructor for the current class. If neither is specified in the code, the superclass constructor that has no parameters is invoked. If a constructor calls another constructor in this class or a constructor in the immediate super class, that call must be the first thing in the constructor body. Instance variables can't be referenced before calling the constructor.<P>
+Invoking a constructor of the immediate superclass is done as follows: <P>
+<PRE>
+    class MyClass extends OtherClass {
+        MyClass(someParameters) {
+            /* Call immediate superclass constructor */
+            <A NAME=MARKER2_11></A>super(otherParameters); 
+            ...
+        }
+        ...
+    }
+</PRE>
+Invoking a constructor in the current class is done as follows: <P>
+<PRE>
+    class MyClass extends OtherClass {
+        MyClass(someParameters) {
+            ...
+        }
+        MyClass(otherParameters) {
+            /* Call the constructor in this class that has the
+               specified parameter list. */
+            this(someParameters); 
+            ...
+        } 
+        ...
+    }
+</PRE>
+The Foo and FooSub methods below are examples of constructors.<P>
+<PRE>
+    class Foo extends Bar {
+        int a;
+        Foo(int a) {
+            // implicit call to Bar()
+            this.a = a;
+        }
+        Foo() {
+            this(42);        // calls Foo(42) instead of Bar()
+        }
+    }
+
+    class FooSub extends Foo {
+        int b;
+        FooSub(int b) {
+            super(13);      // calls Foo(13); without this line,
+                            // would have called Foo()
+            this.b = b;
+        }
+    }
+</PRE>
+If a class declares no constructors, the compiler automatically generates one of the following form:<P>
+<PRE>
+    class MyClass extends OtherClass {
+        MyClass() {    // automatically generated
+            super();
+        }
+    }
+</PRE>
+<A NAME=HEADING30></A>
+<HR>
+<H3> 4.6  <A NAME=12>Object Creation--the new Operator</H3>
+A class is a template used to define the state and behavior of an object. An <A NAME=MARKER2_13></A>object is an instance of a class. All instances of classes are allocated in a garbage collected heap. Declaring a reference to an object does not allocate any storage for that object. The programmer must explicitly allocate the storage for objects, but no explicit deallocation is required; the garbage collector automatically reclaims the memory when it is no longer needed.<A NAME=MARKER2_14></A><A NAME=MARKER2_15></A><P>
+To allocate storage for an object, use the new operator. In addition to allocating storage, new initializes the instance variables and then calls the instance's constructor. The constructor is a method that initializes an object (see <A HREF="#10">"Constructors" on page 16</A>). The following syntax allocates and initializes a new instance of a class named ClassA:<P>
+<PRE>
+    a = new ClassA();
+</PRE>
+This constructor syntax provides arguments to the constructor:<P>
+<PRE>
+    b = new ClassA(3,2)
+</PRE>
+<A NAME=HEADING31></A>
+<HR>
+<H4>4.6.1  Garbage Collection</H4>
+The garbage collector makes most aspects of storage management simple and robust. Programs never need to explicitly free storage: it is done for them automatically. The garbage collector never frees pieces of memory that are still referenced, and it always frees pieces that are not. This makes both dangling pointer bugs and storage leaks impossible. It also frees designers from having to figure out which parts of a system have to be responsible for managing storage.<P>
+<A NAME=HEADING32></A>
+<HR>
+<H4>4.6.2  Finalization</H4>
+The Java language includes the concept of object finalization. Java finalization is generalization of garbage collection that allows a program to free arbitrary resources (e.g., file descriptors or graphics contexts) owned by objects that cannot be accessed by any Java program. Reclaiming an object's memory by garbage collection does not guarantee that  these resources will be reclaimed<A NAME=javaspec_FootNote_59 HREF=javaspec_FootNote_59.html>*1</A>.   <P>
+<A NAME=HEADING33></A>
+<HR>
+<H4>4.6.3  <A NAME=16>The null Reference</H4>
+The keyword null is a predefined constant that represents "no instance." null can be used anywhere an instance is expected and can be cast to any class type.<P>
+<A NAME=HEADING34></A>
+<HR>
+<H3> 4.7  <A NAME=17>Static Methods, Variables, and Initializers</H3>
+Variables and methods declared in a class can be declared <A NAME=MARKER2_18></A>static, which makes them apply to the class itself, rather than to an instance of the class. In addition, a block of code within a class definition can be declared static. Such a block of code is called a<A NAME=MARKER2_19></A> static initializer. <P>
+Static variables can have initializers, just as instance variables can. See <A HREF="#21">"Order of Initialization" on page 19</A> for more information. A static variable exists only once per class, no matter how many instances of the class exist. Both static variables and static methods are accessed using the class name. For convenience, they can also be accessed using an instance of the class. <P>
+<PRE>
+    class Ahem {
+        int i;                              // Instance variable
+        static int j;                       // Static variable
+        static int arr[] = new int[12];
+        static {                            // static initializer:
+                                        // initialize the array
+            for (int i = 0; i &lt; arr.length; i++) {
+                arr[i] = i;
+            }
+        }
+
+        void seti(int i) {                  // Instance method
+            this.i = i;
+        }
+        static void setj(int j) {           // Static method
+            Ahem.j = j;
+    }
+        static void clearThroat() {
+            Ahem a = new Ahem();
+            Ahem.j = 2;       // valid; static var via class
+            a.j = 3;          // valid; static var via instance
+            Ahem.setj(2);     // valid; static method via class
+            a.setj(3);        // valid; static method via instance
+            a.i = 4;          // valid; instance var via instance
+            Ahem.i = 5;       // ERROR; instance var via class
+            a.seti(4);        // valid; instance method via instance
+            Ahem.seti(5);     // ERROR; instance method via class
+        }
+    }
+</PRE>
+<A NAME=HEADING35></A>
+<HR>
+<H4>4.7.1  Order of <A NAME=MARKER2_20></A>Declarations</H4>
+The order of declaration of classes and the methods and instance variables within them is irrelevant. However, it is possible for cycles to exist during initialization. For information on cycles during initialization see <A HREF="#21">"Order of Initialization" on page 19</A>. Methods are free to make forward references to other methods and instance variables. The following is legal:<P>
+<PRE>
+    class A {
+        void a() {
+            f.set(42);
+        } 
+        B f;
+    }
+    class B {
+        void set(long n) {
+            this.n = n; } 
+        long n;
+    }
+</PRE>
+<A NAME=HEADING36></A>
+<HR>
+<H4>4.7.2  <A NAME=21>Order of Initialization</H4>
+When a class is loaded, all of its static initialization code is executed. Static initializers are executed at the same time that static variables are initialized. The initializations occur in lexical order. For example, a class C is declared as follows:<P>
+<PRE>
+    class C {
+        static int a = 1;
+        static {
+            a++;
+            b = 7;
+        }
+        static int b = 2;
+    }
+</PRE>
+When class C is loaded, the following occurs in order:<P>
+<UL>
+<LI>a is set to 1<P>
+<LI>the static initializer is executed, setting a to 2 and b to 7<P>
+<LI>b is set to 2<P>
+</UL>
+If any static initialization code has a reference to some other, unloaded class, that class is loaded and its static initialization code is executed first. Each unloaded class referenced during static initialization is loaded and initialized before the class that referenced it. If at any time during this initialization sequence a reference is made to an uninitialized class that is earlier in the sequence, a cycle is created. A cycle causes a NoClassDefFoundException to be thrown.<P>
+For example, if ClassA is loaded, its static initialization code is executed. However, ClassA's static initialization code can have a reference to another unloaded class, for example, ClassB. In that case, ClassB is loaded and its static initialization occurs before ClassA's. Then, ClassA's static initializations are executed. A cycle is created if ClassB has a reference to ClassA in its static initialization code. <P>
+It is an compile-time error for instance or static variable initializations to have a forward dependency. For example, the following code:<P>
+<PRE>
+    int i = j + 2; 
+    int j = 4;
+</PRE>
+results in a compile-time error.<P>
+An instance variable's initialization can have an apparent forward dependency on a static variable. For example in the following code fragment:<P>
+<PRE>
+    int i = j + 2;           // Instance variable
+    static int j = 4;        // Static variable
+
+</PRE>
+it appears that i has a forward dependency on j. However, i is initialized to 6 and j is initialized to 4. This initialization occurs because j is a static variable and is initalized before the instance variable. Thus, j is initialized to 4 before i is initialized.<P>
+Static methods cannot refer to instance variables; they can only use static variables and static methods.<P>
+<A NAME=HEADING37></A>
+<HR>
+<H3> 4.8  <A NAME=22>Access Specifiers</H3>
+Access specifiers are modifiers that allow programmers to control access to methods and variables. The keywords used to control access are public, private, and protected. Methods marked as public can be accessed from anywhere by anyone. Methods marked as private can be accessed only from within the class in which they are declared. Since private methods are not visible outside the class, they are effectively final and cannot be overridden (see <A HREF="#25">"Final Classes, Methods, and Variables" on page 22</A> for more information). Moreover, you cannot override a non-private method and give it private access. The protected access specifier makes a variable or method accessible to subclasses, but not to any other classes.<P>
+Public access can be applied to classes, methods, and variables. Classes, methods, and variables marked as public can be accessed from anywhere by any other class or method. The access of a public method cannot be changed by overriding it.<P>
+Classes, methods, and variables that do not have either private or public access specified can be accessed only from within the package where they are declared (see <A HREF="javaspec_7.html#0">"Packages" on page 25</A>).<P>
+<A NAME=HEADING38></A>
+<HR>
+<H3> 4.9  Variable Scoping Rules</H3>
+Within a package, when a class is defined as a subclass of another, declarations made in the superclass are visible in the subclass. When a variable is referenced inside a method definition, the following scoping rules are used:<P>
+<OL>
+<LI>The current block is searched first, and then all enclosing blocks, up to and including the current method. This is considered the local scope.<P>
+</OL>
+After the local scope, the search continues in the class scope:<P>
+<OL>
+<LI>The variables of the current class are searched.<P>
+<LI>If the variable is not found, variables of all superclasses are searched, starting with the immediate superclass, and continuing up through class Object until the variable is found. If the variable is not found, imported classes and package names are searched. If it is not found, it is a compile-time error.<P>
+</OL>
+Multiple variables with the same name within the same class are not allowed and result in a compile-time error.<P>
+<A NAME=HEADING39></A>
+<HR>
+<H3> 4.10  <A NAME=23>Modifiers</H3>
+<A NAME=HEADING40></A>
+<HR>
+<H4>4.10.1  Threadsafe Variables</H4>
+An instance or static variable can be marked threadsafe to indicate that the variable will never be changed by some other thread while one thread is using it, i.e., the variable never changes asynchronously. The purpose of marking a variable as threadsafe is to allow the compiler to perform some optimizations that may mask the occurrence of asynchronous changes. The primary optimization enabled by the use of threadsafe is the caching of instance variables in registers.<P>
+<A NAME=HEADING41></A>
+<HR>
+<H4>4.10.2  Transient Variables</H4>
+The transient flag is available to the interpreter and is intended to be used for persistent objects. Variables marked <A NAME=MARKER2_24></A>transient are treated specially when instances of the class are written out as persistent objects.<P>
+<A NAME=HEADING42></A>
+<HR>
+<H4>4.10.3  <A NAME=25>Final Classes, Methods, and Variables</H4>
+The <A NAME=MARKER2_26></A>final keyword is a modifier that marks a class as never having subclasses, a method as never being overridden, or a variable as having a constant value. It is a compile-time error to override a final method, subclass a final class, or change the value of a final variable. Variables marked as final behave like constants. <P>
+Using final lets the compiler perform a variety of optimizations. One such optimization is inline expansion of method bodies, which may be done for small, final methods (where the meaning of small is implementation dependent). <P>
+Examples of the various final declarations are:<P>
+<PRE>
+    class Foo {
+        final int value = 3;             // final variable
+        final int foo(int a, int b) {    // final method
+            ...
+        }
+    }
+</PRE>
+<A NAME=HEADING43></A>
+<HR>
+<H4>4.10.4  Native Methods</H4>
+Methods marked as native are implemented in a platform-dependent language, e.g., C, not Java Native methods do not have a method body, instead the declaration is terminated with a semicolon. Constructors cannot be marked as native. Though implemented in a platform-dependent language, native methods behave exactly as non-native methods do, for example, it is possible to override them. An example of a native method declaration is:<P>
+<PRE>
+    native long timeOfDay();
+</PRE>
+<A NAME=HEADING44></A>
+<HR>
+<H4>4.10.5  <A NAME=27>Abstract Methods</H4>
+Abstract methods provide the means for a superclass or interface to define a protocol that subclasses must implement. Methods marked as abstract must be defined in a subclass of the class in which they are declared. An abstract method does not have a method body; instead the declaration is terminated with a semi-colon. <P>
+The following rules apply to the use of the abstract keyword:<P>
+<UL>
+<LI>Constructors cannot be marked as abstract.<P>
+<LI>Static methods cannot be abstract.<P>
+<LI>Private methods cannot be abstract.<P>
+<LI>Abstract methods must be defined in some subclass of the class in which they are declared.<P>
+<LI>A method that overrides a superclass method cannot be abstract.<P>
+<LI>Classes that contains abstract methods and classes that inherit abstract methods without overriding them are considered abstract classes. <P>
+<LI>It is a compile-time error to instantiate an abstract class or attempt to call an abstract method directly.<P>
+</UL>
+<A NAME=HEADING45></A>
+<HR>
+<H4>4.10.6  <A NAME=28>Synchronized Methods and Blocks</H4>
+The <A NAME=MARKER2_29></A>synchronized keyword is a modifier that marks a method or block of code as being required to acquire a lock. The lock is necessary so that the synchronized code does not run at the same time as other code that needs access to the same resource. Each object has exactly one lock associated with it; each class also has exactly one lock. Synchronized methods are reentrant.<P>
+When a synchronized method is invoked, it waits until it can acquire the lock for the current instance (or class, if it's a static method). After acquiring the lock, it executes its code and then releases the lock. <P>
+Synchronized blocks of code behave similarly to synchronized methods. The difference is that instead of using the lock for the current instance or class, they use the lock associated with the object or class specified in the block's synchronized statement.<P>
+Synchronized blocks are declared as follows:<P>
+<PRE>
+    /* ...preceding code in the method... */ 
+    <A NAME=MARKER2_30></A>synchronized(&lt;object or class name&gt;) {      //sync. block
+        /* code that requires synchronized access */ 
+    } 
+    /* ...remaining code in the method... */
+</PRE>
+An example of the declaration of a synchronized method is:<P>
+<PRE>
+    class Point {
+        float x, y;
+        synchronized void scale(float f) {
+            x *= f;
+            y *= f;
+        }
+    }
+</PRE>
+An example of a synchronized block is:<P>
+<PRE>
+    class Rectangle {
+        Point topLeft;
+        ...
+        void print() {
+            synchronized (topLeft) {
+                println("topLeft.x = " + topLeft.x);
+                println("topLeft.y = " + topLeft.y);
+            }
+            ...
+        }
+    }
+</PRE>
+<HR>
+<A HREF="javaspec_6.html">Next</A>       <A HREF="javaspec_4.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

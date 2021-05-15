@@ -1,0 +1,156 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.audio.ContinuousAudioDataStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioStreamSequence.html#_top_">Previous</a>    <a href="browser.audio.html">Next</a></pre>
+<hr>
+<h1>
+Class browser.audio.ContinuousAudioDataStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----<a href="java.io.InputStreamBuffer.html#_top_">java.io.InputStreamBuffer</a>
+                   |
+                   +----<a href="browser.audio.AudioDataStream.html#_top_">browser.audio.AudioDataStream</a>
+                           |
+                           +----browser.audio.ContinuousAudioDataStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+ContinuousAudioDataStream</b>
+<dt>
+extends <a href="browser.audio.AudioDataStream.html#_top_">AudioDataStream</a>
+</dl>
+Create a continuous audio stream. This wraps a stream
+around an AudioData object, the stream is restarted
+at the beginning everytime the end is reached, thus
+creating continuous sound.<p>
+For example:
+<pre>
+	AudioData data = AudioData.getAudioData(url);
+	ContinuousAudioDataStream audiostream = new ContinuousAudioDataStream(data);
+	AudioPlayer.player.start(audiostream);
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="browser.audio.AudioPlayer.html#_top_">AudioPlayer</a>,
+<a href="browser.audio.AudioData.html#_top_">AudioData</a><dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff<dt>
+<b>Version:</b>
+<dd>
+	1.6, 14 Mar 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#ContinuousAudioDataStream(browser.audio.AudioData)"><b>ContinuousAudioDataStream</b></a>(AudioData)
+<dd>
+Create a continuous stream of audio.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+When reaching the EOF, rewind to the beginning.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+When reaching the EOF, rewind to the beginning.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="ContinuousAudioDataStream"></a>
+<a name="ContinuousAudioDataStream(browser.audio.AudioData)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+ContinuousAudioDataStream
+</b>
+<pre>
+  public ContinuousAudioDataStream(<a href="browser.audio.AudioData.html#_top_">AudioData</a> data)
+</pre>
+<dl>
+<dd>
+Create a continuous stream of audio.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read()
+</pre>
+<dl>
+<dd>
+When reaching the EOF, rewind to the beginning.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStreamBuffer.html#read()">read</a> in class <a href="java.io.InputStreamBuffer.html#_top_">InputStreamBuffer</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte buf[],
+                  int pos,
+                  int len)
+</pre>
+<dl>
+<dd>
+When reaching the EOF, rewind to the beginning.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStreamBuffer.html#read(byte[], int, int)">read</a> in class <a href="java.io.InputStreamBuffer.html#_top_">InputStreamBuffer</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.audio.html">This Package</a>    <a href="browser.audio.AudioStreamSequence.html#_top_">Previous</a>    <a href="browser.audio.html">Next</a></pre>
+</body>
+</html>

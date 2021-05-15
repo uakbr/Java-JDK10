@@ -1,0 +1,378 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Toggle
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.TextWindow.html#_top_">Previous</a>    <a href="awt.WSFontMetrics.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Toggle
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.Toggle
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Toggle</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+A Toggle object is a gui element that has a boolean state.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.12 03 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#group">group</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#label">label</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Toggle(java.lang.String, java.lang.String, awt.Container, awt.RadioGroup, boolean)"><b>Toggle</b></a>(String, String, Container, RadioGroup, boolean)
+<dd>
+Constructs a Toggle.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Toggle(java.lang.String, java.lang.String, awt.Container, boolean)"><b>Toggle</b></a>(String, String, Container, boolean)
+<dd>
+Constructs a Toggle (defaults RadioGroup to null)
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this Toggle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getState()"><b>getState</b></a>()
+<dd>
+Returns the state of the Toggle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Shows this Toggle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves this toggle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this Toggle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#selected()"><b>selected</b></a>()
+<dd>
+Override this method to take some action when the state
+changes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setState(boolean)"><b>setState</b></a>(boolean)
+<dd>
+Sets the state of the Toggle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this Toggle.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="label">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+label
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> label
+</pre>
+<a name="group">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+group
+</b>
+<pre>
+  public <a href="awt.RadioGroup.html#_top_">RadioGroup</a> group
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Toggle"></a>
+<a name="Toggle(java.lang.String, java.lang.String, awt.Container, awt.RadioGroup, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Toggle
+</b>
+<pre>
+  public Toggle(<a href="java.lang.String.html#_top_">String</a> pLabel,
+                <a href="java.lang.String.html#_top_">String</a> pName,
+                <a href="awt.Container.html#_top_">Container</a> pParent,
+                <a href="awt.RadioGroup.html#_top_">RadioGroup</a> group,
+                boolean state)
+</pre>
+<dl>
+<dd>
+Constructs a Toggle.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+pLabel
+-
+ is the label of this toggle button.
+<dd>
+pName
+-
+ is the name of this Toggle.
+<dd>
+pParent
+-
+ is the window to contain this Toggle.
+<dd>
+group
+-
+ is the RadioGroup this Toggle is in. If not null,
+then this Toggle becomes a radio button which means only one
+Toggle in a RadioGroup may be set.
+<dd>
+state
+-
+ is the initial state of this Toggle.
+</dl>
+</dl>
+<p>
+<a name="Toggle(java.lang.String, java.lang.String, awt.Container, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Toggle
+</b>
+<pre>
+  public Toggle(<a href="java.lang.String.html#_top_">String</a> pLabel,
+                <a href="java.lang.String.html#_top_">String</a> pName,
+                <a href="awt.Container.html#_top_">Container</a> pParent,
+                boolean state)
+</pre>
+<dl>
+<dd>
+Constructs a Toggle (defaults RadioGroup to null)
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setState(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setState">
+<b>
+setState
+</b>
+</a>
+<pre>
+  public void setState(boolean state)
+</pre>
+<dl>
+<dd>
+Sets the state of the Toggle.
+</dl>
+<p>
+<a name="getState()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getState">
+<b>
+getState
+</b>
+</a>
+<pre>
+  public boolean getState()
+</pre>
+<dl>
+<dd>
+Returns the state of the Toggle.
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int x,
+                   int y)
+</pre>
+<dl>
+<dd>
+Moves this toggle.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this Toggle.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this Toggle.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Shows this Toggle.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this Toggle.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="selected()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="selected">
+<b>
+selected
+</b>
+</a>
+<pre>
+  public void selected()
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the state
+changes.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.TextWindow.html#_top_">Previous</a>    <a href="awt.WSFontMetrics.html#_top_">Next</a></pre>
+</body>
+</html>

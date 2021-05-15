@@ -1,0 +1,47 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Instruction Format</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING21></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_14.html">Prev</A>       <A HREF="vmspec_16.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Instruction Format</H1>
+<DL>
+<DT><A HREF="vmspec_15.html#HEADING22"><B></B>  instruction name</A><DD>
+<DT><A HREF="vmspec_15.html#HEADING23"><B></B>  The Visual Stack Representation</A><DD>
+</DL>
+
+<HR>
+
+Java virtual machine instructions are represented in this document by an entry of the form:<P>
+<A NAME=HEADING22></A>
+<H3>instruction name</H3>
+A short description of the instruction<BR><IMG SRC="intro_Tbl_1.gif"><BR>
+<P>
+<PRE>
+xbc ., value1, value2 xde  ..., value3<P>
+</PRE>
+A longer description that explains the functions of the instruction and indicates any exceptions that might be thrown during execution.<P>
+<P>
+The items in the syntax diagram are always 8 bits wide. <P>
+<A NAME=HEADING23></A>
+<H3>The Visual Stack Representation</H3>
+The effect of an instruction's execution on the operand stack is represented textually, with the stack growing from left to right. Words on the operand stack are all 32 bits wide. Thus, for<P>
+<PRE>
+..., value1, value2 xde  ..., value3<P>
+</PRE>
+value2 is on top of the stack with value1 just beneath it. Both are 32-bit quantities. As a result of the execution of the instruction, value1 and value2 are popped from the stack and replaced by value3, which has been calculated by the instruction. The remainder of the stack, represented by ellipsis, is unaffected by the instruction's execution.<P>
+Long integers and double precision floats are always shown as taking up two words on the operand stack, e.g.,<P>
+<PRE>
+... xde  ..., value-word1, value-word2<P>
+</PRE>
+Implementors are free to decide the appropriate way to divide two-word long integers and double precision floats into word1 and word2.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_14.html">Prev</A>       <A HREF="vmspec_16.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

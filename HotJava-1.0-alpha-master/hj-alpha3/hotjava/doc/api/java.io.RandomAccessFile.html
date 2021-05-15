@@ -1,0 +1,705 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.RandomAccessFile
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PushbackInputStream.html#_top_">Previous</a>    <a href="java.io.StreamTokenizer.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.RandomAccessFile
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.io.RandomAccessFile
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+RandomAccessFile</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#RandomAccessFile(java.lang.String, java.lang.String)"><b>RandomAccessFile</b></a>(String, String)
+<dd>
+Create a RandomAccessFile given a file name.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#RandomAccessFile(int)"><b>RandomAccessFile</b></a>(int)
+<dd>
+Create a RandomAccessFile given a file descriptor.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#RandomAccessFile(java.io.File, java.lang.String)"><b>RandomAccessFile</b></a>(File, String)
+<dd>
+Create a RandomAccessFile given a File object
+and mode ("r" or "rw").
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Close the file.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFilePointer()"><b>getFilePointer</b></a>()
+<dd>
+Return the current location of the file pointer
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#length()"><b>length</b></a>()
+<dd>
+Return the length of the file.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Read a byte
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[])"><b>read</b></a>(byte[])
+<dd>
+Read an array of bytes
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readBoolean()"><b>readBoolean</b></a>()
+<dd>
+Read a boolean
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readByte()"><b>readByte</b></a>()
+<dd>
+Read a byte
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readChar()"><b>readChar</b></a>()
+<dd>
+Read char
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readInt()"><b>readInt</b></a>()
+<dd>
+Read int
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readLine()"><b>readLine</b></a>()
+<dd>
+Read a line terminated by a '\n' or EOF.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readLong()"><b>readLong</b></a>()
+<dd>
+Read long
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readShort()"><b>readShort</b></a>()
+<dd>
+Read short
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readUTF()"><b>readUTF</b></a>()
+<dd>
+Read a UTF format string
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#seek(int)"><b>seek</b></a>(int)
+<dd>
+Set the file pointer to the specified absolute position
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Write a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[])"><b>write</b></a>(byte[])
+<dd>
+Write an array of bytes
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[], int, int)"><b>write</b></a>(byte[], int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeBoolean(boolean)"><b>writeBoolean</b></a>(boolean)
+<dd>
+Write a boolean
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeByte(int)"><b>writeByte</b></a>(int)
+<dd>
+Write a byte
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeBytes(java.lang.String)"><b>writeBytes</b></a>(String)
+<dd>
+Write a string as a sequence of bytes
+REMIND: need to add support for more data types
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeChar(int)"><b>writeChar</b></a>(int)
+<dd>
+Write char
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeChars(java.lang.String)"><b>writeChars</b></a>(String)
+<dd>
+Write a string as a sequence of chars
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeInt(int)"><b>writeInt</b></a>(int)
+<dd>
+Write int
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeLong(long)"><b>writeLong</b></a>(long)
+<dd>
+Write long
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeShort(int)"><b>writeShort</b></a>(int)
+<dd>
+Write short
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeUTF(java.lang.String)"><b>writeUTF</b></a>(String)
+<dd>
+Write string in UTF format
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="RandomAccessFile"></a>
+<a name="RandomAccessFile(java.lang.String, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+RandomAccessFile
+</b>
+<pre>
+  public RandomAccessFile(<a href="java.lang.String.html#_top_">String</a> name,
+                          <a href="java.lang.String.html#_top_">String</a> mode)
+</pre>
+<dl>
+<dd>
+Create a RandomAccessFile given a file name.
+Mode is "r" for read-only, "rw" for read+write.
+May throw IOException. The file name is 
+very system dependent!
+</dl>
+<p>
+<a name="RandomAccessFile(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+RandomAccessFile
+</b>
+<pre>
+  public RandomAccessFile(int fd)
+</pre>
+<dl>
+<dd>
+Create a RandomAccessFile given a file descriptor.
+May throw IOException. The use of file descriptor 
+is very system dependent!
+</dl>
+<p>
+<a name="RandomAccessFile(java.io.File, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+RandomAccessFile
+</b>
+<pre>
+  public RandomAccessFile(<a href="java.io.File.html#_top_">File</a> file,
+                          <a href="java.lang.String.html#_top_">String</a> mode)
+</pre>
+<dl>
+<dd>
+Create a RandomAccessFile given a File object
+and mode ("r" or "rw").     
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read()
+</pre>
+<dl>
+<dd>
+Read a byte
+</dl>
+<p>
+<a name="read(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte b[])
+</pre>
+<dl>
+<dd>
+Read an array of bytes
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte b[],
+                  int off,
+                  int len)
+</pre>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(int b)
+</pre>
+<dl>
+<dd>
+Write a byte.
+</dl>
+<p>
+<a name="write(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(byte b[])
+</pre>
+<dl>
+<dd>
+Write an array of bytes
+</dl>
+<p>
+<a name="write(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(byte b[],
+                    int off,
+                    int len)
+</pre>
+<a name="getFilePointer()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFilePointer">
+<b>
+getFilePointer
+</b>
+</a>
+<pre>
+  public int getFilePointer()
+</pre>
+<dl>
+<dd>
+Return the current location of the file pointer
+</dl>
+<p>
+<a name="seek(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="seek">
+<b>
+seek
+</b>
+</a>
+<pre>
+  public void seek(int pos)
+</pre>
+<dl>
+<dd>
+Set the file pointer to the specified absolute position
+</dl>
+<p>
+<a name="length()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="length">
+<b>
+length
+</b>
+</a>
+<pre>
+  public int length()
+</pre>
+<dl>
+<dd>
+Return the length of the file.
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public void close()
+</pre>
+<dl>
+<dd>
+Close the file. 
+(We need destructors!)
+</dl>
+<p>
+<a name="readBoolean()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readBoolean">
+<b>
+readBoolean
+</b>
+</a>
+<pre>
+  public final boolean readBoolean()
+</pre>
+<dl>
+<dd>
+Read a boolean
+</dl>
+<p>
+<a name="readByte()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readByte">
+<b>
+readByte
+</b>
+</a>
+<pre>
+  public final byte readByte()
+</pre>
+<dl>
+<dd>
+Read a byte
+</dl>
+<p>
+<a name="readShort()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readShort">
+<b>
+readShort
+</b>
+</a>
+<pre>
+  public final short readShort()
+</pre>
+<dl>
+<dd>
+Read short
+</dl>
+<p>
+<a name="readChar()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readChar">
+<b>
+readChar
+</b>
+</a>
+<pre>
+  public final char readChar()
+</pre>
+<dl>
+<dd>
+Read char
+</dl>
+<p>
+<a name="readInt()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readInt">
+<b>
+readInt
+</b>
+</a>
+<pre>
+  public final int readInt()
+</pre>
+<dl>
+<dd>
+Read int
+</dl>
+<p>
+<a name="readLong()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readLong">
+<b>
+readLong
+</b>
+</a>
+<pre>
+  public final long readLong()
+</pre>
+<dl>
+<dd>
+Read long
+</dl>
+<p>
+<a name="readLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readLine">
+<b>
+readLine
+</b>
+</a>
+<pre>
+  public final <a href="java.lang.String.html#_top_">String</a> readLine()
+</pre>
+<dl>
+<dd>
+Read a line terminated by a '\n' or EOF.
+</dl>
+<p>
+<a name="readUTF()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readUTF">
+<b>
+readUTF
+</b>
+</a>
+<pre>
+  public final <a href="java.lang.String.html#_top_">String</a> readUTF()
+</pre>
+<dl>
+<dd>
+Read a UTF format string
+</dl>
+<p>
+<a name="writeBoolean(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeBoolean">
+<b>
+writeBoolean
+</b>
+</a>
+<pre>
+  public final void writeBoolean(boolean v)
+</pre>
+<dl>
+<dd>
+Write a boolean
+</dl>
+<p>
+<a name="writeByte(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeByte">
+<b>
+writeByte
+</b>
+</a>
+<pre>
+  public final void writeByte(int v)
+</pre>
+<dl>
+<dd>
+Write a byte
+</dl>
+<p>
+<a name="writeShort(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeShort">
+<b>
+writeShort
+</b>
+</a>
+<pre>
+  public final void writeShort(int v)
+</pre>
+<dl>
+<dd>
+Write short
+</dl>
+<p>
+<a name="writeChar(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeChar">
+<b>
+writeChar
+</b>
+</a>
+<pre>
+  public final void writeChar(int v)
+</pre>
+<dl>
+<dd>
+Write char
+</dl>
+<p>
+<a name="writeInt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeInt">
+<b>
+writeInt
+</b>
+</a>
+<pre>
+  public final void writeInt(int v)
+</pre>
+<dl>
+<dd>
+Write int
+</dl>
+<p>
+<a name="writeLong(long)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeLong">
+<b>
+writeLong
+</b>
+</a>
+<pre>
+  public final void writeLong(long v)
+</pre>
+<dl>
+<dd>
+Write long
+</dl>
+<p>
+<a name="writeBytes(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeBytes">
+<b>
+writeBytes
+</b>
+</a>
+<pre>
+  public final void writeBytes(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Write a string as a sequence of bytes
+REMIND: need to add support for more data types
+</dl>
+<p>
+<a name="writeChars(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeChars">
+<b>
+writeChars
+</b>
+</a>
+<pre>
+  public final void writeChars(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Write a string as a sequence of chars
+</dl>
+<p>
+<a name="writeUTF(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeUTF">
+<b>
+writeUTF
+</b>
+</a>
+<pre>
+  public final void writeUTF(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Write string in UTF format
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PushbackInputStream.html#_top_">Previous</a>    <a href="java.io.StreamTokenizer.html#_top_">Next</a></pre>
+</body>
+</html>

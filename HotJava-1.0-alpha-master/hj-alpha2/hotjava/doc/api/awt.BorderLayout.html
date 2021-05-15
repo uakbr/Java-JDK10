@@ -1,0 +1,243 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.BorderLayout
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.html">Previous</a>    <a href="awt.Button.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.BorderLayout
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.ContainerLayout.html#_top_">awt.ContainerLayout</a>
+           |
+           +----<a href="awt.GapsLayout.html#_top_">awt.GapsLayout</a>
+                   |
+                   +----awt.BorderLayout
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+BorderLayout</b>
+<dt>
+extends <a href="awt.GapsLayout.html#_top_">GapsLayout</a>
+</dl>
+A TNT style border bag layout. It will layout a container
+using members named "North", "South", "East", "West" and
+"Center".
+The "North", "South", "East" and "West" components get layed out
+according to their preferred sizes and the constraints of the
+container's size. The "Center" component will get any space left
+over. 
+To use a BorderLayout in a window do the following:
+<pre>
+	Window win = new Window(parent, "", Color.lightGray, 200, 200);
+	win.setLayout(new BorderLayout());
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Window.html#_top_">Window</a>,
+<a href="awt.Frame.html#_top_">Frame</a><dt>
+<b>Version:</b>
+<dd>
+1.22 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#defaultLayout">defaultLayout</a>
+</b>
+<dd>
+Use this object to set a border layout for a window with
+standard properties.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BorderLayout()"><b>BorderLayout</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize(awt.Container)"><b>getPreferredSize</b></a>(Container)
+<dd>
+Return the preferred size for this layout given the components
+in pTarget.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layout(awt.Container)"><b>layout</b></a>(Container)
+<dd>
+Layout the container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#minDimension(awt.Container)"><b>minDimension</b></a>(Container)
+<dd>
+Return the minimum dimensions needed to layout the components
+contained in pTarget.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="defaultLayout">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+defaultLayout
+</b>
+<pre>
+  public static <a href="#_top_">BorderLayout</a> defaultLayout
+</pre>
+<dl>
+<dd>
+Use this object to set a border layout for a window with
+standard properties.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="BorderLayout"></a>
+<a name="BorderLayout()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BorderLayout
+</b>
+<pre>
+  public BorderLayout()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="minDimension(awt.Container)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="minDimension">
+<b>
+minDimension
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> minDimension(<a href="awt.Container.html#_top_">Container</a> pTarget)
+</pre>
+<dl>
+<dd>
+Return the minimum dimensions needed to layout the components
+contained in pTarget. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+pTarget
+-
+ is the Container on which to do the layout.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.ContainerLayout.html#minDimension(awt.Container)">minDimension</a> in class <a href="awt.ContainerLayout.html#_top_">ContainerLayout</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Container.html#_top_">Container</a>
+</dl>
+</dl>
+<p>
+<a name="getPreferredSize(awt.Container)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize(<a href="awt.Container.html#_top_">Container</a> pTarget)
+</pre>
+<dl>
+<dd>
+Return the preferred size for this layout given the components
+in pTarget.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+pTarget
+-
+ is the component which needs to be laid out.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.ContainerLayout.html#getPreferredSize(awt.Container)">getPreferredSize</a> in class <a href="awt.ContainerLayout.html#_top_">ContainerLayout</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Container.html#_top_">Container</a>
+</dl>
+</dl>
+<p>
+<a name="layout(awt.Container)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layout">
+<b>
+layout
+</b>
+</a>
+<pre>
+  public void layout(<a href="awt.Container.html#_top_">Container</a> pTarget)
+</pre>
+<dl>
+<dd>
+Layout the container. This method will actually reshape the
+components in pTarget in order to satisfy the constraints of
+the BorderLayout object. Normally this method is invoked by the
+container.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+pTarget
+-
+ is the component being laid out.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.ContainerLayout.html#layout(awt.Container)">layout</a> in class <a href="awt.ContainerLayout.html#_top_">ContainerLayout</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Container.html#_top_">Container</a>
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.html">Previous</a>    <a href="awt.Button.html#_top_">Next</a></pre>
+</body>
+</html>

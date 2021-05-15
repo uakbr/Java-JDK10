@@ -1,0 +1,730 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.www.http.HttpClient
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.http.html">This Package</a>    <a href="net.www.http.AuthenticationInfo.html#_top_">Previous</a>    <a href="net.www.http.html">Next</a></pre>
+<hr>
+<h1>
+Class net.www.http.HttpClient
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.NetworkClient.html#_top_">net.NetworkClient</a>
+           |
+           +----net.www.http.HttpClient
+</pre>
+<hr>
+<dl>
+<dt>
+public final class <b>
+HttpClient</b>
+<dt>
+extends <a href="net.NetworkClient.html#_top_">NetworkClient</a>
+</dl>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.40 15 May 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ACCEPTED">ACCEPTED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#BAD">BAD</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#CREATED">CREATED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#FORBIDDEN">FORBIDDEN</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#FOUND">FOUND</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#INTERNAL_ERROR">INTERNAL_ERROR</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#METHOD">METHOD</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOVED">MOVED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#NOT_FOUND">NOT_FOUND</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#NOT_IMPLEMENTED">NOT_IMPLEMENTED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#OK">OK</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#PARTIAL">PARTIAL</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#PAYMENT_REQUIRED">PAYMENT_REQUIRED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#UNAUTHORIZED">UNAUTHORIZED</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#cachingProxyHost">cachingProxyHost</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#cachingProxyPort">cachingProxyPort</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#firewallProxyHost">firewallProxyHost</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#firewallProxyPort">firewallProxyPort</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#useProxyForCaching">useProxyForCaching</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#useProxyForFirewall">useProxyForFirewall</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#HttpClient(net.www.html.URL, java.lang.String, java.lang.String, int)"><b>HttpClient</b></a>(URL, String, String, int)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#HttpClient(net.www.html.URL, java.lang.String, int)"><b>HttpClient</b></a>(URL, String, int)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#HttpClient(net.www.html.URL, java.lang.String)"><b>HttpClient</b></a>(URL, String)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#HttpClient(net.www.html.URL)"><b>HttpClient</b></a>(URL)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#closeServer()"><b>closeServer</b></a>()
+<dd>
+Close an open connection to the server.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#get(net.www.html.URL)"><b>get</b></a>(URL)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAuthentication()"><b>getAuthentication</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAuthenticationField(int)"><b>getAuthenticationField</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAuthenticationRealm()"><b>getAuthenticationRealm</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getAuthenticationScheme()"><b>getAuthenticationScheme</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getHeaderField(java.lang.String)"><b>getHeaderField</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getInputStream()"><b>getInputStream</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getRequestStatus(java.lang.String, java.lang.String)"><b>getRequestStatus</b></a>(String, String)
+<dd>
+Parse the first line of the HTTP request.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getStatus()"><b>getStatus</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getURLFile(net.www.html.URL)"><b>getURLFile</b></a>(URL)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleUrl(net.www.html.URL)"><b>handleUrl</b></a>(URL)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openServer(java.lang.String, int)"><b>openServer</b></a>(String, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#post(net.www.html.URL)"><b>post</b></a>(URL)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#processRequest(java.lang.String)"><b>processRequest</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setAuthentication(java.lang.String)"><b>setAuthentication</b></a>(String)
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="useProxyForFirewall">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+useProxyForFirewall
+</b>
+<pre>
+  public static boolean useProxyForFirewall
+</pre>
+<a name="firewallProxyHost">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+firewallProxyHost
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> firewallProxyHost
+</pre>
+<a name="firewallProxyPort">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+firewallProxyPort
+</b>
+<pre>
+  public static int firewallProxyPort
+</pre>
+<a name="useProxyForCaching">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+useProxyForCaching
+</b>
+<pre>
+  public static boolean useProxyForCaching
+</pre>
+<a name="cachingProxyHost">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+cachingProxyHost
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> cachingProxyHost
+</pre>
+<a name="cachingProxyPort">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+cachingProxyPort
+</b>
+<pre>
+  public static int cachingProxyPort
+</pre>
+<a name="OK">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+OK
+</b>
+<pre>
+  public final static int OK
+</pre>
+<a name="CREATED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+CREATED
+</b>
+<pre>
+  public final static int CREATED
+</pre>
+<a name="ACCEPTED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ACCEPTED
+</b>
+<pre>
+  public final static int ACCEPTED
+</pre>
+<a name="PARTIAL">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+PARTIAL
+</b>
+<pre>
+  public final static int PARTIAL
+</pre>
+<a name="MOVED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOVED
+</b>
+<pre>
+  public final static int MOVED
+</pre>
+<a name="FOUND">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+FOUND
+</b>
+<pre>
+  public final static int FOUND
+</pre>
+<a name="METHOD">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+METHOD
+</b>
+<pre>
+  public final static int METHOD
+</pre>
+<a name="BAD">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+BAD
+</b>
+<pre>
+  public final static int BAD
+</pre>
+<a name="UNAUTHORIZED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+UNAUTHORIZED
+</b>
+<pre>
+  public final static int UNAUTHORIZED
+</pre>
+<a name="PAYMENT_REQUIRED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+PAYMENT_REQUIRED
+</b>
+<pre>
+  public final static int PAYMENT_REQUIRED
+</pre>
+<a name="FORBIDDEN">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+FORBIDDEN
+</b>
+<pre>
+  public final static int FORBIDDEN
+</pre>
+<a name="NOT_FOUND">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+NOT_FOUND
+</b>
+<pre>
+  public final static int NOT_FOUND
+</pre>
+<a name="INTERNAL_ERROR">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+INTERNAL_ERROR
+</b>
+<pre>
+  public final static int INTERNAL_ERROR
+</pre>
+<a name="NOT_IMPLEMENTED">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+NOT_IMPLEMENTED
+</b>
+<pre>
+  public final static int NOT_IMPLEMENTED
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="HttpClient"></a>
+<a name="HttpClient(net.www.html.URL, java.lang.String, java.lang.String, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+HttpClient
+</b>
+<pre>
+  public HttpClient(<a href="net.www.html.URL.html#_top_">URL</a> url,
+                    <a href="java.lang.String.html#_top_">String</a> auth,
+                    <a href="java.lang.String.html#_top_">String</a> proxy,
+                    int proxyPort)
+</pre>
+<a name="HttpClient(net.www.html.URL, java.lang.String, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+HttpClient
+</b>
+<pre>
+  public HttpClient(<a href="net.www.html.URL.html#_top_">URL</a> url,
+                    <a href="java.lang.String.html#_top_">String</a> proxy,
+                    int proxyPort)
+</pre>
+<a name="HttpClient(net.www.html.URL, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+HttpClient
+</b>
+<pre>
+  public HttpClient(<a href="net.www.html.URL.html#_top_">URL</a> url,
+                    <a href="java.lang.String.html#_top_">String</a> auth)
+</pre>
+<a name="HttpClient(net.www.html.URL)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+HttpClient
+</b>
+<pre>
+  public HttpClient(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="openServer(java.lang.String, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openServer">
+<b>
+openServer
+</b>
+</a>
+<pre>
+  public synchronized void openServer(<a href="java.lang.String.html#_top_">String</a> host,
+                                      int port)
+</pre>
+<a name="getRequestStatus(java.lang.String, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getRequestStatus">
+<b>
+getRequestStatus
+</b>
+</a>
+<pre>
+  protected void getRequestStatus(<a href="java.lang.String.html#_top_">String</a> response,
+                                  <a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Parse the first line of the HTTP request.  It usually looks
+	something like: "HTTP/1.0 <number> comment\r\n".
+</dl>
+<p>
+<a name="getURLFile(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getURLFile">
+<b>
+getURLFile
+</b>
+</a>
+<pre>
+  protected <a href="java.lang.String.html#_top_">String</a> getURLFile(<a href="net.www.html.URL.html#_top_">URL</a> u)
+</pre>
+<a name="post(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="post">
+<b>
+post
+</b>
+</a>
+<pre>
+  protected void post(<a href="net.www.html.URL.html#_top_">URL</a> u)
+</pre>
+<a name="get(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="get">
+<b>
+get
+</b>
+</a>
+<pre>
+  protected void get(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<a name="processRequest(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="processRequest">
+<b>
+processRequest
+</b>
+</a>
+<pre>
+  protected void processRequest(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<a name="closeServer()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="closeServer">
+<b>
+closeServer
+</b>
+</a>
+<pre>
+  public void closeServer()
+</pre>
+<dl>
+<dd>
+Close an open connection to the server.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.NetworkClient.html#closeServer()">closeServer</a> in class <a href="net.NetworkClient.html#_top_">NetworkClient</a></dl>
+</dl>
+<p>
+<a name="getHeaderField(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getHeaderField">
+<b>
+getHeaderField
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getHeaderField(<a href="java.lang.String.html#_top_">String</a> fieldName)
+</pre>
+<a name="getStatus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getStatus">
+<b>
+getStatus
+</b>
+</a>
+<pre>
+  public int getStatus()
+</pre>
+<a name="getInputStream()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getInputStream">
+<b>
+getInputStream
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> getInputStream()
+</pre>
+<a name="setAuthentication(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setAuthentication">
+<b>
+setAuthentication
+</b>
+</a>
+<pre>
+  public void setAuthentication(<a href="java.lang.String.html#_top_">String</a> au)
+</pre>
+<a name="getAuthentication()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAuthentication">
+<b>
+getAuthentication
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getAuthentication()
+</pre>
+<a name="getAuthenticationScheme()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAuthenticationScheme">
+<b>
+getAuthenticationScheme
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getAuthenticationScheme()
+</pre>
+<a name="getAuthenticationRealm()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAuthenticationRealm">
+<b>
+getAuthenticationRealm
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getAuthenticationRealm()
+</pre>
+<a name="getAuthenticationField(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getAuthenticationField">
+<b>
+getAuthenticationField
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getAuthenticationField(int which)
+</pre>
+<a name="handleUrl(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleUrl">
+<b>
+handleUrl
+</b>
+</a>
+<pre>
+  protected void handleUrl(<a href="net.www.html.URL.html#_top_">URL</a> url)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.http.html">This Package</a>    <a href="net.www.http.AuthenticationInfo.html#_top_">Previous</a>    <a href="net.www.http.html">Next</a></pre>
+</body>
+</html>

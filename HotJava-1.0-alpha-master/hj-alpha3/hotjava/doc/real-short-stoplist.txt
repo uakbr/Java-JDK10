@@ -1,0 +1,33 @@
+; @(#)real-short-stoplist.txt	1.2 95/01/31
+; Really short stoplist for JavaSearch.
+;
+; Copyright (c) 1995 Sun Microsystems, Inc. All Rights Reserved.
+;
+a
+an
+and
+as
+at
+be
+but
+by
+do
+for
+from
+have
+he
+in
+it
+not
+of
+on
+or
+she
+that
+the
+there
+to
+we
+which
+with
+you

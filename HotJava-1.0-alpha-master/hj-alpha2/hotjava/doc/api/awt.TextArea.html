@@ -1,0 +1,604 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.TextArea
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Text.html#_top_">Previous</a>    <a href="awt.TextDisplayItem.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.TextArea
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.TextArea
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+TextArea</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+A TextArea object is a multi-line area that displays text. It can
+be made editable or read-only.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.10 03 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TextArea(awt.Container, java.lang.String, awt.Font, int, int)"><b>TextArea</b></a>(Container, String, Font, int, int)
+<dd>
+Constructs a TextArea.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#cursorPos()"><b>cursorPos</b></a>()
+<dd>
+Return the cursor position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this TextArea.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#endPos()"><b>endPos</b></a>()
+<dd>
+Return the last position in the TextArea.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Returns the natural size of the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getText()"><b>getText</b></a>()
+<dd>
+Return the contents of this TextArea.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insertText(java.lang.String, int)"><b>insertText</b></a>(String, int)
+<dd>
+Inserts text at the given position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isEditable()"><b>isEditable</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Makes this TextArea visible.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves this TextArea to the given position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#replaceText(java.lang.String, int, int)"><b>replaceText</b></a>(String, int, int)
+<dd>
+Replaces the text from start to end.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this TextArea.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setCursorPos(int)"><b>setCursorPos</b></a>(int)
+<dd>
+Sets the cursor position and makes that position visible.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setEditable(boolean)"><b>setEditable</b></a>(boolean)
+<dd>
+Sets whether this TextArea is editable or not.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setHFill(boolean)"><b>setHFill</b></a>(boolean)
+<dd>
+Sets whether or not this List stretches horizontally.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setText(java.lang.String)"><b>setText</b></a>(String)
+<dd>
+Sets the text of this TextArea to the specified value.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setVFill(boolean)"><b>setVFill</b></a>(boolean)
+<dd>
+Sets whether or not this List stretches vertically.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this TextArea.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="TextArea"></a>
+<a name="TextArea(awt.Container, java.lang.String, awt.Font, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TextArea
+</b>
+<pre>
+  public TextArea(<a href="awt.Container.html#_top_">Container</a> p,
+                  <a href="java.lang.String.html#_top_">String</a> pName,
+                  <a href="awt.Font.html#_top_">Font</a> f,
+                  int columns,
+                  int rows)
+</pre>
+<dl>
+<dd>
+Constructs a TextArea.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+p
+-
+ is the parent Window
+<dd>
+pName
+-
+ is the name of the TextArea. Some layouts such as
+		    BorderLayout, use the name for layout.
+<dd>
+f
+-
+ is the font to use. It can be null.
+<dd>
+columns
+-
+ is the number of columns in terms of the current font.
+<dd>
+rows
+-
+ is the number of rows in terms of the current font.
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setEditable(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setEditable">
+<b>
+setEditable
+</b>
+</a>
+<pre>
+  public void setEditable(boolean t)
+</pre>
+<dl>
+<dd>
+Sets whether this TextArea is editable or not.
+</dl>
+<p>
+<a name="cursorPos()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="cursorPos">
+<b>
+cursorPos
+</b>
+</a>
+<pre>
+  public int cursorPos()
+</pre>
+<dl>
+<dd>
+Return the cursor position.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the cursor position.
+</dl>
+</dl>
+<p>
+<a name="setCursorPos(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setCursorPos">
+<b>
+setCursorPos
+</b>
+</a>
+<pre>
+  public void setCursorPos(int pos)
+</pre>
+<dl>
+<dd>
+Sets the cursor position and makes that position visible.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+pos
+-
+ is the position to set the cursor to.
+</dl>
+</dl>
+<p>
+<a name="endPos()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="endPos">
+<b>
+endPos
+</b>
+</a>
+<pre>
+  public int endPos()
+</pre>
+<dl>
+<dd>
+Return the last position in the TextArea.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the last position in the TextArea.
+</dl>
+</dl>
+<p>
+<a name="isEditable()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isEditable">
+<b>
+isEditable
+</b>
+</a>
+<pre>
+  public boolean isEditable()
+</pre>
+<dl>
+<dd>
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+whether this TextArea is editable or not.
+</dl>
+</dl>
+<p>
+<a name="setText(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setText">
+<b>
+setText
+</b>
+</a>
+<pre>
+  public void setText(<a href="java.lang.String.html#_top_">String</a> text)
+</pre>
+<dl>
+<dd>
+Sets the text of this TextArea to the specified value.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+text
+-
+ the text to set as the contents.
+</dl>
+</dl>
+<p>
+<a name="getText()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getText">
+<b>
+getText
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getText()
+</pre>
+<dl>
+<dd>
+Return the contents of this TextArea.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+contents of the TextArea.
+</dl>
+</dl>
+<p>
+<a name="insertText(java.lang.String, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insertText">
+<b>
+insertText
+</b>
+</a>
+<pre>
+  public void insertText(<a href="java.lang.String.html#_top_">String</a> text,
+                         int pos)
+</pre>
+<dl>
+<dd>
+Inserts text at the given position.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+text
+-
+ the text to insert.
+<dd>
+pos
+-
+ the position to insert at.
+</dl>
+</dl>
+<p>
+<a name="replaceText(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="replaceText">
+<b>
+replaceText
+</b>
+</a>
+<pre>
+  public void replaceText(<a href="java.lang.String.html#_top_">String</a> text,
+                          int start,
+                          int end)
+</pre>
+<dl>
+<dd>
+Replaces the text from start to end.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+text
+-
+ the text to use as the replacement.
+<dd>
+start
+-
+ the start position.
+<dd>
+end
+-
+ the end position.
+</dl>
+</dl>
+<p>
+<a name="setHFill(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setHFill">
+<b>
+setHFill
+</b>
+</a>
+<pre>
+  public void setHFill(boolean t)
+</pre>
+<dl>
+<dd>
+Sets whether or not this List stretches horizontally.
+</dl>
+<p>
+<a name="setVFill(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setVFill">
+<b>
+setVFill
+</b>
+</a>
+<pre>
+  public void setVFill(boolean t)
+</pre>
+<dl>
+<dd>
+Sets whether or not this List stretches vertically.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this TextArea. It cannot be used after being disposed.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Returns the natural size of the object.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#getPreferredSize()">getPreferredSize</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int X,
+                   int Y)
+</pre>
+<dl>
+<dd>
+Moves this TextArea to the given position.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+X
+-
+ the x position to move to.
+<dd>
+Y
+-
+ the y position to move to.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this TextArea.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+x
+-
+ the x position.
+<dd>
+y
+-
+ the y position.
+<dd>
+w
+-
+ the width in pixels.
+<dd>
+h
+-
+ the height in pixels.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Makes this TextArea visible.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this TextArea.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Text.html#_top_">Previous</a>    <a href="awt.TextDisplayItem.html#_top_">Next</a></pre>
+</body>
+</html>

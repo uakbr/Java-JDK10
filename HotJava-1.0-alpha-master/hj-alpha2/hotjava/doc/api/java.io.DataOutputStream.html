@@ -1,0 +1,515 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.DataOutputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.DataInputStream.html#_top_">Previous</a>    <a href="java.io.File.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.DataOutputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.OutputStream.html#_top_">java.io.OutputStream</a>
+           |
+           +----<a href="java.io.FilterOutputStream.html#_top_">java.io.FilterOutputStream</a>
+                   |
+                   +----java.io.DataOutputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+DataOutputStream</b>
+<dt>
+extends <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a>
+</dl>
+This class lets you write primitive Java data types
+to a stream in a portable way. The data can be converted
+back using a DataInputStream.
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#written">written</a>
+</b>
+<dd>
+The number of bytes written so far.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DataOutputStream(java.io.OutputStream)"><b>DataOutputStream</b></a>(OutputStream)
+<dd>
+Creates a new DataOutputStream
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#align(int)"><b>align</b></a>(int)
+<dd>
+Aligns.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#flush()"><b>flush</b></a>()
+<dd>
+Flushes the stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#size()"><b>size</b></a>()
+<dd>
+Returns number of bytes written.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Writes a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[], int, int)"><b>write</b></a>(byte[], int, int)
+<dd>
+Writes a sub array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeBoolean(boolean)"><b>writeBoolean</b></a>(boolean)
+<dd>
+Writes a boolean.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeByte(int)"><b>writeByte</b></a>(int)
+<dd>
+Writes an 8 bit byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeBytes(java.lang.String)"><b>writeBytes</b></a>(String)
+<dd>
+Writes a string as a sequence of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeChar(int)"><b>writeChar</b></a>(int)
+<dd>
+Writes a 16 bit char.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeChars(java.lang.String)"><b>writeChars</b></a>(String)
+<dd>
+Writes a string as a sequence of chars.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeDouble(double)"><b>writeDouble</b></a>(double)
+<dd>
+Writes a 64 bit double.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeFloat(float)"><b>writeFloat</b></a>(float)
+<dd>
+Writes a 32 bit float.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeInt(int)"><b>writeInt</b></a>(int)
+<dd>
+Writes a 32 bit int.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeLong(long)"><b>writeLong</b></a>(long)
+<dd>
+Writes a 64 bit long.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeShort(int)"><b>writeShort</b></a>(int)
+<dd>
+Writes a 16 bit short.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeUTF(java.lang.String)"><b>writeUTF</b></a>(String)
+<dd>
+Writes string in UTF format.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="written">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+written
+</b>
+<pre>
+  protected int written
+</pre>
+<dl>
+<dd>
+The number of bytes written so far.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="DataOutputStream"></a>
+<a name="DataOutputStream(java.io.OutputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DataOutputStream
+</b>
+<pre>
+  public DataOutputStream(<a href="java.io.OutputStream.html#_top_">OutputStream</a> out)
+</pre>
+<dl>
+<dd>
+Creates a new DataOutputStream
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+out
+-
+	the output stream
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public synchronized void write(int b)
+</pre>
+<dl>
+<dd>
+Writes a byte. Will block until the byte is actually
+written.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#write(int)">write</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="write(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public synchronized void write(byte b[],
+                                 int off,
+                                 int len)
+</pre>
+<dl>
+<dd>
+Writes a sub array of bytes. To be efficient it should
+be overridden in a subclass. 
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the data to be written
+<dd>
+off
+-
+	the start offset in the data
+<dd>
+len
+-
+	the number of bytes that are written
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#write(byte[], int, int)">write</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="flush()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="flush">
+<b>
+flush
+</b>
+</a>
+<pre>
+  public void flush()
+</pre>
+<dl>
+<dd>
+Flushes the stream. This will write any buffered
+output bytes.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterOutputStream.html#flush()">flush</a> in class <a href="java.io.FilterOutputStream.html#_top_">FilterOutputStream</a></dl>
+</dl>
+<p>
+<a name="writeBoolean(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeBoolean">
+<b>
+writeBoolean
+</b>
+</a>
+<pre>
+  public final void writeBoolean(boolean v)
+</pre>
+<dl>
+<dd>
+Writes a boolean.
+</dl>
+<p>
+<a name="writeByte(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeByte">
+<b>
+writeByte
+</b>
+</a>
+<pre>
+  public final void writeByte(int v)
+</pre>
+<dl>
+<dd>
+Writes an 8 bit byte.
+</dl>
+<p>
+<a name="writeShort(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeShort">
+<b>
+writeShort
+</b>
+</a>
+<pre>
+  public final void writeShort(int v)
+</pre>
+<dl>
+<dd>
+Writes a 16 bit short.
+</dl>
+<p>
+<a name="writeChar(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeChar">
+<b>
+writeChar
+</b>
+</a>
+<pre>
+  public final void writeChar(int v)
+</pre>
+<dl>
+<dd>
+Writes a 16 bit char.
+</dl>
+<p>
+<a name="writeInt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeInt">
+<b>
+writeInt
+</b>
+</a>
+<pre>
+  public final void writeInt(int v)
+</pre>
+<dl>
+<dd>
+Writes a 32 bit int.
+</dl>
+<p>
+<a name="writeLong(long)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeLong">
+<b>
+writeLong
+</b>
+</a>
+<pre>
+  public final void writeLong(long v)
+</pre>
+<dl>
+<dd>
+Writes a 64 bit long.
+</dl>
+<p>
+<a name="writeFloat(float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeFloat">
+<b>
+writeFloat
+</b>
+</a>
+<pre>
+  public final void writeFloat(float v)
+</pre>
+<dl>
+<dd>
+Writes a 32 bit float.
+</dl>
+<p>
+<a name="writeDouble(double)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeDouble">
+<b>
+writeDouble
+</b>
+</a>
+<pre>
+  public final void writeDouble(double v)
+</pre>
+<dl>
+<dd>
+Writes a 64 bit double.
+</dl>
+<p>
+<a name="writeBytes(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeBytes">
+<b>
+writeBytes
+</b>
+</a>
+<pre>
+  public final void writeBytes(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Writes a string as a sequence of bytes.
+</dl>
+<p>
+<a name="writeChars(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeChars">
+<b>
+writeChars
+</b>
+</a>
+<pre>
+  public final void writeChars(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Writes a string as a sequence of chars.
+</dl>
+<p>
+<a name="writeUTF(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeUTF">
+<b>
+writeUTF
+</b>
+</a>
+<pre>
+  public final void writeUTF(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Writes string in UTF format.
+</dl>
+<p>
+<a name="size()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="size">
+<b>
+size
+</b>
+</a>
+<pre>
+  public final int size()
+</pre>
+<dl>
+<dd>
+Returns number of bytes written.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the number of bytes written sofar
+</dl>
+</dl>
+<p>
+<a name="align(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="align">
+<b>
+align
+</b>
+</a>
+<pre>
+  public final void align(int n)
+</pre>
+<dl>
+<dd>
+Aligns. This is useful when data fields have
+to be aligned on a n byte boundary.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+n
+-
+	the number of bytes to align on
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.DataInputStream.html#_top_">Previous</a>    <a href="java.io.File.html#_top_">Next</a></pre>
+</body>
+</html>

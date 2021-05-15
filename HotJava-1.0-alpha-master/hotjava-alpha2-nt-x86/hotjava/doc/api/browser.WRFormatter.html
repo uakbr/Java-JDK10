@@ -1,0 +1,312 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.WRFormatter
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRAccessHandler.html#_top_">Previous</a>    <a href="browser.WRImageItem.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.WRFormatter
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Formatter.html#_top_">awt.Formatter</a>
+           |
+           +----browser.WRFormatter
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+WRFormatter</b>
+<dt>
+extends <a href="awt.Formatter.html#_top_">Formatter</a>
+</dl>
+Class WRFormatter adds the functionality above and beyond that of
+a basic formatter to layout html documents.  This includes
+handling of html anchors, html list contexts, html forms, html
+image alignment
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.35, 20 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne,
+James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#tagIndex">tagIndex</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#tagList">tagList</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#WRFormatter(browser.WRWindow, browser.Document)"><b>WRFormatter</b></a>(WRWindow, Document)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addDisplayItem(awt.DisplayItem, boolean)"><b>addDisplayItem</b></a>(DisplayItem, boolean)
+<dd>
+Adds a display item to the window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#adjustItem(awt.DisplayItem, int)"><b>adjustItem</b></a>(DisplayItem, int)
+<dd>
+This adjusts a DisplayItem on the current line.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#charAt(int)"><b>charAt</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finishCurrentLine()"><b>finishCurrentLine</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getLength()"><b>getLength</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#layout()"><b>layout</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#makeTextItem(int, int)"><b>makeTextItem</b></a>(int, int)
+<dd>
+Makes a hotjava text item.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#processStyleRefs(int)"><b>processStyleRefs</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="tagList">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+tagList
+</b>
+<pre>
+  protected <a href="java.util.Vector.html#_top_">Vector</a> tagList
+</pre>
+<a name="tagIndex">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+tagIndex
+</b>
+<pre>
+  protected int tagIndex
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="WRFormatter"></a>
+<a name="WRFormatter(browser.WRWindow, browser.Document)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+WRFormatter
+</b>
+<pre>
+  public WRFormatter(<a href="browser.WRWindow.html#_top_">WRWindow</a> m,
+                     <a href="browser.Document.html#_top_">Document</a> d)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getLength()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getLength">
+<b>
+getLength
+</b>
+</a>
+<pre>
+  protected int getLength()
+</pre>
+<a name="charAt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="charAt">
+<b>
+charAt
+</b>
+</a>
+<pre>
+  protected int charAt(int i)
+</pre>
+<a name="makeTextItem(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="makeTextItem">
+<b>
+makeTextItem
+</b>
+</a>
+<pre>
+  protected <a href="awt.TextDisplayItem.html#_top_">TextDisplayItem</a> makeTextItem(int pos0,
+                                         int pos1)
+</pre>
+<dl>
+<dd>
+Makes a hotjava text item.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Formatter.html#makeTextItem(int, int)">makeTextItem</a> in class <a href="awt.Formatter.html#_top_">Formatter</a></dl>
+</dl>
+<p>
+<a name="adjustItem(awt.DisplayItem, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="adjustItem">
+<b>
+adjustItem
+</b>
+</a>
+<pre>
+  protected void adjustItem(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di,
+                            int x)
+</pre>
+<dl>
+<dd>
+This adjusts a DisplayItem on the current line.  It's called
+for each display item on a line, when the formatter finishes
+the line, to go back and adjust items.  E.g., this handles
+lining up baselines for all text that appeared on the line,
+or, image alignment ala html and mosaic.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Formatter.html#adjustItem(awt.DisplayItem, int)">adjustItem</a> in class <a href="awt.Formatter.html#_top_">Formatter</a></dl>
+</dl>
+<p>
+<a name="finishCurrentLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finishCurrentLine">
+<b>
+finishCurrentLine
+</b>
+</a>
+<pre>
+  protected void finishCurrentLine()
+</pre>
+<a name="addDisplayItem(awt.DisplayItem, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addDisplayItem">
+<b>
+addDisplayItem
+</b>
+</a>
+<pre>
+  public boolean addDisplayItem(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di,
+                                boolean checkForWrap)
+</pre>
+<dl>
+<dd>
+Adds a display item to the window.  This takes into
+consideration image alignment when adjusting the lineAscent
+and lineDescent instance variables.  This doesn't worry about
+positioning everything correctly at this point - that is
+handled by adjustItem, which is called when the entire line
+is layed out.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Formatter.html#addDisplayItem(awt.DisplayItem, boolean)">addDisplayItem</a> in class <a href="awt.Formatter.html#_top_">Formatter</a></dl>
+</dl>
+<p>
+<a name="processStyleRefs(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="processStyleRefs">
+<b>
+processStyleRefs
+</b>
+</a>
+<pre>
+  protected int processStyleRefs(int pos)
+</pre>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  protected void reset()
+</pre>
+<a name="layout()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="layout">
+<b>
+layout
+</b>
+</a>
+<pre>
+  public void layout()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.WRAccessHandler.html#_top_">Previous</a>    <a href="browser.WRImageItem.html#_top_">Next</a></pre>
+</body>
+</html>

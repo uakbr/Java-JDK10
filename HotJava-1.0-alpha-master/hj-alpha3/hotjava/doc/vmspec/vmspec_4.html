@@ -1,0 +1,30 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Components of the Virtual Machine</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING7></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_3.html">Prev</A>       <A HREF="vmspec_5.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Components of the Virtual Machine</H1>
+
+<HR>
+
+The Java virtual machine consists of:<P>
+<UL>
+<LI>An instruction set<P>
+<LI>A set of registers<P>
+<LI>A stack<P>
+<LI>A garbage-collected heap<P>
+<LI>A method area<P>
+</UL>
+All of these are logical, abstract components of the virtual machine. They do not presuppose any particular implementation technology or organization, but their functionality must be supplied in some fashion in every Java system based on this virtual machine. The Java virtual machine may be implemented using any of the conventional techniques: e.g. bytecode interpretation, compilation to native code, or silicon.<P>
+The memory areas of the Java virtual machine do not presuppose any particular locations in memory or locations with respect to one another. The memory areas need not consist of contiguous memory. However, the instruction set, registers, and memory areas are required to represent values of certain minimum logical widths (e.g. the Java stack is 32 bits wide). These requirements are discussed in the following sections.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_3.html">Prev</A>       <A HREF="vmspec_5.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

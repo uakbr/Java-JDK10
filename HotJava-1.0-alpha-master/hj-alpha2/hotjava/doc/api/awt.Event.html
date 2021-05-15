@@ -1,0 +1,691 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Event
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.DisplayItemWindow.html#_top_">Previous</a>    <a href="awt.EventRepeater.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Event
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.Event
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Event</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Event is a platform-independent class that encapsulates events from
+the local GUI platform.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.11 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#CTRL_DOWN">CTRL_DOWN</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#FRAME_DESTROY">FRAME_DESTROY</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#FRAME_EVENT">FRAME_EVENT</a>
+</b>
+<dd>
+Base for all Frame events.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#FRAME_EXPOSE">FRAME_EXPOSE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#KEY_EVENT">KEY_EVENT</a>
+</b>
+<dd>
+Base for all keyboard events.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#KEY_PRESS">KEY_PRESS</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#KEY_RELEASE">KEY_RELEASE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOUSE_DOWN">MOUSE_DOWN</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOUSE_DRAG">MOUSE_DRAG</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOUSE_ENTER">MOUSE_ENTER</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOUSE_EVENT">MOUSE_EVENT</a>
+</b>
+<dd>
+Base for all mouse events.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOUSE_LEAVE">MOUSE_LEAVE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOUSE_MOTION">MOUSE_MOTION</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#MOUSE_UP">MOUSE_UP</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#POINTER_EVENT">POINTER_EVENT</a>
+</b>
+<dd>
+Base for all Pointer events.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#POINTER_MOTION">POINTER_MOTION</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#SHIFT_DOWN">SHIFT_DOWN</a>
+</b>
+<dd>
+Modifier constants
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#WINDOW_DESTROY">WINDOW_DESTROY</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#WINDOW_EVENT">WINDOW_EVENT</a>
+</b>
+<dd>
+Base for all Window events.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#WINDOW_EXPOSE">WINDOW_EXPOSE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#WINDOW_RESIZE">WINDOW_RESIZE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#id">id</a>
+</b>
+<dd>
+the type of this event.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#key">key</a>
+</b>
+<dd>
+the key that was pressed in a keyboard event.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#keyIsAscii">keyIsAscii</a>
+</b>
+<dd>
+true if a keyboard event is ascii.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#modifiers">modifiers</a>
+</b>
+<dd>
+the state of the modifier keys.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#obj">obj</a>
+</b>
+<dd>
+the object that is the target of an event.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#x">x</a>
+</b>
+<dd>
+the x coordinate of the pointer.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#y">y</a>
+</b>
+<dd>
+the y coordinate of the pointer.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Event()"><b>Event</b></a>()
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Event(int, java.lang.Object, int, int, boolean, char, int)"><b>Event</b></a>(int, Object, int, int, boolean, char, int)
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Event(int, java.lang.Object, int, int, boolean, char)"><b>Event</b></a>(int, Object, int, int, boolean, char)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clone()"><b>clone</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copy(java.lang.Object)"><b>copy</b></a>(Object)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print()"><b>print</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="SHIFT_DOWN">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+SHIFT_DOWN
+</b>
+<pre>
+  public final static int SHIFT_DOWN
+</pre>
+<dl>
+<dd>
+Modifier constants
+</dl>
+<a name="CTRL_DOWN">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+CTRL_DOWN
+</b>
+<pre>
+  public final static int CTRL_DOWN
+</pre>
+<a name="WINDOW_EVENT">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+WINDOW_EVENT
+</b>
+<pre>
+  public final static int WINDOW_EVENT
+</pre>
+<dl>
+<dd>
+Base for all Window events.
+</dl>
+<a name="WINDOW_RESIZE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+WINDOW_RESIZE
+</b>
+<pre>
+  public final static int WINDOW_RESIZE
+</pre>
+<a name="WINDOW_EXPOSE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+WINDOW_EXPOSE
+</b>
+<pre>
+  public final static int WINDOW_EXPOSE
+</pre>
+<a name="WINDOW_DESTROY">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+WINDOW_DESTROY
+</b>
+<pre>
+  public final static int WINDOW_DESTROY
+</pre>
+<a name="FRAME_EVENT">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+FRAME_EVENT
+</b>
+<pre>
+  public final static int FRAME_EVENT
+</pre>
+<dl>
+<dd>
+Base for all Frame events.
+</dl>
+<a name="FRAME_DESTROY">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+FRAME_DESTROY
+</b>
+<pre>
+  public final static int FRAME_DESTROY
+</pre>
+<a name="FRAME_EXPOSE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+FRAME_EXPOSE
+</b>
+<pre>
+  public final static int FRAME_EXPOSE
+</pre>
+<a name="POINTER_EVENT">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+POINTER_EVENT
+</b>
+<pre>
+  public final static int POINTER_EVENT
+</pre>
+<dl>
+<dd>
+Base for all Pointer events.
+</dl>
+<a name="POINTER_MOTION">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+POINTER_MOTION
+</b>
+<pre>
+  public final static int POINTER_MOTION
+</pre>
+<a name="KEY_EVENT">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+KEY_EVENT
+</b>
+<pre>
+  public final static int KEY_EVENT
+</pre>
+<dl>
+<dd>
+Base for all keyboard events.
+</dl>
+<a name="KEY_PRESS">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+KEY_PRESS
+</b>
+<pre>
+  public final static int KEY_PRESS
+</pre>
+<a name="KEY_RELEASE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+KEY_RELEASE
+</b>
+<pre>
+  public final static int KEY_RELEASE
+</pre>
+<a name="MOUSE_EVENT">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOUSE_EVENT
+</b>
+<pre>
+  public final static int MOUSE_EVENT
+</pre>
+<dl>
+<dd>
+Base for all mouse events.
+</dl>
+<a name="MOUSE_DOWN">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOUSE_DOWN
+</b>
+<pre>
+  public final static int MOUSE_DOWN
+</pre>
+<a name="MOUSE_UP">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOUSE_UP
+</b>
+<pre>
+  public final static int MOUSE_UP
+</pre>
+<a name="MOUSE_MOTION">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOUSE_MOTION
+</b>
+<pre>
+  public final static int MOUSE_MOTION
+</pre>
+<a name="MOUSE_ENTER">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOUSE_ENTER
+</b>
+<pre>
+  public final static int MOUSE_ENTER
+</pre>
+<a name="MOUSE_LEAVE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOUSE_LEAVE
+</b>
+<pre>
+  public final static int MOUSE_LEAVE
+</pre>
+<a name="MOUSE_DRAG">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+MOUSE_DRAG
+</b>
+<pre>
+  public final static int MOUSE_DRAG
+</pre>
+<a name="id">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+id
+</b>
+<pre>
+  public int id
+</pre>
+<dl>
+<dd>
+the type of this event.
+</dl>
+<a name="x">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+x
+</b>
+<pre>
+  public int x
+</pre>
+<dl>
+<dd>
+the x coordinate of the pointer.
+</dl>
+<a name="y">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+y
+</b>
+<pre>
+  public int y
+</pre>
+<dl>
+<dd>
+the y coordinate of the pointer.
+</dl>
+<a name="keyIsAscii">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+keyIsAscii
+</b>
+<pre>
+  public boolean keyIsAscii
+</pre>
+<dl>
+<dd>
+true if a keyboard event is ascii.
+</dl>
+<a name="key">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+key
+</b>
+<pre>
+  public char key
+</pre>
+<dl>
+<dd>
+the key that was pressed in a keyboard event.
+</dl>
+<a name="obj">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+obj
+</b>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> obj
+</pre>
+<dl>
+<dd>
+the object that is the target of an event.
+</dl>
+<a name="modifiers">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+modifiers
+</b>
+<pre>
+  public int modifiers
+</pre>
+<dl>
+<dd>
+the state of the modifier keys. See modifer constants above.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Event"></a>
+<a name="Event()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Event
+</b>
+<pre>
+  public Event()
+</pre>
+<a name="Event(int, java.lang.Object, int, int, boolean, char, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Event
+</b>
+<pre>
+  public Event(int pId,
+               <a href="java.lang.Object.html#_top_">Object</a> pObj,
+               int pX,
+               int pY,
+               boolean pAscii,
+               char pk,
+               int modifiers)
+</pre>
+<a name="Event(int, java.lang.Object, int, int, boolean, char)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Event
+</b>
+<pre>
+  public Event(int pId,
+               <a href="java.lang.Object.html#_top_">Object</a> pObj,
+               int pX,
+               int pY,
+               boolean pAscii,
+               char pk)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<a name="print()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print()
+</pre>
+<a name="clone()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clone">
+<b>
+clone
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> clone()
+</pre>
+<a name="copy(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copy">
+<b>
+copy
+</b>
+</a>
+<pre>
+  public void copy(<a href="java.lang.Object.html#_top_">Object</a> src)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.DisplayItemWindow.html#_top_">Previous</a>    <a href="awt.EventRepeater.html#_top_">Next</a></pre>
+</body>
+</html>

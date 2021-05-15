@@ -1,0 +1,246 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Arithmetic Instructions</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING93></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_22.html">Prev</A>       <A HREF="vmspec_24.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Arithmetic Instructions</H1>
+<DL>
+<DT><A HREF="vmspec_23.html#HEADING94"><B></B>  iadd</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING95"><B></B>  ladd</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING96"><B></B>  fadd</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING97"><B></B>  dadd</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING98"><B></B>  isub</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING99"><B></B>  lsub</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING100"><B></B>  fsub</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING101"><B></B>  dsub</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING102"><B></B>  imul</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING103"><B></B>  lmul</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING104"><B></B>  fmul</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING105"><B></B>  dmul</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING106"><B></B>  idiv</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING107"><B></B>  ldiv</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING108"><B></B>  fdiv</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING109"><B></B>  ddiv</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING110"><B></B>  imod</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING111"><B></B>  lmod</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING112"><B></B>  fmod</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING113"><B></B>  dmod</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING114"><B></B>  ineg</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING115"><B></B>  lneg</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING116"><B></B>  fneg</A><DD>
+<DT><A HREF="vmspec_23.html#HEADING117"><B></B>  dneg</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING94></A>
+<H3>iadd</H3>
+Integer add<BR><IMG SRC="instructions_only_Tbl_132.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be integers. The values are added and are replaced on the stack by their integer sum.<P>
+<A NAME=HEADING95></A>
+<H3>ladd</H3>
+Long integer add<BR><IMG SRC="instructions_only_Tbl_89.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be long integers. The values are added and are replaced on the stack by their long integer sum.<P>
+<A NAME=HEADING96></A>
+<H3>fadd</H3>
+Single float add<BR><IMG SRC="instructions_only_Tbl_92.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be single precision floating point numbers. The values are added and are replaced on the stack by their single precision floating point sum.<P>
+<A NAME=HEADING97></A>
+<H3>dadd</H3>
+Double float add<BR><IMG SRC="instructions_only_Tbl_104.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be double precision floating point numbers. The values are added and are replaced on the stack by their double precision floating point sum.<P>
+<A NAME=HEADING98></A>
+<H3>isub</H3>
+Integer subtract<BR><IMG SRC="instructions_only_Tbl_130.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be integers. value2 is subtracted from value1, and both values are replaced on the stack by their integer difference.<P>
+<A NAME=HEADING99></A>
+<H3>lsub</H3>
+Long integer subtract<BR><IMG SRC="instructions_only_Tbl_88.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be long integers. value2 is subtracted from value1, and both values are replaced on the stack by their long integer difference.<P>
+<A NAME=HEADING100></A>
+<H3>fsub</H3>
+Single float subtract<BR><IMG SRC="instructions_only_Tbl_93.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be single precision floating point numbers. value2 is subtracted from value1, and both values are replaced on the stack by their single precision floating point difference.<P>
+<A NAME=HEADING101></A>
+<H3>dsub</H3>
+Double float subtract<BR><IMG SRC="instructions_only_Tbl_123.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be double precision floating point numbers. value2 is subtracted from value1, and both values are replaced on the stack by their double precision floating point difference.<P>
+<A NAME=HEADING102></A>
+<H3>imul</H3>
+Integer multiply<BR><IMG SRC="instructions_only_Tbl_5.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be integers. Both values are replaced on the stack by their integer product.<P>
+<A NAME=HEADING103></A>
+<H3>lmul</H3>
+Long integer multiply<BR><IMG SRC="instructions_only_Tbl_90.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be long integers. Both values are replaced on the stack by their long integer product.<P>
+<A NAME=HEADING104></A>
+<H3>fmul</H3>
+Single float multiply<BR><IMG SRC="instructions_only_Tbl_94.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be single precision floating point numbers. Both values are replaced on the stack by their single precision floating point product.<P>
+<A NAME=HEADING105></A>
+<H3>dmul</H3>
+Double float multiply<BR><IMG SRC="instructions_only_Tbl_105.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be double precision floating point numbers. Both values are replaced on the stack by their double precision floating point product.<P>
+<A NAME=HEADING106></A>
+<H3>idiv</H3>
+Integer divide<BR><IMG SRC="instructions_only_Tbl_113.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be integers. value1 is divided by value2, and both values are replaced on the stack by their integer quotient.<P>
+The result is truncated to the nearest integer that is between it and 0. An attempt to divide by zero results in a "/ by zero" ArithmeticException being thrown.<P>
+<A NAME=HEADING107></A>
+<H3>ldiv</H3>
+Long integer divide<BR><IMG SRC="instructions_only_Tbl_91.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be long integers. value1 is divided by value2, and both values are replaced on the stack by their long integer quotient.<P>
+The result is truncated to the nearest integer that is between it and 0. An attempt to divide by zero results in a "/ by zero" ArithmeticException being thrown.<P>
+<A NAME=HEADING108></A>
+<H3>fdiv</H3>
+Single float divide<BR><IMG SRC="instructions_only_Tbl_95.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be single precision floating point numbers. value1 is divided by value2, and both values are replaced on the stack by their single precision floating point quotient.<P>
+Divide by zero results in the quotient being NaN.<P>
+<A NAME=HEADING109></A>
+<H3>ddiv</H3>
+Double float divide<BR><IMG SRC="instructions_only_Tbl_106.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should be double precision floating point numbers. value1 is divided by value2, and both values are replaced on the stack by their double precision floating point quotient.<P>
+Divide by zero results in the quotient being NaN.<P>
+<A NAME=HEADING110></A>
+<H3>imod</H3>
+Integer mod<BR><IMG SRC="instructions_only_Tbl_115.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should both be integers. value1 is divided by value2, and both values are replaced on the stack by their integer remainder.<P>
+An attempt to divide by zero results in a "/ by zero" ArithmeticException being thrown.<P>
+<A NAME=HEADING111></A>
+<H3>lmod</H3>
+Long integer mod<BR><IMG SRC="instructions_only_Tbl_96.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should both be long integers. value1 is divided by value2, and both values are replaced on the stack by their long integer remainder.<P>
+An attempt to divide by zero results in a "/ by zero" ArithmeticException being thrown.<P>
+<A NAME=HEADING112></A>
+<H3>fmod</H3>
+Single float mod<BR><IMG SRC="instructions_only_Tbl_97.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should both be single precision floating point numbers. value1 is divided by value2, and the quotient is truncated to an integer, and then multiplied by value2. The product is subtracted from value1.The result, as a single precision floating point number, replaces both values on the stack. That is, result = value1 - ((int)(value1/value2)) * value2.<P>
+An attempt to divide by zero results in NaN.<P>
+<A NAME=HEADING113></A>
+<H3>dmod</H3>
+Double float mod<BR><IMG SRC="instructions_only_Tbl_112.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value1 and value2 should both be double precision floating point numbers. value1 is divided by value2, and the quotient is truncated to an integer, and then multiplied by value2. The product is subtracted from value1.The result, as a double precision floating point number, replaces both values on the stack. That is, result = value1 - ((int)(value1/value2)) * value2.<P>
+An attempt to divide by zero results in NaN.<P>
+<A NAME=HEADING114></A>
+<H3>ineg</H3>
+Integer negate<BR><IMG SRC="instructions_only_Tbl_114.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result<P>
+</PRE>
+value should be an integer. It is replaced on the stack by its arithmetic negation.<P>
+<A NAME=HEADING115></A>
+<H3>lneg</H3>
+Long integer<BR><IMG SRC="instructions_only_Tbl_125.gif"><BR>
+ negate<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be a long integer. It is replaced on the stack by its arithmetic negation.<P>
+<A NAME=HEADING116></A>
+<H3>fneg</H3>
+Single float negate<BR><IMG SRC="instructions_only_Tbl_111.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ..., result<P>
+</PRE>
+value should be a single precision floating point number. It is replaced on the stack by its arithmetic negation.<P>
+<A NAME=HEADING117></A>
+<H3>dneg</H3>
+Double float negate<BR><IMG SRC="instructions_only_Tbl_124.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ..., result-word1, result-word2<P>
+</PRE>
+value should be a double precision floating point number. It is replaced on the stack by its arithmetic negation.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_22.html">Prev</A>       <A HREF="vmspec_24.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

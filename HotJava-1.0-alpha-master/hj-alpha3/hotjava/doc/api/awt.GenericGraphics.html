@@ -1,0 +1,743 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.GenericGraphics
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.GapsLayout.html#_top_">Previous</a>    <a href="awt.GifImage.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.GenericGraphics
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.GenericGraphics
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+GenericGraphics</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+GenericGraphics is the base class for all graphics contexts for various
+devices.  It will eventually be renamed to "Graphics".
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.13 10 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#background">background</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#font">font</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#foreground">foreground</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#originX">originX</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#originY">originY</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#scaleX">scaleX</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#scaleY">scaleY</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#GenericGraphics(int, int, float, float)"><b>GenericGraphics</b></a>(int, int, float, float)
+<dd>
+Create a graphics context.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#GenericGraphics()"><b>GenericGraphics</b></a>()
+<dd>
+Create a graphics context with origin at (0,0)
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearClip()"><b>clearClip</b></a>()
+<dd>
+Clears the clipping region.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearRect(int, int, int, int)"><b>clearRect</b></a>(int, int, int, int)
+<dd>
+Clears the rectangle indicated by x,y,w,h.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clipRect(int, int, int, int)"><b>clipRect</b></a>(int, int, int, int)
+<dd>
+Sets the clipping rectangle for this Graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copyArea(int, int, int, int, int, int)"><b>copyArea</b></a>(int, int, int, int, int, int)
+<dd>
+Copies an area of the window that this graphics context paints to.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#createChild(int, int, float, float)"><b>createChild</b></a>(int, int, float, float)
+<dd>
+Create a new Graphics Object based on this one.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this Graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawChars(char[], int, int, int, int)"><b>drawChars</b></a>(char[], int, int, int, int)
+<dd>
+Draws the given character array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawCharsWidth(char[], int, int, int, int)"><b>drawCharsWidth</b></a>(char[], int, int, int, int)
+<dd>
+Draws the given character array and return the width in
+      pixels.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawImage(awt.Image, int, int)"><b>drawImage</b></a>(Image, int, int)
+<dd>
+Draws an image at x,y.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawLine(int, int, int, int)"><b>drawLine</b></a>(int, int, int, int)
+<dd>
+Draws the given line.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawRect(int, int, int, int)"><b>drawRect</b></a>(int, int, int, int)
+<dd>
+Draws the given rectangle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawString(java.lang.String, int, int)"><b>drawString</b></a>(String, int, int)
+<dd>
+Draws the given string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawStringWidth(java.lang.String, int, int)"><b>drawStringWidth</b></a>(String, int, int)
+<dd>
+Draws the given string and returns the length of the drawn
+      string in pixels.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#fillRect(int, int, int, int)"><b>fillRect</b></a>(int, int, int, int)
+<dd>
+Fills the given rectangle with the foreground color.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFontMetrics(awt.Font)"><b>getFontMetrics</b></a>(Font)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint3DRect(int, int, int, int, boolean, boolean)"><b>paint3DRect</b></a>(int, int, int, int, boolean, boolean)
+<dd>
+Paints a highlighted rectangle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setBackground(awt.Color)"><b>setBackground</b></a>(Color)
+<dd>
+Sets the background color.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFont(awt.Font)"><b>setFont</b></a>(Font)
+<dd>
+Sets the font for all subsequent text-drawing operations.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setForeground(awt.Color)"><b>setForeground</b></a>(Color)
+<dd>
+Sets the foreground color.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setOrigin(int, int)"><b>setOrigin</b></a>(int, int)
+<dd>
+Sets the origin of this Graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setScaling(float, float)"><b>setScaling</b></a>(float, float)
+<dd>
+Sets the scaling factor for this Graphics context.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="background">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+background
+</b>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> background
+</pre>
+<a name="foreground">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+foreground
+</b>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> foreground
+</pre>
+<a name="font">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+font
+</b>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> font
+</pre>
+<a name="originX">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+originX
+</b>
+<pre>
+  public int originX
+</pre>
+<a name="originY">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+originY
+</b>
+<pre>
+  public int originY
+</pre>
+<a name="scaleX">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+scaleX
+</b>
+<pre>
+  public float scaleX
+</pre>
+<a name="scaleY">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+scaleY
+</b>
+<pre>
+  public float scaleY
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="GenericGraphics"></a>
+<a name="GenericGraphics(int, int, float, float)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+GenericGraphics
+</b>
+<pre>
+  public GenericGraphics(int oX,
+                         int oY,
+                         float sX,
+                         float sY)
+</pre>
+<dl>
+<dd>
+Create a graphics context.
+</dl>
+<p>
+<a name="GenericGraphics()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+GenericGraphics
+</b>
+<pre>
+  public GenericGraphics()
+</pre>
+<dl>
+<dd>
+Create a graphics context with origin at (0,0)
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="createChild(int, int, float, float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="createChild">
+<b>
+createChild
+</b>
+</a>
+<pre>
+  public abstract <a href="#_top_">GenericGraphics</a> createChild(int oX,
+                                              int oY,
+                                              float sX,
+                                              float sY)
+</pre>
+<dl>
+<dd>
+Create a new Graphics Object based on this one.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this Graphics context. It can't be used after being
+disposed.
+</dl>
+<p>
+<a name="setFont(awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFont">
+<b>
+setFont
+</b>
+</a>
+<pre>
+  public void setFont(<a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<dl>
+<dd>
+Sets the font for all subsequent text-drawing operations.
+</dl>
+<p>
+<a name="getFontMetrics(awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFontMetrics">
+<b>
+getFontMetrics
+</b>
+</a>
+<pre>
+  public abstract <a href="awt.FontMetrics.html#_top_">FontMetrics</a> getFontMetrics(<a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<a name="setForeground(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setForeground">
+<b>
+setForeground
+</b>
+</a>
+<pre>
+  public void setForeground(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the foreground color.
+</dl>
+<p>
+<a name="setBackground(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setBackground">
+<b>
+setBackground
+</b>
+</a>
+<pre>
+  public void setBackground(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the background color.
+</dl>
+<p>
+<a name="paint3DRect(int, int, int, int, boolean, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint3DRect">
+<b>
+paint3DRect
+</b>
+</a>
+<pre>
+  public void paint3DRect(int x,
+                          int y,
+                          int w,
+                          int h,
+                          boolean fill,
+                          boolean raised)
+</pre>
+<dl>
+<dd>
+Paints a highlighted rectangle.
+</dl>
+<p>
+<a name="clipRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clipRect">
+<b>
+clipRect
+</b>
+</a>
+<pre>
+  public abstract void clipRect(int X,
+                                int Y,
+                                int W,
+                                int H)
+</pre>
+<dl>
+<dd>
+Sets the clipping rectangle for this Graphics context.
+</dl>
+<p>
+<a name="clearClip()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearClip">
+<b>
+clearClip
+</b>
+</a>
+<pre>
+  public abstract void clearClip()
+</pre>
+<dl>
+<dd>
+Clears the clipping region.
+</dl>
+<p>
+<a name="clearRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearRect">
+<b>
+clearRect
+</b>
+</a>
+<pre>
+  public abstract void clearRect(int X,
+                                 int Y,
+                                 int W,
+                                 int H)
+</pre>
+<dl>
+<dd>
+Clears the rectangle indicated by x,y,w,h.
+</dl>
+<p>
+<a name="fillRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="fillRect">
+<b>
+fillRect
+</b>
+</a>
+<pre>
+  public abstract void fillRect(int X,
+                                int Y,
+                                int W,
+                                int H)
+</pre>
+<dl>
+<dd>
+Fills the given rectangle with the foreground color.
+</dl>
+<p>
+<a name="drawRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawRect">
+<b>
+drawRect
+</b>
+</a>
+<pre>
+  public abstract void drawRect(int X,
+                                int Y,
+                                int W,
+                                int H)
+</pre>
+<dl>
+<dd>
+Draws the given rectangle.
+</dl>
+<p>
+<a name="drawString(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawString">
+<b>
+drawString
+</b>
+</a>
+<pre>
+  public abstract void drawString(<a href="java.lang.String.html#_top_">String</a> str,
+                                  int x,
+                                  int y)
+</pre>
+<dl>
+<dd>
+Draws the given string.
+</dl>
+<p>
+<a name="drawChars(char[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawChars">
+<b>
+drawChars
+</b>
+</a>
+<pre>
+  public abstract void drawChars(char chars[],
+                                 int offset,
+                                 int length,
+                                 int x,
+                                 int y)
+</pre>
+<dl>
+<dd>
+Draws the given character array.
+</dl>
+<p>
+<a name="drawStringWidth(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawStringWidth">
+<b>
+drawStringWidth
+</b>
+</a>
+<pre>
+  public abstract int drawStringWidth(<a href="java.lang.String.html#_top_">String</a> str,
+                                      int x,
+                                      int y)
+</pre>
+<dl>
+<dd>
+Draws the given string and returns the length of the drawn
+      string in pixels.  If font isn't set then returns -1.
+</dl>
+<p>
+<a name="drawCharsWidth(char[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawCharsWidth">
+<b>
+drawCharsWidth
+</b>
+</a>
+<pre>
+  public abstract int drawCharsWidth(char chars[],
+                                     int offset,
+                                     int length,
+                                     int x,
+                                     int y)
+</pre>
+<dl>
+<dd>
+Draws the given character array and return the width in
+      pixels. If font isn't set then returns -1.
+</dl>
+<p>
+<a name="drawLine(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawLine">
+<b>
+drawLine
+</b>
+</a>
+<pre>
+  public abstract void drawLine(int x1,
+                                int y1,
+                                int x2,
+                                int y2)
+</pre>
+<dl>
+<dd>
+Draws the given line.
+</dl>
+<p>
+<a name="drawImage(awt.Image, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawImage">
+<b>
+drawImage
+</b>
+</a>
+<pre>
+  public abstract void drawImage(<a href="awt.Image.html#_top_">Image</a> I,
+                                 int X,
+                                 int Y)
+</pre>
+<dl>
+<dd>
+Draws an image at x,y.
+</dl>
+<p>
+<a name="copyArea(int, int, int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copyArea">
+<b>
+copyArea
+</b>
+</a>
+<pre>
+  public abstract void copyArea(int X,
+                                int Y,
+                                int W,
+                                int H,
+                                int dx,
+                                int dy)
+</pre>
+<dl>
+<dd>
+Copies an area of the window that this graphics context paints to.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+X
+-
+ the x-coordinate of the source.
+<dd>
+Y
+-
+ the y-coordinate of the source.
+<dd>
+W
+-
+ the width.
+<dd>
+H
+-
+ the height.
+<dd>
+dx
+-
+ the x-coordinate of the destination.
+<dd>
+dy
+-
+ the y-coordinate of the destination.
+</dl>
+</dl>
+<p>
+<a name="setOrigin(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setOrigin">
+<b>
+setOrigin
+</b>
+</a>
+<pre>
+  public void setOrigin(int x,
+                        int y)
+</pre>
+<dl>
+<dd>
+Sets the origin of this Graphics context. All subsequent
+operations are relative to this origin.
+</dl>
+<p>
+<a name="setScaling(float, float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setScaling">
+<b>
+setScaling
+</b>
+</a>
+<pre>
+  public void setScaling(float sx,
+                         float sy)
+</pre>
+<dl>
+<dd>
+Sets the scaling factor for this Graphics context. Currently
+only used for line and rectangle drawing operations.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.GapsLayout.html#_top_">Previous</a>    <a href="awt.GifImage.html#_top_">Next</a></pre>
+</body>
+</html>

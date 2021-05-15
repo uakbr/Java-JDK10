@@ -1,0 +1,443 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.FileInputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.File.html#_top_">Previous</a>    <a href="java.io.FileOutputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.FileInputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----java.io.FileInputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+FileInputStream</b>
+<dt>
+extends <a href="java.io.InputStream.html#_top_">InputStream</a>
+</dl>
+File input stream, can be constructed from
+a file descriptor or a file name.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.FileOutputStream.html#_top_">FileOutputStream</a>,
+<a href="java.io.File.html#_top_">File</a><dt>
+<b>Version:</b>
+<dd>
+	1.14, 27 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FileInputStream(java.lang.String)"><b>FileInputStream</b></a>(String)
+<dd>
+Creates an input file given a file name.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FileInputStream(int)"><b>FileInputStream</b></a>(int)
+<dd>
+Creates an input file given a file descriptor.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FileInputStream(java.io.File)"><b>FileInputStream</b></a>(File)
+<dd>
+Creates an input file given a File object.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#available()"><b>available</b></a>()
+<dd>
+Returns the number of bytes that can be read
+without blocking.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finalize()"><b>finalize</b></a>()
+<dd>
+Close the stream when garbage is collected.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getFD()"><b>getFD</b></a>()
+<dd>
+Returns the file descriptor associated with this stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Reads a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[])"><b>read</b></a>(byte[])
+<dd>
+Reads into an array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+Reads into an array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#skip(int)"><b>skip</b></a>(int)
+<dd>
+Skips bytes of input.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="FileInputStream"></a>
+<a name="FileInputStream(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FileInputStream
+</b>
+<pre>
+  public FileInputStream(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Creates an input file given a file name.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+name
+-
+ the file name (very system dependent)
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred, file not found
+</dl>
+</dl>
+<p>
+<a name="FileInputStream(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FileInputStream
+</b>
+<pre>
+  public FileInputStream(int fd)
+</pre>
+<dl>
+<dd>
+Creates an input file given a file descriptor.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+fd
+-
+	the file descriptor (very system dependent)
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="FileInputStream(java.io.File)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FileInputStream
+</b>
+<pre>
+  public FileInputStream(<a href="java.io.File.html#_top_">File</a> file)
+</pre>
+<dl>
+<dd>
+Creates an input file given a File object.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+file
+-
+ the file to be opened for reading
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred, file not found
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read()
+</pre>
+<dl>
+<dd>
+Reads a byte. Will block if no input is available.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the byte read, or -1 if the end of the
+		stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read()">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte b[])
+</pre>
+<dl>
+<dd>
+Reads into an array of bytes.
+Blocks until some input is available.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read(byte[])">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte b[],
+                  int off,
+                  int len)
+</pre>
+<dl>
+<dd>
+Reads into an array of bytes.
+Blocks until some input is available.
+For efficiency,this method should be overridden in a subclass
+(the default implementation reads 1 byte
+at a time).
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dd>
+off
+-
+ the start offset of the data
+<dd>
+len
+-
+ the maximum number of bytes read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="skip(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="skip">
+<b>
+skip
+</b>
+</a>
+<pre>
+  public int skip(int n)
+</pre>
+<dl>
+<dd>
+Skips bytes of input.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+n
+-
+ 	bytes to be skipped
+<dt>
+<b>Returns:</b>
+<dd>
+actual number of bytes skipped
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#skip(int)">skip</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="available()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="available">
+<b>
+available
+</b>
+</a>
+<pre>
+  public int available()
+</pre>
+<dl>
+<dd>
+Returns the number of bytes that can be read
+without blocking.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the number of available bytes, which is initially
+		equal to the file size
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#available()">available</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public synchronized void close()
+</pre>
+<dl>
+<dd>
+Closes the input stream. Must be called
+to release any resources associated with
+the stream.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#close()">close</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="getFD()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getFD">
+<b>
+getFD
+</b>
+</a>
+<pre>
+  public final int getFD()
+</pre>
+<dl>
+<dd>
+Returns the file descriptor associated with this stream.
+</dl>
+<p>
+<a name="finalize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finalize">
+<b>
+finalize
+</b>
+</a>
+<pre>
+  protected void finalize()
+</pre>
+<dl>
+<dd>
+Close the stream when garbage is collected.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.File.html#_top_">Previous</a>    <a href="java.io.FileOutputStream.html#_top_">Next</a></pre>
+</body>
+</html>

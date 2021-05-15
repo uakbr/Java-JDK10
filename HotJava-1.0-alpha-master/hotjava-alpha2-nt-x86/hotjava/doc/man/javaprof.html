@@ -1,0 +1,43 @@
+<!-- sccsid: @(#)javaprof.html	1.1 95/05/16 --->
+<HTML><HEAD>
+<TITLE>javaprof - the Java profiling data pretty printer</TITLE>
+</HEAD>
+<BODY>
+<h1> javaprof - the Java profiling data prettyprinter</h1>
+<b>javaprof</b> prettyprints the profiling data produced by <a href="java.html"><b>java</b></a>.
+<h2>SYNOPSIS</h2>
+<pre>
+javaprof [ <a href="javaprof.html#Options">options</a> ] java.prof
+</pre>
+<P>
+<h2>DESCRIPTION</h2>
+<b>javaprof</b> is a program for prettyprinting the profiling data produced by
+ <a href="java.html"><code>java -prof</code></a>. <i>java.prof</i> is the name
+of the file created by using the <i>-prof</i> option to <b>java</b>. 
+<i>java.prof</i> contains the profiling information that <b>javaprof</b> uses 
+to compute various statistics.
+<p>
+<b>NOTE:</b> Profiling information is not accurate for multi-threaded
+applications. Profiling should only be used on single-threaded benchmark
+programs.
+<p>
+The profiling information is written to <code>stdout</code> and consists
+of three sections:
+<ol>
+<li> time/#calls per method
+<li> time/#calls per class
+<li> memory usage per data type
+</ol>
+<a name=Options><h2>OPTIONS</h2></a>
+<dl>
+<dt>-v
+<dd>Causes <b>javaprof</b> to produce additional profiling information, which
+is considered less interesting than that listed above.
+</dl>
+<h2>SEE ALSO</h2>
+<A HREF="javac.html">javac</A>,  <A HREF="javah.html">javah</A>,  
+<A HREF="java.html">java</A>, <A HREF="javap.html">javap</A>,  
+<A HREF="javadoc.html">javadoc</A>,
+<a href="../javaspec/javaspec_1.html">The Java Language 
+Specification</a>
+</BODY></HTML>

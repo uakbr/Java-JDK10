@@ -1,0 +1,95 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.BASE64Decoder
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.html">Previous</a>    <a href="java.util.BASE64Encoder.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.BASE64Decoder
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.util.CharacterDecoder.html#_top_">java.util.CharacterDecoder</a>
+           |
+           +----java.util.BASE64Decoder
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+BASE64Decoder</b>
+<dt>
+extends <a href="java.util.CharacterDecoder.html#_top_">CharacterDecoder</a>
+</dl>
+This class implements a BASE64 Character decoder as specified in RFC1113.
+This RFC is part of the Privacy Enhanced Mail (PEM) specification which
+is published by the Internet Engineering Task Force (IETF). Unlike some
+other encoding schemes there is nothing in this encoding that tells
+the decoder where a buffer starts or stops, so to use it you will need
+to isolate your encoded data into a single chunk and then feed them
+this decoder. The simplest way to do that is to read all of the encoded
+data into a string and then use:
+<pre>
+	byte	mydata[];
+	BASE64Decoder base64 = new BASE64Decoder();
+	mydata = base64.decodeBuffer(bufferString);
+</pre>
+This will decode the String in <i>bufferString</i> and give you an array 
+of bytes in the array <i>myData</i>. 
+On errors, this class throws a CEFormatException with the following detail
+strings:
+<pre>
+   "BASE64Decoder: Bad Padding byte (2)."
+   "BASE64Decoder: Bad Padding byte (1)."
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.1, 16 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Chuck McManis<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.CharacterEncoder.html#_top_">CharacterEncoder</a>,
+<a href="#_top_">BASE64Decoder</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BASE64Decoder()"><b>BASE64Decoder</b></a>()
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="BASE64Decoder"></a>
+<a name="BASE64Decoder()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BASE64Decoder
+</b>
+<pre>
+  public BASE64Decoder()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.html">Previous</a>    <a href="java.util.BASE64Encoder.html#_top_">Next</a></pre>
+</body>
+</html>

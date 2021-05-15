@@ -1,0 +1,228 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Control Transfer Instructions</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING147></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_25.html">Prev</A>       <A HREF="vmspec_27.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Control Transfer Instructions</H1>
+<DL>
+<DT><A HREF="vmspec_26.html#HEADING148"><B></B>  ifeq</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING149"><B></B>  iflt</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING150"><B></B>  ifle</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING151"><B></B>  ifne</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING152"><B></B>  ifgt</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING153"><B></B>  ifge</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING154"><B></B>  if_icmpeq</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING155"><B></B>  if_icmpne</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING156"><B></B>  if_icmplt</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING157"><B></B>  if_icmpgt</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING158"><B></B>  if_icmple</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING159"><B></B>  if_icmpge</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING160"><B></B>  lcmp</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING161"><B></B>  fcmpl</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING162"><B></B>  fcmpg</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING163"><B></B>  dcmpl</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING164"><B></B>  dcmpg</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING165"><B></B>  if_acmpeq</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING166"><B></B>  if_acmpne</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING167"><B></B>  goto</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING168"><B></B>  jsr</A><DD>
+<DT><A HREF="vmspec_26.html#HEADING169"><B></B>  ret</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING148></A>
+<H3>ifeq</H3>
+Branch if equal<BR><IMG SRC="instructions_only_Tbl_29.gif"><BR>
+ to 0<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be an integer or a handle to an object or to an array. It is popped from the stack. If value is equal to zero, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the ifeq.<P>
+<A NAME=HEADING149></A>
+<H3>iflt</H3>
+Branch if less than<BR><IMG SRC="instructions_only_Tbl_30.gif"><BR>
+ 0<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be an integer. It is popped from the stack. If value is less than zero, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the iflt. <P>
+<A NAME=HEADING150></A>
+<H3>ifle</H3>
+Branch if less than or equal<BR><IMG SRC="instructions_only_Tbl_31.gif"><BR>
+ to 0<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be an integer. It is popped from the stack. If value is less than or equal to zero, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the ifle. <P>
+<A NAME=HEADING151></A>
+<H3>ifne</H3>
+Branch if not equal<BR><IMG SRC="instructions_only_Tbl_32.gif"><BR>
+ to 0<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be an integer or a handle to an object or to an array. It is popped from the stack. If value is not equal to zero, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the ifne.<P>
+<A NAME=HEADING152></A>
+<H3>ifgt</H3>
+Branch if greater than<BR><IMG SRC="instructions_only_Tbl_36.gif"><BR>
+ 0<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be an integer. It is popped from the stack. If value is greater than zero, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the ifgt.<P>
+<A NAME=HEADING153></A>
+<H3>ifge</H3>
+Branch if greater than or equal<BR><IMG SRC="instructions_only_Tbl_56.gif"><BR>
+ to 0<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be an integer. It is popped from the stack. If value is greater than or equal to zero, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the ifge.<P>
+<A NAME=HEADING154></A>
+<H3>if_icmpeq</H3>
+Branch if integers equal<BR><IMG SRC="instructions_only_Tbl_14.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be integers. They are both popped from the stack. If value1 is equal to value2, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_icmpeq. <P>
+<A NAME=HEADING155></A>
+<H3>if_icmpne</H3>
+Branch if integers not equal<BR><IMG SRC="instructions_only_Tbl_57.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be integers. They are both popped from the stack. If value1 is not equal to value2, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_icmpne.<P>
+<A NAME=HEADING156></A>
+<H3>if_icmplt</H3>
+Branch if integer less than<BR><IMG SRC="instructions_only_Tbl_65.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be integers. They are both popped from the stack. If value1 is less than value2, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_icmplt. <P>
+<A NAME=HEADING157></A>
+<H3>if_icmpgt</H3>
+Branch if integer greater than<BR><IMG SRC="instructions_only_Tbl_66.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be integers. They are both popped from the stack. If value1 is greater than value2 (C's &gt;), branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_icmpgt. <P>
+<A NAME=HEADING158></A>
+<H3>if_icmple</H3>
+Branch if integer less than or equal to<BR><IMG SRC="instructions_only_Tbl_67.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be integers. They are both popped from the stack. If value1 is less than or equal to value2, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_icmple.<P>
+<A NAME=HEADING159></A>
+<H3>if_icmpge</H3>
+Branch if integer greater than or equal to<BR><IMG SRC="instructions_only_Tbl_68.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be integers. They are both popped from the stack. If value1 is greater than or equal to value2, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_icmpge.<P>
+<A NAME=HEADING160></A>
+<H3>lcmp</H3>
+Long integer compare<BR><IMG SRC="instructions_only_Tbl_69.gif"><BR>
+<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word1 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be long integers. They are both popped from the stack and compared. If value1 is greater than value2, the integer value 1 is pushed onto the stack. If value1 is equal to value2, the value 0 is pushed onto the stack. If value1 is less than value2, the value -1 is pushed onto the stack.<P>
+<A NAME=HEADING161></A>
+<H3>fcmpl</H3>
+Single float compare (-1 on incomparable<BR><IMG SRC="instructions_only_Tbl_49.gif"><BR>
+)<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be single precision floating point numbers. They are both popped from the stack and compared. If value1 is greater than value2, the integer value 1 is pushed onto the stack. If value1 is equal to value2, the value 0 is pushed onto the stack. If value1 is less than value2, the value -1 is pushed onto the stack.<P>
+If either value1 or value2 is NaN, the value -1 is pushed onto the stack.<P>
+<A NAME=HEADING162></A>
+<H3>fcmpg</H3>
+Single float compare (1 on incomparable<BR><IMG SRC="instructions_only_Tbl_136.gif"><BR>
+)<P>
+<PRE>
+..., value1, value2 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be single precision floating point numbers. They are both popped from the stack and compared. If value1 is greater than value2, the integer value 1 is pushed onto the stack. If value1 is equal to value2, the value 0 is pushed onto the stack. If value1 is less than value2, the value -1 is pushed onto the stack.<P>
+If either value1 or value2 is NaN, the value 1 is pushed onto the stack.<P>
+<A NAME=HEADING163></A>
+<H3>dcmpl</H3>
+Double float compare (-1 on incomparable<BR><IMG SRC="instructions_only_Tbl_154.gif"><BR>
+)<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word1 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be double precision floating point numbers. They are both popped from the stack and compared. If value1 is greater than value2, the integer value 1 is pushed onto the stack. If value1 is equal to value2, the value 0 is pushed onto the stack. If value1 is less than value2, the value -1 is pushed onto the stack.<P>
+If either value1 or value2 is NaN, the value -1 is pushed onto the stack.<P>
+<A NAME=HEADING164></A>
+<H3>dcmpg</H3>
+Double float compare (1 on incomparable<BR><IMG SRC="instructions_only_Tbl_155.gif"><BR>
+)<P>
+<PRE>
+..., value1-word1, value1-word2, value2-word1, value2-word1 =&gt; ..., result<P>
+</PRE>
+value1 and value2 should be double precision floating point numbers. They are both popped from the stack and compared. If value1 is greater than value2, the integer value 1 is pushed onto the stack. If value1 is equal to value2, the value 0 is pushed onto the stack. If value1 is less than value2, the value -1 is pushed onto the stack.<P>
+If either value1 or value2 is NaN, the value 1 is pushed onto the stack.<P>
+<A NAME=HEADING165></A>
+<H3>if_acmpeq</H3>
+Branch if objects same<BR><IMG SRC="instructions_only_Tbl_156.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be handles to objects or arrays. They are both popped from the stack. If value1 is equal to value2, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_acmpeq.<P>
+<A NAME=HEADING166></A>
+<H3>if_acmpne</H3>
+Branch if objects not same<BR><IMG SRC="instructions_only_Tbl_157.gif"><BR>
+<P>
+<PRE>
+..., value1, value2 =&gt; ...<P>
+</PRE>
+value1 and value2 should be handles to objects or arrays. They are both popped from the stack. If value1 is not equal to value2, branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc. Otherwise execution proceeds at the instruction following the if_acmpne.<P>
+<A NAME=HEADING167></A>
+<H3>goto</H3>
+Branch <BR><IMG SRC="instructions_only_Tbl_17.gif"><BR>
+always<P>
+<PRE>
+no change<P>
+</PRE>
+branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. Execution proceeds at that offset from the pc.<P>
+<A NAME=HEADING168></A>
+<H3>jsr</H3>
+Jump subroutine<BR><IMG SRC="instructions_only_Tbl_20.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., return-address<P>
+</PRE>
+branchbyte1 and branchbyte2 are used to construct a signed 16-bit offset. The address of the instruction immediately following the jsr is pushed onto the stack. Execution proceeds at the offset from the current pc.<P>
+The jsr instruction is used in the implementation of Java's finally keyword.<P>
+<A NAME=HEADING169></A>
+<H3>ret</H3>
+Return from subroutine<BR><IMG SRC="instructions_only_Tbl_18.gif"><BR>
+<P>
+<PRE>
+no change<P>
+</PRE>
+Local variable vindex in the current Java frame should contain a return address. The contents of the local variable are written into the pc.<P>
+Note that jsr pushes the address onto the stack, and ret gets it out of a local variable. This asymmetry is intentional.<P>
+The ret instruction is used in the implementation of Java's finally keyword.<P>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_25.html">Prev</A>       <A HREF="vmspec_27.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

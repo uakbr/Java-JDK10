@@ -1,0 +1,248 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: Class File Format- Constant Pool</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING272></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_39.html">Prev</A>       <A HREF="vmspec_41.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+<HR>
+<H2>Class File Format</H2>
+<HR>
+<H1>Constant Pool</H1>
+<DL>
+<DT><A HREF="vmspec_40.html#HEADING273"><B></B>  Strings</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING274"><B></B>  tag</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING275"><B></B>  length</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING276"><B></B>  bytes</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING277"><B></B>  Classes and Interfaces</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING278"><B></B>  tag</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING279"><B></B>  name_index</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING280"><B></B>  Fields and Methods</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING281"><B></B>  tag</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING282"><B></B>  class_index</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING283"><B></B>  name_and_type_index</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING284"><B></B>  Abstract Fields and Methods</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING285"><B></B>  tag</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING286"><B></B>  name_index</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING287"><B></B>  signature_index</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING288"><B></B>  String Objects</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING289"><B></B>  tag</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING290"><B></B>  name_index</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING291"><B></B>  Numeric Constants</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING292"><B></B>  Four-Byte Constants</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING293"><B></B>  tag</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING294"><B></B>  bytes</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING295"><B></B>  Eight-Byte Constants</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING296"><B></B>  tag</A><DD>
+<DT><A HREF="vmspec_40.html#HEADING297"><B></B>  high_bytes, low_bytes</A><DD>
+</DL>
+
+<HR>
+
+Each item in the constant pool begins with a 1-byte tag:. The table below lists the valid tags and their values.<BR><IMG SRC="classfile_Tbl_2.gif"><BR>
+<P>
+<P>
+Each tag byte is then followed by one or more bytes giving more information about the specific constant. <P>
+<A NAME=HEADING273></A>
+<H3>Strings</H3>
+CONSTANT_Asciz and CONSTANT_Unicode are used to represent constant string values.<P>
+<PRE>
+<CODE>CONSTANT_Asciz_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	length;</CODE><P>
+<CODE>	u1	bytes[length];</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+<CODE>CONSTANT_Unicode_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	length;</CODE><P>
+<CODE>	u2	bytes[length];</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+</PRE>
+<A NAME=HEADING274></A>
+<H3>tag</H3>
+The tag will have the value CONSTANT_Asciz or CONSTANT_Unicode.<P>
+<A NAME=HEADING275></A>
+<H3>length</H3>
+The number of bytes in the string. This length does not include the implicit null termination.<P>
+<A NAME=HEADING276></A>
+<H3>bytes</H3>
+The actual bytes in the string. The null termination is not included.<P>
+<A NAME=HEADING277></A>
+<H3>Classes and Interfaces</H3>
+CONSTANT_Class is used to represent a class or an interface.<P>
+<PRE>
+<CODE>CONSTANT_Class_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	name_index;</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<P>
+<A NAME=HEADING278></A>
+<H3>tag</H3>
+The tag will have the value CONSTANT_Class<P>
+<A NAME=HEADING279></A>
+<H3>name_index</H3>
+constant_pool[name_index] is a string giving the name of the class.<P>
+Because arrays are objects, the opcodes anewarray and multianewarray can reference array "classes" via CONSTANT_Class items in the constant pool. In this case, the name of the class is its signature. For example, the class name for <P>
+<PRE>
+<CODE>int[][] </CODE><P>
+</PRE>
+is <P>
+<PRE>
+<CODE>[[I</CODE><P>
+<CODE></CODE><P>
+</PRE>
+The class name for <P>
+<PRE>
+<CODE>Thread[] </CODE><P>
+</PRE>
+is <P>
+<PRE>
+<CODE>"[Ljava.lang.Thread;"</CODE><P>
+</PRE>
+<A NAME=HEADING280></A>
+<H3>Fields and Methods</H3>
+Fields, methods, and interface methods are represented by similar structures.<P>
+<PRE>
+<CODE>CONSTANT_Fieldref_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	class_index;</CODE><P>
+<CODE>	u2	name_and_type_index;</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+<CODE>CONSTANT_Methodref_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	class_index;</CODE><P>
+<CODE>	u2	name_and_type_index;</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+<CODE>CONSTANT_InterfaceMethodref_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	class_index;</CODE><P>
+<CODE>	u2	name_and_type_index;</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING281></A>
+<H3>tag</H3>
+The tag will have the value CONSTANT_Fieldref, CONSTANT_Methodref, or CONSTANT_InterfaceMethodref.<P>
+<A NAME=HEADING282></A>
+<H3>class_index</H3>
+constant_pool[class_index] will be an entry of type CONSTANT_Class giving the name of the class or interface containing the field or method.<P>
+For CONSTANT_Fieldref and CONSTANT_Methodref, the CONSTANT_Class item must be an actual class. For CONSTANT_InterfaceMethodref, the item must be an interface which purports to implement the given method.<P>
+<A NAME=HEADING283></A>
+<H3>name_and_type_index</H3>
+constant_pool[name_and_type_index] will be an entry of type CONSTANT_NameAndType. This constant pool entry gives the name and signature of the field or method.<P>
+<A NAME=HEADING284></A>
+<H3>Abstract Fields and Methods</H3>
+CONSTANT_NameAndType is used to represent a field or method, detached from any particular class or implementation.<P>
+<PRE>
+<CODE>CONSTANT_NameAndType_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	name_index;</CODE><P>
+<CODE>	u2	signature_index;</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+</PRE>
+<A NAME=HEADING285></A>
+<H3>tag</H3>
+The tag will have the value CONSTANT_NameAndType<P>
+<A NAME=HEADING286></A>
+<H3>name_index</H3>
+constant_pool[name_index] is a string giving the name of the field or method.<P>
+<A NAME=HEADING287></A>
+<H3>signature_index</H3>
+constant_pool[signature_index] is a string giving the signature of the field or method.<P>
+<A NAME=HEADING288></A>
+<H3>String Objects</H3>
+CONSTANT_String is used to represent constant objects of the built-in type String.<P>
+<PRE>
+<CODE>CONSTANT_String_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u2	string_index;</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<P>
+<A NAME=HEADING289></A>
+<H3>tag</H3>
+The tag will have the value CONSTANT_String<P>
+<A NAME=HEADING290></A>
+<H3>name_index</H3>
+constant_pool[string_index] is a string giving the value to which the String object is initialized.<P>
+The string at constant_pool[string_index] is "encoded" so that strings containing only ASCIZ characters, can be represented using only one byte per character, but characters of up to 16 bits can be represented. The format we use is a modified UTF<A NAME=classfile_FootNote_43 HREF=classfile_FootNote_43.html>*1</A> format.<P>
+All characters in the range 0x0001 to 0x007F are represented by a single byte:<P>
+<PRE>
+<CODE>     +-+-+-+-+-+-+-+-+</CODE><P>
+<CODE>     |0|7bits of data|</CODE><P>
+<CODE>     +-+-+-+-+-+-+-+-+</CODE><P>
+</PRE>
+<BR>
+The null character (0x0000) and characters in the range 0x0080 to 0x03FF are represented by a pair of two bytes:<P>
+<PRE>
+<CODE>     +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+</CODE><P>
+<CODE>     |1|1|0| 5 bits |   |1|0|  6 bits   |</CODE><P>
+<CODE>     +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+</CODE><P>
+</PRE>
+<BR>
+Characters in the range 0x0400 to 0xFFFF are represented by three bytes:<P>
+<PRE>
+<CODE>     +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+</CODE><P>
+<CODE>     |1|1|1|0|4 bits |   |1|0|  6 bits   |   |1|0|  6 bits   |</CODE><P>
+<CODE>     +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+</CODE><P>
+</PRE>
+<P>
+<A NAME=HEADING291></A>
+<H3>Numeric Constants</H3>
+<A NAME=HEADING292></A>
+<H4>Four-Byte Constants</H4>
+CONSTANT_Integer and CONSTANT_Float represent four-byte constants.<P>
+<PRE>
+<CODE></CODE><P>
+<CODE>CONSTANT_Integer_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u4	bytes;</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+<CODE>CONSTANT_Float_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u4	bytes;</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING293></A>
+<H3>tag</H3>
+The tag will have the value CONSTANT_Integer or CONSTANT_Float<P>
+<A NAME=HEADING294></A>
+<H3>bytes</H3>
+For integers, the four bytes are in the integer. For floats, the four bytes represent the standard IEEE representation of the floating point number.<P>
+<A NAME=HEADING295></A>
+<H4>Eight-Byte Constants</H4>
+CONSTANT_Long and CONSTANT_Double represent eight-byte constants.<P>
+<PRE>
+<CODE>CONSTANT_Long_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u4	high_bytes;</CODE><P>
+<CODE>	u4	low_bytes;</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+<CODE>CONSTANT_Double_info {</CODE><P>
+<CODE>	u1	tag;</CODE><P>
+<CODE>	u4	high_bytes;</CODE><P>
+<CODE>	u4	low_bytes;</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+</PRE>
+All eight-byte constants take up two spots in the constant pool. If this is the nth item in the constant pool, then the next item will be numbered n+2.<P>
+<A NAME=HEADING296></A>
+<H3>tag</H3>
+The tag will have the value CONSANT_Long or CONSTANT_Double.<P>
+<A NAME=HEADING297></A>
+<H3>high_bytes, low_bytes</H3>
+For CONSTANT_Long, the 64-bit value is (high_bytes &lt;&lt; 32) + low_bytes.<P>
+For CONSTANT_Double, the 64-bit value, high_bytes and low_bytes together represent the standard IEEE representation of the double-precision floating point number.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_39.html">Prev</A>       <A HREF="vmspec_41.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

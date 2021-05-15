@@ -1,0 +1,108 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.UCEncoder
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UCDecoder.html#_top_">Previous</a>    <a href="java.util.UUDecoder.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.UCEncoder
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.util.CharacterEncoder.html#_top_">java.util.CharacterEncoder</a>
+           |
+           +----java.util.UCEncoder
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+UCEncoder</b>
+<dt>
+extends <a href="java.util.CharacterEncoder.html#_top_">CharacterEncoder</a>
+</dl>
+This class implements a robust character encoder. The encoder is designed
+to convert binary data into printable characters. The characters are
+assumed to exist but they are not assumed to be ASCII, the complete set
+is 0-9, A-Z, a-z, "(", and ")".
+The basic encoding unit is a 3 character atom. It encodes two bytes
+of data. Bytes are encoded into a 64 character set, the characters
+were chosen specifically because they appear in all codesets.
+We don't care what their numerical equivalent is because
+we use a character array to map them. This is like UUencoding
+with the dependency on ASCII removed.
+The three chars that make up an atom are encoded as follows:
+<pre>
+     00xxxyyy 00axxxxx 00byyyyy
+     00 = leading zeros, all values are 0 - 63
+     xxxyyy - Top 3 bits of X, Top 3 bits of Y
+     axxxxx - a = X parity bit, xxxxx lower 5 bits of X
+     byyyyy - b = Y parity bit, yyyyy lower 5 bits of Y
+</pre>
+The atoms are arranged into lines suitable for inclusion into an
+email message or text file. The number of bytes that are encoded
+per line is 48 which keeps the total line length  under 80 chars)
+Each line has the form(
+<pre>
+ *(LLSS)(DDDD)(DDDD)(DDDD)...(CRC)
+ Where each (xxx) represents a three character atom.
+ (LLSS) - 8 bit length (high byte), and sequence number
+          modulo 256;
+ (DDDD) - Data byte atoms, if length is odd, last data 
+          atom has (DD00) (high byte data, low byte 0)
+ (CRC)  - 16 bit CRC for the line, includes length, 
+          sequence, and all data bytes. If there is a 
+          zero pad byte (odd length) it is _NOT_ 
+          included in the CRC.
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+    1.6, 17 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+     Chuck McManis<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.CharacterEncoder.html#_top_">CharacterEncoder</a>,
+<a href="java.util.UCDecoder.html#_top_">UCDecoder</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#UCEncoder()"><b>UCEncoder</b></a>()
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="UCEncoder"></a>
+<a name="UCEncoder()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+UCEncoder
+</b>
+<pre>
+  public UCEncoder()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.UCDecoder.html#_top_">Previous</a>    <a href="java.util.UUDecoder.html#_top_">Next</a></pre>
+</body>
+</html>

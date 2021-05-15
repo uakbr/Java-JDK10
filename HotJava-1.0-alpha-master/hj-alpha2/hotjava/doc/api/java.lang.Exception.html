@@ -1,0 +1,240 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.Exception
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.DataFormatException.html#_top_">Previous</a>    <a href="java.lang.FileFormatException.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.Exception
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.lang.Exception
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Exception</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+An object signalling that an exceptional condition has occurred.
+All exceptions are a subclass of Exception. An exception contains
+a snapshot of the execution stack, this snapshot is used to print
+a stack backtrace. An exception also contains a message string.
+An example of catching an exception:
+<pre>
+	try {
+	    int a[] = new int[2];
+	    a[4];
+	} catch (ArrayIndexOutOfBoundsException e) {
+	    System.out.println("an exception occurred: " + e.getMessage());
+	    e.printStackTrace();
+	}
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.12, 31 Jan 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Exception()"><b>Exception</b></a>()
+<dd>
+Constructs an exception with no detail message.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Exception(java.lang.String)"><b>Exception</b></a>(String)
+<dd>
+Constructs an exception with the specified detail message.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#fillInStackTrace()"><b>fillInStackTrace</b></a>()
+<dd>
+Fills in the excecution stack trace.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getMessage()"><b>getMessage</b></a>()
+<dd>
+Gets the message.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#printStackTrace()"><b>printStackTrace</b></a>()
+<dd>
+Prints the exception and the exception's stack trace.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Returns a short description of the exception.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Exception"></a>
+<a name="Exception()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Exception
+</b>
+<pre>
+  public Exception()
+</pre>
+<dl>
+<dd>
+Constructs an exception with no detail message. The stack
+trace is automatically filled in.
+</dl>
+<p>
+<a name="Exception(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Exception
+</b>
+<pre>
+  public Exception(<a href="java.lang.String.html#_top_">String</a> message)
+</pre>
+<dl>
+<dd>
+Constructs an exception with the specified detail message.
+The stack trace is automatically filled in.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+message
+-
+	the detail message
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getMessage()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getMessage">
+<b>
+getMessage
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getMessage()
+</pre>
+<dl>
+<dd>
+Gets the message.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the detail message of the exception
+</dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Returns a short description of the exception.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+a string describing the exception
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="printStackTrace()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="printStackTrace">
+<b>
+printStackTrace
+</b>
+</a>
+<pre>
+  public void printStackTrace()
+</pre>
+<dl>
+<dd>
+Prints the exception and the exception's stack trace.
+</dl>
+<p>
+<a name="fillInStackTrace()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="fillInStackTrace">
+<b>
+fillInStackTrace
+</b>
+</a>
+<pre>
+  public <a href="#_top_">Exception</a> fillInStackTrace()
+</pre>
+<dl>
+<dd>
+Fills in the excecution stack trace. This is useful only
+when rethrowing an exception. For example:
+<pre>
+	   try {
+	        a = b / c;
+	   } catch(ArithmeticException e) {
+		a = Number.MAX_VALUE;
+	        throw e.fillInStackTrace();
+	   }
+</pre>
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the exception itself
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#printStackTrace">printStackTrace</a>
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.DataFormatException.html#_top_">Previous</a>    <a href="java.lang.FileFormatException.html#_top_">Next</a></pre>
+</body>
+</html>

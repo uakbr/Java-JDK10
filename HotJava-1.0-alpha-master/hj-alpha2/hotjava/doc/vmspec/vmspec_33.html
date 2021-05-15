@@ -1,0 +1,42 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Monitors</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING199></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_32.html">Prev</A>       <A HREF="vmspec_34.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Monitors</H1>
+<DL>
+<DT><A HREF="vmspec_33.html#HEADING200"><B></B>  monitorenter</A><DD>
+<DT><A HREF="vmspec_33.html#HEADING201"><B></B>  monitorexit</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING200></A>
+<H3>monitorenter</H3>
+<BR><IMG SRC="instructions_only_Tbl_3.gif"><BR>
+Enter monitored region of code<P>
+<PRE>
+..., handle =&gt; ... <P>
+</PRE>
+handle should be a handle to an object.<P>
+The interpreter attempts to obtain exclusive access via a lock mechanism to handle. If another process already has handle locked, than the current process waits until the handle is unlocked. If the current process already has handle locked, then continue execution. If handle has no lock on it, then obtain an exclusive lock.<P>
+<A NAME=HEADING201></A>
+<H3>monitorexit</H3>
+<BR><IMG SRC="instructions_only_Tbl_148.gif"><BR>
+Exit monitored region of code<P>
+<PRE>
+..., handle =&gt; ... <P>
+</PRE>
+handle should be a handle to an object.<P>
+The lock on handle is released. If this is the last lock that this process has on that handle (one process is allowed to have multiple locks on a single handle), then other processes that are waiting for handle to be free are allowed to proceed.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_32.html">Prev</A>       <A HREF="vmspec_34.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,150 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.www.html.URLStreamHandler
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.URL.html#_top_">Previous</a>    <a href="net.www.html.UnknownContentHandler.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.www.html.URLStreamHandler
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.www.html.URLStreamHandler
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+URLStreamHandler</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Subclasses of this class know how to create streams for particular
+    protocol types
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#URLStreamHandler()"><b>URLStreamHandler</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#formatFromName(java.lang.String)"><b>formatFromName</b></a>(String)
+<dd>
+	Try to guess the contents of a file based upon its extension.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openStream(net.www.html.URL)"><b>openStream</b></a>(URL)
+<dd>
+Open an input stream to the object referenced by the URL.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openStreamInteractively(net.www.html.URL)"><b>openStreamInteractively</b></a>(URL)
+<dd>
+Similar to openStream except that it allows the stream handler
+to interact with the user to resolve certain problems.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="URLStreamHandler"></a>
+<a name="URLStreamHandler()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+URLStreamHandler
+</b>
+<pre>
+  public URLStreamHandler()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="openStream(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openStream">
+<b>
+openStream
+</b>
+</a>
+<pre>
+  public abstract <a href="java.io.InputStream.html#_top_">InputStream</a> openStream(<a href="net.www.html.URL.html#_top_">URL</a> u)
+</pre>
+<dl>
+<dd>
+Open an input stream to the object referenced by the URL.  Should be
+overridden by a subclass.  Failure is indicated by throwing an
+exception.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+The opened input stream.  A value of null indicates that while
+the open was successful, there is no useful data provided by this
+protocol, it's done for side-effect only (the usual example is the
+"mailto" protocol).
+</dl>
+</dl>
+<p>
+<a name="openStreamInteractively(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openStreamInteractively">
+<b>
+openStreamInteractively
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> openStreamInteractively(<a href="net.www.html.URL.html#_top_">URL</a> u)
+</pre>
+<dl>
+<dd>
+Similar to openStream except that it allows the stream handler
+to interact with the user to resolve certain problems.  For
+example, the http handler will prompt for a user name and
+password to handle authentication failures.  In these cases,
+openStream would just toss an exception.  If this method is
+not overridden, it behaves exactly like openStream.
+</dl>
+<p>
+<a name="formatFromName(java.lang.String)">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="formatFromName">
+<b>
+formatFromName
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> formatFromName(<a href="java.lang.String.html#_top_">String</a> fname)
+</pre>
+<dl>
+<dd>
+	Try to guess the contents of a file based upon its extension.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.URL.html#_top_">Previous</a>    <a href="net.www.html.UnknownContentHandler.html#_top_">Next</a></pre>
+</body>
+</html>

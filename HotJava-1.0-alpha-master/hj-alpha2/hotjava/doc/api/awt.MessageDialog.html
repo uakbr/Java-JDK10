@@ -1,0 +1,388 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.MessageDialog
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.MenuItem.html#_top_">Previous</a>    <a href="awt.NativeDisplayItem.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.MessageDialog
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.MessageDialog
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+MessageDialog</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+<dt>
+implements <a href="awt.Dialog.html#_top_">Dialog</a>, <a href="awt.DialogHandler.html#_top_">DialogHandler</a>
+</dl>
+MessageDialog is a class that allows a modal or non-modal dialog to
+be presented to the user with a message. The dialog contains a
+picture, a message, and three buttons: ok, cancel, and help. The
+number of buttons as well as the labels they display can be
+controlled by the api.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.DialogHandler.html#_top_">DialogHandler</a><dt>
+<b>Version:</b>
+<dd>
+1.8 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ERROR_TYPE">ERROR_TYPE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#INFO_TYPE">INFO_TYPE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#QUESTION_TYPE">QUESTION_TYPE</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#parent">parent</a>
+</b>
+<dd>
+The frame to which this dialog is attached to.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#MessageDialog(awt.Frame, java.lang.String, java.lang.String, int, int, boolean, java.lang.String, java.lang.String, java.lang.String, awt.DialogHandler)"><b>MessageDialog</b></a>(Frame, String, String, int, int, boolean, String, String, String, DialogHandler)
+<dd>
+Constructs a new MessageDialog.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#cancelCallback(awt.Dialog)"><b>cancelCallback</b></a>(Dialog)
+<dd>
+Invoked when the user presses the "Cancel" button.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Dispose of this dialog.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#helpCallback(awt.Dialog)"><b>helpCallback</b></a>(Dialog)
+<dd>
+Invoked when the user presses the "Help" button.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hide()"><b>hide</b></a>()
+<dd>
+Hide this dialog
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#okCallback(awt.Dialog)"><b>okCallback</b></a>(Dialog)
+<dd>
+Invoked when the user presses the "Ok" button.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setMessage(java.lang.String)"><b>setMessage</b></a>(String)
+<dd>
+Change the message associated with this dialog.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#show()"><b>show</b></a>()
+<dd>
+Show this dialog.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="INFO_TYPE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+INFO_TYPE
+</b>
+<pre>
+  public final static int INFO_TYPE
+</pre>
+<a name="ERROR_TYPE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ERROR_TYPE
+</b>
+<pre>
+  public final static int ERROR_TYPE
+</pre>
+<a name="QUESTION_TYPE">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+QUESTION_TYPE
+</b>
+<pre>
+  public final static int QUESTION_TYPE
+</pre>
+<a name="parent">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+parent
+</b>
+<pre>
+  public <a href="awt.Frame.html#_top_">Frame</a> parent
+</pre>
+<dl>
+<dd>
+The frame to which this dialog is attached to.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="MessageDialog"></a>
+<a name="MessageDialog(awt.Frame, java.lang.String, java.lang.String, int, int, boolean, java.lang.String, java.lang.String, java.lang.String, awt.DialogHandler)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+MessageDialog
+</b>
+<pre>
+  public MessageDialog(<a href="awt.Frame.html#_top_">Frame</a> f,
+                       <a href="java.lang.String.html#_top_">String</a> title,
+                       <a href="java.lang.String.html#_top_">String</a> message,
+                       int dialogType,
+                       int nButtons,
+                       boolean isModal,
+                       <a href="java.lang.String.html#_top_">String</a> okLabel,
+                       <a href="java.lang.String.html#_top_">String</a> cancelLabel,
+                       <a href="java.lang.String.html#_top_">String</a> helpLabel,
+                       <a href="awt.DialogHandler.html#_top_">DialogHandler</a> handler)
+</pre>
+<dl>
+<dd>
+Constructs a new MessageDialog.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+f
+-
+ is the frame that is to be the parent of this MessageDialog.
+<dd>
+title
+-
+ is the title of the dialog. It can be null.
+<dd>
+message
+-
+ is the message to display in the dialog. It can
+be changed later with setMessage.
+<dd>
+dialogType
+-
+ is one of INFO_TYPE (for information
+dialogs), ERROR_TYPE (for an error dialog), or QUESTION_TYPE (for
+a question dialog).
+<dd>
+nButtons
+-
+ is the number of buttons to use. It is a number
+from 1 to 3. The number corresponds to whether the buttons should
+be ok (1), ok and cancel (2), or ok, cancel, and help (3).
+<dd>
+isModal
+-
+ determines whether the dialog will block all
+user input until the dialog is disposed of by clicking one of
+the ok or cancel buttons.
+<dd>
+okLabel
+-
+ is the label to use for the Ok button. If null,
+then a default string will be chosen.
+<dd>
+cancelLabel
+-
+ is the label to use for the Cancel button. If null,
+then a default string will be chosen.
+<dd>
+helpLabel
+-
+ is the label to use for the Help button. If null,
+then a default string will be chosen.
+<dd>
+handler
+-
+ is the object that will handle the callbacks for
+the buttons listed in the dialog. It may be null in which case
+a default action is taken for all the buttons.
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setMessage(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setMessage">
+<b>
+setMessage
+</b>
+</a>
+<pre>
+  public void setMessage(<a href="java.lang.String.html#_top_">String</a> message)
+</pre>
+<dl>
+<dd>
+Change the message associated with this dialog.
+</dl>
+<p>
+<a name="show()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="show">
+<b>
+show
+</b>
+</a>
+<pre>
+  public int show()
+</pre>
+<dl>
+<dd>
+Show this dialog.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+ the number of the button that was pressed if this
+dialog is modal. Otherwise -1 is returned.
+</dl>
+</dl>
+<p>
+<a name="hide()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hide">
+<b>
+hide
+</b>
+</a>
+<pre>
+  public void hide()
+</pre>
+<dl>
+<dd>
+Hide this dialog
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Dispose of this dialog.
+</dl>
+<p>
+<a name="okCallback(awt.Dialog)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="okCallback">
+<b>
+okCallback
+</b>
+</a>
+<pre>
+  public void okCallback(<a href="awt.Dialog.html#_top_">Dialog</a> m)
+</pre>
+<dl>
+<dd>
+Invoked when the user presses the "Ok" button.
+</dl>
+<p>
+<a name="cancelCallback(awt.Dialog)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="cancelCallback">
+<b>
+cancelCallback
+</b>
+</a>
+<pre>
+  public void cancelCallback(<a href="awt.Dialog.html#_top_">Dialog</a> m)
+</pre>
+<dl>
+<dd>
+Invoked when the user presses the "Cancel" button.
+</dl>
+<p>
+<a name="helpCallback(awt.Dialog)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="helpCallback">
+<b>
+helpCallback
+</b>
+</a>
+<pre>
+  public void helpCallback(<a href="awt.Dialog.html#_top_">Dialog</a> m)
+</pre>
+<dl>
+<dd>
+Invoked when the user presses the "Help" button.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.MenuItem.html#_top_">Previous</a>    <a href="awt.NativeDisplayItem.html#_top_">Next</a></pre>
+</body>
+</html>

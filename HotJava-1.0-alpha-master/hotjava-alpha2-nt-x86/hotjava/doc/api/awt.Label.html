@@ -1,0 +1,398 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Label
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ImageDisplayItem.html#_top_">Previous</a>    <a href="awt.List.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Label
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.Label
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Label</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+A class that displays read-only text.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.19 03 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#label">label</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Label(java.lang.String, java.lang.String, awt.Container, awt.Font)"><b>Label</b></a>(String, String, Container, Font)
+<dd>
+Constructs a label.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Label(java.lang.String, java.lang.String, awt.Container)"><b>Label</b></a>(String, String, Container)
+<dd>
+Constructs a label with the default font.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this label.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Return the preferred size of this label.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Make this label visible.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Move this label to the given x,y position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this label to the given dimensions.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setColor(awt.Color)"><b>setColor</b></a>(Color)
+<dd>
+Sets the color to draw this label.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFont(awt.Font)"><b>setFont</b></a>(Font)
+<dd>
+Sets the font to use for this label.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setHFill(boolean)"><b>setHFill</b></a>(boolean)
+<dd>
+Makes this label stretch to be the width of its container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setText(java.lang.String)"><b>setText</b></a>(String)
+<dd>
+Sets the text to display for this label.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Make this label invisible.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="label">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+label
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> label
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Label"></a>
+<a name="Label(java.lang.String, java.lang.String, awt.Container, awt.Font)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Label
+</b>
+<pre>
+  public Label(<a href="java.lang.String.html#_top_">String</a> pLabel,
+               <a href="java.lang.String.html#_top_">String</a> pName,
+               <a href="awt.Container.html#_top_">Container</a> pParent,
+               <a href="awt.Font.html#_top_">Font</a> font)
+</pre>
+<dl>
+<dd>
+Constructs a label.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+pLabel
+-
+ the text of the label.
+<dd>
+pName
+-
+ the name of this component.
+<dd>
+pParent
+-
+ the parent window for this label.
+<dd>
+font
+-
+ the font to use for this label.
+</dl>
+</dl>
+<p>
+<a name="Label(java.lang.String, java.lang.String, awt.Container)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Label
+</b>
+<pre>
+  public Label(<a href="java.lang.String.html#_top_">String</a> pLabel,
+               <a href="java.lang.String.html#_top_">String</a> pName,
+               <a href="awt.Container.html#_top_">Container</a> pParent)
+</pre>
+<dl>
+<dd>
+Constructs a label with the default font.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setHFill(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setHFill">
+<b>
+setHFill
+</b>
+</a>
+<pre>
+  public void setHFill(boolean t)
+</pre>
+<dl>
+<dd>
+Makes this label stretch to be the width of its container.
+</dl>
+<p>
+<a name="setFont(awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFont">
+<b>
+setFont
+</b>
+</a>
+<pre>
+  public void setFont(<a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<dl>
+<dd>
+Sets the font to use for this label.
+</dl>
+<p>
+<a name="setColor(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setColor">
+<b>
+setColor
+</b>
+</a>
+<pre>
+  public void setColor(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the color to draw this label.
+</dl>
+<p>
+<a name="setText(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setText">
+<b>
+setText
+</b>
+</a>
+<pre>
+  public void setText(<a href="java.lang.String.html#_top_">String</a> l)
+</pre>
+<dl>
+<dd>
+Sets the text to display for this label.
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int x,
+                   int y)
+</pre>
+<dl>
+<dd>
+Move this label to the given x,y position.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this label to the given dimensions.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this label.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Return the preferred size of this label.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#getPreferredSize()">getPreferredSize</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Make this label visible.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Make this label invisible.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ImageDisplayItem.html#_top_">Previous</a>    <a href="awt.List.html#_top_">Next</a></pre>
+</body>
+</html>

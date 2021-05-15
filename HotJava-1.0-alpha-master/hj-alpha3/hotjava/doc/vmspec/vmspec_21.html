@@ -1,0 +1,267 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Managing Arrays</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING61></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_20.html">Prev</A>       <A HREF="vmspec_22.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Managing Arrays</H1>
+<DL>
+<DT><A HREF="vmspec_21.html#HEADING62"><B></B>  newarray</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING63"><B></B>  anewarray</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING64"><B></B>  multianewarray</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING65"><B></B>  arraylength</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING66"><B></B>  iaload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING67"><B></B>  laload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING68"><B></B>  faload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING69"><B></B>  daload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING70"><B></B>  aaload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING71"><B></B>  baload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING72"><B></B>  caload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING73"><B></B>  saload</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING74"><B></B>  iastore</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING75"><B></B>  lastore</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING76"><B></B>  fastore</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING77"><B></B>  dastore</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING78"><B></B>  aastore</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING79"><B></B>  bastore</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING80"><B></B>  castore</A><DD>
+<DT><A HREF="vmspec_21.html#HEADING81"><B></B>  sastore</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING62></A>
+<H3>newarray</H3>
+Allocate new array<BR><IMG SRC="instructions_only_Tbl_41.gif"><BR>
+<P>
+<PRE>
+..., size =&gt; result<P>
+</PRE>
+<P>
+size should be an integer. It represents the number of elements in the new array. <P>
+atype is an internal code that indicates the type of array to allocate. Possible values for atype are as follows:<BR><IMG SRC="instructions_only_Tbl_1.gif"><BR>
+<BR>
+A new array of the indicated or computed atype, capable of holding size elements, is allocated. Allocation of an array large enough to contain nelem items of atype is attempted. All elements of the array are initialized to zero.<P>
+If size is less than zero, a NegativeArraySizeException is thrown. If there is not enough memory to allocate the array, an OutOfMemoryException is thrown.<P>
+<A NAME=HEADING63></A>
+<H3>anewarray</H3>
+Allocate new array<BR><IMG SRC="instructions_only_Tbl_42.gif"><BR>
+ of objects<P>
+<PRE>
+..., size=&gt; result<P>
+</PRE>
+size should be an integer. It represents the number of elements in the new array. <P>
+indexbyte1 and indexbyte2 are are used to construct an index into the constant pool of the current class. The item at that index is resolved. The resulting entry should be a class.<P>
+A new array of the indicated class type and capable of holding size elements is allocated. Allocation of an array large enough to contain size items of the given class type is attempted. All elements of the array are initialized to zero.<P>
+If size is less than zero, a NegativeArraySizeException is thrown. If there is not enough memory to allocate the array, an OutOfMemoryException is thrown.<P>
+anewarray is used to create a single dimension of an array of objects. For example, to create<P>
+<PRE>
+<CODE>new Thread[7]</CODE><P>
+</PRE>
+the following code is used:<P>
+<PRE>
+<CODE>bipush 7
+anewarray &lt;Class "java.lang.Thread"&gt;</CODE><P>
+</PRE>
+anewarray can also be used to create the outermost dimension of a multi-dimensional array. For example, the following array declaration:<P>
+<PRE>
+<CODE>new int[6][]</CODE><P>
+</PRE>
+is created with the following code:<P>
+<PRE>
+<CODE>bipush 6
+anewarray &lt;Class "[I"&gt;</CODE><P>
+</PRE>
+See CONSTANT_Class in the Class File Format chapter for information on array class names.<P>
+<A NAME=HEADING64></A>
+<H3>multianewarray</H3>
+Allocate new multi-dimensional array<BR><IMG SRC="instructions_only_Tbl_161.gif"><BR>
+<P>
+<PRE>
+..., size1 size2...sizen =&gt; result<P>
+</PRE>
+Each size should be an integer. Each represents the number of elements in a dimension of the array. <P>
+indexbyte1 and indexbyte2 are are used to construct an index into the constant pool of the current class. The item at that index is resolved. The resulting entry should be a class.<P>
+dimensions has the following aspects:<P>
+<UL>
+<LI>It should be an integer xb3  1. <P>
+<LI>It represents the number of dimensions being created. It must be  the number of dimensions of the array class.<P>
+<LI>It represents the number of elements that are popped off the stack. All must be integers greater than or equal to zero. These are used as the sizes of the dimension. For example, to create:<P>
+</UL>
+<PRE>
+<CODE>	new int[6][3][]</CODE><P>
+</PRE>
+the following code is used:<P>
+<PRE>
+<CODE>	bipush 6
+	bipush 3
+	multianewarray &lt;Class "[[[I"&gt; 2</CODE><P>
+</PRE>
+If any of the size arguments on the stack is less than zero, a NegativeArraySizeException is thrown. If there is not enough memory to allocate the array, an OutOfMemoryException is thrown.<P>
+Note: It is more efficient to use newarray or anewarray when creating a single dimension.<P>
+See CONSTANT_Class in the Class File Format chapter for information on array class names.<P>
+<A NAME=HEADING65></A>
+<H3>arraylength</H3>
+<BR><IMG SRC="instructions_only_Tbl_44.gif"><BR>
+Get length of array<P>
+<PRE>
+..., handle =&gt; ..., length<P>
+</PRE>
+handle should be the handle of an array. The length of the array is determined and replaces handle on the top of the stack.<P>
+If the handle is null, a NullPointerException is thrown. <P>
+<A NAME=HEADING66></A>
+<H3>iaload</H3>
+Load integer from array<BR><IMG SRC="instructions_only_Tbl_7.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value<P>
+</PRE>
+array should be an array of integers. index should be an integer. The integer value at position number index in array is retrieved and pushed onto the top of the stack.<P>
+If array is null a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING67></A>
+<H3>laload</H3>
+Load long integer from array<BR><IMG SRC="instructions_only_Tbl_80.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value-word1, value-word2<P>
+</PRE>
+array should be an array of long integers. index should be an integer. The long integer value at position number index in array is retrieved and pushed onto the top of the stack.<P>
+If array is null a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING68></A>
+<H3>faload</H3>
+Load single float from array<BR><IMG SRC="instructions_only_Tbl_8.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value<P>
+</PRE>
+array should be an array of single precision floating point numbers. index should be an integer. The single precision floating point number value at position number index in array is retrieved and pushed onto the top of the stack.<P>
+If array is null a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING69></A>
+<H3>daload</H3>
+Load double float from array<BR><IMG SRC="instructions_only_Tbl_81.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value-word1, value-word2<P>
+</PRE>
+array should be an array of double precision floating point numbers. index should be an integer. The double precision floating point number value at position number index in array is retrieved and pushed onto the top of the stack.<P>
+If array is null a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING70></A>
+<H3>aaload</H3>
+Load object reference from array<BR><IMG SRC="instructions_only_Tbl_9.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value<P>
+</PRE>
+array should be an array of handles to objects or arrays. index should be an integer. The object or array value at position number index in array is retrieved and pushed onto the top of the stack.<P>
+If array is null a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING71></A>
+<H3>baload</H3>
+Load signed byte from array<BR><IMG SRC="instructions_only_Tbl_10.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value<P>
+</PRE>
+array should be an array of signed bytes. index should be an integer. The signed byte value at position number index in array is retrieved, expanded to an integer, and pushed onto the top of the stack.<P>
+If array is null a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING72></A>
+<H3>caload</H3>
+Load character from array<BR><IMG SRC="instructions_only_Tbl_159.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value<P>
+</PRE>
+array should be an array of characters. index should be an integer. The character value at position number index in array is retrieved, expanded to an integer, and pushed onto the top of the stack.<P>
+If array is null a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING73></A>
+<H3>saload</H3>
+Load short from array<BR><IMG SRC="instructions_only_Tbl_11.gif"><BR>
+<P>
+<PRE>
+..., array, index =&gt; ..., value<P>
+</PRE>
+array should be an array of (signed) short integers. index should be an integer. The short integer value at position number index in array is retrieved, expanded to an integer, and pushed onto the top of the stack.<P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING74></A>
+<H3>iastore</H3>
+Store into integer array<BR><IMG SRC="instructions_only_Tbl_143.gif"><BR>
+<P>
+<PRE>
+..., array, index, value =&gt; ...<P>
+</PRE>
+array should be an array of integers, index should be an integer, and value an integer. The integer value is stored at position index in array. <P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING75></A>
+<H3>lastore</H3>
+Store into long integer array<BR><IMG SRC="instructions_only_Tbl_82.gif"><BR>
+<P>
+<PRE>
+..., array, index, value-word1, value-word2 =&gt; ...<P>
+</PRE>
+array should be an array of long integers, index should be an integer, and value a long integer. The long integer value is stored at position index in array. <P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING76></A>
+<H3>fastore</H3>
+Store into single float array<BR><IMG SRC="instructions_only_Tbl_142.gif"><BR>
+<P>
+<PRE>
+..., array, index, value =&gt; ...<P>
+</PRE>
+array should be an array of single precision floating point numbers, index should be an integer, and value a single precision floating point number. The single float value is stored at position index in array. <P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING77></A>
+<H3>dastore</H3>
+Store into double float array<BR><IMG SRC="instructions_only_Tbl_83.gif"><BR>
+<P>
+<PRE>
+..., array, index, value-word1, value-word2 =&gt; ...<P>
+</PRE>
+array should be an array of double precision floating point numbers, index should be an integer, and value a double precision floating point number. The double float value is stored at position index in array. <P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING78></A>
+<H3>aastore</H3>
+Store into object reference array<BR><IMG SRC="instructions_only_Tbl_141.gif"><BR>
+<P>
+<PRE>
+..., array, index, value =&gt; ...<P>
+</PRE>
+array should be an array of handles to objects or to arrays, index should be an integer, and value a handle to an object or array. The handle value is stored at position index in array. <P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+The actual type of value should be conformable with the actual type of the elements of the array. For example, it is legal to store and instance of class Thread in an array of class Object, but not vice versa. An IncompatibleTypeException is thrown if an attempt is made to store an incompatible object reference.<P>
+<A NAME=HEADING79></A>
+<H3>bastore</H3>
+Store into signed byte array<BR><IMG SRC="instructions_only_Tbl_139.gif"><BR>
+<P>
+<PRE>
+..., array, index, value =&gt; ...<P>
+</PRE>
+array should be an array of signed bytes, index should be an integer, and value an integer. The integer value is stored at position index in array. If value is too large to be a signed byte, it is truncated.<P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING80></A>
+<H3>castore</H3>
+Store into character array<BR><IMG SRC="instructions_only_Tbl_160.gif"><BR>
+<P>
+<PRE>
+..., array, index, value =&gt; ...<P>
+</PRE>
+array should be an array of characters, index should be an integer, and value an integer. The integer value is stored at position index in array. If value is too large to be a character, it is truncated.<P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array, an ArrayIndexOutOfBoundsException is thrown.<P>
+<A NAME=HEADING81></A>
+<H3>sastore</H3>
+<BR><IMG SRC="instructions_only_Tbl_140.gif"><BR>
+Store into short array<P>
+<PRE>
+..., array, index, value =&gt; ...<P>
+</PRE>
+array should be an array of shorts , index should be an integer, and value an integer. The integer value is stored at position index in array. If value is too large to be an short, it is truncated.<P>
+If array is null, a NullPointerException is thrown. If index is not within the bounds of array an ArrayIndexOutOfBoundsException is thrown.<P>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_20.html">Prev</A>       <A HREF="vmspec_22.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

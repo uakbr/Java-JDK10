@@ -1,0 +1,240 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.FocusManager
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FlowLayout.html#_top_">Previous</a>    <a href="awt.Font.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.FocusManager
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----awt.FocusManager
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+FocusManager</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A class that distributes the focus to a set of focus clients.
+In order to be able to call grabFocus, a DisplayItem should
+register with the FocusManager using the addItem method.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.DisplayItem.html#_top_">DisplayItem</a>,
+<a href="#addItem">addItem</a>,
+<a href="#grabFocus">grabFocus</a><dt>
+<b>Version:</b>
+<dd>
+1.6 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+David Brown</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#diw">diw</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FocusManager(awt.DisplayItemWindow)"><b>FocusManager</b></a>(DisplayItemWindow)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addItem(awt.DisplayItem)"><b>addItem</b></a>(DisplayItem)
+<dd>
+Add a DisplayItem to our list.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#currentFocusItem()"><b>currentFocusItem</b></a>()
+<dd>
+Return the item which currently has the input focus,
+ or 0 if there is no item with the input focus.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#grabFocus(awt.DisplayItem)"><b>grabFocus</b></a>(DisplayItem)
+<dd>
+An item sends us this message to ask for the focus
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nextFocus()"><b>nextFocus</b></a>()
+<dd>
+Advance the focus to the next item in the list
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#prevFocus()"><b>prevFocus</b></a>()
+<dd>
+Back-up the focus to the previous item in the list
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resetFocus()"><b>resetFocus</b></a>()
+<dd>
+Reset the focus to the first item in the list
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="diw">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+diw
+</b>
+<pre>
+  public <a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a> diw
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="FocusManager"></a>
+<a name="FocusManager(awt.DisplayItemWindow)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FocusManager
+</b>
+<pre>
+  public FocusManager(<a href="awt.DisplayItemWindow.html#_top_">DisplayItemWindow</a> theDiw)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="addItem(awt.DisplayItem)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addItem">
+<b>
+addItem
+</b>
+</a>
+<pre>
+  public void addItem(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> item)
+</pre>
+<dl>
+<dd>
+Add a DisplayItem to our list.  This should be an item
+ that's interested in getting keyboard events, and should
+ do something useful with got/lostFocus() events...
+</dl>
+<p>
+<a name="grabFocus(awt.DisplayItem)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="grabFocus">
+<b>
+grabFocus
+</b>
+</a>
+<pre>
+  public void grabFocus(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> item)
+</pre>
+<dl>
+<dd>
+An item sends us this message to ask for the focus
+</dl>
+<p>
+<a name="nextFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nextFocus">
+<b>
+nextFocus
+</b>
+</a>
+<pre>
+  public void nextFocus()
+</pre>
+<dl>
+<dd>
+Advance the focus to the next item in the list
+</dl>
+<p>
+<a name="prevFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="prevFocus">
+<b>
+prevFocus
+</b>
+</a>
+<pre>
+  public void prevFocus()
+</pre>
+<dl>
+<dd>
+Back-up the focus to the previous item in the list
+</dl>
+<p>
+<a name="resetFocus()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resetFocus">
+<b>
+resetFocus
+</b>
+</a>
+<pre>
+  public void resetFocus()
+</pre>
+<dl>
+<dd>
+Reset the focus to the first item in the list
+</dl>
+<p>
+<a name="currentFocusItem()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="currentFocusItem">
+<b>
+currentFocusItem
+</b>
+</a>
+<pre>
+  public <a href="awt.DisplayItem.html#_top_">DisplayItem</a> currentFocusItem()
+</pre>
+<dl>
+<dd>
+Return the item which currently has the input focus,
+ or 0 if there is no item with the input focus.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FlowLayout.html#_top_">Previous</a>    <a href="awt.Font.html#_top_">Next</a></pre>
+</body>
+</html>

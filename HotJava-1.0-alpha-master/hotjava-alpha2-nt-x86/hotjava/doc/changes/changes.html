@@ -1,0 +1,168 @@
+<html>
+<head><title>Changes Since the Last Release</title></head>
+
+<body>
+<h1><img src="../../demo/images/wrlogo.gif"></h1>
+<img src="../../demo/images/bar.gif">
+<br>
+<b>Version 1.0 alpha2</b>
+
+<h1>Changes Since the Last Release</h1>
+The current (alpha2) release of HotJava
+fixes many bugs and adds many features.
+This page lists the ones that you might notice.
+First, it lists the changes that HotJava 
+<a href="#User">users</a> might notice.
+Then it lists the changes that only 
+<a href="#Programmer">programmers</A> would notice.
+<p>
+
+<a name=User><h2>Changes Visible to HotJava Users</h2></A>
+
+This release adds many features to HotJava. 
+HotJava can display a greater variety of documents than before,
+due to improved protocol support, 
+support for many Netscape extensions to HTML,
+and the elimination of many formatting and behavior bugs.
+The new Goto menu and History dialog make revisiting URLs easier.
+Other major changes to HotJava include
+support for printing and
+better security.
+<P>
+
+Details of the alpha2 changes to HotJava are listed below.
+For information on how to use the menu options and dialogs,
+refer to the 
+<A Href="../using.html">HotJava User's Guide</A>.
+<P>
+
+<ul>
+<li> HotJava now supports the news: and mailto: protocols,
+     and support for the ftp: protocol has been improved
+     (you can now browse ftp directories).
+<li> HotJava now supports HTTP authentication.
+<li> The Print command (in the File menu) is now implemented.
+<li> A new dialog lets you override certain permission errors.
+<li> Links are now displayed in two colors --
+     dark blue for links to URLs that you've visited
+     since starting up HotJava this time, 
+     and brighter blue for unvisited URLs.
+<li> The new Goto menu lets you easily visit a small set of URLs.
+<li> A new History dialog, accessible from the Navigate menu, 
+     shows (and lets you revisit) every URL
+     that you've visited since starting up HotJava.
+<li> You can tear off menus, so that they stay on-screen.
+<li> Document searches now ignore the following words
+     (reducing the size of HotJava's document index
+     and improving the likelihood of searches returning meaningful results):
+     a, an, and, as, at, be, but, by, do, for, from, have, he, in, it, not, of,
+     on, or, she, that, the, there, to, we, which, with, you.
+<li> Images are now scaled, if necessary,
+     so that they fit entirely in the boundaries
+     described by the WIDTH and HEIGHT attributes of the IMG tag.
+<li> HotJava supports more Netscape extensions to HTML.
+     Specifically:  
+     <ul>
+     <li> the PROMPT attribute of ISINDEX
+     <li> the SIZE, WIDTH, ALIGN, and NOSHADE attributes of HR
+     <li> some new values (TEXTTOP, ABSMIDDLE, BASELINE, ABSBOTTOM)
+	  for the ALIGN attribute of IMG
+     <li> the BORDER attribute of IMG
+     <li> centering (&lt;CENTER&gt; and &lt;/CENTER&gt;) 
+     <li> the escape sequences for &reg; (&amp;reg;) and &copy; (&amp;copy;) 
+     </ul>
+<li> HotJava's layout has changed in the following ways:
+     <ul>
+     <li> The document title is now in the titlebar (not below it).
+     <li> We've removed the rotating advertising display
+          (which was in the upper right corner of the HotJava window).
+     <li> We've reorganized the Properties and Search windows.
+     <li> Menus now have separator lines (for clarity).
+     <li> HotJava has a new icon
+          (featuring our mascot, Duke).
+     </ul>
+<li> A <A href="../../demo/hangman.html">Hangman demo</A> has been added.
+<li> The documentation has been updated
+     to reflect the changes made in alpha2,
+     and the following new documents have been added:
+     <ul>
+     <li> <a href="../compatibility/compatibility.html">HotJava Applet Compatibility</A>
+     <li> <a href="../security/security.html">Security</A>
+     </ul>
+</ul>
+
+<a name=Programmer><h2>Changes Visible to Programmers</h2></a>
+The most noticeable change is probably that
+the name of the language has changed from "O.A.K." to "Java".
+Other changes are improved layout capabilities, 
+the implementation of
+<a href="../javaspec/javaspec_5.html">finalization</a>,
+changes to the way applets can display, and
+the addition of many <A Href="../security/security.html">security</A> features.
+Despite these changes, 
+alpha1 applets run under alpha2 with no recompilation.
+See
+<a href="../compatibility/compatibility.html">HotJava Applet Compatibility</A>
+for information on changes expected in the future.
+<P>
+
+Details of the alpha2 changes are listed below.
+For more details on the API,
+refer to
+<A Href="../api/packages.html">The Java Class API</A>.
+For information on the compiler and interpreter,
+refer to the <a href="../man/index.html">man pages</a>.
+<P>
+
+<ul>
+<li> As a result of the language name changing from "O.A.K." to "Java",
+     the following changes have occurred:
+    <ul>
+    <li> The compiler name has changed to <strong>javac</strong>
+	 (from oakc).
+    <li> The interpreter name has changed to <strong>java</strong>
+	 (from oaki).
+    <li> The source file extension has changed to <strong>.java</strong>
+	 (from .oak).
+    </ul>
+<li> We've fixed many minor Java compiler and interpreter bugs.
+<li> Applets can now perform incremental updates of the display,
+     using Applet's update() method.
+<li> Applet images now have a new data/view scheme, 
+     using the classes Observable and Observer.
+<li> We've added the following classes and interfaces:
+     <dl>
+     <dt> In awt package:
+     <dd> Column, ColumnLayout, DIWUpdateRequest, Dialog,
+	  DialogHandler, FontSpec, GenericGraphics, 
+          MessageDialog, PSGraphics, Row, RowLayout, 
+          Space, StringDialog
+
+     <dt> In java.io:
+     <dd> AccessErrorHandler, InputStreamStringBuffer, 
+	  PipedInputStream, PipedOutputStream, StreamTokenizer
+
+     <dt> In java.lang:
+     <dd> IllegalAccessException, Ref, ThreadDeath, 
+          UnloadableClassException
+
+     <dt> In net:
+     <dd> InetAddress, ProtocolException, Socket
+
+     <dt> In net.www.http:
+     <dd> AuthenticationInfo, UnauthorizedHttpRequestException
+
+     <dt> In hotjava:
+     <dd> Alignable, DocumentManager, DocumentRef, 
+	  HistoryVector, ImageCache, ImageHandle,
+	  Observable, Observer, ObserverList, URLHistory, WRFormatter
+    </dl>
+</ul>
+
+<hr>
+<address>
+<a href="http://www.sun.com/"><IMG SRC="../../demo/images/sun.gif" align=top></a>
+Address your questions or comments to java@java.sun.com
+</address>
+</body>
+</html>

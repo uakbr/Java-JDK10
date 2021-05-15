@@ -1,0 +1,350 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.BitSet
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.BASE64Encoder.html#_top_">Previous</a>    <a href="java.util.CRC16.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.BitSet
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.BitSet
+</pre>
+<hr>
+<dl>
+<dt>
+public final class <b>
+BitSet</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A set of bits. The set is automatically grown as more bits are
+needed. 
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.2, 20 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BitSet()"><b>BitSet</b></a>()
+<dd>
+Create an empty set.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BitSet(int)"><b>BitSet</b></a>(int)
+<dd>
+Create an empty set of a know size.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#and(java.util.BitSet)"><b>and</b></a>(BitSet)
+<dd>
+Logical AND with another set of bits.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clear(int)"><b>clear</b></a>(int)
+<dd>
+Clear a bit.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clone()"><b>clone</b></a>()
+<dd>
+Clone
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#equals(java.util.BitSet)"><b>equals</b></a>(BitSet)
+<dd>
+Compare two bit sets.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#equals(java.lang.Object)"><b>equals</b></a>(Object)
+<dd>
+Compare against an object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#get(int)"><b>get</b></a>(int)
+<dd>
+Get a bit.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#or(java.util.BitSet)"><b>or</b></a>(BitSet)
+<dd>
+Logical OR with another set of bits.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#set(int)"><b>set</b></a>(int)
+<dd>
+Set a bit.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#size()"><b>size</b></a>()
+<dd>
+Size, returns the number of bits.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Convert to a string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#xor(java.util.BitSet)"><b>xor</b></a>(BitSet)
+<dd>
+Logical XOR with another set of bits.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="BitSet"></a>
+<a name="BitSet()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BitSet
+</b>
+<pre>
+  public BitSet()
+</pre>
+<dl>
+<dd>
+Create an empty set.
+</dl>
+<p>
+<a name="BitSet(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BitSet
+</b>
+<pre>
+  public BitSet(int nbits)
+</pre>
+<dl>
+<dd>
+Create an empty set of a know size.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="set(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="set">
+<b>
+set
+</b>
+</a>
+<pre>
+  public void set(int bit)
+</pre>
+<dl>
+<dd>
+Set a bit.
+</dl>
+<p>
+<a name="clear(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clear">
+<b>
+clear
+</b>
+</a>
+<pre>
+  public void clear(int bit)
+</pre>
+<dl>
+<dd>
+Clear a bit.
+</dl>
+<p>
+<a name="get(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="get">
+<b>
+get
+</b>
+</a>
+<pre>
+  public boolean get(int bit)
+</pre>
+<dl>
+<dd>
+Get a bit.
+</dl>
+<p>
+<a name="and(java.util.BitSet)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="and">
+<b>
+and
+</b>
+</a>
+<pre>
+  public void and(<a href="#_top_">BitSet</a> set)
+</pre>
+<dl>
+<dd>
+Logical AND with another set of bits.
+</dl>
+<p>
+<a name="or(java.util.BitSet)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="or">
+<b>
+or
+</b>
+</a>
+<pre>
+  public void or(<a href="#_top_">BitSet</a> set)
+</pre>
+<dl>
+<dd>
+Logical OR with another set of bits.
+</dl>
+<p>
+<a name="xor(java.util.BitSet)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="xor">
+<b>
+xor
+</b>
+</a>
+<pre>
+  public void xor(<a href="#_top_">BitSet</a> set)
+</pre>
+<dl>
+<dd>
+Logical XOR with another set of bits.
+</dl>
+<p>
+<a name="equals(java.util.BitSet)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="equals">
+<b>
+equals
+</b>
+</a>
+<pre>
+  public boolean equals(<a href="#_top_">BitSet</a> set)
+</pre>
+<dl>
+<dd>
+Compare two bit sets.
+</dl>
+<p>
+<a name="size()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="size">
+<b>
+size
+</b>
+</a>
+<pre>
+  public int size()
+</pre>
+<dl>
+<dd>
+Size, returns the number of bits.
+</dl>
+<p>
+<a name="equals(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="equals">
+<b>
+equals
+</b>
+</a>
+<pre>
+  public boolean equals(<a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Compare against an object.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#equals(java.lang.Object)">equals</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="clone()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clone">
+<b>
+clone
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> clone()
+</pre>
+<dl>
+<dd>
+Clone
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#clone()">clone</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Convert to a string.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.BASE64Encoder.html#_top_">Previous</a>    <a href="java.util.CRC16.html#_top_">Next</a></pre>
+</body>
+</html>

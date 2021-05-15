@@ -1,0 +1,316 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.InputStreamStringBuffer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.InputStreamSequence.html#_top_">Previous</a>    <a href="java.io.OutputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.InputStreamStringBuffer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----java.io.InputStreamStringBuffer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+InputStreamStringBuffer</b>
+<dt>
+extends <a href="java.io.InputStream.html#_top_">InputStream</a>
+</dl>
+This class implements a String buffer that can be
+used as an InputStream. 
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.11, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#count">count</a>
+</b>
+<dd>
+The number of characters to use in the buffer.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#pos">pos</a>
+</b>
+<dd>
+The position in the buffer.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#InputStreamStringBuffer(java.lang.String)"><b>InputStreamStringBuffer</b></a>(String)
+<dd>
+Creates an InputStreamStringBuffer, given an array of bytes.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#available()"><b>available</b></a>()
+<dd>
+Returns the number of available bytes in the buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Reads a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+Reads into an array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+Resets the buffer to the beginning.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#skip(int)"><b>skip</b></a>(int)
+<dd>
+Skips bytes of input.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="pos">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+pos
+</b>
+<pre>
+  protected int pos
+</pre>
+<dl>
+<dd>
+The position in the buffer.
+</dl>
+<a name="count">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+count
+</b>
+<pre>
+  protected int count
+</pre>
+<dl>
+<dd>
+The number of characters to use in the buffer.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="InputStreamStringBuffer"></a>
+<a name="InputStreamStringBuffer(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+InputStreamStringBuffer
+</b>
+<pre>
+  public InputStreamStringBuffer(<a href="java.lang.String.html#_top_">String</a> s)
+</pre>
+<dl>
+<dd>
+Creates an InputStreamStringBuffer, given an array of bytes.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+buf
+-
+	the input buffer (not copied)
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public synchronized int read()
+</pre>
+<dl>
+<dd>
+Reads a byte.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the byte read, or -1 if the end of the
+		stream is reached.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read()">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public synchronized int read(byte b[],
+                               int off,
+                               int len)
+</pre>
+<dl>
+<dd>
+Reads into an array of bytes.
+For efficiency, this method should be overridden in a 
+subclass (the default implementation reads 1 byte
+at a time).
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dd>
+off
+-
+ the start offset of the data
+<dd>
+len
+-
+ the maximum number of bytes read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read; -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="skip(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="skip">
+<b>
+skip
+</b>
+</a>
+<pre>
+  public synchronized int skip(int n)
+</pre>
+<dl>
+<dd>
+Skips bytes of input.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+n
+-
+ 	bytes to be skipped
+<dt>
+<b>Returns:</b>
+<dd>
+actual number of bytes skipped
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#skip(int)">skip</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="available()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="available">
+<b>
+available
+</b>
+</a>
+<pre>
+  public synchronized int available()
+</pre>
+<dl>
+<dd>
+Returns the number of available bytes in the buffer.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the number of available bytes
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#available()">available</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  public synchronized void reset()
+</pre>
+<dl>
+<dd>
+Resets the buffer to the beginning.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#reset()">reset</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.InputStreamSequence.html#_top_">Previous</a>    <a href="java.io.OutputStream.html#_top_">Next</a></pre>
+</body>
+</html>

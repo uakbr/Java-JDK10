@@ -1,0 +1,521 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.TextField
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.TextDisplayItem.html#_top_">Previous</a>    <a href="awt.TextWindow.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.TextField
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.TextField
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+TextField</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+</dl>
+TextField is a gui element that allows a single line of text input.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.21 28 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#echoChar">echoChar</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#echoSet">echoSet</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#editable">editable</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TextField(java.lang.String, java.lang.String, awt.Container, boolean)"><b>TextField</b></a>(String, String, Container, boolean)
+<dd>
+Constructs a TextField.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this TextField, rendering it useless.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Returns the preferred size of this TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getText()"><b>getText</b></a>()
+<dd>
+Returns the text contained in this TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Shows this TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves this TextField to x,y
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this TextField to the given dimensions.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#selected()"><b>selected</b></a>()
+<dd>
+Override this method to take action when the user hits return
+after entering a value in the TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setBackColor(awt.Color)"><b>setBackColor</b></a>(Color)
+<dd>
+Sets the color of this TextField's background.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setColor(awt.Color)"><b>setColor</b></a>(Color)
+<dd>
+Sets the color of the text in this TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setEchoCharacter(char)"><b>setEchoCharacter</b></a>(char)
+<dd>
+Sets the echo character for this TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setEditable(boolean)"><b>setEditable</b></a>(boolean)
+<dd>
+Sets whether or not this TextField should be editable.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFont(awt.Font)"><b>setFont</b></a>(Font)
+<dd>
+Sets the font for this TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setHFill(boolean)"><b>setHFill</b></a>(boolean)
+<dd>
+If t is true then this TextField will stretch horizontally to
+the width of its container.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setText(java.lang.String)"><b>setText</b></a>(String)
+<dd>
+Sets the text of this TextField.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this TextField.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="echoSet">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+echoSet
+</b>
+<pre>
+  public boolean echoSet
+</pre>
+<a name="echoChar">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+echoChar
+</b>
+<pre>
+  public char echoChar
+</pre>
+<a name="editable">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+editable
+</b>
+<pre>
+  public boolean editable
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="TextField"></a>
+<a name="TextField(java.lang.String, java.lang.String, awt.Container, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TextField
+</b>
+<pre>
+  public TextField(<a href="java.lang.String.html#_top_">String</a> initValue,
+                   <a href="java.lang.String.html#_top_">String</a> pName,
+                   <a href="awt.Container.html#_top_">Container</a> p,
+                   boolean editable)
+</pre>
+<dl>
+<dd>
+Constructs a TextField.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+initValue
+-
+ is the initial value of the field. It may be null.
+<dd>
+pName
+-
+ is the name of this component.
+<dd>
+p
+-
+ is the parent window of this TextField.
+<dd>
+editable
+-
+ is true if this TextField should allow editing.
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setHFill(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setHFill">
+<b>
+setHFill
+</b>
+</a>
+<pre>
+  public void setHFill(boolean t)
+</pre>
+<dl>
+<dd>
+If t is true then this TextField will stretch horizontally to
+the width of its container.
+</dl>
+<p>
+<a name="setFont(awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFont">
+<b>
+setFont
+</b>
+</a>
+<pre>
+  public void setFont(<a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<dl>
+<dd>
+Sets the font for this TextField.
+</dl>
+<p>
+<a name="setColor(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setColor">
+<b>
+setColor
+</b>
+</a>
+<pre>
+  public void setColor(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the color of the text in this TextField.
+</dl>
+<p>
+<a name="setBackColor(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setBackColor">
+<b>
+setBackColor
+</b>
+</a>
+<pre>
+  public void setBackColor(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the color of this TextField's background.
+</dl>
+<p>
+<a name="setEchoCharacter(char)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setEchoCharacter">
+<b>
+setEchoCharacter
+</b>
+</a>
+<pre>
+  public void setEchoCharacter(char c)
+</pre>
+<dl>
+<dd>
+Sets the echo character for this TextField. This is useful
+for fields where the user input shouldn't be echoed to the screen,
+as in the case of a TextField that represents a password.
+</dl>
+<p>
+<a name="setEditable(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setEditable">
+<b>
+setEditable
+</b>
+</a>
+<pre>
+  public void setEditable(boolean t)
+</pre>
+<dl>
+<dd>
+Sets whether or not this TextField should be editable.
+</dl>
+<p>
+<a name="setText(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setText">
+<b>
+setText
+</b>
+</a>
+<pre>
+  public void setText(<a href="java.lang.String.html#_top_">String</a> t)
+</pre>
+<dl>
+<dd>
+Sets the text of this TextField.
+</dl>
+<p>
+<a name="getText()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getText">
+<b>
+getText
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> getText()
+</pre>
+<dl>
+<dd>
+Returns the text contained in this TextField.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this TextField, rendering it useless.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int x,
+                   int y)
+</pre>
+<dl>
+<dd>
+Moves this TextField to x,y
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this TextField to the given dimensions.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Returns the preferred size of this TextField.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#getPreferredSize()">getPreferredSize</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Shows this TextField.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this TextField.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="selected()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="selected">
+<b>
+selected
+</b>
+</a>
+<pre>
+  public void selected()
+</pre>
+<dl>
+<dd>
+Override this method to take action when the user hits return
+after entering a value in the TextField.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.TextDisplayItem.html#_top_">Previous</a>    <a href="awt.TextWindow.html#_top_">Next</a></pre>
+</body>
+</html>

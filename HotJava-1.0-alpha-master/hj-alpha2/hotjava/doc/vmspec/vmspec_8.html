@@ -1,0 +1,46 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- The Java Stack</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING11></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_7.html">Prev</A>       <A HREF="vmspec_9.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>The Java Stack</H1>
+<DL>
+<DT><A HREF="vmspec_8.html#HEADING12"><B></B>  Local Variables</A><DD>
+<DT><A HREF="vmspec_8.html#HEADING13"><B></B>  Execution Environment</A><DD>
+<DT><A HREF="vmspec_8.html#HEADING14"><B></B>  Exceptions</A><DD>
+</DL>
+
+<HR>
+
+The Java virtual machine is a stack-based machine, and the Java stack is used to supply parameters for operations, receive return values, pass parameters to methods, etc. An Java stack frame is Java's equivalent to the stack frame of a conventional programming language. It implements the state associated with a single method invocation. Frames for nested method calls are stacked on the method invocation stack.<P>
+Each Java stack frame consists of three components, although at any given time one or more of the components may be empty:<P>
+<UL>
+<LI>the local variables<P>
+<LI>the execution environment<P>
+<LI>the operand stack<P>
+</UL>
+The size of the local variables and the execution environment are fixed on method call, while the operand stack varies as the method is being executed. Each of these components is discussed below.<P>
+<A NAME=HEADING12></A>
+<H3>Local Variables</H3>
+Each Java stack frame has a set of local variables. They are addressed as indices from the vars register, so are effectively an array. Local variables are all 32 bits wide. <P>
+Long integers and double precision floats are considered to take up two local variables but are addressed by the index of the first local variable (e.g. a local variable with index n containing a double precision float actually occupies storage at indices n and n+1). 64-bit values in local variables are not guaranteed to be 64-bit aligned. Implementors are free to decide the appropriate way to divide long integers and double precision floats into the two registers.<P>
+Instructions are provided to load the value of local variables values onto the operand stack and store values from the operand stack into local variables.<P>
+<A NAME=HEADING13></A>
+<H3>Execution Environment</H3>
+The execution environment is the component of the stack frame used to maintain the operations of the Java stack itself. It contains pointers to the previous frame as well as pointers to its own local variables and operand stack base and top. Additional per-invocation information (e.g. for debugging) belongs in the execution environment.<P>
+<A NAME=HEADING14></A>
+<H3>Exceptions</H3>
+Each Java method has a list of catch clauses associated with it. Each catch clause describes the instruction range for which it is active, the type of exception that it is to handle and has a chunk of code to handle it. When an exception is tossed, the catch list for the current method is searched for a match. An exception matches a catch clause if the instruction that caused the exception is in the appropriate instruction range, and the thrown exception is a subtype of the type of exception that the catch clause handles.<P>
+If a matcing catch clause is found, the system branches to the handler. If no handler is found, the current stack frame is popped and the exception is raised again.<P>
+The order of the catch clauses in the list is important. The interpreter branches to the first matching catch clause. <P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_7.html">Prev</A>       <A HREF="vmspec_9.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

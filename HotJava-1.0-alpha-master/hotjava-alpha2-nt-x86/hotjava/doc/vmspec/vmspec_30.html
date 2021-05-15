@@ -1,0 +1,91 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Method Invocation</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING185></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_29.html">Prev</A>       <A HREF="vmspec_31.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Method Invocation</H1>
+<DL>
+<DT><A HREF="vmspec_30.html#HEADING186"><B></B>  invokevirtual</A><DD>
+<DT><A HREF="vmspec_30.html#HEADING187"><B></B>  invokenonvirtual</A><DD>
+<DT><A HREF="vmspec_30.html#HEADING188"><B></B>  invokestatic</A><DD>
+<DT><A HREF="vmspec_30.html#HEADING189"><B></B>  invokeinterface</A><DD>
+</DL>
+
+<HR>
+
+There are four instructions that implement different flavors of method invocation. At first glance their descriptions look very similar but they are all slightly different. <P>
+<DL>
+<DT>invokevirtual
+<DD>Searches for a non-static method through an object instance, taking into account the runtime type of the object being referenced. It's behavior is similar to that of virtual methods in C++. 
+<DT>
+<DD>
+<DT>invokenonvirtual
+<DD>Searches for a non-static method beginning in a particular class. Behaves like non-virtual methods in C++. 
+<DT>
+<DD>
+<DT>invokestatic
+<DD>Searches for a static method in a particular class. 
+<DT>
+<DD>
+<DT>invokeinterface 
+<DD>Begins searching with the most derived class of the object, like invokemethod, but it does not presume to know which slot the method will be found in. It's behavior is similar to mutiply-inherited virtual methods in C++.
+</DL>
+<A NAME=HEADING186></A>
+<H3>invokevirtual</H3>
+Invoke class method<BR><IMG SRC="instructions_only_Tbl_21.gif"><BR>
+<P>
+<PRE>
+..., object, [arg1, [arg2 ...]], ... =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain a handle to an object or to an array and some number of arguments. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index in the constant pool contains the complete method signature. A pointer to the object's method table is retrieved from the object handle. The method signature is looked up in the the method table. The method signature is guaranteed to exactly match one of the method signatures in the table. <P>
+The result of the lookup is an index into the method table of the named class, where a pointer to the method block for the matched method is found. The method block indicates the type of method (native, synchronized, etc.) and the number of arguments (nargs) expected on the operand stack.<P>
+If the method is marked synchronized the monitor associated with handle is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to handle on the stack, making handle and the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<A NAME=HEADING187></A>
+<H3>invokenonvirtual</H3>
+Invoke non-virtual method<BR><IMG SRC="instructions_only_Tbl_26.gif"><BR>
+<P>
+<PRE>
+..., object, nargs, ... =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain a handle to an object and some number of arguments. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index in the constant pool contains the complete method signature. A pointer to the object's method table is retrieved from the object handle. The method signature is looked up in the the method table. The method signature is guaranteed to exactly match one of the method signatures in the table. <P>
+The result of the lookup is a method block. The method block indicates the type of method (native, synchronized, etc.) and the number of arguments (nargs) expected on the operand stack.<P>
+If the method is marked synchronized the monitor associated with handle is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to handle on the stack, making handle and the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<A NAME=HEADING188></A>
+<H3>invokestatic</H3>
+Invoke a static method<BR><IMG SRC="instructions_only_Tbl_158.gif"><BR>
+<P>
+<PRE>
+..., , nargs, ... =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain some number of arguments. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index in the constant pool contains the complete method signature and class. The method signature is looked up in the the method table of the class indicated. The method signature is guaranteed to exactly match one of the method signatures in the class's method table. <P>
+The result of the lookup is a method block. The method block indicates the type of method (native, synchronized, etc.) and the number of arguments (nargs) expected on the operand stack.<P>
+If the method is marked synchronized the monitor associated with the class is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to the first argument on the stack, making the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<A NAME=HEADING189></A>
+<H3>invokeinterface</H3>
+Invoke interface method<BR><IMG SRC="instructions_only_Tbl_39.gif"><BR>
+<P>
+<PRE>
+..., object, [arg1, [arg2 ...]], ... =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain a handle to an object and nargs-1 arguments. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index in the constant pool contains the complete method signature. A pointer to the object's method table is retrieved from the object handle. The method signature is looked up in the method table. The method signature is guaranteed to exactly match one of the method signatures in the table. <P>
+The result of the lookup is a method block. The method block indicates the type of method (native, synchronized, etc.) but unlike invokemethod and invokesuper, the number of available arguments (nargs) is taken from the bytecode. <P>
+If the method is marked synchronized the monitor associated with handle is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to handle on the stack, making handle and the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_29.html">Prev</A>       <A HREF="vmspec_31.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

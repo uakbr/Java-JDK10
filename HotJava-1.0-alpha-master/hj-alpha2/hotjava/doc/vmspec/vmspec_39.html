@@ -1,0 +1,215 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: Class File Format- Methods</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING237></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_38.html">Prev</A>       <A HREF="vmspec_40.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+<HR>
+<H2>Class File Format</H2>
+<HR>
+<H1>Methods</H1>
+<DL>
+<DT><A HREF="vmspec_39.html#HEADING238"><B></B>  access_flags</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING239"><B></B>  name_index</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING240"><B></B>  signature_index</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING241"><B></B>  attributes_count</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING242"><B></B>  attributes</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING243"><B></B>  Code Attribute</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING244"><B></B>  attribute_name_index</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING245"><B></B>  attribute_length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING246"><B></B>  max_stack</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING247"><B></B>  max_locals</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING248"><B></B>  code_length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING249"><B></B>  code</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING250"><B></B>  exception_table_length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING251"><B></B>  exception_table</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING252"><B></B>  start_pc, end_pc</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING253"><B></B>  handler_pc</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING254"><B></B>  catch_type</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING255"><B></B>  attributes_count</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING256"><B></B>  attributes</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING257"><B></B>  Line Number Table Attribute</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING258"><B></B>  attribute_name_index</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING259"><B></B>  attribute_length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING260"><B></B>  line_number_table_length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING261"><B></B>  line_number_table</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING262"><B></B>  start_pc</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING263"><B></B>  line_number</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING264"><B></B>  Local Variable Table Attribute</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING265"><B></B>  attribute_name_index</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING266"><B></B>  attribute_length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING267"><B></B>  local_variable_table_length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING268"><B></B>  line_number_table</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING269"><B></B>  start_pc, length</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING270"><B></B>  name_index, signature_index</A><DD>
+<DT><A HREF="vmspec_39.html#HEADING271"><B></B>  slot</A><DD>
+</DL>
+
+<HR>
+
+The information for each method immediately follows the method_count field in the class file. Each method is described by a variable length method_info structure. The structure has the following format:<P>
+<PRE>
+<CODE>method_info {</CODE><P>
+<CODE>	u2	access_flags;</CODE><P>
+<CODE>	u2	name_index;</CODE><P>
+<CODE>	u2	signature_index;</CODE><P>
+<CODE>	u2	attributes_count;</CODE><P>
+<CODE>	attribute_info 	attributes[attribute_count];</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING238></A>
+<H3>access_flags</H3>
+This is a set of sixteen flags used by classes, methods, and fields to describe various properties and how they many be accessed by methods in other classes. See the table "Access Flags" on page 53</A> which gives the various bits in this field.<P>
+The possible fields that can be set for a method are ACC_PUBLIC, ACC_PRIVATE, ACC_PROTECTED, ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED, ACC_NATIVE, and ACC_ABSTRACT.<P>
+At most one of ACC_PUBLIC and ACC_PRIVATE can be set for any method.<P>
+<A NAME=HEADING239></A>
+<H3>name_index</H3>
+constant_pool[name_index] is a string giving the name of the method.<P>
+<A NAME=HEADING240></A>
+<H3>signature_index</H3>
+constant_pool[signature_index]is a string giving the signature of the field. See the section "Signatures" for more information on signatures.<P>
+<A NAME=HEADING241></A>
+<H3>attributes_count</H3>
+This value gives the number of additional attributes about this field.<P>
+<A NAME=HEADING242></A>
+<H3>attributes</H3>
+A field can have any number of optional attributes associated with it. Each attribute has a name, and other additional information. Currently, the only field attribute recognized is the "Code" attribute, which describes the virtual bytecode that can be executed to perform this method.<P>
+Any other attributes are skipped.<P>
+<A NAME=HEADING243></A>
+<H3>Code Attribute</H3>
+The "Code" attribute has the following format:<P>
+<PRE>
+<CODE>Code_attribute {</CODE><P>
+<CODE>	u2	attribute_name_index;</CODE><P>
+<CODE>	u2	attribute_length;</CODE><P>
+<CODE>	u1	max_stack;</CODE><P>
+<CODE>	u1	max_locals;</CODE><P>
+<CODE>	u2	code_length;</CODE><P>
+<CODE>	u1	code[code_length];</CODE><P>
+<CODE>	u2	exception_table_length;</CODE><P>
+<CODE>	{  u2 	   start_pc;</CODE><P>
+<CODE>	   u2	   end_pc;</CODE><P>
+<CODE>	   u2	   handler_pc;</CODE><P>
+<CODE>	   u2	   catch_type;</CODE><P>
+<CODE>	} 	exception_table[exception_table_length];</CODE><P>
+<CODE>	u2	attributes_count;</CODE><P>
+<CODE>	attribute_info	attributes[attribute_count];</CODE><P>
+<CODE></CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING244></A>
+<H3>attribute_name_index</H3>
+ constant_pool[attribute_name_index] is the string "Code."<P>
+<A NAME=HEADING245></A>
+<H3>attribute_length</H3>
+This field gives the total length of the "Code" attribute, excluding the initial four bytes.<P>
+<A NAME=HEADING246></A>
+<H3>max_stack</H3>
+Maximum number of entries on the operand stack that will be used during execution of this method. See the other chapters in this spec for more information on the operand stack.<P>
+<A NAME=HEADING247></A>
+<H3>max_locals</H3>
+Number of local variable slots used by this method. See the other chapters in this spec for more information on the local variables.<P>
+<A NAME=HEADING248></A>
+<H3>code_length</H3>
+The number of bytes in the virtual machine code for this method.<P>
+<A NAME=HEADING249></A>
+<H3>code</H3>
+These are the actual bytes of the virtual machine code that implement the method. When read into memory, the first byte of code must be aligned onto a multiple-of-four boundary. See the definitions of the the opcodes "tableswitch" and "tablelookup" for more information on alignment requirements.<P>
+<A NAME=HEADING250></A>
+<H3>exception_table_length</H3>
+The number of entries in the following exception table.<P>
+<A NAME=HEADING251></A>
+<H3>exception_table</H3>
+Each entry in the exception table describes one exception handler in the code. <P>
+<A NAME=HEADING252></A>
+<H3>start_pc, end_pc</H3>
+The two fields start_pc and end_pc give the ranges in the code at which the exception handler is active. The values of both fields are offsets from the start of the code. start_pc is inclusive. end_pc is exclusive.<P>
+<A NAME=HEADING253></A>
+<H3>handler_pc</H3>
+This field gives the starting address of the exception handler. The value of the field is an offset from the start of the code.<P>
+<A NAME=HEADING254></A>
+<H3>catch_type</H3>
+If catch_type is non-zero, then constant_pool[catch_type] will be the class of exceptions that this exception handler is designated to catch. This exception handler should only be called if the thrown exception is an instance of the given class.<P>
+If catch_type is zero, this exception handler should be called for all exceptions.<P>
+<A NAME=HEADING255></A>
+<H3>attributes_count</H3>
+This value gives the number of additional attributes about code. The "Code" attribute can itself have attributes. <P>
+<A NAME=HEADING256></A>
+<H3>attributes</H3>
+A "Code" attribute can have any number of optional attributes associated with it. Each attribute has a name, and other additional information. Currently, the only code attributes recognized are the "LineNumberTable" and "LocalVariableTable," both of which contain debugging information.<P>
+Any other attributes are skipped.<P>
+<A NAME=HEADING257></A>
+<H3>Line Number Table Attribute</H3>
+The Line Number Table is used by debuggers and the exception handler to determine which part of the virtual machine code corresponds to a given location in the source. The LineNumberTable_attribute has the following format:<P>
+<PRE>
+<CODE>LineNumberTable_attribute {</CODE><P>
+<CODE>	u2		attribute_name_index;</CODE><P>
+<CODE>	u2		attribute_length;</CODE><P>
+<CODE>	u2		line_number_table_length;</CODE><P>
+<CODE>	{  u2 	   		start_pc;	   </CODE><P>
+<CODE>		u2	   line_number;</CODE><P>
+<CODE>	}		line_number_table[line_number_table_length];</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING258></A>
+<H3>attribute_name_index</H3>
+ constant_pool[attribute_name_index] will be the string "LineNumberTable."<P>
+<A NAME=HEADING259></A>
+<H3>attribute_length</H3>
+This field gives the total length of the LineNumberTable_attribute, excluding the initial four bytes.<P>
+<A NAME=HEADING260></A>
+<H3>line_number_table_length</H3>
+This field gives the number of entries in the following line number table.<P>
+<A NAME=HEADING261></A>
+<H3>line_number_table</H3>
+Each entry in the line number table indicates that the line number in the source file changes at a given point in the code.<P>
+<A NAME=HEADING262></A>
+<H3>start_pc</H3>
+This field indicates the place in the code at which the code for a new line in the source begins. source_pc is an offset from the beginning of the code.<P>
+<A NAME=HEADING263></A>
+<H3>line_number</H3>
+The line number that begins at the given location in the file.<P>
+<A NAME=HEADING264></A>
+<H3>Local Variable Table Attribute</H3>
+The Local Variable Table is used by debuggers to determine the value of a given local variable during the dynamic execution of a method. The format of the LocalVariableTable_attribute is as follows:<P>
+<PRE>
+<CODE>LocalVariableTable_attribute {</CODE><P>
+<CODE>	u2	attribute_name_index;</CODE><P>
+<CODE>	u2	attribute_length;</CODE><P>
+<CODE>	u2	local_variable_table_length;</CODE><P>
+<CODE>	{  u2 	   start_pc;</CODE><P>
+<CODE>	   u2	   length;</CODE><P>
+<CODE>	   u2	   name_index;</CODE><P>
+<CODE>	   u2	   signature_index;</CODE><P>
+<CODE>	   u2	   slot;</CODE><P>
+<CODE>	} 	local_variable_table[local_variable_table_length];</CODE><P>
+<CODE>}	</CODE><P>
+</PRE>
+<A NAME=HEADING265></A>
+<H3>attribute_name_index</H3>
+ constant_pool[attribute_name_index] will be the string "LocalVariableTable."<P>
+<A NAME=HEADING266></A>
+<H3>attribute_length</H3>
+This field gives the total length of the LineNumberTable_attribute, excluding the initial four bytes.<P>
+<A NAME=HEADING267></A>
+<H3>local_variable_table_length</H3>
+This field gives the number of entries in the following local variable table.<P>
+<A NAME=HEADING268></A>
+<H3>line_number_table</H3>
+Each entry in the line number table indicates a code range during which a local variable has a value. It also indicates where on the stack the value of that variable can be found.<P>
+<A NAME=HEADING269></A>
+<H3>start_pc, length</H3>
+The given local variable will have a value at the code between start_pc and start_pc + length. The two values are both offsets from the beginning of the code.<P>
+<A NAME=HEADING270></A>
+<H3>name_index, signature_index</H3>
+ constant_pool[name_index]and constant_pool[signature_index] are strings giving the name and signature of the local variable. <P>
+<A NAME=HEADING271></A>
+<H3>slot</H3>
+The given variable will be the slotth local variable in the method's frame.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_38.html">Prev</A>       <A HREF="vmspec_40.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

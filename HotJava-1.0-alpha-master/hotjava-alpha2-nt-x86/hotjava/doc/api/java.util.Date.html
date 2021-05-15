@@ -1,0 +1,482 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.Date
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.ConditionLock.html#_top_">Previous</a>    <a href="java.util.Hashtable.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.Date
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.Date
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Date</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A wrapper for a date. This class lets you manipulate
+dates in a system independent way. To print today's
+date use:
+<pre>
+	Date d = new Date();
+	System.out.println("today = " + d);
+</pre>
+To find out what day I was born:
+<pre>
+	Date d = new Date(1963, 0, 16);
+	System.out.println("Day of the week: " + d.day());
+</pre>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.9, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Date()"><b>Date</b></a>()
+<dd>
+Creates today's date/time.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Date(int, int, int)"><b>Date</b></a>(int, int, int)
+<dd>
+Creates a date.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Date(int, int, int, int, int)"><b>Date</b></a>(int, int, int, int, int)
+<dd>
+Creates a date.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Date(int, int, int, int, int, int)"><b>Date</b></a>(int, int, int, int, int, int)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#after(java.util.Date)"><b>after</b></a>(Date)
+<dd>
+Checks whether  this date comes after another date.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#before(java.util.Date)"><b>before</b></a>(Date)
+<dd>
+Checks whether this date comes before another date.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#equals(java.lang.Object)"><b>equals</b></a>(Object)
+<dd>
+Compares this object against some other object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getDate()"><b>getDate</b></a>()
+<dd>
+Return the day of the month.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getDay()"><b>getDay</b></a>()
+<dd>
+Returns the day of the week.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getHours()"><b>getHours</b></a>()
+<dd>
+Returns the hour.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getMinutes()"><b>getMinutes</b></a>()
+<dd>
+Returns the minute.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getMonth()"><b>getMonth</b></a>()
+<dd>
+Returns the month.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getSeconds()"><b>getSeconds</b></a>()
+<dd>
+Returns the second.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getYear()"><b>getYear</b></a>()
+<dd>
+Returns the year.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hashCode()"><b>hashCode</b></a>()
+<dd>
+Computes a hashCode.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Converts a date to a string, using the host's conventions.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Date"></a>
+<a name="Date()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Date
+</b>
+<pre>
+  public Date()
+</pre>
+<dl>
+<dd>
+Creates today's date/time.
+</dl>
+<p>
+<a name="Date(int, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Date
+</b>
+<pre>
+  public Date(int year,
+              int month,
+              int date)
+</pre>
+<dl>
+<dd>
+Creates a date. 
+The fields are normalized before the Date object is created.
+The arguments do not have to be in the correct range. For example,
+the 32nd of January is correctly interpreted as the 1st of February.
+You can use this to figure out what day a particular date falls on.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+year
+-
+	a year after 1900
+<dd>
+month
+-
+	a month between 0-11
+<dd>
+date
+-
+	day of the month between 1-31
+</dl>
+</dl>
+<p>
+<a name="Date(int, int, int, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Date
+</b>
+<pre>
+  public Date(int year,
+              int month,
+              int date,
+              int hrs,
+              int min)
+</pre>
+<dl>
+<dd>
+Creates a date. 
+The fields are normalized before the Date object is created.
+The arguments do not have to be in the correct range. For example,
+the 32nd of January is correctly interpreted as the 1st of February.
+You can use this to figure out what day a particular date falls on.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+year
+-
+	a year after 1900
+<dd>
+month
+-
+	a month between 0-11
+<dd>
+date
+-
+	day of the month between 1-31
+<dd>
+hrs
+-
+		hours between 0-23
+<dd>
+min
+-
+		hours between 0-59
+</dl>
+</dl>
+<p>
+<a name="Date(int, int, int, int, int, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Date
+</b>
+<pre>
+  public Date(int year,
+              int month,
+              int date,
+              int hrs,
+              int min,
+              int sec)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getYear()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getYear">
+<b>
+getYear
+</b>
+</a>
+<pre>
+  public int getYear()
+</pre>
+<dl>
+<dd>
+Returns the year. ie: 1995...
+</dl>
+<p>
+<a name="getMonth()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getMonth">
+<b>
+getMonth
+</b>
+</a>
+<pre>
+  public int getMonth()
+</pre>
+<dl>
+<dd>
+Returns the month. ie: 0-11
+</dl>
+<p>
+<a name="getDate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getDate">
+<b>
+getDate
+</b>
+</a>
+<pre>
+  public int getDate()
+</pre>
+<dl>
+<dd>
+Return the day of the month. ie: 1-31
+</dl>
+<p>
+<a name="getDay()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getDay">
+<b>
+getDay
+</b>
+</a>
+<pre>
+  public int getDay()
+</pre>
+<dl>
+<dd>
+Returns the day of the week. ie: 0-6
+</dl>
+<p>
+<a name="getHours()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getHours">
+<b>
+getHours
+</b>
+</a>
+<pre>
+  public int getHours()
+</pre>
+<dl>
+<dd>
+Returns the hour. ie: 0-23
+</dl>
+<p>
+<a name="getMinutes()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getMinutes">
+<b>
+getMinutes
+</b>
+</a>
+<pre>
+  public int getMinutes()
+</pre>
+<dl>
+<dd>
+Returns the minute. ie: 0-59
+</dl>
+<p>
+<a name="getSeconds()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getSeconds">
+<b>
+getSeconds
+</b>
+</a>
+<pre>
+  public int getSeconds()
+</pre>
+<dl>
+<dd>
+Returns the second. ie: 0-59
+</dl>
+<p>
+<a name="before(java.util.Date)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="before">
+<b>
+before
+</b>
+</a>
+<pre>
+  public boolean before(<a href="#_top_">Date</a> when)
+</pre>
+<dl>
+<dd>
+Checks whether this date comes before another date.
+</dl>
+<p>
+<a name="after(java.util.Date)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="after">
+<b>
+after
+</b>
+</a>
+<pre>
+  public boolean after(<a href="#_top_">Date</a> when)
+</pre>
+<dl>
+<dd>
+Checks whether  this date comes after another date.
+</dl>
+<p>
+<a name="equals(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="equals">
+<b>
+equals
+</b>
+</a>
+<pre>
+  public boolean equals(<a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Compares this object against some other object.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+obj
+-
+		the object to compare with
+<dt>
+<b>Returns:</b>
+<dd>
+		true if the object is the same
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#equals(java.lang.Object)">equals</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="hashCode()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hashCode">
+<b>
+hashCode
+</b>
+</a>
+<pre>
+  public int hashCode()
+</pre>
+<dl>
+<dd>
+Computes a hashCode.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#hashCode()">hashCode</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Converts a date to a string, using the host's conventions.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.ConditionLock.html#_top_">Previous</a>    <a href="java.util.Hashtable.html#_top_">Next</a></pre>
+</body>
+</html>

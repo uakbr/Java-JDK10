@@ -1,0 +1,119 @@
+<html>
+<head> <title> Configuring HotJava Security</title> </head>
+
+<body>
+<h1> Configuring HotJava Security </h1>
+<img src="../demo/images/bar.gif">
+<p>
+
+This dialog lets you configure the network-related capabilities of applets.
+(An applet is interactive content written in the Java language
+and loaded over the network to execute inside your HotJava browser.
+See the <a href="overview/hotjava/index.html">HotJava
+White Paper</a> for an overview of interactive content and HotJava.)
+Applets greatly expand what's possible with the World Wide Web,
+but if their capabilities aren't restricted, 
+they can compromise your system's security.
+<p>
+
+Use this dialog to specify which hosts (computers)
+you want to protect 
+(by disallowing questionable applets from reading the hosts' documents)
+and which hosts you trust enough to load applets from.
+With a separate mechanism, you can control precisely
+which files on your system can be read by applets.
+(See the discussion of the HOTJAVA_READ_PATH environment variable
+in the <a href="man/hotjava.html">hotjava man page</a> for details.)
+<p>
+
+<strong>Note:</strong> 
+Applets in the alpha2 release are not allowed to
+write or change files in any way.
+<p>
+
+By default, HotJava loads all applets it encounters,
+but lets an applet read only those documents that are on 
+the host that supplied the applet.
+<p>
+
+The options you select in this dialog can be overridden
+by a <a href="SystemSecurityHelp.html">system security configuration</a>.
+By specifying a system security configuration,
+your system administrator can properly
+configure the security options according to the desired policies,
+freeing you and other users from having to do your own configuration.
+<p>
+
+<h2>UI Explanation</h2>
+
+<h3>Enter desired security mode</h3>
+This button lets you choose HotJava's <em>security mode</em>.
+This mode tells HotJava which set of URLs is
+accessible for a given applet. 
+<p>
+
+When selected, this button displays the following choices:
+<ul>
+<li>No access -- Disallows any applets from loading any documents via
+URLs, no matter where they come from.
+<li>Applet host -- Allows an applet to load documents only from the
+same place it came from.
+<li>Firewall -- Lets you specify a <em>firewall</em> 
+(a scope of hosts that you are willing to trust).
+Once you <a href="#Firewall">configure this firewall</a>, 
+applets that are inside the firewall
+can access any documents via URLs,
+but applets outside the firewall can access only those URLs
+that are also outside the firewall. 
+<li>Unrestricted -- Allows any applet to load any URL.
+</ul>
+
+<h3>Apply security mode to applet loading</h3>
+When this toggle button isn't selected,
+the security mode restricts only the set of URLs accessible to an applet.
+However, you may wish to disallow even loading any
+applets that are outside of the domain you trust.
+When selected, this toggle causes the following behavior
+(based on the security mode you selected):
+<p>
+
+<ul>
+<li>No access -- Disallows any applets from being loaded.
+This effectively limits HotJava to being a simple passive browser.
+<li>Applet host -- Allows only local applets to be loaded
+    (applets specified with a "file:" URL).
+<li>Firewall -- Allows only applets that are inside your firewall
+to be loaded.
+<li>Unrestricted -- Allows any applet to be loaded.
+</ul>
+
+<h3>Enter the kind of domain you're using</h3>
+Use this button to specify whether your network uses
+Sun's Network Information Services (NIS)
+or the Domain Naming Service (DNS).
+If you are unsure which service you are using,
+ask your system administrator.
+<p>
+
+<a name="Firewall"><h3>Configure firewall...</h3></a>
+This button allows you to 
+<a href="FirewallHelp.html>configure the firewall</a>.
+It is relevant only if you selected the "Firewall" security mode.
+<p>
+
+<h3>Apply</h3>
+This button applies and saves any changes you've specified.
+Note that some of the changes you make
+might not take effect if your system administrator has set up a
+<a href="SystemSecurityHelp.html">system security configuration</a>
+for HotJava,
+since you can't have security weaker than the system security configuration.
+
+<h3>Cancel</h3>
+This button cancels any changes and resets the dialog to the initial choices.
+
+<h3>Help</h3>
+This button brings up this page in HotJava.
+
+</body>
+

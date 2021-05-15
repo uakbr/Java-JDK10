@@ -1,0 +1,6025 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 4.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 4.0, for use with Frame 4.0 products
+% This ps_prolog file is Copyright (c) 1986-1993 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameBuilder and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to True, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (4.0) def 
+/FMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	FMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto
+	show FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(PostScript Lang. Ref. Man., 2nd Ed., H.2.4 says EPS must not call X              )
+	dup dup (X) search pop exch pop exch pop length 
+	4 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+/concatprocs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin 
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/FrameNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		setrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+FMLevel1 not { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} if
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				FMPColor graymode and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not FMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	FMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgrxfer FMLOCAL
+	/orggxfer FMLOCAL
+	/orgbxfer FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/orgrproc FMLOCAL
+	/orggproc FMLOCAL
+	/orgbproc FMLOCAL
+	/organgle FMLOCAL
+	/orgrangle FMLOCAL
+	/orggangle FMLOCAL
+	/orgbangle FMLOCAL
+	/orgfreq FMLOCAL
+	/orgrfreq FMLOCAL
+	/orggfreq FMLOCAL
+	/orgbfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/edown FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /FrameNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	FMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{{1 dict dup /PageSize [paperwidth paperheight]put setpagedevice}stopped
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		 {1 dict dup /ManualFeed manualfeed put setpagedevice } stopped pop }
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			FrameNegative {
+				1 1 4 { 
+					pop { 1 exch sub } concatprocs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		FrameNegative {
+			{ 1 exch sub } concatprocs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/pagesave FMLOCAL
+/orgmatrix FMLOCAL
+/landscape FMLOCAL
+/pwid FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/initmatrix {(initmatrix) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setPatternMode {
+	FMLevel1 {
+		/bwidth  exch def
+		/bpside  exch def
+		/bstring exch def
+		/onbits 0 def  /offbits 0 def
+		freq sangle landscape {90 add} if 
+			{/y exch def
+			 /x exch def
+			 /xindex x 1 add 2 div bpside mul cvi def
+			 /yindex y 1 add 2 div bpside mul cvi def
+			 bstring yindex bwidth mul xindex 8 idiv add get
+			 1 7 xindex 8 mod sub bitshift and 0 ne FrameNegative {not} if
+			 {/onbits  onbits  1 add def 1}
+			 {/offbits offbits 1 add def 0}
+			 ifelse
+			}
+			setscreen
+		offbits offbits onbits add div FrameNegative {1.0 exch sub} if
+		/FrameCurGray exch def
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		FMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode FMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode FMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+	/rad FMLOCAL
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+      dup dup
+      24 eq { pop pop 3 mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+FMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch concatprocs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def
+	FMLevel1 {	
+		colorsetup
+		/is w d wbytes string def
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is w d wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	FMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {ip} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/d 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris} {gis} {bis} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/d 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris gis bis w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(4.0) FMVERSION
+1 1 0 0 612 792 0 1 11 FMDOCUMENT
+0 0 /Palatino-Roman FMFONTDEFINE
+1 0 /Palatino-Italic FMFONTDEFINE
+2 0 /Palatino-Bold FMFONTDEFINE
+3 0 /Courier FMFONTDEFINE
+4 0 /Courier-Bold FMFONTDEFINE
+5 0 /Times-Roman FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "51" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (51) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 30 Q
+-1.5 (3) 54 700 S
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-1.5 (Class File Format) 81 700 S
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Important Note) 54 644.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+-0.31 (This chapter documents the Java class \336le format.  An important objective of Java as used in W) 54 626.33 P
+-0.31 (ebRunner is that) 465.54 626.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(alternative implementations of Java can exist and interact by sharing class \336les. For this to be possible, these) 54 616.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.2 (Java implementations must pr) 54 606.33 P
+-0.2 (ecisely implement the design given her) 186.85 606.33 P
+-0.2 (e.  Elements of the design not cover) 358.55 606.33 P
+-0.2 (ed by) 513.41 606.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(this document ar) 54 596.33 T
+(e not cr) 128.74 596.33 T
+(ucial to class \336le sharing and may be implemented as you choose.) 161.38 596.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Please contact us dir) 54 576.33 T
+(ectly with any questions about which design elements ar) 144.01 576.33 T
+(e essential to a modi\336ed or) 394.27 576.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(original Java implementation, or for help validating an Java implementation.) 54 566.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Overview) 54 531.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Class \336les ar) 54 513.33 T
+(e used to hold compiled versions of both Java classes and Java Interfaces. Compliant Java) 109.24 513.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(interpr) 54 503.33 T
+(eters must be capable of dealing with all class \336les that conform to the following speci\336cation.) 84.51 503.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.07 (An Java .class \336le consists of a str) 54 483.33 P
+-0.07 (eam of 8-bit bytes. All 16-bit and 32-bit quantities ar) 200.34 483.33 P
+-0.07 (e constr) 428.72 483.33 P
+-0.07 (ucted by r) 463.03 483.33 P
+-0.07 (eading) 507.38 483.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(in two or four 8-bit bytes, r) 54 473.33 T
+(espectively) 172.65 473.33 T
+(. The bytes ar) 220.89 473.33 T
+(e joined together in big-endian or) 279.78 473.33 T
+(der) 427.13 473.33 T
+(.) 441.24 473.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The class \336le format is described in terms similar to a C str) 54 453.33 T
+(uctur) 311.9 453.33 T
+(e. However) 335.43 453.33 T
+(, unlike a C str) 385.78 453.33 T
+(uctur) 449.76 453.33 T
+(e,) 473.29 453.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 90 433.33 T
+(Ther) 98.56 433.33 T
+(e is no \322padding\323 or \322alignment\323 between pieces of the str) 119.07 433.33 T
+(uctur) 377.65 433.33 T
+(e.) 401.18 433.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245 Each \336eld of the str) 90 417.33 T
+(uctur) 183.82 417.33 T
+(e may be of variable size.) 207.35 417.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245 An array may be of variable size. In this case, some \336eld prior to the array will give the array\325s) 90 401.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(dimension.) 90 391.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(W) 54 375.33 T
+(e use the types) 63.08 375.33 T
+3 F
+(u1, u2,) 130.66 375.33 T
+0 F
+(and) 178.66 375.33 T
+3 F
+( u4) 195.59 375.33 T
+0 F
+( to mean an unsigned one-, two-, or four) 213.59 375.33 T
+(-byte quantity) 391.64 375.33 T
+(, r) 452.94 375.33 T
+(espectively) 461.71 375.33 T
+(.) 509.95 375.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Attributes ar) 54 355.33 T
+(e used at several dif) 110.28 355.33 T
+(fer) 198 355.33 T
+(ent places in the class format. All attributes have the following format:) 209.89 355.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(GenericAttribute_info {) 90 335.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_name;) 126 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 315.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_length;) 126 315.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 305.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(info[attribute_length];) 126 305.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 295.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The) 54 275.33 T
+3 F
+(attribute_name) 73.24 275.33 T
+0 F
+( is a 16-bit index into the class\325s constant pool; the value of) 157.24 275.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[attribute_name]) 54 265.33 T
+0 F
+(will be a string giving the name of the attribute. The \336eld) 234 265.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.72 (attribute_length) 54 255.33 P
+0 F
+-0.3 ( gives the length of the subsequent information in bytes. This length does not include the) 150 255.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(four bytes of the) 54 245.33 T
+3 F
+(attribute_name) 128.81 245.33 T
+0 F
+( and) 212.81 245.33 T
+3 F
+(attribute_length) 234.74 245.33 T
+0 F
+(.) 330.74 245.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(In the following text, whenever we allow attributes, we give the name of the attributes that ar) 54 225.33 T
+(e curr) 466.51 225.33 T
+(ently) 491.99 225.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.34 (understood. In the futur) 54 215.33 P
+-0.34 (e, mor) 159.7 215.33 P
+-0.34 (e attributes will be added. Class \336le r) 187.21 215.33 P
+-0.34 (eaders ar) 348.38 215.33 P
+-0.34 (e expected to skip over and ignor) 388.19 215.33 P
+-0.34 (e) 533.05 215.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the information in any attributes that they do not understand.) 54 205.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "51" 1
+%%Page: "52" 2
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(52) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 469.01 29.33 T
+(ch 15, 19954) 487.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Format) 54 710.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(The following pseudo-str) 54 692.33 T
+(uctur) 165.78 692.33 T
+(e gives a top-level description of the format of a class \336le:) 189.31 692.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ClassFile {) 90 672.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 662.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(magic;) 126 662.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 652.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(version;) 126 652.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 642.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constant_pool_count;) 126 642.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(cp_info) 108 632.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constant_pool[constant_pool_count - 1];) 150 632.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 622.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(access_f) 126 622.33 T
+(lags;) 174 622.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 612.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(this_class;) 126 612.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 602.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(super_class;) 126 602.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 592.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(interfaces_count;) 126 592.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(interfaces[interfaces_count];) 126 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 572.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(f) 126 572.33 T
+(ields_count;) 132 572.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(f) 108 562.33 T
+(ield_info) 114 562.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(f) 168 562.33 T
+(ields[f) 174 562.33 T
+(ields_count];) 216 562.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(methods_count;) 126 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method_info) 108 542.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(methods[methods_count];) 174 542.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 532.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes_count;) 126 532.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_info) 108 522.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes[attribute_count];) 198 522.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 512.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(magic) 68.4 480.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld must have the value 0xCAFEBABE.) 90 464.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(version) 68.4 442.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld contains the version number of the Java compiler that pr) 90 426.33 T
+(oduced this class \336le.) 383.11 426.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Dif) 90 416.33 T
+(fer) 103.8 416.33 T
+(ent version numbers indicate incompatible changes to either the format of the class \336le) 115.69 416.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(or to the bytecodes.) 90 406.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The curr) 90 390.33 T
+(ent Java version number is 45.) 127.43 390.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(constant_pool_count) 68.4 368.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld indicates the number of entries in the constant pool table.) 90 352.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(constant_pool) 68.4 330.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The constant pool is an array of values. These values ar) 90 314.33 T
+(e the various string constants, class) 333.38 314.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(names, \336eld names, and others that ar) 90 304.33 T
+(e r) 257.78 304.33 T
+(eferr) 268.84 304.33 T
+(ed to by the class str) 289.47 304.33 T
+(uctur) 378.75 304.33 T
+(e or by the code.) 402.28 304.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[0) 90 288.33 T
+0 F
+(] is always unused. The values of) 180 288.33 T
+3 F
+(constant_pool) 328.7 288.33 T
+0 F
+(entries 1 thr) 412.7 288.33 T
+(ough) 465.31 288.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+-0.06 (constant_pool_count-1) 90 278.33 P
+0 F
+-0.03 ( ar) 216 278.33 P
+-0.03 (e described by the bytes that follow) 227.24 278.33 P
+-0.03 (. These bytes ar) 382.92 278.33 P
+-0.03 (e explained) 450.76 278.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(mor) 90 268.33 T
+(e fully in the section \322The Constant Pool.\323) 108.06 268.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "52" 2
+%%Page: "53" 3
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (53) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(access_f) 68.4 713.33 T
+(lags) 116.4 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld is a set of sixteen \337ags used by classes, methods, and \336elds to describe various) 90 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(pr) 90 687.33 T
+(operties of the \336eld, method, or class. The \337ags ar) 99.78 687.33 T
+(e also used to show how they can be) 318.61 687.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(accessed by methods in other classes. Below is a table of all the access \337ags. The \337ags that ar) 90 677.33 T
+(e) 496.01 677.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(used by classes ar) 90 667.33 T
+(e) 168.39 667.33 T
+3 F
+(ACC_PUBLIC) 175.68 667.33 T
+0 F
+(,) 235.68 667.33 T
+3 F
+(ACC_FINAL) 240.68 667.33 T
+0 F
+(, and) 294.68 667.33 T
+3 F
+(ACC_INTERFACE) 319.11 667.33 T
+0 F
+(.) 397.11 667.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(this_class) 68.4 391.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value is an index into the constant pool.) 90 375.33 T
+3 F
+(constant_pool[this_class]) 289.7 375.33 T
+0 F
+(must be a) 445.7 375.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class, and gives the index of this class in the constant pool.) 90 365.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(super_class) 68.4 343.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value is an index into the constant pool. If the value of) 90 327.33 T
+3 F
+(super_class) 353.44 327.33 T
+0 F
+( is non-zer) 419.44 327.33 T
+(o, then) 465.58 327.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[super_class]) 90 317.33 T
+0 F
+( must be a class, and gives the index of this class\325s) 246 317.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(super) 90 307.33 T
+(class in the constant pool.) 114.84 307.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If the value of) 90 291.33 T
+3 F
+(super_class) 153.74 291.33 T
+0 F
+( is zer) 219.74 291.33 T
+(o, then the class being de\336ned must be Object, and it has) 245.45 291.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(no super) 90 281.33 T
+(class.) 128.62 281.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(interfaces_count) 68.4 259.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld gives the number of interfaces that this class implements.) 90 243.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(interfaces) 68.4 221.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Each value in the array is an index into the constant pool. If an array value is non-zer) 90 205.33 T
+(o, then) 464.53 205.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[interfaces[) 90 195.33 T
+1 F
+(i) 240 195.33 T
+3 F
+(]], for 0 <=) 242.78 195.33 T
+1 11 Q
+(i) 320.78 195.33 T
+3 10 Q
+( < interfaces_count,) 323.84 195.33 T
+0 F
+(must be a) 449.84 195.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class, and gives the index of an interface that this class implements.) 90 185.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(f) 68.4 163.33 T
+(ields_count) 74.4 163.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value gives the number of instance variables, both static and dynamic, de\336ned by this) 90 147.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class. This array only includes those variables that ar) 90 137.33 T
+(e de\336ned explicitly by this class. It does) 322.55 137.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(not include those instance variables that ar) 90 127.33 T
+(e accessible fr) 278.49 127.33 T
+(om this class but ar) 338.67 127.33 T
+(e inherited fr) 423.61 127.33 T
+(om) 480.86 127.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(super classes.) 90 117.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(Flag Name) 95.21 641.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 209.1 641.33 T
+(alue) 215.77 641.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Meaning) 258.6 641.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Used By) 426.6 641.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_PUBLIC) 95.21 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0001) 209.1 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 258.6 623.33 T
+(isible to everyone) 265.27 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class, Method, V) 426.6 623.33 T
+(ariable) 501.28 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_PRIVATE) 95.21 605.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0002) 209.1 605.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 258.6 605.33 T
+(isible only to the de\336ning class) 265.27 605.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Method, V) 426.6 605.33 T
+(ariable) 472.8 605.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_PROTECTED) 95.21 587.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0004) 209.1 587.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 258.6 587.33 T
+(isible to subclasses) 265.27 587.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Method, V) 426.6 587.33 T
+(ariable) 472.8 587.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_STATIC) 95.21 569.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0008) 209.1 569.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 258.6 569.33 T
+(ariable or method is static) 264.9 569.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Method, V) 426.6 569.33 T
+(ariable) 472.8 569.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_FINAL) 95.21 551.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0010) 209.1 551.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(No further subclassing, overriding) 258.6 551.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class, Method, V) 426.6 551.33 T
+(ariable) 501.28 551.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_SYNCHRONIZED) 95.21 533.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0020) 209.1 533.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(W) 258.6 533.33 T
+(rap method call in monitor lock) 267.86 533.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Method) 426.6 533.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_THREADSAFE) 95.21 515.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0040) 209.1 515.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Can cache in r) 258.6 515.33 T
+(egisters) 321 515.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 426.6 515.33 T
+(ariable) 432.9 515.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_TRANSIENT) 95.21 497.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0080) 209.1 497.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Not written or r) 258.6 497.33 T
+(ead by the persis-) 328.64 497.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tent object manager) 258.6 487.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 426.6 497.33 T
+(ariable) 432.9 497.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_NATIVE) 95.21 469.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0100) 209.1 469.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Implemented in C) 258.6 469.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Method) 426.6 469.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_INTERFACE) 95.21 451.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0200) 209.1 451.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Is an interface) 258.6 451.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class) 426.6 451.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_ABSTRACT) 95.21 433.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(0x0400) 209.1 433.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(No de\336nition pr) 258.6 433.33 T
+(ovided) 330.28 433.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Method) 426.6 433.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(Access Flags) 286.54 413.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+89.21 651 89.21 427 2 L
+V
+2 H
+0 Z
+N
+203.1 653 203.1 425 2 L
+V
+0.5 H
+N
+252.6 653 252.6 425 2 L
+V
+N
+420.6 653 420.6 425 2 L
+V
+N
+540.79 651 540.79 427 2 L
+V
+2 H
+N
+88.21 652 541.79 652 2 L
+V
+N
+88.21 634 541.79 634 2 L
+V
+0.5 H
+N
+88.21 616 541.79 616 2 L
+V
+N
+88.21 598 541.79 598 2 L
+V
+N
+88.21 580 541.79 580 2 L
+V
+N
+88.21 562 541.79 562 2 L
+V
+N
+88.21 544 541.79 544 2 L
+V
+N
+88.21 526 541.79 526 2 L
+V
+N
+88.21 508 541.79 508 2 L
+V
+N
+88.21 480 541.79 480 2 L
+V
+N
+88.21 462 541.79 462 2 L
+V
+N
+88.21 444 541.79 444 2 L
+V
+N
+88.21 426 541.79 426 2 L
+V
+2 H
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "53" 3
+%%Page: "54" 4
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(54) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 469.01 29.33 T
+(ch 15, 19954) 487.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(f) 68.4 713.33 T
+(ields) 74.4 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Each value is a mor) 90 697.33 T
+(e complete description of a \336eld in the class. See the section \322Fields\323 for) 175.96 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(mor) 90 687.33 T
+(e information on the) 108.06 687.33 T
+3 F
+(f) 200.75 687.33 T
+(ield_info) 206.75 687.33 T
+0 F
+( str) 260.75 687.33 T
+(uctur) 274.62 687.33 T
+(e.) 298.15 687.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(methods_count) 68.4 665.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value gives the number of methods, both static and dynamic, de\336ned by this class. This) 90 649.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(array only includes those methods that ar) 90 639.33 T
+(e explicitly de\336ned by this class. It does not include) 273.65 639.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(inherited methods.) 90 629.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(methods) 68.4 607.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.14 (Each value is a mor) 90 591.33 P
+-0.14 (e complete description of a method in the class. See the section \322Methods\323) 175.4 591.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(for mor) 90 581.33 T
+(e information on the) 123.3 581.33 T
+3 F
+(method_info) 215.99 581.33 T
+0 F
+(str) 287.99 581.33 T
+(uctur) 299.36 581.33 T
+(e.) 322.89 581.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes_count) 68.4 559.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value gives the number of additional attributes about this class.) 90 543.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes) 68.4 521.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.24 (A class can have any number of optional attributes associated with it. Curr) 90 505.33 P
+-0.24 (ently) 416.77 505.33 P
+-0.24 (, the only class) 437.99 505.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (attribute r) 90 495.33 P
+-0.19 (ecognized is the \322Sour) 134.07 495.33 P
+-0.19 (ceFile\323 attribute, which gives the name of the sour) 232.4 495.33 P
+-0.19 (ce \336le fr) 452.71 495.33 P
+-0.19 (om) 487.4 495.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(which this class \336le was compiled.) 90 485.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Source File Attribute) 54 458 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(The \322Sour) 54 440.33 T
+(ceFile\323 attribute has the following format:) 98.75 440.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(SourceFile_attribute {) 90 420.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 410.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_name_index;) 126 410.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 400.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_length;) 126 400.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 390.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(sourcef) 126 390.33 T
+(ile_index;) 168 390.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 380.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_name_index) 68.4 358.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[attribute_name_index]) 90 342.33 T
+0 F
+( is the string \322Sour) 300 342.33 T
+(ceFile.\323) 382.27 342.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_length) 68.4 320.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The length of a Sour) 90 304.33 T
+(ceFile_attribute must be 2.) 179.2 304.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(sourcef) 68.4 282.33 T
+(ile_index) 110.4 282.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[sourcef) 90 266.33 T
+(ile_index]) 216 266.33 T
+0 F
+( is a string giving the sour) 276 266.33 T
+(ce \336le fr) 390.67 266.33 T
+(om which this) 425.75 266.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class \336le was compiled.) 90 256.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "54" 4
+%%Page: "55" 5
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (55) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Fields) 54 712 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+-0.23 (The information for each \336eld immediately follows the \336eld_count \336eld in the class \336le. Each \336eld is described) 54 694.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(by a variable length \336eld_info str) 54 684.33 T
+(uctur) 200.24 684.33 T
+(e. The format of this str) 223.77 684.33 T
+(uctur) 326.52 684.33 T
+(e is as follows:) 350.05 684.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(f) 90 664.33 T
+(ield_info {) 96 664.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 654.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(access_f) 126 654.33 T
+(lags;) 174 654.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_index;) 126 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 634.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(signature_index;) 126 634.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 624.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes_count;) 126 624.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_info) 108 614.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes[attribute_count];) 192 614.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 604.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(access_f) 68.4 582.33 T
+(lags) 116.4 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.19 (This is a set of sixteen \337ags used by classes, methods, and \336elds to describe various pr) 90 566.33 P
+-0.19 (operties) 466.28 566.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(and how they many be accessed by methods in other classes. See the table \322Access Flags\323 on) 90 556.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(page 53 which gives the meaning of the bits in this \336eld.) 90 546.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The possible \336elds that can be set for a \336eld ar) 90 530.33 T
+(e) 293.51 530.33 T
+3 F
+(ACC_PUBLIC) 300.8 530.33 T
+0 F
+(,) 360.8 530.33 T
+3 F
+(ACC_PRIVATE) 365.8 530.33 T
+0 F
+(,) 431.8 530.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_PROTECTED) 90 520.33 T
+0 F
+(,) 168 520.33 T
+3 F
+(ACC_STATIC) 173 520.33 T
+0 F
+(,) 233 520.33 T
+3 F
+(ACC_FINAL) 238 520.33 T
+0 F
+(,) 292 520.33 T
+3 F
+(ACC_THREADSAFE) 297 520.33 T
+0 F
+(, and) 381 520.33 T
+3 F
+(ACC_TRANSIENT.) 405.43 520.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(At most one of) 90 504.33 T
+3 F
+(ACC_PUBLIC) 157.69 504.33 T
+0 F
+( and) 217.69 504.33 T
+3 F
+(ACC_PRIVATE) 239.62 504.33 T
+0 F
+( can be set for any method.) 305.62 504.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(name_index) 68.4 482.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[name_index]) 90 466.33 T
+0 F
+( is a string which is the name of the \336eld.) 240 466.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(signature_index) 68.4 444.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[signature_index]) 90 428.33 T
+0 F
+( is a string which is the signatur) 270 428.33 T
+(e of the \336eld. See the) 410.33 428.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(section \322Signatur) 90 418.33 T
+(es\323 for mor) 166.02 418.33 T
+(e information on signatur) 215.85 418.33 T
+(es.) 328.76 418.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes_count) 68.4 396.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value gives the number of additional attributes about this \336eld.) 90 380.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes) 68.4 358.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.12 (A \336eld can have any number of optional attributes associated with it. Curr) 90 342.33 P
+-0.12 (ently) 417.25 342.33 P
+-0.12 (, the only \336eld) 438.48 342.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute r) 90 332.33 T
+(ecognized is the \322ConstantV) 134.26 332.33 T
+(alue\323 attribute, which indicates that this \336eld is a static) 258.91 332.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(numeric constant, and gives the constant value of that \336eld.) 90 322.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Any other attributes ar) 90 306.33 T
+(e skipped.) 190.94 306.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Constant V) 54 279 T
+(alue Attribute) 114.32 279 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(The \322ConstantV) 54 261.33 T
+(alue\323 attribute has the following format:) 124.49 261.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ConstantValue_attribute {) 90 241.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 231.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_name_index;) 126 231.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 221.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_length;) 126 221.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 211.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(constantvalue_index;) 126 211.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 201.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_name_index) 68.4 179.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[attribute_name_index]) 90 163.33 T
+0 F
+( is the string \322Sour) 300 163.33 T
+(ceFile.\323) 382.27 163.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_length) 68.4 141.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The length of a Sour) 90 125.33 T
+(ceFile_attribute must be 2.) 179.2 125.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "55" 5
+%%Page: "56" 6
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(56) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 469.01 29.33 T
+(ch 15, 19954) 487.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(constantvalue_index) 68.4 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[constantvalue_index]) 90 697.33 T
+0 F
+(gives the constant value for this \336eld.) 294 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The constant pool entry must be of a type appr) 90 681.33 T
+(opriate to the \336eld, as shown by the following) 296.64 681.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(table:) 90 671.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Methods) 54 544.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+-0.01 (The information for each method immediately follows the) 54 526.33 P
+3 F
+-0.02 (method_count) 312.89 526.33 P
+0 F
+-0.01 ( \336eld in the class \336le. Each method) 384.89 526.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(is described by a variable length) 54 516.33 T
+3 F
+(method_info) 199.01 516.33 T
+0 F
+( str) 265.01 516.33 T
+(uctur) 278.88 516.33 T
+(e. The str) 302.41 516.33 T
+(uctur) 342.81 516.33 T
+(e has the following format:) 366.34 516.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(method_info {) 90 496.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 486.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(access_f) 126 486.33 T
+(lags;) 174 486.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 476.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_index;) 126 476.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 466.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(signature_index;) 126 466.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 456.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes_count;) 126 456.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_info) 108 446.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes[attribute_count];) 198 446.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 436.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(access_f) 68.4 414.33 T
+(lags) 116.4 414.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.19 (This is a set of sixteen \337ags used by classes, methods, and \336elds to describe various pr) 90 398.33 P
+-0.19 (operties) 466.28 398.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(and how they many be accessed by methods in other classes. See the table \322Access Flags\323 on) 90 388.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(page 53 which gives the various bits in this \336eld.) 90 378.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The possible \336elds that can be set for a method ar) 90 362.33 T
+(e) 307.92 362.33 T
+3 F
+(ACC_PUBLIC) 315.21 362.33 T
+0 F
+(,) 375.21 362.33 T
+3 F
+(ACC_PRIVATE) 380.21 362.33 T
+0 F
+(,) 446.21 362.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_PROTECTED) 90 352.33 T
+0 F
+(,) 168 352.33 T
+3 F
+(ACC_STATIC) 173 352.33 T
+0 F
+(,) 233 352.33 T
+3 F
+(ACC_FINAL) 238 352.33 T
+0 F
+(,) 292 352.33 T
+3 F
+(ACC_SYNCHRONIZED) 297 352.33 T
+0 F
+(,) 393 352.33 T
+3 F
+(ACC_NATIVE) 398 352.33 T
+0 F
+(, and) 458 352.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(ACC_ABSTRACT) 90 342.33 T
+0 F
+(.) 161.26 342.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(At most one of) 90 326.33 T
+3 F
+(ACC_PUBLIC) 157.69 326.33 T
+0 F
+( and) 217.69 326.33 T
+3 F
+(ACC_PRIVATE) 239.62 326.33 T
+0 F
+( can be set for any method.) 305.62 326.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(name_index) 68.4 304.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[name_index]) 90 288.33 T
+0 F
+( is a string giving the name of the method.) 240 288.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(signature_index) 68.4 266.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[signature_index]) 90 250.33 T
+0 F
+(is a string giving the signatur) 270 250.33 T
+(e of the \336eld. See the) 399.26 250.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(section \322Signatur) 90 240.33 T
+(es\323 for mor) 166.02 240.33 T
+(e information on signatur) 215.85 240.33 T
+(es.) 328.76 240.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes_count) 68.4 218.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value gives the number of additional attributes about this \336eld.) 90 202.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes) 68.4 180.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(A \336eld can have any number of optional attributes associated with it. Each attribute has a) 90 164.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name, and other additional information. Curr) 90 154.33 T
+(ently) 291.23 154.33 T
+(, the only \336eld attribute r) 312.46 154.33 T
+(ecognized is the) 422.7 154.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\322Code\323 attribute, which describes the virtual bytecode that can be executed to perform this) 90 144.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method.) 90 134.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Any other attributes ar) 90 118.33 T
+(e skipped.) 190.94 118.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(long) 154.5 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Long) 325.5 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(\337oat) 154.5 624.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Float) 325.5 624.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(double) 154.5 604.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Double) 325.5 604.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(int, short, char) 154.5 584.33 T
+(, byte, boolean) 219.49 584.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Integer) 325.5 584.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+148.5 655 148.5 577 2 L
+V
+2 H
+0 Z
+N
+319.5 657 319.5 575 2 L
+V
+0.5 H
+N
+481.5 655 481.5 577 2 L
+V
+2 H
+N
+147.5 656 482.5 656 2 L
+V
+N
+147.5 636 482.5 636 2 L
+V
+0.5 H
+N
+147.5 616 482.5 616 2 L
+V
+N
+147.5 596 482.5 596 2 L
+V
+N
+147.5 576 482.5 576 2 L
+V
+2 H
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "56" 6
+%%Page: "57" 7
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (57) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Code Attribute) 54 712 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(The \322Code\323 attribute has the following format:) 54 694.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Code_attribute {) 90 674.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 664.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_name_index;) 126 664.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 654.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_length;) 126 654.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(max_stack;) 126 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 634.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(max_locals;) 126 634.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 624.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(code_length;) 126 624.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 614.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(code[code_length];) 126 614.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 604.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(exception_table_length;) 126 604.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+({) 108 594.33 T
+(u2) 126 594.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(start_pc;) 162 594.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 584.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(end_pc;) 156 584.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 574.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(handler_pc;) 156 574.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 564.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(catch_type;) 156 564.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 108 554.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(exception_table[exception_table_length];) 126 554.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 544.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes_count;) 126 544.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_info) 108 534.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attributes[attribute_count];) 192 534.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 514.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_name_index) 68.4 492.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[attribute_name_index]) 90 476.33 T
+0 F
+( is the string \322Code.\323) 300 476.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_length) 68.4 454.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld gives the total length of the \322Code\323 attribute, excluding the initial four bytes.) 90 438.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(max_stack) 68.4 416.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Maximum number of entries on the operand stack that will be used during execution of this) 90 400.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method. See the other chapters in this spec for mor) 90 390.33 T
+(e information on the operand stack.) 314 390.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(max_locals) 68.4 368.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Number of local variable slots used by this method. See the other chapters in this spec for) 90 352.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(mor) 90 342.33 T
+(e information on the local variables.) 108.06 342.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(code_length) 68.4 320.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The number of bytes in the virtual machine code for this method.) 90 304.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(code) 68.4 282.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.14 (These ar) 90 266.33 P
+-0.14 (e the actual bytes of the virtual machine code that implement the method. When r) 126.9 266.33 P
+-0.14 (ead) 485.74 266.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(into memory) 90 256.33 T
+(, the \336rst byte of code must be aligned onto a multiple-of-four boundary) 146.26 256.33 T
+(. See the) 463.86 256.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(de\336nitions of the the opcodes \322tableswitch\323 and \322tablelookup\323 for mor) 90 246.33 T
+(e information on) 404.06 246.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(alignment r) 90 236.33 T
+(equir) 141.17 236.33 T
+(ements.) 164.27 236.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(exception_table_length) 68.4 214.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The number of entries in the following exception table.) 90 198.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(exception_table) 68.4 176.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Each entry in the exception table describes one exception handler in the code.) 90 160.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(start_pc, end_pc) 68.4 138.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The two \336elds) 90 122.33 T
+3 F
+(start_pc) 155.4 122.33 T
+0 F
+( and) 203.4 122.33 T
+3 F
+(end_pc) 225.33 122.33 T
+0 F
+( give the ranges in the code at which the exception) 261.33 122.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(handler is active. The values of both \336elds ar) 90 112.33 T
+(e of) 287.19 112.33 T
+(fsets fr) 303.09 112.33 T
+(om the start of the code.) 332.55 112.33 T
+3 F
+(start_pc) 441.38 112.33 T
+0 F
+( is) 489.38 112.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(inclusive.) 90 102.33 T
+3 F
+(end_pc) 134.7 102.33 T
+0 F
+( is exclusive.) 170.7 102.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "57" 7
+%%Page: "58" 8
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(58) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 469.01 29.33 T
+(ch 15, 19954) 487.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(handler_pc) 68.4 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.14 (This \336eld gives the starting addr) 90 697.33 P
+-0.14 (ess of the exception handler) 232.76 697.33 P
+-0.14 (. The value of the \336eld is an of) 354.43 697.33 P
+-0.14 (fset) 486.02 697.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(fr) 90 687.33 T
+(om the start of the code.) 97.1 687.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(catch_type) 68.4 665.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(If) 90 649.33 T
+3 F
+(catch_type) 99.2 649.33 T
+0 F
+( is non-zer) 159.2 649.33 T
+(o, then) 205.34 649.33 T
+3 F
+(constant_pool[catch_type]) 237.99 649.33 T
+0 F
+( will be the class of) 387.99 649.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(exceptions that this exception handler is designated to catch. This exception handler should) 90 639.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(only be called if the thr) 90 629.33 T
+(own exception is an instance of the given class.) 191.69 629.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(If catch_type is zer) 90 613.33 T
+(o, this exception handler should be called for all exceptions.) 172.49 613.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes_count) 68.4 591.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This value gives the number of additional attributes about code. The \322Code\323 attribute can) 90 575.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(itself have attributes.) 90 565.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attributes) 68.4 543.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(A \322Code\323 attribute can have any number of optional attributes associated with it. Each) 90 527.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute has a name, and other additional information. Curr) 90 517.33 T
+(ently) 356.78 517.33 T
+(, the only code attributes) 378.01 517.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(r) 90 507.33 T
+(ecognized ar) 93.77 507.33 T
+(e the \322LineNumberT) 149.92 507.33 T
+(able\323 and \322LocalV) 240.86 507.33 T
+(ariableT) 321.24 507.33 T
+(able,\323 both of which contain) 356.54 507.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(debugging information.) 90 497.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Any other attributes ar) 90 481.33 T
+(e skipped.) 190.94 481.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Line Number T) 54 454 T
+(able Attribute) 137.33 454 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+-0.23 (The Line Number T) 54 436.33 P
+-0.23 (able is used by debuggers and the exception handler to determine which part of the virtual) 139.82 436.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.24 (machine code corr) 54 426.33 P
+-0.24 (esponds to a given location in the sour) 134.55 426.33 P
+-0.24 (ce. The LineNumberT) 302.84 426.33 P
+-0.24 (able_attribute has the following) 398.11 426.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(format:) 54 416.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(LineNumberTable_attribute {) 90 396.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 386.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_name_index;) 216 386.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 376.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_length;) 216 376.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 366.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(line_number_table_length;) 216 366.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+({) 108 356.33 T
+(u2) 126 356.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(start_pc;) 234 356.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 346.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(line_number;) 234 346.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 108 336.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(line_number_table[line_number_table_length];) 216 336.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 326.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_name_index) 68.4 304.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[attribute_name_index]) 90 288.33 T
+0 F
+( will be the string \322LineNumberT) 300 288.33 T
+(able.\323) 446.78 288.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_length) 68.4 266.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld gives the total length of the LineNumberT) 90 250.33 T
+(able_attribute, excluding the initial four) 318.97 250.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bytes.) 90 240.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(line_number_table_length) 68.4 218.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld gives the number of entries in the following line number table.) 90 202.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(line_number_table) 68.4 180.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.13 (Each entry in the line number table indicates that the line number in the sour) 90 164.33 P
+-0.13 (ce \336le changes at) 427.6 164.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(a given point in the code.) 90 154.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(start_pc) 68.4 132.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.05 (This \336eld indicates the place in the code at which the code for a new line in the sour) 90 116.33 P
+-0.05 (ce begins.) 458.51 116.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(source_p) 90 106.33 T
+0 F
+(c is an of) 138 106.33 T
+(fset fr) 176.52 106.33 T
+(om the beginning of the code.) 201.74 106.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "58" 8
+%%Page: "59" 9
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (59) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(line_number) 68.4 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The line number that begins at the given location in the \336le.) 90 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Local V) 54 670 T
+(ariable T) 94.33 670 T
+(able Attribute) 142 670 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(The Local V) 54 652.33 T
+(ariable T) 105.96 652.33 T
+(able is used by debuggers to determine the value of a given local variable during the) 143.76 652.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(dynamic execution of a method. The format of the LocalV) 54 642.33 T
+(ariableT) 307.84 642.33 T
+(able_attribute is as follows:) 343.14 642.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(LocalVariableTable_attribute {) 90 622.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 612.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_name_index;) 126 612.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 602.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attribute_length;) 126 602.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 592.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(local_variable_table_length;) 126 592.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+({) 108 582.33 T
+(u2) 126 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(start_pc;) 162 582.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 572.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(length;) 156 572.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 562.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_index;) 156 562.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(signature_index;) 156 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 126 542.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(slot;) 156 542.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 108 532.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(local_variable_table[local_variable_table_length];) 126 532.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 522.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_name_index) 68.4 500.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[attribute_name_index]) 90 484.33 T
+0 F
+( will be the string \322LocalV) 300 484.33 T
+(ariableT) 414.72 484.33 T
+(able.\323) 450.02 484.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(attribute_length) 68.4 462.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld gives the total length of the LineNumberT) 90 446.33 T
+(able_attribute, excluding the initial four) 318.97 446.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bytes.) 90 436.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(local_variable_table_length) 68.4 414.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(This \336eld gives the number of entries in the following local variable table.) 90 398.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(line_number_table) 68.4 376.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.05 (Each entry in the line number table indicates a code range during which a local variable has a) 90 360.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(value. It also indicates wher) 90 350.33 T
+(e on the stack the value of that variable can be found.) 213.32 350.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(start_pc, length) 68.4 328.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The given local variable will have a value at the code between) 90 312.33 T
+3 F
+(start_pc) 365.89 312.33 T
+0 F
+( and) 413.89 312.33 T
+3 F
+(start_pc) 435.82 312.33 T
+0 F
+( +) 483.82 312.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(length) 90 302.33 T
+0 F
+(. The two values ar) 126 302.33 T
+(e both of) 209.69 302.33 T
+(fsets fr) 248.16 302.33 T
+(om the beginning of the code.) 277.62 302.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(name_index, signature_index) 68.4 280.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[name_index]) 90 264.33 T
+0 F
+(and) 240 264.33 T
+3 F
+( constant_pool[signature_index]) 256.93 264.33 T
+0 F
+(ar) 448.93 264.33 T
+(e strings) 457.7 264.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(giving the name and signatur) 90 254.33 T
+(e of the local variable.) 220.24 254.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(slot) 68.4 232.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The given variable will be the) 90 216.33 T
+1 F
+(slot) 223.47 216.33 T
+0 8 Q
+(th) 237.91 220.33 T
+0 10 Q
+(local variable in the method\325s frame.) 247.17 216.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "59" 9
+%%Page: "60" 10
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(60) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 469.01 29.33 T
+(ch 15, 19954) 487.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Constant Pool) 54 710.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Each item in the constant pool begins with a 1-byte tag:. The table below lists the valid tags and their values.) 54 692.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Each tag byte is then followed by one or mor) 54 470.33 T
+(e bytes giving mor) 251.61 470.33 T
+(e information about the speci\336c constant.) 333.75 470.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Strings) 54 443 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(CONSTANT_Asciz) 54 425.33 T
+0 F
+( and) 138 425.33 T
+3 F
+(CONSTANT_Unicode) 159.93 425.33 T
+0 F
+( ar) 255.93 425.33 T
+(e used to r) 267.2 425.33 T
+(epr) 313.15 425.33 T
+(esent constant string values.) 327.72 425.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Asciz_info {) 90 405.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 395.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 395.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 385.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(length;) 126 385.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 375.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bytes[length];) 126 375.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 365.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Unicode_info {) 90 345.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 335.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 335.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(length;) 126 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 315.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bytes[length];) 126 315.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 305.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(tag) 68.4 273.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The tag will have the value) 90 257.33 T
+3 F
+(CONSTANT_Asciz) 212.14 257.33 T
+0 F
+(or) 302.14 257.33 T
+3 F
+( CONSTANT_Unicode) 311.55 257.33 T
+0 F
+(.) 413.55 257.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(length) 68.4 235.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The number of bytes in the string. This length does not include the implicit null termination.) 90 219.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(bytes) 68.4 197.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The actual bytes in the string. The null termination is not included.) 90 181.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Classes and Interfaces) 54 154 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(CONSTANT_Class) 54 136.33 T
+0 F
+( is used to r) 138 136.33 T
+(epr) 188.81 136.33 T
+(esent a class or an interface.) 203.38 136.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Class_info {) 90 116.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 106.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 106.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 96.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_index;) 126 96.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 86.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(Constant T) 60 645.33 T
+(ype) 109.37 645.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(V) 234 645.33 T
+(alue) 240.67 645.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Class) 60 619.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Fieldref) 60 609.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Methodref) 60 599.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_String) 60 589.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Integer) 60 579.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Float) 60 569.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Long) 60 559.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Double) 60 549.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_InterfaceMethodref) 60 539.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_NameandType) 60 529.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Asciz) 60 519.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(7) 256 619.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(9) 256 609.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(10) 251 599.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(8) 256 589.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(3) 256 579.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(4) 256 569.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(5) 256 559.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(6) 256 549.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(1) 251.55 539.33 T
+(1) 256 539.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(12) 251 529.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(1) 256 519.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+54 660.75 54 509.25 2 L
+V
+0.5 H
+0 Z
+N
+228 661.25 228 508.75 2 L
+V
+N
+267 660.75 267 509.25 2 L
+V
+N
+53.75 661 267.25 661 2 L
+V
+N
+54.25 636.25 266.75 636.25 2 L
+V
+N
+54.25 633.75 266.75 633.75 2 L
+V
+N
+53.75 509 267.25 509 2 L
+V
+N
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "60" 10
+%%Page: "61" 11
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (61) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(tag) 68.4 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The tag will have the value) 90 697.33 T
+3 F
+(CONSTANT_Class) 212.14 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(name_index) 68.4 675.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(constant_pool[name_index] is a string giving the name of the class.) 90 659.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Because arrays ar) 54 643.33 T
+(e objects, the opcodes) 130.87 643.33 T
+3 F
+(anewarray) 228.6 643.33 T
+0 F
+( and) 282.6 643.33 T
+3 F
+(multianewarray) 304.53 643.33 T
+0 F
+( can r) 388.53 643.33 T
+(efer) 412.56 643.33 T
+(ence array \322classes\323 via) 429.24 643.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Class) 54 633.33 T
+0 F
+( items in the constant pool. In this case, the name of the class is its signatur) 138 633.33 T
+(e. For example,) 466.61 633.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the class name for) 54 623.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(int[][]) 90 603.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(is) 54 593.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+([[I) 90 573.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The class name for) 54 553.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(Thread[]) 90 533.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(is) 54 523.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(\322[Ljava.lang.Thread;\323) 90 503.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Fields and Methods) 54 476 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(Fields, methods, and interface methods ar) 54 458.33 T
+(e r) 239.03 458.33 T
+(epr) 250.09 458.33 T
+(esented by similar str) 264.66 458.33 T
+(uctur) 359.17 458.33 T
+(es.) 382.7 458.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Fieldref_info {) 90 438.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 428.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 428.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 418.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class_index;) 126 418.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 408.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_and_type_index;) 126 408.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 398.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Methodref_info {) 90 378.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 368.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 368.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 358.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class_index;) 126 358.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 348.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_and_type_index;) 126 348.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 338.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_InterfaceMethodref_info {) 90 318.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 308.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 308.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 298.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(class_index;) 126 298.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 288.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_and_type_index;) 126 288.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 278.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(tag) 68.4 256.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The tag will have the value) 90 240.33 T
+3 F
+(CONSTANT_Fieldref) 212.14 240.33 T
+0 F
+(,) 314.14 240.33 T
+3 F
+(CONSTANT_Methodref) 319.14 240.33 T
+0 F
+(, or) 427.14 240.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_InterfaceMethodref.) 90 230.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(class_index) 68.4 208.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[class_index]) 90 192.33 T
+0 F
+(will be an entry of type) 252 192.33 T
+3 F
+(CONSTANT_Class) 357 192.33 T
+0 F
+( giving the) 441 192.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name of the class or interface containing the \336eld or method.) 90 182.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.36 (For) 90 166.33 P
+3 F
+-0.86 (CONSTANT_Fieldref) 107.11 166.33 P
+0 F
+-0.36 ( and) 209.11 166.33 P
+3 F
+-0.86 (CONSTANT_Methodref) 230.32 166.33 P
+0 F
+-0.36 (, the) 338.32 166.33 P
+3 F
+-0.86 (CONSTANT_Class) 358.97 166.33 P
+0 F
+-0.36 ( item must be) 442.97 166.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(an actual class. For) 90 156.33 T
+3 F
+(CONSTANT_InterfaceMethodref) 175.76 156.33 T
+0 F
+(, the item must be an interface which) 337.76 156.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(purports to implement the given method.) 90 146.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(name_and_type_index) 68.4 124.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[name_and_type_index]) 90 108.33 T
+0 F
+( will be an entry of type) 294 108.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_NameAndType.) 90 98.33 T
+0 F
+(This constant pool entry gives the name and signatur) 222 98.33 T
+(e of the) 456.6 98.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\336eld or method.) 90 88.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "61" 11
+%%Page: "62" 12
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(62) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 469.01 29.33 T
+(ch 15, 19954) 487.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Abstract Fields and Methods) 54 712 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 10 Q
+(CONSTANT_NameAndType) 54 694.33 T
+0 F
+( is used to r) 174 694.33 T
+(epr) 224.81 694.33 T
+(esent a \336eld or method, detached fr) 239.38 694.33 T
+(om any particular class or) 395.74 694.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(implementation.) 54 684.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_NameAndType_info {) 90 664.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 654.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 654.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(name_index;) 126 644.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 634.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(signature_index;) 126 634.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 624.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(tag) 68.4 592.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The tag will have the value) 90 576.33 T
+3 F
+(CONSTANT_NameAndType) 212.14 576.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(name_index) 68.4 554.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[name_index]) 90 538.33 T
+0 F
+( is a string giving the name of the \336eld or method.) 240 538.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(signature_index) 68.4 516.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[signature_index]) 90 500.33 T
+0 F
+( is a string giving the signatur) 270 500.33 T
+(e of the \336eld or) 401.76 500.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(method.) 90 490.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(String Objects) 54 463 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(CONST) 54 445.33 T
+(ANT_String is used to r) 87.9 445.33 T
+(epr) 192.68 445.33 T
+(esent constant objects of the built-in type String.) 207.25 445.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_String_info {) 90 425.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 415.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 415.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u2) 108 405.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(string_index;) 126 405.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 395.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(tag) 68.4 363.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The tag will have the value) 90 347.33 T
+3 F
+(CONSTANT_String) 212.14 347.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(name_index) 68.4 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(constant_pool[string_index]) 90 309.33 T
+0 F
+( is a string giving the value to which the String object is) 252 309.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(initialized.) 90 299.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.43 (The string at) 90 283.33 P
+3 F
+-1.02 (constant_pool[string_index]) 146.96 283.33 P
+0 F
+-0.43 ( is \322encoded\323 so that strings containing only) 308.96 283.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(ASCIZ characters, can be r) 90 273.33 T
+(epr) 206.9 273.33 T
+(esented using only one byte per character) 221.47 273.33 T
+(, but characters of up) 404.45 273.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(to 16 bits can be r) 90 263.33 T
+(epr) 166.51 263.33 T
+(esented. The format we use is a modi\336ed UTF) 181.08 263.33 T
+0 8 Q
+(1) 384.02 267.33 T
+0 10 Q
+( format.) 388.02 263.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(All characters in the range 0x0001 to 0x007F ar) 90 247.33 T
+(e r) 294.58 247.33 T
+(epr) 305.64 247.33 T
+(esented by a single byte:) 320.21 247.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(+-+-+-+-+-+-+-+-+) 120 231.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(|0|7bits of data|) 120 221.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(+-+-+-+-+-+-+-+-+) 120 211.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The null character \0500x0000\051 and characters in the range 0x0080 to 0x03FF ar) 90 191.33 T
+(e r) 420.35 191.33 T
+(epr) 431.41 191.33 T
+(esented by a) 445.98 191.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(pair of two bytes:) 90 181.33 T
+0 0 0 1 0 0 0 K
+54 108 540 123 C
+0 0 0 1 0 0 0 K
+63 121 207 121 2 L
+0.5 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 0 1 0 0 0 K
+0 0 612 792 C
+0 0 0 1 0 0 0 K
+5 10 Q
+0 X
+0 0 0 1 0 0 0 K
+-0.2 (1. There are two differences between this format and the \322standard\323 UTF format. First, the null byte \0500x00\051 is en-) 72 101.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.16 (coded as two bytes rather than as one byte, so that strings never have embedded nulls. Second, only the one-byte,) 72 89.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(two-byte, and three-byte formats are used. We do not recognize the longer formats.) 72 77.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "62" 12
+%%Page: "63" 13
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Mar) 54 29.33 T
+(ch 15, 1995) 72.23 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 238.49 29.33 T
+(irtual Machine Speci\336cation) 285.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-2.5 (63) 530 29.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(+-+-+-+-+-+-+-+-+) 120 713.33 T
+(+-+-+-+-+-+-+-+-+) 240 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(|1|1|0|) 120 703.33 T
+(5 bits\240) 168 703.33 T
+(|) 216 703.33 T
+(|1|0|) 240 703.33 T
+(6 bits) 282 703.33 T
+( |) 330 703.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(+-+-+-+-+-+-+-+-+) 120 693.33 T
+(+-+-+-+-+-+-+-+-+) 240 693.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Characters in the range 0x0400 to 0xFFFF ar) 90 673.33 T
+(e r) 282.81 673.33 T
+(epr) 293.87 673.33 T
+(esented by thr) 308.44 673.33 T
+(ee bytes:) 371.18 673.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(+-+-+-+-+-+-+-+-+) 120 657.33 T
+(+-+-+-+-+-+-+-+-+) 240 657.33 T
+(+-+-+-+-+-+-+-+-+) 360 657.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(|1|1|1|0|4 bits) 120 647.33 T
+(|) 216 647.33 T
+(|1|0|) 240 647.33 T
+(6 bits) 282 647.33 T
+( |) 330 647.33 T
+(|1|0|) 360 647.33 T
+(6 bits) 402 647.33 T
+( |) 450 647.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(+-+-+-+-+-+-+-+-+) 120 637.33 T
+(+-+-+-+-+-+-+-+-+) 240 637.33 T
+(+-+-+-+-+-+-+-+-+) 360 637.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 12 Q
+(Numeric Constants) 54 600 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 10 Q
+(Four) 54 576.33 T
+(-Byte Constants) 74.94 576.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Integer) 54 560.33 T
+0 F
+(and) 156 560.33 T
+3 F
+(CONSTANT_Float) 175.43 560.33 T
+0 F
+( r) 259.43 560.33 T
+(epr) 265.7 560.33 T
+(esent four) 280.27 560.33 T
+(-byte constants.) 324.26 560.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Integer_info {) 90 530.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 520.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 520.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 510.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bytes;) 126 510.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 500.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Float_info {) 90 480.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 470.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 470.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 460.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bytes;) 126 460.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 450.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(tag) 68.4 428.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The tag will have the value) 90 412.33 T
+3 F
+(CONSTANT_Integer) 212.14 412.33 T
+0 F
+(or) 314.14 412.33 T
+3 F
+(CONSTANT_Float) 326.05 412.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(bytes) 68.4 390.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(For integers, the four bytes ar) 90 374.33 T
+(e in the integer) 220.08 374.33 T
+(. For \337oats, the four bytes r) 285.31 374.33 T
+(epr) 404.11 374.33 T
+(esent the standar) 418.68 374.33 T
+(d) 493.65 374.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(IEEE r) 90 364.33 T
+(epr) 117.97 364.33 T
+(esentation of the \337oating point number) 132.54 364.33 T
+(.) 304.81 364.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(Eight-Byte Constants) 54 341.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Long) 54 325.33 T
+0 F
+(and) 138 325.33 T
+3 F
+(CONSTANT_Double) 157.43 325.33 T
+0 F
+( r) 247.43 325.33 T
+(epr) 253.7 325.33 T
+(esent eight-byte constants.) 268.27 325.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(CONSTANT_Long_info {) 90 305.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 295.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 295.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 285.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(high_bytes;) 126 285.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 275.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(low_bytes;) 126 275.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 265.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(CONSTANT_Double_info {) 90 245.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u1) 108 235.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tag;) 126 235.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 225.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(high_bytes;) 126 225.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(u4) 108 215.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(low_bytes;) 126 215.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(}) 90 205.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+-0.04 (All eight-byte constants take up two spots in the constant pool. If this is the n) 54 185.33 P
+0 8 Q
+-0.03 (th) 393.79 189.33 P
+0 10 Q
+-0.04 ( item in the constant pool, then) 401.05 185.33 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the next item will be number) 54 175.33 T
+(ed n+2.) 181.35 175.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(tag) 68.4 153.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The tag will have the value) 90 137.33 T
+3 F
+(CONSANT_Long) 212.14 137.33 T
+0 F
+(or) 290.14 137.33 T
+3 F
+( CONSTANT_Double) 299.55 137.33 T
+0 F
+(.) 395.55 137.33 T
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "63" 13
+%%Page: "64" 14
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Class File Format) 258.64 749.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(64) 54 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The Java V) 202.49 29.33 T
+(irtual Machine Speci\336cation) 249.88 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Mar) 469.01 29.33 T
+(ch 15, 19954) 487.24 29.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(high_bytes, low_bytes) 68.4 713.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(For) 90 697.33 T
+3 F
+(CONSTANT_Long) 107.47 697.33 T
+0 F
+(, the 64-bit value is \050) 185.47 697.33 T
+3 F
+(high_bytes) 274.23 697.33 T
+0 F
+( << 32\051 +) 334.23 697.33 T
+3 F
+(low_bytes) 375.74 697.33 T
+0 F
+(.) 429.74 697.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(For) 90 681.33 T
+3 F
+(CONSTANT_Double) 107.47 681.33 T
+0 F
+(, the 64-bit value,) 197.47 681.33 T
+3 F
+(high_bytes) 275.75 681.33 T
+0 F
+( and) 335.75 681.33 T
+3 F
+(low_bytes) 357.68 681.33 T
+0 F
+( together r) 411.68 681.33 T
+(epr) 457.34 681.33 T
+(esent) 471.91 681.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the standar) 90 671.33 T
+(d IEEE r) 139.57 671.33 T
+(epr) 176.15 671.33 T
+(esentation of the double-pr) 190.72 671.33 T
+(ecision \337oating point number) 310.17 671.33 T
+(.) 440 671.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+(Signatures) 54 636.67 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+(A signatur) 54 618.33 T
+(e is a string r) 100.87 618.33 T
+(epr) 157.32 618.33 T
+(esenting the type of a method or \336eld.) 171.89 618.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(The \336eld signatur) 54 598.33 T
+(e r) 132.19 598.33 T
+(epr) 143.25 598.33 T
+(esents the value of an ar) 157.82 598.33 T
+(gument to a function or the value of a variable. It is a series of) 264.09 598.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bytes in the following grammar:) 54 588.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(<f) 90 568.33 T
+(ield signature>) 102 568.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 568.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<f) 243 568.33 T
+(ield_type>) 255 568.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<f) 90 552.33 T
+(ield type>) 102 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<base_type>|<object_type>|<array_type>) 243 552.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<base_type>) 90 536.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 536.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(B) 243 536.33 T
+3 F
+(|) 249 536.33 T
+4 F
+(C) 255 536.33 T
+3 F
+(|) 261 536.33 T
+4 F
+(D) 267 536.33 T
+3 F
+(|) 273 536.33 T
+4 F
+(F) 279 536.33 T
+3 F
+(|) 285 536.33 T
+4 F
+(I) 291 536.33 T
+3 F
+(|) 297 536.33 T
+4 F
+(J) 303 536.33 T
+3 F
+(|) 309 536.33 T
+4 F
+(S) 315 536.33 T
+3 F
+(|) 321 536.33 T
+4 F
+(Z) 327 536.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(<object_type>) 90 520.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 520.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(L) 243 520.33 T
+3 F
+(<fullclassname>) 249 520.33 T
+4 F
+(;) 339 520.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(<array_type>) 90 504.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 504.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+([) 243 504.33 T
+3 F
+(<optional-size><f) 249 504.33 T
+(ield_type>) 351 504.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<optional_size>) 90 488.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 488.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+([0-9]*) 243 488.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The meaning of the base types is as follows:) 54 472.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(B) 180 452.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(signed byte) 306 452.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(C) 180 442.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(character) 306 442.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(D) 180 432.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(double pr) 306 432.33 T
+(ecision \337oating point number) 349.11 432.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(F) 180 422.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(single pr) 306 422.33 T
+(ecision \337oating point number) 344.51 422.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(I) 180 412.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(integer) 306 412.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(J) 180 402.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(long integer) 306 402.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(L) 180 392.33 T
+0 F
+(<fullclassname>) 186.11 392.33 T
+2 F
+(;) 258.68 392.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(an object of the given class) 306 392.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(S) 180 382.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(nsigned short) 306 382.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(Z) 180 372.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(boolean) 306 372.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+([) 180 362.33 T
+0 F
+(<length><\336eld sig>) 183.33 362.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(array) 306 362.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(A r) 54 346.33 T
+(eturn-type signatur) 68.05 346.33 T
+(e r) 153.94 346.33 T
+(epr) 165 346.33 T
+(esents the r) 179.57 346.33 T
+(eturn value fr) 229.35 346.33 T
+(om a method. It is a series of bytes in the following) 289.68 346.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(grammar:) 54 336.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(<return signature>) 90 316.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 316.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<f) 243 316.33 T
+(ield type> |) 255 316.33 T
+4 F
+(V) 333 316.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(The character) 54 300.33 T
+2 F
+(V) 116.39 300.33 T
+0 F
+( indicates that the method r) 124.17 300.33 T
+(eturns no value. Otherwise, the signatur) 245.4 300.33 T
+(e indicates the type of the) 423.07 300.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(r) 54 290.33 T
+(eturn value.) 57.77 290.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(An ar) 54 270.33 T
+(gument signatur) 78.87 270.33 T
+(e r) 152.25 270.33 T
+(epr) 163.31 270.33 T
+(esents an ar) 177.88 270.33 T
+(gument passed to a method:) 229.61 270.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(<argument signature>) 90 250.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 250.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<f) 243 250.33 T
+(ield type>) 255 250.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(A method signatur) 54 234.33 T
+(e r) 137.64 234.33 T
+(epr) 148.7 234.33 T
+(esents the ar) 163.27 234.33 T
+(guments that the method expects, and the value that it r) 218.05 234.33 T
+(eturns.) 464.71 234.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 F
+(<method_signature>) 90 214.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 214.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(\050) 243 214.33 T
+3 F
+(<arguments signature>) 249 214.33 T
+4 F
+(\051) 375 214.33 T
+3 F
+(<return signature>) 387 214.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<arguments signature>) 90 198.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(:=) 216 198.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(<argument signature>*) 243 198.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 1 1 0 1 0 0 K
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "64" 14
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%PageOrder: Ascend
+%%Pages: 14
+%%DocumentFonts: Palatino-Roman
+%%+ Palatino-Italic
+%%+ Palatino-Bold
+%%+ Courier
+%%+ Courier-Bold
+%%+ Times-Roman
+%%EOF

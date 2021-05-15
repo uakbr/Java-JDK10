@@ -1,0 +1,257 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.PipedOutputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PipedInputStream.html#_top_">Previous</a>    <a href="java.io.PrintStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.PipedOutputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.OutputStream.html#_top_">java.io.OutputStream</a>
+           |
+           +----java.io.PipedOutputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+PipedOutputStream</b>
+<dt>
+extends <a href="java.io.OutputStream.html#_top_">OutputStream</a>
+</dl>
+Piped output stream, must be connected to a PipedInputStream.
+A thread reading from a PipedInputStream recieves data from
+a thread writing to the PipedOutputStream it is connected to.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.PipedInputStream.html#_top_">PipedInputStream</a><dt>
+<b>Version:</b>
+<dd>
+	95/01/31
+<dt>
+<b>Author:</b>
+<dd>
+James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PipedOutputStream(java.io.PipedInputStream)"><b>PipedOutputStream</b></a>(PipedInputStream)
+<dd>
+Creates an output file connected to a PipedInputStream
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PipedOutputStream()"><b>PipedOutputStream</b></a>()
+<dd>
+Creates an output file that isn't connected to anything (yet).
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#connect(java.io.PipedInputStream)"><b>connect</b></a>(PipedInputStream)
+<dd>
+Connect this output stream to a reciever.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(int)"><b>write</b></a>(int)
+<dd>
+Write a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#write(byte[], int, int)"><b>write</b></a>(byte[], int, int)
+<dd>
+Writes a sub array of bytes.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="PipedOutputStream"></a>
+<a name="PipedOutputStream(java.io.PipedInputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PipedOutputStream
+</b>
+<pre>
+  public PipedOutputStream(<a href="java.io.PipedInputStream.html#_top_">PipedInputStream</a> snk)
+</pre>
+<dl>
+<dd>
+Creates an output file connected to a PipedInputStream
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+snk
+-
+	The InputStream to connect to.
+</dl>
+</dl>
+<p>
+<a name="PipedOutputStream()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PipedOutputStream
+</b>
+<pre>
+  public PipedOutputStream()
+</pre>
+<dl>
+<dd>
+Creates an output file that isn't connected to anything (yet).
+It must be connected before being used.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="connect(java.io.PipedInputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="connect">
+<b>
+connect
+</b>
+</a>
+<pre>
+  public void connect(<a href="java.io.PipedInputStream.html#_top_">PipedInputStream</a> snk)
+</pre>
+<dl>
+<dd>
+Connect this output stream to a reciever.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+snk
+-
+	The InputStream to connect to.
+</dl>
+</dl>
+<p>
+<a name="write(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(int b)
+</pre>
+<dl>
+<dd>
+Write a byte. Will block until the byte is actually
+written.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#write(int)">write</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="write(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="write">
+<b>
+write
+</b>
+</a>
+<pre>
+  public void write(byte b[],
+                    int off,
+                    int len)
+</pre>
+<dl>
+<dd>
+Writes a sub array of bytes.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the data to be written
+<dd>
+off
+-
+	the start offset in the data
+<dd>
+len
+-
+	the number of bytes that are written
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#write(byte[], int, int)">write</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public void close()
+</pre>
+<dl>
+<dd>
+Closes the stream. This method must be called
+to release any resources associated with the
+stream.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.OutputStream.html#close()">close</a> in class <a href="java.io.OutputStream.html#_top_">OutputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.PipedInputStream.html#_top_">Previous</a>    <a href="java.io.PrintStream.html#_top_">Next</a></pre>
+</body>
+</html>

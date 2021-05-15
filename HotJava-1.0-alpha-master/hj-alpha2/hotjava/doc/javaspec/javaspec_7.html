@@ -1,0 +1,62 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Packages</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING51></A>
+<A HREF="javaspec_8.html">Next</A>       <A HREF="javaspec_6.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>6  Packages</H2>
+<HR>
+<DL>
+<DT><A HREF="javaspec_7.html#HEADING52"><B> 6.1 </B> - Specifying a Compilation Unit's Package</A><DD>
+<DT><A HREF="javaspec_7.html#HEADING53"><B> 6.2 </B> - Using Classes and Interfaces from Other Packages</A><DD>
+</DL>
+
+
+<A NAME=MARKER2_1></A><A NAME=MARKER2_2></A>Packages are groups of classes and interfaces. They are a tool for managing a large namespace and avoiding conflicts. Every class and interface name is contained in some package. By convention, package names consist of period-separated words, with the first name representing the organization that developed the package.<P>
+<A NAME=HEADING52></A>
+<HR>
+<H3> 6.1  Specifying a Compilation Unit's Package</H3>
+The package that a compilation unit is in is specified by a <A NAME=MARKER2_3></A>package statement. When this statement is present, it must be the first non-comment, non-white space line in the compilation unit. It has the following format:<P>
+<PRE>
+package packageName;
+</PRE>
+When a compilation unit has no package statement, the unit is placed in a default package, which has no name.<P>
+<A NAME=HEADING53></A>
+<HR>
+<H3> 6.2  <A NAME=4>Using Classes and Interfaces from Other Packages</H3>
+The language provides a mechanism for making the definitions and implementations of classes and interfaces available across packages. The import keyword is used to mark classes as being imported into the current package. A compilation unit automatically imports every class and interface in its own package.<P>
+Code in one package can specify classes or interfaces from another package in one of two ways:<P>
+<UL>
+<LI>By prefacing each reference to the class or interface name with the name of its package:<P>
+</UL>
+<PRE>
+
+         // prefacing with a package<P>
+         acme.project.FooBar obj = new acme.project.FooBar();<P>
+
+</PRE>
+<UL>
+<LI>By importing the class or interface or the package that contains it, using an import statement. Importing a class or interface makes the name of the class or interface available in the current namespace. <A NAME=MARKER2_5></A>Importing a package makes the names of all of its public classes and interfaces available. The construct:<P>
+</UL>
+<PRE>
+
+         // import all classes from acme.project<P>
+         import acme.project.*;<P>
+<P>
+means that every public class from acme.project is imported.<P>
+The following construct imports a single class, Employee_List, from the acme.project package:<P>
+
+         // import Employee_List from acme.project<P>
+         import acme.project.FooBar;<P>
+         Employee_List obj = new Employee_List();<P>
+</PRE>
+It is illegal to specify an ambiguous class name and doing so always generates a compile-time error. Class names may be disambiguated through the use of a fully qualified class name, i.e., one that includes the name of the class's package.<P>
+<HR>
+<A HREF="javaspec_8.html">Next</A>       <A HREF="javaspec_6.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

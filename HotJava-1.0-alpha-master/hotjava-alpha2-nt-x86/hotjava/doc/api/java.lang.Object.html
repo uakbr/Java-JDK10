@@ -1,0 +1,471 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.Object
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Number.html#_top_">Previous</a>    <a href="java.lang.Ref.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.Object
+</h1>
+<pre>
+java.lang.Object
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Object</b>
+</dl>
+The root of the class hierarchy.  Every class in the system
+has Object as its ultimate parent.  Every field and method
+defined here is available in every object. 
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Class.html#_top_">Class</a><dt>
+<b>Version:</b>
+<dd>
+	1.15, 31 Jan 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Object()"><b>Object</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clone()"><b>clone</b></a>()
+<dd>
+Creates a clone of this object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copy(java.lang.Object)"><b>copy</b></a>(Object)
+<dd>
+Copies the contents of an object into this object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#enterMonitor()"><b>enterMonitor</b></a>()
+<dd>
+Locks the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#equals(java.lang.Object)"><b>equals</b></a>(Object)
+<dd>
+Compares two objects for equality.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#exitMonitor()"><b>exitMonitor</b></a>()
+<dd>
+Unlock the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getClass()"><b>getClass</b></a>()
+<dd>
+Returns the Class of this Object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hashCode()"><b>hashCode</b></a>()
+<dd>
+Returns a hashcode for this object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#notify()"><b>notify</b></a>()
+<dd>
+Notifies a single waiting thread.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#notifyAll()"><b>notifyAll</b></a>()
+<dd>
+Notifies all of the threads waiting for a condition to change.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Returns a string that represents the value of this object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#wait(int)"><b>wait</b></a>(int)
+<dd>
+Causes a thread to wait until it is notified or the specified timeout
+expires.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#wait()"><b>wait</b></a>()
+<dd>
+Causes a thread to wait until it is notified.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Object"></a>
+<a name="Object()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Object
+</b>
+<pre>
+  public Object()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="getClass()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getClass">
+<b>
+getClass
+</b>
+</a>
+<pre>
+  public final <a href="java.lang.Class.html#_top_">Class</a> getClass()
+</pre>
+<dl>
+<dd>
+Returns the Class of this Object. Java has a runtime
+representation for classes, a descriptor (a Class object),
+which getClass returns for any object.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the class of this object
+</dl>
+</dl>
+<p>
+<a name="hashCode()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hashCode">
+<b>
+hashCode
+</b>
+</a>
+<pre>
+  public int hashCode()
+</pre>
+<dl>
+<dd>
+Returns a hashcode for this object.
+Each object in the java system has a hashcode. The hashcode
+is a number that is usually different for different objects.
+It is used when storing objects in hashtables.
+Note: hashcodes can be negative as well as positive.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the hashcode for this object.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.Hashtable.html#_top_">Hashtable</a>
+</dl>
+</dl>
+<p>
+<a name="equals(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="equals">
+<b>
+equals
+</b>
+</a>
+<pre>
+  public boolean equals(<a href="#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Compares two objects for equality.
+Returns a boolean that indicates whether this object is equivalent 
+to another object. This method is used when an object is stored
+in a hashtable.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+obj
+-
+	the object to compare with
+<dt>
+<b>Returns:</b>
+<dd>
+	returns true if the this object is equal to obj
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.Hashtable.html#_top_">Hashtable</a>
+</dl>
+</dl>
+<p>
+<a name="copy(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copy">
+<b>
+copy
+</b>
+</a>
+<pre>
+  protected void copy(<a href="#_top_">Object</a> src)
+</pre>
+<dl>
+<dd>
+Copies the contents of an object into this object.  The contents
+of an object are defined as the values of its instance variables.
+src must be of the same class as this object.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+src
+-
+		the object which is copied into the current object
+<dt>
+<b>Throws:</b> <a href="java.lang.ClassCastException.html#_top_">ClassCastException</a>
+<dd>
+ obj is not of the same type as
+			this object.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#clone">clone</a>
+</dl>
+</dl>
+<p>
+<a name="clone()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clone">
+<b>
+clone
+</b>
+</a>
+<pre>
+  protected <a href="#_top_">Object</a> clone()
+</pre>
+<dl>
+<dd>
+Creates a clone of this object. A new instance is allocated and
+the copy(Object) method is called to copy the contents of this
+object into the clone.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	a copy of this object
+<dt>
+<b>Throws:</b> <a href="java.lang.OutOfMemoryException.html#_top_">OutOfMemoryException</a>
+<dd>
+ Not enough memory
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#copy">copy</a>
+</dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Returns a string that represents the value of this object.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+a printable string that represents the value of this object
+</dl>
+</dl>
+<p>
+<a name="notify()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="notify">
+<b>
+notify
+</b>
+</a>
+<pre>
+  public void notify()
+</pre>
+<dl>
+<dd>
+Notifies a single waiting thread. Threads that are waiting are
+generally waiting for another thread to change some condition.
+Thus, the thread effecting the change notifies the waiting thread
+using notify(). Threads that want to wait for a condition to 
+change before proceeding can call wait(). <p>
+<em>notify() can only be called from within a synchronized method.</em>
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.InternalException.html#_top_">InternalException</a>
+<dd>
+ Current thread is not the owner of the
+			object's monitor.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#wait">wait</a>,
+<a href="#notifyall">notifyall</a>
+</dl>
+</dl>
+<p>
+<a name="notifyAll()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="notifyAll">
+<b>
+notifyAll
+</b>
+</a>
+<pre>
+  public void notifyAll()
+</pre>
+<dl>
+<dd>
+Notifies all of the threads waiting for a condition to change.
+Threads that are waiting are generally waiting for another thread to 
+change some condition. Thus, the thread effecting a change that more 
+than one thread is waiting for notifies all the waiting threads using
+notifyall(). Threads that want to wait for a condition to 
+change before proceeding can call wait(). <p>
+<em>notifyall() can only be called from within a synchronized method.</em>
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.InternalException.html#_top_">InternalException</a>
+<dd>
+ Current thread is not the owner of the
+			object's monitor.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#wait">wait</a>,
+<a href="#notify">notify</a>
+</dl>
+</dl>
+<p>
+<a name="wait(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="wait">
+<b>
+wait
+</b>
+</a>
+<pre>
+  public void wait(int timeout)
+</pre>
+<dl>
+<dd>
+Causes a thread to wait until it is notified or the specified timeout
+expires. <p>
+<em>wait() can only be called from within a synchronized method.</em>
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+timeout
+-
+	the maximum time to wait in milliseconds
+<dt>
+<b>Throws:</b> <a href="java.lang.InternalException.html#_top_">InternalException</a>
+<dd>
+ Current thread is not the owner of the
+			object's monitor.
+</dl>
+</dl>
+<p>
+<a name="wait()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="wait">
+<b>
+wait
+</b>
+</a>
+<pre>
+  public void wait()
+</pre>
+<dl>
+<dd>
+Causes a thread to wait until it is notified. <p>
+<em>wait() can only be called from within a synchronized method</em>
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.InternalException.html#_top_">InternalException</a>
+<dd>
+ Current thread is not the owner of the
+			object's monitor.
+</dl>
+</dl>
+<p>
+<a name="enterMonitor()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="enterMonitor">
+<b>
+enterMonitor
+</b>
+</a>
+<pre>
+  public void enterMonitor()
+</pre>
+<dl>
+<dd>
+Locks the object. <em>Don't use this!</em> This was needed in the old compiler
+to implement the synchronize statement.
+</dl>
+<p>
+<a name="exitMonitor()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="exitMonitor">
+<b>
+exitMonitor
+</b>
+</a>
+<pre>
+  public void exitMonitor()
+</pre>
+<dl>
+<dd>
+Unlock the object. <em>Don't use this!</em> This was needed in the old compiler
+to implement the synchronize statement.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Number.html#_top_">Previous</a>    <a href="java.lang.Ref.html#_top_">Next</a></pre>
+</body>
+</html>

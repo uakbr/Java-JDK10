@@ -1,0 +1,133 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Storing Stack Values into Local Variables</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING49></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_19.html">Prev</A>       <A HREF="vmspec_21.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Storing Stack Values into Local Variables</H1>
+<DL>
+<DT><A HREF="vmspec_20.html#HEADING50"><B></B>  istore</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING51"><B></B>  istore_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING52"><B></B>  lstore</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING53"><B></B>  lstore_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING54"><B></B>  fstore</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING55"><B></B>  fstore_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING56"><B></B>  dstore</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING57"><B></B>  dstore_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING58"><B></B>  astore</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING59"><B></B>  astore_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_20.html#HEADING60"><B></B>  iinc</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING50></A>
+<H3>istore</H3>
+Store integer into local variable<BR><IMG SRC="instructions_only_Tbl_121.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be an integer. Local variable vindex in the current Java frame is set to value.<P>
+<A NAME=HEADING51></A>
+<H3>istore_&lt;n&gt;</H3>
+Store integer into local variable<BR><IMG SRC="instructions_only_Tbl_146.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+Forms: istore_0 = 59, istore_1 = 60, istore_2 = 61, istore_3 = 62<P>
+value should be an integer. Local variable &lt;n&gt; in the current Java frame is set to value. <P>
+This instruction is the same as istore with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING52></A>
+<H3>lstore</H3>
+Store long integer into local variable<BR><IMG SRC="instructions_only_Tbl_59.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ...<P>
+</PRE>
+value should be a long integer. Local variables vindex and vindex+1 in the current Java frame are set to value.<P>
+<A NAME=HEADING53></A>
+<H3>lstore_&lt;n&gt;</H3>
+Store long integer into local variable<BR><IMG SRC="instructions_only_Tbl_60.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ...<P>
+</PRE>
+Forms: lstore_0 = 63, lstore_1 = 64, lstore_2 = 65, lstore_3 = 66<P>
+value should be a long integer. Local variables &lt;n&gt; and &lt;n&gt;+1 in the current Java frame are set to value.<P>
+This instruction is the same as lstore with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING54></A>
+<H3>fstore</H3>
+Store single float into local variable<BR><IMG SRC="instructions_only_Tbl_152.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be a single precision floating point number. Local variable vindex in the current Java frame is set to value.<P>
+<A NAME=HEADING55></A>
+<H3>fstore_&lt;n&gt;</H3>
+<BR><IMG SRC="instructions_only_Tbl_147.gif"><BR>
+Store single float into local variable<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+Possible Instructions:<P>
+ fstore_0 = 67, fstore_1 = 68, fstore_2 = 69, fstore_3 = 70<P>
+value should be a single precision floating point number. Local variable &lt;n&gt; in the current Java frame is set to value.<P>
+This instruction is the same as fstore with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING56></A>
+<H3>dstore</H3>
+Store double float into local variable<BR><IMG SRC="instructions_only_Tbl_61.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ...<P>
+</PRE>
+value should be a double precision floating point number. Local variables vindex and vindex+1 in the current Java frame are set to value.<P>
+<A NAME=HEADING57></A>
+<H3>dstore_&lt;n&gt;</H3>
+<BR><IMG SRC="instructions_only_Tbl_62.gif"><BR>
+Store double float into local variable<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ...<P>
+</PRE>
+Forms: dstore_0 = 71, dstore_1 = 72, dstore_2 = 73, dstore_3 = 74<P>
+value should be an double precision floating point number. Local variables &lt;n&gt; and &lt;n&gt;+1 in the current Java frame are set to value.<P>
+This instruction is the same as dstore with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING58></A>
+<H3>astore</H3>
+Store object reference into local variable<BR><IMG SRC="instructions_only_Tbl_151.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+value should be a handle to an array or to an object. Local variable vindex in the current Java frame is set to value.<P>
+<A NAME=HEADING59></A>
+<H3>astore_&lt;n&gt;</H3>
+<BR><IMG SRC="instructions_only_Tbl_145.gif"><BR>
+Store object reference into local variable<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+Forms: astore_0 = 75, astore_1 = 76, astore_2 = 77, astore_3 = 78<P>
+value should be a handle to an array or to an object. Local variable &lt;n&gt; in the current Java frame is set to value.<P>
+This instruction is the same as astore with a vindex of &lt;n&gt;, except that the operand &lt;n&gt; is implicit.<P>
+<A NAME=HEADING60></A>
+<H3>iinc</H3>
+Increment local variable by constant<BR><IMG SRC="instructions_only_Tbl_28.gif"><BR>
+<P>
+<PRE>
+no change<P>
+</PRE>
+Local variable vindex in the current Java frame should contain an integer. Its value is incremented by the value const, where const is treated as a signed 8-bit quantity.<P>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_19.html">Prev</A>       <A HREF="vmspec_21.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,79 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.HexDumpEncoder
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Hashtable.html#_top_">Previous</a>    <a href="java.util.Linker.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.HexDumpEncoder
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.util.CharacterEncoder.html#_top_">java.util.CharacterEncoder</a>
+           |
+           +----java.util.HexDumpEncoder
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+HexDumpEncoder</b>
+<dt>
+extends <a href="java.util.CharacterEncoder.html#_top_">CharacterEncoder</a>
+</dl>
+This class encodes a buffer into the classic: "Hexadecimal Dump" format of
+the past. It is useful for analyzing the contents of binary buffers.
+The format produced is as follows:
+<pre>
+xxxx: 00 11 22 33 44 55 66 77   88 99 aa bb cc dd ee ff ................
+</pre>
+Where xxxx is the offset into the buffer in 16 byte chunks, followed
+by ascii coded hexadecimal bytes followed by the ASCII representation of
+the bytes or '.' if they are not valid bytes.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.1, 02 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Chuck McManis</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#HexDumpEncoder()"><b>HexDumpEncoder</b></a>()
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="HexDumpEncoder"></a>
+<a name="HexDumpEncoder()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+HexDumpEncoder
+</b>
+<pre>
+  public HexDumpEncoder()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Hashtable.html#_top_">Previous</a>    <a href="java.util.Linker.html#_top_">Next</a></pre>
+</body>
+</html>

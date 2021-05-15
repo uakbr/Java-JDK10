@@ -1,0 +1,71 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.ThreadDeath
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Thread.html#_top_">Previous</a>    <a href="java.lang.html">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.ThreadDeath
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.lang.ThreadDeath
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+ThreadDeath</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+An instance of ThreadDeath is thrown in the victim thread when
+thread.stop() is called.  This is not a subclass of Exception
+because too many people already catch Exception.  Only thopse
+explicitly interested in cleaning up when being asynchronously
+terminated should catch instances of this class, and then they
+should be sure to rethrow the object when they are done.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.1, 20 Feb 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#ThreadDeath()"><b>ThreadDeath</b></a>()
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="ThreadDeath"></a>
+<a name="ThreadDeath()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+ThreadDeath
+</b>
+<pre>
+  public ThreadDeath()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Thread.html#_top_">Previous</a>    <a href="java.lang.html">Next</a></pre>
+</body>
+</html>

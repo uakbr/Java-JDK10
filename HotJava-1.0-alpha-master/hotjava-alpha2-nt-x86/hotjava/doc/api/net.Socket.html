@@ -1,0 +1,354 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.Socket
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.NetworkClient.html#_top_">Previous</a>    <a href="net.SocketInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.Socket
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.Socket
+</pre>
+<hr>
+<dl>
+<dt>
+public final class <b>
+Socket</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#address">address</a>
+</b>
+<dd>
+address this socket is bound to
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#inputStream">inputStream</a>
+</b>
+<dd>
+file for doing input on this socket
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#outputStream">outputStream</a>
+</b>
+<dd>
+file for doing output to other end
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#port">port</a>
+</b>
+<dd>
+Port this socket is bound to in network byte order.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Socket(boolean)"><b>Socket</b></a>(boolean)
+<dd>
+Create a socket which is a TCP socket if isStream is true,
+	or is a UDP socket otherwise.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Socket(java.lang.String, int)"><b>Socket</b></a>(String, int)
+<dd>
+Create a TCP socket and connect it to the specified port on
+	the specified host.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#accept()"><b>accept</b></a>()
+<dd>
+Accept a connection on this socket, returning a new one.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#bindAnonymously(net.InetAddress)"><b>bindAnonymously</b></a>(InetAddress)
+<dd>
+Bind this socket to a local address.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#bindToPort(net.InetAddress, int)"><b>bindToPort</b></a>(InetAddress, int)
+<dd>
+Bind this socket to a known port at the specified address.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Close the connection.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finalize()"><b>finalize</b></a>()
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#initialize()"><b>initialize</b></a>()
+<dd>
+This does nothing except provide an entry point for other
+        related packages to cause the above static initializer to
+	run.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#listen(int)"><b>listen</b></a>(int)
+<dd>
+Specify how many connections can attempt to connect to this
+        socket at once before getting an error.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="address">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+address
+</b>
+<pre>
+  public <a href="net.InetAddress.html#_top_">InetAddress</a> address
+</pre>
+<dl>
+<dd>
+address this socket is bound to
+</dl>
+<a name="port">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+port
+</b>
+<pre>
+  public int port
+</pre>
+<dl>
+<dd>
+Port this socket is bound to in network byte order.
+</dl>
+<a name="inputStream">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+inputStream
+</b>
+<pre>
+  public <a href="java.io.FileInputStream.html#_top_">FileInputStream</a> inputStream
+</pre>
+<dl>
+<dd>
+file for doing input on this socket
+</dl>
+<a name="outputStream">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+outputStream
+</b>
+<pre>
+  public <a href="java.io.FileOutputStream.html#_top_">FileOutputStream</a> outputStream
+</pre>
+<dl>
+<dd>
+file for doing output to other end
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Socket"></a>
+<a name="Socket(boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Socket
+</b>
+<pre>
+  public Socket(boolean isStream)
+</pre>
+<dl>
+<dd>
+Create a socket which is a TCP socket if isStream is true,
+	or is a UDP socket otherwise.
+</dl>
+<p>
+<a name="Socket(java.lang.String, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Socket
+</b>
+<pre>
+  public Socket(<a href="java.lang.String.html#_top_">String</a> host,
+                int port)
+</pre>
+<dl>
+<dd>
+Create a TCP socket and connect it to the specified port on
+	the specified host.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="listen(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="listen">
+<b>
+listen
+</b>
+</a>
+<pre>
+  public void listen(int count)
+</pre>
+<dl>
+<dd>
+Specify how many connections can attempt to connect to this
+        socket at once before getting an error.
+</dl>
+<p>
+<a name="initialize()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="initialize">
+<b>
+initialize
+</b>
+</a>
+<pre>
+  public static void initialize()
+</pre>
+<dl>
+<dd>
+This does nothing except provide an entry point for other
+        related packages to cause the above static initializer to
+	run.
+</dl>
+<p>
+<a name="bindAnonymously(net.InetAddress)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="bindAnonymously">
+<b>
+bindAnonymously
+</b>
+</a>
+<pre>
+  public void bindAnonymously(<a href="net.InetAddress.html#_top_">InetAddress</a> addr)
+</pre>
+<dl>
+<dd>
+Bind this socket to a local address.
+</dl>
+<p>
+<a name="bindToPort(net.InetAddress, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="bindToPort">
+<b>
+bindToPort
+</b>
+</a>
+<pre>
+  public void bindToPort(<a href="net.InetAddress.html#_top_">InetAddress</a> addr,
+                         int port)
+</pre>
+<dl>
+<dd>
+Bind this socket to a known port at the specified address.
+</dl>
+<p>
+<a name="accept()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="accept">
+<b>
+accept
+</b>
+</a>
+<pre>
+  public <a href="#_top_">Socket</a> accept()
+</pre>
+<dl>
+<dd>
+Accept a connection on this socket, returning a new one.
+        The old socket is still around for listening for new
+	connections.
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public synchronized void close()
+</pre>
+<dl>
+<dd>
+Close the connection.  Other end will get EOF on reads,
+        and SIGPIPE on writes.
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<a name="finalize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finalize">
+<b>
+finalize
+</b>
+</a>
+<pre>
+  protected void finalize()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.html">This Package</a>    <a href="net.NetworkClient.html#_top_">Previous</a>    <a href="net.SocketInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

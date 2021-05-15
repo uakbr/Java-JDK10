@@ -1,0 +1,443 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.TextInputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.StringInputStream.html#_top_">Previous</a>    <a href="java.io.html">Next</a></pre>
+<hr>
+<h1>
+Class java.io.TextInputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----<a href="java.io.FilterInputStream.html#_top_">java.io.FilterInputStream</a>
+                   |
+                   +----java.io.TextInputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+TextInputStream</b>
+<dt>
+extends <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>
+</dl>
+An input stream for reading text files. This class is useful for reading
+a text file and breaking it up into Java strings. Each string will contain
+one line of text, lines with only a line terminator will be represented
+by zero length Java strings. At any time you can request the line number
+of the file you are on, but invoking the currentLine() method.
+<b>NOTE: This class reads ASCII date into Unicode strings, if you wish
+to read UTF (UNICODE Text Format) strings you should use DataInputStream
+instead.</b>
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+	1.3, 02 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Chuck McManis<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.String.html#_top_">String</a></dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#atEOF">atEOF</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#curBufferPos">curBufferPos</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#inputBuffer">inputBuffer</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lineNumber">lineNumber</a>
+</b>
+<dd>
+The current line number.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TextInputStream(java.io.InputStream, int)"><b>TextInputStream</b></a>(InputStream, int)
+<dd>
+Create a textInputStream with a specific buffer size.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#TextInputStream(java.io.InputStream)"><b>TextInputStream</b></a>(InputStream)
+<dd>
+Creates a TextInputStream.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#EOF()"><b>EOF</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#available()"><b>available</b></a>()
+<dd>
+Returns the number of bytes that can be read, this is the sum of
+what is in the buffer and what the stream returns.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#currentLine()"><b>currentLine</b></a>()
+<dd>
+Returns the current line number.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mark(int)"><b>mark</b></a>(int)
+<dd>
+Set a mark on the InputStream, if that stream supports marks.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+read a byte - reads a single byte from the input stream and returns
+-1 on end of file.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[])"><b>read</b></a>(byte[])
+<dd>
+read into a byte array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readLine()"><b>readLine</b></a>()
+<dd>
+Read an ISO-Latin1 line of text from the input stream and return a 
+Java String.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+Reposition the stream to the last marked position, restores the line
+number to the number that existed when the mark was set.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#skip(int)"><b>skip</b></a>(int)
+<dd>
+Skip some number of bytes of input, note that this actually reads
+the bytes that are skipped to keep track of the current line number.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="lineNumber">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lineNumber
+</b>
+<pre>
+  protected int lineNumber
+</pre>
+<dl>
+<dd>
+The current line number.
+</dl>
+<a name="inputBuffer">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+inputBuffer
+</b>
+<pre>
+  protected byte inputBuffer[]
+</pre>
+<a name="curBufferPos">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+curBufferPos
+</b>
+<pre>
+  protected int curBufferPos
+</pre>
+<a name="atEOF">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+atEOF
+</b>
+<pre>
+  protected boolean atEOF
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="TextInputStream"></a>
+<a name="TextInputStream(java.io.InputStream, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TextInputStream
+</b>
+<pre>
+  public TextInputStream(<a href="java.io.InputStream.html#_top_">InputStream</a> in,
+                         int bufSize)
+</pre>
+<dl>
+<dd>
+Create a textInputStream with a specific buffer size.
+</dl>
+<p>
+<a name="TextInputStream(java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+TextInputStream
+</b>
+<pre>
+  public TextInputStream(<a href="java.io.InputStream.html#_top_">InputStream</a> in)
+</pre>
+<dl>
+<dd>
+Creates a TextInputStream.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+in
+-
+ the input stream
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="EOF()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="EOF">
+<b>
+EOF
+</b>
+</a>
+<pre>
+  public boolean EOF()
+</pre>
+<a name="readLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readLine">
+<b>
+readLine
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.String.html#_top_">String</a> readLine()
+</pre>
+<dl>
+<dd>
+Read an ISO-Latin1 line of text from the input stream and return a 
+Java String.
+The line terminator is stripped from the returned string. This 
+method recognizes <CR>, <CR><LF>, and <LF> as the end of line 
+sequence. <b>Note: it treats a <LF><CR> sequence as two lines.</b>
+While this might be considered a bug, no current operating
+system uses <LF><CR> to terminate lines in text files.
+	 @return null on end-of-file.
+</dl>
+<p>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public synchronized int read()
+</pre>
+<dl>
+<dd>
+read a byte - reads a single byte from the input stream and returns
+-1 on end of file. Internally the line number is tracked by watching
+for line terminator characters to go by.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#read()">read</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public synchronized int read(byte b[])
+</pre>
+<dl>
+<dd>
+read into a byte array. This is augmented to manage the line number
+state.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#read(byte[])">read</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="currentLine()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="currentLine">
+<b>
+currentLine
+</b>
+</a>
+<pre>
+  public int currentLine()
+</pre>
+<dl>
+<dd>
+Returns the current line number.
+</dl>
+<p>
+<a name="skip(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="skip">
+<b>
+skip
+</b>
+</a>
+<pre>
+  public int skip(int n)
+</pre>
+<dl>
+<dd>
+Skip some number of bytes of input, note that this actually reads
+the bytes that are skipped to keep track of the current line number.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#skip(int)">skip</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="available()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="available">
+<b>
+available
+</b>
+</a>
+<pre>
+  public synchronized int available()
+</pre>
+<dl>
+<dd>
+Returns the number of bytes that can be read, this is the sum of
+what is in the buffer and what the stream returns.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#available()">available</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a></dl>
+</dl>
+<p>
+<a name="mark(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mark">
+<b>
+mark
+</b>
+</a>
+<pre>
+  public synchronized void mark(int readlimit)
+</pre>
+<dl>
+<dd>
+Set a mark on the InputStream, if that stream supports marks. In
+this class we will keep track of the current line number as well.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#mark(int)">mark</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>
+</dl>
+</dl>
+<p>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  public synchronized void reset()
+</pre>
+<dl>
+<dd>
+Reposition the stream to the last marked position, restores the line
+number to the number that existed when the mark was set.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#reset()">reset</a> in class <a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>
+</dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.StringInputStream.html#_top_">Previous</a>    <a href="java.io.html">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.URLHistory
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.ULTagRef.html#_top_">Previous</a>    <a href="browser.WRFormatter.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.URLHistory
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----browser.URLHistory
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+URLHistory</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#URLHistory()"><b>URLHistory</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addUrl(net.www.html.URL)"><b>addUrl</b></a>(URL)
+<dd>
+
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#main(java.lang.String[])"><b>main</b></a>(String[])
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openOutputStream(java.lang.String)"><b>openOutputStream</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#parseStream(java.io.InputStream)"><b>parseStream</b></a>(InputStream)
+<dd>
+Format of stream is
+
+	url[ \t]time
+
+	It's a ' ' when parsing mosaic global history and a Tab
+	when parsing netscapes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#seen(net.www.html.URL)"><b>seen</b></a>(URL)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeHistoryFile(java.lang.String)"><b>writeHistoryFile</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#writeHistoryStream(java.io.PrintStream)"><b>writeHistoryStream</b></a>(PrintStream)
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="URLHistory"></a>
+<a name="URLHistory()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+URLHistory
+</b>
+<pre>
+  public URLHistory()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="seen(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="seen">
+<b>
+seen
+</b>
+</a>
+<pre>
+  public boolean seen(<a href="net.www.html.URL.html#_top_">URL</a> u)
+</pre>
+<a name="addUrl(net.www.html.URL)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addUrl">
+<b>
+addUrl
+</b>
+</a>
+<pre>
+  public void addUrl(<a href="net.www.html.URL.html#_top_">URL</a> u)
+</pre>
+<a name="parseStream(java.io.InputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="parseStream">
+<b>
+parseStream
+</b>
+</a>
+<pre>
+  public void parseStream(<a href="java.io.InputStream.html#_top_">InputStream</a> is)
+</pre>
+<dl>
+<dd>
+Format of stream is
+	url[ \t]time
+	It's a ' ' when parsing mosaic global history and a Tab
+	when parsing netscapes.  HotJava's format uses a Tab,
+	and currently sticks in 0 for the last time visited.  That's
+	because there's no way to get the current time in hotjava.
+</dl>
+<p>
+<a name="writeHistoryFile(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeHistoryFile">
+<b>
+writeHistoryFile
+</b>
+</a>
+<pre>
+  public void writeHistoryFile(<a href="java.lang.String.html#_top_">String</a> filename)
+</pre>
+<a name="writeHistoryStream(java.io.PrintStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="writeHistoryStream">
+<b>
+writeHistoryStream
+</b>
+</a>
+<pre>
+  public void writeHistoryStream(<a href="java.io.PrintStream.html#_top_">PrintStream</a> os)
+</pre>
+<a name="openOutputStream(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openOutputStream">
+<b>
+openOutputStream
+</b>
+</a>
+<pre>
+  public void openOutputStream(<a href="java.lang.String.html#_top_">String</a> filename)
+</pre>
+<a name="main(java.lang.String[])">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="main">
+<b>
+main
+</b>
+</a>
+<pre>
+  public static void main(<a href="java.lang.String.html#_top_">String</a> args[])
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.ULTagRef.html#_top_">Previous</a>    <a href="browser.WRFormatter.html#_top_">Next</a></pre>
+</body>
+</html>

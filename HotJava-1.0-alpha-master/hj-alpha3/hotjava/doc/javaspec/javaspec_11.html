@@ -1,0 +1,212 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>The Java Spec: Appendix: Java Language Grammar</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING75></A>
+       <A HREF="javaspec_10.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<HR>
+<H2>B  Appendix: Java Language Grammar</H2>
+<HR>
+
+
+This is a short grammar for a Java compilation unit. A Java program consists of one or more compilation units.<P>
+The grammar has undefined terminal symbols DocComment, Identifier, Number, String, and Character.  Quoted text signifies literal terminals.<P>
+Each rule is of the form nonterminal = meta-expression ; Other meta-notation is: | for alternation, ( ... ) for grouping, postfix ? for 0 or 1 occurrences, postfix + for 1 or more occurrence, and postfix * for 0 or more occurrences.<P>
+<PRE>
+CompilationUnit =
+	PackageStatement? ImportStatement* TypeDeclaration*
+;
+PackageStatement =
+	`package' PackageName `;'
+;
+ImportStatement =
+	`import' PackageName `.' `*' `;'
+|	`import' ( ClassName | InterfaceName )`;'
+;
+TypeDeclaration =
+	ClassDeclaration
+|	InterfaceDeclaration
+|	`;'
+;
+ClassDeclaration =
+	Modifier* `class' Identifier 
+	(`extends' ClassName)?
+	(`implements' InterfaceName (`,' InterfaceName)*)?
+	`{' FieldDeclaration* `}'
+;
+InterfaceDeclaration =
+	Modifier* `interface' Identifier
+	(`extends' InterfaceName (`,' InterfaceName)*)?
+	`{' FieldDeclaration* `}'
+;
+FieldDeclaration =
+	DocComment? MethodDeclaration
+|	DocComment? ConstructorDeclaration
+|	DocComment? VariableDeclaration
+|	StaticInitializer
+|	`;'
+;
+MethodDeclaration =
+	Modifier* Type Identifier `(' ParameterList? `)' ( `[' `]' )*
+	( `{' Statement* `}' | `;' )
+;
+ConstructorDeclaration =
+	Modifier* Identifier `(' ParameterList? `)'
+	`{' Statement* `}'
+;
+VariableDeclaration =
+	Modifier* Type VariableDeclarator (`,' VariableDeclarator)* `;'
+;
+VariableDeclarator =
+	Identifier (`[' `]')* (`=' VariableInitializer)?
+;
+
+VariableInitializer  =
+	Expression
+|	`{'  ( VariableInitializer  ( `,' VariableInitializer  )* `,'? )? `}'
+;
+StaticInitializer = 
+	`static' `{' Statement* `}'
+;
+ParameterList =
+	Parameter (`,' Parameter)*
+;
+Parameter =
+	TypeSpecifier Identifier (`[' `]')*
+;
+Statement =
+	VariableDeclaration
+|	Expression `;'
+|	`{' Statement* `}'
+|	`if' `(' Expression `)' Statement (`else' Statement)?
+|	`while' `(' Expression `)' Statement
+|	`do' Statement `while' `(' Expression `)' `;'
+|	`try' Statement (`catch' `(' Parameter `)' Statement)* 
+		(`finally' Statement)?
+|	`switch' `(' Expression `)' `{' Statement* `}'
+|	`synchronized' `(' Expression `)' Statement
+|	`return' Expression? `;'
+|	`throw' Expression `;'
+|	`case' Expression `:' 
+|	`default' `:' 
+|	Identifier `:' Statement
+|	`break' Identifier? `;'
+|	`continue' Identifier? `;'
+|	`;'
+;
+Expression =
+	Expression `+' Expression
+|	Expression `-' Expression
+|	Expression `*' Expression
+|	Expression `/' Expression
+|	Expression `%' Expression
+|	Expression `^' Expression
+|	Expression `&amp;' Expression
+|	Expression `|' Expression
+|	Expression `&amp;&amp;' Expression
+|	Expression `||' Expression
+|	Expression `&lt;&lt;` Expression
+|	Expression `&gt;&gt;' Expression
+|	Expression `&gt;&gt;&gt;' Expression
+|	Expression `=' Expression
+|	Expression `+=' Expression
+|	Expression `-=' Expression
+|	Expression `*=' Expression
+|	Expression `/=' Expression
+|	Expression `%=' Expression
+|	Expression `^=' Expression
+|	Expression `&amp;=' Expression
+|	Expression `|=' Expression
+|	Expression `&lt;&lt;=' Expression
+|	Expression `&gt;&gt;=' Expression
+|	Expression `&gt;&gt;&gt;=' Expression
+|	Expression `&lt;` Expression
+|	Expression `&gt;' Expression
+|	Expression `&lt;=' Expression
+|	Expression `&gt;=' Expression
+|	Expression `==' Expression
+|	Expression `!=' Expression
+|	Expression `.' Expression
+|	Expression `,' Expression
+|	Expression `instanceof' ( ClassName | InterfaceName )
+|	Expression `?' Expression `:' Expression
+|	Expression `[' Expression `]'
+|	`++' Expression
+|	`--' Expression
+|	Expression `++'
+|	Expression `--'
+|	`-' Expression
+|	`!' Expression
+|	`~' Expression
+|	`(' Expression  `)'
+|	`(' Type `)' Expression
+|	Expression  `(' ArgList? `)'
+|	`new' ClassName  `(' ArgList?`)'
+|	`new' TypeSpecifier  ( `[' Expression `]' )+ (`['  `]')*
+|	`new' `(' Expression  `)'
+|	`true'
+|	`false'
+|	`null'
+|	`super'
+|	`this'
+|	Identifier
+|	Number
+|	String
+|	Character
+;
+ArgList =
+	Expression (`,' Expression )*
+;
+Type =
+	TypeSpecifier (`[' `]')*
+;
+TypeSpecifier =
+	`boolean'
+|	`byte'
+|	`char'
+|	`short'
+|	`int'
+|	`float'
+|	`long'
+|	`double'
+|	ClassName
+|	InterfaceName
+;
+
+
+Modifier =
+	`public'
+|	`private'
+|	`protected'
+|	`static'
+|	`final'
+|	`native'
+|	`synchronized'
+|	`abstract'
+|	`threadsafe'
+|	`transient'
+;
+PackageName =
+	Identifier 
+|	PackageName `.' Identifier
+;
+
+ClassName =
+	Identifier
+| 	PackageName `.' Identifier
+;
+
+InterfaceName =
+	Identifier
+| 	PackageName `.' Identifier
+;
+
+
+<HR>
+       <A HREF="javaspec_10.html">Prev</A>       <A HREF="javaspec_1.html">Up</A>       <A HREF="javaspec_1.html">Contents</A>       <P>
+<B>The Java Language Specification</B><P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

@@ -1,0 +1,83 @@
+<!-- sccsid: @(#)javah.html	1.3 94/12/12 --->
+<HTML>
+<HEAD>
+<TITLE>javah</TITLE>
+</HEAD><BODY>
+
+<H1>javah</H1>
+<b>javah</b> produces C header files and C stub files from
+an Java class file.
+
+<h2>SYNOPSIS</h2>
+javah [ <a href="javah.html#Options">options</a> ] classname. . .
+<p>
+javah_g [ <a href="javah.html#Options">options</a> ] classname. . .
+
+<h2>DESCRIPTION</h2>
+<b>javah</b> generates headers and stubs that are needed to implement native
+methods.
+The  header (.h) files created are used by  C programs  to reference class
+instance variables. The .h file contains a struct definition whose layout
+parallels the layout of the corresponding class. The fields in the struct
+correspond to instance variables in the class.
+<p>
+The name of the header file and the structure that is declared are
+derived from the name of the class. If the class passed to <b>javah</b> is 
+inside a package the package name is prepended to both the header file name 
+and the structure name. Underscores (_) are used as name delimiters.
+<p>
+By default <b>javah</b> creates a subdirectory, called "CClassHeaders", where it saves 
+the header files it creates. If the -stubs option is used, <b>javah</b> creates a
+directory named "stubs" and saves the stub file there.
+<p>
+<b>javah_g</b> is a non-optimized version of <b>javah</b> suitable for use with 
+debuggers like dbx or gdb.
+<P>
+<a name=Options><h2>OPTIONS</h2></a>
+<dl>
+<dt>-d directory
+<dd>Overrides the default directory where <b>javah</b> saves the header files 
+or the stub files.<p>
+<dt>-td directory
+<dd>Overrides the default directory where <b>javah</b> stores temporary files.
+The default is /tmp.
+<p>
+<dt>-stubs
+<dd>Causes <b>javah</b> to generate stub declarations from the Java 
+object file.<P>
+<dt>-verbose
+<dd>Causes <b>javah</b> to print a message to stdout concerning the status of 
+the generated files.<P>
+<dt> -classpath path
+<dd> Specifies the path <b>javah</b> uses to look up classes. Overrides the default 
+or the CLASSPATH environment variable if it is set. Directories are separated by 
+colons. Thus the general format for <i>path</i> is:
+<pre>
+    .:&lt;your_path&gt;
+</pre>
+<p>
+For example:
+<pre>
+    .:/home/avh/classes:/usr/local/java/classes
+</pre>
+</dl>
+<p>
+<H2>ENVIRONMENT VARIABLES</H2>
+<dl>
+<dt>CLASSPATH
+<dd>Used to provide the system a path to user-defined classes. Directories are
+separated by colons, for example,
+<pre>
+    .:/home/avh/classes:/usr/local/java/classes
+</pre>
+</dl>
+<P>
+<H2>SEE ALSO</H2>
+<a HREF="java.html">java</A>,  <A HREF="javac.html">javac</A>,  
+<A HREF="javaprof.html">javaprof</A>, <A HREF="javap.html">javap</A>,  
+<A HREF="javadoc.html">javadoc</A>
+<a href="../javaspec/javaspec_1.html">The Java Language 
+Specification</a>,  <a href="../vmspec/vmspec_1.html"> The JAVA Virtual
+Machine Specification</a>
+
+

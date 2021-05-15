@@ -1,0 +1,126 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Pushing Constants onto the Stack</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING26></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_17.html">Prev</A>       <A HREF="vmspec_19.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Pushing Constants onto the Stack</H1>
+<DL>
+<DT><A HREF="vmspec_18.html#HEADING27"><B></B>  bipush</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING28"><B></B>  sipush</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING29"><B></B>  ldc1</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING30"><B></B>  ldc2</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING31"><B></B>  ldc2w</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING32"><B></B>  aconst_null</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING33"><B></B>  iconst_m1</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING34"><B></B>  iconst_&lt;n&gt;</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING35"><B></B>  lconst_&lt;l&gt;</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING36"><B></B>  fconst_&lt;f&gt;</A><DD>
+<DT><A HREF="vmspec_18.html#HEADING37"><B></B>  dconst_&lt;d&gt;</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING27></A>
+<H3>bipush</H3>
+Push one-byte signed integer <BR><IMG SRC="instructions_only_Tbl_13.gif"><BR>
+ <P>
+<PRE>
+... =&gt; ..., value<P>
+</PRE>
+byte1 is interpreted as a signed 8-bit value. This value is expanded to an integer and pushed onto the operand stack.<P>
+<A NAME=HEADING28></A>
+<H3>sipush</H3>
+Push two-byte signed integer <BR><IMG SRC="instructions_only_Tbl_2.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., item<P>
+</PRE>
+byte1 and byte2 are assembled into a signed 16-bit value. This value is expanded to an integer and pushed onto the operand stack.<P>
+<A NAME=HEADING29></A>
+<H3>ldc1</H3>
+Push item from constant pool <BR><IMG SRC="instructions_only_Tbl_122.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., item<P>
+</PRE>
+indexbyte1 is used as an unsigned 8-bit index into the constant pool of the current class. The item at that index is resolved and pushed onto the stack. <P>
+<A NAME=HEADING30></A>
+<H3>ldc2</H3>
+Push item from constant pool <BR><IMG SRC="instructions_only_Tbl_4.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., item<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an unsigned 16-bit index into the constant pool of the current class. The item at that index is resolved and pushed onto the stack. <P>
+<A NAME=HEADING31></A>
+<H3>ldc2w</H3>
+Push long or double from constant pool <BR><IMG SRC="instructions_only_Tbl_144.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., constant-word1, constant-word2<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an unsigned 16-bit index into the constant pool of the current class. The two-word constant at that index is resolved and pushed onto the stack.<P>
+<A NAME=HEADING32></A>
+<H3>aconst_null</H3>
+Push null object<BR><IMG SRC="instructions_only_Tbl_35.gif"><BR>
+ <P>
+<PRE>
+... =&gt; ..., null<P>
+</PRE>
+Push the null object onto the stack.<P>
+<A NAME=HEADING33></A>
+<H3>iconst_m1</H3>
+Push integer constant -1 <BR><IMG SRC="instructions_only_Tbl_34.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., -1<P>
+</PRE>
+Push the integer -1 onto the stack.<P>
+<A NAME=HEADING34></A>
+<H3>iconst_&lt;n&gt;</H3>
+Push integer constant<BR><IMG SRC="instructions_only_Tbl_33.gif"><BR>
+ &lt;n&gt; <P>
+<PRE>
+... =&gt; ..., &lt;n&gt;<P>
+</PRE>
+Forms: iconst_0 = 3, iconst_1 = 4, iconst_2 = 5, iconst_3 = 6, iconst_4 = 7, iconst_5 = 8<P>
+Push the integer &lt;n&gt; onto the stack.<P>
+<A NAME=HEADING35></A>
+<H3>lconst_&lt;l&gt;</H3>
+Push long integer constant<BR><IMG SRC="instructions_only_Tbl_47.gif"><BR>
+ <P>
+<PRE>
+... =&gt; ..., &lt;l&gt;-word1, &lt;l&gt;-word2<P>
+</PRE>
+Forms: lconst_0 = 9, lconst_1 = 10<P>
+Push the long integer &lt;l&gt; onto the stack.<P>
+<A NAME=HEADING36></A>
+<H3>fconst_&lt;f&gt;</H3>
+Push single float<BR><IMG SRC="instructions_only_Tbl_27.gif"><BR>
+ <P>
+<PRE>
+... =&gt; ..., &lt;f&gt;<P>
+</PRE>
+Forms: fconst_0 = 11, fconst_1 = 12, fconst_2 = 13<P>
+Push the single precision floating point number &lt;f&gt; onto the stack.<P>
+<A NAME=HEADING37></A>
+<H3>dconst_&lt;d&gt;</H3>
+Push double float<BR><IMG SRC="instructions_only_Tbl_46.gif"><BR>
+ <P>
+<PRE>
+... =&gt; ..., &lt;d&gt;-word1, &lt;d&gt;-word2<P>
+</PRE>
+Forms: dconst_0 = 14, dconst_1 = 15<P>
+Push the double precision floating point number &lt;d&gt; onto the stack.<P>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_17.html">Prev</A>       <A HREF="vmspec_19.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

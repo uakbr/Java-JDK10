@@ -1,0 +1,28 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- An Interpreter for the Java Instruction Set</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING20></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_13.html">Prev</A>       <A HREF="vmspec_15.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>An Interpreter for the Java Instruction Set</H1>
+
+<HR>
+
+The instruction set of the Java virtual machine can be implemented using conventional methods like compiling to native code or interpretation. Initial Java implementations will include an interpreter for the instruction set. The interpreter sees compiled Java code as a stream of bytes that it interprets as virtual machine instructions. <P>
+The inner loop of the interpreter is essentially:<P>
+<PRE>
+<CODE>do {
+fetch a byte
+execute an action depending on the value of the byte
+} while (there is more to do);</CODE><P>
+</PRE>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_13.html">Prev</A>       <A HREF="vmspec_15.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

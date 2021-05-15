@@ -1,0 +1,258 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.www.html.MessageHeader
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.Document.html#_top_">Previous</a>    <a href="net.www.html.MeteredStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.www.html.MessageHeader
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----net.www.html.MessageHeader
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+MessageHeader</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+An RFC 844 or MIME message header.  Includes methods
+    for parsing headers from incoming streams, fetching
+    values, setting values, and printing headers.
+    Key values of null are legal: they indicate lines in
+    the header that don't have a valid key, but do have
+    a value (this isn't legal according to the standard,
+    but lines like this are everywhere).
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#MessageHeader()"><b>MessageHeader</b></a>()
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#MessageHeader(java.io.InputStream)"><b>MessageHeader</b></a>(InputStream)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#add(java.lang.String, java.lang.String)"><b>add</b></a>(String, String)
+<dd>
+Adds a key value pair to the end of the
+	header.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#canonicalID(java.lang.String)"><b>canonicalID</b></a>(String)
+<dd>
+Convert a message-id string to canonical form (strips off
+	leading and trailing <>s)
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#findNextValue(java.lang.String, java.lang.String)"><b>findNextValue</b></a>(String, String)
+<dd>
+Find the next value that corresponds to this key.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#findValue(java.lang.String)"><b>findValue</b></a>(String)
+<dd>
+Find the value that corresponds to this key.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#parseHeader(java.io.InputStream)"><b>parseHeader</b></a>(InputStream)
+<dd>
+Parse a MIME header from an input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#print(java.io.PrintStream)"><b>print</b></a>(PrintStream)
+<dd>
+Prints the key-value pairs represented by this
+	header.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#set(java.lang.String, java.lang.String)"><b>set</b></a>(String, String)
+<dd>
+Sets the value of a key.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="MessageHeader"></a>
+<a name="MessageHeader()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+MessageHeader
+</b>
+<pre>
+  public MessageHeader()
+</pre>
+<a name="MessageHeader(java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+MessageHeader
+</b>
+<pre>
+  public MessageHeader(<a href="java.io.InputStream.html#_top_">InputStream</a> is)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="findValue(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="findValue">
+<b>
+findValue
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> findValue(<a href="java.lang.String.html#_top_">String</a> k)
+</pre>
+<dl>
+<dd>
+Find the value that corresponds to this key.
+	It finds only the first occurrance of the key.
+	Returns null if not found.
+</dl>
+<p>
+<a name="findNextValue(java.lang.String, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="findNextValue">
+<b>
+findNextValue
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> findNextValue(<a href="java.lang.String.html#_top_">String</a> k,
+                              <a href="java.lang.String.html#_top_">String</a> v)
+</pre>
+<dl>
+<dd>
+Find the next value that corresponds to this key.
+	It finds the first value that follows v. To iterate
+	over all the values of a key use:
+	<pre>
+		for(String v=h.findValue(k); v!=null; v=h.findNextValue(k, v)) {
+		    ...
+		}
+	</pre>
+</dl>
+<p>
+<a name="print(java.io.PrintStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="print">
+<b>
+print
+</b>
+</a>
+<pre>
+  public void print(<a href="java.io.PrintStream.html#_top_">PrintStream</a> p)
+</pre>
+<dl>
+<dd>
+Prints the key-value pairs represented by this
+	header.  Also prints the RFC required blank line
+	at the end. Omits pairs with a null key.
+</dl>
+<p>
+<a name="add(java.lang.String, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="add">
+<b>
+add
+</b>
+</a>
+<pre>
+  public void add(<a href="java.lang.String.html#_top_">String</a> k,
+                  <a href="java.lang.String.html#_top_">String</a> v)
+</pre>
+<dl>
+<dd>
+Adds a key value pair to the end of the
+	header.  Duplicates are allowed
+</dl>
+<p>
+<a name="set(java.lang.String, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="set">
+<b>
+set
+</b>
+</a>
+<pre>
+  public void set(<a href="java.lang.String.html#_top_">String</a> k,
+                  <a href="java.lang.String.html#_top_">String</a> v)
+</pre>
+<dl>
+<dd>
+Sets the value of a key.  If the key already
+	exists in the header, it's value will be
+	changed.  Otherwise a new key/value pair will
+	be added to the end of the header.
+</dl>
+<p>
+<a name="canonicalID(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="canonicalID">
+<b>
+canonicalID
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> canonicalID(<a href="java.lang.String.html#_top_">String</a> id)
+</pre>
+<dl>
+<dd>
+Convert a message-id string to canonical form (strips off
+	leading and trailing <>s)
+</dl>
+<p>
+<a name="parseHeader(java.io.InputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="parseHeader">
+<b>
+parseHeader
+</b>
+</a>
+<pre>
+  public void parseHeader(<a href="java.io.InputStream.html#_top_">InputStream</a> is)
+</pre>
+<dl>
+<dd>
+Parse a MIME header from an input stream.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.www.html.html">This Package</a>    <a href="net.www.html.Document.html#_top_">Previous</a>    <a href="net.www.html.MeteredStream.html#_top_">Next</a></pre>
+</body>
+</html>

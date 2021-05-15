@@ -1,0 +1,663 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.Frame
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FormattingParameters.html#_top_">Previous</a>    <a href="awt.GapsLayout.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.Frame
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----<a href="awt.Container.html#_top_">awt.Container</a>
+                   |
+                   +----awt.Frame
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Frame</b>
+<dt>
+extends <a href="awt.Container.html#_top_">Container</a>
+</dl>
+A Frame is a top-level window that can contain other windows.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.39 20 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#background">background</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#defaultFont">defaultFont</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#statusMessage">statusMessage</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Frame(awt.WServer, boolean, boolean, awt.Frame, int, int, awt.Color)"><b>Frame</b></a>(WServer, boolean, boolean, Frame, int, int, Color)
+<dd>
+Constructs a Frame.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Frame(awt.WServer, boolean, awt.Frame, int, int, awt.Color)"><b>Frame</b></a>(WServer, boolean, Frame, int, int, Color)
+<dd>
+Creates a modeless Frame.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Frame(boolean, int, int, awt.Color)"><b>Frame</b></a>(boolean, int, int, Color)
+<dd>
+Constructs a Frame.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this Frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Returns the preferred dimension of this frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleQuit()"><b>handleQuit</b></a>()
+<dd>
+Override this method to take some action when the user decides
+to destroy this Frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hasStatusBar()"><b>hasStatusBar</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Shows this Frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#minDimension()"><b>minDimension</b></a>()
+<dd>
+Returns the minimum dimension to hold this Frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves this Frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes this Frame to the given dimensions.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resize()"><b>resize</b></a>()
+<dd>
+Called to inform the Frame that its size has changed and it
+should layout its children.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setDefaultFont(awt.Font)"><b>setDefaultFont</b></a>(Font)
+<dd>
+Sets the default font to use for all gui elements contained in
+this Frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setIconImage(awt.Image)"><b>setIconImage</b></a>(Image)
+<dd>
+Set the image to display when this Frame is iconized.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setMinSize(int, int)"><b>setMinSize</b></a>(int, int)
+<dd>
+Set the minimum size of the window
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setMinSize()"><b>setMinSize</b></a>()
+<dd>
+Sets the minimum size that this frame can be resized to and
+still show all its children.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setStatusMessage(java.lang.String)"><b>setStatusMessage</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setTitle(java.lang.String)"><b>setTitle</b></a>(String)
+<dd>
+Sets the title of this frame.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#showStatusBar(boolean)"><b>showStatusBar</b></a>(boolean)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#showingStatusBar()"><b>showingStatusBar</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this Frame.
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="defaultFont">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+defaultFont
+</b>
+<pre>
+  public <a href="awt.Font.html#_top_">Font</a> defaultFont
+</pre>
+<a name="background">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+background
+</b>
+<pre>
+  public <a href="awt.Color.html#_top_">Color</a> background
+</pre>
+<a name="statusMessage">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+statusMessage
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> statusMessage
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Frame"></a>
+<a name="Frame(awt.WServer, boolean, boolean, awt.Frame, int, int, awt.Color)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Frame
+</b>
+<pre>
+  public Frame(<a href="awt.WServer.html#_top_">WServer</a> ws,
+               boolean hasTitleBar,
+               boolean isModal,
+               <a href="#_top_">Frame</a> parentFrame,
+               int w,
+               int h,
+               <a href="awt.Color.html#_top_">Color</a> bg)
+</pre>
+<dl>
+<dd>
+Constructs a Frame.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ws
+-
+ is the WServer to create this Frame.
+<dd>
+hasTitleBar
+-
+ is true if this Frame should have a title region.
+<dd>
+isModal
+-
+ specifies whether the Frame is modal or not. If
+it is modal, then Frame.map will block until the frame is unmapped.
+<dd>
+parentFrame
+-
+ if not null then this Frame will be attached
+to the given Frame and serve the function of a dialog window.
+<dd>
+w
+-
+ is the width of this Frame.
+<dd>
+h
+-
+ is the height of this Frame.
+<dd>
+bg
+-
+ is the background color of this Frame.
+</dl>
+</dl>
+<p>
+<a name="Frame(awt.WServer, boolean, awt.Frame, int, int, awt.Color)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Frame
+</b>
+<pre>
+  public Frame(<a href="awt.WServer.html#_top_">WServer</a> ws,
+               boolean hasTitleBar,
+               <a href="#_top_">Frame</a> parentFrame,
+               int w,
+               int h,
+               <a href="awt.Color.html#_top_">Color</a> bg)
+</pre>
+<dl>
+<dd>
+Creates a modeless Frame.
+</dl>
+<p>
+<a name="Frame(boolean, int, int, awt.Color)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Frame
+</b>
+<pre>
+  public Frame(boolean hasTitleBar,
+               int w,
+               int h,
+               <a href="awt.Color.html#_top_">Color</a> bg)
+</pre>
+<dl>
+<dd>
+Constructs a Frame.  Unlike the previous constructor, this does not
+have a "parent" parameter.  It uses a default parent parameter that
+is the first Frame ever created.  In general, this is a <i>bad</i>
+constructor to call, but unfortunatly there are occasionally situations
+where Frames need to be created, but finding an appropriate parent is
+impossible.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+hasTitleBar
+-
+ is true if this Frame should have a title region.
+<dd>
+w
+-
+ is the width of this Frame.
+<dd>
+h
+-
+ is the height of this Frame.
+<dd>
+bg
+-
+ is the background color of this Frame.
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setDefaultFont(awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setDefaultFont">
+<b>
+setDefaultFont
+</b>
+</a>
+<pre>
+  public synchronized void setDefaultFont(<a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<dl>
+<dd>
+Sets the default font to use for all gui elements contained in
+this Frame.
+</dl>
+<p>
+<a name="resize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resize">
+<b>
+resize
+</b>
+</a>
+<pre>
+  public synchronized void resize()
+</pre>
+<dl>
+<dd>
+Called to inform the Frame that its size has changed and it
+should layout its children.
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Returns the preferred dimension of this frame.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#getPreferredSize()">getPreferredSize</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="minDimension()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="minDimension">
+<b>
+minDimension
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> minDimension()
+</pre>
+<dl>
+<dd>
+Returns the minimum dimension to hold this Frame.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#minDimension()">minDimension</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Shows this Frame.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#map()">map</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this Frame.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#unMap()">unMap</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="setTitle(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setTitle">
+<b>
+setTitle
+</b>
+</a>
+<pre>
+  public void setTitle(<a href="java.lang.String.html#_top_">String</a> title)
+</pre>
+<dl>
+<dd>
+Sets the title of this frame.
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this Frame.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#dispose()">dispose</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="handleQuit()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleQuit">
+<b>
+handleQuit
+</b>
+</a>
+<pre>
+  public void handleQuit()
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the user decides
+to destroy this Frame.
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int newX,
+                   int newY)
+</pre>
+<dl>
+<dd>
+Moves this Frame. UNIMPLEMENTED
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Container.html#move(int, int)">move</a> in class <a href="awt.Container.html#_top_">Container</a></dl>
+</dl>
+<p>
+<a name="setMinSize(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setMinSize">
+<b>
+setMinSize
+</b>
+</a>
+<pre>
+  public void setMinSize(int pWidth,
+                         int pHeight)
+</pre>
+<dl>
+<dd>
+Set the minimum size of the window
+</dl>
+<p>
+<a name="setMinSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setMinSize">
+<b>
+setMinSize
+</b>
+</a>
+<pre>
+  public void setMinSize()
+</pre>
+<dl>
+<dd>
+Sets the minimum size that this frame can be resized to and
+still show all its children.
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes this Frame to the given dimensions.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="showStatusBar(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="showStatusBar">
+<b>
+showStatusBar
+</b>
+</a>
+<pre>
+  public void showStatusBar(boolean show)
+</pre>
+<a name="showingStatusBar()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="showingStatusBar">
+<b>
+showingStatusBar
+</b>
+</a>
+<pre>
+  public boolean showingStatusBar()
+</pre>
+<a name="setStatusMessage(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setStatusMessage">
+<b>
+setStatusMessage
+</b>
+</a>
+<pre>
+  public void setStatusMessage(<a href="java.lang.String.html#_top_">String</a> message)
+</pre>
+<a name="setIconImage(awt.Image)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setIconImage">
+<b>
+setIconImage
+</b>
+</a>
+<pre>
+  public void setIconImage(<a href="awt.Image.html#_top_">Image</a> image)
+</pre>
+<dl>
+<dd>
+Set the image to display when this Frame is iconized. Note that
+not all platforms support the concept of iconizing a window.
+</dl>
+<p>
+<a name="hasStatusBar()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hasStatusBar">
+<b>
+hasStatusBar
+</b>
+</a>
+<pre>
+  public boolean hasStatusBar()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.FormattingParameters.html#_top_">Previous</a>    <a href="awt.GapsLayout.html#_top_">Next</a></pre>
+</body>
+</html>

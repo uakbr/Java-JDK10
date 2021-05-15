@@ -1,0 +1,75 @@
+<html>
+<head> <title> Configuring the Firewall List</title> </head>
+
+<body>
+<h1> Configuring the Firewall List </h1>
+<img src="../../demo/images/bar.gif">
+<p>
+
+This dialog lets you specify the scope of your firewall.
+A firewall is typically characterized by a
+DNS domain that separates one group of machines from the rest of the
+Internet hosts. For example "sun.com" is a domain that groups all of the
+machines at Sun Microsystems, Inc.
+<p> 
+
+However, it is possible to have finer control over what a firewall is.
+For example, you may want to consider only a subset of the machines in
+a given domain to be the ones that you trust to get applets from.<p>
+
+The firewall list in this dialog can contain two kinds of entries:
+<ul>
+<li>Domain entries -- These are DNS domains.
+For example, Sun.COM is one such domain,
+as is Eng.Sun.COM (which is contained by the Sun.COM domain).
+If you wish to include all local hosts,
+specify the "." domain.
+(Local hosts are hosts that don't have a domain name appended to them.
+For example, MyHost is a local host, but MyHost.Somewhere.ORG isn't.)
+
+<li>Host entries -- These are specific hosts.
+You can specify them with their symbolic names
+or by their Internet IP addresses.
+</ul>
+
+To add an entry to the firewall list,
+type the entry into the textfield
+and either press Return or click the "Add" button.
+<p>
+
+<h3>Add</h3>
+Click this button to add the contents of the textfield to the firewall list.
+<p>
+
+<h3>Change</h3>
+Click this button to replace the selected entry (in the firewall list)
+with the contents of the textfield.
+<p>
+
+<h3>Delete</h3>
+Click this button to delete the selected entry from the firewall list.
+<p>
+
+<h3>Entry type</h3>
+Use this menu button to specify whether the entry you're about
+to add is a domain or a host.
+The domain entry "." is the same as entering all local host names.
+<p>
+
+<h3>Apply</h3>
+Click this button to apply and save the changes you've specified.
+This operation may fail if a system
+security configuration file has been set up for HotJava.
+<p>
+
+<h3>Cancel</h3>
+This button cancels all the changes you've made and resets the choices to their
+initial values.
+<p>
+
+<h3>Help</h3>
+This button brings up this page in HotJava.
+<p>
+
+</body>
+

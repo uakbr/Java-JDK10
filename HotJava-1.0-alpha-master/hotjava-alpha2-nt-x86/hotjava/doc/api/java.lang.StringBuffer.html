@@ -1,0 +1,1170 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.StringBuffer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.String.html#_top_">Previous</a>    <a href="java.lang.System.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.StringBuffer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.lang.StringBuffer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+StringBuffer</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+This class is a growable buffer for characters. It is mainly used
+to create Strings. The compiler uses it to implement the "+" operator.
+For example:
+<pre>
+	"a" + 4 + "c"
+</pre>
+is compiled to:
+<pre>
+	new StringBuffer().append("a").append(4).append("c").toString()
+</pre>
+Note that toString() does not create a copy of the internal buffer. Instead
+the buffer is marked as shared. Any further changes to the buffer will
+cause a copy to be made. <p>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.String.html#_top_">String</a>,
+<a href="java.io.OutputStreamBuffer.html#_top_">OutputStreamBuffer</a><dt>
+<b>Version:</b>
+<dd>
+	1.15, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringBuffer()"><b>StringBuffer</b></a>()
+<dd>
+Constructs an empty string buffer.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringBuffer(int)"><b>StringBuffer</b></a>(int)
+<dd>
+Constructs a string buffer with the specified initial length.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StringBuffer(java.lang.String)"><b>StringBuffer</b></a>(String)
+<dd>
+Constructs a string buffer with the specified initial value.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(java.lang.Object)"><b>append</b></a>(Object)
+<dd>
+Appends an object to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(java.lang.String)"><b>append</b></a>(String)
+<dd>
+Appends a string to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(char[])"><b>append</b></a>(char[])
+<dd>
+Appends an array of characters to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(char[], int, int)"><b>append</b></a>(char[], int, int)
+<dd>
+Appends a part of an array of characters to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(boolean)"><b>append</b></a>(boolean)
+<dd>
+Appends a boolean to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(int)"><b>append</b></a>(int)
+<dd>
+Appends an integer to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(long)"><b>append</b></a>(long)
+<dd>
+Appends a long to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(float)"><b>append</b></a>(float)
+<dd>
+Appends a float to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#append(double)"><b>append</b></a>(double)
+<dd>
+Appends a double to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#appendChar(int)"><b>appendChar</b></a>(int)
+<dd>
+Appends a character to the end of this buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#capacity()"><b>capacity</b></a>()
+<dd>
+Returns the current capacity of the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#charAt(int)"><b>charAt</b></a>(int)
+<dd>
+Returns the character at the specified index.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copyWhenShared()"><b>copyWhenShared</b></a>()
+<dd>
+Copies the buffer value if it is shared.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#ensureCapacity(int)"><b>ensureCapacity</b></a>(int)
+<dd>
+Ensures that the capacity of the buffer is at least equal to the
+specified minimum.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getChars(int, int, char[], int)"><b>getChars</b></a>(int, int, char[], int)
+<dd>
+Copies the characters of the specified substring (determined by
+beginIndex and endIndex) into the character array, starting at the
+array's dstIndex location.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, java.lang.Object)"><b>insert</b></a>(int, Object)
+<dd>
+Inserts an object into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, java.lang.String)"><b>insert</b></a>(int, String)
+<dd>
+Inserts a string into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, char[])"><b>insert</b></a>(int, char[])
+<dd>
+Inserts an array of characters into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, boolean)"><b>insert</b></a>(int, boolean)
+<dd>
+Inserts a boolean into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, int)"><b>insert</b></a>(int, int)
+<dd>
+Inserts an integer into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, long)"><b>insert</b></a>(int, long)
+<dd>
+Inserts a long into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, float)"><b>insert</b></a>(int, float)
+<dd>
+Inserts a float into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insert(int, double)"><b>insert</b></a>(int, double)
+<dd>
+Inserts a double into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#insertChar(int, char)"><b>insertChar</b></a>(int, char)
+<dd>
+Inserts a character into the string buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#length()"><b>length</b></a>()
+<dd>
+Returns the length (character count) of the buffer.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setCharAt(int, char)"><b>setCharAt</b></a>(int, char)
+<dd>
+Sets the character at the index to be newCharacter.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setLength(int)"><b>setLength</b></a>(int)
+<dd>
+Sets the length of the string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Converts to a String
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="StringBuffer"></a>
+<a name="StringBuffer()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringBuffer
+</b>
+<pre>
+  public StringBuffer()
+</pre>
+<dl>
+<dd>
+Constructs an empty string buffer.
+</dl>
+<p>
+<a name="StringBuffer(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringBuffer
+</b>
+<pre>
+  public StringBuffer(int length)
+</pre>
+<dl>
+<dd>
+Constructs a string buffer with the specified initial length.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+length
+-
+	the initial length
+</dl>
+</dl>
+<p>
+<a name="StringBuffer(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StringBuffer
+</b>
+<pre>
+  public StringBuffer(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Constructs a string buffer with the specified initial value.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+str
+-
+	the initial value of the buffer
+</dl>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="length()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="length">
+<b>
+length
+</b>
+</a>
+<pre>
+  public int length()
+</pre>
+<dl>
+<dd>
+Returns the length (character count) of the buffer.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the number of characters in the buffer
+</dl>
+</dl>
+<p>
+<a name="capacity()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="capacity">
+<b>
+capacity
+</b>
+</a>
+<pre>
+  public int capacity()
+</pre>
+<dl>
+<dd>
+Returns the current capacity of the string buffer. The capacity
+is the amount of storage available for newly inserted
+characters; beyond which an allocation will occur.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the capacity of the buffer
+</dl>
+</dl>
+<p>
+<a name="copyWhenShared()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copyWhenShared">
+<b>
+copyWhenShared
+</b>
+</a>
+<pre>
+  public void copyWhenShared()
+</pre>
+<dl>
+<dd>
+Copies the buffer value if it is shared.
+</dl>
+<p>
+<a name="ensureCapacity(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="ensureCapacity">
+<b>
+ensureCapacity
+</b>
+</a>
+<pre>
+  public synchronized void ensureCapacity(int minimumCapacity)
+</pre>
+<dl>
+<dd>
+Ensures that the capacity of the buffer is at least equal to the
+specified minimum.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+minimumCapacity
+-
+	the minimum desired capacity
+</dl>
+</dl>
+<p>
+<a name="setLength(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setLength">
+<b>
+setLength
+</b>
+</a>
+<pre>
+  public synchronized void setLength(int newLength)
+</pre>
+<dl>
+<dd>
+Sets the length of the string. If the length is reduced, characters
+are lost. If the length is extended, the values of the new characters
+are set to 0.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+newLength
+-
+	the new length of the buffer
+<dt>
+<b>Throws:</b> <a href="java.lang.StringIndexOutOfRangeException.html#_top_">StringIndexOutOfRangeException</a>
+<dd>
+  invalid length
+</dl>
+</dl>
+<p>
+<a name="charAt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="charAt">
+<b>
+charAt
+</b>
+</a>
+<pre>
+  public synchronized char charAt(int index)
+</pre>
+<dl>
+<dd>
+Returns the character at the specified index. An index ranges
+from 0..length()-1.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+index
+-
+	the index of the desired character
+<dt>
+<b>Returns:</b>
+<dd>
+	the desired character
+</dl>
+</dl>
+<p>
+<a name="getChars(int, int, char[], int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getChars">
+<b>
+getChars
+</b>
+</a>
+<pre>
+  public synchronized void getChars(int srcBegin,
+                                    int srcEnd,
+                                    char dst[],
+                                    int dstBegin)
+</pre>
+<dl>
+<dd>
+Copies the characters of the specified substring (determined by
+beginIndex and endIndex) into the character array, starting at the
+array's dstIndex location. Both scrBegin and scrEnd must be legal
+indexes into the buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+srcBegin
+-
+	begin copy at this offset in the String
+<dd>
+srcEnd
+-
+	stop copying at this offset in the String
+<dd>
+dst
+-
+		the array to copy the data into
+<dd>
+dstBegin
+-
+	offset into dst
+<dt>
+<b>Throws:</b> <a href="java.lang.StringIndexOutOfRangeException.html#_top_">StringIndexOutOfRangeException</a>
+<dd>
+ Invalid index into the buffer
+</dl>
+</dl>
+<p>
+<a name="setCharAt(int, char)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setCharAt">
+<b>
+setCharAt
+</b>
+</a>
+<pre>
+  public synchronized void setCharAt(int index,
+                                     char ch)
+</pre>
+<dl>
+<dd>
+Sets the character at the index to be newCharacter.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+index
+-
+	the index of the character
+<dd>
+ch
+-
+		the new character
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid index
+</dl>
+</dl>
+<p>
+<a name="append(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> append(<a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Appends an object to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+obj
+-
+	the object to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> append(<a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Appends a string to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+str
+-
+	the string to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(char[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> append(char str[])
+</pre>
+<dl>
+<dd>
+Appends an array of characters to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+str
+-
+	the characters to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(char[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> append(char str[],
+                                          int offset,
+                                          int len)
+</pre>
+<dl>
+<dd>
+Appends a part of an array of characters to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+str
+-
+	the characters to be appended
+<dd>
+offset
+-
+	where to start
+<dd>
+len
+-
+	the number of characters to add
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> append(boolean b)
+</pre>
+<dl>
+<dd>
+Appends a boolean to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the boolean to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> append(int i)
+</pre>
+<dl>
+<dd>
+Appends an integer to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+i
+-
+	the integer to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(long)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> append(long l)
+</pre>
+<dl>
+<dd>
+Appends a long to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+l
+-
+	the long to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> append(float f)
+</pre>
+<dl>
+<dd>
+Appends a float to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+f
+-
+	the float to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="append(double)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="append">
+<b>
+append
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> append(double d)
+</pre>
+<dl>
+<dd>
+Appends a double to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+d
+-
+	the double to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="appendChar(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="appendChar">
+<b>
+appendChar
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> appendChar(int ch)
+</pre>
+<dl>
+<dd>
+Appends a character to the end of this buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+ch
+-
+	the character to be appended
+<dt>
+<b>Returns:</b>
+<dd>
+	the StringBuffer itself, NOT a new one.
+</dl>
+</dl>
+<p>
+<a name="insert(int, java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> insert(int offset,
+                                          <a href="java.lang.Object.html#_top_">Object</a> obj)
+</pre>
+<dl>
+<dd>
+Inserts an object into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+obj
+-
+		the object to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="insert(int, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> insert(int offset,
+                                          <a href="java.lang.String.html#_top_">String</a> str)
+</pre>
+<dl>
+<dd>
+Inserts a string into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+str
+-
+		the string to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="insert(int, char[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> insert(int offset,
+                                          char str[])
+</pre>
+<dl>
+<dd>
+Inserts an array of characters into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+str
+-
+		the characters to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="insert(int, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> insert(int offset,
+                             boolean b)
+</pre>
+<dl>
+<dd>
+Inserts a boolean into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+b
+-
+		the boolean to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="insert(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> insert(int offset,
+                             int i)
+</pre>
+<dl>
+<dd>
+Inserts an integer into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+i
+-
+		the integer to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="insert(int, long)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> insert(int offset,
+                             long l)
+</pre>
+<dl>
+<dd>
+Inserts a long into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+l
+-
+		the long to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="insert(int, float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> insert(int offset,
+                             float f)
+</pre>
+<dl>
+<dd>
+Inserts a float into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+f
+-
+		the float to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="insert(int, double)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insert">
+<b>
+insert
+</b>
+</a>
+<pre>
+  public <a href="#_top_">StringBuffer</a> insert(int offset,
+                             double d)
+</pre>
+<dl>
+<dd>
+Inserts a double into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+d
+-
+		the double to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ invalid offset
+</dl>
+</dl>
+<p>
+<a name="insertChar(int, char)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="insertChar">
+<b>
+insertChar
+</b>
+</a>
+<pre>
+  public synchronized <a href="#_top_">StringBuffer</a> insertChar(int offset,
+                                              char ch)
+</pre>
+<dl>
+<dd>
+Inserts a character into the string buffer.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+offset
+-
+	the offset at which to insert
+<dd>
+ch
+-
+		the character to insert
+<dt>
+<b>Returns:</b>
+<dd>
+		the StringBuffer itself, NOT a new one.
+<dt>
+<b>Throws:</b> <a href="java.lang.ArrayIndexOutOfBoundsException.html#_top_">ArrayIndexOutOfBoundsException</a>
+<dd>
+ Invalid offset
+</dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Converts to a String
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the string representing the data in the buffer
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.String.html#_top_">Previous</a>    <a href="java.lang.System.html#_top_">Next</a></pre>
+</body>
+</html>

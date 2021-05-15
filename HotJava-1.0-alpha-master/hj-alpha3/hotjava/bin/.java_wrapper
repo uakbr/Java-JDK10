@@ -1,0 +1,44 @@
+#! /bin/ksh
+#
+#     @(#)java_wrapper.sh	1.10 95/05/11
+#
+#=================================================================
+#    STOP - THIS SCRIPT AND HOTJAVA WILL NOT RUN AT ALL UNDER
+#    SUNOS4.X, AKA SOLARIS 1.X.  
+#
+#    The problem is not with the shell used the run this script -
+#    the binary software will simply not run at all under Sunos
+#    4.x.  I am sorry if you missed earlier warnings and have
+#    downloading this software expecting it to run on SUNOS 4.x.  A
+#    port to the SUNOS 4.x platform is underway and will be
+#    publically released as soon as we have it available.  For the
+#    latest information see our home page at http://java.sun.com/
+#=================================================================
+
+# Set up default variable values if not supplied by the user.
+
+export HOTJAVA_HOME
+PRG=`whence $0` >/dev/null 2>&1
+HOTJAVA_HOME=`dirname $PRG`/..
+
+export CLASSPATH
+if [ -z "$CLASSPATH" ]
+then
+    CLASSPATH="."
+fi
+
+CLASSPATH="$CLASSPATH:$HOTJAVA_HOME/classes"
+
+export LD_LIBRARY_PATH
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOTJAVA_HOME/lib"
+      
+progname=`basename $0`
+prog=$HOTJAVA_HOME/bin/`/usr/ucb/arch`/${progname}
+
+if [ -f $prog ]
+then
+    eval exec $prog $opts '"$@"'
+else
+    echo >&2 "$progname was not found in ${prog}"
+    exit 1
+fi

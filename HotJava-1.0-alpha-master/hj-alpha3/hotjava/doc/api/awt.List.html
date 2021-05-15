@@ -1,0 +1,648 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.List
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Label.html#_top_">Previous</a>    <a href="awt.Menu.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.List
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----awt.List
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+List</b>
+<dt>
+extends <a href="awt.Component.html#_top_">Component</a>
+<dt>
+implements <a href="awt.ChoiceHandler.html#_top_">ChoiceHandler</a>
+</dl>
+A scrolling list of text items.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.18 03 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Sami Shaio</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#List(awt.Container, awt.ChoiceHandler, java.lang.String, int, boolean, boolean)"><b>List</b></a>(Container, ChoiceHandler, String, int, boolean, boolean)
+<dd>
+Creates a scrolling list.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#List(awt.Container, awt.ChoiceHandler, java.lang.String, int, boolean)"><b>List</b></a>(Container, ChoiceHandler, String, int, boolean)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addItem(java.lang.String)"><b>addItem</b></a>(String)
+<dd>
+Adds an item to the scrolling list.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clear()"><b>clear</b></a>()
+<dd>
+Clears the list.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#delItem(int)"><b>delItem</b></a>(int)
+<dd>
+Deletes one item at the given position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#delItems(int, int)"><b>delItems</b></a>(int, int)
+<dd>
+Deletes the items from start to end.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#deselect(int)"><b>deselect</b></a>(int)
+<dd>
+Deselect the given item.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Destructor (must be called to release resources).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#doubleClick(awt.Component, int)"><b>doubleClick</b></a>(Component, int)
+<dd>
+This is invoked when the user double-clicks on an item in the
+list.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getPreferredSize()"><b>getPreferredSize</b></a>()
+<dd>
+Returns the natural size of the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isSelected(int)"><b>isSelected</b></a>(int)
+<dd>
+Return true if the given item has been selected.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#itemAt(int)"><b>itemAt</b></a>(int)
+<dd>
+Gets the string associated with the given position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#makeVisible(int)"><b>makeVisible</b></a>(int)
+<dd>
+Force the given position to be visible.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Maps the object (called automatically when the
+parent is mapped).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#minDimension()"><b>minDimension</b></a>()
+<dd>
+Returns the minimum size of the object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#move(int, int)"><b>move</b></a>(int, int)
+<dd>
+Moves the component to a new location.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nItems()"><b>nItems</b></a>()
+<dd>
+Returns the number of items in the list.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reshape(int, int, int, int)"><b>reshape</b></a>(int, int, int, int)
+<dd>
+Reshapes the component.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#select(int)"><b>select</b></a>(int)
+<dd>
+Select the given item.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#selected(awt.Component, int)"><b>selected</b></a>(Component, int)
+<dd>
+This is the callback method for a ChoiceHandler interface.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setHFill(boolean)"><b>setHFill</b></a>(boolean)
+<dd>
+Sets whether or not this List stretches horizontally.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setNVisible(int)"><b>setNVisible</b></a>(int)
+<dd>
+Set the number of visible lines.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setVFill(boolean)"><b>setVFill</b></a>(boolean)
+<dd>
+Sets whether or not this List stretches vertically.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+UnMaps the object (called automatically when the
+parent is unmapped).
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="List"></a>
+<a name="List(awt.Container, awt.ChoiceHandler, java.lang.String, int, boolean, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+List
+</b>
+<pre>
+  public List(<a href="awt.Container.html#_top_">Container</a> p,
+              <a href="awt.ChoiceHandler.html#_top_">ChoiceHandler</a> ch,
+              <a href="java.lang.String.html#_top_">String</a> pName,
+              int visibleLines,
+              boolean multipleSelections,
+              boolean resizable)
+</pre>
+<dl>
+<dd>
+Creates a scrolling list.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+p
+-
+ is the parent window for this List.
+<dd>
+ch
+-
+ is the object that will handle selections for this List.
+<dd>
+visibleLines
+-
+ is the number of items to show.
+<dd>
+multipleSelections
+-
+ if true then multiple selections are allowed.
+<dd>
+resizable
+-
+ if true then the list will attempt to grow or
+shrink to match the width of the items it contains.
+</dl>
+</dl>
+<p>
+<a name="List(awt.Container, awt.ChoiceHandler, java.lang.String, int, boolean)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+List
+</b>
+<pre>
+  public List(<a href="awt.Container.html#_top_">Container</a> p,
+              <a href="awt.ChoiceHandler.html#_top_">ChoiceHandler</a> ch,
+              <a href="java.lang.String.html#_top_">String</a> pName,
+              int visibleLines,
+              boolean multipleSelections)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="selected(awt.Component, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="selected">
+<b>
+selected
+</b>
+</a>
+<pre>
+  public void selected(<a href="awt.Component.html#_top_">Component</a> c,
+                       int pos)
+</pre>
+<dl>
+<dd>
+This is the callback method for a ChoiceHandler interface. It
+will be called when the use single-clicks on an item in the
+scrolling list. If pos is -1 then this indicates multiple
+selections. Override to do something useful.
+</dl>
+<p>
+<a name="doubleClick(awt.Component, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="doubleClick">
+<b>
+doubleClick
+</b>
+</a>
+<pre>
+  public void doubleClick(<a href="awt.Component.html#_top_">Component</a> c,
+                          int pos)
+</pre>
+<dl>
+<dd>
+This is invoked when the user double-clicks on an item in the
+list. Override to do something useful.
+</dl>
+<p>
+<a name="isSelected(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isSelected">
+<b>
+isSelected
+</b>
+</a>
+<pre>
+  public boolean isSelected(int pos)
+</pre>
+<dl>
+<dd>
+Return true if the given item has been selected.
+</dl>
+<p>
+<a name="addItem(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addItem">
+<b>
+addItem
+</b>
+</a>
+<pre>
+  public void addItem(<a href="java.lang.String.html#_top_">String</a> item)
+</pre>
+<dl>
+<dd>
+Adds an item to the scrolling list.
+</dl>
+<p>
+<a name="itemAt(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="itemAt">
+<b>
+itemAt
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> itemAt(int pos)
+</pre>
+<dl>
+<dd>
+Gets the string associated with the given position.
+</dl>
+<p>
+<a name="clear()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clear">
+<b>
+clear
+</b>
+</a>
+<pre>
+  public void clear()
+</pre>
+<dl>
+<dd>
+Clears the list.
+</dl>
+<p>
+<a name="setNVisible(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setNVisible">
+<b>
+setNVisible
+</b>
+</a>
+<pre>
+  public void setNVisible(int nLines)
+</pre>
+<dl>
+<dd>
+Set the number of visible lines.
+</dl>
+<p>
+<a name="delItem(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="delItem">
+<b>
+delItem
+</b>
+</a>
+<pre>
+  public void delItem(int pos)
+</pre>
+<dl>
+<dd>
+Deletes one item at the given position.
+</dl>
+<p>
+<a name="delItems(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="delItems">
+<b>
+delItems
+</b>
+</a>
+<pre>
+  public void delItems(int start,
+                       int end)
+</pre>
+<dl>
+<dd>
+Deletes the items from start to end.
+</dl>
+<p>
+<a name="setHFill(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setHFill">
+<b>
+setHFill
+</b>
+</a>
+<pre>
+  public void setHFill(boolean t)
+</pre>
+<dl>
+<dd>
+Sets whether or not this List stretches horizontally.
+</dl>
+<p>
+<a name="setVFill(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setVFill">
+<b>
+setVFill
+</b>
+</a>
+<pre>
+  public void setVFill(boolean t)
+</pre>
+<dl>
+<dd>
+Sets whether or not this List stretches vertically.
+</dl>
+<p>
+<a name="getPreferredSize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getPreferredSize">
+<b>
+getPreferredSize
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> getPreferredSize()
+</pre>
+<dl>
+<dd>
+Returns the natural size of the object.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#getPreferredSize()">getPreferredSize</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="minDimension()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="minDimension">
+<b>
+minDimension
+</b>
+</a>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> minDimension()
+</pre>
+<dl>
+<dd>
+Returns the minimum size of the object.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#minDimension()">minDimension</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="reshape(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reshape">
+<b>
+reshape
+</b>
+</a>
+<pre>
+  public void reshape(int x,
+                      int y,
+                      int w,
+                      int h)
+</pre>
+<dl>
+<dd>
+Reshapes the component.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#reshape(int, int, int, int)">reshape</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="move(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="move">
+<b>
+move
+</b>
+</a>
+<pre>
+  public void move(int X,
+                   int Y)
+</pre>
+<dl>
+<dd>
+Moves the component to a new location.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#move(int, int)">move</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="select(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="select">
+<b>
+select
+</b>
+</a>
+<pre>
+  public void select(int pos)
+</pre>
+<dl>
+<dd>
+Select the given item.
+</dl>
+<p>
+<a name="deselect(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="deselect">
+<b>
+deselect
+</b>
+</a>
+<pre>
+  public void deselect(int pos)
+</pre>
+<dl>
+<dd>
+Deselect the given item.
+</dl>
+<p>
+<a name="makeVisible(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="makeVisible">
+<b>
+makeVisible
+</b>
+</a>
+<pre>
+  public void makeVisible(int pos)
+</pre>
+<dl>
+<dd>
+Force the given position to be visible.
+</dl>
+<p>
+<a name="nItems()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nItems">
+<b>
+nItems
+</b>
+</a>
+<pre>
+  public int nItems()
+</pre>
+<dl>
+<dd>
+Returns the number of items in the list.
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Maps the object (called automatically when the
+parent is mapped).
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#map()">map</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+UnMaps the object (called automatically when the
+parent is unmapped).
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#unMap()">unMap</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Destructor (must be called to release resources).
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Component.html#dispose()">dispose</a> in class <a href="awt.Component.html#_top_">Component</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.Label.html#_top_">Previous</a>    <a href="awt.Menu.html#_top_">Next</a></pre>
+</body>
+</html>

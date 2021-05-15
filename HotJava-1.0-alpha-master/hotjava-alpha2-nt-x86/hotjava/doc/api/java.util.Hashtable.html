@@ -1,0 +1,514 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.util.Hashtable
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Date.html#_top_">Previous</a>    <a href="java.util.HashtableEntry.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.util.Hashtable
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.util.Hashtable
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Hashtable</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Hashtable class. Maps keys to values. Any object can be used as
+a key and/or value.<p>
+To sucessfully store and retrieve objects from a hash table the
+object used as the key must implement the hashCode() and equals()
+methods.<p>
+This example creates a hashtable of numbers. It uses the names of
+the numbers as keys:
+<pre>
+	Hashtable numbers = new Hashtable();
+	numbers.put("one", new Integer(1));
+	numbers.put("two", new Integer(1));
+	numbers.put("three", new Integer(1));
+</pre>
+To retrieve a number use:
+<pre>
+	Integer n = (Integer)numbers.get("two");
+	if (n != null) {
+	    System.out.println("two = " + n);
+	}
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Object.html#hashCode">hashCode</a>,
+<a href="java.lang.Object.html#equals">equals</a><dt>
+<b>Version:</b>
+<dd>
+	1.20, 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Hashtable(int, float)"><b>Hashtable</b></a>(int, float)
+<dd>
+Construct a new, empty hashtable with the specified initial capacity
+and the specified load factor.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Hashtable(int)"><b>Hashtable</b></a>(int)
+<dd>
+Constructs a new, empty hashtable with the specified initial capacity.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Hashtable()"><b>Hashtable</b></a>()
+<dd>
+Constructs a new, empty hashtable.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clone()"><b>clone</b></a>()
+<dd>
+Creates a clone of the hashtable.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#contains(java.lang.Object)"><b>contains</b></a>(Object)
+<dd>
+Returns true if the specified object is an element of the hashtable.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#containsKey(java.lang.Object)"><b>containsKey</b></a>(Object)
+<dd>
+Returns true if the collection contains an element for the key.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#elements()"><b>elements</b></a>()
+<dd>
+Returns an enumeration of the elements.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#get(java.lang.Object)"><b>get</b></a>(Object)
+<dd>
+Gets the object associated with a key in the hashtable.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#isEmpty()"><b>isEmpty</b></a>()
+<dd>
+Returns true if the hashtable contains no elements.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keys()"><b>keys</b></a>()
+<dd>
+Returns an enumeration of the hashtable's keys.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#put(java.lang.Object, java.lang.Object)"><b>put</b></a>(Object, Object)
+<dd>
+Puts the specified element into the hashtable, using the specified
+key.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#rehash()"><b>rehash</b></a>()
+<dd>
+Rehashes the content of the table into a bigger table.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#remove(java.lang.Object)"><b>remove</b></a>(Object)
+<dd>
+Removes the element corresponding to the key.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#size()"><b>size</b></a>()
+<dd>
+Returns the hashtable's size (the number of elements it contains).
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+Converts to a rather lengthy string.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Hashtable"></a>
+<a name="Hashtable(int, float)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Hashtable
+</b>
+<pre>
+  public Hashtable(int initialCapacity,
+                   float loadFactor)
+</pre>
+<dl>
+<dd>
+Construct a new, empty hashtable with the specified initial capacity
+and the specified load factor.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+initialCapacity
+-
+ the initial number of buckets
+<dd>
+loadFactor
+-
+ a number between 0.0 and 1.0, it defines
+		the threshold for rehashing the hashtable into
+		a bigger one.
+</dl>
+</dl>
+<p>
+<a name="Hashtable(int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Hashtable
+</b>
+<pre>
+  public Hashtable(int initialCapacity)
+</pre>
+<dl>
+<dd>
+Constructs a new, empty hashtable with the specified initial capacity.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+initialCapacity
+-
+ the initial number of buckets
+</dl>
+</dl>
+<p>
+<a name="Hashtable()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Hashtable
+</b>
+<pre>
+  public Hashtable()
+</pre>
+<dl>
+<dd>
+Constructs a new, empty hashtable. A default capacity and load factor
+is used. Note that the hashtable will automatically grow when it gets
+full.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="size()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="size">
+<b>
+size
+</b>
+</a>
+<pre>
+  public int size()
+</pre>
+<dl>
+<dd>
+Returns the hashtable's size (the number of elements it contains).
+</dl>
+<p>
+<a name="isEmpty()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="isEmpty">
+<b>
+isEmpty
+</b>
+</a>
+<pre>
+  public boolean isEmpty()
+</pre>
+<dl>
+<dd>
+Returns true if the hashtable contains no elements.
+</dl>
+<p>
+<a name="keys()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keys">
+<b>
+keys
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.util.Enumeration.html#_top_">Enumeration</a> keys()
+</pre>
+<dl>
+<dd>
+Returns an enumeration of the hashtable's keys.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#elements">elements</a>,
+<a href="java.util.Enumeration.html#_top_">Enumeration</a>
+</dl>
+</dl>
+<p>
+<a name="elements()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="elements">
+<b>
+elements
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.util.Enumeration.html#_top_">Enumeration</a> elements()
+</pre>
+<dl>
+<dd>
+Returns an enumeration of the elements. Use the Enumeration methods on
+the returned object to fetch the elements sequentially.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#keys">keys</a>,
+<a href="java.util.Enumeration.html#_top_">Enumeration</a>
+</dl>
+</dl>
+<p>
+<a name="contains(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="contains">
+<b>
+contains
+</b>
+</a>
+<pre>
+  public synchronized boolean contains(<a href="java.lang.Object.html#_top_">Object</a> value)
+</pre>
+<dl>
+<dd>
+Returns true if the specified object is an element of the hashtable.
+This operation is more expensive than containsKey()
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+value
+-
+ the value that we are looking for
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#containsKey">containsKey</a>
+</dl>
+</dl>
+<p>
+<a name="containsKey(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="containsKey">
+<b>
+containsKey
+</b>
+</a>
+<pre>
+  public synchronized boolean containsKey(<a href="java.lang.Object.html#_top_">Object</a> key)
+</pre>
+<dl>
+<dd>
+Returns true if the collection contains an element for the key.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+key
+-
+ the key that we are looking for
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#contains">contains</a>
+</dl>
+</dl>
+<p>
+<a name="get(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="get">
+<b>
+get
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> get(<a href="java.lang.Object.html#_top_">Object</a> key)
+</pre>
+<dl>
+<dd>
+Gets the object associated with a key in the hashtable.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+ the element for the key or null if the key
+		is not defined in the hash table.
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#put">put</a>
+</dl>
+</dl>
+<p>
+<a name="rehash()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="rehash">
+<b>
+rehash
+</b>
+</a>
+<pre>
+  protected void rehash()
+</pre>
+<dl>
+<dd>
+Rehashes the content of the table into a bigger table.
+This is method called automatically when the hashtable's
+size exeeds a threshold.
+</dl>
+<p>
+<a name="put(java.lang.Object, java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="put">
+<b>
+put
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> put(<a href="java.lang.Object.html#_top_">Object</a> key,
+                                 <a href="java.lang.Object.html#_top_">Object</a> value)
+</pre>
+<dl>
+<dd>
+Puts the specified element into the hashtable, using the specified
+key.  The element may be retrieved by doing a get() with the same key.
+The key can't be null and the element can't be null.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#get">get</a><dt>
+<b>Returns:</b>
+<dd>
+the old value of the key, or null if it didn't have one
+</dl>
+</dl>
+<p>
+<a name="remove(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="remove">
+<b>
+remove
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> remove(<a href="java.lang.Object.html#_top_">Object</a> key)
+</pre>
+<dl>
+<dd>
+Removes the element corresponding to the key. Does nothing if the
+key isn't present.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+key
+-
+ the key that needs to be removed
+<dt>
+<b>Returns:</b>
+<dd>
+the value of key, or null if the key was not found
+</dl>
+</dl>
+<p>
+<a name="clone()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clone">
+<b>
+clone
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.Object.html#_top_">Object</a> clone()
+</pre>
+<dl>
+<dd>
+Creates a clone of the hashtable. A shallow copy is made,
+the keys and elements themselves are NOT cloned. This is a
+relatively expensive operation.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#clone()">clone</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public synchronized <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<dl>
+<dd>
+Converts to a rather lengthy string.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.lang.Object.html#toString()">toString</a> in class <a href="java.lang.Object.html#_top_">Object</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.util.html">This Package</a>    <a href="java.util.Date.html#_top_">Previous</a>    <a href="java.util.HashtableEntry.html#_top_">Next</a></pre>
+</body>
+</html>

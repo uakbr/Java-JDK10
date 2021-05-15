@@ -1,0 +1,474 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.ftp.FtpClient
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.ftp.html">This Package</a>    <a href="net.ftp.html">Previous</a>    <a href="net.ftp.FtpInputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class net.ftp.FtpClient
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.NetworkClient.html#_top_">net.NetworkClient</a>
+           |
+           +----<a href="net.TransferProtocolClient.html#_top_">net.TransferProtocolClient</a>
+                   |
+                   +----net.ftp.FtpClient
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+FtpClient</b>
+<dt>
+extends <a href="net.TransferProtocolClient.html#_top_">TransferProtocolClient</a>
+</dl>
+This class implements the FTP client. 
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.24, 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ftpProxyHost">ftpProxyHost</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ftpProxyPort">ftpProxyPort</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#useFtpProxy">useFtpProxy</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FtpClient(java.lang.String)"><b>FtpClient</b></a>(String)
+<dd>
+New FTP client connected to host <i>host</i>.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FtpClient(java.lang.String, int)"><b>FtpClient</b></a>(String, int)
+<dd>
+New FTP client connected to host <i>host</i>, port <i>port</i>.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#FtpClient()"><b>FtpClient</b></a>()
+<dd>
+Create an uninitialized FTP client.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#ascii()"><b>ascii</b></a>()
+<dd>
+Set transfer type to 'A'
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#binary()"><b>binary</b></a>()
+<dd>
+Set transfer type to 'I'
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#cd(java.lang.String)"><b>cd</b></a>(String)
+<dd>
+CD to a specific directory on a remote FTP server
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#closeServer()"><b>closeServer</b></a>()
+<dd>
+
+issue the QUIT command to the FTP server and close the connection.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#get(java.lang.String)"><b>get</b></a>(String)
+<dd>
+GET a file from the FTP server
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#issueCommand(java.lang.String)"><b>issueCommand</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#issueCommandCheck(java.lang.String)"><b>issueCommandCheck</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#list()"><b>list</b></a>()
+<dd>
+LIST files on a remote FTP server
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#login(java.lang.String, java.lang.String)"><b>login</b></a>(String, String)
+<dd>
+
+login user to a host with username <i>user</i> and password 
+<i>password</i> 
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openDataConnection(java.lang.String)"><b>openDataConnection</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openServer(java.lang.String)"><b>openServer</b></a>(String)
+<dd>
+open a FTP connection to host <i>host</i>.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openServer(java.lang.String, int)"><b>openServer</b></a>(String, int)
+<dd>
+open a FTP connection to host <i>host</i> on port <i>port</i>.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#put(java.lang.String)"><b>put</b></a>(String)
+<dd>
+PUT a file to the FTP server
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#readReply()"><b>readReply</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="useFtpProxy">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+useFtpProxy
+</b>
+<pre>
+  public static boolean useFtpProxy
+</pre>
+<a name="ftpProxyHost">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ftpProxyHost
+</b>
+<pre>
+  public static <a href="java.lang.String.html#_top_">String</a> ftpProxyHost
+</pre>
+<a name="ftpProxyPort">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+ftpProxyPort
+</b>
+<pre>
+  public static int ftpProxyPort
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="FtpClient"></a>
+<a name="FtpClient(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FtpClient
+</b>
+<pre>
+  public FtpClient(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<dl>
+<dd>
+New FTP client connected to host <i>host</i>.
+</dl>
+<p>
+<a name="FtpClient(java.lang.String, int)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FtpClient
+</b>
+<pre>
+  public FtpClient(<a href="java.lang.String.html#_top_">String</a> host,
+                   int port)
+</pre>
+<dl>
+<dd>
+New FTP client connected to host <i>host</i>, port <i>port</i>.
+</dl>
+<p>
+<a name="FtpClient()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+FtpClient
+</b>
+<pre>
+  public FtpClient()
+</pre>
+<dl>
+<dd>
+Create an uninitialized FTP client.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="closeServer()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="closeServer">
+<b>
+closeServer
+</b>
+</a>
+<pre>
+  public void closeServer()
+</pre>
+<dl>
+<dd>
+issue the QUIT command to the FTP server and close the connection. 
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.NetworkClient.html#closeServer()">closeServer</a> in class <a href="net.NetworkClient.html#_top_">NetworkClient</a></dl>
+</dl>
+<p>
+<a name="issueCommand(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="issueCommand">
+<b>
+issueCommand
+</b>
+</a>
+<pre>
+  protected int issueCommand(<a href="java.lang.String.html#_top_">String</a> cmd)
+</pre>
+<a name="issueCommandCheck(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="issueCommandCheck">
+<b>
+issueCommandCheck
+</b>
+</a>
+<pre>
+  protected void issueCommandCheck(<a href="java.lang.String.html#_top_">String</a> cmd)
+</pre>
+<a name="readReply()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="readReply">
+<b>
+readReply
+</b>
+</a>
+<pre>
+  protected int readReply()
+</pre>
+<a name="openDataConnection(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openDataConnection">
+<b>
+openDataConnection
+</b>
+</a>
+<pre>
+  protected <a href="net.Socket.html#_top_">Socket</a> openDataConnection(<a href="java.lang.String.html#_top_">String</a> cmd)
+</pre>
+<a name="openServer(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openServer">
+<b>
+openServer
+</b>
+</a>
+<pre>
+  public void openServer(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<dl>
+<dd>
+open a FTP connection to host <i>host</i>.
+</dl>
+<p>
+<a name="openServer(java.lang.String, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openServer">
+<b>
+openServer
+</b>
+</a>
+<pre>
+  public void openServer(<a href="java.lang.String.html#_top_">String</a> host,
+                         int port)
+</pre>
+<dl>
+<dd>
+open a FTP connection to host <i>host</i> on port <i>port</i>.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.NetworkClient.html#openServer(java.lang.String, int)">openServer</a> in class <a href="net.NetworkClient.html#_top_">NetworkClient</a></dl>
+</dl>
+<p>
+<a name="login(java.lang.String, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="login">
+<b>
+login
+</b>
+</a>
+<pre>
+  public void login(<a href="java.lang.String.html#_top_">String</a> user,
+                    <a href="java.lang.String.html#_top_">String</a> password)
+</pre>
+<dl>
+<dd>
+login user to a host with username <i>user</i> and password 
+<i>password</i> 
+</dl>
+<p>
+<a name="get(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="get">
+<b>
+get
+</b>
+</a>
+<pre>
+  public <a href="net.TelnetInputStream.html#_top_">TelnetInputStream</a> get(<a href="java.lang.String.html#_top_">String</a> filename)
+</pre>
+<dl>
+<dd>
+GET a file from the FTP server
+</dl>
+<p>
+<a name="put(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="put">
+<b>
+put
+</b>
+</a>
+<pre>
+  public <a href="net.TelnetOutputStream.html#_top_">TelnetOutputStream</a> put(<a href="java.lang.String.html#_top_">String</a> filename)
+</pre>
+<dl>
+<dd>
+PUT a file to the FTP server
+</dl>
+<p>
+<a name="list()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="list">
+<b>
+list
+</b>
+</a>
+<pre>
+  public <a href="net.TelnetInputStream.html#_top_">TelnetInputStream</a> list()
+</pre>
+<dl>
+<dd>
+LIST files on a remote FTP server
+</dl>
+<p>
+<a name="cd(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="cd">
+<b>
+cd
+</b>
+</a>
+<pre>
+  public void cd(<a href="java.lang.String.html#_top_">String</a> remoteDirectory)
+</pre>
+<dl>
+<dd>
+CD to a specific directory on a remote FTP server
+</dl>
+<p>
+<a name="binary()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="binary">
+<b>
+binary
+</b>
+</a>
+<pre>
+  public void binary()
+</pre>
+<dl>
+<dd>
+Set transfer type to 'I'
+</dl>
+<p>
+<a name="ascii()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="ascii">
+<b>
+ascii
+</b>
+</a>
+<pre>
+  public void ascii()
+</pre>
+<dl>
+<dd>
+Set transfer type to 'A'
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.ftp.html">This Package</a>    <a href="net.ftp.html">Previous</a>    <a href="net.ftp.FtpInputStream.html#_top_">Next</a></pre>
+</body>
+</html>

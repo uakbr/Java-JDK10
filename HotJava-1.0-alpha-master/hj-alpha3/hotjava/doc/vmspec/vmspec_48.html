@@ -1,0 +1,22 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: - An Optimization- Constant Pool Resolution</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING325></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_47.html">Prev</A>              <A HREF="vmspec_42.html">Up</A>       <P>
+<HR>
+<H2>- An Optimization</H2>
+<HR>
+<H1>Constant Pool Resolution</H1>
+
+<HR>
+
+When the class is read in, an array constant_pool[] of size nconstants is created and assigned to a field in the class. constant_pool[0] is set to point to a malloc-ed array which indicates which fields in the constant_pool have already been resolved. constant_pool[1] through constant_pool[nconstants - 1] are set to point at the "type" field that corresponds to this constant item.<P>
+When an instruction is executed that references the constant pool, an index is generated, and constant_pool[0] is checked to see if the index has already been resolved. If so, the value of constant_pool[index] is returned. If not, the value of constant_pool[index] is resolved to be the actual pointer or data, and overwrites whatever value was already in constant_pool[index].<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_47.html">Prev</A>              <A HREF="vmspec_42.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

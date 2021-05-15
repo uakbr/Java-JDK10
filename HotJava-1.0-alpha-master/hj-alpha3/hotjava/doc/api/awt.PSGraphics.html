@@ -1,0 +1,1047 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.PSGraphics
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.OptionMenu.html#_top_">Previous</a>    <a href="awt.RadioGroup.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.PSGraphics
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.GenericGraphics.html#_top_">awt.GenericGraphics</a>
+           |
+           +----<a href="awt.Graphics.html#_top_">awt.Graphics</a>
+                   |
+                   +----awt.PSGraphics
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+PSGraphics</b>
+<dt>
+extends <a href="awt.Graphics.html#_top_">Graphics</a>
+</dl>
+PSGraphics is an object that encapsulates a graphics context for a
+particular PostScript file.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.15 10 Apr 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jim Graham</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#A4">A4</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#Executive">Executive</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#Legal">Legal</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#Letter">Letter</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#layoutDim">layoutDim</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#marginBottom">marginBottom</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#marginLeft">marginLeft</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#marginRight">marginRight</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#marginTop">marginTop</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#outputDim">outputDim</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#pageNumber">pageNumber</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#paperDim">paperDim</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#title">title</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PSGraphics(awt.Window, java.io.OutputStream, java.lang.String, awt.Dimension, awt.Dimension)"><b>PSGraphics</b></a>(Window, OutputStream, String, Dimension, Dimension)
+<dd>
+Create a graphics context.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PSGraphics(awt.PSGraphics)"><b>PSGraphics</b></a>(PSGraphics)
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearClip()"><b>clearClip</b></a>()
+<dd>
+Clears the clipping region.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearRect(int, int, int, int)"><b>clearRect</b></a>(int, int, int, int)
+<dd>
+Clears the rectangle indicated by x,y,w,h.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clipRect(int, int, int, int)"><b>clipRect</b></a>(int, int, int, int)
+<dd>
+Sets the clipping rectangle for this Graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#copyArea(int, int, int, int, int, int)"><b>copyArea</b></a>(int, int, int, int, int, int)
+<dd>
+Copies an area of the window that this graphics context paints to.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#createChild(int, int, float, float)"><b>createChild</b></a>(int, int, float, float)
+<dd>
+Create a new Graphics Object based on this one.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Disposes of this Graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawBytes(byte[], int, int, int, int)"><b>drawBytes</b></a>(byte[], int, int, int, int)
+<dd>
+Draws the given byte array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawBytesWidth(byte[], int, int, int, int)"><b>drawBytesWidth</b></a>(byte[], int, int, int, int)
+<dd>
+Draws the given byte array and return the width in
+      pixels.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawChars(char[], int, int, int, int)"><b>drawChars</b></a>(char[], int, int, int, int)
+<dd>
+Draws the given character array.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawCharsWidth(char[], int, int, int, int)"><b>drawCharsWidth</b></a>(char[], int, int, int, int)
+<dd>
+Draws the given character array and return the width in
+      pixels.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawImage(awt.Image, int, int)"><b>drawImage</b></a>(Image, int, int)
+<dd>
+Draws an image at x,y.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawLine(int, int, int, int)"><b>drawLine</b></a>(int, int, int, int)
+<dd>
+Draws the given line.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawRect(int, int, int, int)"><b>drawRect</b></a>(int, int, int, int)
+<dd>
+Draws the given rectangle.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawString(java.lang.String, int, int)"><b>drawString</b></a>(String, int, int)
+<dd>
+Draws the given string.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#drawStringWidth(java.lang.String, int, int)"><b>drawStringWidth</b></a>(String, int, int)
+<dd>
+Draws the given string and returns the length of the drawn
+      string in pixels.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#endPage()"><b>endPage</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#fillRect(int, int, int, int)"><b>fillRect</b></a>(int, int, int, int)
+<dd>
+Fills the given rectangle with the foreground color.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#grestore()"><b>grestore</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#gsave()"><b>gsave</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setBackground(awt.Color)"><b>setBackground</b></a>(Color)
+<dd>
+Sets the background color.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFont(awt.Font)"><b>setFont</b></a>(Font)
+<dd>
+Sets the font for all subsequent text-drawing operations.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setForeground(awt.Color)"><b>setForeground</b></a>(Color)
+<dd>
+Sets the foreground color.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setOrigin(int, int)"><b>setOrigin</b></a>(int, int)
+<dd>
+Sets the origin of this Graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setPaper(awt.Dimension)"><b>setPaper</b></a>(Dimension)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setScaling(float, float)"><b>setScaling</b></a>(float, float)
+<dd>
+Sets the scaling factor for this Graphics context.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startPage()"><b>startPage</b></a>()
+<dd>
+
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="Letter">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+Letter
+</b>
+<pre>
+  public static <a href="awt.Dimension.html#_top_">Dimension</a> Letter
+</pre>
+<a name="Legal">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+Legal
+</b>
+<pre>
+  public static <a href="awt.Dimension.html#_top_">Dimension</a> Legal
+</pre>
+<a name="Executive">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+Executive
+</b>
+<pre>
+  public static <a href="awt.Dimension.html#_top_">Dimension</a> Executive
+</pre>
+<a name="A4">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+A4
+</b>
+<pre>
+  public static <a href="awt.Dimension.html#_top_">Dimension</a> A4
+</pre>
+<a name="title">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+title
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> title
+</pre>
+<a name="paperDim">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+paperDim
+</b>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> paperDim
+</pre>
+<a name="layoutDim">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+layoutDim
+</b>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> layoutDim
+</pre>
+<a name="outputDim">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+outputDim
+</b>
+<pre>
+  public <a href="awt.Dimension.html#_top_">Dimension</a> outputDim
+</pre>
+<a name="marginTop">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+marginTop
+</b>
+<pre>
+  public int marginTop
+</pre>
+<a name="marginBottom">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+marginBottom
+</b>
+<pre>
+  public int marginBottom
+</pre>
+<a name="marginLeft">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+marginLeft
+</b>
+<pre>
+  public int marginLeft
+</pre>
+<a name="marginRight">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+marginRight
+</b>
+<pre>
+  public int marginRight
+</pre>
+<a name="pageNumber">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+pageNumber
+</b>
+<pre>
+  public int pageNumber
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="PSGraphics"></a>
+<a name="PSGraphics(awt.Window, java.io.OutputStream, java.lang.String, awt.Dimension, awt.Dimension)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PSGraphics
+</b>
+<pre>
+  public PSGraphics(<a href="awt.Window.html#_top_">Window</a> w,
+                    <a href="java.io.OutputStream.html#_top_">OutputStream</a> os,
+                    <a href="java.lang.String.html#_top_">String</a> docTitle,
+                    <a href="awt.Dimension.html#_top_">Dimension</a> layout,
+                    <a href="awt.Dimension.html#_top_">Dimension</a> paper)
+</pre>
+<dl>
+<dd>
+Create a graphics context.
+</dl>
+<p>
+<a name="PSGraphics(awt.PSGraphics)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PSGraphics
+</b>
+<pre>
+  public PSGraphics(<a href="#_top_">PSGraphics</a> psg)
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="createChild(int, int, float, float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="createChild">
+<b>
+createChild
+</b>
+</a>
+<pre>
+  public <a href="awt.Graphics.html#_top_">Graphics</a> createChild(int oX,
+                              int oY,
+                              float sX,
+                              float sY)
+</pre>
+<dl>
+<dd>
+Create a new Graphics Object based on this one.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#createChild(int, int, float, float)">createChild</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public void dispose()
+</pre>
+<dl>
+<dd>
+Disposes of this Graphics context.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#dispose()">dispose</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="setPaper(awt.Dimension)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setPaper">
+<b>
+setPaper
+</b>
+</a>
+<pre>
+  public void setPaper(<a href="awt.Dimension.html#_top_">Dimension</a> paper)
+</pre>
+<a name="gsave()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="gsave">
+<b>
+gsave
+</b>
+</a>
+<pre>
+  public synchronized void gsave()
+</pre>
+<a name="grestore()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="grestore">
+<b>
+grestore
+</b>
+</a>
+<pre>
+  public synchronized void grestore()
+</pre>
+<a name="setFont(awt.Font)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFont">
+<b>
+setFont
+</b>
+</a>
+<pre>
+  public void setFont(<a href="awt.Font.html#_top_">Font</a> f)
+</pre>
+<dl>
+<dd>
+Sets the font for all subsequent text-drawing operations.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#setFont(awt.Font)">setFont</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="setForeground(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setForeground">
+<b>
+setForeground
+</b>
+</a>
+<pre>
+  public void setForeground(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the foreground color.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#setForeground(awt.Color)">setForeground</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="setBackground(awt.Color)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setBackground">
+<b>
+setBackground
+</b>
+</a>
+<pre>
+  public void setBackground(<a href="awt.Color.html#_top_">Color</a> c)
+</pre>
+<dl>
+<dd>
+Sets the background color.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#setBackground(awt.Color)">setBackground</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="clipRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clipRect">
+<b>
+clipRect
+</b>
+</a>
+<pre>
+  public synchronized void clipRect(int X,
+                                    int Y,
+                                    int W,
+                                    int H)
+</pre>
+<dl>
+<dd>
+Sets the clipping rectangle for this Graphics context.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#clipRect(int, int, int, int)">clipRect</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="clearClip()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearClip">
+<b>
+clearClip
+</b>
+</a>
+<pre>
+  public synchronized void clearClip()
+</pre>
+<dl>
+<dd>
+Clears the clipping region.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#clearClip()">clearClip</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="clearRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearRect">
+<b>
+clearRect
+</b>
+</a>
+<pre>
+  public void clearRect(int X,
+                        int Y,
+                        int W,
+                        int H)
+</pre>
+<dl>
+<dd>
+Clears the rectangle indicated by x,y,w,h.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#clearRect(int, int, int, int)">clearRect</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="fillRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="fillRect">
+<b>
+fillRect
+</b>
+</a>
+<pre>
+  public void fillRect(int X,
+                       int Y,
+                       int W,
+                       int H)
+</pre>
+<dl>
+<dd>
+Fills the given rectangle with the foreground color.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#fillRect(int, int, int, int)">fillRect</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawRect(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawRect">
+<b>
+drawRect
+</b>
+</a>
+<pre>
+  public synchronized void drawRect(int X,
+                                    int Y,
+                                    int W,
+                                    int H)
+</pre>
+<dl>
+<dd>
+Draws the given rectangle.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawRect(int, int, int, int)">drawRect</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawString(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawString">
+<b>
+drawString
+</b>
+</a>
+<pre>
+  public synchronized void drawString(<a href="java.lang.String.html#_top_">String</a> str,
+                                      int x,
+                                      int y)
+</pre>
+<dl>
+<dd>
+Draws the given string.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawString(java.lang.String, int, int)">drawString</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawChars(char[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawChars">
+<b>
+drawChars
+</b>
+</a>
+<pre>
+  public void drawChars(char chars[],
+                        int offset,
+                        int length,
+                        int x,
+                        int y)
+</pre>
+<dl>
+<dd>
+Draws the given character array.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawChars(char[], int, int, int, int)">drawChars</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawBytes(byte[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawBytes">
+<b>
+drawBytes
+</b>
+</a>
+<pre>
+  public void drawBytes(byte bytes[],
+                        int offset,
+                        int length,
+                        int x,
+                        int y)
+</pre>
+<dl>
+<dd>
+Draws the given byte array.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawBytes(byte[], int, int, int, int)">drawBytes</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawStringWidth(java.lang.String, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawStringWidth">
+<b>
+drawStringWidth
+</b>
+</a>
+<pre>
+  public int drawStringWidth(<a href="java.lang.String.html#_top_">String</a> str,
+                             int x,
+                             int y)
+</pre>
+<dl>
+<dd>
+Draws the given string and returns the length of the drawn
+      string in pixels.  If font isn't set then returns -1.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawStringWidth(java.lang.String, int, int)">drawStringWidth</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawCharsWidth(char[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawCharsWidth">
+<b>
+drawCharsWidth
+</b>
+</a>
+<pre>
+  public int drawCharsWidth(char chars[],
+                            int offset,
+                            int length,
+                            int x,
+                            int y)
+</pre>
+<dl>
+<dd>
+Draws the given character array and return the width in
+      pixels. If font isn't set then returns -1.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawCharsWidth(char[], int, int, int, int)">drawCharsWidth</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawBytesWidth(byte[], int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawBytesWidth">
+<b>
+drawBytesWidth
+</b>
+</a>
+<pre>
+  public int drawBytesWidth(byte bytes[],
+                            int offset,
+                            int length,
+                            int x,
+                            int y)
+</pre>
+<dl>
+<dd>
+Draws the given byte array and return the width in
+      pixels. If font isn't set then returns -1.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawBytesWidth(byte[], int, int, int, int)">drawBytesWidth</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawLine(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawLine">
+<b>
+drawLine
+</b>
+</a>
+<pre>
+  public synchronized void drawLine(int x1,
+                                    int y1,
+                                    int x2,
+                                    int y2)
+</pre>
+<dl>
+<dd>
+Draws the given line.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawLine(int, int, int, int)">drawLine</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="drawImage(awt.Image, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="drawImage">
+<b>
+drawImage
+</b>
+</a>
+<pre>
+  public synchronized void drawImage(<a href="awt.Image.html#_top_">Image</a> I,
+                                     int X,
+                                     int Y)
+</pre>
+<dl>
+<dd>
+Draws an image at x,y.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#drawImage(awt.Image, int, int)">drawImage</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="copyArea(int, int, int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="copyArea">
+<b>
+copyArea
+</b>
+</a>
+<pre>
+  public void copyArea(int X,
+                       int Y,
+                       int W,
+                       int H,
+                       int dx,
+                       int dy)
+</pre>
+<dl>
+<dd>
+Copies an area of the window that this graphics context paints to.
+Note that this cannot be done in PostScript so we should throw an error.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+X
+-
+ the x-coordinate of the source.
+<dd>
+Y
+-
+ the y-coordinate of the source.
+<dd>
+W
+-
+ the width.
+<dd>
+H
+-
+ the height.
+<dd>
+dx
+-
+ the x-coordinate of the destination.
+<dd>
+dy
+-
+ the y-coordinate of the destination.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#copyArea(int, int, int, int, int, int)">copyArea</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="setOrigin(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setOrigin">
+<b>
+setOrigin
+</b>
+</a>
+<pre>
+  public void setOrigin(int x,
+                        int y)
+</pre>
+<dl>
+<dd>
+Sets the origin of this Graphics context. All subsequent
+operations are relative to this origin.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#setOrigin(int, int)">setOrigin</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="setScaling(float, float)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setScaling">
+<b>
+setScaling
+</b>
+</a>
+<pre>
+  public synchronized void setScaling(float sx,
+                                      float sy)
+</pre>
+<dl>
+<dd>
+Sets the scaling factor for this Graphics context. Currently
+only used for line and rectangle drawing operations.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Graphics.html#setScaling(float, float)">setScaling</a> in class <a href="awt.Graphics.html#_top_">Graphics</a></dl>
+</dl>
+<p>
+<a name="startPage()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startPage">
+<b>
+startPage
+</b>
+</a>
+<pre>
+  public synchronized void startPage()
+</pre>
+<a name="endPage()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="endPage">
+<b>
+endPage
+</b>
+</a>
+<pre>
+  public synchronized void endPage()
+</pre>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public synchronized void close()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.OptionMenu.html#_top_">Previous</a>    <a href="awt.RadioGroup.html#_top_">Next</a></pre>
+</body>
+</html>

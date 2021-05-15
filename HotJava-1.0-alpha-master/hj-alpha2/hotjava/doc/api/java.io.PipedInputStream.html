@@ -1,0 +1,265 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.PipedInputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.OutputStreamBuffer.html#_top_">Previous</a>    <a href="java.io.PipedOutputStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.PipedInputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="java.io.InputStream.html#_top_">java.io.InputStream</a>
+           |
+           +----java.io.PipedInputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+PipedInputStream</b>
+<dt>
+extends <a href="java.io.InputStream.html#_top_">InputStream</a>
+</dl>
+Piped input stream, must be connected to a PipedOutputStream
+to be useful.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.PipedOutputStream.html#_top_">PipedOutputStream</a>,
+<a href="Piped.html#_top_">Piped</a><dt>
+<b>Version:</b>
+<dd>
+	95/02/27
+<dt>
+<b>Author:</b>
+<dd>
+James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PipedInputStream(java.io.PipedOutputStream)"><b>PipedInputStream</b></a>(PipedOutputStream)
+<dd>
+Creates an input file given a PiledOutputStream.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#PipedInputStream()"><b>PipedInputStream</b></a>()
+<dd>
+Creates an input file that isn't connected to anything (yet).
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#connect(java.io.PipedOutputStream)"><b>connect</b></a>(PipedOutputStream)
+<dd>
+Connect this input stream to a sender.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Reads a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+Reads into an array of bytes.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="PipedInputStream"></a>
+<a name="PipedInputStream(java.io.PipedOutputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PipedInputStream
+</b>
+<pre>
+  public PipedInputStream(<a href="java.io.PipedOutputStream.html#_top_">PipedOutputStream</a> src)
+</pre>
+<dl>
+<dd>
+Creates an input file given a PiledOutputStream.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+stream
+-
+	the stream to connect to.
+</dl>
+</dl>
+<p>
+<a name="PipedInputStream()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+PipedInputStream
+</b>
+<pre>
+  public PipedInputStream()
+</pre>
+<dl>
+<dd>
+Creates an input file that isn't connected to anything (yet).
+It must be connected to a PipedOutputStream before being used.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="connect(java.io.PipedOutputStream)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="connect">
+<b>
+connect
+</b>
+</a>
+<pre>
+  public void connect(<a href="java.io.PipedOutputStream.html#_top_">PipedOutputStream</a> src)
+</pre>
+<dl>
+<dd>
+Connect this input stream to a sender.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+src
+-
+	The OutpueStream to connect to.
+</dl>
+</dl>
+<p>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public synchronized int read()
+</pre>
+<dl>
+<dd>
+Reads a byte. Will block if no input is available.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the byte read, or -1 if the end of the
+		stream is reached.
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read()">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public synchronized int read(byte b[],
+                               int off,
+                               int len)
+</pre>
+<dl>
+<dd>
+Reads into an array of bytes.
+Blocks until some input is available.
+For efficiency,this method should be overridden in a subclass
+(the default implementation reads 1 byte
+at a time).
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dd>
+off
+-
+ the start offset of the data
+<dd>
+len
+-
+ the maximum number of bytes read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#read(byte[], int, int)">read</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public void close()
+</pre>
+<dl>
+<dd>
+Closes the input stream. Must be called
+to release any resources associated with
+the stream.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="java.io.InputStream.html#close()">close</a> in class <a href="java.io.InputStream.html#_top_">InputStream</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.OutputStreamBuffer.html#_top_">Previous</a>    <a href="java.io.PipedOutputStream.html#_top_">Next</a></pre>
+</body>
+</html>

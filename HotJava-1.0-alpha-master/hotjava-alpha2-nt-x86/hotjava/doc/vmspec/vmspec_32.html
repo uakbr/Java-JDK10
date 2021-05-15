@@ -1,0 +1,72 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Miscellaneous Object Operations</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING193></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_31.html">Prev</A>       <A HREF="vmspec_33.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Miscellaneous Object Operations</H1>
+<DL>
+<DT><A HREF="vmspec_32.html#HEADING194"><B></B>  new</A><DD>
+<DT><A HREF="vmspec_32.html#HEADING195"><B></B>  newfromname</A><DD>
+<DT><A HREF="vmspec_32.html#HEADING196"><B></B>  checkcast</A><DD>
+<DT><A HREF="vmspec_32.html#HEADING197"><B></B>  instanceof</A><DD>
+<DT><A HREF="vmspec_32.html#HEADING198"><B></B>  verifystack</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING194></A>
+<H3>new</H3>
+Create new object<BR><IMG SRC="instructions_only_Tbl_45.gif"><BR>
+<P>
+<PRE>
+... =&gt; ..., handle<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index should be a class name that can be resolved to a class pointer, class. A new instance of that class is then created and a handle for it is pushed on the stack.<P>
+<A NAME=HEADING195></A>
+<H3>newfromname</H3>
+Create new object<BR><IMG SRC="instructions_only_Tbl_38.gif"><BR>
+ from name<P>
+<PRE>
+..., handle =&gt; ..., new-handle<P>
+</PRE>
+handle should be a handle to a character array. The class whose name is the string represented by the character array is determined. A new object of that class is created, and a handle new-handle for that object replaces the character array handle on the top of the stack.<P>
+If the handle is null, a NullPointerException is thrown. If no such class can be found, a NoClassDefFoundException is thrown.<P>
+<A NAME=HEADING196></A>
+<H3>checkcast</H3>
+Make sure object is of given type<BR><IMG SRC="instructions_only_Tbl_126.gif"><BR>
+<P>
+<PRE>
+..., handle =&gt; ..., [handle|...]<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The string at that index of the constant pool is presumed to be a class name which can be resolved to a class pointer, class. handle should be a handle to an object. <P>
+checkcast determines whether handle can be cast to an object of class class. A null handle can be cast to any class. Otherwise handle must be an instance of class or one of its superclasses. If handle can be cast to class execution proceeds at the next instruction, and the handle for handle remains on the stack.<P>
+If handle cannot be cast to class, a ClassCastException is thrown.<P>
+<A NAME=HEADING197></A>
+<H3>instanceof</H3>
+<BR><IMG SRC="instructions_only_Tbl_127.gif"><BR>
+Determine if object is of given type<P>
+<PRE>
+..., handle =&gt; ..., result<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The string at that index of the constant pool is presumed to be a class name which can be resolved to a class pointer, class. handle should be a handle to an object. <P>
+instanceof determines whether handle can be cast to an object of the class class. This instruction will overwrite handle with 1 if handle is null or if it is an instance of class or one of its superclasses. Otherwise, handle is overwritten by 0.<P>
+<A NAME=HEADING198></A>
+<H3>verifystack</H3>
+<BR><IMG SRC="instructions_only_Tbl_37.gif"><BR>
+Verify stack empty<P>
+<PRE>
+... =&gt; [empty stack]<P>
+</PRE>
+This instruction is only generated if the code was compiled using a debugging version of the compiler. This instruction indicates that the compiler expects the operand stack to be empty at this point.<P>
+If the stack is not currently empty, it will be set to empty. In addition, if running a debugging version of the interpreter, an error message is printed out warning that something is seriously wrong.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_31.html">Prev</A>       <A HREF="vmspec_33.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

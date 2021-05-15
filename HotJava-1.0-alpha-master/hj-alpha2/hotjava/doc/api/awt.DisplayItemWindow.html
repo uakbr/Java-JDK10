@@ -1,0 +1,1054 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class awt.DisplayItemWindow
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.DisplayItemUpdateRequest.html#_top_">Previous</a>    <a href="awt.Event.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class awt.DisplayItemWindow
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="awt.Component.html#_top_">awt.Component</a>
+           |
+           +----<a href="awt.Container.html#_top_">awt.Container</a>
+                   |
+                   +----<a href="awt.Window.html#_top_">awt.Window</a>
+                           |
+                           +----awt.DisplayItemWindow
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+DisplayItemWindow</b>
+<dt>
+extends <a href="awt.Window.html#_top_">Window</a>
+</dl>
+DisplayItemWindow is a subclass of Window that can display embedded
+DisplayItem's. This task involves mainly distributing input to the
+right DisplayItem and causing the appropriate items to be displayed
+in response to damage or scrolling events.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.42 16 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#currentInputItem">currentInputItem</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#fm">fm</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#logicalHeight">logicalHeight</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#logicalWidth">logicalWidth</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#scrollX">scrollX</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#scrollY">scrollY</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#stickyTracking">stickyTracking</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#valid">valid</a>
+</b>
+<dd>
+
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DisplayItemWindow(awt.Frame, java.lang.String)"><b>DisplayItemWindow</b></a>(Frame, String)
+<dd>
+Creates a DisplayItemWindow that is contained inside a Frame.
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#DisplayItemWindow(awt.Window, java.lang.String)"><b>DisplayItemWindow</b></a>(Window, String)
+<dd>
+Creates a DisplayItemWindow that is contained inside a Window
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addItem(awt.DisplayItem, java.lang.String)"><b>addItem</b></a>(DisplayItem, String)
+<dd>
+Adds an named DisplayItem to the window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addItem(awt.DisplayItem)"><b>addItem</b></a>(DisplayItem)
+<dd>
+Adds an unnamed DisplayItem to the window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addNativeItem(awt.NativeDisplayItem)"><b>addNativeItem</b></a>(NativeDisplayItem)
+<dd>
+Adds a DisplayItem that is a subclass of NativeDisplayItem.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addUpdateRequest(awt.DIWUpdateRequest)"><b>addUpdateRequest</b></a>(DIWUpdateRequest)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearItems()"><b>clearItems</b></a>()
+<dd>
+Clears the list of DisplayItems for this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearNativeItems()"><b>clearNativeItems</b></a>()
+<dd>
+Clears the list of native display items.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#count()"><b>count</b></a>()
+<dd>
+Returns the number of DisplayItem's contained in this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dragAbsolute(int)"><b>dragAbsolute</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getItems()"><b>getItems</b></a>()
+<dd>
+Returns the array of items in this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getScrollY()"><b>getScrollY</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleExpose(int, int, int, int)"><b>handleExpose</b></a>(int, int, int, int)
+<dd>
+Callback for exposing a region of a window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleResize()"><b>handleResize</b></a>()
+<dd>
+Called in response to a resize action by the user.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#invalidate()"><b>invalidate</b></a>()
+<dd>
+Indicates that this DisplayItemWindow needs updating.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#keyPressed(awt.Event)"><b>keyPressed</b></a>(Event)
+<dd>
+Override this method to take some action when a key is pressed
+in this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lineDown()"><b>lineDown</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lineUp()"><b>lineUp</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#locateItem(int, int)"><b>locateItem</b></a>(int, int)
+<dd>
+Returns the DisplayItem which contains x,y.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#map()"><b>map</b></a>()
+<dd>
+Shows this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseDown(awt.Event)"><b>mouseDown</b></a>(Event)
+<dd>
+Forwards a mouseDown event to the DisplayItem that contains the
+current mouse coordinates.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseDrag(awt.Event)"><b>mouseDrag</b></a>(Event)
+<dd>
+Forwards a mouse drag event to the DisplayItem that contains the
+current mouse coordinates.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseMoved(awt.Event)"><b>mouseMoved</b></a>(Event)
+<dd>
+Forwards a mouse motion event to the DisplayItem that contains the
+current mouse coordinates.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mouseUp(awt.Event)"><b>mouseUp</b></a>(Event)
+<dd>
+Override this method to take some action when the mouse button
+is released.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nthItem(int)"><b>nthItem</b></a>(int)
+<dd>
+Returns the item at the given index.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pageDown()"><b>pageDown</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pageUp()"><b>pageUp</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paint()"><b>paint</b></a>()
+<dd>
+Paints all of the DisplayItems in this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#paintChild(awt.DisplayItem, boolean)"><b>paintChild</b></a>(DisplayItem, boolean)
+<dd>
+Requests that the given DisplayItem be repainted.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#scrollAbsolute(int, int)"><b>scrollAbsolute</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#scrollHorizontally(int)"><b>scrollHorizontally</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#scrollVertically(int)"><b>scrollVertically</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setScrollbar(awt.Scrollbar)"><b>setScrollbar</b></a>(Scrollbar)
+<dd>
+Set the scrollbar for this DisplayItemWindow to s
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setScrolling(int, int)"><b>setScrolling</b></a>(int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setSticky(boolean)"><b>setSticky</b></a>(boolean)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#unMap()"><b>unMap</b></a>()
+<dd>
+Hides this window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#updateChild(awt.DisplayItem, boolean)"><b>updateChild</b></a>(DisplayItem, boolean)
+<dd>
+Updates the given DisplayItem.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#updateScrollbar()"><b>updateScrollbar</b></a>()
+<dd>
+Updates the scrollbar to reflect the current size of the
+ window.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#validate()"><b>validate</b></a>()
+<dd>
+Marks this window as valid (not in need of repainting)
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="logicalWidth">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+logicalWidth
+</b>
+<pre>
+  protected int logicalWidth
+</pre>
+<a name="logicalHeight">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+logicalHeight
+</b>
+<pre>
+  protected int logicalHeight
+</pre>
+<a name="currentInputItem">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+currentInputItem
+</b>
+<pre>
+  protected <a href="awt.DisplayItem.html#_top_">DisplayItem</a> currentInputItem
+</pre>
+<a name="stickyTracking">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+stickyTracking
+</b>
+<pre>
+  protected boolean stickyTracking
+</pre>
+<a name="valid">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+valid
+</b>
+<pre>
+  protected boolean valid
+</pre>
+<a name="scrollX">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+scrollX
+</b>
+<pre>
+  protected int scrollX
+</pre>
+<a name="scrollY">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+scrollY
+</b>
+<pre>
+  protected int scrollY
+</pre>
+<a name="fm">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+fm
+</b>
+<pre>
+  public <a href="awt.FocusManager.html#_top_">FocusManager</a> fm
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="DisplayItemWindow"></a>
+<a name="DisplayItemWindow(awt.Frame, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DisplayItemWindow
+</b>
+<pre>
+  public DisplayItemWindow(<a href="awt.Frame.html#_top_">Frame</a> f,
+                           <a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Creates a DisplayItemWindow that is contained inside a Frame.
+</dl>
+<p>
+<a name="DisplayItemWindow(awt.Window, java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+DisplayItemWindow
+</b>
+<pre>
+  public DisplayItemWindow(<a href="awt.Window.html#_top_">Window</a> parent,
+                           <a href="java.lang.String.html#_top_">String</a> client)
+</pre>
+<dl>
+<dd>
+Creates a DisplayItemWindow that is contained inside a Window
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="setScrollbar(awt.Scrollbar)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setScrollbar">
+<b>
+setScrollbar
+</b>
+</a>
+<pre>
+  public void setScrollbar(<a href="awt.Scrollbar.html#_top_">Scrollbar</a> s)
+</pre>
+<dl>
+<dd>
+Set the scrollbar for this DisplayItemWindow to s
+</dl>
+<p>
+<a name="invalidate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="invalidate">
+<b>
+invalidate
+</b>
+</a>
+<pre>
+  public void invalidate()
+</pre>
+<dl>
+<dd>
+Indicates that this DisplayItemWindow needs updating.
+</dl>
+<p>
+<a name="updateScrollbar()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="updateScrollbar">
+<b>
+updateScrollbar
+</b>
+</a>
+<pre>
+  public void updateScrollbar()
+</pre>
+<dl>
+<dd>
+Updates the scrollbar to reflect the current size of the
+ window.
+</dl>
+<p>
+<a name="validate()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="validate">
+<b>
+validate
+</b>
+</a>
+<pre>
+  public void validate()
+</pre>
+<dl>
+<dd>
+Marks this window as valid (not in need of repainting)
+</dl>
+<p>
+<a name="handleExpose(int, int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleExpose">
+<b>
+handleExpose
+</b>
+</a>
+<pre>
+  public synchronized void handleExpose(int x,
+                                        int y,
+                                        int w,
+                                        int h)
+</pre>
+<dl>
+<dd>
+Callback for exposing a region of a window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#handleExpose(int, int, int, int)">handleExpose</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="handleResize()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleResize">
+<b>
+handleResize
+</b>
+</a>
+<pre>
+  public void handleResize()
+</pre>
+<dl>
+<dd>
+Called in response to a resize action by the user. Redoes the
+window layout and marks the window as invalid.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#handleResize()">handleResize</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="addItem(awt.DisplayItem, java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addItem">
+<b>
+addItem
+</b>
+</a>
+<pre>
+  public synchronized void addItem(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di,
+                                   <a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Adds an named DisplayItem to the window.
+</dl>
+<p>
+<a name="addItem(awt.DisplayItem)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addItem">
+<b>
+addItem
+</b>
+</a>
+<pre>
+  public synchronized void addItem(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di)
+</pre>
+<dl>
+<dd>
+Adds an unnamed DisplayItem to the window.
+</dl>
+<p>
+<a name="getItems()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getItems">
+<b>
+getItems
+</b>
+</a>
+<pre>
+  public <a href="awt.DisplayItem.html#_top_">DisplayItem</a> getItems()
+</pre>
+<dl>
+<dd>
+Returns the array of items in this window.
+</dl>
+<p>
+<a name="addNativeItem(awt.NativeDisplayItem)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addNativeItem">
+<b>
+addNativeItem
+</b>
+</a>
+<pre>
+  protected synchronized void addNativeItem(<a href="awt.NativeDisplayItem.html#_top_">NativeDisplayItem</a> di)
+</pre>
+<dl>
+<dd>
+Adds a DisplayItem that is a subclass of NativeDisplayItem.
+This method is needed because DisplayItem's that are native
+gui components require special treatment.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.NativeDisplayItem.html#_top_">NativeDisplayItem</a>
+</dl>
+</dl>
+<p>
+<a name="clearNativeItems()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearNativeItems">
+<b>
+clearNativeItems
+</b>
+</a>
+<pre>
+  protected synchronized void clearNativeItems()
+</pre>
+<dl>
+<dd>
+Clears the list of native display items.
+</dl>
+<p>
+<a name="nthItem(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nthItem">
+<b>
+nthItem
+</b>
+</a>
+<pre>
+  public <a href="awt.DisplayItem.html#_top_">DisplayItem</a> nthItem(int n)
+</pre>
+<dl>
+<dd>
+Returns the item at the given index.
+</dl>
+<p>
+<a name="clearItems()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearItems">
+<b>
+clearItems
+</b>
+</a>
+<pre>
+  public synchronized void clearItems()
+</pre>
+<dl>
+<dd>
+Clears the list of DisplayItems for this window. The deactivate
+method is called on each item before being removed from the list.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.DisplayItem.html#deactivate">deactivate</a>
+</dl>
+</dl>
+<p>
+<a name="count()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="count">
+<b>
+count
+</b>
+</a>
+<pre>
+  public int count()
+</pre>
+<dl>
+<dd>
+Returns the number of DisplayItem's contained in this window.
+</dl>
+<p>
+<a name="setScrolling(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setScrolling">
+<b>
+setScrolling
+</b>
+</a>
+<pre>
+  public void setScrolling(int x,
+                           int y)
+</pre>
+<a name="paint()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paint">
+<b>
+paint
+</b>
+</a>
+<pre>
+  public void paint()
+</pre>
+<dl>
+<dd>
+Paints all of the DisplayItems in this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#paint()">paint</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="map()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="map">
+<b>
+map
+</b>
+</a>
+<pre>
+  public void map()
+</pre>
+<dl>
+<dd>
+Shows this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#map()">map</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="unMap()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="unMap">
+<b>
+unMap
+</b>
+</a>
+<pre>
+  public void unMap()
+</pre>
+<dl>
+<dd>
+Hides this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#unMap()">unMap</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="paintChild(awt.DisplayItem, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="paintChild">
+<b>
+paintChild
+</b>
+</a>
+<pre>
+  public void paintChild(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di,
+                         boolean clear)
+</pre>
+<dl>
+<dd>
+Requests that the given DisplayItem be repainted.
+</dl>
+<p>
+<a name="updateChild(awt.DisplayItem, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="updateChild">
+<b>
+updateChild
+</b>
+</a>
+<pre>
+  public void updateChild(<a href="awt.DisplayItem.html#_top_">DisplayItem</a> di,
+                          boolean clear)
+</pre>
+<dl>
+<dd>
+Updates the given DisplayItem.
+</dl>
+<p>
+<a name="addUpdateRequest(awt.DIWUpdateRequest)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addUpdateRequest">
+<b>
+addUpdateRequest
+</b>
+</a>
+<pre>
+  public void addUpdateRequest(<a href="awt.DIWUpdateRequest.html#_top_">DIWUpdateRequest</a> r)
+</pre>
+<a name="locateItem(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="locateItem">
+<b>
+locateItem
+</b>
+</a>
+<pre>
+  public synchronized <a href="awt.DisplayItem.html#_top_">DisplayItem</a> locateItem(int x,
+                                             int y)
+</pre>
+<dl>
+<dd>
+Returns the DisplayItem which contains x,y.
+</dl>
+<p>
+<a name="mouseDown(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseDown">
+<b>
+mouseDown
+</b>
+</a>
+<pre>
+  public void mouseDown(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Forwards a mouseDown event to the DisplayItem that contains the
+current mouse coordinates.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#mouseDown(awt.Event)">mouseDown</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="mouseDrag(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseDrag">
+<b>
+mouseDrag
+</b>
+</a>
+<pre>
+  public void mouseDrag(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Forwards a mouse drag event to the DisplayItem that contains the
+current mouse coordinates.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#mouseDrag(awt.Event)">mouseDrag</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="mouseMoved(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseMoved">
+<b>
+mouseMoved
+</b>
+</a>
+<pre>
+  public void mouseMoved(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Forwards a mouse motion event to the DisplayItem that contains the
+current mouse coordinates.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#mouseMoved(awt.Event)">mouseMoved</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="mouseUp(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mouseUp">
+<b>
+mouseUp
+</b>
+</a>
+<pre>
+  public void mouseUp(<a href="awt.Event.html#_top_">Event</a> e)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when the mouse button
+is released.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#mouseUp(awt.Event)">mouseUp</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<a name="setSticky(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setSticky">
+<b>
+setSticky
+</b>
+</a>
+<pre>
+  public void setSticky(boolean on)
+</pre>
+<a name="getScrollY()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getScrollY">
+<b>
+getScrollY
+</b>
+</a>
+<pre>
+  public int getScrollY()
+</pre>
+<a name="scrollAbsolute(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="scrollAbsolute">
+<b>
+scrollAbsolute
+</b>
+</a>
+<pre>
+  public void scrollAbsolute(int x,
+                             int y)
+</pre>
+<a name="scrollHorizontally(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="scrollHorizontally">
+<b>
+scrollHorizontally
+</b>
+</a>
+<pre>
+  public synchronized boolean scrollHorizontally(int dx)
+</pre>
+<a name="scrollVertically(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="scrollVertically">
+<b>
+scrollVertically
+</b>
+</a>
+<pre>
+  public synchronized boolean scrollVertically(int dy)
+</pre>
+<a name="lineUp()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lineUp">
+<b>
+lineUp
+</b>
+</a>
+<pre>
+  public void lineUp()
+</pre>
+<a name="lineDown()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lineDown">
+<b>
+lineDown
+</b>
+</a>
+<pre>
+  public void lineDown()
+</pre>
+<a name="pageUp()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pageUp">
+<b>
+pageUp
+</b>
+</a>
+<pre>
+  public void pageUp()
+</pre>
+<a name="pageDown()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pageDown">
+<b>
+pageDown
+</b>
+</a>
+<pre>
+  public void pageDown()
+</pre>
+<a name="dragAbsolute(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dragAbsolute">
+<b>
+dragAbsolute
+</b>
+</a>
+<pre>
+  public void dragAbsolute(int value)
+</pre>
+<a name="keyPressed(awt.Event)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="keyPressed">
+<b>
+keyPressed
+</b>
+</a>
+<pre>
+  public void keyPressed(<a href="awt.Event.html#_top_">Event</a> event)
+</pre>
+<dl>
+<dd>
+Override this method to take some action when a key is pressed
+in this window.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="awt.Window.html#keyPressed(awt.Event)">keyPressed</a> in class <a href="awt.Window.html#_top_">Window</a></dl>
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.DisplayItemUpdateRequest.html#_top_">Previous</a>    <a href="awt.Event.html#_top_">Next</a></pre>
+</body>
+</html>

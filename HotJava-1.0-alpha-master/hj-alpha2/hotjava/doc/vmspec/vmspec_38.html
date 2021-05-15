@@ -1,0 +1,192 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: Class File Format- Format</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING207></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_37.html">Prev</A>       <A HREF="vmspec_39.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+<HR>
+<H2>Class File Format</H2>
+<HR>
+<H1>Format</H1>
+<DL>
+<DT><A HREF="vmspec_38.html#HEADING208"><B></B>  magic</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING209"><B></B>  version</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING210"><B></B>  constant_pool_count</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING211"><B></B>  constant_pool</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING212"><B></B>  access_flags</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING213"><B></B>  this_class</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING214"><B></B>  super_class</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING215"><B></B>  interfaces_count</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING216"><B></B>  interfaces</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING217"><B></B>  fields_count</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING218"><B></B>  fields</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING219"><B></B>  methods_count</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING220"><B></B>  methods</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING221"><B></B>  attributes_count</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING222"><B></B>  attributes</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING223"><B></B>  Source File Attribute</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING224"><B></B>  attribute_name_index</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING225"><B></B>  attribute_length</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING226"><B></B>  sourcefile_index</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING227"><B></B>  Fields</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING228"><B></B>  access_flags</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING229"><B></B>  name_index</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING230"><B></B>  signature_index</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING231"><B></B>  attributes_count</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING232"><B></B>  attributes</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING233"><B></B>  Constant Value Attribute</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING234"><B></B>  attribute_name_index</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING235"><B></B>  attribute_length</A><DD>
+<DT><A HREF="vmspec_38.html#HEADING236"><B></B>  constantvalue_index</A><DD>
+</DL>
+
+<HR>
+
+The following pseudo-structure gives a top-level description of the format of a class file:<P>
+<PRE>
+<CODE>ClassFile {</CODE><P>
+<CODE>	u4	magic;</CODE><P>
+<CODE>	u4	version;</CODE><P>
+<CODE>	u2	constant_pool_count;</CODE><P>
+<CODE>	cp_info	constant_pool[constant_pool_count - 1];</CODE><P>
+<CODE>	u2	access_flags;</CODE><P>
+<CODE>	u2	this_class;</CODE><P>
+<CODE>	u2	super_class;</CODE><P>
+<CODE>	u2	interfaces_count;</CODE><P>
+<CODE>	u2	interfaces[interfaces_count];</CODE><P>
+<CODE>	u2	fields_count;</CODE><P>
+<CODE>	field_info	fields[fields_count];</CODE><P>
+<CODE>	u2	methods_count;</CODE><P>
+<CODE>	method_info	methods[methods_count];</CODE><P>
+<CODE>	u2	attributes_count;</CODE><P>
+<CODE>	attribute_info 	attributes[attribute_count];</CODE><P>
+<CODE>}</CODE><P>
+<CODE></CODE><P>
+</PRE>
+<A NAME=HEADING208></A>
+<H3>magic</H3>
+This field must have the value 0xCAFEBABE.<P>
+<A NAME=HEADING209></A>
+<H3>version</H3>
+This field contains the version number of the Java compiler that produced this class file. Different version numbers indicate incompatible changes to either the format of the class file or to the bytecodes. <P>
+The current Java version number is 45. <P>
+<A NAME=HEADING210></A>
+<H3>constant_pool_count</H3>
+This field indicates the number of entries in the constant pool table. <P>
+<A NAME=HEADING211></A>
+<H3>constant_pool</H3>
+The constant pool is an array of values. These values are the various string constants, class names, field names, and others that are referred to by the class structure or by the code.<P>
+constant_pool[0] is always unused. The values of constant_pool entries 1 through constant_pool_count-1 are described by the bytes that follow. These bytes are explained more fully in the section "The Constant Pool."<P>
+<A NAME=HEADING212></A>
+<H3>access_flags</H3>
+This field is a set of sixteen flags used by classes, methods, and fields to describe various properties of the field, method, or class. The flags are also used to show how they can be accessed by methods in other classes. Below is a table of all the access flags. The flags that are used by classes are ACC_PUBLIC, ACC_FINAL, and ACC_INTERFACE.<BR><IMG SRC="classfile_Tbl_3.gif"><BR>
+<P>
+<A NAME=HEADING213></A>
+<H3>this_class</H3>
+This value is an index into the constant pool. constant_pool[this_class] must be a class, and gives the index of this class in the constant pool.<P>
+<A NAME=HEADING214></A>
+<H3>super_class</H3>
+This value is an index into the constant pool. If the value of super_class is non-zero, then constant_pool[super_class] must be a class, and gives the index of this class's superclass in the constant pool.<P>
+If the value of super_class is zero, then the class being defined must be Object, and it has no superclass.<P>
+<A NAME=HEADING215></A>
+<H3>interfaces_count</H3>
+This field gives the number of interfaces that this class implements.<P>
+<A NAME=HEADING216></A>
+<H3>interfaces</H3>
+Each value in the array is an index into the constant pool. If an array value is non-zero, then constant_pool[interfaces[i]], for 0 &lt;= i &lt; interfaces_count, must be a class, and gives the index of an interface that this class implements.<P>
+<A NAME=HEADING217></A>
+<H3>fields_count</H3>
+This value gives the number of instance variables, both static and dynamic, defined by this class. This array only includes those variables that are defined explicitly by this class. It does not include those instance variables that are accessible from this class but are inherited from super classes.<P>
+<A NAME=HEADING218></A>
+<H3>fields</H3>
+Each value is a more complete description of a field in the class. See the section "Fields" for more information on the field_info structure.<P>
+<A NAME=HEADING219></A>
+<H3>methods_count</H3>
+This value gives the number of methods, both static and dynamic, defined by this class. This array only includes those methods that are explicitly defined by this class. It does not include inherited methods.<P>
+<A NAME=HEADING220></A>
+<H3>methods</H3>
+Each value is a more complete description of a method in the class. See the section "Methods" for more information on the method_info structure.<P>
+<A NAME=HEADING221></A>
+<H3>attributes_count</H3>
+This value gives the number of additional attributes about this class.<P>
+<A NAME=HEADING222></A>
+<H3>attributes</H3>
+A class can have any number of optional attributes associated with it. Currently, the only class attribute recognized is the "SourceFile" attribute, which gives the name of the source file from which this class file was compiled.<P>
+<A NAME=HEADING223></A>
+<H3>Source File Attribute</H3>
+The "SourceFile" attribute has the following format:<P>
+<PRE>
+<CODE>SourceFile_attribute {</CODE><P>
+<CODE>	u2	attribute_name_index;</CODE><P>
+<CODE>	u2	attribute_length;</CODE><P>
+<CODE>	u2	sourcefile_index;</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING224></A>
+<H3>attribute_name_index</H3>
+ constant_pool[attribute_name_index] is the string "SourceFile."<P>
+<A NAME=HEADING225></A>
+<H3>attribute_length</H3>
+The length of a SourceFile_attribute must be 2.<P>
+<A NAME=HEADING226></A>
+<H3>sourcefile_index</H3>
+constant_pool[sourcefile_index] is a string giving the source file from which this class file was compiled.<P>
+<P>
+<A NAME=HEADING227></A>
+<H3><A NAME=1>Fields</H3>
+The information for each field immediately follows the field_count field in the class file. Each field is described by a variable length field_info structure. The format of this structure is as follows:<P>
+<PRE>
+<CODE>field_info {</CODE><P>
+<CODE>	u2	access_flags;</CODE><P>
+<CODE>	u2	name_index;</CODE><P>
+<CODE>	u2	signature_index;</CODE><P>
+<CODE>	u2	attributes_count;</CODE><P>
+<CODE>	attribute_info	attributes[attribute_count];</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING228></A>
+<H3>access_flags</H3>
+This is a set of sixteen flags used by classes, methods, and fields to describe various properties and how they many be accessed by methods in other classes. See the table "Access Flags" on page 53</A> which gives the meaning of the bits in this field.<P>
+The possible fields that can be set for a field are ACC_PUBLIC, ACC_PRIVATE, ACC_PROTECTED, ACC_STATIC, ACC_FINAL, ACC_THREADSAFE, and ACC_TRANSIENT. <P>
+At most one of ACC_PUBLIC and ACC_PRIVATE can be set for any method.<P>
+<A NAME=HEADING229></A>
+<H3>name_index</H3>
+constant_pool[name_index] is a string which is the name of the field.<P>
+<A NAME=HEADING230></A>
+<H3>signature_index</H3>
+constant_pool[signature_index] is a string which is the signature of the field. See the section "Signatures" for more information on signatures.<P>
+<A NAME=HEADING231></A>
+<H3>attributes_count</H3>
+This value gives the number of additional attributes about this field.<P>
+<A NAME=HEADING232></A>
+<H3>attributes</H3>
+A field can have any number of optional attributes associated with it. Currently, the only field attribute recognized is the "ConstantValue" attribute, which indicates that this field is a static numeric constant, and gives the constant value of that field.<P>
+Any other attributes are skipped.<P>
+<A NAME=HEADING233></A>
+<H3>Constant Value Attribute</H3>
+The "ConstantValue" attribute has the following format:<P>
+<PRE>
+<CODE>ConstantValue_attribute {</CODE><P>
+<CODE>	u2	attribute_name_index;</CODE><P>
+<CODE>	u2	attribute_length;</CODE><P>
+<CODE>	u2	constantvalue_index;</CODE><P>
+<CODE>}</CODE><P>
+</PRE>
+<A NAME=HEADING234></A>
+<H3>attribute_name_index</H3>
+ constant_pool[attribute_name_index] is the string "SourceFile."<P>
+<A NAME=HEADING235></A>
+<H3>attribute_length</H3>
+The length of a SourceFile_attribute must be 2.<P>
+<A NAME=HEADING236></A>
+<H3>constantvalue_index</H3>
+constant_pool[constantvalue_index]gives the constant value for this field. <P>
+The constant pool entry must be of a type appropriate to the field, as shown by the following table:<BR><IMG SRC="classfile_Tbl_1.gif"><BR>
+<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_37.html">Prev</A>       <A HREF="vmspec_39.html">Next</A>       <A HREF="vmspec_35.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

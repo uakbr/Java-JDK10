@@ -1,0 +1,77 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Function Return</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING170></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_26.html">Prev</A>       <A HREF="vmspec_28.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Function Return</H1>
+<DL>
+<DT><A HREF="vmspec_27.html#HEADING171"><B></B>  ireturn</A><DD>
+<DT><A HREF="vmspec_27.html#HEADING172"><B></B>  lreturn</A><DD>
+<DT><A HREF="vmspec_27.html#HEADING173"><B></B>  freturn</A><DD>
+<DT><A HREF="vmspec_27.html#HEADING174"><B></B>  dreturn</A><DD>
+<DT><A HREF="vmspec_27.html#HEADING175"><B></B>  areturn</A><DD>
+<DT><A HREF="vmspec_27.html#HEADING176"><B></B>  return</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING171></A>
+<H3>ireturn</H3>
+Return integer from function<BR><IMG SRC="instructions_only_Tbl_103.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; [empty]<P>
+</PRE>
+value should be an integer. The value value is pushed onto the stack of the previous execution environment. Any other values on the operand stack are discarded. The interpreter then returns control to its caller.<P>
+[Note: this may be confusing to people expecting that the stack is like the C stack. However, the operand stack should be seen as consisting of a number of discontiguous segments, each corresponding to a method invocation. A return instruction empties the Java operand stack segment corresponding to the activity of the returning invocation, but does not affect the segment of any parent invocations.]]<P>
+<A NAME=HEADING172></A>
+<H3>lreturn</H3>
+Return long integer from function<BR><IMG SRC="instructions_only_Tbl_63.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; [empty]<P>
+</PRE>
+value should be a long integer. The value value is pushed onto the stack of the previous execution environment. Any other values on the operand stack are discarded. The interpreter then returns control to its caller.<P>
+<A NAME=HEADING173></A>
+<H3>freturn</H3>
+Return single float from function<BR><IMG SRC="instructions_only_Tbl_102.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; [empty]<P>
+</PRE>
+value should be a single precision floating point number. The value value is pushed onto the stack of the previous execution environment. Any other values on the operand stack are discarded. The interpreter then returns control to its caller.<P>
+<A NAME=HEADING174></A>
+<H3>dreturn</H3>
+Return double float from function<BR><IMG SRC="instructions_only_Tbl_64.gif"><BR>
+<P>
+<PRE>
+..., value-word1, value-word2 =&gt; [empty]<P>
+</PRE>
+value should be a double precision floating point number. The value value is pushed onto the stack of the previous execution environment. Any other values on the operand stack are discarded. The interpreter then returns control to its caller.<P>
+<A NAME=HEADING175></A>
+<H3>areturn</H3>
+Return object reference from function<BR><IMG SRC="instructions_only_Tbl_101.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; [empty]<P>
+</PRE>
+value should be a handle to an object or an array. The value value is pushed onto the stack of the previous execution environment. Any other values on the operand stack are discarded. The interpreter then returns control to its caller.<P>
+<A NAME=HEADING176></A>
+<H3>return</H3>
+Return (void) from procedure<BR><IMG SRC="instructions_only_Tbl_100.gif"><BR>
+<P>
+<PRE>
+... =&gt; [empty]<P>
+</PRE>
+All values on the operand stack are discarded. The interpreter then returns control to its caller.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_26.html">Prev</A>       <A HREF="vmspec_28.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

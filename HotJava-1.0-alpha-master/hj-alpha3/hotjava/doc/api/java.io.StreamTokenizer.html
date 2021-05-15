@@ -1,0 +1,598 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.StreamTokenizer
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.RandomAccessFile.html#_top_">Previous</a>    <a href="java.io.StringBufferPrintStream.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.StreamTokenizer
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.io.StreamTokenizer
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+StreamTokenizer</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A class to turn an input stream into a stream of tokens.
+There are a number of methods that define the lexical
+syntax of tokens.
+<dl>
+<dt>
+<b>Author:</b>
+<dd>
+ James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/variable-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#TT_EOF">TT_EOF</a>
+</b>
+<dd>
+End of file token
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#TT_EOL">TT_EOL</a>
+</b>
+<dd>
+End of line token
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#TT_NUMBER">TT_NUMBER</a>
+</b>
+<dd>
+Number token.
+<dt>
+<img src="images/blue-ball-small.gif" width=6 height=6>
+<b>
+<a href="#TT_WORD">TT_WORD</a>
+</b>
+<dd>
+Word token.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#eolIsSignificant">eolIsSignificant</a>
+</b>
+<dd>
+Set to true if end-of-lines are significant (TT_EOL will
+	be returned by nexttoken).
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#hashComments">hashComments</a>
+</b>
+<dd>
+If true, '#' starts a single line comment.
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#lineno">lineno</a>
+</b>
+<dd>
+The line number of the last token read
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#nval">nval</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#slashSlashComments">slashSlashComments</a>
+</b>
+<dd>
+Set to true to recognize C++ style // comments
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#slashStarComments">slashStarComments</a>
+</b>
+<dd>
+Set to true to recognize C style /* comments
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#sval">sval</a>
+</b>
+<dd>
+
+<dt>
+<img src="images/magenta-ball-small.gif" width=6 height=6>
+<b>
+<a href="#ttype">ttype</a>
+</b>
+<dd>
+The type of the last token returned.
+</dl>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#StreamTokenizer(java.io.InputStream)"><b>StreamTokenizer</b></a>(InputStream)
+<dd>
+Create a stream tokenizer that parses the given input stream.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#commentChar(int)"><b>commentChar</b></a>(int)
+<dd>
+Specify that this character starts a single line comment.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#lowerCaseMode(boolean)"><b>lowerCaseMode</b></a>(boolean)
+<dd>
+When true TT_WORD tokens are forced to be lower case
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#nextToken()"><b>nextToken</b></a>()
+<dd>
+Parse a token from the input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#ordinaryChar(int)"><b>ordinaryChar</b></a>(int)
+<dd>
+Specify that this character is  'ordinary': it removes any
+	significance as a word, comment, string, whitespace or number
+	character.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#ordinaryChars(int, int)"><b>ordinaryChars</b></a>(int, int)
+<dd>
+Specify that characters in this range are 'ordinary': it removes any
+	significance as a word, comment, string, whitespace or number
+	character.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#parseNumbers()"><b>parseNumbers</b></a>()
+<dd>
+Specify that numbers should be parsed.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#pushBack()"><b>pushBack</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#quoteChar(int)"><b>quoteChar</b></a>(int)
+<dd>
+Specify that matching pairs of this character delimit string
+	constants.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resetSyntax()"><b>resetSyntax</b></a>()
+<dd>
+Reset the syntax table so that all characters are special
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#toString()"><b>toString</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#whitespaceChars(int, int)"><b>whitespaceChars</b></a>(int, int)
+<dd>
+Specify that characters in this range are whitespace characters
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#wordChars(int, int)"><b>wordChars</b></a>(int, int)
+<dd>
+Specify that characters in this range are word characters
+</dl>
+<a name="variables"></a>
+<h2>
+<img src="images/variables.gif" width=153 height=38>
+</h2>
+<a name="lineno">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+lineno
+</b>
+<pre>
+  public int lineno
+</pre>
+<dl>
+<dd>
+The line number of the last token read
+</dl>
+<a name="eolIsSignificant">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+eolIsSignificant
+</b>
+<pre>
+  public boolean eolIsSignificant
+</pre>
+<dl>
+<dd>
+Set to true if end-of-lines are significant (TT_EOL will
+	be returned by nexttoken).  If false, they will be treated
+	as whitespace
+</dl>
+<a name="slashSlashComments">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+slashSlashComments
+</b>
+<pre>
+  public boolean slashSlashComments
+</pre>
+<dl>
+<dd>
+Set to true to recognize C++ style // comments
+</dl>
+<a name="slashStarComments">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+slashStarComments
+</b>
+<pre>
+  public boolean slashStarComments
+</pre>
+<dl>
+<dd>
+Set to true to recognize C style /* comments
+</dl>
+<a name="hashComments">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+hashComments
+</b>
+<pre>
+  public boolean hashComments
+</pre>
+<dl>
+<dd>
+If true, '#' starts a single line comment.  This is
+	here solely for compatibility with 1.0a1.  Use
+	commentChar('#') instead.
+</dl>
+<a name="ttype">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+ttype
+</b>
+<pre>
+  public int ttype
+</pre>
+<dl>
+<dd>
+The type of the last token returned.  It's value will either
+	be one of the following TT_* constants, or a single
+	character.  For example, if '+' is encountered and is
+	not a valid word character, ttype will be '+'
+</dl>
+<a name="TT_EOF">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+TT_EOF
+</b>
+<pre>
+  public final static int TT_EOF
+</pre>
+<dl>
+<dd>
+End of file token
+</dl>
+<a name="TT_EOL">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+TT_EOL
+</b>
+<pre>
+  public final static int TT_EOL
+</pre>
+<dl>
+<dd>
+End of line token
+</dl>
+<a name="TT_NUMBER">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+TT_NUMBER
+</b>
+<pre>
+  public final static int TT_NUMBER
+</pre>
+<dl>
+<dd>
+Number token.  The value is in nval
+</dl>
+<a name="TT_WORD">
+<img src="images/blue-ball.gif" width=12 height=12>
+</a>
+<b>
+TT_WORD
+</b>
+<pre>
+  public final static int TT_WORD
+</pre>
+<dl>
+<dd>
+Word token.  The value is in sval
+</dl>
+<a name="sval">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+sval
+</b>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> sval
+</pre>
+<a name="nval">
+<img src="images/magenta-ball.gif" width=12 height=12>
+</a>
+<b>
+nval
+</b>
+<pre>
+  public double nval
+</pre>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="StreamTokenizer"></a>
+<a name="StreamTokenizer(java.io.InputStream)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+StreamTokenizer
+</b>
+<pre>
+  public StreamTokenizer(<a href="java.io.InputStream.html#_top_">InputStream</a> I)
+</pre>
+<dl>
+<dd>
+Create a stream tokenizer that parses the given input stream.
+	By default, it recognizes numbers, all the alphabetics are
+	valid word characters, and strings quoted with single and
+	double quote.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="resetSyntax()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resetSyntax">
+<b>
+resetSyntax
+</b>
+</a>
+<pre>
+  public void resetSyntax()
+</pre>
+<dl>
+<dd>
+Reset the syntax table so that all characters are special
+</dl>
+<p>
+<a name="wordChars(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="wordChars">
+<b>
+wordChars
+</b>
+</a>
+<pre>
+  public void wordChars(int low,
+                        int hi)
+</pre>
+<dl>
+<dd>
+Specify that characters in this range are word characters
+</dl>
+<p>
+<a name="whitespaceChars(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="whitespaceChars">
+<b>
+whitespaceChars
+</b>
+</a>
+<pre>
+  public void whitespaceChars(int low,
+                              int hi)
+</pre>
+<dl>
+<dd>
+Specify that characters in this range are whitespace characters
+</dl>
+<p>
+<a name="ordinaryChars(int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="ordinaryChars">
+<b>
+ordinaryChars
+</b>
+</a>
+<pre>
+  public void ordinaryChars(int low,
+                            int hi)
+</pre>
+<dl>
+<dd>
+Specify that characters in this range are 'ordinary': it removes any
+	significance as a word, comment, string, whitespace or number
+	character.  When encountered by the parser, they return a ttype
+	equal to the character.
+</dl>
+<p>
+<a name="ordinaryChar(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="ordinaryChar">
+<b>
+ordinaryChar
+</b>
+</a>
+<pre>
+  public void ordinaryChar(int ch)
+</pre>
+<dl>
+<dd>
+Specify that this character is  'ordinary': it removes any
+	significance as a word, comment, string, whitespace or number
+	character.  When encountered by the parser, it returns a ttype
+	equal to the character.
+</dl>
+<p>
+<a name="commentChar(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="commentChar">
+<b>
+commentChar
+</b>
+</a>
+<pre>
+  public void commentChar(int ch)
+</pre>
+<dl>
+<dd>
+Specify that this character starts a single line comment.
+</dl>
+<p>
+<a name="quoteChar(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="quoteChar">
+<b>
+quoteChar
+</b>
+</a>
+<pre>
+  public void quoteChar(int ch)
+</pre>
+<dl>
+<dd>
+Specify that matching pairs of this character delimit string
+	constants.  When a string constant is recognized ttype will be
+	the character that delimits the string, and sval will have
+	the body of the string.
+</dl>
+<p>
+<a name="parseNumbers()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="parseNumbers">
+<b>
+parseNumbers
+</b>
+</a>
+<pre>
+  public void parseNumbers()
+</pre>
+<dl>
+<dd>
+Specify that numbers should be parsed.  It accepts double precision
+	floating point numbers and returns a ttype of TT_NUMBER with the
+	value in nval.
+</dl>
+<p>
+<a name="lowerCaseMode(boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="lowerCaseMode">
+<b>
+lowerCaseMode
+</b>
+</a>
+<pre>
+  public void lowerCaseMode(boolean fl)
+</pre>
+<dl>
+<dd>
+When true TT_WORD tokens are forced to be lower case
+</dl>
+<p>
+<a name="nextToken()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="nextToken">
+<b>
+nextToken
+</b>
+</a>
+<pre>
+  public int nextToken()
+</pre>
+<dl>
+<dd>
+Parse a token from the input stream.  The return value is
+	the same as the value of ttype.  Typical clients of this
+	class first set up the syntax tables and then sit in a loop
+	calling nextToken to parse successive tokens until TT_EOF
+	is returned.
+</dl>
+<p>
+<a name="pushBack()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="pushBack">
+<b>
+pushBack
+</b>
+</a>
+<pre>
+  public void pushBack()
+</pre>
+<a name="toString()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="toString">
+<b>
+toString
+</b>
+</a>
+<pre>
+  public <a href="java.lang.String.html#_top_">String</a> toString()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.RandomAccessFile.html#_top_">Previous</a>    <a href="java.io.StringBufferPrintStream.html#_top_">Next</a></pre>
+</body>
+</html>

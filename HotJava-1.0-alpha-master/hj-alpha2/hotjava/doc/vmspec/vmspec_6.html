@@ -1,0 +1,22 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Java Virtual Machine- Primitive Data Types</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING9></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_5.html">Prev</A>       <A HREF="vmspec_7.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+<HR>
+<H2>The Java Virtual Machine</H2>
+<HR>
+<H1>Primitive Data Types</H1>
+
+<HR>
+
+The instruction set of the Java virtual machine interprets data in the virtual machine's runtime data areas as belonging to a small number of primitive types. Primitive numeric types include integer, long, single and double precision floating point, byte and short. All numeric data types are signed. Unsigned short exists for use as (Unicode) chars only. In addition, the object type is used to represent Java objects in computations. Finally, a small number of operations (e.g. the dup instructions) operate on runtime data areas as raw values of a given width without regard to type.<P>
+Primitive data types are managed by the compiler, not the compiled Java program or the Java runtime. In particular, primitive data are not necessarily tagged or otherwise discernible at runtime. The Java instruction set distinguishes operations on different primitive data types with different opcodes. For instance, iadd, ladd, fadd and dadd instructions all add two numbers, but operate on integers, longs, single floats and double floats, respectively.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_5.html">Prev</A>       <A HREF="vmspec_7.html">Next</A>       <A HREF="vmspec_2.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

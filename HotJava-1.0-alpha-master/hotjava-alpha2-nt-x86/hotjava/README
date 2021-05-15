@@ -1,0 +1,53 @@
+This directory and all the directories below it contain the
+complete HotJava 1.0alpha2 and the Java language 1.0alpha2 binary
+release for Windows NT.
+
+The primary goal of this Alpha release is to allow people to try the
+various demos and to write their own Java applets.  This Alpha
+release of HotJava is not intended to replace your favorite browser
+for daily web surfing.  See http://java.sun.com/KnownBugs-nt.html for
+a list of known bugs in the Alpha 2 Windows NT release.
+
+Requirements for running Java/HotJava Alpha2 on Windows NT:
+
+    - An Intel x86-based machine running Windows NT 3.5.
+      HotJava Alpha 2 for Windows NT is known not to run on 
+      NT 3.51 when audio is enabled.
+  
+      See http://java.sun.com/installation-alpha2-nt-x86.html
+      for details.
+
+    - A 16-bit SoundBlaster.  HotJava may work on other
+      SoundBlaster compatibles but we haven't tested any.
+      Also, HotJava does not yet support 8-bit audio.
+
+    - 8-bit color.  Support for 1,4,16,24-bit color is forthcoming.
+
+Java and HotJava are available without a fee for non-commercial use
+(academic, research and internal business purposes).  Commercial
+licensing terms will be announced in coming months.
+
+To execute HotJava from the same directory when this README file
+is location, simply type:
+ 
+        bin\hotjava
+ 
+You can also add <installation-dir>\bin to your path if you choose.
+ 
+The group working on HotJava at Sun currently has ports to MacOS
+and Windows 95 underway.  We are interested in hearing from
+qualified individuals or groups who want to port the system to
+other platforms.  Contact us at java@java.sun.com before starting
+any porting effort.  We would like to offer assistance where we
+can and prevent duplication of effort.
+ 
+If you have questions or comments about HotJava or the Java
+language we would like to hear from you.  
+
+You can reach us at:
+
+Email: java@java.sun.com
+WWW: http://java.sun.com/
+
+Please indicate that you are using the 1.0alpha2 for NT version of the
+software when you write.

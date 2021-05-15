@@ -1,0 +1,85 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Manipulating Object Fields</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING180></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_28.html">Prev</A>       <A HREF="vmspec_30.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Manipulating Object Fields</H1>
+<DL>
+<DT><A HREF="vmspec_29.html#HEADING181"><B></B>  putfield</A><DD>
+<DT><A HREF="vmspec_29.html#HEADING182"><B></B>  getfield</A><DD>
+<DT><A HREF="vmspec_29.html#HEADING183"><B></B>  putstatic</A><DD>
+<DT><A HREF="vmspec_29.html#HEADING184"><B></B>  getstatic</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING181></A>
+<H3>putfield</H3>
+Set field in object<BR><IMG SRC="instructions_only_Tbl_53.gif"><BR>
+<P>
+<PRE>
+..., handle, value =&gt; ...<P>
+</PRE>
+ OR<P>
+<PRE>
+..., handle, value-word1, value-word2 =&gt; ...<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a class name and a field name. The item is resolved to a field block pointer which has both the field width (in bytes) and the field offset (in bytes). <P>
+The field at that offset from the start of the instance pointed to by handle will be set to the value on the top of the stack.<P>
+This instruction handles both 32-bit and 64-bit wide fields.<P>
+If handle is null, a NullPointerException exception is generated.<P>
+If the specified field is a static field, a DynamicRefOfStaticField exception is generated.<P>
+<A NAME=HEADING182></A>
+<H3>getfield</H3>
+Fetch field from object<BR><IMG SRC="instructions_only_Tbl_54.gif"><BR>
+<P>
+<PRE>
+..., handle =&gt; ..., value <P>
+</PRE>
+ OR<P>
+<PRE>
+..., handle =&gt; ..., value-word1, value-word2<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a class name and a field name. The item is resolved to a field block pointer which has both the field width (in bytes) and the field offset (in bytes). <P>
+handle should be a handle to an object. The value at offset into the object referenced by handle replaces handle on the top of the stack.<P>
+This instruction handles both 32-bit and 64-bit wide fields. <P>
+If the specified field is a static field, a DynamicRefOfStaticField exception is generated.<P>
+<A NAME=HEADING183></A>
+<H3>putstatic</H3>
+Set static field in class<BR><IMG SRC="instructions_only_Tbl_22.gif"><BR>
+<P>
+<PRE>
+..., value =&gt; ...<P>
+</PRE>
+ OR<P>
+<PRE>
+..., value-word1, value-word2 =&gt; ...<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a static field of a class. That field will be set to have the value on the top of the stack.<P>
+This instruction works for both 32-bit and 64-bit wide fields.<P>
+If the specified field is a dynamic field, a StaticRefOfDynamicFieldException is generated.<P>
+<A NAME=HEADING184></A>
+<H3>getstatic</H3>
+Get static field from class<BR><IMG SRC="instructions_only_Tbl_55.gif"><BR>
+<P>
+<PRE>
+..., =&gt; ..., value	<P>
+</PRE>
+ OR<P>
+<PRE>
+..., =&gt; ..., value-word1, value-word2<P>
+</PRE>
+indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The constant pool item will be a field reference to a static field of a class. The value of that field will replace handle on the stack. <P>
+This instruction handles both 32-bit and 64-bit wide fields. <P>
+If the specified field is a dynamic field, a StaticRefOfDynamicFieldException is generated.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_28.html">Prev</A>       <A HREF="vmspec_30.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

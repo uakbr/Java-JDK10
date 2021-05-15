@@ -1,0 +1,287 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.ClassLoader
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Class.html#_top_">Previous</a>    <a href="java.lang.Double.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.ClassLoader
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.lang.ClassLoader
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+ClassLoader</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+ClassLoader is an abstract class that can be used to define a policy
+for loading Java classes into the runtime environment. By default,
+the runtime system  loads classes that originate as files by reading 
+them from the directory defined by the <tt>CLASSPATH</tt> environment
+variable (this is platform dependent). The default mechanism does not involve
+a class loader. <p>
+However, some classes may not originate from a file; they could be
+loaded from some other source, e.g., the network. Classes loaded
+from the network are an array of bytes. A ClassLoader can be used to
+tell the runtime system to convert an array of bytes into an instance
+of class Class.
+This conversion information is passed to the runtime using the defineClass()
+method.<p>
+Classes that are created through the defineClass() mechanism can 
+reference other classes by name. To resolve those names the runtime
+system calls to the ClassLoader that originally created the class.
+The runtime system calls the abstract method loadClass() to load
+the referenced classes.<p>
+<pre>
+	ClassLoader loader = new NetworkClassLoader(host, port);
+ 	Object main = loader.loadClass("Main").newInstance();
+	....
+</pre>
+The NetworkClassLoader subclass must define the method loadClass() to 
+load a class from the network. Once it has downloaded the bytes
+that make up the class it should use definedClass to create a class
+instance. A sample implementation could be:
+<pre>
+	class NetworkClassLoader {
+	    String host;
+	    int port;
+	    Hashtable cache = new Hashtable();
+	    private byte loadClassData(String name)[] {
+		// load the class data from the connection
+		...
+	    }
+	    public synchronized Class loadClass(String name) {
+	        Class c = cache.get(name);
+		if (c == null) {
+		    byte data[] = loadClassData(name);
+		    cache.put(name, defineClass(data, 0, data.length));
+		}
+		return c;
+	    }
+	}
+</pre>
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.lang.Class.html#_top_">Class</a><dt>
+<b>Version:</b>
+<dd>
+	1.14, 21 Feb 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#ClassLoader()"><b>ClassLoader</b></a>()
+<dd>
+Constructs a new class loader and initializes it.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#defineClass(byte[], int, int)"><b>defineClass</b></a>(byte[], int, int)
+<dd>
+Converts an array of bytes to an instance of class Class.
+<dt>
+<img src="images/green-ball-small.gif" width=6 height=6>
+<a href="#getClassContext()"><b>getClassContext</b></a>()
+<dd>
+Returns the classes that are currently on the execution stack.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#loadClass(java.lang.String, boolean)"><b>loadClass</b></a>(String, boolean)
+<dd>
+Resolves the specified name to a class.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#resolveClass(java.lang.Class)"><b>resolveClass</b></a>(Class)
+<dd>
+Resolves classes referenced by this class.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="ClassLoader"></a>
+<a name="ClassLoader()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+ClassLoader
+</b>
+<pre>
+  protected ClassLoader()
+</pre>
+<dl>
+<dd>
+Constructs a new class loader and initializes it.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="loadClass(java.lang.String, boolean)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="loadClass">
+<b>
+loadClass
+</b>
+</a>
+<pre>
+  protected abstract <a href="java.lang.Class.html#_top_">Class</a> loadClass(<a href="java.lang.String.html#_top_">String</a> name,
+                                     boolean resolve)
+</pre>
+<dl>
+<dd>
+Resolves the specified name to a class. loadClass() is called by the 
+interpreter.
+As an abstract method, loadClass() must be defined in a subclass of 
+ClassLoader. Using a Hashtable avoids loading the same class more than
+once. It is an abstract method, it must therefore be defined in a subclass.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+name
+-
+	the name of the desired class
+<dd>
+
+-
+  resolve true if the class needs to be resolved
+<dt>
+<b>Returns:</b>
+<dd>
+	the resulting class, or null if it was not found
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.util.Hashtable.html#_top_">Hashtable</a>
+</dl>
+</dl>
+<p>
+<a name="defineClass(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="defineClass">
+<b>
+defineClass
+</b>
+</a>
+<pre>
+  protected final <a href="java.lang.Class.html#_top_">Class</a> defineClass(byte data[],
+                                    int offset,
+                                    int length)
+</pre>
+<dl>
+<dd>
+Converts an array of bytes to an instance of class Class. Before the
+class can be used it must be resolved.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+data
+-
+	the bytes that make up the class
+<dd>
+offset
+-
+	the start ofset of the class data
+<dd>
+length
+-
+	the length of the class data
+<dt>
+<b>Returns:</b>
+<dd>
+	the class object which was created from the data
+<dt>
+<b>Throws:</b> <a href="java.lang.FileFormatException.html#_top_">FileFormatException</a>
+<dd>
+ the data does not contain a valid class
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#loadClass">loadClass</a>,
+<a href="#resolveClass">resolveClass</a>
+</dl>
+</dl>
+<p>
+<a name="resolveClass(java.lang.Class)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="resolveClass">
+<b>
+resolveClass
+</b>
+</a>
+<pre>
+  protected final void resolveClass(<a href="java.lang.Class.html#_top_">Class</a> c)
+</pre>
+<dl>
+<dd>
+Resolves classes referenced by this class. This must be done before the
+class can be used. Class names referenced by the resulting class are
+resolved by calling loadClass().
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+c
+-
+	the class to be resolved
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="#defineClass">defineClass</a>
+</dl>
+</dl>
+<p>
+<a name="getClassContext()">
+<img src="images/green-ball.gif" width=12 height=12>
+</a>
+<a name="getClassContext">
+<b>
+getClassContext
+</b>
+</a>
+<pre>
+  public static <a href="java.lang.Class.html#_top_">Class</a> getClassContext()
+</pre>
+<dl>
+<dd>
+Returns the classes that are currently on the execution stack.
+This is a hack and will probably not be supported in the future.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Class.html#_top_">Previous</a>    <a href="java.lang.Double.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class net.nntp.NntpClient
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.nntp.html">This Package</a>    <a href="net.nntp.NewsgroupInfo.html#_top_">Previous</a>    <a href="net.nntp.html">Next</a></pre>
+<hr>
+<h1>
+Class net.nntp.NntpClient
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="net.NetworkClient.html#_top_">net.NetworkClient</a>
+           |
+           +----<a href="net.TransferProtocolClient.html#_top_">net.TransferProtocolClient</a>
+                   |
+                   +----net.nntp.NntpClient
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+NntpClient</b>
+<dt>
+extends <a href="net.TransferProtocolClient.html#_top_">TransferProtocolClient</a>
+</dl>
+This class implements network news clients (NNTP).
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+1.9, 12 Dec 1994
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne, James Gosling</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NntpClient()"><b>NntpClient</b></a>()
+<dd>
+
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#NntpClient(java.lang.String)"><b>NntpClient</b></a>(String)
+<dd>
+Create new NNTP Client connected to host <i>host</i>
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#askServer(java.lang.String)"><b>askServer</b></a>(String)
+<dd>
+Sends command <i>cmd</i> to the server.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finishPost()"><b>finishPost</b></a>()
+<dd>
+Finish posting a message.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getArticle(int)"><b>getArticle</b></a>(int)
+<dd>
+get article <i>n</i> from the current group.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getArticle(java.lang.String)"><b>getArticle</b></a>(String)
+<dd>
+get article <i>id</i> from the current group.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getGroup(java.lang.String)"><b>getGroup</b></a>(String)
+<dd>
+Get information about group <i>name</i>.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getHeader(int)"><b>getHeader</b></a>(int)
+<dd>
+get header of article <i>n</i> from the current group.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#getHeader(java.lang.String)"><b>getHeader</b></a>(String)
+<dd>
+get header of article <i>id</i> from the current group.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#openServer(java.lang.String, int)"><b>openServer</b></a>(String, int)
+<dd>
+Open a connection to the NNTP server.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setGroup(java.lang.String)"><b>setGroup</b></a>(String)
+<dd>
+Set the current group to <i>name</i>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#startPost()"><b>startPost</b></a>()
+<dd>
+Setup to post a message.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="NntpClient"></a>
+<a name="NntpClient()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NntpClient
+</b>
+<pre>
+  public NntpClient()
+</pre>
+<a name="NntpClient(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+NntpClient
+</b>
+<pre>
+  public NntpClient(<a href="java.lang.String.html#_top_">String</a> host)
+</pre>
+<dl>
+<dd>
+Create new NNTP Client connected to host <i>host</i>
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="openServer(java.lang.String, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="openServer">
+<b>
+openServer
+</b>
+</a>
+<pre>
+  public void openServer(<a href="java.lang.String.html#_top_">String</a> name,
+                         int port)
+</pre>
+<dl>
+<dd>
+Open a connection to the NNTP server.
+<dl>
+<dt>
+<b>Throws:</b> <a href="net.nntp.NntpProtocolException.html#_top_">NntpProtocolException</a>
+<dd>
+ did not get the correct welcome message
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="net.NetworkClient.html#openServer(java.lang.String, int)">openServer</a> in class <a href="net.NetworkClient.html#_top_">NetworkClient</a></dl>
+</dl>
+<p>
+<a name="askServer(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="askServer">
+<b>
+askServer
+</b>
+</a>
+<pre>
+  public int askServer(<a href="java.lang.String.html#_top_">String</a> cmd)
+</pre>
+<dl>
+<dd>
+Sends command <i>cmd</i> to the server.
+</dl>
+<p>
+<a name="getGroup(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getGroup">
+<b>
+getGroup
+</b>
+</a>
+<pre>
+  public <a href="net.nntp.NewsgroupInfo.html#_top_">NewsgroupInfo</a> getGroup(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Get information about group <i>name</i>.
+<dl>
+<dt>
+<b>Throws:</b> <a href="net.nntp.UnknownNewsgroupException.html#_top_">UnknownNewsgroupException</a>
+<dd>
+ the group name wasn't active.
+<dt>
+<b>Throws:</b> <a href="net.nntp.NntpProtocolException.html#_top_">NntpProtocolException</a>
+<dd>
+ received an unexpected reply.
+</dl>
+</dl>
+<p>
+<a name="setGroup(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setGroup">
+<b>
+setGroup
+</b>
+</a>
+<pre>
+  public void setGroup(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<dl>
+<dd>
+Set the current group to <i>name</i>
+</dl>
+<p>
+<a name="getArticle(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getArticle">
+<b>
+getArticle
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> getArticle(int n)
+</pre>
+<dl>
+<dd>
+get article <i>n</i> from the current group.
+</dl>
+<p>
+<a name="getArticle(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getArticle">
+<b>
+getArticle
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> getArticle(<a href="java.lang.String.html#_top_">String</a> id)
+</pre>
+<dl>
+<dd>
+get article <i>id</i> from the current group.
+</dl>
+<p>
+<a name="getHeader(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getHeader">
+<b>
+getHeader
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> getHeader(int n)
+</pre>
+<dl>
+<dd>
+get header of article <i>n</i> from the current group.
+</dl>
+<p>
+<a name="getHeader(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="getHeader">
+<b>
+getHeader
+</b>
+</a>
+<pre>
+  public <a href="java.io.InputStream.html#_top_">InputStream</a> getHeader(<a href="java.lang.String.html#_top_">String</a> id)
+</pre>
+<dl>
+<dd>
+get header of article <i>id</i> from the current group.
+</dl>
+<p>
+<a name="startPost()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="startPost">
+<b>
+startPost
+</b>
+</a>
+<pre>
+  public <a href="java.io.PrintStream.html#_top_">PrintStream</a> startPost()
+</pre>
+<dl>
+<dd>
+Setup to post a message.  It returns a stream
+        to which the article should be written.  Returns null if the post
+	is disallowed.  The article must have a properly formed RFC850 header
+	and end-of-lines must by sent as \r\n.  The Article must end with
+	\r\n
+</dl>
+<p>
+<a name="finishPost()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finishPost">
+<b>
+finishPost
+</b>
+</a>
+<pre>
+  public boolean finishPost()
+</pre>
+<dl>
+<dd>
+Finish posting a message.  Must be called after calling startPost
+	and writing the article.  Returns true if the article is posted
+	successfully.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="net.nntp.html">This Package</a>    <a href="net.nntp.NewsgroupInfo.html#_top_">Previous</a>    <a href="net.nntp.html">Next</a></pre>
+</body>
+</html>

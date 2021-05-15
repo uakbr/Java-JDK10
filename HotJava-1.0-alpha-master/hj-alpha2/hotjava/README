@@ -1,0 +1,40 @@
+This directory and all the directories below it contain the
+complete HotJava 1.0alpha2 and the Java language 1.0alpha2 binary
+release.
+
+To run this release of HotJava you will need:
+ 
+        - A Sun sparcstation
+ 
+        - A version of SunOS2.3 or above
+ 
+        - OpenWindows 3.0 or above.
+ 
+HotJava will run on monochrome and 24-bit framebuffers but
+works best on 8-bit framebuffers.
+Sorry, this release of HotJava does not run under X11R6. 
+
+To execute HotJava from the same directory when this README file
+is location, simply type:
+ 
+        ./bin/hotjava
+ 
+You can also add hotjava/bin to your path if you choose.
+ 
+The group working on HotJava at Sun currently has ports to MacOS
+and Windows-95 underway.  We are interested in hearing from
+qualified individuals or groups who want to port the system to
+other platforms.  Contact us at java@java.sun.com before starting
+any porting effort.  We would like to offer assistance where we
+can and prevent duplication of effort.
+ 
+If you have questions or comments about HotJava or the Java
+language we would like to hear from you.  
+
+You can reach us at:
+
+Email: java@java.sun.com
+WWW: http://java.sun.com/
+
+Please indicate that you are using the 1.0alpha2 version of the
+software when you write.

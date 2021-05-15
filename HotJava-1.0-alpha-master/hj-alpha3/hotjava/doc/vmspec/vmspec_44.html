@@ -1,0 +1,34 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: - An Optimization- Managing Arrays (_quick variants)</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING304></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_43.html">Prev</A>       <A HREF="vmspec_45.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+<HR>
+<H2>- An Optimization</H2>
+<HR>
+<H1>Managing Arrays (_quick variants)</H1>
+<DL>
+<DT><A HREF="vmspec_44.html#HEADING305"><B></B>  anewarray_quick</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING305></A>
+<H3>anewarray_quick</H3>
+Allocate new array<BR><IMG SRC="App_A_Tbl_1.gif"><BR>
+ of objects<P>
+<PRE>
+..., size =&gt; result<P>
+</PRE>
+size should be an integer. It represents the number of elements in the new array. <P>
+indexbyte1 and indexbyte2 are are used to construct an index into the constant pool of the current class. The entry should be a class.<P>
+A new array of the indicated class type and capable of holding size elements is allocated. Allocation of an array large enough to contain nelem items of the given class type is attempted. All elements of the array are initialized to zero.<P>
+If size is less than zero, a NegativeArraySizeException is thrown. If there is not enough memory to allocate the array, an OutOfMemoryException is thrown.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_43.html">Prev</A>       <A HREF="vmspec_45.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

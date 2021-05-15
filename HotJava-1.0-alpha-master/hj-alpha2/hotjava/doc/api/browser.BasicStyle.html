@@ -1,0 +1,390 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class browser.BasicStyle
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.BackButton.html#_top_">Previous</a>    <a href="browser.BreakingStyle.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class browser.BasicStyle
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----<a href="browser.Style.html#_top_">browser.Style</a>
+           |
+           +----browser.BasicStyle
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+BasicStyle</b>
+<dt>
+extends <a href="browser.Style.html#_top_">Style</a>
+</dl>
+The BasicStyle class is used to specify most of the style changes
+that occur as a result of html tag refs.  Zero or more of the
+parameters may be specified for change.  BasicStyle operates on
+instances of FormattingParameters, generating new instances of
+FormattingParameters by modifying old ones.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.FormattingParameters.html#_top_">FormattingParameters</a><dt>
+<b>Version:</b>
+<dd>
+1.11, 14 Mar 1995
+<dt>
+<b>Author:</b>
+<dd>
+Jonathan Payne</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#BasicStyle(java.lang.String)"><b>BasicStyle</b></a>(String)
+<dd>
+Constructs a new instance of BasicStyle.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#addFontAttribute(int)"><b>addFontAttribute</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#clearFontAttribute(int)"><b>clearFontAttribute</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#finish(browser.WRFormatter, net.www.html.TagRef)"><b>finish</b></a>(WRFormatter, TagRef)
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#handleStyleSpec(java.lang.String)"><b>handleStyleSpec</b></a>(String)
+<dd>
+Handles the initialization string described in the constructor.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setAlignment(byte)"><b>setAlignment</b></a>(byte)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setColor(int, int, int)"><b>setColor</b></a>(int, int, int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFontName(java.lang.String)"><b>setFontName</b></a>(String)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setFontSize(int)"><b>setFontSize</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setLeftMargin(int)"><b>setLeftMargin</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setRightMargin(int)"><b>setRightMargin</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setWrap(byte)"><b>setWrap</b></a>(byte)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#shouldApply(int)"><b>shouldApply</b></a>(int)
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#start(browser.WRFormatter, net.www.html.TagRef)"><b>start</b></a>(WRFormatter, TagRef)
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="BasicStyle"></a>
+<a name="BasicStyle(java.lang.String)">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+BasicStyle
+</b>
+<pre>
+  public BasicStyle(<a href="java.lang.String.html#_top_">String</a> spec)
+</pre>
+<dl>
+<dd>
+Constructs a new instance of BasicStyle.  Initializes itself
+based on the attribute=value pairs in the specified
+specification.  Possible attributes and their values are:
+<dl compact><dt>size<dd>integer size of font <dt>color<dd>
+integer:integer:integer red, green and blue components of
+color<dt>style<dd><dl compact><dt>i<dd>turn on italics
+mode<dt>b<dd>turn on bold mode<dt>u<dd> turn on underline
+mode<dt>p<dd>go to plain text (no italics or
+bold)<dt>f<dd>select fixed width
+font</dl><dt>[+-]leftMargin<dd> integer new value of left
+margin - if + or - is specified, the new value is relative to
+the current value<dt>[+-]rightMargin<dd>integer new value of
+right margin - if + or - is specified, the new value is
+relative to the current value<dt>wrap<dd><dl compact><dt>not<dd>wrap
+only at newlines in the document<dt>word<dd>wrap at word
+bounderies<dt>char<dd>wrap as soon as a character doesn't fit
+on the line</dl></dl>.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="handleStyleSpec(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="handleStyleSpec">
+<b>
+handleStyleSpec
+</b>
+</a>
+<pre>
+  protected void handleStyleSpec(<a href="java.lang.String.html#_top_">String</a> spec)
+</pre>
+<dl>
+<dd>
+Handles the initialization string described in the constructor.
+<dl>
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="browser.Style.html#handleStyleSpec(java.lang.String)">handleStyleSpec</a> in class <a href="browser.Style.html#_top_">Style</a></dl>
+</dl>
+<p>
+<a name="start(browser.WRFormatter, net.www.html.TagRef)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="start">
+<b>
+start
+</b>
+</a>
+<pre>
+  public void start(<a href="browser.WRFormatter.html#_top_">WRFormatter</a> f,
+                    <a href="net.www.html.TagRef.html#_top_">TagRef</a> ref)
+</pre>
+<dl>
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.  If the specified TagRef has a matching closing
+tag, then this pushes new parameters onto the formatter's
+parameter stack.  Otherwise it just applies the style changes
+implied by this BasicStyle object.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+f
+-
+	the WRFormatter that's formatting the document
+that contained this style
+<dd>
+ref
+-
+ the html TagRef that refered to this style
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="browser.Style.html#start(browser.WRFormatter, net.www.html.TagRef)">start</a> in class <a href="browser.Style.html#_top_">Style</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Formatter.html#_top_">Formatter</a>,
+<a href="browser.WRFormatter.html#_top_">WRFormatter</a>
+</dl>
+</dl>
+<p>
+<a name="finish(browser.WRFormatter, net.www.html.TagRef)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="finish">
+<b>
+finish
+</b>
+</a>
+<pre>
+  public void finish(<a href="browser.WRFormatter.html#_top_">WRFormatter</a> f,
+                     <a href="net.www.html.TagRef.html#_top_">TagRef</a> ref)
+</pre>
+<dl>
+<dd>
+Processes this style in the context provided by a Formatter
+and a TagRef.  If the specified TagRef is a closing tag, then
+pop the formatter's parameter stack.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+f
+-
+	the WRFormatter that's formatting the document
+that contained this style
+<dd>
+ref
+-
+ the html TagRef that refered to this style
+<dt>
+<b>Overrides:</b>
+<dd>
+<a href="browser.Style.html#finish(browser.WRFormatter, net.www.html.TagRef)">finish</a> in class <a href="browser.Style.html#_top_">Style</a><dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.Formatter.html#_top_">Formatter</a>,
+<a href="browser.WRFormatter.html#_top_">WRFormatter</a>
+</dl>
+</dl>
+<p>
+<a name="shouldApply(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="shouldApply">
+<b>
+shouldApply
+</b>
+</a>
+<pre>
+  public boolean shouldApply(int bit)
+</pre>
+<a name="setWrap(byte)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setWrap">
+<b>
+setWrap
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> setWrap(byte wrap)
+</pre>
+<a name="setAlignment(byte)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setAlignment">
+<b>
+setAlignment
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> setAlignment(byte align)
+</pre>
+<a name="setLeftMargin(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setLeftMargin">
+<b>
+setLeftMargin
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> setLeftMargin(int lm)
+</pre>
+<a name="setRightMargin(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setRightMargin">
+<b>
+setRightMargin
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> setRightMargin(int rm)
+</pre>
+<a name="addFontAttribute(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="addFontAttribute">
+<b>
+addFontAttribute
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> addFontAttribute(int attr)
+</pre>
+<a name="clearFontAttribute(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="clearFontAttribute">
+<b>
+clearFontAttribute
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> clearFontAttribute(int attr)
+</pre>
+<a name="setFontSize(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFontSize">
+<b>
+setFontSize
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> setFontSize(int size)
+</pre>
+<a name="setFontName(java.lang.String)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setFontName">
+<b>
+setFontName
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> setFontName(<a href="java.lang.String.html#_top_">String</a> name)
+</pre>
+<a name="setColor(int, int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setColor">
+<b>
+setColor
+</b>
+</a>
+<pre>
+  public <a href="#_top_">BasicStyle</a> setColor(int r,
+                             int g,
+                             int b)
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="browser.html">This Package</a>    <a href="browser.BackButton.html#_top_">Previous</a>    <a href="browser.BreakingStyle.html#_top_">Next</a></pre>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: The Virtual Machine Instruction Set- Stack Instructions</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING82></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_21.html">Prev</A>       <A HREF="vmspec_23.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+<HR>
+<H2>The Virtual Machine Instruction Set</H2>
+<HR>
+<H1>Stack Instructions</H1>
+<DL>
+<DT><A HREF="vmspec_22.html#HEADING83"><B></B>  nop</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING84"><B></B>  pop</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING85"><B></B>  pop2</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING86"><B></B>  dup</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING87"><B></B>  dup2</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING88"><B></B>  dup_x1</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING89"><B></B>  dup2_x1</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING90"><B></B>  dup_x2</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING91"><B></B>  dup2_x2</A><DD>
+<DT><A HREF="vmspec_22.html#HEADING92"><B></B>  swap</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING83></A>
+<H3>nop</H3>
+Do nothing.<BR><IMG SRC="instructions_only_Tbl_12.gif"><BR>
+<P>
+<PRE>
+no change <P>
+</PRE>
+Do nothing.<P>
+<A NAME=HEADING84></A>
+<H3>pop</H3>
+Pop top stack word<BR><IMG SRC="instructions_only_Tbl_150.gif"><BR>
+<P>
+<PRE>
+..., any =&gt; ...<P>
+</PRE>
+Pop the top word from the stack. <P>
+<A NAME=HEADING85></A>
+<H3>pop2</H3>
+Pop top two stack word<BR><IMG SRC="instructions_only_Tbl_138.gif"><BR>
+s<P>
+<PRE>
+..., any2, any1 =&gt; ...<P>
+</PRE>
+Pop the top two words from the stack. <P>
+<A NAME=HEADING86></A>
+<H3>dup</H3>
+Duplicate top stack word<BR><IMG SRC="instructions_only_Tbl_153.gif"><BR>
+<P>
+<PRE>
+..., any =&gt; ..., any, any<P>
+</PRE>
+Duplicate the top word on the stack. <P>
+<A NAME=HEADING87></A>
+<H3>dup2</H3>
+Duplicate top two stack word<BR><IMG SRC="instructions_only_Tbl_137.gif"><BR>
+s<P>
+<PRE>
+..., any2, any1 =&gt; ..., any2, any1, any2, any1<P>
+</PRE>
+Duplicate the top two words on the stack. <P>
+<A NAME=HEADING88></A>
+<H3>dup_x1</H3>
+Duplicate top stack word and put two down<BR><IMG SRC="instructions_only_Tbl_84.gif"><BR>
+<P>
+<PRE>
+..., any2, any1 =&gt; ..., any1, any2, any1<P>
+</PRE>
+Duplicate the top word on the stack and insert the copy two words down in the stack.<P>
+<A NAME=HEADING89></A>
+<H3>dup2_x1</H3>
+Duplicate top two stack words and put two down<BR><IMG SRC="instructions_only_Tbl_87.gif"><BR>
+<P>
+<PRE>
+..., any3, any2, any1 =&gt; ..., any2,, any1, any3, any2, any1<P>
+</PRE>
+Duplicate the top two words on the stack and insert the copies two words down in the stack.<P>
+<A NAME=HEADING90></A>
+<H3>dup_x2</H3>
+Duplicate top stack word and put three down.<BR><IMG SRC="instructions_only_Tbl_85.gif"><BR>
+<P>
+<PRE>
+..., any3, any2, any1 =&gt; ..., any1, any3, any2, any1<P>
+</PRE>
+Duplicate the top word on the stack and insert the copy three words down in the stack.<P>
+<A NAME=HEADING91></A>
+<H3>dup2_x2</H3>
+Duplicate top two stack words and put three down<BR><IMG SRC="instructions_only_Tbl_86.gif"><BR>
+<P>
+<PRE>
+..., any4, any3, any2, any1 =&gt; ..., any2, any1, any4, any3, any2, any1<P>
+</PRE>
+Duplicate the top two words on the stack and insert the copies three words down in the stack.<P>
+<A NAME=HEADING92></A>
+<H3>swap</H3>
+Swap top two stack words<BR><IMG SRC="instructions_only_Tbl_43.gif"><BR>
+<P>
+<PRE>
+..., any2, any1 =&gt; ..., any2, any1<P>
+</PRE>
+Swap the top two elements on the stack.<P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_21.html">Prev</A>       <A HREF="vmspec_23.html">Next</A>       <A HREF="vmspec_17.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

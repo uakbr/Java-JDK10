@@ -1,0 +1,85 @@
+<!-- Generated with CERN WebMaker 1.4 -->
+<HTML>
+<HEAD>
+<TITLE>vmspec.: - An Optimization- Method Invocation (_quick variants)</TITLE>
+</HEAD>
+<BODY>
+<A NAME=HEADING315></A>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_45.html">Prev</A>       <A HREF="vmspec_47.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+<HR>
+<H2>- An Optimization</H2>
+<HR>
+<H1>Method Invocation (_quick variants)</H1>
+<DL>
+<DT><A HREF="vmspec_46.html#HEADING316"><B></B>  invokevirtual_quick</A><DD>
+<DT><A HREF="vmspec_46.html#HEADING317"><B></B>  invokevirtualobject_quick</A><DD>
+<DT><A HREF="vmspec_46.html#HEADING318"><B></B>  invokenonvirtual_quick</A><DD>
+<DT><A HREF="vmspec_46.html#HEADING319"><B></B>  invokestatic_quick</A><DD>
+<DT><A HREF="vmspec_46.html#HEADING320"><B></B>  invokeinterface_quick</A><DD>
+</DL>
+
+<HR>
+
+<A NAME=HEADING316></A>
+<H3>invokevirtual_quick</H3>
+Invoke class method<BR><IMG SRC="App_A_Tbl_6.gif"><BR>
+<P>
+<PRE>
+..., handle, [arg1, [arg2 ...]] =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain a handle to an object and nargs arguments. The method block at offset in the object's method table is retrieved. The method block indicates the type of method (native, synchronized, etc.) and the number of arguments (nargs) expected on the operand stack.<P>
+If the method is marked synchronized the monitor associated with handle is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to handle on the stack, making handle and the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<A NAME=HEADING317></A>
+<H3>invokevirtualobject_quick</H3>
+Invoke class method<BR><IMG SRC="App_A_Tbl_3.gif"><BR>
+<P>
+<PRE>
+..., handle, [arg1, [arg2 ...]] =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain a handle to an object or to an array and nargs arguments. The method block at offset in the object's method table is retrieved. The method block indicates the type of method (native, synchronized, etc.) and the number of arguments (nargs) expected on the operand stack.<P>
+If the method is marked synchronized the monitor associated with handle is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to handle on the stack, making handle and the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<A NAME=HEADING318></A>
+<H3>invokenonvirtual_quick</H3>
+Invoke superclass method<BR><IMG SRC="App_A_Tbl_12.gif"><BR>
+<P>
+<PRE>
+..., handle, [arg1, [arg2 ...]] =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain a handle to an object and some number of arguments. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index in the constant pool contains a method slot index and a pointer to a class. The method block at the method slot index in the indicated class is retrieved. The method block indicates the type of method (native, synchronized, etc.) and the number of arguments (nargs) expected on the operand stack.<P>
+If the method is marked synchronized the monitor associated with handle is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to handle on the stack, making handle and the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<A NAME=HEADING319></A>
+<H3>invokestatic_quick</H3>
+Invoke a static method<BR><IMG SRC="App_A_Tbl_2.gif"><BR>
+<P>
+<PRE>
+..., [arg1, [arg2 ...]] =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain some number of arguments. indexbyte1 and indexbyte2 are used to construct an index into the constant pool of the current class. The item at that index in the constant pool contains a method slot index and a pointer to a class. The method block at the method slot index in the indicated class is retrieved. The method block indicates the type of method (native, synchronized, etc.) and the number of arguments (nargs) expected on the operand stack.<P>
+If the method is marked synchronized the monitor associated with the method's class is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to the first argument on the stack, making the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+<A NAME=HEADING320></A>
+<H3>invokeinterface_quick</H3>
+Invoke interface method<BR><IMG SRC="App_A_Tbl_7.gif"><BR>
+<P>
+<PRE>
+..., handle, [arg1, [arg2 ...]] =&gt; ...<P>
+</PRE>
+The operand stack is assumed to contain a handle to an object and nargs-1 arguments. idbyte1 and idbyte2 are used to construct an index into the constant pool of the current class. The item at that index in the constant pool contains the complete method signature. A pointer to the object's method table is retrieved from the object handle. <P>
+The method signature is searched for in the object's method table. As a short-cut, the method signature at slot guess is searched first. If that fails, a complete search of the method table is performed. The method signature is guaranteed to exactly match one of the method signatures in the table. <P>
+The result of the lookup is a method block. The method block indicates the type of method (native, synchronized, etc.) but unlike invokemethod and invokesuper, the number of available arguments (nargs) is taken from the bytecode. <P>
+If the method is marked synchronized the monitor associated with handle is entered. The exact behavior of monitors and their interactions with threads is a runtime issue.<P>
+The base of the local variables array for the new Java stack frame is set to point to handle on the stack, making handle and the supplied arguments (arg1, arg2, ...) the first nargs local variables of the new frame. The total number of local variables used by the method is determined, and the execution environment of the new frame is pushed after leaving sufficient room for the locals. The base of the operand stack for this method invocation is set to the first word after the execution environment. Finally, execution continues with the first instruction of the matched method.<P>
+If the object handle on the operand stack is null, a NullPointerException is thrown. If during the method invocation a stack overflow is detected, a StackOverflowException is thrown. <P>
+guess is the last guess. Each time through, guess is set to the method offset that was used. <P>
+<HR>
+<A HREF="vmspec_1.html">Contents</A>       <A HREF="vmspec_45.html">Prev</A>       <A HREF="vmspec_47.html">Next</A>       <A HREF="vmspec_42.html">Up</A>       <P>
+Generated with <A HREF="AboutWebMaker.html">CERN WebMaker</A>
+</BODY>
+</HTML>

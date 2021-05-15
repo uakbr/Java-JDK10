@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Collecting Trace Information</title>
+</head>
+<body>
+<IMG SRC="../demo/images/sun.gif" align=middle><IMG SRC="../demo/images/1inch.gif"><IMG SRC="../demo/images/0.25inch.gif"><img src="../demo/images/wrlogo-large.gif" align=middle>
+<br>
+<IMG SRC="../demo/images/bar.gif">
+<br>
+<b>Version 1.0 alpha2</b> 
+ <P><h1>
+<IMG SRC="http://tachyon/~jag/graphics/sladybug.gif" align=middle>
+<IMG SRC="../demo/images/1inch.gif">
+Collecting Trace Information
+</h1>
+
+By including trace information in your bug report,
+you greatly increase our chances of fixing the bug.
+HotJava and other Java programs
+can produce three kinds of trace information:
+<ul>
+<li> Diagnostic information (~/.hotjava/weblog)
+<li> Java stack dump (if the program is hung)
+<li> C stack dump (if the program has crashed,
+     leaving a core file)
+</ul>
+
+<h2> Getting Diagnostic Information</h2>
+HotJava prints its diagnostic information to a file named
+<samp>~<var>username</var>/.hotjava/weblog</samp>.
+When HotJava starts up,
+it renames the existing <samp>weblog</samp> file (if any)
+to <samp>weblog.bak</samp>.
+If either <samp>weblog</samp> or <samp>weblog.bak</samp>
+has any information
+that seems like it might be relevant,
+include it in your bug report.
+
+<h2> Getting a Java Stack Dump</h2>
+If HotJava (or any other Java program) is hung,
+you can get its Java stack dump.
+You can usually do this by pressing Control-\ in the shell
+that you invoked <code>hotjava</code> or <code>java</code> from.
+The stack dump information will appear in the shell window.
+<p>
+If Control-\ doesn't work,
+use the <code>ps</code> and <code>kill</code> commands instead.
+The Java stack dump will most likely be displayed in the console window.
+<pre>    %ps -ax | grep hotjava
+      1920 pts/2    S  0:00 grep hotjava
+      1902 ?        S  0:37 /usr/local/java/bin/../bin/sun4/java hotjava.we
+    %kill -QUIT 1902 	</pre>
+
+<h2> Getting a C Stack Dump</h2>
+If the program has dumped core
+(exited, leaving behind a file named <samp>core</samp>),
+you can get its C stack dump
+if you have the <code>dbx</code> debugger installed. 
+<p>
+
+First, you must find out
+where the <code>java</code> executable file for your architecture is.
+This file is one directory below the <code>java</code> script file.
+You can get it by inserting the directory for your machine's architecture
+(such as '/sun4')
+after 'bin' in the string that 'which java' returns.
+For example, if 'which java'
+returns '/usr/local/java/bin/java',
+then the <code>java</code> executable file for the sun4 architecture
+is <samp>/usr/local/java/bin/sun4/java</samp>.
+<p>
+Now you get the C stack dump by running <code>dbx</code>,
+specifying the <code>java</code> executable file and the core file,
+as shown below.
+<pre>    %dbx /usr/local/java/bin/sun4/java core
+    (dbx) where	</pre>
+<p>
+<hr>
+<a href=BugReport.html>Back to the bug report form</a>
+<hr>
+<address>
+<a href="http://www.sun.com/"><IMG SRC="../demo/images/sun.gif"
+align=bottom border=1></a> <a href="http://java.sun.com/"> <IMG
+SRC="../demo/images/wrlogo.gif" align=bottom border=1></a><p>Send your comments
+or questions to <A
+href="mailto:java@java.sun.com"><em>java@java.sun.com</em></A>
+ 
+</address>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.lang.Ref
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Object.html#_top_">Previous</a>    <a href="java.lang.String.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.lang.Ref
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.lang.Ref
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+Ref</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+A "Ref" is an indirect reference to an object that the garbage collector
+knows about.  The application overrides the reconstitute() method with one
+that will construct the object based on information in the Ref, often by
+reading from a file.  The get() method retains a cache of the last call to
+reconstitute() in the Ref.  When space gets tight, the garbage collector
+will clear old Ref cache entries when there are no other pointers to the
+object.
+<dl>
+<dt>
+<b>Version:</b>
+<dd>
+    1.5, 16 Feb 1995
+</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#Ref()"><b>Ref</b></a>()
+<dd>
+Constructs a new Ref.
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#check()"><b>check</b></a>()
+<dd>
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#flush()"><b>flush</b></a>()
+<dd>
+Flushes the cached object.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#get()"><b>get</b></a>()
+<dd>
+Returns a pointer to the object referenced by this Ref.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reconstitute()"><b>reconstitute</b></a>()
+<dd>
+Returns a pointer to the object referenced by this ref by 
+reconstituting it from some external source.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#setThing(java.lang.Object)"><b>setThing</b></a>(Object)
+<dd>
+
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="Ref"></a>
+<a name="Ref()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+Ref
+</b>
+<pre>
+  public Ref()
+</pre>
+<dl>
+<dd>
+Constructs a new Ref.
+</dl>
+<p>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="get()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="get">
+<b>
+get
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> get()
+</pre>
+<dl>
+<dd>
+Returns a pointer to the object referenced by this Ref.  If the object
+has been thrown away by the garbage collector, it will be
+reconstituted. Does everything necessary to ensure that the garbage
+collector throws things away in LRU order.  Applications should never
+need to override this method. get() effectively caches calls to
+reconstitute().
+</dl>
+<p>
+<a name="reconstitute()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reconstitute">
+<b>
+reconstitute
+</b>
+</a>
+<pre>
+  public abstract <a href="java.lang.Object.html#_top_">Object</a> reconstitute()
+</pre>
+<dl>
+<dd>
+Returns a pointer to the object referenced by this ref by 
+reconstituting it from some external source.  It shouldn't bother with
+caching since get() will deal with that.
+In normal usage, Ref will always be subclassed.  The subclass will add
+the instance variables necessary for reconstitute() to work.  It will
+also add a constructor to set them up, and write a version of
+reconstitute().
+</dl>
+<p>
+<a name="flush()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="flush">
+<b>
+flush
+</b>
+</a>
+<pre>
+  public void flush()
+</pre>
+<dl>
+<dd>
+Flushes the cached object.  Forces the next invocation of get() to
+invoke reconstitute().
+</dl>
+<p>
+<a name="setThing(java.lang.Object)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="setThing">
+<b>
+setThing
+</b>
+</a>
+<pre>
+  public void setThing(<a href="java.lang.Object.html#_top_">Object</a> thing)
+</pre>
+<a name="check()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="check">
+<b>
+check
+</b>
+</a>
+<pre>
+  public <a href="java.lang.Object.html#_top_">Object</a> check()
+</pre>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.lang.html">This Package</a>    <a href="java.lang.Object.html#_top_">Previous</a>    <a href="java.lang.String.html#_top_">Next</a></pre>
+</body>
+</html>

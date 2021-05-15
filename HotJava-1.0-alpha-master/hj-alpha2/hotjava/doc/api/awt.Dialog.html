@@ -1,0 +1,118 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Interface awt.Dialog
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ChoiceHandler.html#_top_">Previous</a>    <a href="awt.DialogHandler.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Interface awt.Dialog
+</h1>
+<dl>
+<dt>
+public interface <b>
+Dialog</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Dialog is an interface that factors out the common elements of 
+all dialog boxes.  It's mainly here for users of the DialogHandler
+callback methods.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="awt.MessageDialog.html#_top_">MessageDialog</a>,
+<a href="awt.DialogHandler.html#_top_">DialogHandler</a><dt>
+<b>Version:</b>
+<dd>
+1.4 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Herb Jellinek</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#dispose()"><b>dispose</b></a>()
+<dd>
+Dispose of this dialog.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#hide()"><b>hide</b></a>()
+<dd>
+Hide this dialog.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#show()"><b>show</b></a>()
+<dd>
+Show this dialog.
+</dl>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="dispose()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="dispose">
+<b>
+dispose
+</b>
+</a>
+<pre>
+  public abstract void dispose()
+</pre>
+<dl>
+<dd>
+Dispose of this dialog.
+</dl>
+<p>
+<a name="show()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="show">
+<b>
+show
+</b>
+</a>
+<pre>
+  public abstract int show()
+</pre>
+<dl>
+<dd>
+Show this dialog. If modal, returns the number of the button pressed.
+If not, returns -1.
+</dl>
+<p>
+<a name="hide()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="hide">
+<b>
+hide
+</b>
+</a>
+<pre>
+  public abstract void hide()
+</pre>
+<dl>
+<dd>
+Hide this dialog.
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="awt.html">This Package</a>    <a href="awt.ChoiceHandler.html#_top_">Previous</a>    <a href="awt.DialogHandler.html#_top_">Next</a></pre>
+</body>
+</html>

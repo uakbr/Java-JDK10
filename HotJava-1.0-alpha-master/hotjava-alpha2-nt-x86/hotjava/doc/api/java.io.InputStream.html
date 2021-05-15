@@ -1,0 +1,382 @@
+<html>
+<head>
+<a name="_top_"></a>
+<title>
+Class java.io.InputStream
+</title>
+</head>
+<body>
+<a name="_top_"></a>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.FilterOutputStream.html#_top_">Previous</a>    <a href="java.io.InputStreamBuffer.html#_top_">Next</a></pre>
+<hr>
+<h1>
+Class java.io.InputStream
+</h1>
+<pre>
+<a href="java.lang.Object.html#_top_">java.lang.Object</a>
+   |
+   +----java.io.InputStream
+</pre>
+<hr>
+<dl>
+<dt>
+public class <b>
+InputStream</b>
+<dt>
+extends <a href="java.lang.Object.html#_top_">Object</a>
+</dl>
+Abstract class representing an input stream of bytes.
+All InputStreams are based on this class.
+<dl>
+<dt>
+<b>See Also:</b>
+<dd>
+<a href="java.io.OutputStream.html#_top_">OutputStream</a>,
+<a href="java.io.FilterInputStream.html#_top_">FilterInputStream</a>,
+<a href="java.io.BufferedInputStream.html#_top_">BufferedInputStream</a>,
+<a href="java.io.DataInputStream.html#_top_">DataInputStream</a>,
+<a href="java.io.InputStreamBuffer.html#_top_">InputStreamBuffer</a>,
+<a href="java.io.PushbackInputStream.html#_top_">PushbackInputStream</a><dt>
+<b>Version:</b>
+<dd>
+	1.9, 31 Jan 1995
+<dt>
+<b>Author:</b>
+<dd>
+Arthur van Hoff</dl>
+<hr>
+<a name="index"></a>
+<h2>
+<img src="images/constructor-index.gif" width=275 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/yellow-ball-small.gif" width=6 height=6>
+<a href="#InputStream()"><b>InputStream</b></a>()
+<dd>
+
+</dl>
+<h2>
+<img src="images/method-index.gif" width=207 height=38>
+</h2>
+<dl>
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#available()"><b>available</b></a>()
+<dd>
+Returns the number of bytes that can be read
+without blocking.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#close()"><b>close</b></a>()
+<dd>
+Closes the input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#mark(int)"><b>mark</b></a>(int)
+<dd>
+Marks the current position in the input stream.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#markSupported()"><b>markSupported</b></a>()
+<dd>
+Returns true if this stream type supports mark/reset
+
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read()"><b>read</b></a>()
+<dd>
+Reads a byte.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[])"><b>read</b></a>(byte[])
+<dd>
+Reads into an array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#read(byte[], int, int)"><b>read</b></a>(byte[], int, int)
+<dd>
+Reads into an array of bytes.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#reset()"><b>reset</b></a>()
+<dd>
+Repositions the stream to the last marked position.
+<dt>
+<img src="images/red-ball-small.gif" width=6 height=6>
+<a href="#skip(int)"><b>skip</b></a>(int)
+<dd>
+Skips bytes of input.
+</dl>
+<a name="constructors"></a>
+<h2>
+<img src="images/constructors.gif" width=231 height=38>
+</h2>
+<a name="InputStream"></a>
+<a name="InputStream()">
+<img src="images/yellow-ball.gif" width=12 height=12>
+</a>
+<b>
+InputStream
+</b>
+<pre>
+  public InputStream()
+</pre>
+<a name="methods"></a>
+<h2>
+<img src="images/methods.gif" width=151 height=38>
+</h2>
+<a name="read()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public abstract int read()
+</pre>
+<dl>
+<dd>
+Reads a byte. Will block if no input is available.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+	the byte read, or -1 if the end of the
+		stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="read(byte[])">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte b[])
+</pre>
+<dl>
+<dd>
+Reads into an array of bytes.
+Blocks until some input is available.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="read(byte[], int, int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="read">
+<b>
+read
+</b>
+</a>
+<pre>
+  public int read(byte b[],
+                  int off,
+                  int len)
+</pre>
+<dl>
+<dd>
+Reads into an array of bytes.
+Blocks until some input is available.
+For efficiency, this method should be overridden in a subclass
+(the default implementation reads 1 byte
+at a time).
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+b
+-
+	the buffer into which the data is read
+<dd>
+off
+-
+ the start offset of the data
+<dd>
+len
+-
+ the maximum number of bytes read
+<dt>
+<b>Returns:</b>
+<dd>
+ the actual number of bytes read, -1 is
+		returned when the end of the stream is reached.
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="skip(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="skip">
+<b>
+skip
+</b>
+</a>
+<pre>
+  public int skip(int n)
+</pre>
+<dl>
+<dd>
+Skips bytes of input.
+<dl>
+<dt>
+<b>Parameters:</b>
+<dd>
+n
+-
+ 	bytes to be skipped
+<dt>
+<b>Returns:</b>
+<dd>
+actual number of bytes skipped
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="available()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="available">
+<b>
+available
+</b>
+</a>
+<pre>
+  public int available()
+</pre>
+<dl>
+<dd>
+Returns the number of bytes that can be read
+without blocking.
+<dl>
+<dt>
+<b>Returns:</b>
+<dd>
+the number of available bytes
+</dl>
+</dl>
+<p>
+<a name="close()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="close">
+<b>
+close
+</b>
+</a>
+<pre>
+  public void close()
+</pre>
+<dl>
+<dd>
+Closes the input stream. Must be called
+to release any resources associated with
+the stream.
+<dl>
+<dt>
+<b>Throws:</b> <a href="java.lang.IOException.html#_top_">IOException</a>
+<dd>
+ i/o error occurred
+</dl>
+</dl>
+<p>
+<a name="mark(int)">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="mark">
+<b>
+mark
+</b>
+</a>
+<pre>
+  public synchronized void mark(int readlimit)
+</pre>
+<dl>
+<dd>
+Marks the current position in the input stream.  A subsequent
+call to reset() will reposition the stream at the last
+marked position so that subsequent reads will re-read
+the same bytes.  The stream promises to allow readlimit bytes
+to be read before the mark position gets invalidated.
+</dl>
+<p>
+<a name="reset()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="reset">
+<b>
+reset
+</b>
+</a>
+<pre>
+  public synchronized void reset()
+</pre>
+<dl>
+<dd>
+Repositions the stream to the last marked position.  If the
+stream has not been marked, or if the mark has been invalidated,
+an IOException is thrown.  Stream marks are intended to be used in
+situations where you need to read ahead a little to see what's in
+the stream.  Often this is most easily done by invoking some
+general parser.  If the stream is of the type handled by the
+parse, it just chugs along happily.  If the stream is *not* of
+that type, the parser should toss an exception when it fails,
+which, if it happens within readlimit bytes, allows the outer
+code to reset the stream and try another parser.
+</dl>
+<p>
+<a name="markSupported()">
+<img src="images/red-ball.gif" width=12 height=12>
+</a>
+<a name="markSupported">
+<b>
+markSupported
+</b>
+</a>
+<pre>
+  public boolean markSupported()
+</pre>
+<dl>
+<dd>
+Returns true if this stream type supports mark/reset
+</dl>
+<p>
+<hr>
+<pre>
+<a href="packages.html">All Packages</a>    <a href="java.io.html">This Package</a>    <a href="java.io.FilterOutputStream.html#_top_">Previous</a>    <a href="java.io.InputStreamBuffer.html#_top_">Next</a></pre>
+</body>
+</html>
