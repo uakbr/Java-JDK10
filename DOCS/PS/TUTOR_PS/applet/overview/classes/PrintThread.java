@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+import browser.Applet;
+import awt.Graphics;
+
+class PrintThread extends Applet {
+
+    StringBuffer buffer = new StringBuffer();
+
+    public void init() {
+	resize(500, 20);
+        addItem("init:" + Thread.currentThread().getName() + " ");
+    }
+
+    public void start() {
+        addItem("start:" + Thread.currentThread().getName() + " ");
+    }
+
+    public void stop() {
+        addItem("stop:" + Thread.currentThread().getName() + " ");
+    }
+
+    public void destroy() {
+        addItem("destroy:" + Thread.currentThread().getName() + " ");
+    }
+
+    public void addItem(String newWord) {
+	System.out.println(newWord);
+	buffer.append(newWord);
+	repaint();
+    }
+
+    public void paint(Graphics g) {
+	g.clearRect(0, 0, width - 1, height - 1);
+	g.drawRect(0, 0, width - 1, height - 1);
+	g.drawString(buffer.toString(), 5, 15);
+        System.out.println("paint:" + Thread.currentThread().getName());
+    }
+}

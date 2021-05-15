@@ -1,0 +1,99 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Declaring the Exceptions Thrown by a Method</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="putItTogether.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="throwing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Declaring the Exceptions Thrown by a Method
+</h2>
+<p>
+<blockquote>
+
+The previous section showed you how to write an exception handler
+for the <code>writeList()</code> method in the ListOfNumbers class.
+Sometimes, it's appropriate for your code to catch exceptions that
+can occur within it. In other cases, however, it's better to let a
+method further up the call stack handle the exception. For example,
+if you were providing the ListOfNumbers class as part of a package
+of classes, you probably couldn't anticipate the needs of all of the
+users of your package. In this case, it's better to <strong>not</strong>
+catch the exception and allow someone further up the call stack to
+handle it.
+<p>
+If the <code>writeList()</code> method doesn't catch the exceptions that
+can occur within it, then the <code>writeList()</code> method must
+declare that it can throw them.
+Let's modify the <code>writeList()</code> method to declare the methods
+that it can throw. To remind you, here's the <code>writeList()</code>
+method again.
+<blockquote>
+<pre>
+public void writeList() {
+    System.err.println("Entering try statement");
+    int i;
+    pStr = new PrintStream(
+	      new BufferedOutputStream(
+		 new FileOutputStream("OutFile.txt")));
+
+    for (i = 0; i < size; i++)
+	pStr.println("Value at: " + i + " = " + victor.elementAt(i));
+}
+</pre>
+</blockquote>
+As you recall, the <code>new FileOutputStream("OutFile.txt")</code> statement
+may throw an IOException (which is not a runtime exception).
+The <code>victor.elementAt(i)</code> statement can throw an
+ArrayIndexOutOfBoundsException (which is a subclass of RuntimeException).
+
+<p>
+To declare that <code>writeList()</code> throws these two exceptions,
+you would add a <code>throws</code> clause to the method signature for the
+<code>writeList()</code> method. The <code>throws</code> clause is composed
+of the <code>throws</code> keyword followed by a comma-separated list of all
+the exceptions thrown by that method. The <code>throws</code> clause goes
+after the method name and argument list and before the curly bracket that
+defines the scope of the method. Like this:
+<blockquote>
+<pre>
+public void writeList() throws IOException, ArrayIndexOutOfBoundsException {
+</pre>
+</blockquote>
+Remember that ArrayIndexOutOfBoundsException is a runtime exception, so you
+don't have to declare it in the <code>throws</code> clause, although you can.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="putItTogether.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="throwing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

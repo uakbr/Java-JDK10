@@ -1,0 +1,26 @@
+<title>Java Syntax</title>
+<img src=images/vspace.small.gif>
+<img src=images/Duke.gif>
+<h1>
+Java the Syntax
+<pre>
+import awt.Graphics;
+import browser.Applet;
+
+class GraphApplet extends Applet {
+    double f(double x) {
+	return (Math.cos(x/5) + Math.sin(x/7) + 2) * height / 4;
+    }
+
+    public void paint(Graphics g) {
+        for (int x = 0 ; x < width ; x++) {
+	    g.drawLine(x, (int)f(x), x + 1, (int)f(x + 1));
+        }
+    }
+}
+</pre><p>
+<app class=GraphApplet width=400 height=100>
+<hr>
+<a href="java.html"><IMG SRC="images/backward.gif" width=38 height=38 border=0 align=top></a>
+<a href=index.html><IMG SRC="images/home.gif" width=38 height=38 border=0 align=top></a>
+<a href="java.performance.html"><IMG SRC="images/forward.gif" width=38 height=38 border=0 align=top></a>

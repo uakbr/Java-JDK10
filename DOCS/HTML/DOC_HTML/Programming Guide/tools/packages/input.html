@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>Input Streams</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="java.io.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="output.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Input Streams
+</h2>
+<p>
+<blockquote>
+
+The following diagram shows the class hierarchy for the input
+stream classes comprising the java.io package.
+InputStream inherits from the Object class; six
+classes inherit directly from InputStream; FilterInputStream
+is an abstract class with four children.<br>
+<strong>Note:</strong> you can click on any of the class symbols in
+the following image to visit the API documentation for that class.
+<p>
+<applet codebase=betaclasses code=ImageMap.class width=497 height=229>
+<param name="img" value="images/inputstreams.trans.gif">
+<param name="highlight" value="brighter30">
+<param name="area1" value="HrefButtonArea,1,84,91,27,http://java.sun.com/JDK-beta/api/java.io.InputStream.html">
+<param name="area2" value="HrefButtonArea,136,12,148,27,http://java.sun.com/JDK-beta/api/java.io.SequenceInputStream.html">
+<param name="area3" value="HrefButtonArea,136,48,148,27,http://java.sun.com/JDK-beta/api/java.io.PipedInputStream.html">
+<param name="area4" value="HrefButtonArea,136,84,148,27,http://java.sun.com/JDK-beta/api/java.io.FilterInputStream.html">
+<param name="area5" value="HrefButtonArea,136,120,148,27,http://java.sun.com/JDK-beta/api/java.io.FileInputStream.html">
+<param name="area6" value="HrefButtonArea,136,156,148,27,http://java.sun.com/JDK-beta/api/java.io.ByteArrayInputStream.html">
+<param name="area7" value="HrefButtonArea,136,192,148,27,http://java.sun.com/JDK-beta/api/java.io.StringBufferInputStream.html">
+<param name="area8" value="HrefButtonArea,341,48,148,27,http://java.sun.com/JDK-beta/api/java.io.DataInputStream.html">
+<param name="area9" value="HrefButtonArea,341,84,148,27,http://java.sun.com/JDK-beta/api/java.io.LineNumberInputStream.html">
+<param name="area10" value="HrefButtonArea,341,120,148,27,http://java.sun.com/JDK-beta/api/java.io.BufferedInputStream.html">
+<param name="area11" value="HrefButtonArea,341,156,148,27,http://java.sun.com/JDK-beta/api/java.io.PushbackInputStream.html">
+<param name="area12" value="ClickArea,0,0,497,229">
+<app class=ImageMap img="images/inputstreams.trans.gif"
+	highlight=brighter30
+	area1=HrefButtonArea,1,84,91,27,http://java.sun.com/JDK-beta/api/java.io.InputStream.html
+	area2=HrefButtonArea,136,12,148,27,http://java.sun.com/JDK-beta/api/java.io.SequenceInputStream.html
+	area3=HrefButtonArea,136,48,148,27,http://java.sun.com/JDK-beta/api/java.io.PipedInputStream.html
+	area4=HrefButtonArea,136,84,148,27,http://java.sun.com/JDK-beta/api/java.io.FilterInputStream.html
+	area5=HrefButtonArea,136,120,148,27,http://java.sun.com/JDK-beta/api/java.io.FileInputStream.html
+	area6=HrefButtonArea,136,156,148,27,http://java.sun.com/JDK-beta/api/java.io.ByteArrayInputStream.html
+	area7=HrefButtonArea,136,192,148,27,http://java.sun.com/JDK-beta/api/java.io.StringBufferInputStream.html
+	area8=HrefButtonArea,341,48,148,27,http://java.sun.com/JDK-beta/api/java.io.DataInputStream.html
+	area9=HrefButtonArea,341,84,148,27,http://java.sun.com/JDK-beta/api/java.io.LineNumberInputStream.html
+	area10=HrefButtonArea,341,120,148,27,http://java.sun.com/JDK-beta/api/java.io.BufferedInputStream.html
+	area11=HrefButtonArea,341,156,148,27,http://java.sun.com/JDK-beta/api/java.io.PushbackInputStream.html
+	area12=ClickArea,0,0,497,229
+>
+</applet>
+<p>
+Each of the InputStreams provided by the java.io package
+are intended for a different purpose, either reading from
+a different type of input source or reading a specific type
+or form of data.
+
+<h4>Simple Input Streams</h4>
+<blockquote>
+To concatenate multiple input streams: use SequenceInputStream.<br>
+To read from a pipe: use PipedInputStream. Typically attached to a PipedOutputStream.<br>
+To read from a file: use FileInputStream.<br>
+To read from a buffer: use ByteArrayStreamBuffer.<br>
+To read from a StringBuffer: use StringBufferInputStream.<br>
+</blockquote>
+
+<h4>Filter Input Streams</h4>
+<blockquote>
+FilterInputStream is an abstract class that defines
+the interface for filtered streams. Filtered streams
+have some intelligence built into them
+about the data that they are reading. For example,
+the DataInputStream class, a subclass of FilterInputStream,
+reads a stream of primitive Java data types.
+For example, suppose your input source contained
+tab delimited data for HotJava merchandise. The
+first column contains the price of the item, the
+second column contains the shipping weight in ounces,
+and the final column contains a description of the
+item.
+<blockquote>
+<pre>
+19.99   12      HotJava T-shirt   
+9.99    8       HotJava Mug
+</pre>
+</blockquote>
+You would use FilterInputStream's specialized
+<code>read()</code> methods to read the input data into
+Java variables of the correct type.
+This code snippet would read a line of the above data:
+<blockquote>
+<pre>
+float price;
+int weight;
+String desc;
+
+price = myDataInputStream.readFloat();
+    myDataInputStream.readChar();	// throw out the tab
+weight = myDataInputStream.readInt();
+    myDataInputStream.readChar();	// throw out the tab
+desc = myDataInputStream.readLine();
+</pre>
+</blockquote>
+
+<h4>How to Use the Filtered Streams</h4>
+<blockquote>
+To read primitive Java data types: use DataInputStream.<br>
+To [PENDING: WHAT?]: use LineNumberInputStream.<br>
+For a more efficient stream that buffers while reading: use BufferedInputStream.<br>
+For a stream with a one-byte pushback buffer: use PushbackInputStream.<br>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="java.io.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="output.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

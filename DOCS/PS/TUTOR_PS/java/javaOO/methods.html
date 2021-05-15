@@ -1,0 +1,301 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Writing a Method</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="declaringclass.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="methodaccess.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Writing a Method
+</h2>
+<p>
+<blockquote>
+
+As you know, objects have behaviour and that behaviour is implemented
+by its methods. Other objects can ask an object to do something by
+invoking its methods. This section tells you everything you need to know
+to write methods for your Java classes. For more information about
+how to call methods see <a href="../../MissingPage.html">Missing Page</a>.
+<p>
+At minimum a method declaration has a return type indicating the data type
+of the value returned by the method, a name, and a method body that contains
+the Java instructions that implement the method:
+<blockquote>
+<pre>
+<em>return_type</em> <em>method_name()</em> {
+    . . .
+    <em>method body</em>
+    . . .
+}
+</pre>
+</blockquote>
+For example, the following is a method declaration of a simple method
+that returns a boolean value (true or false) indicating whether or not
+something is empty.
+<blockquote>
+<pre>
+boolean isEmpty() {
+    . . .
+}
+</pre>
+</blockquote>
+Alone this method has no meaning--is <em>what</em> empty?
+This is because this particular method declaration is not associated
+with any class. It is the combination of a class and a method that
+gives meaning to a method. In Java, methods are associated with classes
+or objects and operate on the class or object with which they are
+associated. The results you get from the <code>isEmpty()</code> method
+only have meaning if the method is associated with a stack object, or
+an array object, or some other type of object that can contain objects
+or data.
+<p>
+In Java every method <em>must</em> be within a class declaration.
+An earlier section, <a href="declaringclass.html">Declaring a Class</a>,
+showed you the general outline of a class declaration:
+<blockquote>
+<pre>
+class declaration {
+    . . .
+    class body
+    . . .
+}
+</pre>
+</blockquote>
+Within the class you define all the variables and methods supported
+by that class. This page focuses on how to declare and implement methods for
+a class. The <a href="variables.html">next page</a> shows you how
+to declare your class's methods.
+<p>
+You declare all of the methods that are a member of the class within
+the class body. Typically, you declare a class's methods after
+you declare its variables, although this is not required.
+<blockquote>
+<pre>
+class declaration {
+    . . .
+    <em>member variable declarations</em>
+    . . .
+    <em>method declarations</em>
+    . . .
+}
+</pre>
+</blockquote>
+Let's put the <code>isEmpty()</code> method in an appropriate class:
+<blockquote>
+<pre>
+class stack {
+    . . .
+    boolean isEmpty() {
+        . . .
+    }
+}
+</pre>
+</blockquote>
+Now, we can say that the <code>isEmpty()</code> methods returns true
+when the stack is empty and returns false otherwise.
+<p>
+The method declaration shown above is a very basic method declaration.
+Methods have many other attributes such as parameters, access control,
+and so on.
+
+<h4>Returning a Value from a Method</h4>
+<blockquote>
+Java requires that a method declare the data type of the value that
+it returns. If a method returns no value, it can be declared to return
+<code>void</code>.
+<p>
+There are two major categories
+of data types in the Java language: simple types and complex types.
+Simple data types are comprised of a single value and include
+integer numbers, floating point numbers, boolean values, and characters
+(a single character, that is). Complex types are comprised of multiple
+or complex values and, sometimes, the operations that can be performed
+on those values. Complex types include classes, interfaces, and arrays.
+<p>
+Methods can return either values of simple data types or of complex data
+types. For example, this method returns a simple data type, a boolean value:
+<blockquote>
+<pre>
+class Stack {
+    static final int STACK_EMPTY = -1;
+    Object stackelements[];
+    int topelement = STACK_EMPTY;
+    . . .
+    boolean isEmpty() {
+	if (topelement == STACK_EMPTY)
+            return true;
+	else
+            return false;
+    }
+}
+</pre>
+</blockquote>
+The <code>return</code> operator returns the value and must be the last
+statement in the method. Any method that is <em>not</em> declared <code>void</code>
+must contain a <code>return</code> statement.
+The <code>return</code> operator places the indicated value on the stack where the
+calling method can then retrieve it.
+<p>
+The following method returns a complex data type: an object.
+<blockquote>
+<pre>
+class Stack {
+    static final int STACK_EMPTY = -1;
+    Object stackelements[];
+    int topelement = STACK_EMPTY;
+    . . .
+    Object pop() {
+	if (topelement == STACK_EMPTY)
+	    return null;
+	else {
+	    return stackelements[topelement--];
+	}
+    }
+}
+</pre>
+</blockquote>
+The data type of the value returned by the <code>return</code> statement
+must match the data type that the method claims to return. For example,
+you can't return an Object from a method declared to return an integer.
+When returning an object the object must either derive from, or be the
+class indicated.
+If your method returns an interface type, the object returned must
+implement that interface.
+
+</blockquote>
+
+<h4>A Method's Name</h4>
+<blockquote>
+A method name can be any legal Java identifier.
+There are two special cases to consider in regards to Java method names.
+<p>
+<ol>
+<li>
+Java supports method name overloading so multiple methods can
+share the same name. For example, suppose you were writing a class that
+can render various types of data to its drawing area. You would need to
+write a method that knew how to render each data type. In other languages,
+you would have to think of a new name for each method: <code>drawString()</code>,
+<code>drawInteger()</code>, <code>drawFloat()</code>, and so on. In Java, you
+can use the same name for all of the drawing methods but pass in a different
+type of parameter to each method. So, in your data rendering class,
+you can declare three methods named <code>draw()</code> each of which
+takes a different type parameter:
+<blockquote>
+<pre>
+class DataRenderer {
+    void draw(String s) {
+        . . .
+    }
+    void draw(int i) {
+        . . .
+    }
+    void draw(float f) {
+        . . .
+    }
+}
+</pre>
+</blockquote>
+<hr>
+<strong>Note:</strong> The information within the ( and ) in the
+method declaration are parameters to the method. Parameters are covered
+later in this section in <a href="../../MissingPage.html>Missing Page</a>.
+<hr>
+The methods are differentiated by the compiler by the number and type of
+the arguments passed into the method. Thus, <code>draw(String s)</code>
+and <code>draw(int i)</code> are distinct and unique; and, <code>draw(String s)</code>
+and <code>draw(String t)</code> are identical and will result in a compiler error.
+Overloaded methods must return the same data type.
+<li>
+Any method whose name is the same as the name of the class in which the
+method is defined is a constructor method and has a special duty to perform.
+Constructors are used to create and initialize a new object of the class
+type. For more information about how to create an object, see
+<a href="objectcreation.html">Creating an Object</a>.
+For more information about how to write a constructor, see
+<a href="constructors.html">Writing a Constructor Method</a>.
+</ol>
+</blockquote>
+
+<h4><a href="../../MissingPage.html">A Method's Body</a></h4>
+<blockquote>
+The method body is where all of the action of a method takes place.
+The method body contains all of the legal Java instructions that
+implement the method.
+<ul>
+<li>
+Passing Information into and out of Methods
+(pass by reference)
+<li>
+Using this & super
+</ul>
+</blockquote>
+
+<h4>Other Method Stuff</h4>
+<blockquote>
+<ul>
+<li>
+<a href="../../MissingPage.html">Throwing Exceptions within a Method</a>
+<li>
+<a href="../../MissingPage.html">Writing a Constructor Method</a>
+<li>
+<a href="../../MissingPage.html">Writing a finalize() Method</a>
+<li>
+<a href="methodaccess.html">Controlling Access to a Class's Methods</a>
+<li>
+<a href="classmethods.html">Writing a Class Method</a>
+<li>
+<a href="../../MissingPage.html">Writing Native Methods</a>
+<li>
+<a href="../../MissingPage.html">Writing Synchronized Methods</a>
+
+<li>
+<a href="finalmethods.html">Declaring a Final Method</a>
+<li>
+<a href="../../MissingPage.html">Writing Abstract Methods</a>
+</ul>
+</blockquote>
+
+<h4>Summary</h4>
+<blockquote>
+<blockquote>
+<pre>
+[<em>access_specifier</em>] [static] [abstract] [final] [native] [synchronized] return_value <em>methodname</em> ([<em>paramlist</em>]) [throws <em>exceptionsList</em>]
+</pre>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="declaringclass.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="methodaccess.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

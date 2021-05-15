@@ -1,0 +1,132 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Methods for Drawing and Event Handling</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="appletMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="containerMethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Methods for Drawing and Event Handling
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class Simple extends Applet {
+    . . .
+    public void <strong>paint</strong>(Graphics g) { . . . }
+    . . .
+}
+</pre>
+</blockquote>
+The Simple applet defines its onscreen appearance
+by overriding the <code>paint()</code> method.
+The <code>paint()</code> method
+is one of two display methods
+that applets can override:
+<dl>
+<dt> <code>paint()</code>
+<dd> the basic display method;
+     most applets implement this method 
+     to draw the applet's representation within a browser page
+<dt> <code>update()</code>
+<dd> a method you can use along with <code>paint()</code>
+     to make improvements in drawing performance
+</dl>
+
+Applets inherit their <code>paint()</code> and <code>update()</code> methods
+from the Applet class,
+which inherits them from the Abstract Window Toolkit (AWT) Component class.
+For an overview of the Component class, and the AWT in general, 
+see the
+<a href="../../ui/overview/index.html">Overview of the Java UI</a><a href="../../ui/overview/index.html"><img src="../../images/uiIcon.gif" width=20 height=20 border=0 alt="(in the Creating a User Interface trail)"></a>
+lesson.
+Within the overview, the architecture
+of the AWT drawing system is discussed on the
+<a href="../../ui/overview/drawing.html">Drawing</a><a href="../../ui/overview/drawing.html"><img src="../../images/uiIcon.gif" width=20 height=20 border=0 alt="(in the Creating a User Interface trail)"></a>
+page.
+<p>
+
+From the Component class,
+applets inherit a group of methods
+for event handling.
+(Within the overview, the architecture of the AWT event system is discussed 
+on the 
+<a href="../../ui/overview/events.html">Events</a><a href="../../ui/overview/events.html"><img src="../../images/uiIcon.gif" width=20 height=20 border=0 alt="(in the Creating a User Interface trail)"></a>
+page.)
+The main event-handling method --
+the one that's called (by default) whenever any event occurs --
+is <code>handleEvent()</code>.
+The Component class also defines some convenience methods
+for handling certain kinds of events:
+<code>mouseEnter()</code>,
+<code>mouseExit()</code>,
+<code>mouseMove()</code>,
+<code>mouseUp()</code>,
+<code>mouseDown()</code>, 
+<code>mouseDrag()</code>,
+<code>keyDown()</code>, and
+<code>action()</code>.
+<p>
+
+To react to an event,
+an applet must override either <code>handleEvent()</code>
+or the convenience method corresponding to the event.
+For example, 
+adding the following code to the Simple applet
+makes it respond to mouse clicks.
+
+<blockquote>
+<pre>
+public boolean mouseDown(java.awt.Event evt, int x, int y) {
+    addItem("click!... ");
+    return false;
+}
+</pre>
+</blockquote>
+
+Below is the resulting applet.
+When you click within its rectangle,
+it displays the word "click!...".
+<p>
+<applet codebase=betaclasses code=SimpleClick.class width=500 height=20> 
+<app class=SimpleClick width=500 height=20>
+</applet>
+<p>
+
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="appletMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="containerMethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

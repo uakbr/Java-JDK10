@@ -1,0 +1,128 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Declaring, Instantiating and Initializing an Object</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="objects.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="static.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Declaring, Instantiating and Initializing an Object
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+<strong>import java.util.Date;</strong>
+class DateApp {
+    public static void main (String args[]) {
+        <strong>Date today = new Date();</strong>
+        System.out.println(today);
+    }
+}
+</pre>
+</blockquote>
+The <code>main()</code> method of the <code>DateApp</code> application
+creates a Date object named <code>today</code>.
+This single statement performs three actions:
+declaration, instantiation, and initialization.
+<code>Date today</code> declares to the compiler that the name
+<code>today</code> will be used to refer to an object whose type is Date,
+the <code>new</code> operator instantiates new Date object,
+and <code>Date()</code> initializes the object.
+
+<h4>Declaring an Object</h4>
+<blockquote>
+Declarations can appear as part of object creation as you saw above
+or can appear alone like this
+<blockquote>
+<pre>
+Date today;
+</pre>
+</blockquote>
+Either way, a declaration takes the form of
+<blockquote>
+<pre>
+<em>type name</em>
+</pre>
+</blockquote>
+where <em>type</em> is either a simple data type such as
+int, float, or boolean, or a complex data type such as a class like the Date class.
+<em>name</em> is the name to be used for the variable.
+Declarations simply notify the compiler that you will
+be using <em>name</em> to refer to a variable whose type is <em>type</em>.
+<strong>Declarations do not instantiate objects.</strong> To instantiate a Date object,
+or any other object, use the <code>new</code> operator.
+</blockquote>
+
+<h4>Instantiating an Object</h4>
+<blockquote>
+The <code>new</code> operator instantiates a new object by
+allocating memory for it. <code>new</code> requires a single
+argument: a <em>constructor method</em> for the object
+to be created. The constructor method is responsible for
+initializing the new object.
+</blockquote>
+
+<h4>Initializing an Object</h4>
+<blockquote>
+Classes provide constructor methods to initialize a new object of that type.
+In a class declaration, constructors can be distinguished from other methods because they have
+the same name as the class and have no return type. For example, the
+method signature for Date constructor used by the DateApp application is
+<blockquote>
+<pre>
+Date()
+</pre>
+</blockquote>
+A constructor such as the one shown, that takes no arguments,
+is known as the <em>default constructor</em>.
+Like Date, most classes have at least one constructor, the default
+constructor.
+However, classes can have multiple constructors, all with the same
+name but with a different number or type of arguments.
+For example, the Date class supports a constructor that requires three
+integers:
+<blockquote>
+<pre>
+Date(int year, int month, int day)
+</pre>
+</blockquote>
+that initializes the new Date to the year, month and day specified
+by the three parameters.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="objects.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="static.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

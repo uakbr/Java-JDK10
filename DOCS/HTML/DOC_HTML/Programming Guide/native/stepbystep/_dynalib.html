@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Compile the C Code into a Dynamically Loadable Library</title>
+</head>
+<body>
+<a href="step6.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous"></a>
+<p>
+<hr size=4>
+
+<h2>
+    Compile the C Code into a Dynamically Loadable Library
+</h2>
+<p>
+<blockquote>
+
+<dl>
+
+<dt><strong>UNIX</strong>
+<dd>
+<pre>
+% <strong>cc -G HelloWorld.c HelloWorldImp.c -o libhello.so</strong>
+</pre>
+<br>
+<strong>Note:</strong> You may need to use the <code>-I</code> flag to indicate
+to the compiler where to find the various header files. For example
+<pre>
+cc -G <strong>-I$JAVAHOME/include -I$JAVAHOME/include/solaris</strong> HelloWorld.c HelloWorldImp.c -o libhello.so
+</pre>
+where <code>$JAVAHOME</code> is the directory where you installed the Java release.
+The C compiler will create a file <code>libhello.so</code> in the current directory.
+<p>
+
+<dt><strong>DOS shell (Windows 95/NT)</strong>
+<dd>
+<pre>
+C:\> cl HelloWorld.c HelloWorldImp.c -Fehello.dll -MD -LD javai.lib
+</pre>
+<strong>Note:</strong> You must have Microsoft Visual C++ Version 2.x
+to compile and link DLLs (Dynamic Link Libraries).
+<p>
+<strong>Note:</strong> <code>javai.lib</code> <strong>must</strong> be the last argument to the
+C compiler.
+<p>
+<strong>Note:</strong> To inform the compiler of the location of the Java C header files,
+add <code>%JAVAHOME%\include</code> to the environment variable <code>INCLUDE</code>:
+<pre>
+C:\> set INCLUDE=%JAVAHOME%\include;%INCLUDE%
+</pre>
+<p>
+<strong>Note:</strong> To inform the linker of the location of the Java libraries,
+add <code>%JAVAHOME%\lib</code> to the environment variable <code>LIB</code>:
+<pre>
+C:\> set LIB=%JAVAHOME%\lib;%LIB%
+</pre>
+</dl>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<a href="step6.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous"></a>
+</body>
+</html>

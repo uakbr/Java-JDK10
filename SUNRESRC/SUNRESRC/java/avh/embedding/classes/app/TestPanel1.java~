@@ -1,0 +1,18 @@
+package app;
+
+public
+class TestPanel1 extends AppletPanel {
+    public void init() {
+	panel = new AppPanel(this);
+	panel.reshape(0, 0, width, height);
+	panel.add(new AppButton(this, "ok"), 5, 5, 50, 20);
+	panel.add(new AppButton(this, "cancel"), 60, 5, 50, 20);
+	panel.add(new AppButton(this, "set"), 5, 30, 50, 20);
+	panel.add(new AppLabel(this, "Name:", AppLabel.RIGHT), 60, 30, 50, 20);
+	panel.add(new AppImage(this, "images/cross.gif"), 115, 5, 50, 20);
+	panel.add(new AppText(this, "Arthur"), 115, 30, 100, 20);
+	panel.add(new AppCheckbox(this), 170, 5, 20, 20);
+	panel.add(new AppSlider(this, 10, 100), 5, 55, 120, 20);
+	panel.add(new AppSlider(this, 10, 100), 220, 5, 20, 100);
+    }
+}

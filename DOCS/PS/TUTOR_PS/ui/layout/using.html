@@ -1,0 +1,224 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Using Layout Managers</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="generalRules.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Laying Out Components within a Container</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Using Layout Managers
+</h2>
+<p>
+<blockquote>
+
+Every Container, by default, has a layout manager
+(an object conforming to the LayoutManager protocol).
+If a Container's default layout manager doesn't suit your needs,
+you can easily replace it with another one.
+We supply layout managers that range from the very simple
+(<a href=#flow>FlowLayout</a> and
+<a href=#grid>GridLayout</a>)
+to the special purpose
+(<a href=#border>BorderLayout</a> and
+<a href=#card>CardLayout</a>)
+to the ultra-flexible
+(<a href=#gridbag>GridBagLayout</a>).
+<p>
+
+This lesson gives you some general rules for using layout managers,
+gives you an overview of the layout managers we provide, 
+and then tells you how to use each of our layout managers.
+In these pages are applets illustrating layout management.
+Each applet brings up a window
+that you can resize to see how resizing affects the layout.
+
+<h4>
+<a href=generalRules.html>General Rules for Using Layout Managers</a>
+</h4>
+<blockquote>
+How do you create a layout manager, associate it with a Container,
+and tell it to start working?
+How does it know what Components it manages?
+This section answers these and other questions
+that apply whenever you use a layout manager.
+</blockquote>
+
+<h4>
+<a name=border>
+<a href=border.html>How to Use BorderLayout</a></a>
+</h4>
+<blockquote>
+BorderLayout is the default layout manager for all Windows,
+such as Frames and Dialogs.
+It uses five areas to hold components:
+north, south, east, west, and center.
+All extra space is placed in the center area.
+Here's an applet that puts one button in each area.
+<p>
+<applet code=AppletButton.class codebase=example width=350 height=60>
+<param name=windowType value=BorderWindow>
+<param name=windowText value="BorderLayout">
+<param name=buttonText value="Click here to see a BorderLayout in action">
+<blockquote>
+<hr>
+<em>
+Your browser can't run 1.0 Java applets,
+so here's a picture of the window the program brings up:</em>
+<p>
+<img src=images/BorderEx1.gif width=302 height=138>
+<hr>
+</blockquote>
+</applet>
+</blockquote>
+
+<h4>
+<a name=card>
+<a href=card.html>How to Use CardLayout</a></a>
+</h4>
+<blockquote>
+Use the CardLayout class when you have an area
+that can contain different Components at different times.
+CardLayouts are commonly tied to Choices,
+with the state of the Choice determining
+which Panel (group of Components)
+the CardLayout displays.
+Here's an applet that uses a Choice 
+and CardLayout in this way.
+<p>
+
+<applet code=AppletButton.class codebase=example width=350 height=60>
+<param name=windowtype value=CardWindow>
+<param name=windowText value="CardLayout">
+<param name=buttonText value="Click here to see a CardLayout in action">
+<blockquote>
+<hr>
+<em>
+Your browser can't run 1.0 Java applets,
+so here are pictures of the window the program brings up:</em>
+<p>
+<img src=images/CardEx1-1.gif width=184 height=131>
+<img src=images/CardEx1-2.gif width=184 height=131>
+<hr>
+</blockquote>
+</applet>
+</blockquote>
+
+<h4>
+<a name=flow>
+<a href=flow.html>How to Use FlowLayout</a></a>
+</h4>
+<blockquote>
+FlowLayout is the default layout manager for all Panels.
+It simply lays out components 
+from left to right,
+centering them within their row
+and, if necessary, starting new rows.
+Both Panels in the CardLayout figure <a href=#card>above</a> use FlowLayouts.
+Here's another example of a program that uses a FlowLayout.
+<p>
+
+<applet code=AppletButton.class codebase=example width=350 height=60>
+<param name=windowtype value=FlowWindow>
+<param name=windowText value="FlowLayout">
+<param name=buttonText value="Click here to see a FlowLayout in action">
+<blockquote>
+<hr>
+<em>
+Your browser can't run 1.0 Java applets,
+so here's a picture of the window the program brings up:</em>
+<p>
+<img src=images/FlowEx1.gif width=420 height=65>
+<hr>
+</blockquote>
+</applet>
+</blockquote>
+
+<h4>
+<a name=grid>
+<a href=grid.html>How to Use GridLayout</a></a>
+</h4>
+<blockquote>
+GridLayouts simply make a bunch of Components have equal size,
+displaying them in the requested number of rows and columns.
+Here's a picture of a program with a Panel that uses a GridLayout
+to control the display of 5 buttons.  
+<p>
+<applet code=AppletButton.class codebase=example width=350 height=60>
+<param name=windowType value=GridWindow>
+<param name=windowText value="GridLayout">
+<param name=buttonText value="Click here to see a GridLayout in action">
+
+<blockquote>
+<hr>
+<em>
+Your browser can't run 1.0 Java applets,
+so here's a picture of the window the program brings up:</em>
+<p>
+<img src=images/GridEx1.gif width=324 height=105>
+<hr>
+</blockquote>
+</applet>
+</blockquote>
+
+<h4>
+<a name=gridbag>
+<a href=gridbag.html>How to Use GridBagLayout</a></a>
+</h4>
+<blockquote>
+GridBagLayout is the most sophisticated, flexible layout manager we provide.
+It aligns components vertically and horizontally, 
+without requiring that the components be the same size.
+Here's a picture of a program that uses a GridBagLayout
+to manage ten buttons in a panel.
+<p>
+<applet code=AppletButton.class codebase=example width=350 height=60>
+<param name=windowType value=GridBagWindow>
+<param name=windowText value="GridBagLayout">
+<param name=buttonText value="Click here to see a GridBagLayout in action">
+
+<blockquote>
+<hr>
+<em>
+Your browser can't run 1.0 Java applets,
+so here's a picture of the window the program brings up:</em>
+<p>
+<img src=images/GridBagEx1.gif width=262 height=155>
+<hr>
+</blockquote>
+</applet>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="generalRules.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Laying Out Components within a Container</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

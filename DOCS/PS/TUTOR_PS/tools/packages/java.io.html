@@ -1,0 +1,125 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The Java I/O Package</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="java.lang.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="input.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Java I/O Package
+</h2>
+<p>
+<blockquote>
+
+The Java I/O package, a.k.a. java.io, provides
+a set of input streams and a set of output streams
+used to read and write data to files or other input
+and output sources. There are three categories
+of classes in java.io: input streams, output
+streams and everything else.
+<p>
+The pages of this lesson provide overviews of Java's I/O
+classes. They give information about what each class does
+and how you can use them. These pages do not provide any
+practical examples or details of each class. For more practical
+information regarding reading and writing data using these classes, see
+<a href="../../MissingPage.html"><em>Input and Output Streams</em></a>
+<a href="../../MissingPage.html"><img src="../../images/javaIcon.gif" border=0 width=20 height=20></a>.
+
+<h4><a href=input.html>Input Streams</a>
+</h4>
+<blockquote>
+Input streams read data from an input source. An input source
+can be a file, a string, or memory--anything that can contain data.
+All input streams inherit from InputStream--an abstract class
+that defines the programming interface for all input streams.
+<p>
+The InputStream class defines a programming interface for reading
+bytes or arrays of bytes, marking locations
+in the stream, skipping bytes of input, finding out the
+number of bytes that are available for reading, and
+resetting the current position within the stream.
+An input stream is automatically opened when you create it.
+You can explicitly close a stream with the <code>close()</code>
+method, or let it be closed implicitly when
+the object is garbage collected.
+</blockquote>
+
+<h4><a href=output.html>Output Streams</a>
+</h4>
+<blockquote>
+Output streams write data to an output source. Similar to input
+sources, an output source can be anything that can contain data:
+a file, a string, or memory.
+<p>
+The OutputStream class is a sibling to InputStream and is
+used to write data that can then be read by an input stream.
+The OutputStream class defines a programming interface for
+writing bytes or arrays of bytes to the stream and flushiing the stream.
+Like an input stream, an output stream is
+automatically opened when you create it.
+You can explicitly close an output stream with the
+<code>close()</code> method, or let it be closed
+implicitly when the object is garbage collected.
+</blockquote>
+
+<h4>Everything Else</h4>
+<blockquote>
+In addition to the streams classes, java.io contains a few
+other classes:
+<dl>
+<dt>
+<strong>File</strong>
+<dd>
+Represents a file on the host system.
+<dt>
+<strong>RandomAccessFile</strong>
+<dd>
+Represents a random access file.
+<dt>
+<strong>StreamTokenizer</strong>
+<dd>
+Tokenizes the contents of a stream.
+</dl>
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href="http://java.sun.com/JDK-1.0/api/java.io.html"><img src="../../images/apiIcon.gif" border=0 width=20 height=20></a>
+<a href="http://java.sun.com/JDK-1.0/api/java.io.html">java.io</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="java.lang.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="input.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

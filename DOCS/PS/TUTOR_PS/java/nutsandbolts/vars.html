@@ -1,0 +1,128 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Variables and Data Types</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="exceptions.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="while.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Variables and Data Types
+</h2>
+<p>
+<blockquote>
+ 
+<blockquote>
+<pre>
+class Count {
+    public static void main(String args[])
+        throws java.io.IOException
+    {
+        <strong>int count = 0;</strong>
+
+        while (System.in.read() != -1)
+            count++;
+        System.out.println("Input has " + count + " chars.");
+    }
+}    
+</pre>
+</blockquote>
+
+<h4>Variables</h4>
+<blockquote>
+The character-counting program uses one local variable--<code>count</code>.
+The program increments <code>count</code> each time it reads a character.
+</blockquote>
+
+<h4>Primitive Data Types</h4>
+<blockquote>
+All variables in the Java language must have a data type. The Java language supports a full range of
+primitive data types, including integer, floating point, character, and boolean.
+<blockquote>
+<pre>
+ <strong>Type</strong>             <strong>Size/Format</strong>
+byte		 8-bit two's complement
+short		16-bit two's complement
+int		32-bit two's complement
+long		64-bit two's complement
+
+float		32-bit IEEE 754 floating point
+double		64-bit IEEE 754 floating point
+
+char		16-bit Unicode character
+</pre>
+</blockquote>
+<p>
+In the example program, <code>count</code> is an integer, as indicated by
+the <code>int</code> keyword that precedes it.
+A variable's data type determines its range of values, operations
+that can be performed on it, and the effect of those operations.
+For example, integers can have only whole number values (both positive
+and negative) and the standard arithmetic operators (<code>+</code>, <code>-</code>, etc.)
+perform the normal arithmetic operations (addition, subtraction, etc.).
+
+<p>
+The code "<code>= 0</code>" that follows the variable name initializes the
+variable to 0. If you try to use a variable in a program without first initializing it, the
+compiler issues an error message. See
+<a href=../../troubleshooting/compilerproblems.html#semantic>Troubleshooting Compiler Problems</a>
+<a href=../../troubleshooting/compilerproblems.html#semantic><img src=../../images/troubleIcon.gif width=20 height=20 border=0></a>
+for more information.
+</blockquote>
+
+<h4>Complex Data Types</h4>
+<blockquote>
+The Java language also supports many complex data types, including
+arrays, strings, and objects.
+In addition to the predefined data types listed above,
+you can define your own data types through <em>class</em>
+and <em>interface</em> definitions.
+Indeed, you've already defined a class--the <code>Count</code> class
+in the character-counting program.
+See
+<a href=../../MissingPage.html>Missing Page</a>
+<a href=../../MissingPage.html><img src=../../images/troubleIcon.gif width=20 height=20 border=0></a>.
+for more information about defining your own classes and interfaces.
+</blockquote>
+<p>
+<hr>
+<strong>Note to C and C++ Programmers:</strong>
+There are three
+<a href=../../noMoreC/dataTypes.html>C Data Types Not Supported By the Java Language</a>
+<a href=../../noMoreC/dataTypes.html><img src=../../images/noCIcon.gif width=20 height=20 border=0></a>.
+They are pointer, struct, and union.
+<hr>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="exceptions.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="while.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

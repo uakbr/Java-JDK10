@@ -1,0 +1,79 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Using Objects and Classes from Other Packages</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="creating.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="prepend.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Managing Your Programming Environment</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Using Objects and Classes from Other Packages
+</h2>
+<p>
+<blockquote>
+
+To import a specific object in a package, like Applet in the java.applet
+package, use the <code>import</code> statement.
+<blockquote>
+<pre>
+import java.applet.Applet;
+</pre>
+</blockquote>
+To import all objects in a package, for example, the entire java.applet
+package, use the <code>import</code> statement with the '*' wildcard character.
+<blockquote>
+<pre>
+import java.applet.*;
+</pre>
+</blockquote>
+Importing an object, or an entire package of objects makes the definitions
+and implementations available to the <em>current package</em>.
+For example, suppose that you're writing a small Applet:
+<blockquote>
+<pre>
+class MyApplet extends Applet {
+    . . .
+}
+</pre>
+</blockquote>
+If you try to compile this applet without importing the java.applet.Applet
+class, the compiler will issue this fatal error:
+<blockquote>
+<pre>
+MyApplet.java:2: Super class Applet of class MyApplet not found.
+</pre>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="creating.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="prepend.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Managing Your Programming Environment</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

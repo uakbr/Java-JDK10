@@ -1,0 +1,123 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The throw Statement</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="throwing.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="throwable.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The throw Statement
+</h2>
+<p>
+<blockquote>
+
+All Java methods use the <code>throw</code> statement to throw an exception.
+The <code>throw</code> statement requires a single argument: a
+<em>throwable</em> object. In the Java system, throwable objects
+are instances of any subclass of the
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.Throwable.html">Throwable</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.Throwable.html"><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+class defined in
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html">java.lang</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html"><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>.
+<blockquote>
+<pre>
+throw <em>someThrowableObject</em>;
+</pre>
+</blockquote>
+
+If you attempt to throw an object that is not throwable, the compiler
+will display an error message similar to the following
+<blockquote>
+<pre>
+testing.java:10: Cannot throw class java.lang.Integer; it must be a subclass of class java.lang.Throwable.
+	    throw new Integer(4);
+	    ^
+</pre>
+</blockquote>
+and refuse to compile your program.
+The next page, <a href=throwable.html>The Throwable Class and Its Subclasses</a>,
+talks more about the Throwable class.
+
+<p>
+Let's look at the <code>throw</code> statement in context.
+The following method is taken from a class that implements a common
+stack object. The <code>pop()</code> method removes the top element
+from the stack and returns it. If the stack is empty this method throws
+an exception:
+<blockquote>
+<pre>
+public Object pop() <strong>throws EmptyStackException</strong> {
+    Object obj;
+
+    if (size == 0)
+        <strong>throw new EmptyStackException();</strong>
+
+    obj = objectAt(size - 1);
+    setObjectAt(size - 1, null);
+    size--;
+    return obj;
+}
+</pre>
+</blockquote>
+The <code>pop()</code> method checks to see if there are any elements on the
+stack. If the stack is empty (its size is equal to 0) then <code>pop()</code>
+instantiates a new EmptyStackException object and throws it. The EmptyStackException
+class is defined in the java.util package. Later pages in
+this lesson describe how you can create your own exception classes. For now,
+all you really need to remember is that you can only throw objects that inherit
+from the java.lang.Throwable class.
+
+<h4>The throws Clause</h4>
+<blockquote>
+You'll notice that the declaration of the <code>pop()</code> method contains this
+clause:
+<blockquote>
+<pre>
+throws EmptyStackException
+</pre>
+</blockquote>
+which declares that the method can throw an EmptyStackException.
+As you know, the Java language requires that methods either catch or
+declare all non-runtime exceptions that can be thrown within the scope of
+that method. You do this with the <code>throws</code>
+clause of the method declaration. For more information about this requirement
+see <a href="catchOrDeclare.html">Java's Catch or Declare Requirement</a>.
+Also, <a href="declaring.html">Declaring the Exceptions Thrown by a Method</a>
+shows you in more detail how a method can declare the exceptions it can throw.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="throwing.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="throwable.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

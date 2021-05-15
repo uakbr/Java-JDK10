@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>The Component Hierarchy</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="classes.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="events.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Component Hierarchy
+</h2>
+<p>
+<blockquote>
+
+<img src=images/Converter.gif width=260 height=173>
+<p>
+The example program (shown above)
+has several levels in its Component hierarchy.
+The parent of each level is a Container
+(which inherits from Component).
+Below is a figure of the hierarchy.
+
+<pre>			  a Frame
+			     |
+			    ...
+ 			     |
+                        a Converter
+ 			     |
+	   ----------------------------------
+           |	 	      		    |
+ a ConversionPanel (metricPanel)  a ConversionPanel (usaPanel)   
+           |				    |		
+   -------------------		    -------------------
+   |       |         | 		    |       |         |
+a Label  a Panel  a Choice 	 a Label  a Panel  a Choice
+	   | 				    |
+     --------------		     --------------
+     |		  |		     |		  |
+a TextField  a Scrollbar	a TextField  a Scrollbar
+</pre>
+
+<h4>Explanation</h4>
+<blockquote>
+At the top of the hierarchy is the window (Frame instance)
+that displays the program.
+When the example program runs as an application,
+the Frame is created in the program's <code>main()</code> method.
+When the example runs as an applet,
+the Frame is the browser or other applet viewer window.
+<p>
+
+Under the Frame is a Converter object,
+which inherits from Applet and
+thus is a Container (specifically, a Panel).
+Depending on what viewer the applet is displayed in,
+one or more Containers might be between the Converter object
+and the Frame at the top of the Component hierarchy.
+<p>
+
+Directly under the Converter object
+are two ConversionPanels.
+Here is the code that puts them under the Converter:
+<blockquote>
+<pre>
+public class Converter extends Applet {
+    . . .
+    public void init() {
+	. . . //Create metricPanel and usaPanel,
+	. . . //two ConversionPanels.
+        add(metricPanel);
+        add(usaPanel);
+    }
+</pre>
+</blockquote>
+
+Each ConversionPanel has three children:
+a Label, a Panel, and a Choice.
+Here's the code that adds the children:
+<blockquote>
+<pre>
+class ConversionPanel extends Panel {
+    . . .
+    ConversionPanel(Converter myController, String myTitle, Unit myUnits[]) {
+	. . . //Create leftHalf (a Panel).
+	. . . //Create unitChooser (a Choice).
+	add("North", new Label(title, Label.CENTER));
+	add("Center", leftHalf);
+	add("East", unitChooser);
+    }
+</pre>
+</blockquote>
+
+The "North", "Center", and "East" arguments 
+tell the ConversionPanel's layout manager
+(a BorderLayout instance)
+where to draw the Components.
+<p>
+Each ConversionPanel contains a Panel named leftHalf,
+which in turn contains a TextField and a Scrollbar.
+</blockquote>
+
+<h4>Summary</h4>
+<blockquote>
+The example program's Component hierarchy
+contains eight non-Container Components --
+Components that present the graphical UI of the program.
+These are the Labels, TextFields, Choices, and Scrollbars
+the program displays.
+There might be additional Components
+such as window controls under the Frame,
+but we don't need to know about them.
+<p>
+
+The Component hierarchy has at least six Containers --
+a Frame (window),
+a Converter (a custom kind of Panel),
+two ConversionPanels (another custom Panel),
+and two Panel instances.
+<p>
+
+Note that if we add a new window -- a Dialog or Frame --
+to the example applet, 
+the new window will have its own Component hierarchy,
+unattached to the hierarchy this lesson presents.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="classes.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="events.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

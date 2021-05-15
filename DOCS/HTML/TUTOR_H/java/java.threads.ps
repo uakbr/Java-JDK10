@@ -1,0 +1,4587 @@
+%!
+%%Title: java.threads.html
+%%DocumentFonts: NewCenturySchlbk-Roman NewCenturySchlbk-Bold NewCenturySchlbk-Italic NewCenturySchlbk-BoldItalic Courier Courier-Bold Courier-Oblique Courier-BoldOblique
+%%Creator: html2ps 0.2 alpha, written by Jan Karrman, jan@tdb.uu.se
+%%EndComments
+save
+1000 dict begin
+/colorimage where {pop} {
+ /colorimage {
+  pop pop /Bp exch def /Gp exch def /Rp exch def
+  {/Re Rp def /Gr Gp def /Bl Bp def
+  0 1 Re length 1 sub {
+   /i exch def Gr i Re i get 0.299 mul Gr i get 0.587 mul add
+   Bl i get 0.114 mul add cvi put
+  } for Gr} image
+ } def
+} ifelse
+/D {def} def
+/t {true} D
+/f {false} D
+/RF {/NewCenturySchlbk-Roman} D
+/BF {/NewCenturySchlbk-Bold} D
+/IF {/NewCenturySchlbk-Italic} D
+/IB {/NewCenturySchlbk-BoldItalic} D
+/FF {/Courier} D
+/FB {/Courier-Bold} D
+/FI {/Courier-Oblique} D
+/FT {/Courier-BoldOblique} D
+/F 1 D
+/W {453 F div} D
+/LE {651 F div} D
+/PS 1 D
+/HS [19 17 15 13 12 11] D
+/HT [2 2 2 2 2 2] D
+/MK 7 D
+/NO t D
+/ZL f D
+/ZR f D
+/Zl () D
+/Zr () D
+/TU f D
+/AU t D
+/SN 0 D
+/LA {TU PM 1 eq and {W 56 F div add 0 translate}
+ {70 705 translate F dup scale} ie} D
+/FP 0 D
+/SG [0.80000000000000004441 1 1] D
+statusdict /setduplexmode known
+ {statusdict begin false setduplexmode end} if
+%-- End of variable part --
+/ie {ifelse} D
+/E {exch} D
+/M {moveto} D
+/S {show} D
+/R {rmoveto} D
+/L {lineto} D
+/RL {rlineto} D
+/CP {currentpoint} D
+/SW {stringwidth} D
+/GI {getinterval} D
+/PI {putinterval} D
+/U {gsave CP currentfont /FontInfo get /UnderlinePosition get
+ 0 E currentfont /FontMatrix get dtransform E pop add newpath M
+ dup SW RL stroke grestore} D
+/B {-10 3 R gsave CP newpath 2.5 0 360 arc closepath
+ UI 2 mod 0 eq {stroke} {fill} ie grestore 10 -3 R} D
+/NP {/PM PN SN sub 2 mod D PN SN gt TU not PM 0 eq or and {showpage} if
+ 0.6 setlinewidth LA /BP t D /PN PN 1 add D
+ /OF currentfont D RF findfont 10 scalefont setfont
+ /YO {LE neg 60 F div dup 40 gt {pop 40} if sub} D
+ NO {W 2 div YO M PN ST cvs S} if
+ ZL {0 YO M Zl S} if
+ ZR {W YO M Zr dup stringwidth pop neg 0 R S} if
+ OF setfont
+ XO SZ SL get neg M /CI 0 D} D
+/SF {/CS E D CS SZ SL 3 2 roll put /YI CS -1.2 mul D dup ST cvs C1 E join
+ ( NF ) join /C1 E D NF /BW ( ) SW pop D} D
+/NF {FL E get findfont CS scalefont setfont} D
+/FS {CF MK PF {1 or} if and or /CF E D FR SL CF put CF E SF} D
+/FL [RF FF BF FB IF FI IB FT] D
+/reencodeISO {
+dup dup findfont dup length dict begin
+{ 1 index /FID ne { def }{ pop pop } ie } forall
+/Encoding ISOLatin1Encoding D
+currentdict end definefont
+} D
+/ISOLatin1Encoding [
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quoteright
+/parenleft/parenright/asterisk/plus/comma/minus/period/slash
+/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon
+/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N
+/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright
+/asciicircum/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m
+/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright/asciitilde
+/.notdef/backslash/parenleft/parenright/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/dotlessi/grave/acute/circumflex/tilde/macron/breve
+/dotaccent/dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut
+/ogonek/caron/space/exclamdown/cent/sterling/currency/yen/brokenbar
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot
+/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute
+/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave
+/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex
+/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
+/yacute/thorn/ydieresis
+] D
+FL {reencodeISO D} forall
+
+/BS {/PC E D /TX E D /fin f D /CW 0 D /LK 0 D /SC 0 D
+ /RT TX D {RT ( ) search {/NW E D pop /RT E D /WH NW SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC /SC LK D /CW WH BW add D}
+ {/CW CW WH add BW add D} ie
+ /LK LK NW length add 1 add D} {pop exit} ie} loop
+ /fin t D /LC TX length D /WH RT SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC NL RT dup () ne {PC} {pop} ie}
+ {TX SC LC SC sub GI PC} ie} D
+
+/BT {RS dup dup () ne E ( ) ne and
+ {/LS LL D /LL W L1 sub XO sub D {/CI 0 D SH /BP f D fin not {NL} if
+  /HM t D /LL LS D} BS} {BG {pop} {SH /BP f D} ie} ie} D
+/BL {HM not {CP E pop XO E M} if} D
+/NL {BL W XO sub L1 sub TB {BW add} if AT mul 2 div YA neg dup 0 lt {3 sub} if
+ R F0 CF ne {F0 NF} if C1 cvx exec /C1 () D /L1 0 D /F0 CF D
+ BP not {0 YB NN neg R} if /YA 0 D /YB 0 D CP /YC E D pop XO YC M YC LE neg gt
+ {YI CI sub dup 0 lt BP not and {dup 0 E R CI add /CI E D} {pop} ie}
+ {NP} ie /T t D} D
+/RS {/TM E D /CN 0 D TM
+ {dup 9 eq E 10 eq or {TM CN ( ) PI} if
+  /CN CN 1 add D} forall /CN 0 D /BK HM EN and {0} {1} ie D TM
+ {dup 32 ne {TM CN 3 2 roll put /CN CN 1 add D /BK 0 D}
+ {pop BK 0 eq {TM CN 32 put /CN CN 1 add D} if /BK 1 D} ie}
+  forall TM 0 CN GI dup dup () ne E ( ) ne and
+  {dup CN 1 sub get 32 eq {/EN f D} {/EN t D} ie} if} D
+/join {2 copy length E length add string dup 4 2 roll 2 index 0 3 index
+ PI E length E PI} bind D
+/EG {dup 0 E dup () eq {E pop} {E get} ifelse 10 ne {(\n) E join} if} D
+/WR {PB {EG /PB f D} if PP {EG /PP f D} if (\n) search
+ {dup () ne BP not or {TR /CI 0 D /NC 0 D NL pop WR}{pop pop WR} ie} {TR} ie} D
+/TR {(\t) search {dup length /NC E NC add D SH MS 0 8 NC 8 mod sub dup
+ /NC E NC add D GI SH pop TR} {dup length /NC E NC add D SH} ie
+ /BP f D} D
+/SH {CP E pop LE neg lt {NP} if dup SW pop L1 add /L1 E D
+ C1 (\() join T not {( ) join} if E join (\)) join
+ AU AF and UF or {( U ) join} if ( S ) join /C1 E D /T t D /TB EN not D} D
+/BG {CP pop XO sub abs 0.01 lt} D
+/ON {AR AI NN get 1 add dup AR AI 3 -1 roll put ST cvs length dup ST E (. ) PI
+ ST 0 3 -1 roll 2 add GI dup SW pop neg 0 R S} D
+/SP {YI E /YI E D NL /YI E D} D
+/BR {BN} D
+/BN {PF {WR} {BT NL} ie /HM f D} D
+/AB {CH E 0 E put CH join WB} D
+/NN {dup 0 lt {pop 0} if} D
+/H  {1 sub /HL E D E BN /AT E D CP E pop LE neg WW add lt {NP} if
+ BH SP /SL SL 1 add D HS HL get HT HL get FS} D
+/EH {BN /AT 0 D AH SP /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/P  {E PF {WR /PP t D} {BN AE not {AH SP} if} ie /AT E D} D
+/HR {BN 0 CP E pop M gsave PF {0 YI R} if W 0 RL stroke grestore /CI 0 D
+ /BP f D NL} D
+/AD {BN /AE t D AH SP 4 11 SF} D
+/DA {BN /AE f D AH SP 0 11 SF} D
+/PR {BN /AT 0 D /CF 0 D 9 PS mul 1 FS /PF t D /PB t D /NC 0 D} D
+/PW {pop PR} D
+/RP {PF {dup () ne {dup dup length 1 sub get 10 ne {(\n) join} if} if
+ WR AH SP /CF 0 D 11 0 FS /PF f D} {BT} ie} D
+/SI {/XO AI LG add NN IN mul BC NN BI mul add D /LL W XO sub D} D
+/DT {BN /LG LG 1 sub D SI /LG LG 1 add D BL} D
+/DD {BN SI BL} D
+/DL {BN XO 0 eq {AH SP} if /LG LG 1 add D BL} D
+/LD {BN LG 0 gt {/LG LG 1 sub D} if SI XO 0 eq {AH SP} if BL} D
+/UL {BN XO 0 eq {AH SP} {NL} ie NR AI NN 0 put /UI UI 1 add D
+ /AI AI 1 add D SI BL} D
+/LU {BN /UI UI 1 sub D /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ie BL} D
+/OL {BN XO 0 eq {AH SP} {NL} ie NR AI NN 1 put /AI AI 1 add D SI BL} D
+/LO {BN AR AI NN 0 put /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ie BL} D
+/LI {BN /BP f D /CI 0 D CP E pop LE neg lt {NP} if
+ /C1 C1 NR AI 1 sub NN get 1 eq {( ON )} {( B )} ie join D BL} D
+/BQ {BN AH SP /BC BC 1 add D SI BL} D
+/QB {BN AH SP /BC BC 1 sub D SI BL} D
+/WB {PF {WR} {BT} ie} D
+/A  {WB /AF t D} D
+/EA {WB /AF f D} D
+/SS {SZ SL get /SL SL 1 add D} D
+/I  {WB SS 4 FS} D
+/BD {WB SS 2 FS} D
+/TT {WB SS 1 FS} D
+/KB {WB SS /CF 0 D 3 FS} D
+/CT {WB SS /CF 0 D 4 FS} D
+/SM {WB SS /CF 0 D 1 FS} D
+/ES {WB /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/UN {WB /UF t D} D
+/NU {WB /UF f D} D
+/SB {0 1 NI {/N E D /K WS N get D /NY AY N get FC N get mul D /BV NY array D
+ 0 1 NY 1 sub {/TM K string D currentfile TM readhexstring pop pop BV E TM put}
+ for BM N BV put} for} D
+/colorimage where {pop} {
+ /colorimage {
+  pop pop /Bp E D /Gp E D /Rp E D
+  {/Re Rp D /Gr Gp D /Bl Bp D
+  0 1 Re length 1 sub {
+   /i E D Gr i Re i get 0.299 mul Gr i get 0.587 mul add Bl i get 0.114 mul add
+   cvi put
+  } for Gr} image
+ } D
+} ie
+/IP {BV N get /N N 1 add D} D
+/II {/K E D /TY E D /XW AX K get D /YW AY K get D /IS SG IT K get get D
+ /XS XW IS mul D /YS YW IS mul D YS CS sub TY 2 eq {/MB E D /MA 0 D}
+ {TY 2 mod 1 eq {2 div /MA E 2 sub D /MB MA 4 add D}{/MA E D /MB 0 D} ie} ie} D
+/IM {II /ty TY D /xs XS D /ys YS D /ya YA D /yb YB D /ma MA D /mb MB D /k K D
+ /CI 0 D WB L1 xs add dup /L1 E D XO add W gt
+ {NL /YA ma D /YB mb D /YS ys D /L1 xs D}
+ {ma YA gt {/YA ma D} if mb YB gt {/YB mb D} if} ie CP E pop YS sub LE neg lt
+ {NP /YA ma D /YB mb D /L1 xs D} if /BP f D ty ST cvs ( ) join k ST cvs join
+ C1 E join ( DI ) join FP 2 eq FP 1 eq AF and or {( FM ) join} if /C1 E D
+ /HM t D /EN f D /T TY 3 eq D} D
+/DI {II /YN YW neg D /HM t D /CI 0 D /K2 IX K get D gsave CP MB sub translate
+ K2 0 ge {/DP AZ K2 get D /BV BM K2 get D XS YS scale /N 0 D XW YW DP
+ [XW 0 0 YN 0 YW] {IP} FC K2 get 1 eq {image} {{IP} {IP} t 3 colorimage} ie}
+ {PV K2 neg 1 sub get exec} ie grestore XS 0 R} D
+/FM {gsave CP MB sub translate XS neg 0 M 0 YS RL XS 0 RL 0 YS neg RL XS neg
+ 0 RL stroke grestore} D
+/BH -35 D
+/AH -28 D
+/LL W D
+/XO 0 D
+/YI 0 D
+/CI 0 D
+/LG 0 D
+/AI 0 D
+/UI 0 D
+/IN 30 D
+/BI 12 D
+/WW 50 D
+/AR [0 0 0 0 0 0 0 0 0 0] D
+/NR [0 0 0 0 0 0 0 0 0 0] D
+/FR [0 0 0 0 0 0 0 0 0 0] D
+/SZ [0 0 0 0 0 0 0 0 0 0] D
+/SL 0 D
+/CF 0 D
+/BC 0 D
+/YA 0 D
+/YB 0 D
+/F0 0 D
+/N 0 D
+/AT 0 D
+/C1 () D
+/C2 () D
+/L1 0 D
+/L2 0 D
+/PN SN D
+/MS (        ) D
+/CH 1 string D
+/ST 6 string D
+/HM f D
+/PF f D
+/EN f D
+/TB f D
+/UF f D
+/PP f D
+/AE f D
+/AF f D
+/BP t D
+/T t D
+/AX [26 26 26 26 20 519 32] D
+/AY [26 26 26 26 20 240 32] D
+/IX [0 1 2 3 4 5 6] D
+/IT [0 0 0 0 0 0 0] D
+/AZ [8 8 8 8 8 1 8] D
+/WS [26 26 26 26 20 65 32] D
+/FC [3 3 3 3 3 1 3] D
+/NI 6 D
+/BM 7 array D
+%%EndProlog
+SB
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8f8c8c8c848487
+8487c6c6bdbdbdbdbdb5b5b5b5b5adadadada5a8ada5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d9e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9c9c949494948f9494949c94948c84848484847bc6bdbdbdbdb5bdb5b5b5
+b5b5a8adadadb5adada5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7d9e7
+e7e7e7e7e7e7e7e7e7e7e7e79c9c9c9c9c9c9c8f9cf7f1f1f7f7f7f7f7f7
+e684848784877b7bbdbdbdbdbdb5b5a8bdfcf2f2fcfcfcfcfcfceea59c9a
+9c9a9c93e7e7e7e7e7e7e7d9e7fff7f7ffffffffffffffe7e7d6e7d6e7da
+9c9c9c9c9c948f8ff1f7d6f7f7f7f7f7f7f7c48484847b847b7bbdbdbdbd
+b5b5a8a8f2fcd6fcfcfcfcfcfcfcd29c9c9c9c9c939ce7e7e7e7e7e7d9d9
+f7ffdefffffffffffffff4e7e7e7e7e7dae79c9c9c9c8f8f87f7f7e6b1f7
+f7f7f7f7f7f79c8784877b7b7b7bbdbdbdb5a8a89afcfceeb9fcfcfcfcfc
+fcfcb59a9c9a9c939c93e7e7e7e7d9d9d6ffffffd9ffffffffffffffe7d6
+e7d6e7dae7da9c9c9c948f72f1c46f4a87f7f7f7f7f7f7f78c84847b877b
+7b7bbdbdb5b5a88cf2d281609afcfcfcfcfcfcfca59c9c9c9a949394e7e7
+e7e7d9d3f7f4bdadd6ffffffffffffffe7e7e7e7d6e7dae79c9c9c8f6f8f
+ce5f4a8fd6f7f7f7f7f7f7f7877b877b7b7b7b73b5b5b5a8819ad673609a
+d6fcfcfcfcfcfcfc9a9c9a9c9494948ce7e7e7d9bdc0debdadc0deffffff
+ffffffffd6e7d6e7e7e7e7de9c9c8f7b5e8fd28fd6f7f7f7f7f7f7a0f7e6
+84847b7b7b7b737bb5b5a893749ae19ad6fcfcfcfcfcfcaefcee9c9c9c94
+93948c8ce7e7d9dab1c0fbc0deffffffffffffd6ffffe7e7e7e7dae7dee7
+9c948f7e4a8ff7f7f7f7f7f7f7bb5e0af7f77b7b7b7b7b7b7b73b5b5a88b
+609afcfcfcfcfcfcfcc67424fcfc939c939494938c8ce7e7d9bcadc0ffff
+ffffffffffdcb179ffffdae7dae7e7dae7de94948f6f4a9df7f7f7f7f1a0
+5e0a0a0af7f77b7b7b7b737b7373b5b5a88160a7fcfcfcfcf2ae74242424
+fcfc949394938c8c8c8ce7e7d9bdadc0fffffffff7d6b1797979ffffe7da
+e7dae7e7dede949487634a8ff7f7f1b15e0a0a0a0a0a0a0a0a0a0a0a7b73
+7373b5ad9a7b609afcfcf2b9742424242424242424242424948c8c8ce7e7
+d6c6adc0fffff7d9b17979797979797979797979e7dedede948c87634a8f
+f7c95e0a0a0a0a0a0a0a0a0a0a0a0a0a73737372adad9a7b609afccd7424
+2424242424242424242424248c8c8c84e7e7d6bdadc0ffdbb17979797979
+7979797979797979e7dedede948c87634a8ff7e6c4a0630a0a0a0a0a0a0a
+0a0a0a0a7373736badad9a7b609afceed2ae7b2424242424242424242424
+8c8c8484e7e7d6bdadc0fffff4d6bd7979797979797979797979e7ded6d6
+948c87634a7ef7e6c4a79c8f5e0a0a0aa3a7635f637372736b6badad9a7b
+608bfceed2bcb5a874242424b8bc7b737b8c84848484e7e7d6bdadbcffff
+f4e7e7d9b1797979f7e7c6bdcededed6d6d68c8c87634a6ff7f7f7e6c4a7
+a7b15e0ac4bb63636b7373736b6badad9a7b6081fcfcfceed2bcbcb97424
+d2c67b7b848484848484e7e7d6c6adbdfffffffff4e7e7d9b179f4dcc6c6
+d6d6d6d6d6ce8c8f876f4a5ef7f7f7f7f7d2c4a7a7b1f7ed876b736b736b
+6b6bada89a816074fcfcfcfcfce1d2bcbcb9fcf89a8484848484847be7d9
+d6bdadb1fffffffffffbf4e7e7d9ffffd6d6d6d6d6d6cece8c8c876b4a4a
+f7f7f7f7f7f7e6c4a7bbf7f7a7726b726b6b6b6ba5a59a84605afcfcfcfc
+fcfceed2bcc6fcfcbc8c848c84847b7be7e7d6cead96fffffffffffffff4
+e7dcffffe7d3d6d3d6cecece8c8f876b4a37f1f7f7f7f7f7f7f7e6e6f7f7
+e6736b6b6b6b6b63a5a89a84604ff2fcfcfcfcfcfcfceeeefcfcee848484
+847b7b7be7d9d6cead9ff7ffffffffffffffffffffffffd6d6d6cececec6
+8c8484724a378fdef7f7f7f7f7f7f7f7f7f7f7876b6b6b6b6363a5a59c8c
+604f9adefcfcfcfcfcfcfcfcfcfcfc9a8484847b7b7be7e7e7d3ad9fc0de
+ffffffffffffffffffffffd6d6cececec6c68487847250374a374a4a5e6f
+7e7e7e7e83878f736b6b6b63635ea59a9c8c684f5a4f5a6074818b8b8b8b
+959aa88c847b7b7b7b73e7d6e7d3b89f969f96adb1bdbcbcbcbcc2d6d9de
+cececec6c6c68484877b635e4a4a374a4a373737374a4a636b6b6b6b6363
+5e63a5a59a937b7460604f605a4f4f4f4f60607b7b84847b7b7b737be7e7
+d6dac6b1adad9fad969f9f9f9fadadc6cecececec6c6c6bd8484847b7b6b
+6b63635f505f5e505e505f636b6b636363635f5f9c9c9c939384847b7b73
+687374687468737b847b7b7b7b7b7373e7e7e7dadad6cec6c6bdb8bdb1b8
+b1b8bdc6cececec6c6c6bdbd8487847b7b7b7b73726b6b6b6b6b636b636b
+6b6b6363635f5f5f9c9a9c939c93938c8c84848484847b847b7b7b7b7b7b
+7b737373e7d6e7dae7dadaded3d6d6d6d6cececececececec6c6c6bdbdbd
+84847b7b7b7b7b7373737373736b736b6b6b6b6363635f5f5f5e9c9c939c
+9394938c8c8c8c8c84848484847b7b7b7b7b73737374e7e7dae7dae7dade
+dedededed6d6d6cecececec6c6bdbdbdbdb1
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8c8c8c848487
+8487c6c6bdbdbdbdbdbdb5b5b5b5adadadadada5a5a5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9ca79ca79c94948f94948f8c8c8c84848484847bc6bdbdbdbdb5bdbcbdbc
+b5b5ada8adada8a5a5a5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7d9
+e7e7d9e7e7e7e7e7e7e7e7e79c9c9c9c9c9c9ce6f7f7f7f7f7f7f1f1f78f
+8784848784877b7bbdbdbdbdbdb5b5eefcfcfcfcfcfcf2f2fca89aa59c9a
+9c9a9c93e7e7e7e7e7e7e7fffffffffffffff7f7ffd9d6e7e7d6e7d6e7da
+9c9c9c9c9c9c94c4f7f7f7f7f7f7f7d6f7ed877b877b7b847b7bbdbdbdbd
+b5b5b5d2fcfcfcfcfcfcfcd6fcf89a939a9c9c9c939ce7e7e7e7e7e7e7f4
+ffffffffffffffdeffffd6dad6e7e7e7dae79c9c9c9c9c9494a5f7f7f7f7
+f7f7f7bbe6f7f1727b7b7b7b7b7bbdbdbdb5b5b5b5c6fcfcfcfcfcfcfcc6
+eefcf28c93939c939c93e7e7e7e7e7e7e7e7ffffffffffffffdcfffff7d3
+dadae7dae7da9c9c9c9c9494949cf7f7f7f7f7f7f7875e7ec4f16b72877b
+7b7bbdbdb5b5b5b5b5b5fcfcfcfcfcfcfc9a748bd2f2848c9a949394e7e7
+e7e7e7e7e7e7ffffffffffffffd6b1bcf4f7ced3d6e7dae79c9c9c949494
+948cf7f7f7f7f7f7f7d6a0504ad68763737b7b73b5b5b5b5b5b5adadfcfc
+fcfcfcfcfcd6ae6860d69a7b8c94948ce7e7e7e7e7e7e7e7ffffffffffff
+ffded6b8added6c6dee7e7de9c9c94949494948cf1f7a0f7f7f7f7f7f7e6
+bbd283506b73737bb5b5b5b5b5adadadf2fcaefcfcfcfcfcfceec6e19568
+848c8c8ce7e7e7e7e7e7e7e7f7ffd6ffffffffffffffdcfbc2b8cededee7
+9c9494949494948cf7f70a5ebbf7f7f7f7f7f7f78f4a63737373b5b5b5b5
+adadadadfcfc2474c6fcfcfcfcfcfcfc9a607b8c8c8ce7e7e7e7e7e7e7e7
+ffff79b1dcffffffffffffffc0adc6dedede94949494948c8c8cf7f70a0a
+0a5ea0f1f7f7f7f79d4a5e727373b5b5b5adadadadadfcfc24242474aef2
+fcfcfcfca760738c8c8ce7e7e7e7e7e7e7e7ffff797979b1d6f7ffffffff
+c0adc6d3dede949494940a0a0a0a0a0a0a0a0a0a0a5eb1f1f7f78f375f6b
+7373b5b5adad242424242424242424242474b9f2fcfc9a4f73848c8ce7e7
+e7e77979797979797979797979b1d9f7ffffc09fbdd6dede9494948c0a0a
+0a0a0a0a0a0a0a0a0a0a0a5ec9f78f4a5f6b7372adadadad242424242424
+2424242424242474cdfc9a6073848c84e7e7e7e779797979797979797979
+797979b1dbffc0adbdd6dede94948c8c0a0a0a0a0a0a0a0a0a0a0a63a0b1
+e6f78f375f6b6b6badadadad24242424242424242424247baec8eefc9a4f
+73848484e7e7e7e77979797979797979797979bdd6f9ffffc09fbdd6d6d6
+948c948c8c7b5f63a79c0a0a0a5e8f9ca7c4e6f77e375f6b6b6badadada5
+a593737bbcb524242474a8b5bcd2eefc8b4f73848484e7e7e7e7e7dabdc6
+e7e7797979b1d9e7e7f4ffffbc9fbdced6d68c948c8f847b6f63c4c40a5e
+a7a7a7c4e6f7f7f76f375f6b6b6badadada8a593817bd2d22474bcbcbcd2
+eefcfcfc814f737b8484e7e7e7d9e7dabdc6f4f479b1e7e7e7f4ffffffff
+bd9fbdced6ce8c8c8c8c87847287f1f7b1a7a7c4d2f7f7f7f7f75e4a5e63
+6b6badada5a59a9c8c9af2fcb9bcbcd2e1fcfcfcfcfc745a737b847be7e7
+e7e7d6e7d3d6f7ffd9e7e7f4fbffffffffffb196c6cecece8c8c8c848487
+84c4f7f7a7b1c4e6f7f7f7f7f7f74a4a5f636b6ba5a5a5a5a59a9cd2fcfc
+bcc8d2eefcfcfcfcfcfc5a60737b7b7be7e7e7e7e7d6e7f4ffffe7f9f4ff
+ffffffffffff96adbdcecece8c8c8c84848487e6f7f7e6f1f7f7f7f7f7f7
+f7f137375f636b63a5a5a5a5a59c9aeefcfceef2fcfcfcfcfcfcfcf24f4f
+737b7b7be7e7e7e7e7e7d6fffffffff7fffffffffffffff79f9fbdcecec6
+8c8c8484878494f7f7f7f7f7f7f7f7f7f7f7de8f374a5f636363a5a5a5a5
+9a9cadfcfcfcfcfcfcfcfcfcfcfcde9a4f60737b7b7be7e7e7e7d6e7e7ff
+ffffffffffffffffffffdec09fadbdc6c6c68484848484878c9c8f837e7e
+7e7e6f5e4a4a3737374a5e63635fa5a5a59c9c9aa5b5a8958b8b8b8b8174
+605a4f4f4f60737b7b73e7e7e7e7e7d6e7e7d9c2bcbcbcbcbdb1ad969f9f
+9fadc6c6c6bd84848487847b7b7b6b504a373737374a374a374a4a506363
+5f63a59c9c9a9c9c939384685a4f4f4f4f5a4f604f6060687b7b737be7e7
+e7d6e7e7dadaceb8969f9f9f9f969fad9fadadb8c6c6bdbd84848484847b
+7b7b6b635e5f5f5050505e505f5f5f5e63635f5f9c9c9c9c9c939493847b
+7373736868687468737373737b7b7373e7e7e7e7e7dae7dad6cec6bdbdb8
+b8b8b1b8bdbdbdc6bdbdbdbd8487847b7b7b7b7b7372736b6b6b6b636363
+63636363635f5f5f9c9a9c939c9493948c8c8484847b7b7b7b7b7b7b7b7b
+7b737373e7d6e7dae7e7dae7ded3d6d6d6cececececec6c6c6c6bdbdbdbd
+84847b7b7b7b7b7b73737373736b6b6b6b6b6b6363635f5f5f5e9c9c939c
+939494938c8c8c8c848484847b7b7b7b7b7b73737374e7e7dae7dae7e7da
+e7dededed6d6d6cecececec6c6bdbdbdbdb1
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8f8487848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a8a59a9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+d9e7d6e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8f848784847b
+8784c6c6bdbdbdbdbdb5b5b5b5b5adadadadada5a8a59a9c9c939a9ce7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d9e7d6e7e7dad6e7a59c9c9c9c9c
+f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7727b7bc6bdbdbdbdb5fcfcfcfc
+fcfcfcfcfcfcfcfcfcfcfcfcfc8c939ce7e7e7e7e7e7ffffffffffffffff
+ffffffffffffffffffd3dae79c9c9c9c9cf7f7f7d2d2d2d2edf7f7f7f7ed
+d2d2e6f70a5e727bbdbdbdbdbdfcfcfce1e1e1e1f8fcfcfcfcf8e1e1eefc
+24738c93e7e7e7e7e7fffffffbfbfbfbfffffffffffffbfbffff79c6d3da
+9c9c9c9cf7f7f7c4c4c4c4f7f7f7f7f7f7f7edd2f7204a5e6b7bbdbdbdbd
+fcfcfcd2d2d2d2fcfcfcfcfcfcfcf8e1fc3460738493e7e7e7e7fffffff4
+f4f4f4fffffffffffffffffbff7fadc6d6da9c9c9cf7f7f7c4d2e6d2eded
+e6f7f7f7f7f7f7f70a4a4a5e737bbdbdbdfcfcfcd2e1eee1f8f8eefcfcfc
+fcfcfcfc246060738c94e7e7e7fffffff4fbfffbffffffffffffffffffff
+79adadc6dee79c9c9c4ae69494636b6b63638c8cb1b17b847b6be64a506b
+737bbdbdb560eeb5b57b84847b7badadc8c89ca59c84ee6068848c93e7e7
+e7adffe7e7cececececee7e7f9f9e7e7e7d6ffadb8d6deda9c9c9c944ad2
+946b6b6363637bb1b1c47ba3b18463d250847373b5b5b5b560e1b584847b
+7b7b9cc8c8d294b8c8a57be1689c8c8ce7e7e7e7adfbe7cecec6c6cee7f9
+f9f4e7f7f9e7cefbb8efdee79c9c9494944ad28c7b726b638484b1b1a384
+84847b4ae65e8473b5b5b5b5b560e1ad938c847b9c9cc8c8b89c9c9c9c60
+ee739c8ce7e7e7e7e7adfbe7dad3cecee7eff9f9f7efefefe7adffc6efde
+9c9494948cf7f7c4b1d2c4d2f7f7f7f7e6ede6e6d2f74a506373b5b5b5b5
+adfcfcd2c8e1d2e1fcfcfcfceef8eeeee1fc60687b8ce7e7e7e7e7fffff4
+f9fbf4fbfffffffffffffffffbffadb8cee794949494f7f7d2c4c4d2c4e6
+f7f7f7edd2e6f7f7f70a4a506b73b5b5b5adfcfce1d2d2e1d2eefcfcfcf8
+e1eefcfcfc246068848ce7e7e7e7fffffbf4f4fbf4fffffffffffbffffff
+ff79adb8d6de949494f7f7d2d2c4d2d2c4edf7f7f7f7f7f7f7f7204a4a5e
+6b72b5b5adfcfce1e1d2e1e1d2f8fcfcfcfcfcfcfcfc346060738484e7e7
+e7fffffbfbf4fbfbf4ffffffffffffffffff7fadadc6d6de9494944ae68c
+6b6b6b6363636b727b847b727363d24a50636b72adadad60eea58484847b
+7b7b848c939c948c8c7be160687b8484e7e7e7adffe7cececececececed3
+dae7e7d3decefbadb8ced6de94948c8c4ad287637b846b63636b84847b73
+736b5ee64a5e636badadadad60e19a7b949c847b7b84a59c9c948c8473ee
+60737b84e7e7e7e7adfbd6cee7efd6c6c6d6e7efe7e7e7d6c6ffadc6ced6
+948c948c8c4ae672848e6363636b7b84847b6b6b5037d2205e63adadadad
+a560ee8ca5a87b7b7b849c9ca59c8484684fe134737be7e7e7e7e7adffd3
+e7f6cec6c6d6e7e7e7e7d6d6b89ffb7fc6ce8c948c8c8cf7f7d2d2d2d2d2
+d2f7f7f7f7e6d2edf7f7204a5063adadada5a5fcfce1e1e1e1e1e1fcfcfc
+fceee1f8fcfc3460687be7e7e7e7e7fffffbfbfbfbfbfbfffffffffffbff
+ffff7fadb8ce8c8c8c8cf7f7ede6e6d2d2d2e6d2edf7f7d2e6f7f70a3750
+5e63adada5a5fcfcf8eeeee1e1e1eee1f8fcfce1eefcfc244f68737be7e7
+e7e7fffffffffffbfbfbfffbfffffffbffffff799fb8c6ce8c8c8cf7f7f7
+f7f7f7f7e6e6d2d2f7f7f7f7f7f7203750506363a5a5a5fcfcfcfcfcfcfc
+eeeee1e1fcfcfcfcfcfc344f68687b7be7e7e7fffffffffffffffffffbfb
+ffffffffffff7f9fb8b8cec68c8c8c4ae684b1b1b17b7b63636b638e8e8e
+8e7be64a4a5e6363a5a5a560ee9cc8c8c894937b7b847ba8a8a8a89cee60
+60737b7be7e7e7adffe7f9f9f9e7daceced6cef6f6f6f6e7ffadadc6c6c6
+8c8c84844ad2b1a3b1b173636b8e5e8e8e8e8e847be64a505e63a5a5a5a5
+60e1c8b8c8c88c7b84a873a8a8a8a89c9cee6068737be7e7e7e7adfbf9f7
+f9f9deced6f6c6f6f6f6f6efe7ffadb8c6c6848484847b4ad2b1a3a37b73
+5e5e63636b8e8e8e8463e64a505fa5a5a59c9c60e1c8b8b89c8c73737b7b
+84a8a8a89c7bee606873e7e7e7e7e7adfbf9f7f7e7dec6c6c6c6d6f6f6f6
+efceffadb8bd848484877b734ad2e6e6e6e6e6e6e6e6e6e6e6e6e6e6d2e6
+0a50a59c9c9a938c60e1eeeeeeeeeeeeeeeeeeeeeeeeeeeee1ee2468e7e7
+e7d6dadeadfbfffffffffffffffffffffffffffffbff79b88484877b8473
+634a4a0a240a0a240a0a240a0a240a0a240a244a9c9c9a9c9c8c7b606024
+3a24243a24243a24243a24243a243a60e7e7d6e7e7deceadad798e79798e
+79798e79798e79798e798ead848484847b7b735e50504a504a4a504a4a4a
+4a374a4a4a4a4a4a9c9c9c9c93948c7368686068606068606060604f6060
+60606060e7e7e7e7dae7dec6b8b8adb8adadb8adadadad9fadadadadadad
+87847b7b7b7b7b736363635e5e5e5e5e5e505050505050504a509a9c939c
+9493938c7b7b7b737373737373686868686868686068d6e7dae7e7dadade
+cececec6c6c6c6c6c6b8b8b8b8b8b8b8adb8
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8c8c8c848487
+8487c6c6bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9c9c9494949494948c8c8c8c8c8484848484847bc6bdbdbdbdb5b5b5b5b5
+b5adadadadada5a5a5a5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e79c9c9c9c8f83634a373720202424374a5e6b
+8784848784877b7bbdbdbdbda8957b604f4f34343a3a4f6074849aa5a59a
+9c9a9c93e7e7e7e7d9c2bdad9f9f7f7f8e8e9fadb1ced6e7e7d6e7d6e7da
+9c9ca06f4a375e72a3d2f1edf1e6b1845f373763877b847b7b7bbdbdae81
+604f748cb8e1f2f8f2eec89c734f4f7b9a9c9c9c939ce7e7d6bdad9fb1d3
+f7fbf7fff7fff9e7bd9f9fbdd6e7e7e7dae79c9c635094c4d2e6f1f7f7f7
+f7f7edf1e6d28e4a5e9ca7947b7bbdbd7b68add2e1eef2fcfcfcfcfcf8f2
+eee1a86073b5bcad9493e7e7bdb8e7f4fbfff7fffffffffffff7fffbf6ad
+c6e7e7e7e7da9c9c24cef1e6b184370a00001524507284b1d2f1a3f7f7f7
+8c7bbdbd3ad6f2eec89c4f2400001c3a688ca5c8e1f2b8fcfcfca594e7e7
+8edef7fff9e79f793b3b588eb8d3e7f9fbf7f7ffffffe7e79c9c5e84f74a
+000000001500150000001537e6f18e37378ebb7bb5bd749cfc6000000000
+1c001c0000001c4feef2a84f4fa8c68ce7e7b1e7ffad3b3b3b3b583b583b
+3b3b589ffff7f69f9ff6dce79c9c8f37d2ed8e50240a1515150a204a6bb1
+e6c4374a5063d27bb5b5a84fe1f8a8683a241c1c1c24346084c8eed24f60
+687be18ce7e7d99ffbfff6b88e79585858797fadd6f9fff49fadb8cefbe7
+9c94946f63f7f7f7f7f7f1e6f7f7f7f7e6c4c44a6b7b7bd2bb73b5b5b581
+7bfcfcfcfcfcf2eefcfcfcfceed2d260849493e1c68ce7e7e7bdbdffffff
+fffff7fffffffffffff4f4adcee7dafbdce79494948f50d2f7f7f7f7f7f7
+f7f7d2c4b1b1b1248c94b1f78c73b5b5b5a868e1fcfcfcfcfcfcfcfce1d2
+c8c8c83aa5adc8fca58ce7e7e7d9b8fbfffffffffffffffffbf4f9f9f98e
+e7e7f9ffe7de9494948c6f72f7f7f7f7f7f7f7f7e6c4b1d2c4a3f7c4bb7b
+7373b5b5adad818cfcfcfcfcfcfcfcfceed2c8e1d2b8fcd2c68c8c8ce7e7
+e7e7bdd3fffffffffffffffffff4f9fbf4f7fff4dce7dede9494948c8f5f
+d2f7f7f7f7f7f7f7e6c4c4d2a38e5e50506b7372adadadada873e1fcfcfc
+fcfcfcfceed2d2e1b8a8736868848c84e7e7e7e7d9bdfbffffffffffffff
+fff4f4fbf7f6c6b8b8d6dede94948c948c6b73f7f7f7f7f7f7f7e6d2e67b
+4a6b506b7372726badadadadad848cfcfcfcfcfcfcfceee1ee9460846884
+8c848c84e7e7e7e7e7cedefffffffffffffffffbffe7add6b8d6deded3d6
+9494a7c4e6e663d2f7f7f7f7f7f7f7f7d250c4c4b18c73736b6badb5bcd2
+eeee7be1fcfcfcfcfcfcfcfce168d2d2c8a58c8c8484e7e7e7f4ffffbdfb
+fffffffffffffffffbb8f4f4f9e7deded6d68cc4e6f7f7e66b63a3d2f7f7
+f7f7d2a36b4af7e6f7e6c4726b6badd2eefcfcee7b7bb8e1fcfcfcfce1b8
+8460fceefceed28c8484e7f4ffffffffcec6f7fbfffffffffbf7d6adffff
+fffff4d3d6ce8cd2f7f7f7f1e6a37b5f372424375073a3e6f7f7f7f1c487
+6b6bade1fcfcfcf2eeb894734f3a3a4f688cb8eefcfcfcf2d29a847be7fb
+fffffff7fff7e7bd9f8e8e9fb8def7fffffffff7f4d6cece8f63c4f1f7f7
+f7f7f7f7f7f7f7f7f7ede6d2d2f1e6c4b1506b6ba87bd2f2fcfcfcfcfcfc
+fcfcfcfcfcf8eee1e1f2eed2b9687b7bd9bdf4f7ffffffffffffffffffff
+fffffffbfbf7fff4d9b8cece8c5f4a73c4e6f7f7f7f7f7f7f7f7d2d2e6e6
+e6c4a75e374a6b63a573608cd2eefcfcfcfcfcfcfcfce1e1eeeeeed2bc73
+4f607b7be7bdaddef4fffffffffffffffffffbfbfffffff4e7c69fadcec6
+8c8c6f4a3737637ba3c4e6e6e6d2d2b18c634a372437506b6363a5a58160
+4f4f7b94b8d2eeeeeee1e1c8a57b604f3a4f687b7b7be7e7bdad9f9fc6e7
+f7f4fffffffbfbf9e7cead9f8e9fb8cec6c6848484847b6f504a37242424
+2024242437374a506b6b6b63635ea5a5a59c938168604f3a3a3a343a3a3a
+4f4f60687b847b7b7b73e7e7e7e7dabdb8ad9f8e8e8e7f8e8e8e9f9fadb8
+cececec6c6c684848487847b847b7b7b7b737b73737373736b6b6b6b6363
+5e63a59c9c9a9c9c9c949494938c8c8c8c8c84848484847b7b7b737be7e7
+e7d6e7e7e7e7e7e7dae7e7dededed6d6d6d6cecec6c6c6bd84848484847b
+7b7b7b7b7373737373736b6b6b6b636363635f5f9c9c9c9c9c9394939493
+8c8c8c8c8c848484847b7b7b7b7b7373e7e7e7e7e7dae7dae7dae7dedede
+ded6d6d6cecec6c6c6c6bdbd8487847b7b7b7b7b7b7373737373736b6b6b
+6b6b6363635f5f5f9c9a9c939c949394938c8c8c8c8c848484847b7b7b7b
+7b737373e7d6e7dae7e7dae7dae7dedededed6d6d6cececec6c6c6bdbdbd
+84847b7b7b7b7b7b7373737373736b6b6b6b6b6363635f5f5f5e9c9c939c
+939494938c8c8c8c8c848484847b7b7b7b7b73737374e7e7dae7dae7e7da
+e7dedededed6d6d6cececec6c6bdbdbdbdb1
+a5a5a59c9c9c9c9c94949494948c8c8c8c848484c6c6c6bdbdbdbdb5b5b5
+b5adadadada5a5a59c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+a5a79c9c9c9c9c94949494948c8c8c8c84848784c6bcbdbdbdbdb5b5b5b5
+adadadada5a5a5a59a9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6e7
+a59c9c9c9c7e948f737372634a8f6f8484848487c6bdbdbdb58bb5a88c8c
+8c7b60a881a5a59c9c9ae7e7e7e7e7bce7d9deded3ceadd9bde7e7e7e7d6
+9c9c9c8f72948f8c8ef7f7504a7b84737b877b7bbdbdbda88cada8ada8fc
+fc685a939c8c939a9c9ce7e7e7d9d3e7d9e7f6ffffb896dae7dedad6e7e7
+9c9c8724edf77b5e6ff7f74a157bf7f7377b847bbdbd9a3af8fc937481fc
+fc601c94fcfc4f939c93e7e7d68effffdab1bdffffad58e7ffff9fdae7da
+9c9c5e7bf7f7f78ec4f7f7a38ef7f7f7504a7b7bbdbd7493fcfcfca8d2fc
+fcb8a8fcfcfc685a9494e7e7b1dafffffff6f4fffff7f6ffffffb896e7e7
+9c9c8f4a73f7f7f7f7a3b1f7f7f7f74a00637b7bb5b5a85a8cfcfcfcfcb8
+c8fcfcfcfc60007b9394e7e7d996defffffffff7f9ffffffffad3bbddae7
+9c948f8f4a7bf7c46b8eb1d2f7f76b15637b7b73b5b5a8a85a93fcd284a8
+c8e1fcfc7b1c7b94948ce7e7d9d996dafff4d6f6f9fbffffce58c6e7e7de
+94944a8e7bc4f76bc4d2b1f7f7f7a3a3a7947b73b5b55aa893d2fc84d2e1
+c8fcfcfcb8b8bcad8c8ce7e796f6daf4ffd6f4fbf9fffffff7f7e7e7e7de
+94944af7f7f7a38ed20a00b1f7f7f7f7f7377373b5ad60fcfcfcb8a8e124
+00c8fcfcfcfcfc4f8c8ce7e7adfffffff7f6fb793bf9ffffffffff9fdede
+949450f7f7f7b1b1b1150ad2f7f7f7f7f7377373adad68fcfcfcc8c8c81c
+24e1fcfcfcfcfc4f8c8ce7e7b8fffffff9f9f95879fbffffffffff9fdede
+948c20634aa3f7d2e6b1d2f7f7f78e506b0a736badad347b60b8fce1eec8
+e1fcfcfca8687b248c84e7e77fc6adf7fffbfff9fbfffffff6b8ce79ded6
+8c8c72724a7bf7f7f7f7f7f7f7f76b001515726badad8c8c5a94fcfcfcfc
+fcfcfcfc7b001c1c8c84e7e7d3d396e7ffffffffffffffffce3b5858d3d6
+8c8c8c6f8cf7f7f7f7f7f7f7f7f7ed5e50726b6bada5a581a5fcfcfcfcfc
+fcfcfcfcf873688c847be7e7e7bde7ffffffffffffffffffffc6b8d3d6ce
+8c8c6f7bf7f7f76b8ef7f78e7bf7f7f76b506b6ba5a58193fcfcfc84a8fc
+fca893fcfcfc8468847be7e7bddaffffffd6f6fffff6daffffffceb8cece
+8c8c6f4af7f74a15a3f7f74a0073f7c40a4a6363a5a58160fcfc601cb8fc
+fc600084fcd2245a7b7be7e7bdadffffad58f7ffffad3bd6fff47996cec6
+84848450374a0072a7f7f76b204a5e2024636363a5a59c684f60008cbcfc
+fc7b345a73343a7b7b7be7e7e7b89fad3bd3e7ffffce7f96c67f8ec6c6c6
+8484877b3715507b6b4a4a0a206b20206f635e5fa59c9a9c4f1c68938460
+602434843434817b7373e7e7d6e79f58b8dad6adad797fd67f7fbdc6c6bd
+848484877b7b7b7373737372736b6b6b63635f5f9c9c9c9a9494938c8c8c
+8c8c8484847b7b7b7373e7e7e7d6e7e7dae7dededed3d6cececec6c6bdbd
+87847b7b7b7b7b737373736b6b6b6b63635f5f5e9a9c9c949394948c8c8c
+8484847b7b7b7b737374d6e7e7e7dae7e7dededed6d6cececec6bdbdbdb1
+
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffe013ffffffff399ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffcf3ffffffff33cffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffcf3fffffff
+f33cfffffffffffffffffffffffffffffffffffff3ff3f9c9fffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffff23c3333f
+cf23930f0f827e7ffffffffffffffffffffffffffffffffffff3ff3f99cf
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff1189333fcf11822667227e7fffffffffffffffffffffffffffffffffff
+ffff3f99cfffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffff3999333fcf399e67e6727e7fffffffffffffffffffffffff
+ffffffffe793873c13e7ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffff3981927fcf399e0706727e7fffffffffffffff
+ffffffffffffffffffe793133913e7ffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff399f927fcf399e7e66727e7fffff
+fffffffffffffffffffffffffffff333333393e7ffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffff399fccffcf399e7e66
+727e7ffffffffffffffffffffffffffffffffff333033393e7ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffff3989ccff
+cf399e2607227e7ffffffffffffffffffffffffffffffffffb733f3393e7
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff39c3ccffcf399f0f13927e7ffffffffffffffffffffffffffffffffff8
+733f3393e7ffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff3cffffffffffffffffffffffffff
+fffffffffcf3133913e7ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffff3cffffffffffffffff
+fffffffffffffffffffcf3873c93e7ffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffff99ffffff
+fffffffffffffffffffffffffffffcfffffff9cfffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff9fffffff9cfffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffff1fffffffc9f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffffffffffffffffffffffffffffffff
+ffffffffffff0fffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffdfffffffffffffffffffffffffffff
+fffffffffffffffffffff8f03fffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffefffffffffffffffffff
+ffffffffffffffffffffffffffffffc7ffc7ffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffefffffffff
+ffffffffffffffffffffffffffffffffffffffff3ffff9ffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+f7fffffffffffffffffffffffffffffffffffffffffffffffefffffe7fff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffd
+ffffffbfffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffbffffffffffffffffffffffffffffffffffffff
+fffffffffbffffffcfffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffbffffffffffffffffffffffffffff
+ffffffffffffffffffe7fffffff3ffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffdffffffffffffffffff
+ffffffffffffffffffffffffffffdffffffffcffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffdffffffff
+ffffffffffffffffffffffffffffffffffffffbfffffffff7fffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+feffffffffffffffffffffffffffffffffffffffffffffff7fffffffffbf
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffefffffffffffffffffffffffffffffffffffffffffffffeff
+ffffffffdfffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffff
+fffffffeffffffffffdfffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffff
+fffffffffffffffffdffffffffffefffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffbfffffffffffffffff
+fffffffffffffffffffffffffffbfffffffffff7ffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffbfffffff
+fffffffffffffffffffffffffffffffffffff7fffffffffffbffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffdffffffffffffffffffffffffffffffffffffffffffff7fffffffffffd
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffdfffffffffffffffffffffffffffffffffffffffffffefff
+fffffffffdffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffefffffffffffffffffffffffffffffffffffff
+ffffffdffffffffffffeffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffefffffffffffffffffffffffffff
+ffffffffffffffffdfffffffffffff7fffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff7ffffffffffffffff
+ffffffffffffffffffffffffffbfffffffffffff7fffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff7ffffff
+ffffffffffffffffffffffffffffffffffffbfffffffffffff7fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff7ffffffffffffffffffffffffffffffffffffffffffbfffffffffffff
+bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffbffffffffffffffffffffffffffffffffffffffffffbfff
+ffffffffffbfffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffbffffffffffffffffffffffffffffffffffff
+ffffff7fffffffffffffbfffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffdffffffffffffffffffffffffff
+ffffffffffffffff7fffffffffffffbfffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffdffffffffffffffff
+ffffffffffffffffffffffffff7fffffffffffffbfffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffeffffff
+fffffffffffffffffffffffffffffffffffeffffffffffffffbfffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffefffffffffffffffffffffffffffffffffffffffffeffffffffffffff
+dfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffff7ffffffffffffffffffffffffffffffffffffffffeffff
+ffffffffffdfffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffff
+fffffeffffffffffffffdfffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffbfffffffffffffffffffffffff
+fffffffffffffffeffffffffffffffdfffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffbfffffffffffffff
+fffffffffffffffffffffffffeffffffffffffffbfffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffdfffff
+ffffffffffffffffffffffffffffffffffff7fffffffffffffbfffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffdfffffffffffffffffffffffffffffffffffffffff7fffffffffffff
+bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffefffffffffffffffffffffffffffffffffffffffff7fff
+ffffffffffbfffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffefffffffffffffffffffffffffffffffffff
+ffffff7fffffffffffff7fffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffff7ffffffffffffffffffffffff
+ffffffffffffffff7fffffffffffff7fffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffff7ffffffffffffff
+ffffffffffffffffffffffffff7fffffffffffff7fffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffa3fff
+ffffffffffffffffffffffffffffffffffffbfffffffffffff7fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffff83fffffffffffffffffffffffffffffffffffffffbffffffffffff2
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffff803fffffffffffffffffffffffffffffffffffffffdfff
+fffffffff0ffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffc03fffffffffffffffffffffffffffffffff
+ffffffdfffffffffffe0ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffe03fffffffffffffffffffffff
+ffffffffffffffffefffffffffffe07fffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffff03fffffffffffff
+ffffffffffffffffffffffffffefffffffffffc03fffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffff83fff
+fffffffffffffffffffffffffffffffffffff7ffffffffffc07fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffc1ffffffffffffffffffffffffffffffffffffffff7ffffffffff81
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffe1ffffffffffffffffffffffffffffffffffffffffbff
+ffffffff83ffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffff1fffffffffffffffffffffffffffffffff
+fffffffcffffffffff0fffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffff9fffffffffffffffffffffff
+ffffffffffffffffff7fffffffff1fffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffdfffffffffffff
+fffffffffffe4fffffffffffffffbffffffffe7fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffcffff9ce7ffffffffffffffcffffffffeffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffcffff9ce7fffffffffffffff7ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffe000000000000000000001fffffe1830e401f3ffffffff80000000
+00000000000007ffffffffffffffffffffffffffffffe000000000000000
+000001ffffffffff1ffffffffffffffffffffe1ffffc4ce66099f3ffffff
+f87ffffffffffffffffffff87fffffffffffffffffffffffffffff1fffff
+fffffffffffffffe1ffffffffcffffffffffffffffffffffe7fffcfcfe67
+99f3fffffff7ffffffffffffffffffffffbfffffffffffffffffffffffff
+fffcffffffffffffffffffffffe7fffffff3fffffffffffffffffffffff9
+fffe1cf06799f3ffffffcfffffffffffffffffffffffcfffffffffffffff
+fffffffffffff3fffffffffffffffffffffff9ffffffefffffffffffffff
+fffffffffeffff8ce66799f3ffffffbffffffffffffffffffffffff7ffff
+ffffffffffffffffffffffeffffffffffffffffffffffffeffffffdfffff
+ffffffffffffffffffff7fffcce66799f3ffffff7fffffffffffffffffff
+fffffbffffffffffffffffffffffffffdfffffffffffffffffffffffff7f
+ffffdfffffffffffffffffffffffff7ffc4ca06791f3ffffff7fffffffff
+fffffffffffffffbffffffffffffffffffffff87ffdfffffffffffffffff
+ffffffff7fffffbfffffffffffffffffffffffffbffe1e7127c9f3fffffe
+fffffffffffffffffffffffffdffffffffffffffffffffff80ffbfffffff
+ffffffffffffffffffbfffffbfffffffffffffffffffffffffbfffffffff
+fce7fffffefffffffffffffffffffffffffdffffffffffffffffffffff80
+0fbfffffffffffffffffffffffffbfffff7fffffffffffffffffffffffff
+dffffffffffce7fffffdfffffffffffffffffffffffffe00000000000000
+0000000000017fffffffffffffffffffffffffdfffff7ff9f3fffffc027f
+ffffffe7ffdffffffffffe4ffffffdffffe03fffffffff3f3ffffffeffff
+ffffffffffffffffff800f7f3e7ffff01fffffffffcfe7ffdfffff7ff8f3
+ffffff9e7fffffffe7ffdffffffffffffffc3ffdffffe71fffffffff3f3f
+ffffff7fffffffffffffffffffff80ff7f1e7ff3f38fffffffffcfe7ffdf
+fffefff8f3ffffff9e7fffffffe7ffeffffffffffffffc07fbffffe79fff
+ffffff3f3fffffff7fffffffffffffffffffff87feff1e7ff3f3cfffffff
+ffcfe7ffeffffefff97386667f9e47261e1f07ffeffffffffffffffc007b
+ffffe799cc8e478707387fffffbffffffffffffffffffffffffeff2e78e0
+f3ce732391e1c1e61feffffefff93312667f9e23044cce47ffe000000000
+000000000bffffe719cc46233313313fffffbfffffffffffffffffffffff
+feff267273f38e731188ccc4e44feffffefff9b332667f9e733ccfcce7ff
+effffffffffffffc007bffffe039cce673f339333fffffbfffffffffffff
+fffffffffffeff366733f01e73399cfcce64cfeffffefff9930324ff9e73
+3c0e0ce7ffeffffffffffffffc07fbffffe799cce6738339303fffff7fff
+fffffffffffffffffffffeff326733f3ce73399ce0ce640fefffff7ff9d3
+3f24ff9e733cfccce7ffeffffffffffffffc3ffdffffe799cce673333933
+ffffff7fe3ffffffffffffffffffffff7f3a6733f3ce73399cccce64ffef
+ffff7ff9e33f99ff9e733cfccce7ffdffffffffffffffffffdffffe799cc
+e673333933ffffff7e03ffffffffffffffffffffff7f3c6733f3ce73399c
+ccce64ffdfffff7ff9e31399ff9e733c4c0e47ffdffffffffffffffffffd
+ffffe7988ce6730313313ffffef003ffffffffffffffffffffff7f3c7272
+f3ce23399cc0c4e44fdfffff7ff9f38799ff9e733e1e2727ffdfffffffff
+fffffffffdffffe7cc4ce6738927387ffffe000000000000000000000000
+007f3e78f9f3e713399ce249e61fdfffffbfffffffffffffffffffffffff
+bffffffffffffffffffefffffffffffffffffffffffffdf003ffffffffff
+ffffffffffffbfffffffffffffffffffffffffbfffffbfffffffffffffff
+ffffffffffbffffffffffffffffffefffffffffffffffffffffffffdfe03
+ffffffffffffffffffffffbfffffffffffffffffffffffffbfffffdfffff
+ffffffffffffffffffff7fffffffffffffffffff7fffffffffffffffffff
+fffffbffe3ffffffffffffffffffffffdfffffffffffffffffffffffff7f
+ffffdfffffffffffffffffffffffff7fffffffffffffffffff7fffffffff
+fffffffffffffffbffffffffffffffffffffffffffdfffffffffffffffff
+ffffffff7fffffeffffffffffffffffffffffffeffffffffffffffffffff
+bffffffffffffffffffffffff7ffffffffffffffffffffffffffefffffff
+fffffffffffffffffefffffff3fffffffffffffffffffffff9ffffffffff
+ffffffffffdfffffffffffffffffffffffefffffffffffffffffffffffff
+fff3fffffffffffffffffffffff9fffffffcffffffffffffffffffffffe7
+ffffffffffffffffffffe7ffffffffffffffffffffff9fffffffffffffff
+fffffffffffffcffffffffffffffffffffffe7ffffffff1fffffffffffff
+ffffffff1ffffffffffffffffffffff8fffffffffffffffffffffc7fffff
+ffffffffffffffffffffffff1fffffffffffffffffffff1fffffffffe000
+000000000000000000ffffffffffffffffffffffff000000000000000000
+0003ffffffffffffffffffffffffffffffe000000000000000000000ffff
+fffffffffffffffffdffffffffffffffffffffffffffffffffffffffffff
+ffbffffffffffffffffffffffffffffffffffffffffffffffffffdffffff
+fffffffffffffffffffffffffffeffffffffffffffffffffffffffffffff
+ffffffffffffbfffffffffffffffffffffffffffffffffffffffffffffff
+fff3ffffffffffffffffffffffffffffffffff7fffffffffffffffffffff
+ffffffffffffffffffffffbfffffffffffffffffffffffffffffffffffff
+ffffffffffffefffffffffffffffffffffffffffffffffffbfffffffffff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+ffffffffffffffffffffffdfffffffffffffffffffffffffffffffffffdf
+ffffffffffffffffffffffffffffffffffffffffffbfffffffffffffffff
+ffffffffffffffffffffffffffffffff3fffffffffffffffffffffffffff
+ffffffffefffffffffffffffffffffffffffffffffffffffffffbfffffff
+fffffffffffffffffffffffffffffffffffffffffeffffffffffffffffff
+fffffffffffffffffff7ffffffffffffffffffffffffffffffffffffffff
+ffbffffffffffffffffffffffffffffffffffffffffffffffffdffffffff
+fffffffffffffffffffffffffffff9ffffffffffffffffffffffffffffff
+ffffffffffffbfffffffffffffffffffffffffffffffffffffffffffffff
+fbfffffffffffffffffffffffffffffffffffffeffffffffffffffffffff
+ffffffffffffffffffffffbfffffffffffffffffffffffffffffffffffff
+ffffffffffe7ffffffffffffffffffffffffffffffffffffff7fffffffff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffffffffffffffffffffffffffffffff
+bfffffffffffffffffffffffffffffffffffffffffbfffffffffffffffff
+ffffffffffffffffffffffffffffffbfffffffffffffffffffffffffffff
+ffffffffffdfffffffffffffffffffffffffffffffffffffffffbfffffff
+ffffffffffffffffffffffffffffffffffffffff7fffffffffffffffffff
+ffffffffffffffffffffefffffffffffffffffffffffffffffffffffffff
+ffbffffffffffffffffffffffffffffffffffffffffffffffcffffffffff
+fffffffffffffffffffffffffffffff7ffffffffffffffffffffffffffff
+ffffffffffffbffffffffffffffffffffffffffffffffffffffffffffffb
+fffffffffffffffffffffffffffffffffffffffffbffffffffffffffffff
+ffffffffffffffffffffffbfffffffffffffffffffffffffffffffffffff
+fffffffff7fffffffffffffffffffffffffffffffffffffffffdffffffff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+ffffffffffffffffffcfffffffffffffffffffffffffffffffffffffffff
+feffffffffffffffffffffffffffffffffffffffffbfffffffffffffffff
+ffffffffffffffffffffffffffffbfffffffffffffffffffffffffffffff
+ffffffffffff7fffffffffffffffffffffffffffffffffffffffbfffffff
+ffffffffffffffffffffffffffffffffffffff7fffffffffffffffffffff
+ffffffffffffffffffffffbfffffffffffffffffffffffffffffffffffff
+ffbffffffffffffffffffffffffffffffffffffffffffffeffffffffffff
+ffffffffffffffffffffffffffffffffdfffffffffffffffffffffffffff
+ffffffffffffbffffffffffffffffffffffffffffffffffffffffffff9ff
+ffffffffffffffffffffffffffffffffffffffffffefffffffffffffffff
+ffffffffffffffffffffffbfffffffffffffffffffffffffffffffffffff
+fffffff7fffffffffffffffffffffffffffffffffffffffffffff7ffffff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+ffffffffffffffffefffffffffffffffffffffffffffffffffffffffffff
+fffbffffffffffffffffffffffffffffffffffffffbfffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffffffffffff
+fffffffffffffcffffffffffffffffffffffffffffffffffffffbfffffff
+ffffffffffffffffffffffffffffffffffff3fffffffffffffffffffffff
+ffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffff
+ffbffffffffffffffffffffffffffffffffffffffffffeffffffffffffff
+ffffffffffffffffffffffffffffffffffbfffffffffffffffffffffffff
+ffffffffffffbffffffffffffffffffffffffffffffffffffffffffdffff
+ffffffffffffffffffffffffffffffffffffffffffffdfffffffffffffff
+ffffffffffffffffffffffbfffffffffffffffffffffffffffffffffffff
+fffff3ffffffffffffffffffffffffffffffffffffffffffffffffefffff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+ffffffffffffffefffffffffffffffffffffffffffffffffffffffffffff
+fffff7ffffffffffffffffffffffffffffffffffffbfffffffffffffffff
+ffffffffffffffffffffffffdfffffffffffffffffffffffffffffffffff
+fffffffffffffffbffffffffffffffffffffffffffffffffffffbfffffff
+ffffffffffffffffffffffffffffffffffbfffffffffffffffffffffffff
+fffffffffffffffffffffffffdffffffffffffffffffffffffffffffffff
+ffbffffffffffffffffffffffffffffffffffffffffe7fffffffffffffff
+fffffffffffffffffffffffffffffffffffeffffffffffffffffffffffff
+ffffffffffffbffffffffffffffffffffffffffffffffffffffffdffffff
+ffffffffffffffffffffffffffffffffffffffffffffff7fffffffffffff
+ffffffffffffffffffffffbfffffffffffffffffffffffffffffffffffff
+fffbffffffffffffffffffffffffffffffffffffffffffffffffffffbfff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+fffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffdfffffffffffffffffffffffffffffffffffbfffffffffffffffff
+ffffffffffffffffffffffcfffffffffffffffffffffffffffffffffffff
+ffffffffffffffffefffffffffffffffffffffffffffffffffffbfffffff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+fffffffffffffffffffffffffff7ffffffffffffffffffffffffffffffff
+ffbfffffffffccffffffffffffffffffffffffffff7fffffffffffffffff
+fffffffffffffffffffffffffffffffffffffbffffffffffffffffffffff
+ffffffffffffbfffcfffff9e7ffffffffffffffffffffffffffcffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffdffffffffffff
+ffffffffffffffffffffffbfffcfffff9e7fffffffffffffffffffffffff
+fbfffffffffffffffffffffffffffffffffffffffffffffffffffffffe7f
+ffffffffffffffffffffffffffffffffbfe1838f273f3ff873ffffffffff
+fffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffbfffffffffffffffffffffffffffffffffbfc4cf27133f3ff331
+ffffffffffffffffffffefffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffdfffffffffffffffffffffffffffffffffbfcfce73
+393f3fe733ffffffffffffffffffff9fffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffefffffffffffffffffffffffffffffff
+ffbfe1ce73393f3fe727ffffffffffffffffffff7fffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff7ffffffffffffffffffff
+ffffffffffffbff8ce73393f3fce67fffffffffffffffffffeffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffbffffffffff
+ffffffffffffffffffffffbffcce73393f3fce67fffffffffffffffffff9
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd
+ffffffffffffffffffffffffffffffffbfc4cb27133f27cccfffffffffff
+fffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffeffffffffffffffffffffffffffffffffbfe1e78f073f27e1cf
+ffffffffffffffffffefffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff7fffffffffffffffffffffffffffffffbfffffff
+3f9e4fffffffffffffffffffffffdfffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffbfffffffffffffffffffffffffffff
+ffbfffffff3f9e7fffffffffffffffffffffff3fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffdfffffffffffffffffff
+ffffffffffffbfffffff3fccfffffffffffffffffffffffeffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffefffffffff
+ffffffffffffffffffffffbffffffffffffffffffffffffffffffffffdff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+f7ffffffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+fffffffbffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffbffffffffffffffffffffffffffffffbfffffffccfffff9ff
+ffffffffffffffffe7ffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffdffffffffffffffffffffffffffffffbfffffff
+9e7ffff99fffffffffffffffffdfffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffeffffffffffffffffffffffffffff
+ffbfffffff9e7fffff9fffffffffffffffffbfffffff33ffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffff3fffffffffffffffff
+ffffffffffffbf9273233f3e19c9061ffffffffffffffe7f3ffffe79ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff99dfffffff
+ffffffffffffffffffffffbf8273113f3c49c99c4ffffffffffffffdff3f
+fffe79ffffffffffffffffffffffffffffffffffffffffffffffffcfffff
+3cefffffffffffffffffffffffffffffbf9e73393f3ccc999cffffffffff
+fffffb860e3c9cfdffffffffffffffffffffffffffffffffffffffffffff
+ffffcfffff3cf7ffffffffffffffffffffffffffffbf9e73393f3c0e399e
+1ffffffffffffff7133c9c4cfdffffffffffffffffffffffffffffffffff
+ffffffffffffe1838f267e7bffffffffffffffffffffffffffffbf9e7339
+3f3cfe399f8fffffffffffffcf3f39cce4fdffffffffffffffffffffffff
+ffffffffffffffffffffffc4cf27127e7dffffffffffffffffffffffffff
+ffbf9e73393f3cfc999fcfffffffffffffbf8739cce4fdffffffffffffff
+ffffffffffffffffffffffffffffffffcfce73387e7effffffffffffffff
+ffffffffffffbf9e23393f3c49c9944fffffffffffff7fe339cce4fdffff
+ffffffffffffffffffffffffffffffffffffffffffe1ce73387e7f7fffff
+ffffffffffffffffffffffbf9f13393f3e19c9ce1ffffffffffffefff339
+cce4fdfffffffffffffffffffffffffffffffffffffffffffffff8ce7338
+7e7fbfffffffffffffffffffffffffffbfffffff9e7fffffffffffffffff
+fff9ff132c9c4cfdffffffffffffffffffffffffffffffffffffffffffff
+fffcce73387e7fdfffffffffffffffffffffffffffbfffffff9e7fffffff
+fffffffffffff7ff879e3c1cfdffffffffffffffffffffffffffffffffff
+ffffffffffffc4cb27127e7fefffffffffffffffffffffffffffbfffffff
+ccffffffffffffffffffffeffffffffcfe79ffffffffffffffffffffffff
+ffffffffffffffffffffffe1e78f067e7ff7ffffffffffffffffffffffff
+ffbfffffffffffffffffffffffffffff9ffffffffcfe79ffffffffffffff
+ffffffffffffffffffffffffffffffffffffff3f3cfffbffffffffffffff
+ffffffffffffbfffffffffffffffffffffffffffff7ffffffffcff33ffff
+ffffffffffffffffffffffffffffffffffffffffffffffff3f3cfffdffff
+ffffffffffffffffffffffbffffffffffffffffffffffffffffeffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f
+99fffeffffffffffffffffffffffffffbfffffffffffffffffffffffffff
+fdffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffff3fffffffffffffffffffffffffbfffffffffffffffff
+fffffffffff3ffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffffbfffffff
+ffffffffffffffffffffefffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffefffffffffffffffffffffff
+ffbfffffffffffffffffffffffffffdfffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffff7ffffffffffff
+ffffffffffffbfffffffffffffffffffffffffff3fffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffbff
+ffffffffffffffffffffffbffffffffffffffffffffffffffeffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdffffffffffffffffffffffffbffffffffffffffffffffffffffd
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffeffffffffffffffffffffffffbfffffffffffffffff
+fffffffffbffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffff7fffffffffffffffffffffffbfffffff
+ffffffffffffffffffe7ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffbfffffffffffffffffffff
+ffbfffffffffffffffffffffffffdfffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffdfffffffffff
+ffffffffffffbfffffffffffffffffffffffffbfffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef
+ffffffffffffffffffffffbfffffffffffffffffffffffff7fffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffff7ffffffffffffffffffffffbffffffffffffffffffffffffcff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffbffffffffffffffffffffffbfffffffffffffffff
+fffffffbffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffdffffffffffffffffffffffbfffffff
+fffffffffffffffff7ffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffeffffffffffffffffffff
+ffbfffffffffffffffffffffffcfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffff
+ffffffffffffbfffffffffffffffffffffffbfffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+9fffffffffffffffffffffbfffffffffffffffffffffff7fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffefffffffffffffffffffffbffffffffffffffffffffffeffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffff7ffffffffffffffffffffbfffffffffffffffff
+fffff9ffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffbffffffffffffffffffffbfffffff
+fffffffffffffff7ffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffdffffffffffffffffff
+f807ffffffffffffffffffffefffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff
+fffffffffffc07ffffffffffffffffffffdfffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff7ffffffffffffffffffc07ffffffffffffffffffff3fffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffbffffffffffffffffffc07fffffffffffffffffffeffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffdffffffffffffffffffe0fffffffffffffffff
+fffdffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffeffffffffffffffffffe0fffffff
+fffffffffffff3ffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff7ffffffffffffffff
+fe0fffffffffffffffffffefffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffbffffff
+fffffffffffe1fffffffffffffffffffdfffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffdffffffffffffffffff1fffffffffffffffffffbfffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffeffffffffffffffffff1ffffffffffffffffffe7fffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff7fffffffffffffffff1fffffffffffffffff
+fdffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffbfffffffffffffffffbfffffff
+fffffffffffbffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffcfffffffffffffff
+ffbffffffffffffffffff7ffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffff
+ffffffffffffbfffffffffffffffffcfffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffbffffff8000000000000000000007ffffffbfffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffdfffff87ffffffffffffffffffff87fffff7fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffefffff7ffffffffffffffffffffffbfffbc
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffff7fffcfffffffffffffffffff
+ffffcfff1bffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffb9ffbfffffffff
+fffffffffffffff7fe07ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffd0ff
+7ffffffffffffffffffffffffbfe07ffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffe0ff7ffffffffffffffffffffffffdfc07ffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffc07efffffffffffffffffffffffffdf803ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffff007dfffffffffffffffffffffffffef803
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffc03dffffffffffffffffffff
+fffffef00fffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffff01dffffffffc0
+ffffff9fffffffff607fffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffc1d
+ffffffffce3fffff9fffffffff61ffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff0bffffffffcf3fffff9fffffffff4fffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffcbffffffffcf98787c1fffffffffbfffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffff3ffffffffcf9133391fffffffffbfff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffbffffffffcf933f339fff
+ffffffbfffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffbffffffffcf
+9038339fffffffff7fffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd
+ffffffffcf93f3339fffffffff7fffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffdffffffffcf33f3339fffffffff7fffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffdffffffffce3130391ffffffffeffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffdffffffffc0f8789c9ffffffffeffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffeffffffffffffffffffff
+fffffdffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffff
+fffffffffffffffdffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+7ffffffffffffffffffffffffbffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffbffffffffffffffffffffffff7ffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffffffffffffffffefffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffe7ffffffffffffffffffffff9fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffff9ffffffffffffffffff
+fffe7fffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffe3fffffff
+fffffffffffff1ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffc00000000000000000000fffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff5d6ebffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffdf7fbfffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffebaed6ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffbf007f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff5d6ebffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffdf7fbfffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffebd6c2c2d2f5ffff
+ffffd6e1fadbc7c2dbfafffffff5d6ebffffffffffffffffbf7f404070df
+ffffffff7f9fef8f50408fefffffffdf7fbfffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffd2aeae
+c2c2aeb3e6ffffffaebdbdb3c2bdaebdf0ffffebaed6ffffffffffffff70
+000040400010afffffff0030301040300030cfffffbf007fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffff0aebdfafffff0b3b8ffffffaeaebdfaffffe1aec2ffffebaed6ffff
+ffffffffcf0030efffffcf1020ffffff000030efffff9f0040ffffbf007f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffebc2e6ffffffffc2aeffffffaeaef5ffffffffccaef0
+ffebaed6ffffffffffffbf40afffffffff4000ffffff0000dfffffffff60
+00cfffbf007fffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffae6b3aeffffffaeb8ffff
+ffffffe1aee6ffebaed6ffffffffffffffffffffffefaf1000ffffff0020
+ffffffffff9f00afffbf007fffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff0ccbdaeaeaeaeaeff
+ffffaec2ffffffffffebaed6ffebaed6ffffffffffffffcf603000000000
+00ffffff0040ffffffffffbf007fffbf007fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffe6aeaec2
+d6e1f0c2aeffffffaec2ffffffffffebaedbffebaed6ffffffffffffaf00
+00407f9fcf4000ffffff0040ffffffffffbf008fffbf007fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffbdb3f0ffffffffc2aeffffffaebdffffffffffdbaeebffebaed6ffff
+ffffffff3010cfffffffff4000ffffff0030ffffffffff8f00bfffbf007f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffaec2fffffffffab3aeffffffaeaef5ffffffffc2b3ff
+ffebaed6ffffffffffff0040ffffffffef1000ffffff0000dfffffffff40
+10ffffbf007fffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffbdb3f0fffff5bdaeaeffffffaeaebdfa
+ffffe1aeccffffebaed6ffffffffffff3010cfffffdf300000ffffff0000
+30efffff9f0060ffffbf007fffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffe6aeb3c2bdaec2d2aebd
+f0ffaeb8b3aec2b3aebdfaffffebaed6ffffffffffffaf00104030004070
+0030cfff0020100040100030efffffbf007fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffebd2c2
+d2e6fffaccc7f5ffaec2f5d2c2c7e1fffffffff5d6ebffffffffffffffbf
+704070afffef6050dfff0040df7040509fffffffffdf7fbfffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffaec2ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff0040ffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffaec2ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffff0040ffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffaec2ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffff0040
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffc2d2ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff4070ffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff
+0 11 SF
+0 LE neg 20 sub M
+(
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Table of Contents
+)EH(
+)0 P(
+)BQ(
+
+
+)UL(
+)LI(
+
+)A(Threads of Control)EA(
+    )UL(
+    )LI(
+    )A(What Are Threads?)EA(
+    )LI(
+    )A(A Simple Thread Example)EA(
+    )LI(
+    )A(Thread Attributes)EA(
+        )UL(
+        )LI(
+        )A(Thread Body)EA(
+            )UL(
+            )LI(
+            )A(The Clock Applet)EA(
+            )LU(
+        )LI(
+        )A(Thread State)EA(
+        )LI(
+        )A(Thread Priority)EA(
+        )LI(
+        )A(Daemon Threads)EA(
+        )LI(
+        )A(Thread Group)EA(
+            )UL(
+            )LI(
+            )A(The ThreadGroup Class)EA(
+            )LU(
+        )LU(
+    )LI(
+    )A(Multithreaded Programs)EA(
+        )UL(
+        )LI(
+        )A(Synchronization)EA(
+        )LI(
+        )A(Deadlock)EA(
+        )LI(
+        )A(Re-entrant Monitors)EA(
+        )LU(
+    )LI(
+    )A(Summary)EA(
+    )LU(
+
+
+)LU(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Table of Contents)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 1 H(
+     Threads of Control
+)EH(
+)0 P(
+)BQ(
+
+Below is three copies of an applet that animates different
+sorting algorithms. No, this lesson is not about sorting algorithms.
+But these applets do provide a visual aid to understanding a powerful
+capability of the Java language--threads.
+)PR(
+                  )BD(Bi-Directional)ES(
+)BD(Bubble Sort)ES(        )BD(Bubble Sort)ES(      )BD(Quick Sort)ES(
+          
+)RP(
+Now start each of the applets, one by one, by clicking on
+them with the mouse. Notice anything? Yes! The applets are
+running side by side at the same time! Notice anything else?
+Yes! You can also scroll this page or bring up one of your browser's
+panels at the same time that the three sorting applets sort their data.
+All of this is due to the power of )I(threads)ES(.
+
+)0 4 H()A(What Are Threads?)EA(
+)EH(
+)BQ(
+A thread--sometimes known as an )I(execution context)ES( or 
+a )I(lightweight process)ES(--is a single sequential flow of control
+within a process.
+)QB(
+
+)0 4 H()A(A Simple Thread Example)EA(
+)EH(
+)BQ(
+The following program is a simple Java application that creates and starts two
+independent threads.
+)BQ(
+)PR(
+class TwoThreadsTest {
+    public static void main \201String args[]\202 {
+        new SimpleThread\201"Jamaica"\202.start\201\202;
+        new SimpleThread\201"Fiji"\202.start\201\202;
+    }
+}
+class SimpleThread extends Thread {
+    public SimpleThread\201String str\202 {
+	super\201str\202;
+    }
+    public void run\201\202 {
+	for \201int i = 0; i < 10; i++\202 {
+	    System.out.println\201i + " " + getName\201\202\202;
+            try {
+		sleep\201\201int\202\201Math.random\201\202 * 1000\202\202;
+	    } catch \201InterruptedException e\202 {}
+	}
+	System.out.println\201"DONE! " + getName\201\202\202;
+    }
+}
+)RP(
+)QB(
+)QB(
+
+
+)0 4 H()A(Thread Attributes)EA(
+)EH(
+)BQ(
+To use threads efficiently and without errors you must understand
+various aspects of threads and the Java runtime system. You need to
+know how to provide a body for a thread, the life-cycle of a thread,
+how the runtime system schedules threads, thread groups, and what
+daemon threads are and how to write them.
+)QB(
+
+)0 4 H()A(Mulithreaded Programs)EA(
+)EH(
+)BQ(
+Up until now all of the sample programs in this lesson have used
+either one thread or multiple independent threads that run asynchronously.
+However, it is often useful to use multiple threads that share data
+and therefore must run synchronously. Typically, programs that use
+multiple synchronous threads are called multithreaded programs and
+require special handling.
+)QB(
+
+
+
+)0 4 H()A(Summary)EA(
+)EH(
+)BQ(
+This lesson has taken you through the intricacies of Java threads
+including the life-cycle of a Java thread, scheduling, thread groups,
+and synchronization. The Java development environment supports multithreaded
+programs through the language, the libraries, and the runtime system.
+This summary page highlights all of the features in the Java development
+environment that supports threads and gives you links to further documentation
+about those features.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Table of Contents)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    What Are Threads?
+)EH(
+)0 P(
+)BQ(
+
+All programmers are familiar with writing sequential programs.
+You've probably written a program that displays "Hello World!",
+or sorts a list of names, or computes a list of prime numbers.
+These are sequential programs: each has a beginning, an end,
+a sequence, and at any given time during the runtime of the program
+there is a single point of execution.
+)0 P(
+A thread is similar to the sequential programs described above:
+a single thread also has a beginning, an end, a sequence, and
+at any given time during the runtime of the thread there is
+a single point of execution. However, a thread itself is not
+a program--it cannot run on its own--but runs within a program.
+)HR(
+)BD(Definition:)ES( A thread is a single sequential
+flow of control within a program.
+)HR(
+)0 P(
+There is nothing new in the concept of a single thread.
+The real hoopla surrounding threads is not about a single sequential
+thread, but rather about the use of multiple threads in a single
+program all running at the same time and performing different tasks. 
+)0 P(
+The HotJava browser is an example of a multithreaded application; within
+the HotJava browser you can scroll a page while it's downloading an applet or
+image, play animation and sound concurrently, print a page in the
+background while you download a new page, or watch three sorting
+algorithms race to the finish. You are used to life operating in a
+concurrent fashion...so why not your browser?
+
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    A Simple Thread Example
+)EH(
+)0 P(
+)BQ(
+
+The simple example shown in full on the previous page defines two
+classes: SimpleThread and TwoThreadsTest. Let's begin our exploration
+of the application with the SimpleThread class: a subclass of the Thread
+class that is provided by the java.lang package.
+)BQ(
+)PR(
+class SimpleThread extends Thread {
+    public SimpleThread\201String str\202 {
+	super\201str\202;
+    }
+    public void run\201\202 {
+	for \201int i = 0; i < 10; i++\202 {
+	    System.out.println\201i + " " + getName\201\202\202;
+            try {
+		sleep\201\201int\202\201Math.random\201\202 * 1000\202\202;
+	    } catch \201InterruptedException e\202 {}
+	}
+	System.out.println\201"DONE! " + getName\201\202\202;
+    }
+}
+)RP(
+)QB(
+The first method in the SimpleThread class is a constructor that takes
+a String as its only argument. This constructor is implemented by calling
+a superclass constructor and is only interesting to us because it sets
+the Thread's name which is used later in the program.
+)0 P(
+The next method in the SimpleThread class is the )SM(run\201\202)ES( method.
+The )SM(run\201\202)ES( method is the heart of any Thread--it's where the
+action of the Thread takes place. The )SM(run\201\202)ES( method of the
+SimpleThread class contains a )SM(for)ES( loop that iterates ten times. In
+each iteration the method display the iteration number and the name of the Thread then
+sleeps for a random interval between 0 and 1 second.
+After the loop has finished, the )SM(run\201\202)ES( method prints "DONE!" along
+with the name of the thread. That's it for the SimpleThread class.
+)0 P(
+The TwoThreadsTest class provides a )SM(main\201\202)ES( method that
+creates two SimpleThread threads: one is named "Jamaica" and the other
+is named "Fiji". \201If you can't decide on where to go for vacation you
+can use this program to help you decide--go to the island whose
+thread prints "DONE!" first.\202
+)BQ(
+)PR(
+class TwoThreadsTest {
+    public static void main \201String args[]\202 {
+        new SimpleThread\201"Jamaica"\202.start\201\202;
+        new SimpleThread\201"Fiji"\202.start\201\202;
+    }
+}
+)RP(
+)QB(
+The )SM(main\201\202)ES( method also starts each thread immediately
+following its construction by calling the )SM(start\201\202)ES( method.
+To save you from typing in this program, click here for the source
+code to the
+)A(SimpleThread)EA(
+class and here for the source code to the
+)A(TwoThreadsTest)EA(
+program. Compile and run the program and watch your vacation
+fate unfold. You should see output similar to the following:
+)BQ(
+)PR(
+0 Jamaica
+0 Fiji
+1 Fiji
+1 Jamaica
+2 Jamaica
+2 Fiji
+3 Fiji
+3 Jamaica
+4 Jamaica
+4 Fiji
+5 Jamaica
+5 Fiji
+6 Fiji
+6 Jamaica
+7 Jamaica
+7 Fiji
+8 Fiji
+9 Fiji
+8 Jamaica
+DONE! Fiji
+9 Jamaica
+DONE! Jamaica
+)RP(
+)QB(
+\201Looks like I'm going to Fiji!!\202
+Notice how the output from each thread is intermingled with the output from the
+other. This is due to the fact that both SimpleThread threads are running concurrently
+thus both )SM(run\201\202)ES( methods are running at the same time and each thread
+is displaying its output at the same time as the other.
+)0 P(
+)BD(Try This:)ES( Change the main program so that it creates a third
+thread with the name "Bora Bora". Compile and run the program again.
+Does this change your island of choice for your vacation?
+Here's the code for the new main program which we renamed to
+)A(ThreeThreadsTest)EA(.
+
+)0 4 H(Keep Going)EH(
+)BQ(
+This page glosses over many of the details of threads such as the
+)SM(start\201\202)ES( and )SM(sleep\201\202)ES( methods.
+Don't worry, the next several pages of this lesson explain these concepts and
+others in detail. The important thing to understand from this
+page is that a Java program can have many threads, and that those
+threads can run )I(concurrently)ES(.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    SimpleThread.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class SimpleThread extends Thread {
+    public SimpleThread\201String str\202 {
+	super\201str\202;
+    }
+    public void run\201\202 {
+	for \201int i = 0; i < 10; i++\202 {
+	    System.out.println\201i + " " + getName\201\202\202;
+            try {
+		sleep\201\201int\202\201Math.random\201\202 * 1000\202\202;
+	    } catch \201InterruptedException e\202 {}
+	}
+	System.out.println\201"DONE! " + getName\201\202\202;
+    })WR(
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    TwoThreadsTest.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class TwoThreadsTest {
+    public static void main \201String args[]\202 {
+        new SimpleThread\201"Jamaica"\202.start\201\202;
+        new SimpleThread\201"Fiji"\202.start\201\202;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    ThreeThreadsTest.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class ThreeThreadsTest {
+    public static void main \201String args[]\202 {
+        new SimpleThread\201"Jamaica"\202.start\201\202;
+        new SimpleThread\201"Fiji"\202.start\201\202;
+        new SimpleThread\201"Bora Bora"\202.start\201\202;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Thread Attributes
+)EH(
+)0 P(
+)BQ(
+
+By now, you know are familiar with threads and you've seen a simple Java
+application that runs two threads concurrently. And you've had an opportunity
+to watch threads in action using the SystemMonitor applet. This
+page introduces you several features specific to Java threads and provides
+you with links to pages that talk about each feature in detail.
+)0 P(
+Java threads are implemented by the Thread class which is part of the
+java.lang package. The Thread class implements a system independent
+definition of Java threads. But under the hood, the actual implementation
+of concurrent operation is provided by a system-specific implementation.
+For most programming needs, the underlying implementation doesn't
+matter; you can ignore the underlying implementation and program
+to the thread API described in this lesson and the other documentation
+provided with the Java system.
+)DL(
+)DT(
+)A()BD(Thread Body)ES()EA(
+)DD(
+All of the action takes place in the thread's body--the thread's
+)SM(run\201\202)ES( method. You can provide the body to a Thread in
+one of two ways: by subclassing the Thread class and overriding its
+)SM(run\201\202)ES( method, or creating a Thread with a Runnable
+object as its )I(target)ES(.
+)DT(
+)A()BD(Thread State)ES()EA(
+)DD(
+Throughout its life, a Java thread is in one of several states.
+A thread's state indicates what the Thread is doing and what it
+is capable of doing at that time of its life: is it running?
+is it sleeping? is it dead?
+)DT(
+)A()BD(Thread Priority)ES()EA(
+)DD(
+A thread's priority indicates to the Java thread scheduler when
+this thread should run in relation to all of the other threads.
+)DT(
+)A()BD(Daemon Threads)ES()EA(
+)DD(
+Daemon threads are those that provide a service for other threads
+in the system. Any Java thread can be a daemon thread.
+)DT(
+)A()BD(Thread Group)ES()EA(
+)DD(
+All threads belong to a thread group. ThreadGroup, a java.lang class,
+defines and implements the capabilities of a group of related threads.
+)LD(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Thread Body
+)EH(
+)0 P(
+)BQ(
+
+All the action takes place in the thread body which is the thread's
+)SM(run\201\202)ES( method. After a thread has been created and
+initialized, the runtime system calls its )SM(run\201\202)ES( method.
+The code in the )SM(run\201\202)ES( method implements the behaviour
+for which the thread was created. It's the thread's raison d'etre
+\201reason to be\202.
+)0 P(
+Often, a thread's )SM(run\201\202)ES( method is a loop. For example,
+an animation thread might loop through and display a series of images.
+Sometimes a thread's )SM(run\201\202)ES( method performs an operation that
+takes a long time. For example, downloading and playing a sound
+or a JPEG movie.
+)0 P(
+There are two different ways that you can provide a customized
+)SM(run\201\202)ES( method for a Java thread:
+)OL(
+)LI(
+Subclass the Thread class defined in the java.lang package and
+override the )SM(run\201\202)ES( method.
+)BR(
+)BD(Example:)ES( The SimpleThread class used in the the example
+described in )A(A Simple Thread Example)EA( previously in
+this lesson is an example of this style of using Java threads.
+)LI(
+Provide a class that implements the Runnable interface, also defined
+in the java.lang package. Now, when you instantiate a thread \201either directly
+from the Thread class, or from a subclass of Thread\202, give the new
+thread a handle to an instance of your Runnable class. This Runnable
+object provides the )SM(run\201\202)ES( method to the thread.
+)BR(
+)BD(Example:)ES( The clock applet you see here 
+is an example of using the Runnable interface to provide a )SM(run\201\202)ES(
+method to a thread.
+)A()BD(The Clock Applet)ES()EA(
+describes the source code for this simple applet.
+)LO(
+
+There are good reasons for choosing either of the two options described
+above over the other. However, for most cases, the following rule of
+thumb will guide you to the best option.
+
+)HR(
+)BD(Rule of thumb:)ES( If your class )I(must)ES( derive from
+some other class \201the most common example being Applet\202, then you should
+use Runnable as described in Option #2.
+)HR(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The Clock Applet
+)EH(
+)0 P(
+)BQ(
+
+The Clock applet shown here:  displays the
+current time and updates its display every second.
+You can scroll this page and perform other tasks while the
+clock continues to update because the code that updates the
+clock's display runs within its own thread.
+)0 P(
+This page highlights and explains the )A(source
+code)EA( for the clock applet in detail. In particular, this page 
+describes the code segments that implement the clock's threaded behaviour;
+it does not describe the code segments that are related to the life
+cycle of the applet. If you have not written your own applets before
+or are not familiar with the life cycle of any applet, you may want
+to take this time to familiarize yourself with the material in
+)A(The Life Cycle of an Applet)EA(
+)A()0 4 IM()EA( 
+before proceeding with this page.
+
+)0 P(
+)0 4 H(The Decision to Use the Runnable Interface)EH(
+)BQ(
+The Clock applet uses the Runnable interface to provide the
+)SM(run\201\202)ES( method for its thread. In order to run within a
+Java-compatible browser, the Clock class had to derive from the Applet
+class. However, the Clock applet also needs to use a thread so that it
+can continuously update its display without taking over the process in
+which it is running. But since the Java language does not support multiple-inheritance,
+the Clock class could not inherit from Thread as well as from Applet.
+Thus, the Clock class uses the Runnable interface to provide its
+threaded behaviour.
+
+)0 P(
+Applets are not threads nor do Java-compatible browsers or appletviewers
+automatically create threads in which to run applets. Therefore, if
+an applet needs any threads it must create its own. The clock applet
+needs one thread in which to perform its display updates because it
+updates its display frequently and the user needs to be able to perform
+other tasks at the same time the clock is running \201such as going to
+another page, or scrolling this one\202.
+)QB(
+
+)0 4 H(The Runnable Interface)EH(
+)BQ(
+The Clock applet provides a )SM(run\201\202)ES( method for its thread
+via the Runnable interface. The class definition for the Clock class
+indicates that the Clock is a subclass of Applet and implements the
+Runnable interface. If you are not familiar with interfaces review
+the information at )A()BD(Missing Page)ES()EA(.
+)BQ(
+)PR(
+class Clock extends Applet )BD(implements Runnable)ES( {
+)RP(
+)QB(
+The Runnable interface defines a single method called )SM(run\201\202)ES(
+that takes no arguments and returns no value. Because the Clock class
+implements the Runnable interface, it must provide an implementation
+for the )SM(run\201\202)ES( method as defined in the interface.
+However, before explaining the Clock's )SM(run\201\202)ES( method
+we need to look at some of the other elements of the Clock code first.
+)QB(
+
+)0 4 H(Creating the Thread)EH(
+)BQ(
+The application in which an applet is running calls the applet's
+)SM(start\201\202)ES( method when it loads the applet. The Clock applet
+creates a Thread named )SM(clockThread)ES( in its )SM(start\201\202)ES(
+method and starts the thread.
+)BQ(
+)PR(
+public void start\201\202 {
+    if \201clockThread == null\202 {
+        clockThread = new Thread\201this, "Clock"\202;
+        clockThread.start\201\202;
+    }
+}    
+)RP(
+)QB(
+First, the )SM(start\201\202)ES( method checks to see if )SM(clockThread)ES(
+is null. If )SM(clockThread)ES( is null, then the applet is brand new or
+has been previously stopped and a new thread must be created. Otherwise, the
+applet is already running. The applet creates a new thread
+with this invocation:
+)BQ(
+)PR(
+clockThread = new Thread\201this, "Clock"\202;
+)RP(
+)QB(
+Notice that )SM(this)ES(--the Clock applet--is passed in as the first
+argument to the thread constructor. The first argument to this Thread constructor
+must implement the Runnable interface and becomes the thread's )I(target)ES(.
+When constructed in this way, the thread, )SM(clockThread)ES(, gets its
+)SM(run\201\202)ES( method from its target Runnable object, in this case,
+the Clock applet.
+)0 P(
+The second argument is just a name for the thread.
+)QB(
+
+)0 4 H(Stopping the Thread)EH(
+)BQ(
+When you leave the page that displays the Clock applet, the application in which
+the applet is running calls the applet's )SM(stop\201\202)ES( method. The Clock's
+)SM(stop\201\202)ES( method stops the thread then sets it to null. This stops
+the continual updating of the clock.
+)BQ(
+)PR(
+public void stop\201\202 {
+    clockThread.stop\201\202;
+    clockThread = null;
+}
+)RP(
+)QB(
+If you revisit the page, the )SM(start\201\202)ES( method is called again,
+and the clock starts up again with a new thread.
+)QB(
+
+)0 4 H( The Run Method)EH(
+)BQ(
+And finally for the Clock's )SM(run\201\202)ES( method.
+The )SM(run\201\202)ES( method implements the heart of the Clock applet
+and looks like this:
+)BQ(
+)PR(
+public void run\201\202 {
+    while \201clockThread != null\202 {
+        repaint\201\202;
+        try {
+            clockThread.sleep\2011000\202;
+        } catch \201InterruptedException e\202{
+        }
+    }
+}   
+)RP(
+)QB(
+As you saw in the previous section, when the applet is asked to stop, the applet
+stops the )SM(clockThread)ES( and then sets it to null; this lets
+the )SM(run\201\202)ES( method know when to stop. Thus the first
+line of the )SM(run\201\202)ES( method loops until )SM(clockThread)ES(
+is stopped. Within the loop, the applet repaints itself, and then
+tells the Thread to sleep for 1 second \2011000 milliseconds\202.
+An applet's )SM(repaint\201\202)ES( method ultimately calls the applet's
+)SM(paint\201\202)ES( method which does the actual update of the applet's
+display area. The Clock applet's )SM(paint\201\202)ES( method gets the
+current time and draws it to the screen.
+)BQ(
+)PR(
+public void paint\201Graphics g\202 {
+    Date now = new Date\201\202;
+    g.drawString\201now.getHours\201\202 + ":" + now.getMinutes\201\202 + ":" + now.getSeconds\201\202, 5, 10\202;
+}
+)RP(
+)QB(
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Clock.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+
+import java.awt.Graphics;
+import java.util.Date;
+
+public class Clock extends java.applet.Applet implements Runnable {
+
+    Thread clockThread;
+
+    public void start\201\202 {
+	if \201clockThread == null\202 {
+	    clockThread = new Thread\201this, "Clock"\202;
+	    clockThread.start\201\202;
+	})WR(
+    }
+    public void run\201\202 {
+	while \201clockThread != null\202 {
+	    repaint\201\202;
+	    try {
+		clockThread.sleep\2011000\202;
+	    } catch \201InterruptedException e\202{
+	    }
+	}
+    }
+    public void paint\201Graphics g\202 {
+	Date now = new Date\201\202;
+	g.drawString\201now.getHours\201\202 + ":" + now.getMinutes\201\202 + ":" + now.getSeconds\201\202, 5, 10\202;
+    }
+    public void stop\201\202 {
+	clockThread.stop\201\202;
+	clockThread = null;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Thread State
+)EH(
+)0 P(
+)BQ(
+
+The following diagram illustrates the various states
+that a Java thread can be in at any point during its life
+and which method calls cause a transition to another state.
+This diagram is not a complete finite state diagram, but
+rather an overview of the more interesting and common facets
+of a thread's life. The remainder of this page discusses a
+Thread's life cycle in terms of its state.
+
+)0 P(
+)0 5 IM(
+)0 P(
+
+)0 4 H(New Thread)EH(
+)BQ(
+The following statement creates a new thread but does not
+start it thereby leaving the thread in the state labeled
+"New Thread" in the diagram.
+)BQ(
+)PR(
+Thread myThread = new MyThreadClass\201\202;
+)RP(
+)QB(
+When a thread is in the "New Thread" state, it is merely
+an empty Thread object. No system resources have been allocated
+for it yet. Thus when a thread is in this state, you
+can only start the thread or stop it; calling any other
+method besides )SM(start\201\202)ES( or )SM(stop\201\202)ES(
+when a thread is in this state makes no sense and causes an
+)A(IllegalThreadStateException)EA(.
+)QB(
+
+
+)0 4 H(Runnable)EH(
+)EA(
+)BQ(
+Now consider these two lines of code:
+)BQ(
+)PR(
+Thread myThread = new MyThreadClass\201\202;
+myThread.start\201\202;
+)RP(
+)QB(
+The )SM(start\201\202)ES( method creates the system resources
+necessary to run the thread, schedules the thread to run, and
+calls the thread's )SM(run\201\202)ES( method.
+At this point the thread is in the "Runnable" state.
+This state is called "Runnable" rather than "Running" because
+the thread may not actually be running when it is in this state.
+Many computers have a single processor making it impossible to
+run all "Runnable" threads at the same time. So, the Java runtime
+system must implement a scheduling scheme that shares the
+processor between all "Runnable" threads. \201See
+)A()BD(Thread Priority)ES()EA(
+for more information about scheduling.\202
+However, for most purposes you can think of the "Runnable"
+state as simply "Running".
+When a thread is running--it's "Runnable" and is the current
+thread--the instructions in its )SM(run\201\202)ES( are executing
+sequentially.
+)QB(
+
+
+)0 4 H(Not Runnable)EH(
+)EA(
+)BQ(
+A thread enters the "Not Runnable" state when one of these four events occur:
+)UL(
+)LI(
+someone calls its )SM(suspend\201\202)ES( method
+)LI(
+someone calls its )SM(sleep\201\202)ES( method
+)LI(
+the thread uses its )SM(wait\201\202)ES( method to wait on a condition variable
+)LI(
+the thread is blocking on I/O.
+)LU(
+For example, the bold line in this code snippet
+)BQ(
+)PR(
+Thread myThread = new MyThreadClass\201\202;
+myThread.start\201\202;
+try {
+    )BD(myThread.sleep\20110000\202;)ES(
+} catch \201InterruptedException e\202{
+}
+)RP(
+)QB(
+puts )SM(myThread)ES( to sleep for 10 seconds \20110,000 milliseconds\202.
+During those 10 seconds, even if the processor became available
+)SM(myThread)ES( would not run. After the 10 seconds are up,
+)SM(myThread)ES( becomes "Runnable" again and now if the processor
+became available )SM(myThread)ES( would run.
+)0 P(
+For each of the "entrances" into the "Not Runnable" state listed
+above, there is a specific and distinct escape route that returns
+the thread to the "Runnable" state. An escape route only works
+for its corresponding "entrance". For example, if a thread has
+been put to sleep, then the specified number of milliseconds must
+elapse before the thread becomes "Runnable" again. Calling
+)SM(resume\201\202)ES( on a sleeping thread has no effect.
+)0 P(
+The following indicates the escape route for every entrance into
+the "Not Runnable" state.
+)UL(
+)LI(
+If a thread has been put to sleep, then the specified number
+of milliseconds must elapse.
+)LI(
+If a thread has been suspended, then someone must call its
+)SM(resume\201\202)ES( method. 
+)LI(
+If a thread is waiting on a condition variable,
+whatever object owns the variable must relinquish it by
+calling either )SM(notify\201\202)ES( or )SM(notifyAll\201\202)ES(.
+)LI(
+If a thread is blocked on I/O, then the specified I/O command
+must complete. 
+)LU(
+)QB(
+
+)0 4 H(Dead)EH(
+)BQ(
+A thread can die in two ways: either from natural causes, or
+by being killed \201stopped\202. A thread dies naturally when its
+)SM(run\201\202)ES( method exits normally. For example, the
+)SM(while)ES( loop in this method is a finite loop--it
+will iterate 100 times and then exit.
+)BQ(
+)PR(
+public void run\201\202 {
+    int i = 0;
+    while \201i < 100\202 {
+	i++;
+	System.out.println\201"i = " + i\202;
+    }
+}
+)RP(
+)QB(
+A thread with this )SM(run\201\202)ES( method will die naturally
+after the loop and the )SM(run\201\202)ES( method completes.
+)0 P(
+You can also kill a thread at any time by calling its )SM(stop\201\202)ES(
+method. This code snippet
+)BQ(
+)PR(
+Thread myThread = new MyThreadClass\201\202;
+myThread.start\201\202;
+try {
+    Thread.currentThread\201\202.sleep\20110000\202;
+} catch \201InterruptedException e\202{
+}
+)BD(myThread.stop\201\202;)ES(
+)RP(
+)QB(
+creates and starts )SM(myThread)ES( then puts the current
+thread to sleep for 10 seconds. When the current thread wakes up,
+the bold line in the code segment kills )SM(myThread)ES(.
+)0 P(
+The )SM(stop\201\202)ES( method throws a ThreadDeath object
+at the thread to kill it. Thus when a thread is killed in this
+manner it dies asynchronously. The thread will die when it actually
+receives the ThreadDeath exception.
+)0 P(
+Applets often use the )SM(stop\201\202)ES( method to kill all of its
+threads when the Java-compatible browser in which it is running tells
+the applet to stop \201when the user changes pages for example\202.
+See )A(Threads in Applets)EA( for more information.
+)QB(
+
+
+)0 4 H(IllegalThreadStateException)EH(
+)EA(
+)BQ(
+The runtime system throws an IllegalThreadStateException when you
+call a method on a thread and that thread's state does not
+allow for that method call. For example, IllegalThreadStateException
+is thrown when you call )SM(suspend\201\202)ES( on a thread that
+is not "Runnable".
+)0 P(
+As shown in the various examples of threads so far in this
+lesson, when you call a thread method that can throw an exception,
+you must either catch and handle the exception, or declare that
+the calling method throws the uncaught exception.
+)QB(
+
+)0 4 H(The isAlive\201\202 Method)EH(
+)BQ(
+And a final word about thread state: the programming interface
+for the Thread class includes a method called )SM(isAlive\201\202)ES(.
+The )SM(isAlive\201\202)ES( returns true if the thread has been started
+and not stopped. Thus, if the )SM(isAlive\201\202)ES( method returns
+)BD(false)ES( you know that the thread is either
+a "New Thread" or "Dead". If the )SM(isAlive\201\202)ES( method returns
+)BD(true)ES(, you know that the thread is either "Runnable" or
+"Not Runnable". You cannot differentiate between a "New Thread" and a
+"Dead" thread; nor can you differentiate between a "Runnable" thread
+and a "Not Runnable" thread.
+)QB(
+
+)0 4 H(See Also)EH(
+)BQ(
+)A()0 6 IM()EA(
+)A(java.lang.Thread)EA()BR(
+)A()0 6 IM()EA(
+)A(java.lang.IllegalThreadStateException)EA()BR(
+)A()0 6 IM()EA(
+)A(java.lang.ThreadDeath)EA()BR(
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Thread Priority
+)EH(
+)0 P(
+)BQ(
+
+Previously in this lesson, we've claimed that threads run concurrently.
+While conceptually this is true, in practice it isn't. Most computer
+configurations have a single CPU, so threads actually run one at a time
+in such a way as to simulate concurrency. The execution of multiple
+threads on a single CPU, in some order, is called )I(scheduling)ES(.
+The Java runtime supports a very simple, deterministic scheduling
+algorithm known as )I(fixed priority scheduling)ES(. This algorithm
+schedules threads based on their )I(priority)ES( relative to
+other )A("Runnable")EA( threads.
+)0 P(
+When a Java thread is created, it inherits its priority from the
+thread that created it. You can also modify a thread's priority at
+any time after its creation using the )SM(setPriority\201\202)ES( method.
+Thread priorities range between
+MIN_PRIORITY and MAX_PRIORITY \201constants defined in class Thread\202.
+At any given time, when multiple threads are ready to be executed,
+the runtime system chooses the "Runnable" thread with the highest
+priority for execution. Only when that thread stops, yields, or becomes
+)A("Not Runnable")EA( for some reason,
+will a lower priority thread start executing.
+If there are two threads of the same priority waiting for the CPU,
+the scheduler chooses them in a round-robin fashion.
+)0 P(
+The Java runtime system's thread scheduling algorithm is also )I(preemptive)ES(. If at
+any time a thread with a higher priority than all other "Runnable" threads
+becomes "Runnable", the runtime system chooses the new higher priority
+thread for execution. The new higher priority thread is said to preempt
+the other threads.
+)0 P(
+The Java runtime system's thread scheduling scheme can be summed up with this simple rule:
+)HR(
+)BD(Rule:)ES( At any given time, the highest priority runnable thread
+is running.
+)HR(
+)0 4 H(The 400,000 Micron Thread Race)EH(
+)BQ(
+This )A(Java source code)EA( implements
+an applet that animates a race between two "runner" threads with
+different priorities. When you click the mouse down over the applet,
+it starts the two runners. The top runner, labelled "1", has a priority
+of 1 \201the lowest possible thread priority in the Java system\202. The second runner,
+labelled "2", has a priority of 2.
+)0 P(
+)BD(Try This:)ES( Click over the applet below to start the race.
+)BR(
+
+
+)0 P(
+This is the )SM(run\201\202)ES( method for both )A(runners)EA(.
+)BQ(
+)PR(
+public int tick = 1;
+public void run\201\202 {
+    while \201tick < 400000\202 {
+        tick++;
+    }
+} 
+)RP(
+)QB(
+This )SM(run\201\202)ES( method simply counts from 1 to 400,000.
+The instance variable )SM(tick)ES( is public because the
+applet uses this value to determine how far the runner has progressed
+\201how long its line is\202.
+)0 P(
+In addition to the two runner threads, this applet also has a third
+thread that handles the drawing. The drawing thread's )SM(run\201\202)ES(
+method contains an infinite loop; during each iteration of the loop it
+draws a line for each runner \201whose length is computed from the runner's
+)SM(tick)ES( variable\202, and then sleeps for 10 milliseconds.
+The drawing thread has a thread priority of 3--higher than either runner.
+So, whenever the drawing thread wakes up after 10 milliseconds, it
+becomes the highest priority thread, preempting whichever runner is
+currently running and draws the lines. Thus you can see the lines
+inch their way across the page
+)0 P(
+As you can see, this is not a fair race because one runner has
+a higher priority than the other. Each time the drawing thread
+yields the CPU by going to sleep for 10 milliseconds, the scheduler
+chooses the highest priority runnable thread to run; in this case,
+it's always the runner labelled "2". Here is another version
+of the applet that implements a "fair race", that is, both of the
+runners have the same priority and they have an equal chance of
+being chosen to run.
+)0 P(
+)BD(Try this:)ES( Again, click down with the mouse to start the race.
+)BR(
+
+
+)0 P(
+In this race, each time the drawing thread yields the CPU by
+going to sleep, there are two Runnable threads of equal
+priority--the runners--waiting for the CPU; the scheduler
+must choose one of the threads to run. In this situation,
+the scheduler chooses the next thread to run in a round-robin
+fashion.
+)QB(
+
+)0 4 H(Selfish Threads)EH(
+)BQ(
+The Runner class used in the races above actually implements "socially-impaired"
+thread behaviour. Recall the )SM(run\201\202)ES( method from the Runner class used
+in the races above:
+)BQ(
+)PR(
+public int tick = 1;
+public void run\201\202 {
+    while \201tick < 400000\202 {
+        tick++;
+    }
+} 
+)RP(
+)QB(
+The )SM(while)ES( loop in the )SM(run\201\202)ES( method is in a tight loop.
+That is to say, once the scheduler chooses a thread with this thread body
+for execution, the thread never voluntarily relinquishes control of the CPU--the
+thread continues to run until the )SM(while)ES( loop terminates naturally
+or until the thread is preempted by a higher priority thread.
+)0 P(
+In some situations, having "selfish" threads doesn't cause any problems because
+a higher priority thread preempts the selfish one \201just as the drawing thread
+in the RaceApplet preempts the selfish runners\202. However, in other situations,
+threads with CPU-greedy )SM(run\201\202)ES( methods, such as the Runner class,
+can take over the CPU and cause other threads to have to wait for a long
+time before getting a chance to run.
+)QB(
+
+)0 4 H(Time-Slicing)EH(
+)BQ(
+Some systems fight selfish thread behaviour with a strategy known as
+)I(time-slicing)ES(. Time-slicing comes into play when there are multiple
+"Runnable" threads of equal priority and those threads are the highest priority
+threads competing for the CPU. For example, this
+)A(stand-alone Java program)EA( \201which is based on
+the RaceApplet above\202 creates two equal priority
+)A(selfish threads)EA(
+that have the following )SM(run\201\202)ES( method.
+)BQ(
+)PR(
+public void run\201\202 {
+    while \201tick < 400000\202 {
+        tick++;
+        if \201\201tick % 50000\202 == 0\202 {
+            System.out.println\201"Thread #" + num + ", tick = " + tick\202;
+        }
+    }
+}    
+)RP(
+)QB(
+This )SM(run\201\202)ES( contains a tight loop that increments the integer )SM(tick)ES(
+and every 50,000 ticks prints out the thread's identifier and its )SM(tick)ES( count.
+)0 P(
+When running this program on a time-sliced system, you will see messages from both
+threads intermingled with one another. Like this:
+)BQ(
+)PR(
+Thread #1, tick = 50000
+Thread #0, tick = 50000
+Thread #0, tick = 100000
+Thread #1, tick = 100000
+Thread #1, tick = 150000
+Thread #1, tick = 200000
+Thread #0, tick = 150000
+Thread #0, tick = 200000
+Thread #1, tick = 250000
+Thread #0, tick = 250000
+Thread #0, tick = 300000
+Thread #1, tick = 300000
+Thread #1, tick = 350000
+Thread #0, tick = 350000
+Thread #0, tick = 400000
+Thread #1, tick = 400000
+)RP(
+)QB(
+This is because a time-sliced system divides the CPU into time slots and iteratively
+gives each of the equal-and-highest priority threads a time slot in which to run.
+The time-sliced system will continue to iterate through the equal-and-highest priority
+threads allowing each one a bit of time to run until or more of them finish or until
+a higher priority preempts them. Notice that time-slicing makes no guarantees as to
+how often or in what order threads are scheduled to run.
+)0 P(
+When running this program on a non-time-sliced system, however, you will see messages
+from one thread finish printing before the other thread ever gets a chance to print
+one message. Like this:
+)BQ(
+)PR(
+Thread #0, tick = 50000
+Thread #0, tick = 100000
+Thread #0, tick = 150000
+Thread #0, tick = 200000
+Thread #0, tick = 250000
+Thread #0, tick = 300000
+Thread #0, tick = 350000
+Thread #0, tick = 400000
+Thread #1, tick = 50000
+Thread #1, tick = 100000
+Thread #1, tick = 150000
+Thread #1, tick = 200000
+Thread #1, tick = 250000
+Thread #1, tick = 300000
+Thread #1, tick = 350000
+Thread #1, tick = 400000
+)RP(
+)QB(
+This is because a non-time-sliced system chooses one of the equal-and-highest
+priority threads to run and allows that thread to run until it relinquishes the
+CPU \201by sleeping, yielding, finishing its job\202 or until a higher priority preempts it.
+)0 P(
+)BD(Try this:)ES( Compile and run the )A(RaceTest)EA(
+and )A(SelfishRunner)EA( classes on
+your computer. Can you tell if you have a time-sliced system?
+)0 P(
+As you can imagine, writing CPU-intensive code can have negative repercussions
+on other threads running in the same process. In general, you should try to
+write "well-behaved" threads that voluntarily relinquish the CPU periodically and
+give other threads an opportunity to run. In particular, you should never
+write Java code that relies on time-sharing--this will practically guarantee
+that your program will give different results on a different computer system.
+)0 P(
+A thread can voluntarily yield the CPU \201without going to sleep or some other
+drastic means\202 by calling the )SM(yield\201\202)ES( method. The )SM(yield\201\202)ES(
+method gives other threads of the same priority a chance to run. If there
+are no equal priority threads in the "Runnable" state, then the yield is ignored.
+)0 P(
+)BD(Try this:)ES( Rewrite the SelfishRunner class to be a
+)A(PoliteRunner)EA( by calling the
+)SM(yield\201\202)ES( method from the )SM(run\201\202)ES( method.
+Be sure to modify the )A(main program)EA(
+to create PoliteRunners instead of SelfishRunners. Compile and run the new
+classes on your computer. Now isn't that better?
+)QB(
+
+)0 4 H(Summary)EH(
+)UL(
+)LI(
+In most configurations, there is only one CPU, thus threads must share
+the CPU with other threads. The execution of multiple threads on a
+single CPU, in some order, is called scheduling. The Java runtime
+supports a very simple, deterministic scheduling algorithm known as
+fixed priority scheduling.
+)LI(
+Each Java thread is given a numeric priority, between MIN_PRIORITY and
+MAX_PRIORITY \201constants defined in class Thread\202. At any given time,
+when multiple threads are ready to be executed, the thread with the
+highest priority will be chosen for execution. Only when that thread
+stops, or is suspended for some reason, will a lower priority thread
+start executing.
+)LI(
+Scheduling of the CPU is fully preemptive. If a thread with a higher
+priority than the currently executing thread needs to execute, the
+higher priority thread is immediately scheduled.
+)LI(
+The Java runtime will not preempt the currently running thread for
+another thread of the same priority. In other words, the Java runtime
+does not time-slice. However, the system implementation of threads
+underlying the Java Thread class may support time-slicing.
+Do not write code that relies on time-slicing.
+)0 P(
+If the currently running thread yields the CPU \201i.e. allows another
+thread to execute by calling the )SM(yield\201\202)ES(\202, then the
+scheduler implements a simple non-preemptive round-robin scheduling order.
+)LI(
+In addition, a given thread may, at any time, give up its right to
+execute by calling the )SM(yield\201\202)ES( method. Threads can only
+yield the CPU to other threads of the same priority--attempts to
+yield to a lower priority thread are ignored.
+)LU(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    RaceApplet.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+import java.awt.*;
+
+public class RaceApplet extends java.applet.Applet implements Runnable {
+
+    final static int NUMRUNNERS = 2;
+    final static int SPACING = 20;
+
+    Runner runners[] = new Runner[NUMRUNNERS];
+
+    Thread updateThread;
+
+    public void init\201\202 {
+	String raceType = getParameter\201"type"\202;)WR(
+	for \201int i = 0; i < NUMRUNNERS; i++\202 {
+	    runners[i] = new Runner\201\202;
+	    if \201raceType.compareTo\201"unfair"\202 == 0\202
+	    	runners[i].setPriority\201i+1\202;
+	    else
+	    	runners[i].setPriority\2012\202;
+        }
+        if \201updateThread == null\202 {
+            updateThread = new Thread\201this, "Thread Race"\202;
+            updateThread.setPriority\201NUMRUNNERS+1\202;
+        }
+    }
+
+    public boolean mouseDown\201java.awt.Event evt, int x, int y\202 {
+	if \201!updateThread.isAlive\201\202\202
+            updateThread.start\201\202;
+	for \201int i = 0; i < NUMRUNNERS; i++\202 {
+	    if \201!runners[i].isAlive\201\202\202
+	        runners[i].start\201\202;
+	}
+	return true;
+    }
+
+    public void paint\201Graphics g\202 {
+        g.setColor\201Color.lightGray\202;
+        g.fillRect\2010, 0, size\201\202.width, size\201\202.height\202;
+        g.setColor\201Color.black\202;
+        for \201int i = 0; i < NUMRUNNERS; i++\202 {
+	    int pri = runners[i].getPriority\201\202;
+	    g.drawString\201new Integer\201pri\202.toString\201\202, 0, \201i+1\202*SPACING\202;)WR(
+	}
+        update\201g\202;
+    }
+
+    public void update\201Graphics g\202 {
+        for \201int i = 0; i < NUMRUNNERS; i++\202 {
+	    g.drawLine\201SPACING, \201i+1\202*SPACING, SPACING + \201runners[i].tick\202/1000, \201i+1\202*SPACING\202;
+	}
+    }
+
+    public void run\201\202 {
+        while \201updateThread != null\202 {
+            repaint\201\202;
+            try {
+		updateThread.sleep\20110\202;
+	    } catch \201InterruptedException e\202 {
+	    }
+        }
+    }    
+
+    public void stop\201\202 {
+	for \201int i = 0; i < NUMRUNNERS; i++\202 {
+	    if \201runners[i].isAlive\201\202\202 {
+	        runners[i].stop\201\202;
+	        runners[i] = null;
+	    }
+        }
+	if \201updateThread.isAlive\201\202\202 {
+            updateThread.stop\201\202;
+            updateThread = null;)WR(
+	}
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Runner.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class Runner extends Thread {
+
+    public int tick = 1;
+
+    public void run\201\202 {
+	while \201tick < 400000\202 {
+	    tick++;
+	}
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    RaceTest.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class RaceTest {
+
+    final static int NUMRUNNERS = 2;
+
+    public static void main\201String args[]\202 {
+
+        SelfishRunner runners[] = new SelfishRunner[NUMRUNNERS];
+
+	for \201int i = 0; i < NUMRUNNERS; i++\202 {
+	    runners[i] = new SelfishRunner\201i\202;
+	    runners[i].setPriority\2012\202;
+        }
+	for \201int i = 0; i < NUMRUNNERS; i++\202 {)WR(
+	    runners[i].start\201\202;
+	}
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    SelfishRunner.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class SelfishRunner extends Thread {
+
+    public int tick = 1;
+    public int num;
+
+    SelfishRunner\201int num\202 {
+	this.num = num;
+    }
+
+    public void run\201\202 {
+	while \201tick < 400000\202 {
+	    tick++;
+	    if \201\201tick % 50000\202 == 0\202 {)WR(
+		System.out.println\201"Thread #" + num + ", tick = " + tick\202;
+	    }
+	}
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    PoliteRunner.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class PoliteRunner extends Thread {
+
+    public int tick = 1;
+    public int num;
+
+    PoliteRunner\201int num\202 {
+	this.num = num;
+    }
+
+    public void run\201\202 {
+	while \201tick < 400000\202 {
+	    tick++;
+	    if \201\201tick % 50000\202 == 0\202 {)WR(
+		System.out.println\201"Thread #" + num + ", tick = " + tick\202;
+		yield\201\202;
+	    }
+	}
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    RaceTest2.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class RaceTest2 {
+
+    final static int NUMRUNNERS = 2;
+
+    public static void main\201String args[]\202 {
+
+        PoliteRunner runners[] = new PoliteRunner[NUMRUNNERS];
+
+	for \201int i = 0; i < NUMRUNNERS; i++\202 {
+	    runners[i] = new PoliteRunner\201i\202;
+	    runners[i].setPriority\2012\202;
+        }
+	for \201int i = 0; i < NUMRUNNERS; i++\202 {)WR(
+	    runners[i].start\201\202;
+	}
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Daemon Threads
+)EH(
+)0 P(
+)BQ(
+
+Any Java thread can be a )I(daemon)ES( thread.
+Daemon threads are service providers for
+other threads or objects running in the same process as
+the daemon thread.
+For example, the HotJava browser has a daemon thread,
+named )I(Background Image Reader)ES(, that reads
+images from the filesystem or the network for any
+object or thread that needs an image.
+
+
+)0 P(
+Daemon threads are typically independent threads within an
+application that provide services for other objects within that
+same application. The )SM(run\201\202)ES( method for a daemon
+thread is typically an infinite loop that waits for a service
+request.
+)0 P(
+When the only remaining threads in a process are daemon
+threads, the interpreter exits. This makes sense because when
+there are only daemon threads remaining, there is no other
+thread for which a daemon thread can provide a service.
+)0 P(
+To specify that a thread is a daemon thread call the
+)SM(setDaemon\201\202)ES( method with a boolean parameter
+that is true. To determine if a thread is a daemon thread
+use the accessor method )SM(isDaemon\201\202)ES(.
+
+)0 P(
+[PENDING: write an example]
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Thread Group
+)EH(
+)0 P(
+)BQ(
+
+In Java, all threads must be a member of a )I(thread group)ES(.
+Thread groups provide a mechanism for collecting multiple threads
+together into a single object and manipulating those threads all at
+once through the group rather than individually through the threads
+themselves. For example, you can start or suspend all the threads
+within a group with a single method call. Java thread groups are
+implemented by the ThreadGroup class in the java.lang package.
+
+)0 4 H(Creating a Thread Explicitly within a Group)EH(
+)BQ(
+The only time that you are allowed to set a thread's group is during
+creation--a thread can't be moved to a new group after it's been created.
+Thus, you should specify a thread's group explicitly when you create it.
+The Thread class has three different constructors that let you set the
+new thread's group:
+)UL(
+)LI(
+)SM(Thread\201ThreadGroup, Runnable\202)ES(
+)LI(
+)SM(Thread\201ThreadGroup, String\202)ES(
+)LI(
+)SM(Thread\201ThreadGroup, Runnable, String\202)ES(
+)LU(
+Each of these constructors requires a ThreadGroup as its first parameter,
+creates a new thread, initializes it based on the other parameters, and
+makes the new thread a member of the specified group. For example, the following
+code sample creates a ThreadGroup named )SM(myThreadGroup)ES( and then
+creates a thread called )SM(myThread)ES( in that group.
+)BQ(
+)PR(
+ThreadGroup myThreadGroup = new ThreadGroup\201"My Group of Threads"\202;
+Thread myThread = new Thread\201myThreadGroup, "a thread for my group"\202;
+)RP(
+)QB(
+The ThreadGroup passed into a Thread constructor does not necessarily have
+to be a group that you created--it could be a group that was created by the
+Java runtime system, or a group that was created by the application in which
+your applet is running.
+
+)0 P(
+As you know, you don't have to set the thread group when you create a new
+thread--the Thread class supports several constructors that don't require
+a ThreadGroup argument. If you don't explicitly set the thread group for a
+new thread when you create it \201which is probably what you've been doing until
+now\202, the new thread is automatically placed in the same group as the thread
+which created it \201known as the )I(current thread)ES( and the )I(current
+thread group)ES( respectively\202.
+
+)0 P(
+So, if all threads must be in a group, and you haven't created a ThreadGroup,
+and you create a new thread without specifying its group, what is the thread's group?
+When an application first starts up, the Java runtime system creates
+a ThreadGroup named "main". So, unless specified otherwise, all new
+threads that you create become members of the "main" thread group.)BR(
+)BD(Note:)ES( if the thread that you are creating is created by an applet,
+it's possible that the new thread's group will be something other than
+"main". It depends on the browser or viewer that the applet is running in.
+)QB(
+
+)0 4 H(Getting a Thread's Group)EH(
+)BQ(
+To find out what group a thread is in, you can call its )SM(getThreadGroup\201\202)ES(
+method.
+)BQ(
+)PR(
+theGroup = myThread.getThreadGroup\201\202;
+)RP(
+)QB(
+)QB(
+
+)0 4 H()A(The ThreadGroup Class)EA()EH(
+)BQ(
+Once you've obtained a thread's ThreadGroup, you can query the
+group for information \201such as what other threads are in the group\202,
+or you can modify the threads in that group \201such as suspend,
+resume or stop them\202 with a single method call.
+)QB(
+
+)0 4 H(See also)EH(
+)BQ(
+)A()0 6 IM()EA(
+)A(java.lang.ThreadGroup)EA(
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The ThreadGroup Class
+)EH(
+)0 P(
+)BQ(
+
+In Java, all threads must be a member of a )I(thread group)ES(.
+Thread groups provide a mechanism for collecting multiple threads
+together into a single object and manipulating those threads all at
+once through the group rather than individually through the threads
+themselves. For example, you can start or suspend all the threads
+within a group with a single method call. Java thread groups are
+implemented by the ThreadGroup class in the java.lang package.
+)0 P(
+ThreadGroups can contain any number of threads and can contain
+any number of ThreadGroups. The result is a root-like hierarchy of
+threads and thread groups.
+
+)0 4 H(List Management Methods)EH(
+)BQ(
+The ThreadGroup class is similar to other collection objects in
+that it provides a set of methods that manage the list of threads
+within the group and allow other objects to query for information
+about the list. For example, you can call ThreadGroup's
+)SM(activeCount\201\202)ES( method to find out the number of threads
+currently within the group. In addition, you can )SM(enumerate\201\202)ES(
+all the threads within the group and all the other thread groups within
+the group.
+)0 P(
+Other list management methods provided by the ThreadGroup class include
+)SM(activeGroupCount)ES( and )SM(list\201\202)ES(.
+)QB(
+
+)0 4 H(Methods that Operate on the Group)EH(
+)BQ(
+The ThreadGroup class supports several attributes that are set and
+retrieved from the group as a whole. These attributes include the
+maximum priority that any thread within the group can have, whether
+or not the group is group of daemon threads, the name of the group,
+and the parent of the group.
+)0 P(
+The methods that get and set ThreadGroup attributes operate at the
+group level. That is, they inspect or change the attribute on the
+ThreadGroup object, but do not affect any of the threads within the
+group.  The following is a list of ThreadGroup methods that operate
+at the group level:
+)UL(
+)LI(
+)SM(getMaxPriority\201\202)ES(, )SM(setMaxPriority\201\202)ES(
+)LI(
+)SM(getDaemon\201\202)ES(, )SM(setDaemon\201\202)ES(
+)LI(
+)SM(getName\201\202)ES(
+)LI(
+)SM(getParent\201\202)ES(, )SM(parentOf\201\202)ES(
+)LI(
+)SM(toString\201\202)ES(
+)LU(
+So, for example, when you use )SM(setMaxPriority\201\202)ES( to change
+a group's maximum priority, you are only changing the attribute on the
+group object; you are not changing the priority of any of the threads
+within the group. Consider this small program that creates a group and
+a thread within that group:
+)BQ(
+)PR(
+class PriorityTest {
+    public static void main \201String args[]\202 {
+	Thread t1 = new RandomPrintString\201"Duke"\202;
+        Thread t2 = new RandomPrintString\201"Of Earl"\202;
+        Thread t3 = new RandomPrintString\201"Whatcha doin'?"\202;
+
+	t1.setPriority\2014\202;
+	t2.setPriority\2015\202;
+	t3.setPriority\2016\202;
+
+	t1.start\201\202;
+	t2.start\201\202;
+	t3.start\201\202;
+    }
+}
+
+class RandomPrintString extends Thread {
+    public RandomPrintString\201String str\202 {
+	super\201str\202;
+    }
+    public void run\201\202 {
+	for \201int i = 0; i < 10; i++\202 {
+	    System.out.println\201getName\201\202\202;
+	    //sleep\201\201int\202\201Math.random\201\202 * 1000\202\202;
+	}
+    }
+}
+)RP(
+)QB(
+When the ThreadGroup is created it inherits its maximum priority
+attribute from its parent thread group \201which in this case is the
+maximum allowed by the Java runtime system \20110\202\202.
+Next the program sets the thread's priority to the maximum allowed
+by the Java runtime system, and then lowers the group's maximum to
+the "normal" priority \2015\202. The )SM(setMaxPriority\201\202)ES( method
+does not affect the priority of the )SM(max)ES( thread, so that
+at this point, the )SM(max)ES( thread has a priority of 10 which
+is greater than the maximum priority of its group )SM(norm)ES(.
+This is the output from the program:
+)BQ(
+)PR(
+Group's maximum priority = 5
+Thread's priority = 10
+)RP(
+)QB(
+So, you can see that it is possible for a thread to have a higher
+priority than the maximum allowed by its group.
+A thread group's maximum priority is used to limit a thread's priority
+when the thread is first created within a group and when you use
+)SM(setPriority\201\202)ES( to change it. Note that )SM(setMaxPriority\201\202)ES(
+does change the maximum priority of all of its sub-threadgroups.
+)0 P(
+Similarly, a group's name and daemon status applies only to the group.
+Changing the group's name or daemon status does not affect the name
+or daemon status of any of its threads. Furthermore, a group's daemon
+status does not in any way imply the daemon status of its threads--you
+can put any thread within a daemon thread group. The daemon status of
+a thread group simply determines when the group will be destroyed.
+)QB(
+
+)0 4 H(Methods that Operate on All Threads within a Group)EH(
+)BQ(
+The ThreadGroup class supports several methods that allow you to
+modify the current state of all the threads within that group:
+)UL(
+)LI(
+)SM(resume\201\202)ES(
+)LI(
+)SM(stop\201\202)ES(
+)LI(
+)SM(suspend\201\202)ES(
+)LU(
+These methods apply the appropriate state change to every thread
+in the thread group and to every thread sub-group in the thread
+group.
+)QB(
+
+)0 4 H(Access Restrictions)EH(
+)BQ(
+The ThreadGroup class itself does not
+impose any access restrictions \201such as allowing threads from one
+group to inspect or modify threads in a different group\202 on thread
+groups. Rather the ThreadGroup class supports the security manager
+\201a subclass of the java.lang.SecurityManager class\202 in its effort
+to impose access restrictions based on thread group membership.
+
+)0 P(
+The ThreadGroup checks with the current security manager, through a call
+to its )SM(checkAccess\201\202)ES( method, when any "regulated"
+access is attempted to see if the access should be allowed. The security manager
+decides whether or not to allow the access based on the group membership of the
+threads involved. If access is not allowed, the )SM(checkAccess\201\202)ES(
+methods throws a SecurityException. Otherwise, )SM(checkAccess\201\202)ES(
+just returns. The following is a list of ThreadGroup
+methods that call )SM(checkAccess\201\202)ES( before performing the action
+of the method. These are what are known as )I(regulated accesses)ES(, that
+is, accesses that must be approved by the security manager before they can be
+completed.
+)UL(
+)LI(
+creation of a new ThreadGroup with the constructor
+)SM(ThreadGroup\201ThreadGroup parent, String name\202)ES(
+)LI(
+)SM(setDaemon\201\202)ES(
+)LI(
+)SM(setMaxPriority\201\202)ES(
+)LI(
+)SM(stop\201\202)ES(
+)LI(
+)SM(suspend\201\202)ES(
+)LI(
+)SM(resume\201\202)ES(
+)LI(
+)SM(destroy\201\202)ES(
+)LU(
+By default, when you write a stand-alone Java application you get a generic
+security manager that imposes no access restrictions and allows any thread
+to inspect or modify any other thread regardless of the groups they are in.
+You can define and implement your own access restrictions for thread
+groups by subclassing SecurityManager, overriding the appropriate
+methods, and then installing your security manager as the current security
+manager in your application.
+
+)0 P(
+The HotJava Web browser is an example of an application that implements
+its own security manager. HotJava needs to ensure that applets are
+well-behaved and don't do nasty things \201such as lowering the priority
+of another applet's threads\202 to other applets running at the same time.
+HotJava's security manager does not allow threads in different groups
+to modify one another. Please note that access restrictions based on
+thread groups may vary from browser to browser and thus applets
+may behave differently in different browsers. For more information
+about access restrictions on thread groups within applets, see
+)A(Missing Page)EA(.
+)QB(
+
+)0 4 H(See also)EH(
+)BQ(
+)A()0 6 IM()EA(
+)A(java.lang.ThreadGroup)EA()BR(
+)A()0 6 IM()EA(
+)A(java.lang.SecurityManager)EA(
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    MaxPriorityTest.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class MaxPriorityTest {
+    public static void main\201String args[]\202 {
+
+	ThreadGroup groupNORM = new ThreadGroup\201
+				"A group with normal priority"\202;
+	Thread priorityMAX = new Thread\201groupNORM, 
+				"A thread with maximum priority"\202;
+
+    // set Thread's priority to max \20110\202
+	priorityMAX.setPriority\201Thread.MAX_PRIORITY\202;
+
+    // set ThreadGroup's max priority to normal \2015\202
+	groupNORM.setMaxPriority\201Thread.NORM_PRIORITY\202;)WR(
+
+	System.out.println\201"Group's maximum priority = " +
+		groupNORM.getMaxPriority\201\202\202;
+	System.out.println\201"Thread's priority = " +
+		priorityMAX.getPriority\201\202\202;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Multithreaded Programs
+)EH(
+)0 P(
+)BQ(
+
+)0 4 H()A(Synchronization)EA(
+)EH(
+)BQ(
+Often, threads need to share data. For example, suppose you have a thread
+that writes data to a file while, at the same time, another thread is
+reading data from that same file. When your threads need to share information
+you need to synchronize the threads to get the desired results.
+)QB(
+
+)0 4 H()A(Deadlock)EA(
+)EH(
+)BQ(
+Deadlock occurs when two threads are waiting for some condition to
+change that is precluded from changing because of all threads that
+can change the condition are waiting. This page uses the dining
+philosophers to illustrate the problem of deadlock, and discusses
+various ways to avoid it.
+)QB(
+
+)0 4 H()A(Re-entrant Monitors)EA(
+)EH(
+)BQ(
+Java monitors are re-entrant.
+)QB(
+
+)0 4 H()A(Volatile)EA(
+)EH(
+)BQ(
+[PENDING: This technology is under construction.]
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Synchronization
+)EH(
+)0 P(
+)BQ(
+
+So far, this lesson has contained examples with independent,
+asynchronous threads. That is, each thread contained all of the
+data and methods required for its execution and didn't require
+any outside resources or methods. In addition, the threads in
+those examples ran at their own pace without concern over the
+state or activities of any other concurrently running threads.
+
+)0 P(
+However, there are many interesting situations where separate
+concurrently running threads do share data and must consider
+the state and activities of those other threads. One such set of
+programming situations are known as Producer/Consumer scenarios
+where the Producer generates a stream of data which then is consumed 
+by a Consumer.
+
+)0 P(
+For example, you can imagine a Java application where one thread
+\201the producer\202 writes data to a file while a second thread \201the consumer\202
+reads data from the same file. Or, as you type characters on the keyboard,
+the producer thread places key events in an event queue and the consumer
+thread reads the events from the same queue. Both of these examples use
+concurrent threads that share a common resource: a file, an event queue.
+And because the threads share a common resource, they must be synchronized in
+some way.
+
+)0 P(
+This lesson teaches you about Java thread synchronization through
+a simple Producer/Consumer example.
+
+)0 4 H(Producer/Consumer Example)EH(
+)BQ(
+The )A(Producer)EA( generates integers
+ranging from 0 to 9, stores it in a "CubbyHole" object, prints the
+generated number, and \201just to make the synchronization problem more
+interesting\202 the Producer sleeps for a random amount of time between 0 and
+100 milliseconds.
+)BQ(
+)PR(
+class Producer extends Thread {
+    private CubbyHole cubbyhole;
+    private int number;
+
+    public Producer\201CubbyHole c, int number\202 {
+	cubbyhole = c;
+	this.number = number;
+    }
+
+    public void run\201\202 {
+	for \201int i = 0; i < 10; i++\202 {
+	    cubbyhole.put\201i\202;
+	    System.out.println\201"Producer #" + this.number + " put: " + i\202;
+	    try {
+	        sleep\201\201int\202\201Math.random\201\202 * 100\202\202;
+	    } catch \201InterruptedException e\202 {
+	    }
+	}
+    }
+}
+)RP(
+)QB(
+The )A(Consumer)EA(, being ravenous,
+consumes all integers from the CubbyHole \201the exact same object into
+which the Producer put the integers in the first place\202 as quickly
+as they become available.
+)BQ(
+)PR(
+class Consumer extends Thread {
+    private CubbyHole cubbyhole;
+    private int number;
+
+    public Consumer\201CubbyHole c, int number\202 {
+	cubbyhole = c;
+	this.number = number;
+    }
+
+    public void run\201\202 {
+	int value = 0;
+	for \201int i = 0; i < 10; i++\202 {
+	    value = cubbyhole.get\201\202;
+	    System.out.println\201"Consumer #" + this.number + " got: " + value\202;
+	}
+    }
+}
+
+)RP(
+)QB(
+
+The Producer and Consumer in this example share data through
+a common )SM(CubbyHole)ES( object. And you will note
+that neither the Producer nor the Consumer make any effort whatsoever
+to ensure that the Consumer is getting each value produced once
+and only once. The synchronization between these two threads actually
+occurs at a lower level, within the )SM(get\201\202)ES( and )SM(put\201\202)ES(
+methods of the CubbyHole object. However, let's assume for a moment that
+no synchronization between these two threads and talk about the potential
+problems that might arise in that situation.
+
+)0 P(
+One problem that might arise if the Producer and Consumer threads
+make no arrangements to run synchronously occurs when the Producer
+is quicker than the Consumer and generates two numbers before
+the Consumer has a chance to consume the first one. Thus the Consumer
+would skip a number. Part of the output might look like this:
+)BQ(
+)PR(
+    . . .
+
+Consumer #1 got: 3
+Producer #1 put: 4
+Producer #1 put: 5
+Consumer #1 got: 5
+
+    . . .
+)RP(
+)QB(
+Another problem that might arise is when the Consumer is quicker than
+the Producer and consumes the same value twice. In this situation, the Consumer
+would print the same value twice and might produce output that looked like this:
+)BQ(
+)PR(
+    . . .
+
+Producer #1 put: 4
+Consumer #1 got: 4
+Consumer #1 got: 4
+Producer #1 put: 5
+
+    . . .
+)RP(
+)QB(
+Either way, the result is wrong. You want the Consumer to get each
+integer produced by the Producer exactly once.
+Problems, such as those just described, that arise from multiple,
+asynchronously executing threads trying to a single object at the same time
+and getting the wrong result, are called )I(race conditions)ES(.
+
+)0 P(
+To prevent race conditions in our Producer/Consumer example,
+the storage of a new integer into the CubbyHole by the Producer
+must be synchronized with the retrieval of an integer from the
+CubbyHole by the Consumer. The Consumer must consume each integer
+exactly once. Objects such as the CubbyHole, which are shared
+between two threads and whose accesses must be synchronized,
+are called )I(condition variables)ES(. The Java language
+allows you to synchronize threads around a condition variable
+through the use of )I(monitors)ES(.
+)QB(
+
+)0 4 H(Monitors)EH(
+)BQ(
+The Java language and runtime system support thread synchronization 
+through the use of )I(monitors)ES( which were first outlined
+in C. A. R. Hoare's article )I(Communicating Sequential Processes)ES(
+\201)I(Communications of the ACM)ES(, Vol. 21, No. 8, August 1978, pp. 666-677\202.
+In general, a monitor is associated with a specific data item \201the condition variable\202
+and functions as a lock on that data. When a thread holds the monitor
+for some data item, other threads are locked out and cannot inspect or
+modify the data.
+)0 P(
+The code segments within a program that make it possible for separate,
+concurrent threads to access the same data items are known as
+)I(critical sections)ES(. In the Java language, you identify critical sections
+in your program with the )SM(synchronized)ES( keyword.
+)BR()BD(Note:)ES( Generally, critical sections in Java programs
+are methods. You can mark smaller code segments as synchronized.
+However, this violates object-oriented paradigms and leads to confusing
+code that is difficult to debug and maintain. For the majority of
+your Java programming purposes, it's best to use )SM(synchronized)ES(
+only at the method level.
+)0 P(
+In the Java language, a unique monitor is associated with every object that has a
+synchronized method. The )A(CubbyHole)EA(
+class for the Producer/Consumer example introduced above has two
+synchronized methods: the )SM(put\201\202)ES( method used to change the
+value in the CubbyHole and the )SM(get\201\202)ES( method used to retrieve
+the current value.
+)EA(
+)BQ(
+)PR(
+class CubbyHole {
+    private int seq;
+    )BD(private boolean available = false;)ES(
+
+    public )BD(synchronized)ES( int get\201\202 {
+        )BD(while \201available == false\202 {
+	    try {
+		wait\201\202;
+	    } catch \201InterruptedException e\202 {
+	    }
+	}
+        available = false;
+	notify\201\202;)ES(
+	return seq;
+    }
+
+    public )BD(synchronized)ES( void put\201int value\202 {
+	)BD(while \201available == true\202 {
+	    try {
+		wait\201\202;
+	    } catch \201InterruptedException e\202 {
+	    }
+	})ES(
+	seq = value;
+        )BD(available = true;
+        notify\201\202;)ES(
+    }
+}
+)RP(
+)QB(
+In addition, the )SM(CubbyHole)ES( has two private variables: )SM(seq)ES(
+which is the current contents of the CubbyHole, and the boolean variable
+)SM(available)ES( which indicates whether the CubbyHole contents
+can be retrieved. When )SM(available)ES( is true the Producer has
+just put a new value in the CubbyHole and the Consumer has not yet
+consumed it. The Consumer can only consume the value in the CubbyHole
+when )SM(available)ES( is true.
+)0 P(
+Because CubbyHole has synchronized methods, the Java language provides
+a unique monitor for each instance of CubbyHole, including
+the one shared by the Producer and the Consumer. Whenever the Producer
+calls the CubbyHole's )SM(put\201\202)ES( method, the Producer acquires
+the monitor for the CubbyHole thereby preventing the Consumer
+from calling the CubbyHole's)SM(get\201\202)ES( method.
+)BQ(
+)PR(
+public synchronized void put\201int value\202 {
+	// monitor has been acquired by the Producer
+    while \201available == true\202 {
+        try {
+            wait\201\202;
+        } catch \201InterruptedException e\202 {
+        }
+    }
+    seq = value;
+    available = true;
+    notify\201\202;
+	// monitor is released by the Producer
+}
+)RP(
+)QB(
+When the )SM(put\201\202)ES( method returns, the Producer releases the
+monitor thereby unlocking the CubbyHole.
+)0 P(
+Conversely, whenever the Consumer calls the CubbyHole's )SM(get\201\202)ES(
+method, the Consumer acquires the monitor for the CubbyHole thereby
+preventing the Producer from calling the )SM(put\201\202)ES( method.
+)BQ(
+)PR(
+public )BD(synchronized)ES( int get\201\202 {
+	// monitor has been acquired by the Consumer
+    while \201available == false\202 {
+	try {
+	    wait\201\202;
+	} catch \201InterruptedException e\202 {
+	}
+    }
+    available = false;
+    notify\201\202;
+    return seq;
+	// monitor is released by the Consumer
+}
+)RP(
+)QB(
+The acquisition and release of a monitor is done atomically by the
+Java runtime system. This ensures that race conditions cannot occur
+in the underlying implementation of the threads and ensures data
+integrity.
+)0 P(
+You might have noticed a potential problem in CubbyHole's )SM(put\201\202)ES(
+and )SM(get\201\202)ES( methods. At the beginning
+of the )SM(get\201\202)ES( method, if the value in the CubbyHole
+is not available \201that is, the Producer has not generated a new
+number since the last time the Consumer consumed it\202 then the
+Consumer waits for the Producer to put a new value into the CubbyHole.
+So, the question arises--how can the Producer put a new value into
+the CubbyHole, if the Consumer holds the monitor \201the Consumer holds
+the CubbyHole's monitor because it's within the synchronized
+method )SM(get\201\202)ES(\202?
+)0 P(
+Similarly, at the beginning of the )SM(put\201\202)ES( method, if the
+value in the CubbyHole has not yet been consumed then the Producer
+waits for the Consumer to consume the value in the CubbyHole.
+And again the question arises--how can the Consumer consume the value in
+the CubbyHole, if the Producer holds the monitor \201the Producer holds
+the CubbyHole's monitor because it's within the synchronized
+method )SM(put\201\202)ES(\202?
+)0 P(
+Well, the designers of the Java language thought of this too.
+When the thread enters the )SM(wait\201\202)ES( method, which happens
+at the beginning of both the )SM(put\201\202)ES( and )SM(get)ES(
+methods, the monitor is released atomically, and when the thread exits
+the )SM(wait\201\202)ES( method, the monitor is acquired again. This gives
+the waiting object the opportunity to acquire the monitor and, depending
+on who's waiting, consume the value in the CubbyHole or produce a new
+value for the CubbyHole.
+)QB(
+
+)0 4 H(The Main Program)EH(
+)BQ(
+Here's a small stand-alone )A(Java application)EA(
+that creates a CubbyHole object, one Producer, one Consumer, and then starts both the Producer
+and the Consumer.
+)BQ(
+)PR(
+class ProducerConsumerTest {
+    public static void main\201String args[]\202 {
+	CubbyHole c = new CubbyHole\201\202;
+	Producer p1 = new Producer\201c, 1\202;
+	Consumer c1 = new Consumer\201c, 1\202;
+
+        p1.start\201\202;
+        c1.start\201\202;
+    }
+}
+)RP(
+)QB(
+)QB(
+
+)0 4 H(The Output)EH(
+)BQ(
+Here's the output of ProducerConsumerTest.
+)BQ(
+)PR(
+Producer #1 put: 0
+Consumer #1 got: 0
+Producer #1 put: 1
+Consumer #1 got: 1
+Producer #1 put: 2
+Consumer #1 got: 2
+Producer #1 put: 3
+Consumer #1 got: 3
+Producer #1 put: 4
+Consumer #1 got: 4
+Producer #1 put: 5
+Consumer #1 got: 5
+Producer #1 put: 6
+Consumer #1 got: 6
+Producer #1 put: 7
+Consumer #1 got: 7
+Producer #1 put: 8
+Consumer #1 got: 8
+Producer #1 put: 9
+Consumer #1 got: 9
+)RP(
+)QB(
+
+)0 P(
+)BD(Try this:)ES( Remove the lines that are shown in bold in
+the listing of the CubbyHole class )A(shown above)EA(.
+Recompile the program and run it again. What happened? Because no explicit effort
+has been made to synchronize the Producer and Consumer threads, the
+Consumer consumes with reckless abandon and gets a whole bunch of
+zeros instead of getting each integer between 0 and 9 exactly once.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Producer.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class Producer extends Thread {
+    private CubbyHole cubbyhole;
+    private int number;
+
+    public Producer\201CubbyHole c, int number\202 {
+	cubbyhole = c;
+	this.number = number;
+    }
+
+    public void run\201\202 {
+	for \201int i = 0; i < 10; i++\202 {
+	    cubbyhole.put\201i\202;
+	    System.out.println\201"Producer #" + this.number + " put: " + i\202;)WR(
+	    try {
+	        sleep\201\201int\202\201Math.random\201\202 * 100\202\202;
+	    } catch \201InterruptedException e\202 {
+	    }
+	}
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Consumer.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class Consumer extends Thread {
+    private CubbyHole cubbyhole;
+    private int number;
+
+    public Consumer\201CubbyHole c, int number\202 {
+	cubbyhole = c;
+	this.number = number;
+    }
+
+    public void run\201\202 {
+	int value = 0;
+	for \201int i = 0; i < 10; i++\202 {
+	    value = cubbyhole.get\201\202;)WR(
+	    System.out.println\201"Consumer #" + this.number + " got: " + value\202;
+	}
+    }
+}
+
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    CubbyHole.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class CubbyHole {
+    private int seq;         // this is the condition variable.
+    private boolean available = false;
+
+    public synchronized int get\201\202 {
+	while \201available == false\202 {
+	    try {
+		wait\201\202;
+	    } catch \201InterruptedException e\202 {
+	    }
+	}
+	available = false;
+	notify\201\202;)WR(
+	return seq;
+    }
+
+    public synchronized void put\201int value\202 {
+	while \201available == true\202 {
+	    try {
+		wait\201\202;
+	    } catch \201InterruptedException e\202 {
+	    }
+	}
+	seq = value;
+	available = true;
+	notify\201\202;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    ProducerConsumerTest.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+class ProducerConsumerTest {
+    public static void main\201String args[]\202 {
+	CubbyHole c = new CubbyHole\201\202;
+	Producer p1 = new Producer\201c, 1\202;
+	Consumer c1 = new Consumer\201c, 1\202;
+
+        p1.start\201\202;
+        c1.start\201\202;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Deadlock
+)EH(
+)0 P(
+)BQ(
+
+[PENDING: this page is under construction]
+
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Re-entrant Monitors
+)EH(
+)0 P(
+)BQ(
+
+[PENDING: this page is under construction]
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Summary
+)EH(
+)0 P(
+)BQ(
+
+The pages of this lesson have provided a lot of information
+about using threads in the Java development environment.
+Threads are supported by various components of the Java
+development environment and it can be confusing where to
+look for the features that you need. This page summarizes
+where in the Java environment you can find various classes,
+methods, and language features that participate in the
+Java threads story.
+
+)0 4 H(Package Support of Threads)EH(
+)BQ(
+)DL(
+)DT(
+)A()BD(java.lang.Thread)ES()EA(
+)A()0 6 IM()EA(
+)DD(
+In the Java development enviroment, threads are objects that
+derive from java.lang's Thread class. The Thread class defines
+and implements Java threads. You can subclass the Thread class
+to provide your own thread implementations or you can use
+the Runnable interface.
+
+)DT(
+)A()BD(java.lang.Runnable)ES()EA(
+)A()0 6 IM()EA(
+)DD(
+The Java language library also defines the Runnable interface
+which allows any arbitrary object to provide the body \201the )SM(run\201\202)ES( method\202
+for a Thread.
+
+)DT(
+)A()BD(java.lang.Object)ES()EA(
+)A()0 6 IM()EA(
+)DD(
+The base level class, Object, defines three methods you can use to
+synchronize methods around a condition variable: )SM(wait\201\202)ES(,
+)SM(notify\201\202)ES(, and )SM(notifyAll\201\202)ES(.
+
+)DT(
+)A()BD(java.lang.ThreadGroup)ES()EA(
+)A()0 6 IM()EA(
+)DD(
+All threads belong to a thread group which typically contains
+related threads. The ThreadGroup class in the java.lang package implements 
+groups of threads.
+
+)DT(
+)A()BD(java.lang.Death)ES()EA(
+)A()0 6 IM()EA(
+)DD(
+A thread is normally killed by throwing a ThreadDeath object
+at it. It is rare that any thread need catch ThreadDeath to do any
+cleaning up before actually dying.
+
+)LD(
+)QB(
+
+)0 4 H(Language Support of Threads)EH(
+)BQ(
+The Java language has two keywords related to the synchronization of threads:
+)SM(volatile)ES( \201which is not yet implemented\202 and )SM(synchronized)ES(.
+Both of these language features help ensure the integrity of data that is
+shared between two concurrently running threads.
+)A(Multithreaded Programs)EA(
+discusses thread synchronization issues.
+)QB(
+
+)0 4 H(Runtime Support of Threads)EH(
+)BQ(
+The Java runtime system contains the scheduler that is responsible
+for running all the existing threads. The Java scheduler uses
+a fixed priority scheduling algorithm which boils down to this
+simple rule:
+)HR(
+)BD(Rule:)ES( At any give time, the highest priority runnable thread is running.
+)HR(
+)QB(
+
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Threads of Control)ES()ES()EA(
+
+
+
+
+
+)WB NL showpage end restore

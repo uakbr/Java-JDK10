@@ -1,0 +1,89 @@
+<!--NewPage-->
+<html>
+<head>
+<title>What Applets Can and Can't Do</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="threadExample.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../finishing/notes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    What Applets Can and Can't Do
+</h2>
+<p>
+<blockquote>
+
+For security reasons, 
+an applet that's loaded over the network
+has the following restrictions:
+<ul>
+<li> It can't load libraries or define native methods.
+<li> It can't ordinarily read or write files
+     on the host that's executing it.
+<li> It can't make network connections
+     except to the host that it came from.
+<li> It can't start any program on the host that's executing it.
+<li> It can't read every system property.
+<li> Windows that an applet brings up
+     are distinguished by some warning text
+     and either a colored bar or an image,
+     so that the windows don't look
+     like they're part of a trusted application.
+</ul>
+<p>
+
+Things that applets can do, 
+that you might not expect:
+<ul>
+<li> Applets that are loaded from the local file system
+     (from a directory in the user's CLASSPATH
+     [or from a file URL?])
+     have none of the restrictions
+     that applets loaded over the network do (as listed above).
+     For this reason, 
+     some browsers don't allow applets to be loaded
+     via file: URLs.
+<li> Although most applets stop running once you leave their page,
+     they don't have to.
+</ul>
+<p>
+
+Each browser has a SecurityManager object 
+that checks for applet security violations.
+When a SecurityManager detects a violation,
+it throws a SecurityException.
+
+[ need an example applet that tries to do a few forbidden things ]
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="threadExample.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../finishing/notes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

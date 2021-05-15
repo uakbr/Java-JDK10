@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>Summary</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="reentrant.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Summary
+</h2>
+<p>
+<blockquote>
+
+The pages of this lesson have provided a lot of information
+about using threads in the Java development environment.
+Threads are supported by various components of the Java
+development environment and it can be confusing where to
+look for the features that you need. This page summarizes
+where in the Java environment you can find various classes,
+methods, and language features that participate in the
+Java threads story.
+
+<h4>Package Support of Threads</h4>
+<blockquote>
+<dl>
+<dt>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Thread.html><strong>java.lang.Thread</strong></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Thread.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<dd>
+In the Java development enviroment, threads are objects that
+derive from java.lang's Thread class. The Thread class defines
+and implements Java threads. You can subclass the Thread class
+to provide your own thread implementations or you can use
+the Runnable interface.
+
+<dt>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Runnable.html><strong>java.lang.Runnable</strong></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Runnable.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<dd>
+The Java language library also defines the Runnable interface
+which allows any arbitrary object to provide the body (the <code>run()</code> method)
+for a Thread.
+
+<dt>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Object.html><strong>java.lang.Object</strong></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Object.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<dd>
+The base level class, Object, defines three methods you can use to
+synchronize methods around a condition variable: <code>wait()</code>,
+<code>notify()</code>, and <code>notifyAll()</code>.
+
+<dt>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.ThreadGroup.html><strong>java.lang.ThreadGroup</strong></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.ThreadGroup.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<dd>
+All threads belong to a thread group which typically contains
+related threads. The ThreadGroup class in the java.lang package implements 
+groups of threads.
+
+<dt>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.ThreadDeath.html><strong>java.lang.Death</strong></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.ThreadDeath.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<dd>
+A thread is normally killed by throwing a ThreadDeath object
+at it. It is rare that any thread need catch ThreadDeath to do any
+cleaning up before actually dying.
+
+</dl>
+</blockquote>
+
+<h4>Language Support of Threads</h4>
+<blockquote>
+The Java language has two keywords related to the synchronization of threads:
+<code>volatile</code> (which is not yet implemented) and <code>synchronized</code>.
+Both of these language features help ensure the integrity of data that is
+shared between two concurrently running threads.
+<a href="multithreaded.html">Multithreaded Programs</a>
+discusses thread synchronization issues.
+</blockquote>
+
+<h4>Runtime Support of Threads</h4>
+<blockquote>
+The Java runtime system contains the scheduler that is responsible
+for running all the existing threads. The Java scheduler uses
+a fixed priority scheduling algorithm which boils down to this
+simple rule:
+<hr>
+<strong>Rule:</strong> At any give time, the highest priority runnable thread is running.
+<hr>
+</blockquote>
+
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="reentrant.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

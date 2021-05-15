@@ -1,0 +1,80 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Garbage Collection of unused objects</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="usingobject.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="classes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Garbage Collection of unused objects
+</h2>
+<p>
+<blockquote>
+
+Other object-oriented languages require that you keep track of all the objects
+you create and that you destroy them when they are no longer needed. Writing
+code to manage memory in this way is tedious and often error-prone. Java saves
+you from this by allowing you to create as many objects as you want (limited
+of course to whatever your system can handle) but never having to destroy them.
+The Java runtime environment deletes objects when it determines that they
+are no longer being used. This process is known as garbage collection.
+<p>
+The Java runtime environment supports a garbage collector that periodically
+frees the memory used by objects that are no longer needed.
+The Java garbage collector is a mark-sweep garbage collector that scans
+Java's dynamic memory areas for objects, marking those that are referenced.
+After all possible paths to objects are investigated, those objects that are
+not marked (i.e. are not referenced) are known to be garbage and are collected.
+(A more complete description of our garbage collection algorithm might be "A
+compacting, mark-sweep collector with some conservative scanning".)
+<p>
+The garbage collector runs synchronously when the system runs out of memory, or
+in response to a request from a Java program. Your Java program can ask the
+garbage collector to run at any time by calling <code>System.gc()</code>.
+The garbage collector requires about 20 milliseconds to complete its task
+so, your program should only run the garbage collector when there will be no
+performance impact and the program anticipates an idle period long enough for
+the garbage collector to finish its job.<br>
+<strong>Note:</strong> Asking the garbage collection to run does not guarantee
+that your objects will be garbage collected.
+<p>
+The Java garbage collector runs asynchronously when the system is idle
+on systems that allow the Java runtime to note when a thread has begun
+and to interrupt another thread (such as Windows 95). As soon as another
+thread becomes active, the garbage collector is asked to get to a consistent
+state and then terminate.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="usingobject.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="classes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

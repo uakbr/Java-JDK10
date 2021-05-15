@@ -1,0 +1,203 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Creating Your Own Exception Classes</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="throwable.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="runtime.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Creating Your Own Exception Classes
+</h2>
+<p>
+<blockquote>
+
+When you design a package of Java classes that collaborate to
+provide some useful function to your users, you work hard to
+ensure that your classes interact well together and that their
+interfaces are easy to understand and program to. You should
+spend as much time thinking about and designing the exceptions
+that your classes throw as you do thinking about and designing
+the classes themselves.
+<p>
+Suppose you were writing a linked list class that you were
+planning to distribute as freeware software.
+Among other methods, your linked list class supports these methods:
+<dl>
+<dt>
+<code>objectAt(int n)</code>
+<dd>
+returns the object in the <code>n</code>th position in the list,
+<dt>
+<code>firstObject()</code>
+<dd>
+returns the first object in the list
+<dt>
+<code>indexOf(Object o)</code>
+<dd>
+searches the list for the Object specified and returns its
+position in the list
+</dl>
+
+<h4>What Can Go Wrong?</h4>
+<blockquote>
+Because many programmers would be using your linked list class, you
+can be assured that many will misuse or abuse your class and its methods.
+Also, some legitimate calls to your linked list's methods may result
+in an undefined result. Regardless, in the face of errors, you want your
+linked list class to be as robust as possible under the circumstances,
+do something reasonable about the error, and communicate errors back to
+the calling program. However, you can't anticipate how each user of your
+linked list class will want the object to behave under adversity.
+So, often the best thing to do is to throw an exception.
+<p>
+Each of the methods supported by your linked list may wish to throw an
+exception under certain conditions, and each method will probably throw
+a different type of exception than the others. For example,
+<dl>
+<dt>
+<code>objectAt()</code>
+<dd>
+will throw a exception if the integer passed into the method is less than
+0 or larger than the number of object currently contained in the list
+<dt>
+<code>firstObject()</code>
+<dd>
+will throw a exception if the list contains no objects
+<dt>
+<code>indexOf()</code>
+<dd>
+will throw a exception if the object passed into the method is
+not contained in the list
+</dl>
+But what type of exception should each method throw? Should it be
+an exception provided with the Java development environment? Or should
+you roll your own?
+</blockquote>
+
+<h4>Choosing the Exception Type to Throw</h4>
+<blockquote>
+When faced with choosing the type of exception to throw, you have two
+choices:
+<ol>
+<li>
+use one written by someone else. For example, the Java development
+enviroment provides a lot of exception classes that you could use.
+<li>
+write one of your own
+</ol>
+
+You should go to the trouble of writing your own exception classes
+if you answer "yes" to any of the following questions. Otherwise, you
+can probably get away with using someone else's:
+<ul>
+<li>
+Do you need an exception type that isn't represented by those in
+the Java development environment?
+<li>
+Would it help your users if they could differentiate your exceptions
+from those thrown by classes written by other vendors?
+<li>
+Does your code throw more than one related exception?
+<li>
+If you use someone else's exceptions, will your users have access to
+those exceptions? A similar question is "Should your package be
+independent and self-contained?"
+</ul>
+<p>
+Your linked list class can throw multiple exceptions, and it would
+be convenient to be able to catch all exceptions thrown by the linked
+list with one handler. Also, if you plan on distributing your linked
+list in a package, all related code should be packaged together.
+Thus for the linked list, you should roll your own exception class
+hierarchy.
+<p>
+The following diagram illustrates one possible exception class hierarchy
+designed to support the linked list as described above:
+<p>
+<center><img src="images/linklist.trans.gif" width=337 height=167></center>
+<p>
+LinkedListException is the parent class of all the possible exceptions
+that can be thrown by the linked list class. Users of your linked list
+class can write a single exception handler to handle all linked list
+exceptions with a <code>catch</code> statement like this:
+<blockquote>
+<pre>
+catch (LinkedListException) {
+    . . . 
+}
+</pre>
+</blockquote>
+Or, users could write more specialized handlers for each subclass of
+LinkedListException.
+</blockquote>
+
+<h4>Choosing a Superclass</h4>
+<blockquote>
+The diagram above does not indicate the superclass of the LinkedListException
+class. As you know, Java exceptions must be Throwable objects (they must be
+instances of Throwable or a subclass of Throwable). So, your temptation might
+be to make LinkedListException a subclass of Throwable. However,
+the java.lang package provides two Throwable subclasses that further divide
+the type of problems that can occur within a Java program: Errors and
+Exceptions. Most of the applets and applications that you write will
+throw objects that are Exceptions. (Errors are reserved for serious hard
+errors that occur deep in the system.)
+<p>
+Theoretically, any Exception subclass could be used as the parent
+class of LinkedListException. However, a quick perusal of those
+classes show that they are either too specialized or completely unrelated
+to LinkedListException to be appropriate.
+Thus, the parent class of LinkedListException should be Exception.
+<p>
+Because runtime exceptions don't have to be declared in the throws clause
+of a method, many packages developers ask: "Isn't
+it just easier if I make all of my exception inherit from RuntimeException?"
+The answer to this question is covered in detail
+on <a href="runtime.html">Runtime Exceptions--The Controversy</a>.
+The bottom line is that you shouldn't derive from RuntimeException
+unless your class really is a runtime exception! For most of you, this
+means "No, your exceptions shouldn't inherit from RuntimeException."
+</blockquote>
+
+<h4>Naming Conventions</h4>
+<blockquote>
+It's good practice to append the word "Exception" to the end of
+all classes that inherit (directly or indirectly) from the
+Exception class. Similarly, classes that inherit from the Error
+class should end with the string "Error".
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="throwable.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="runtime.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

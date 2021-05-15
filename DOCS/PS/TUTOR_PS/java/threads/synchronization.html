@@ -1,0 +1,402 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Synchronization</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="multithreaded.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="deadlock.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Synchronization
+</h2>
+<p>
+<blockquote>
+
+So far, this lesson has contained examples with independent,
+asynchronous threads. That is, each thread contained all of the
+data and methods required for its execution and didn't require
+any outside resources or methods. In addition, the threads in
+those examples ran at their own pace without concern over the
+state or activities of any other concurrently running threads.
+
+<p>
+However, there are many interesting situations where separate
+concurrently running threads do share data and must consider
+the state and activities of those other threads. One such set of
+programming situations are known as Producer/Consumer scenarios
+where the Producer generates a stream of data which then is consumed 
+by a Consumer.
+
+<p>
+For example, you can imagine a Java application where one thread
+(the producer) writes data to a file while a second thread (the consumer)
+reads data from the same file. Or, as you type characters on the keyboard,
+the producer thread places key events in an event queue and the consumer
+thread reads the events from the same queue. Both of these examples use
+concurrent threads that share a common resource: a file, an event queue.
+And because the threads share a common resource, they must be synchronized in
+some way.
+
+<p>
+This lesson teaches you about Java thread synchronization through
+a simple Producer/Consumer example.
+
+<h4>Producer/Consumer Example</h4>
+<blockquote>
+The <a href=betaclasses/Producer.java>Producer</a> generates integers
+ranging from 0 to 9, stores it in a "CubbyHole" object, prints the
+generated number, and (just to make the synchronization problem more
+interesting) the Producer sleeps for a random amount of time between 0 and
+100 milliseconds.
+<blockquote>
+<pre>
+class Producer extends Thread {
+    private CubbyHole cubbyhole;
+    private int number;
+
+    public Producer(CubbyHole c, int number) {
+	cubbyhole = c;
+	this.number = number;
+    }
+
+    public void run() {
+	for (int i = 0; i &lt; 10; i++) {
+	    cubbyhole.put(i);
+	    System.out.println(&quot;Producer #&quot; + this.number + &quot; put: &quot; + i);
+	    try {
+	        sleep((int)(Math.random() * 100));
+	    } catch (InterruptedException e) {
+	    }
+	}
+    }
+}
+</pre>
+</blockquote>
+The <a href=betaclasses/Consumer.java>Consumer</a>, being ravenous,
+consumes all integers from the CubbyHole (the exact same object into
+which the Producer put the integers in the first place) as quickly
+as they become available.
+<blockquote>
+<pre>
+class Consumer extends Thread {
+    private CubbyHole cubbyhole;
+    private int number;
+
+    public Consumer(CubbyHole c, int number) {
+	cubbyhole = c;
+	this.number = number;
+    }
+
+    public void run() {
+	int value = 0;
+	for (int i = 0; i &lt; 10; i++) {
+	    value = cubbyhole.get();
+	    System.out.println(&quot;Consumer #&quot; + this.number + &quot; got: &quot; + value);
+	}
+    }
+}
+
+</pre>
+</blockquote>
+
+The Producer and Consumer in this example share data through
+a common <code>CubbyHole</code> object. And you will note
+that neither the Producer nor the Consumer make any effort whatsoever
+to ensure that the Consumer is getting each value produced once
+and only once. The synchronization between these two threads actually
+occurs at a lower level, within the <code>get()</code> and <code>put()</code>
+methods of the CubbyHole object. However, let's assume for a moment that
+no synchronization between these two threads and talk about the potential
+problems that might arise in that situation.
+
+<p>
+One problem that might arise if the Producer and Consumer threads
+make no arrangements to run synchronously occurs when the Producer
+is quicker than the Consumer and generates two numbers before
+the Consumer has a chance to consume the first one. Thus the Consumer
+would skip a number. Part of the output might look like this:
+<blockquote>
+<pre>
+    . . .
+
+Consumer #1 got: 3
+Producer #1 put: 4
+Producer #1 put: 5
+Consumer #1 got: 5
+
+    . . .
+</pre>
+</blockquote>
+Another problem that might arise is when the Consumer is quicker than
+the Producer and consumes the same value twice. In this situation, the Consumer
+would print the same value twice and might produce output that looked like this:
+<blockquote>
+<pre>
+    . . .
+
+Producer #1 put: 4
+Consumer #1 got: 4
+Consumer #1 got: 4
+Producer #1 put: 5
+
+    . . .
+</pre>
+</blockquote>
+Either way, the result is wrong. You want the Consumer to get each
+integer produced by the Producer exactly once.
+Problems, such as those just described, that arise from multiple,
+asynchronously executing threads trying to a single object at the same time
+and getting the wrong result, are called <em>race conditions</em>.
+
+<p>
+To prevent race conditions in our Producer/Consumer example,
+the storage of a new integer into the CubbyHole by the Producer
+must be synchronized with the retrieval of an integer from the
+CubbyHole by the Consumer. The Consumer must consume each integer
+exactly once. Objects such as the CubbyHole, which are shared
+between two threads and whose accesses must be synchronized,
+are called <em>condition variables</em>. The Java language
+allows you to synchronize threads around a condition variable
+through the use of <em>monitors</em>.
+</blockquote>
+
+<h4>Monitors</h4>
+<blockquote>
+The Java language and runtime system support thread synchronization 
+through the use of <em>monitors</em> which were first outlined
+in C. A. R. Hoare's article <em>Communicating Sequential Processes</em>
+(<em>Communications of the ACM</em>, Vol. 21, No. 8, August 1978, pp. 666-677).
+In general, a monitor is associated with a specific data item (the condition variable)
+and functions as a lock on that data. When a thread holds the monitor
+for some data item, other threads are locked out and cannot inspect or
+modify the data.
+<p>
+The code segments within a program that make it possible for separate,
+concurrent threads to access the same data items are known as
+<em>critical sections</em>. In the Java language, you identify critical sections
+in your program with the <code>synchronized</code> keyword.
+<br><strong>Note:</strong> Generally, critical sections in Java programs
+are methods. You can mark smaller code segments as synchronized.
+However, this violates object-oriented paradigms and leads to confusing
+code that is difficult to debug and maintain. For the majority of
+your Java programming purposes, it's best to use <code>synchronized</code>
+only at the method level.
+<p>
+In the Java language, a unique monitor is associated with every object that has a
+synchronized method. The <a href=betaclasses/CubbyHole.java>CubbyHole</a>
+class for the Producer/Consumer example introduced above has two
+synchronized methods: the <code>put()</code> method used to change the
+value in the CubbyHole and the <code>get()</code> method used to retrieve
+the current value.
+<a name="CubbyHoleSource"></a>
+<blockquote>
+<pre>
+class CubbyHole {
+    private int seq;
+    <strong>private boolean available = false;</strong>
+
+    public <strong>synchronized</strong> int get() {
+        <strong>while (available == false) {
+	    try {
+		wait();
+	    } catch (InterruptedException e) {
+	    }
+	}
+        available = false;
+	notify();</strong>
+	return seq;
+    }
+
+    public <strong>synchronized</strong> void put(int value) {
+	<strong>while (available == true) {
+	    try {
+		wait();
+	    } catch (InterruptedException e) {
+	    }
+	}</strong>
+	seq = value;
+        <strong>available = true;
+        notify();</strong>
+    }
+}
+</pre>
+</blockquote>
+In addition, the <code>CubbyHole</code> has two private variables: <code>seq</code>
+which is the current contents of the CubbyHole, and the boolean variable
+<code>available</code> which indicates whether the CubbyHole contents
+can be retrieved. When <code>available</code> is true the Producer has
+just put a new value in the CubbyHole and the Consumer has not yet
+consumed it. The Consumer can only consume the value in the CubbyHole
+when <code>available</code> is true.
+<p>
+Because CubbyHole has synchronized methods, the Java language provides
+a unique monitor for each instance of CubbyHole, including
+the one shared by the Producer and the Consumer. Whenever the Producer
+calls the CubbyHole's <code>put()</code> method, the Producer acquires
+the monitor for the CubbyHole thereby preventing the Consumer
+from calling the CubbyHole's<code>get()</code> method.
+<blockquote>
+<pre>
+public synchronized void put(int value) {
+	// monitor has been acquired by the Producer
+    while (available == true) {
+        try {
+            wait();
+        } catch (InterruptedException e) {
+        }
+    }
+    seq = value;
+    available = true;
+    notify();
+	// monitor is released by the Producer
+}
+</pre>
+</blockquote>
+When the <code>put()</code> method returns, the Producer releases the
+monitor thereby unlocking the CubbyHole.
+<p>
+Conversely, whenever the Consumer calls the CubbyHole's <code>get()</code>
+method, the Consumer acquires the monitor for the CubbyHole thereby
+preventing the Producer from calling the <code>put()</code> method.
+<blockquote>
+<pre>
+public <strong>synchronized</strong> int get() {
+	// monitor has been acquired by the Consumer
+    while (available == false) {
+	try {
+	    wait();
+	} catch (InterruptedException e) {
+	}
+    }
+    available = false;
+    notify();
+    return seq;
+	// monitor is released by the Consumer
+}
+</pre>
+</blockquote>
+The acquisition and release of a monitor is done atomically by the
+Java runtime system. This ensures that race conditions cannot occur
+in the underlying implementation of the threads and ensures data
+integrity.
+<p>
+You might have noticed a potential problem in CubbyHole's <code>put()</code>
+and <code>get()</code> methods. At the beginning
+of the <code>get()</code> method, if the value in the CubbyHole
+is not available (that is, the Producer has not generated a new
+number since the last time the Consumer consumed it) then the
+Consumer waits for the Producer to put a new value into the CubbyHole.
+So, the question arises--how can the Producer put a new value into
+the CubbyHole, if the Consumer holds the monitor (the Consumer holds
+the CubbyHole's monitor because it's within the synchronized
+method <code>get()</code>)?
+<p>
+Similarly, at the beginning of the <code>put()</code> method, if the
+value in the CubbyHole has not yet been consumed then the Producer
+waits for the Consumer to consume the value in the CubbyHole.
+And again the question arises--how can the Consumer consume the value in
+the CubbyHole, if the Producer holds the monitor (the Producer holds
+the CubbyHole's monitor because it's within the synchronized
+method <code>put()</code>)?
+<p>
+Well, the designers of the Java language thought of this too.
+When the thread enters the <code>wait()</code> method, which happens
+at the beginning of both the <code>put()</code> and <code>get</code>
+methods, the monitor is released atomically, and when the thread exits
+the <code>wait()</code> method, the monitor is acquired again. This gives
+the waiting object the opportunity to acquire the monitor and, depending
+on who's waiting, consume the value in the CubbyHole or produce a new
+value for the CubbyHole.
+</blockquote>
+
+<h4>The Main Program</h4>
+<blockquote>
+Here's a small stand-alone <a href=betaclasses/ProducerConsumerTest.java>Java application</a>
+that creates a CubbyHole object, one Producer, one Consumer, and then starts both the Producer
+and the Consumer.
+<blockquote>
+<pre>
+class ProducerConsumerTest {
+    public static void main(String args[]) {
+	CubbyHole c = new CubbyHole();
+	Producer p1 = new Producer(c, 1);
+	Consumer c1 = new Consumer(c, 1);
+
+        p1.start();
+        c1.start();
+    }
+}
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>The Output</h4>
+<blockquote>
+Here's the output of ProducerConsumerTest.
+<blockquote>
+<pre>
+Producer #1 put: 0
+Consumer #1 got: 0
+Producer #1 put: 1
+Consumer #1 got: 1
+Producer #1 put: 2
+Consumer #1 got: 2
+Producer #1 put: 3
+Consumer #1 got: 3
+Producer #1 put: 4
+Consumer #1 got: 4
+Producer #1 put: 5
+Consumer #1 got: 5
+Producer #1 put: 6
+Consumer #1 got: 6
+Producer #1 put: 7
+Consumer #1 got: 7
+Producer #1 put: 8
+Consumer #1 got: 8
+Producer #1 put: 9
+Consumer #1 got: 9
+</pre>
+</blockquote>
+
+<p>
+<strong>Try this:</strong> Remove the lines that are shown in bold in
+the listing of the CubbyHole class <a href=#CubbyHoleSource>shown above</a>.
+Recompile the program and run it again. What happened? Because no explicit effort
+has been made to synchronize the Producer and Consumer threads, the
+Consumer consumes with reckless abandon and gets a whole bunch of
+zeros instead of getting each integer between 0 and 9 exactly once.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="multithreaded.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="deadlock.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

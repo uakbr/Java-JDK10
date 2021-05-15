@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>The Clock Applet</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="run.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="states.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Clock Applet
+</h2>
+<p>
+<blockquote>
+
+The Clock applet shown here: <applet codebase=betaclasses code=Clock.class
+width=60 height=10><app class=Clock width=60 height=10></applet> displays the
+current time and updates its display every second.
+You can scroll this page and perform other tasks while the
+clock continues to update because the code that updates the
+clock's display runs within its own thread.
+<p>
+This page highlights and explains the <a href=betaclasses/Clock.java>source
+code</a> for the clock applet in detail. In particular, this page 
+describes the code segments that implement the clock's threaded behaviour;
+it does not describe the code segments that are related to the life
+cycle of the applet. If you have not written your own applets before
+or are not familiar with the life cycle of any applet, you may want
+to take this time to familiarize yourself with the material in
+<a href=../../applet/anatomy/lifeCycle.html>The Life Cycle of an Applet</a>
+<a href=../../applet/anatomy/lifeCycle.html><img src=../../images/appletIcon.gif width=20 height=20 border=0></a> 
+before proceeding with this page.
+
+<p>
+<h4>The Decision to Use the Runnable Interface</h4>
+<blockquote>
+The Clock applet uses the Runnable interface to provide the
+<code>run()</code> method for its thread. In order to run within a
+Java-compatible browser, the Clock class had to derive from the Applet
+class. However, the Clock applet also needs to use a thread so that it
+can continuously update its display without taking over the process in
+which it is running. But since the Java language does not support multiple-inheritance,
+the Clock class could not inherit from Thread as well as from Applet.
+Thus, the Clock class uses the Runnable interface to provide its
+threaded behaviour.
+
+<p>
+Applets are not threads nor do Java-compatible browsers or appletviewers
+automatically create threads in which to run applets. Therefore, if
+an applet needs any threads it must create its own. The clock applet
+needs one thread in which to perform its display updates because it
+updates its display frequently and the user needs to be able to perform
+other tasks at the same time the clock is running (such as going to
+another page, or scrolling this one).
+</blockquote>
+
+<h4>The Runnable Interface</h4>
+<blockquote>
+The Clock applet provides a <code>run()</code> method for its thread
+via the Runnable interface. The class definition for the Clock class
+indicates that the Clock is a subclass of Applet and implements the
+Runnable interface. If you are not familiar with interfaces review
+the information at <a href=../../MissingPage.html><strong>Missing Page</strong></a>.
+<blockquote>
+<pre>
+class Clock extends Applet <strong>implements Runnable</strong> {
+</pre>
+</blockquote>
+The Runnable interface defines a single method called <code>run()</code>
+that takes no arguments and returns no value. Because the Clock class
+implements the Runnable interface, it must provide an implementation
+for the <code>run()</code> method as defined in the interface.
+However, before explaining the Clock's <code>run()</code> method
+we need to look at some of the other elements of the Clock code first.
+</blockquote>
+
+<h4>Creating the Thread</h4>
+<blockquote>
+The application in which an applet is running calls the applet's
+<code>start()</code> method when it loads the applet. The Clock applet
+creates a Thread named <code>clockThread</code> in its <code>start()</code>
+method and starts the thread.
+<blockquote>
+<pre>
+public void start() {
+    if (clockThread == null) {
+        clockThread = new Thread(this, "Clock");
+        clockThread.start();
+    }
+}    
+</pre>
+</blockquote>
+First, the <code>start()</code> method checks to see if <code>clockThread</code>
+is null. If <code>clockThread</code> is null, then the applet is brand new or
+has been previously stopped and a new thread must be created. Otherwise, the
+applet is already running. The applet creates a new thread
+with this invocation:
+<blockquote>
+<pre>
+clockThread = new Thread(this, "Clock");
+</pre>
+</blockquote>
+Notice that <code>this</code>--the Clock applet--is passed in as the first
+argument to the thread constructor. The first argument to this Thread constructor
+must implement the Runnable interface and becomes the thread's <em>target</em>.
+When constructed in this way, the thread, <code>clockThread</code>, gets its
+<code>run()</code> method from its target Runnable object, in this case,
+the Clock applet.
+<p>
+The second argument is just a name for the thread.
+</blockquote>
+
+<h4>Stopping the Thread</h4>
+<blockquote>
+When you leave the page that displays the Clock applet, the application in which
+the applet is running calls the applet's <code>stop()</code> method. The Clock's
+<code>stop()</code> method stops the thread then sets it to null. This stops
+the continual updating of the clock.
+<blockquote>
+<pre>
+public void stop() {
+    clockThread.stop();
+    clockThread = null;
+}
+</pre>
+</blockquote>
+If you revisit the page, the <code>start()</code> method is called again,
+and the clock starts up again with a new thread.
+</blockquote>
+
+<h4> The Run Method</h4>
+<blockquote>
+And finally for the Clock's <code>run()</code> method.
+The <code>run()</code> method implements the heart of the Clock applet
+and looks like this:
+<blockquote>
+<pre>
+public void run() {
+    while (clockThread != null) {
+        repaint();
+        try {
+            clockThread.sleep(1000);
+        } catch (InterruptedException e){
+        }
+    }
+}   
+</pre>
+</blockquote>
+As you saw in the previous section, when the applet is asked to stop, the applet
+stops the <code>clockThread</code> and then sets it to null; this lets
+the <code>run()</code> method know when to stop. Thus the first
+line of the <code>run()</code> method loops until <code>clockThread</code>
+is stopped. Within the loop, the applet repaints itself, and then
+tells the Thread to sleep for 1 second (1000 milliseconds).
+An applet's <code>repaint()</code> method ultimately calls the applet's
+<code>paint()</code> method which does the actual update of the applet's
+display area. The Clock applet's <code>paint()</code> method gets the
+current time and draws it to the screen.
+<blockquote>
+<pre>
+public void paint(Graphics g) {
+    Date now = new Date();
+    g.drawString(now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds(), 5, 10);
+}
+</pre>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="run.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="states.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

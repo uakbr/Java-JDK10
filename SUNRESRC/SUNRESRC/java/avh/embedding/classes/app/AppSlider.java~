@@ -1,0 +1,400 @@
+
+import awt.*;
+import browser.*;
+
+class AppSlider extends AppComponent {
+    int value;
+    int minValue;
+    int maxValue;
+    Font font;
+    Color color;
+    boolean drawValue = true;
+    boolean drawOutline = true;
+
+    public AppSlider(PanelApplet app, int minValue, int maxValue) {
+	this(app, minValue, maxValue, Color.gray);
+    }
+    public AppSlider(PanelApplet app, int minValue, int maxValue, Color color) {
+	super(app);
+	this.value = minValue;
+	this.minValue = minValue;
+	this.maxValue = maxValue;
+	this.color = color;
+	this.font = app.getFont("Helvetica", 14);
+    }
+
+    public void setValue(int value) {
+	value = Math.max(minValue, Math.min(maxValue, value));
+	if (value != this.value) {
+	    this.value = value;
+	    app.touched = true;;
+	}
+    }
+
+    public void paint(Graphics g) {
+	g.setForeground(Color.black);
+	g.setFont(font);
+	if (drawOutline) {
+	    g.drawRect(0, 0, w-1, h-1);
+	}
+
+	String str = String.valueOf(value);
+	int strw = font.stringWidth(str);
+
+	g.setForeground(color);
+	if (w > h) {
+	    int vx = ((w-2) * (value - minValue)) / (maxValue - minValue);
+	    g.fillRect(1, 1, vx, h-2);
+	    g.setForeground(Color.lightGray);
+	    g.fillRect(vx+1, 1, (w-2) - vx, h-2);
+	    if (drawValue) {
+		g.setForeground(Color.black);
+		if (vx > (w/2)) {
+		    g.drawString(str, vx-strw, ((h + font.height) / 2) - font.descent);
+		} else {
+		    g.drawString(str, vx+1, ((h + font.height) / 2) - font.descent);
+		}
+	    }
+	} else {
+	    int vy = (h-2) - ((h-2) * (value - minValue)) / (maxValue - minValue);
+	    g.fillRect(1, vy+1, w-2, (h-2) - vy);
+	    g.setForeground(Color.lightGray);
+	    g.fillRect(1, 1, w-2, vy);
+	    if (drawValue) {
+		g.setForeground(Color.black);
+		if (vy > (h/2)) {
+		    g.drawString(str, (w - strw) / 2, vy - font.descent);
+		} else {
+		    g.drawString(str, (w - strw) / 2, vy + font.ascent);
+		}
+	    }
+	}
+    }
+
+    public void mouseDown(int x, int y) {
+	if (w > h) {
+	    setValue(minValue + (((x-1) * (maxValue - minValue)) / (w-2)));
+	} else {
+	    y = (h-1) - y;
+	    setValue(minValue + (((y-1) * (maxValue - minValue)) / (h-2)));
+	}
+    }
+    public void mouseDrag(int x, int y) {
+	mouseDown(x, y);
+    }
+    public void mouseUp(int x, int y) {
+	app.action(this);
+    }
+}
+
+class AppLabel extends AppComponent {
+    String label;
+    Font font;
+    int align;
+    public final static int LEFT = 0;
+    public final static int CENTER = 1;
+    public final static int RIGHT = 2;
+    
+    AppLabel(PanelApplet app, String label, int align) {
+	super(app);
+	this.label = label;
+	this.align = align;
+	this.font = app.getFont("Helvetica", Font.ITALIC, 14);
+    }
+
+    public void paint(Graphics g) {
+	int x = 0;
+	int y = ((h + font.height) / 2) - font.descent;
+
+	g.setFont(font);
+	switch (align) {
+	  case LEFT:
+	    break;
+	  case CENTER:
+	    x = (w - font.stringWidth(label)) / 2;
+	    break;
+	  case RIGHT:
+	    x = w - font.stringWidth(label);
+	    break;
+	}
+	g.drawString(label, x, y);
+    }
+}
+
+class AppImage extends AppComponent {
+    Image img;
+    
+    AppImage(PanelApplet app, String img) {
+	super(app);
+	this.img = app.getImage(img);
+    }
+
+    public void paint(Graphics g) {
+	if (img != null) {
+	    g.drawImage(img, (w - img.width)/2, (h - img.height)/2);
+	}
+    }
+}
+
+class AppText extends AppComponent {
+    String value;
+    Font font;
+    int selStart, selEnd;
+    int selPos, upTm;
+    
+    public AppText(PanelApplet app, String value) {
+	super(app);
+	this.value = value;
+	font = app.getFont("Helvetica", 14);
+	if (app.focus == null) {
+	    app.setFocus(this);
+	}
+	selStart = selEnd = value.length();
+    }
+    public void select(int start, int end) {
+	selStart = Math.max(0, Math.min(value.length(), start));
+	selEnd = Math.max(0, Math.min(value.length(), end));
+	app.touched = true;;
+    }
+    public void paint(Graphics g) {
+	int yoff = ((h + font.height) / 2) - font.descent;
+	g.setForeground(Color.lightGray);
+	g.fillRect(0, 0, w, h);
+	g.setForeground(Color.gray);
+	g.drawLine(0, yoff+1, w, yoff+1);
+	g.setFont(font);
+	if (selStart == selEnd) {
+	    int cx = font.stringWidth(value.substring(0, selStart));
+	    g.setForeground(Color.black);
+	    g.drawLine(cx - 2, yoff + 4, cx, yoff);
+	    g.drawLine(cx, yoff, cx + 2, yoff + 4);
+	} else {
+	    g.setForeground(Color.gray);
+	    int cx0 = font.stringWidth(value.substring(0, selStart));
+	    int cx1 = font.stringWidth(value.substring(0, selEnd));
+	    g.fillRect(cx0, 0, cx1 - cx0, h);
+	}
+	g.setForeground(Color.black);
+	g.drawString(value, 0, yoff);
+    }
+    int x2pos(int x) {
+	for (int i = 0 ; i < value.length()-1 ; i++) {
+	    int cw = font.stringWidth(value.substring(i, i+1));
+	    if (x < cw/2) {
+		return i;
+	    }
+	    x -= cw;
+	}
+	return value.length();
+    }
+    public void mouseDown(int x, int y) {
+	app.setFocus(this);
+	selPos = x2pos(x);
+	select(selPos, selPos);
+    }
+    public void mouseDrag(int x, int y) {
+	int pos = x2pos(x);
+	if (pos < selPos) {
+	    select(pos, selPos);
+	} else {
+	    select(selPos, pos);
+	}
+    }
+    public void mouseUp(int x, int y) {
+	if (System.nowMillis() < upTm + 100) {
+	    select(0, value.length());
+	}
+	upTm = System.nowMillis();
+    }
+    public void keyDown(int ch) {
+	switch (ch) {
+	  case 'f' & 0x1f:
+	    select(selStart+1, selStart+1);
+	    break;
+	  case 'b' & 0x1f:
+	    select(selStart-1, selStart-1);
+	    break;
+	  case 'e' & 0x1f:
+	    select(value.length(), value.length());
+	    break;
+	  case 'a' & 0x1f:
+	    select(0, 0);
+	    app.touched = true;;
+	    break;
+
+	  case 'h' & 0x1f:
+	    if ((selStart > 0) && (selStart == selEnd)) {
+		selStart--;
+	    }
+	    if (selStart < selEnd) {
+		value = value.substring(0, selStart) + value.substring(selEnd);
+		select(selStart, selStart);
+		break;
+	    }
+	    break;
+
+	  case '\n':
+	    app.action(this);
+	    break;
+
+	  case '\t':
+	    // next field
+	    break;
+
+	  default:
+	    if (ch >= ' ') {
+		if (selStart < selEnd) {
+		    value = value.substring(0, selStart) + value.substring(selEnd);
+		    selEnd = selStart;
+		}
+		char str[] = {(char)ch};
+		value = value.substring(0, selStart) + new String(str) + value.substring(selEnd);
+		select(selStart+1, selStart+1);
+	    }
+	}
+    }
+}
+
+class AppPanel extends AppComponent {
+    AppComponent component[] = new AppComponent[4];
+    int ncompontents;
+
+    public AppPanel(PanelApplet app) {
+	super(app);
+    }
+
+    public void paint(Graphics g) {
+	int ox = g.originX;
+	int oy = g.originY;
+
+	g.drawRect(0, 0, w-1, h-1);
+	for (int i = 0 ; i < ncompontents ; i++) {
+	    AppComponent comp = component[i];
+	    g.setOrigin(ox + comp.x, oy + comp.y);
+	    g.clipRect(0, 0, comp.w, comp.h);
+	    comp.paint(g);
+	}
+    }
+
+    public synchronized void add(AppComponent comp) {
+	if (ncompontents == component.length) {
+	    AppComponent newcomponent[] = new AppComponent[ncompontents*2];
+	    System.arraycopy(component, 0, newcomponent, 0, ncompontents);
+	    component = newcomponent;
+	}
+	component[ncompontents++] = comp;
+	comp.parent = this;
+    }
+
+    public synchronized void add(AppComponent comp, int x, int y, int w, int h) {
+	add(comp);
+	comp.reshape(x, y, w, h);
+    }
+
+    public synchronized AppComponent locate(int x, int y) {
+	for (int i = 0 ; i < ncompontents ; i++) {
+	    AppComponent comp = component[i];
+	    if ((comp = comp.locate(x - comp.x, y - comp.y)) != null) {
+		return comp;
+	    }
+	}
+	return super.locate(x, y);
+    }
+}
+
+class PanelApplet extends Applet {
+    AppPanel panel;
+    AppComponent down;
+    AppComponent focus;
+    boolean touched;
+
+    public void init() {
+	panel = new AppPanel(this);
+	panel.reshape(0, 0, width, height);
+	panel.add(new AppButton(this, "ok"), 5, 5, 50, 20);
+	panel.add(new AppButton(this, "cancel"), 60, 5, 50, 20);
+	panel.add(new AppButton(this, "set"), 5, 30, 50, 20);
+	panel.add(new AppLabel(this, "Name:", AppLabel.RIGHT), 60, 30, 50, 20);
+	panel.add(new AppImage(this, "images/cross.gif"), 115, 5, 50, 20);
+	panel.add(new AppText(this, "Arthur"), 115, 30, 100, 20);
+	panel.add(new AppCheckbox(this), 170, 5, 20, 20);
+	panel.add(new AppSlider(this, 10, 100), 5, 55, 120, 20);
+	panel.add(new AppSlider(this, 10, 100), 220, 5, 20, 100);
+    }
+
+    public void update(Graphics g) {
+	paint(g);
+    }
+    public void paint(Graphics g) {
+	g.setOrigin(g.originX + panel.x, g.originY + panel.y);
+	g.clipRect(0, 0, panel.w, panel.h);
+	panel.paint(g);
+	touched = false;
+    }
+
+    public void mouseDown(int x, int y) {
+	down = panel.locate(x, y);
+	if (down != null) {
+	    // global to local coordinates
+	    for (AppComponent comp = down ; comp != null ; comp = comp.parent) {
+		x -= comp.x;
+		y -= comp.y;
+	    }
+	    down.mouseDown(x, y);
+	}
+	if (touched) {
+	    repaint();
+	}
+    }
+    public void mouseDrag(int x, int y) {
+	if (down != null) {
+	    // global to local coordinates
+	    for (AppComponent comp = down ; comp != null ; comp = comp.parent) {
+		x -= comp.x;
+		y -= comp.y;
+	    }
+	    down.mouseDrag(x, y);
+	    if (touched) {
+		repaint();
+	    }
+	}
+    }
+    public void mouseUp(int x, int y) {
+	if (down != null) {
+	    // global to local coordinates
+	    for (AppComponent comp = down ; comp != null ; comp = comp.parent) {
+		x -= comp.x;
+		y -= comp.y;
+	    }
+	    down.mouseUp(x, y);
+	    if (touched) {
+		repaint();
+	    }
+	}
+    }
+    public void keyDown(int ch) {
+	if (focus != null) {
+	    focus.keyDown(ch);
+	    if (touched) {
+		repaint();
+	    }
+	}
+    }
+    public void setFocus(AppComponent comp) {
+	focus = comp;
+	getFocus();
+    }
+
+    public void action(AppButton but) {
+	System.out.println("BUTTON ACTION " + but.label);
+    }
+    public void action(AppCheckbox check) {
+	System.out.println("CHECKBOX ACTION " + check.value);
+    }
+    public void action(AppText text) {
+	System.out.println("TEXT ACTION " + text.value);
+    }
+    public void action(AppSlider slider) {
+	System.out.println("SLIDER ACTION " + slider.value);
+    }
+}

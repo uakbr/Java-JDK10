@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>What are Classes?</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="messages.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="inheritance.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Object-Oriented Programming Concepts: A Primer</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    What are Classes?
+</h2>
+<p>
+<blockquote>
+
+In the real world, you often have many objects of the same kind.
+For example, your bicycle is really just one of many bicycles
+in the world. Using object-oriented terminology, we say that
+your bicycle is an <em>instance</em> of the class of objects knowns
+as bicycles. All bicycles have some states (current gear, current
+cadence, two wheels) and behaviours (change gears, brake) in common.
+<p>
+When building bicycles, manufacturers take advantage of the fact that
+bicycles share characteristics and they build many bicycles
+from the same blueprint--it would be very inefficient to produce a new
+blueprint for every individual bicycle they manufactured.
+<p>
+In object-oriented software, it's also possible to have many objects
+of the same kind that share characteristics: rectangles, employee
+records, video clips and so on. Like the bicycle manufacturers,
+you can take advantage of the fact that objects of the same kind
+share certain characteristics and you can create a blueprint for those
+objects. Software blueprints for objects are called <em>classes</em>.
+<hr>
+<strong>Definition:</strong> A class is a template or prototype that
+defines the variables and the methods common to all objects of a
+certain kind.
+<hr>
+<p>
+<center><img src="images/class.trans.gif" width=350 height=171></center>
+<p>
+For example, you could create the bicycle class that would declare
+several variables to contain the current gear, the current cadence, etc.
+It would also declare and provide implementations for the methods that allow
+the rider to change gears, brake and change the pedaling cadence.
+<p>
+<center><img src="images/bikeclass.trans.gif" width=252 height=186></center>
+<p>
+The values for the variables are provided by each instance of the class.
+So, after you've created the bicycle class, you must <em>instantiate</em>
+it (create an instance of it) to use it. When you create an instance from
+a class, the variables declared by the class are allocated in memory.
+Then you can use the instance's methods to assign values to the variables.
+Instances of the same class share method implementations.
+
+<h4>The Term "Object"</h4>
+<blockquote>
+You probably noticed that the illustrations of objects and classes look
+very similar to one another. And indeed, the differentiation between classes
+and objects is often the source of some confusion. In the real world it's obvious
+that classes are not themselves the objects that they describe--a blueprint
+of a bicycle is not a bicycle. However, it's a little more difficult
+to differentiate classes and objects in software. This is partially because software
+objects are merely electronic models of real-world objects or abstract concepts in
+the first place. But also because many people use the term "object" inconsistently
+and use it to refer to both classes and instances.
+<p>
+In the diagrams, a class's methods and variables are not colored in because
+they don't exist yet. You must create an instance from the class before you
+can call the methods and before the variables can have any values.
+In comparison, an object's methods and variables are filled in with color
+indicating that the object actually exists and you can use it. You can send
+the object a message and it will respond by performing the method and perhaps
+modifying the values of the variables.
+</blockquote>
+
+<h4>The Benefit of Classes</h4>
+<blockquote>
+Objects provide the benefit of modularity and information hiding.
+Classes provide the benefit of reusability. Bicycle manufacturers
+reuse the same blueprint over and over again to build lots of bicycles.
+Software programmers use the same class over and over to again create
+many objects.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="messages.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="inheritance.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Object-Oriented Programming Concepts: A Primer</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

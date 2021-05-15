@@ -1,0 +1,98 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Control Flow Statements</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="vars.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="input.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Control Flow Statements
+</h2>
+<p>
+<blockquote>
+ 
+<blockquote>
+<pre>
+class Count {
+    public static void main(String args[])
+        throws java.io.IOException
+    {
+        int count = 0;
+
+        <strong>while</strong> (System.in.read() != -1)
+            count++;
+        System.out.println("Input has " + count + " chars.");
+    }
+}    
+</pre>
+</blockquote>
+The character-counting program uses a <code>while</code> statement to loop
+over all the characters of the input source and count them.
+Generally speaking, a <code>while</code> statement performs
+some action <em>while</em> a certain condition remains true.
+The general syntax of the <code>while</code> statement is:
+<blockquote>
+<pre>
+while (<var>expression</var>)
+    <var>statement</var>
+</pre>
+</blockquote>
+That is, while <var>expression</var> is true, do <var>statement</var>.
+In the character-counting application, while the <code>read()</code> method
+returns a character that is <strong>not</strong> -1, the program
+increments <code>count</code>. More information about reading from
+the standard input stream is in the next page of this lesson.
+
+<h4>Other Control Flow Statements</h4>
+<blockquote>
+Statements such as the <code>while</code> statement are <em>control flow statements</em>.
+They determine the order in which other statements are executed.
+The Java language supports several other control flow statements:
+<blockquote>
+<pre>
+   <strong>Statement</strong>             <strong>Keyword</strong>
+decision making    if-else, switch
+loops              for, while, do-while
+exceptions         try-catch-throw
+miscellaneous      break, continue, label:, return
+</pre>
+</blockquote>
+Although <code>goto</code> is a reserved word,
+the Java language does not support the
+<code>goto</code> statement.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="vars.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="input.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

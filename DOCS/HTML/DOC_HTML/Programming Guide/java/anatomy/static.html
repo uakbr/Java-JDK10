@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Static vs. Instance</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="creating.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="tools.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Static vs. Instance
+</h2>
+<p>
+<blockquote>
+ 
+<blockquote>
+<pre>
+import java.util.Date;
+class DateApp {
+    public static void main(String args[]) {
+        Date today = new Date();
+        <strong>System.out.println(today);</strong>
+    }
+}
+</pre>
+</blockquote>
+The last line of the <code>main()</code> method uses
+the System class from the java.lang package to display the
+current date and time.
+First, let's break down the line of code that invokes the
+<code>println</code> method, then look at the details of
+the argument passed to it.
+
+<h4>Static Methods and Variables</h4>
+<blockquote>
+In the Java statement
+<blockquote>
+<pre>
+<strong>System.out.println(today);</strong>
+</pre>
+</blockquote>
+<code>System.out</code> refers to the
+<code>out</code> variable of the System class.
+As you can see, to refer an class's static variables and methods, you use a syntax
+similar to the C and C++ syntax for obtaining the elements in a structure.
+You join the class's name and the name of the static method or 
+static variable together with a period ('.').
+<p>
+Notice that the application never instantiated the System class and
+that <code>out</code> is referred to directly from the class. This is because <code>out</code>
+is declared as a <em>static variable</em>--a variable associated
+with the class rather than with an instance of the class.
+You can also associate methods with a class--<em>static methods</em>--
+using <code>static</code>.
+</blockquote>
+
+<h4>Instance Methods and Variables</h4>
+<blockquote>
+Methods and variables that are not declared as <code>static</code>
+are known as <em>instance methods</em> and <em>instance
+variables</em>. To refer to instance methods and variables, you must
+instantiate the class first, then obtain the methods and variables
+from the instance.
+<p>
+System's <code>out</code> variable is an object, an instance of the
+PrintStream class (from the java.io package), that implements the
+<em>standard output stream</em>.
+<a href="../nutsandbolts/output.html">The Standard Output Stream</a>
+<a href="../nutsandbolts/output.html"><img src=../../images/javaIcon.gif width=20 height=20 border=0></a>
+in <em>The Nuts and Bolts of the Java Language</em>
+discusses the standard output stream in detail. For now, just think of
+it as a convenient place for an application to display its results.
+<p>
+System creates <code>out</code>, and all of its other static variables,
+when the System class is loaded into the application.
+The next part of the Java statement calls one of <code>out</code>'s
+instance methods: <code>println()</code>.
+<blockquote>
+<pre>
+out.println()
+</pre>
+</blockquote>
+<p>
+As you see, you refer to an object's instance methods and variables similar
+to the way you refer a class's static methods and variables.
+You join the object's name and the name of the instance method or 
+instance variable together with a period ('.').
+<p>
+The Java compiler allows you to cascade
+these references to static and instance methods and variables
+together and use the construct that appears in
+the listing above
+<blockquote>
+<pre>
+System.out.println()
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>Sum it Up</h4>
+<blockquote>
+Static variables and methods are also known as <em>class variables</em> or
+<em>class methods</em> because <em>each class variable and each class method occurs
+once per class</em>. Instance methods and variables occur
+once per instance of a class.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="creating.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="tools.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

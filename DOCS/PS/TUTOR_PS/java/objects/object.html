@@ -1,0 +1,126 @@
+<!--NewPage-->
+<html>
+<head>
+<title>What is an Object?</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="messages.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Object-Oriented Programming Concepts: A Primer</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    What is an Object?
+</h2>
+<p>
+<blockquote>
+
+As the name implies, <em>objects</em> are the key concept to understanding
+object-oriented technology.
+You can look around you now and see many examples of real-world objects:
+your dog, your desk, your television set, your bicycle.
+<p>
+These real-world objects share two characteristics: they all have <em>state</em>
+and they all have <em>behaviour</em>.  For example, dogs have state (name,
+color, breed, hungry) and dogs have behaviour (barking, fetching and slobbering
+on your newly cleaned slacks). Bicycles have state (current gear, current pedal
+cadence, two wheels, number of gears) and behaviour (braking, accelerating,
+slowing down, changing gears).
+<p>
+Software objects are modelled after real-world objects in that, they too,
+have state and behaviour. A software object maintains its state in variables
+and implements its behaviour with methods.
+<hr>
+<strong>Definition: </strong> Objects are software bundles of data
+and related methods.
+<hr>
+Because software objects are modeled after to real-world objects, you can represent
+real-world objects in programs using software objects. You might want to represent
+dogs in an animation program or a bicycle in an indoor electronic exercise bike.
+However, you can also use software objects to "objectify" abstract concepts. For example,
+"event" is a common object used in GUI window systems to represent the event when a
+user presses a mouse button or strikes a key on the keyboard.
+<p>
+The following illustration is a common visual representation of a software
+object:
+<p>
+<center><img src="images/object.trans.gif" width=355 height=167></center>
+<p>
+Everything that the software object knows (state) and can do (behaviour)
+is expressed by the variables and methods within that object. 
+A software object that modelled your real-world bicycle would
+have variables that indicated the bicycle's current state: it's moving
+at 10 mph, its pedal cadence is 90 rpm, and it's in 5th gear.
+<p>
+<center><img src="images/bicycle.trans.gif" width=265 height=191></center>
+<p>
+The software bicycle would also have methods that allowed you to brake,
+change the pedal cadence and change gears. (The bike would not have a
+method for changing the speed of the bicycle as the bike's speed is really
+just a side-effect of what gear you're in, how fast you're pedaling and
+how steep the hill is.)
+
+<p>
+Anything that an object does not know or can not do is excluded from the
+object. For example, your bicycle (probably) doesn't have a name, and it can't run, bark
+or fetch. Thus there are no variables or methods for those states and behaviours.
+<p>
+As you can see from the diagrams, the object's variables make up the center
+or nucleus of the object and the methods surround and hide the object's nucleus from
+other objects in the program. Packaging an object's variables within the protective
+custody of its methods is called <em>encapsulation</em>. Typically, encapsulation
+is used to hide unimportant implementation details from other objects.
+When you want to change gears on your bicycle, you don't need to know how the
+gear mechanism works, you just need to know which lever to move. Thus, the
+implementation can change at any time without changing other parts of the program.
+
+<h4>The Benefit of Encapsulation</h4>
+<blockquote>
+Encapsulating related variables and methods into a neat software bundle is 
+a simple yet very powerful idea that provides two primary benefits to
+software developers:
+<ul>
+<li>
+Modularity--the source code for an object can be written and maintained
+independently of the source code for other objects. Also, an object can
+be easily passed around in the system. You can give your bicycle to someone else
+and it will still work.
+<li>
+Information hiding--an object has a public interface which other objects
+can use to communicate with it. But the object can maintain private
+information and methods that it can change at any time without affecting
+the other objects that depend on it. You don't need to understand the gear
+mechanism on your bike in order to use it.
+</ul>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="messages.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

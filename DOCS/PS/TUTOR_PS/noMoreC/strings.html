@@ -1,0 +1,177 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Java Strings are First-Class Objects</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="cmdLineArgs.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="misc.html"><img src=../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/noCHeader.gif width=26 height=26 align=bottom border=0 alt="How the Java Language Differs From C and C++ | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>How the Java Language Differs from C and C++</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Java Strings are First-Class Objects
+</h2>
+<p>
+<blockquote>
+
+By convention, C and C++ strings are null-terminated array of characters; 
+there is no real entity in C and C++ that is a string.
+Java strings are first-class objects.
+<p>
+Strings as objects provides several advantages to the programmer:
+<ul>
+<li>
+the manner in which you obtain strings and elements of
+strings is consistent across all strings and all systems
+<li>
+since the programming interface for the String and StringBuffer
+classes is well-defined, Java Strings function predictably every time
+<li>
+the String and StringBuffer class does extensive runtime checking
+for boundary conditions and catches errors for you
+</ul>
+To illustrate why this is an important feature of the Java language, let's
+look at a small example. This C function copies the contents
+of <code>str1</code> into <code>str2</code>.
+<blockquote>
+<pre>
+int myStrCopy(char *str1, char *str2)
+{
+    for ( ; *str1 != '\0'; str1++, str2++)
+        *str2 = *str1;
+}
+</pre>
+</blockquote>
+
+<h4>C Strings Behave Unpredictably</h4>
+<blockquote>
+In the example shown above, the developer uses pointer
+arithmetic to step through both strings copying one
+into the other. While allowing programmers to inspect
+arbitrary memory locations through pointers
+is a powerful tool, this power can be the
+source of many errors. One fruitful source of errors
+is pointers that stray off the end of an array.
+The <code>myStrCopy</code> function above has such an error: the <code>for</code>
+loop in the function does not check the length of <code>str2</code>, and
+if <code>str1</code> is longer than <code>str2</code> the string copy
+writes right over the end of <code>str2</code>. Here's a
+program that tickles the bug.
+<blockquote>
+<pre>
+main() {
+    char *s = "HotJava is Cool!";
+    char t[] = "Java is Cool!";
+
+    printf("%s, %s\n", s, t);
+    myStrCopy(s, t);
+    printf("%s, %s\n", s, t);
+}
+</pre>
+</blockquote>
+
+On my machine, the program prints:
+<blockquote>
+<pre>
+HotJava is Cool!, HotJava is Cool!%s, %s
+</pre>
+</blockquote>
+
+<code>myStrCopy</code> writes over the end of <code>str2</code> thereby
+corrupting whatever was stored in the memory after it.
+<strong>NOTE:</strong> <code>%s, %s</code> are the characters that happened
+to be stored in the memory location after <code>str2</code> and will probably
+be different when you run the program on your machine.
+
+<p>
+Sure, the error in <code>myStrCopy</code> can be fixed easily.
+But errors like this are often difficult to find.
+</blockquote>
+
+<h4>Java Strings are Predictable</h4>
+<blockquote>
+Java strings are first-class objects deriving either from the String
+class or the StringBuffer class. This makes finding and fixing an entire class of
+common and frustrating programming errors such as the one illustrated
+above trivial.
+<p>
+Here's the program above (including the error) rewritten in the Java language.
+
+<blockquote>
+<pre>
+class strcpy {
+    public static void main(String args[]) {
+        String s = "HotJava is Cool!";
+        StringBuffer t = new StringBuffer("Java is Cool!");
+
+        System.out.println(s + ", " + t);
+        myStrCopy(s, t);
+        System.out.println(s + ", " + t);
+    }
+
+    static void myStrCopy(String str1, StringBuffer str2) {
+        int i, len = str1.length();
+
+        for (i = 0; i &lt len; i++)
+            str2.setCharAt(i, str1.charAt(i));
+    }
+}
+</pre>
+</blockquote>
+
+Notice that this translation uses the String class, the
+StringBuffer class and the methods appropriate for obtaining
+specific characters instead of character arrays and pointers.
+
+<p>
+Like the C version, the Java language version of the <code>myStrCopy</code> method loops over the
+length of <code>str1</code> and never checks the length of <code>str2</code>.
+Thus, when <code>str1</code> is longer than <code>str2</code>, the method
+tries to obtain characters beyond the end of <code>str2</code>. However,
+when you run the Java language version, you'll see the following runtime error message.
+<blockquote>
+<pre>
+Exception in thread "main" java.lang.StringIndexOutOfRangeException String index out of range: 13
+    at java.lang.Exception.&lt init &gt(Exception.java)
+    at java.lang.StringIndexOutOfRangeException.&lt init &gt(StringIndexOutOfRangeException.java)
+    at java.lang.StringBuffer.setCharAt(StringBuffer.java)
+    at strcpy.myStrCopy(strcpy.java:23)
+    at strcpy.main(strcpy.java:15)
+</pre>
+</blockquote>
+The primary difference between the Java language version of this program and
+the C version, is that the Java program will reliably and obviously
+crash, whereas the C program will do something obscure.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="cmdLineArgs.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="misc.html"><img src=../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/noCHeader.gif width=26 height=26 align=top border=0 alt="How the Java Language Differs From C and C++ | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>How the Java Language Differs from C and C++</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Declaring a Class</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="classes.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="methods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Declaring a Class
+</h2>
+<p>
+<blockquote>
+
+In general, a class declaration look like this:
+<blockquote>
+<pre>
+[ <em>modifiers</em> ] class <em>ClassName</em> [ extends <em>SuperClassName</em> ] [ implements <em>InterfaceNames</em> ] {
+    . . .
+    class body
+    . . .
+}
+</pre>
+</blockquote>
+The items between [ and ] are optional. A class declaration defines the
+following aspects of the class:
+<ul>
+<li>
+<em>modifiers</em> declares whether or not the class is abstract, final or public
+<li>
+<em>ClassName</em> sets the name of the class you are declaring
+<li>
+<em>SuperClassName</em> is the name of <em>ClassName</em>'s superclass
+<li>
+<em>InterfaceNames</em> is a list of all of the interfaces implemented by
+the <em>ClassName</em>
+</ul>
+Of the items in a class declaration, only the <code>class</code> keyword
+and the class name are required. The others are optional. If you do not make
+an explicit declaration for the optional items, the Java compiler assumes
+certain defaults.
+<p>
+The class name must be a valid Java identifier (that is, it must be a string
+of letters that begins with a Unicode letter, that contains only Unicode
+letters and digits, and that is not the same as any Java keyword).
+By convention, class names begin with a capital letter.
+<p>
+So, the most simple class declaration you can write would look like this:
+<blockquote>
+<pre>
+class ImaginaryNumber {
+    . . .
+}
+</pre>
+</blockquote>
+This snippet of code simply declares a class named <code>ImaginaryNumber</code>.
+When you declare a class like this, the compiler assumes the following:
+<ul>
+<li>
+the Object class is the super class of <code>ImaginaryNumber</code>
+<li>
+<code>ImaginaryNumber</code> implements <strong>no</strong> interfaces
+<li>
+<code>ImaginaryNumber</code> is <strong>not</strong> abstract, <strong>not</strong>
+final, and is <strong>not</strong> public.
+</ul>
+So what does all of this mean? The following sections will shed some light
+on it for you.
+
+<h4>Superclasses</h4>
+<blockquote>
+The Object class sits at the top of the class hierarchy tree in the
+Java development environment. Every class, whether written by you, by
+the Java development team, or by someone else, in the Java system is a
+descendent (whether direct or indirect) of the Object class. The Object
+class defines the basic state and behaviours that all objects must have
+such as the ability to compare oneself to another object, to convert to
+a string, to wait on a condition variable, to notify other objects that
+a condition variable has changed, and to return the object's class. For
+more information about the Object class, see <a href="../../MissingPage.html">missing page</a>.
+<p>
+In Java, every class must have a superclass. If you do not specify a 
+superclass for your class, it is assumed to be the Object class.
+To specify an object's superclass explicitly, put the keyword <code>extends</code>
+followed by the superclass name directly after the name of the class that
+you are declaring. So this class declaration
+<blockquote>
+<pre>
+class ImaginaryNumber extends Number {
+    . . .
+}
+</pre>
+</blockquote>
+explicitly declares that the Number class is the superclass of the
+<code>ImaginaryNumber</code> class. (The Number class is part of the java.lang
+package and is the base class for Integers, Floats and other numbers.)
+</blockquote>
+
+<h4>Interfaces</h4>
+<blockquote>
+When declaring a class, you can specify which, if any, <em>interfaces</em>
+that the class implements. So, what's an interface? An interface declares
+a set of methods and constants without specifying the implementation for
+any of the methods. When a class claims to implement an interface, it's
+claiming to provide implementations for all of the methods declared in the
+interface.
+<p>
+To declare that your class implements an interface, use the keyword
+<code>implements</code> followed by the interface. The <code>implements</code>
+clause follows the <code>extends</code> clause if there is one. If there is
+no <code>extends</code> clause, then the <code>implements</code> clause
+follows the class name. The <code>implements</code> clause is optional.
+<p>
+For example, imagine an interface named Arithmetic that defines methods
+named <code>add()</code>, <code>subtract()</code> and so on. Our ImaginaryNumber
+class can declare that it implements the Arithmetic interface, thereby
+guaranteeing that it provides implemenations for the <code>add()</code>,
+<code>subtract()</code> and other methods declared by the Arithmetic
+interface.
+<blockquote>
+<pre>
+class ImaginaryNumber extends Number implements Arithmetic {
+    . . .
+    public Number add(Number) {
+	. . .
+    }
+    public Number subtract(Number) {
+	. . .
+    }
+}
+</pre>
+</blockquote>
+Note that the method signatures of the methods declared in the Arithmetic
+interface and the method signatures of the methods implemented in the
+ImaginaryNumber class <em>must match</em>!
+[PENDING: is the above true even for access specifiers?]
+[PENDING: what are the access specifiers for methods defined in an
+interface].
+</blockquote>
+
+<h4>Abstract Classes</h4>
+<blockquote>
+To be somewhat circular, an abstract class is a class that has at
+least one abstract method in it. Well, that's not a very useful definition, is it?
+What's an abstract method? An abstract method is a method that has no
+implementation. The intent is to allow parent classes to leave some
+methods unimplemented but still require that subclasses (that are not
+also abstract) provide implementations for those methods.
+<p>
+Use an abstract class when your parent class knows that all of its subclasses
+will implement a certain method but each subclass will implement it
+differently. In other words, there is no default implementation that
+will satisfy any of the subclasses. For example, in a drawing application
+Rectangle, Triangle and other GraphicObject classes all implement the
+<code>draw()</code> method, but implement it differently; there is no
+appropriate default implementation for the <code>draw()</code> method.
+For more detailed information about abstract classes, see
+<a href="../../MissingPage.html">missing page</a>.
+<p>
+To specify that your class is an abstract class, use the keyword
+<code>abstract</code> in the "modifiers clause" that appears
+before the <code>class</code> keyword.
+<blockquote>
+<pre>
+abstract class GraphicObject {
+    . . .
+}
+</pre>
+</blockquote>
+The compiler will print an error message if there are no abstract methods
+in a class you declare to be abstract.
+</blockquote>
+
+<h4>Final Classes</h4>
+<blockquote>
+You can declare a class to be final; a final class can have no subclasses.
+You would a class final to guarantee that other objects and methods using
+your class got exactly what they asked for. For example, the String class
+in the java.lang package is a final class. The Java system must guarantee
+that whenever a method or objects uses a String
+they get exactly a java.lang.String and not some string that is a really
+a subclass of java.lang.String. This ensures that the object in question
+has no strange, inconsistent, or unpredictable properties.
+<p>
+To specify that your class is a final class, use the keyword
+<code>final</code> in the "modifiers clause" that appears
+before the <code>class</code> keyword.
+For example, if you wanted to make the ImaginaryNumber class a final
+class, its declaration would look like this:
+<blockquote>
+<pre>
+final class ImaginaryNumber extends Number implements Arithmetic {
+    . . .
+}
+</pre>
+</blockquote>
+Note that it doesn't make sense for a class to be both final and abstract.
+In other words, a class that contains declared-but-unimplemented methods
+cannot be final. Attempting to declare a class as both final and abstract
+results in a compile-time error.
+</blockquote>
+
+<h4>Public Classes</h4>
+<blockquote>
+The last modifier that you can use in a class declaration is the
+<code>public</code> modifier. Use <code>public</code> to declare
+that the class can be used by objects outside the current package.
+By default classes can only be used within the package in which they
+are declared.
+<p>
+For example, the ImaginaryNumber class should be declared public because
+we want other classes and objects to have access to this class. Thus
+the class declaration for the ImaginaryNumber class now looks like this:
+<blockquote>
+<pre>
+public final class ImaginaryNumber extends Number implements Arithmetic {
+    . . .
+}
+</pre>
+</blockquote>
+By convention, when you use the <code>public</code> keyword in a class
+declaration, you should make it the very first item in a class declaration
+preceding either <code>final</code> or <code>abstract</code> if one of them
+is also being used.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="classes.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="methods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

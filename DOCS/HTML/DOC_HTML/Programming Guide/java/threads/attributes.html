@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Thread Attributes</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="simple.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="run.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Thread Attributes
+</h2>
+<p>
+<blockquote>
+
+By now, you know are familiar with threads and you've seen a simple Java
+application that runs two threads concurrently. And you've had an opportunity
+to watch threads in action using the SystemMonitor applet. This
+page introduces you several features specific to Java threads and provides
+you with links to pages that talk about each feature in detail.
+<p>
+Java threads are implemented by the Thread class which is part of the
+java.lang package. The Thread class implements a system independent
+definition of Java threads. But under the hood, the actual implementation
+of concurrent operation is provided by a system-specific implementation.
+For most programming needs, the underlying implementation doesn't
+matter; you can ignore the underlying implementation and program
+to the thread API described in this lesson and the other documentation
+provided with the Java system.
+<dl>
+<dt>
+<a href=run.html><strong>Thread Body</strong></a>
+<dd>
+All of the action takes place in the thread's body--the thread's
+<code>run()</code> method. You can provide the body to a Thread in
+one of two ways: by subclassing the Thread class and overriding its
+<code>run()</code> method, or creating a Thread with a Runnable
+object as its <em>target</em>.
+<dt>
+<a href=states.html><strong>Thread State</strong></a>
+<dd>
+Throughout its life, a Java thread is in one of several states.
+A thread's state indicates what the Thread is doing and what it
+is capable of doing at that time of its life: is it running?
+is it sleeping? is it dead?
+<dt>
+<a href=priority.html><strong>Thread Priority</strong></a>
+<dd>
+A thread's priority indicates to the Java thread scheduler when
+this thread should run in relation to all of the other threads.
+<dt>
+<a href=daemon.html><strong>Daemon Threads</strong></a>
+<dd>
+Daemon threads are those that provide a service for other threads
+in the system. Any Java thread can be a daemon thread.
+<dt>
+<a href=group.html><strong>Thread Groups</strong></a>
+<dd>
+All threads belong to a thread group. ThreadGroup, a java.lang class,
+defines and implements the capabilities of a group of related threads.
+</dl>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="simple.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="run.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

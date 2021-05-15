@@ -1,0 +1,115 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Threads in Applets</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="containerMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="threadExample.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Threads in Applets
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<strong>Note:</strong>
+This page assumes that you know what a thread is.
+If you don't, read
+<a href="../../java/threads/definition.html"><b>What Are Threads?</b></a>
+<a href="../../java/threads/definition.html"><img
+src=../../images/javaIcon.gif height=20 width=20 border=0></a>
+before reading this page.
+<p>
+
+<!--If we supply a thread monitor, tell them to use it. ("Try this:")-->
+
+Every applet can run in multiple threads.
+For example, when the HotJava browser first views 
+a document that contains an applet,
+the browser's DocumentSwitcher thread executes
+the applet's <code>init()</code> method.
+And when the user scrolls the document, 
+the AWT WServer thread executes the applet's <code>update()</code> method.
+<!-- Check this as the browser changes. -->
+<p>
+
+So why would an applet need to create and use its own threads?
+Imagine an applet that performs some time-consuming initialization --
+loading images, for example -- in its <code>init()</code> method.
+The thread that invokes <code>init()</code>
+can't do anything else until <code>init()</code> returns.
+In the HotJava browser,
+this means that the browser can't display the applet or anything after it
+until the applet has finished initializing itself.
+So if the applet is at the top of the page, for example,
+then nothing will appear on the page until the applet has finished initializing itself.
+<p>
+The solution to this problem is for the applet to create a thread
+and move the initialization code
+from the <code>init()</code> method
+into the thread body.
+Look at the <a href="threadExample.html">next page</a>
+to see both the problem and its cure.
+<p>
+
+<hr>
+<strong>Rule of Thumb:</strong>
+If an applet performs a time-consuming task,
+it should create and use its own thread to perform that task.
+<hr>
+<p>
+
+Here is SimpleApplet modified to print the thread
+that each of its major methods is called from:
+<p>
+
+<applet codebase=betaclasses code=PrintThread.class width=450 height=30>
+<app class=PrintThread>
+</applet>
+<p>
+
+If you're using an alpha version of the HotJava browser,
+view this applet's output using the
+<a href="_stdout.threads.html">standard output,</a>
+since the output doesn't scroll in this page.
+The beta version of the applet scrolls, 
+making it possible to view the output in your applet viewer
+(although standard output is still necessary for viewing output
+caused by reloading the applet).
+
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="containerMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="threadExample.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

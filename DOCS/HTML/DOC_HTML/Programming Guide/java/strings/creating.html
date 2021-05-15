@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Creating Strings and StringBuffers</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="whytwo.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="accessors.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Creating Strings and StringBuffers
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class ReverseString {
+    public static String reverseIt(String source) {
+        int i, len = source.length();
+        <strong>StringBuffer dest = new StringBuffer(len);</strong>
+
+        for (i = (len - 1); i >= 0; i--) {
+            dest.append(source.charAt(i));
+        }
+        return dest.toString();
+    }
+}
+</pre>
+</blockquote>
+The <code>reverseIt</code> method above
+creates a StringBuffer named <code>dest</code> whose initial
+length is the same as <code>source</code>.
+<code>String dest</code> declares to the compiler that <code>dest</code>
+will be used to refer to an object whose type is String,
+the <code>new</code> operator allocates memory for a new object,
+and <code>StringBuffer()</code> initializes the object.
+When you create any object in a Java program, you always use the
+same three steps: declaration, instantiation, initialization.
+For more information, see
+<a href=../anatomy/creating.html>Declaring, Instantiating and Initializing an Object</a>
+<a href=../anatomy/creating.html><img src=../../images/javaIcon.gif width=20 height=20 border=0></a>.
+
+<h4>Constructor Methods</h4>
+<blockquote>
+The constructor method used by <code>reverseIt</code>
+to initialize the <code>dest</code> requires an 
+integer argument indicating the initial size of the new StringBuffer.
+<blockquote>
+<pre>
+StringBuffer(int length)
+</pre>
+</blockquote>
+<code>reverseIt</code> could have used StringBuffer's
+default constructor that leaves the buffer's length undetermined
+until a later time. However, it's more efficient to specify the length of
+the buffer if you know it, instead of allocating more memory every
+time you append a character to the buffer.
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.String.html#constructors><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.String.html#constructors>java.lang.String--Constructors</a><br>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.StringBuffer.html#constructors><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.StringBuffer.html#constructors>java.lang.StringBuffer--Constructors</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="whytwo.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="accessors.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

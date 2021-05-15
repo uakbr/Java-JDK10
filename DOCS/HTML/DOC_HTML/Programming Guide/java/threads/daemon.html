@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Daemon Threads</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="priority.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="group.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Daemon Threads
+</h2>
+<p>
+<blockquote>
+
+Any Java thread can be a <em>daemon</em> thread.
+Daemon threads are service providers for
+other threads or objects running in the same process as
+the daemon thread.
+For example, the HotJava browser has a daemon thread,
+named <em>Background Image Reader</em>, that reads
+images from the filesystem or the network for any
+object or thread that needs an image.
+
+
+<p>
+Daemon threads are typically independent threads within an
+application that provide services for other objects within that
+same application. The <code>run()</code> method for a daemon
+thread is typically an infinite loop that waits for a service
+request.
+<p>
+When the only remaining threads in a process are daemon
+threads, the interpreter exits. This makes sense because when
+there are only daemon threads remaining, there is no other
+thread for which a daemon thread can provide a service.
+<p>
+To specify that a thread is a daemon thread call the
+<code>setDaemon()</code> method with a boolean parameter
+that is true.
+To determine if a thread is a daemon thread use the
+accessor method <code>isDaemon()</code>.
+
+<p>
+[PENDING: write an example]
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="priority.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="group.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

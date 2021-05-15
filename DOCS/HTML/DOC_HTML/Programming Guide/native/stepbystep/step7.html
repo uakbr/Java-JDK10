@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Step 7: Run the Program</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step6.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../example/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=bottom border=0 alt="Integrating Native Methods into Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Step 7: Run the Program
+</h2>
+<p>
+<blockquote>
+
+Now <a href=_runit.html>run the Java application</a> with the Java interpreter.
+You should see the following output:
+<blockquote>
+<pre>
+Hello World!
+</pre>
+</blockquote>
+If you see an exception like this one:
+<blockquote>
+<pre>
+java.lang.NullPointerException
+	at java.lang.Runtime.loadLibrary(Runtime.java)
+	at java.lang.System.loadLibrary(System.java)
+	at HelloWorld.<clinit>(HelloWorld.java:5)
+	at 
+java.lang.UnsatisfiedLinkError displayHelloWorld
+	at Main.main(Main.java:3)
+</pre>
+</blockquote>
+then you don't have a library path set up. The library path is a list
+of directories that the Java runtime system searches when loading libraries.
+<a href=_setlibpath.html>Set your library path now</a>, and make sure that the name of
+the directory where the <code>hello</code> library lives is in it.
+<p>
+If you see this exception:
+<blockquote>
+<pre>
+java.lang.UnsatisfiedLinkError no hello in LD_LIBRARY_PATH
+	at java.lang.Throwable.<init>(Throwable.java)
+	at java.lang.Error.<init>(Error.java)
+	at java.lang.LinkageError.<init>(LinkageError.java)
+	at java.lang.UnsatisfiedLinkError.<init>(UnsatisfiedLinkError.java)
+	at java.lang.Runtime.loadLibrary(Runtime.java)
+	at java.lang.System.loadLibrary(System.java)
+	at HelloWorld.<clinit>(HelloWorld.java:5)
+	at 
+java.lang.UnsatisfiedLinkError displayHelloWorld
+	at Main.main(Main.java:3)
+</pre>
+</blockquote>
+then you have a library path set in your environment, but the name of the directory
+where the <code>hello</code> library lives is not in it.
+<a href=_modlibpath.html>Modify your library path</a>, and make sure that the name of
+the directory where the <code>hello</code> library lives is in it.
+<p>
+Try to run the program again.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step6.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../example/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=top border=0 alt="Integrating Native Methods into Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

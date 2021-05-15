@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>The main() Method</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="classdef.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="exceptions.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The main() Method
+</h2>
+<p>
+<blockquote>
+ 
+<blockquote>
+<pre>
+class Count {
+    <strong>public static void main</strong>(String args[])
+        throws java.io.IOException
+    {
+        int count = 0;
+
+        while (System.in.read() != -1)
+            count++;
+        System.out.println("Input has " + count + " chars.");
+    }
+}    
+</pre>
+</blockquote>
+
+In the Java language, when you execute a class with the
+Java interpreter, the runtime system starts by calling the
+class's <code>main()</code> method. The <code>main()</code>
+method then calls all the other methods required to run your
+application.
+<p>
+<a href=../anatomy/main.html>The main() Method</a>
+<a href=../anatomy/main.html><img src=../../images/javaIcon.gif width=20 height=20 border=0></a>
+in <em>The Anatomy of a Java Application</em> provides a more
+thorough discussion about the <code>main()</code> method.
+
+<h4>Accepting a Filename on the Command Line</h4>
+<blockquote>
+The <code>main()</code> method accepts a single parameter:
+an array of Strings.
+This parameter is the mechanism through which the runtime system
+passes command line arguments to your application. Currently, the
+character-counting application ignores its command line arguments.
+Let's modify the program to accept a command line argument and
+have it count the characters in the file specified on the command line.
+Compare this version of the character-counting
+program with the original version listed above.
+<blockquote>
+<pre>
+import java.io.*;
+
+class CountFile {
+    public static void main(String args[])
+	throws java.io.IOException, java.io.FileNotFoundException
+    {
+        int count = 0;
+	InputStream is;
+
+        if (args.length == 1)
+	    is = new FileInputStream(args[0]);
+	else
+	    is = System.in;
+	
+        while (is.read() != -1)
+            count++;
+
+	if (args.length == 1)
+	    System.out.println(args[0] + &quot; has &quot;+ count + &quot; chars.&quot;);
+	else
+	    System.out.println(&quot;Input has &quot; + count + &quot; chars.&quot;);
+    }
+}
+</pre>
+</blockquote>
+In this implementation of the character-counting program,
+if the user specifies a name on the command line then
+the application counts the characters in the file. Otherwise,
+the application acts as it did before and reads from the
+standard input stream. Now, <a href=_withargument.html>run the new version</a>
+of the program on this <a href=betaexample/testing>text file</a> and specify
+the name of the file ("testing") on the command line.
+<p>
+For more information about command line arguments refer to the
+<a href=../cmdLineArgs/index.html><em>Command Line Arguments</em></a>
+<a href=../cmdLineArgs/index.html><img src=../../images/javaIcon.gif width=20 height=20 border=0></a>
+lesson.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="classdef.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="exceptions.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

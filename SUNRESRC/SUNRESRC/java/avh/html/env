@@ -1,0 +1,8 @@
+unsetenv HOTJAVA_HOME
+unsetenv CLASSPATH
+unsetenv LD_LIBRARY_PATH
+
+setenv HOTJAVA_HOME /usr/local/java/1.0a3
+setenv LD_LIBRARY_PATH /usr/openwin/lib:/usr/lib:$HOTJAVA_HOME/lib
+setenv CLASSPATH .:$HOTJAVA_HOME/classes
+setenv PATH $HOTJAVA_HOME/bin:$PATH

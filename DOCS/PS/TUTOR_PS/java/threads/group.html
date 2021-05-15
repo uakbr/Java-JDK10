@@ -1,0 +1,131 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Thread Group</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="daemon.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="multithreaded.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Thread Group
+</h2>
+<p>
+<blockquote>
+
+In Java, all threads must be a member of a <em>thread group</em>.
+Thread groups provide a mechanism for collecting multiple threads
+together into a single object and manipulating those threads all at
+once through the group rather than individually through the threads
+themselves. For example, you can start or suspend all the threads
+within a group with a single method call. Java thread groups are
+implemented by the ThreadGroup class in the java.lang package.
+
+<h4>Creating a Thread Explicitly within a Group</h4>
+<blockquote>
+The only time that you are allowed to set a thread's group is during
+creation--a thread can't be moved to a new group after it's been created.
+Thus, you should specify a thread's group explicitly when you create it.
+The Thread class has three different constructors that let you set the
+new thread's group:
+<ul>
+<li>
+<code>Thread(ThreadGroup, Runnable)</code>
+<li>
+<code>Thread(ThreadGroup, String)</code>
+<li>
+<code>Thread(ThreadGroup, Runnable, String)</code>
+</ul>
+Each of these constructors requires a ThreadGroup as its first parameter,
+creates a new thread, initializes it based on the other parameters, and
+makes the new thread a member of the specified group. For example, the following
+code sample creates a ThreadGroup named <code>myThreadGroup</code> and then
+creates a thread called <code>myThread</code> in that group.
+<blockquote>
+<pre>
+ThreadGroup myThreadGroup = new ThreadGroup("My Group of Threads");
+Thread myThread = new Thread(myThreadGroup, "a thread for my group");
+</pre>
+</blockquote>
+The ThreadGroup passed into a Thread constructor does not necessarily have
+to be a group that you created--it could be a group that was created by the
+Java runtime system, or a group that was created by the application in which
+your applet is running.
+
+<p>
+As you know, you don't have to set the thread group when you create a new
+thread--the Thread class supports several constructors that don't require
+a ThreadGroup argument. If you don't explicitly set the thread group for a
+new thread when you create it (which is probably what you've been doing until
+now), the new thread is automatically placed in the same group as the thread
+which created it (known as the <em>current thread</em> and the <em>current
+thread group</em> respectively).
+
+<p>
+So, if all threads must be in a group, and you haven't created a ThreadGroup,
+and you create a new thread without specifying its group, what is the thread's group?
+When an application first starts up, the Java runtime system creates
+a ThreadGroup named "main". So, unless specified otherwise, all new
+threads that you create become members of the "main" thread group.<br>
+<strong>Note:</strong> if the thread that you are creating is created by an applet,
+it's possible that the new thread's group will be something other than
+"main". It depends on the browser or viewer that the applet is running in.
+</blockquote>
+
+<h4>Getting a Thread's Group</h4>
+<blockquote>
+To find out what group a thread is in, you can call its <code>getThreadGroup()</code>
+method.
+<blockquote>
+<pre>
+theGroup = myThread.getThreadGroup();
+</pre>
+</blockquote>
+</blockquote>
+
+<h4><a href=threadgroup.html>The ThreadGroup Class</a></h4>
+<blockquote>
+Once you've obtained a thread's ThreadGroup, you can query the
+group for information (such as what other threads are in the group),
+or you can modify the threads in that group (such as suspend,
+resume or stop them) with a single method call.
+</blockquote>
+
+<h4>See also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.ThreadGroup.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.ThreadGroup.html>java.lang.ThreadGroup</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="daemon.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="multithreaded.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

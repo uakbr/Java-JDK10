@@ -1,0 +1,89 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Why Two String Classes?</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="creating.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Why Two String Classes?
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class ReverseString {
+    public static <strong>String</strong> reverseIt(<strong>String</strong> source) {
+        int i, len = source.length();
+        <strong>StringBuffer</strong> dest = new StringBuffer(len);
+
+        for (i = (len - 1); i >= 0; i--) {
+            dest.append(source.charAt(i));
+        }
+        return dest.toString();
+    }
+}
+</pre>
+</blockquote>
+
+The Java development environment provides two classes
+that store and manipulate character data:
+<em>String</em>, for immutable strings, and <em>StringBuffer</em>,
+for mutable strings.
+
+<p>
+The String class provides for constant strings; you use Strings when
+you don't want the value of the string to change.
+For example, if you pass a string data into a method, and you don't 
+want the method to modify the string in any way (which is typical),
+you would use a String. Typically, you'll want to use Strings to pass
+character data to methods and return character data from methods.
+The <code>reverseIt()</code> method takes a String argument
+and returns a String value.
+
+<p>
+The StringBuffer class provides for non-constant strings; you use
+StringBuffers when you know that the value of the character data will change.
+You typically use StringBuffers for constructing character data like
+in the <code>reverseIt()</code> method.
+
+<p>
+Because they are constants, Strings are typically cheaper than
+StringBuffers and they can be shared. So it's important to use Strings
+when they're appropriate.
+ 
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="creating.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

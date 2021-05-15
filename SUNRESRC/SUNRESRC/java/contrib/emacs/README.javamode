@@ -1,0 +1,71 @@
+Date: Wed, 29 Mar 95 08:17:40 EST
+From: oee@erinet.com (Mitch Scott Chapman)
+To: hotjava-interest@java.Sun.COM
+Message-Id: <9503291317.AA27792@eri>
+Subject: Emacs Mode for Java
+content-length: 29274
+
+
+HotJava looks like alot of fun.  What's more, the language definition
+for Java is a thing of beauty.  I can't wait for a Linux port, as it
+would let me play around with Java at home.
+
+Dunno how many of you use GNU emacs, but I just whanged up a couple of
+elisp modules to support fontified editing of Java source code.  They
+are attached.
+
+(I apologize if this message is considered too lengthy or inappropriate
+for this mailing list.)
+
+The code is fresh and poorly documented.  Apologies for that, too.
+
+java-mode.el is derived from the cplus-md which shipped with GNU emacs
+19.28.  It changes very little from that module.
+
+	o It adds a new mode map, java-mode-map.
+
+	o It tries to support the indentation style of the Java code
+	  shipped with the Alpha2 HotJava release, by defining
+	  defun-prompt-regexp so you can jump to the beginning/end of
+	  properly indented Java methods.
+
+	o It includes a couple of functions for use with the GNU emacs
+	  19.28 imenu module (which pops up a menu of methods defined
+	  in the current module).  These are near the end of the
+	  module.
+
+java-f-lck.el extends font-lock support to Java source modules.  I've
+tested only the gaudier fontification of Java source.  See the 
+comments for hints as to how to plug it into your emacs installation.
+
+Of course this stuff works only with ASCII-encoded Java source files,
+not with Unicode.  Perhaps someone would like to create an extensible
+text editor in Java to solve this problem :)
+
+
+Everything is released under the terms of GPL version 2, which is also
+attached.
+
+Finally, *many* thanks to Sun and the Java/HotJava developers for
+giving us access to their elegant work.
+
+--
+Mitch Chapman
+Ohio Electronic Engravers, Inc.
+email: meaddata.com!oee!mchapman
+
+[  I have made the three files
+
+	README
+	java-mode.el
+	java-f-lck.el
+	License
+
+   available via anonymous ftp in 
+
+	ftp://java.sun.com/java/contrib/emacs/javamode.tar.Z
+
+   They are also available as individual files in the
+   same directory.
+
+   -csw]

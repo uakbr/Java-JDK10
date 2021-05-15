@@ -1,0 +1,137 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Methods for Milestones</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="lifeCycle.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="componentMethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Methods for Milestones
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+public class Simple extends java.applet.Applet {
+    . . .
+    public void <strong>init()</strong> { . . . }
+    public void <strong>start()</strong> { . . . }
+    public void <strong>stop()</strong> { . . . }
+    public void <strong>destroy()</strong> { . . . }
+    . . .
+}
+</pre>
+</blockquote>
+The Simple applet, like every other applet,
+is a subclass of the Applet class.
+The Simple applet overrides four Applet methods
+so that it can respond to major events:
+
+<dl>
+<dt> <code>init()</code>
+<dd> to <strong>initialize</strong> the applet
+     each time it's loaded (or reloaded)
+
+<dt> <code>start()</code>
+<dd> to <strong>start</strong> the applet's execution, 
+     such as when the applet's loaded
+     or when the user revisits a page that contains the applet
+
+<dt> <code>stop()</code>
+<dd> to <strong>stop</strong> the applet's execution,
+     such as when the user leaves the applet's page
+     or quits the browser
+
+<dt> <code>destroy()</code>
+<dd> to perform a <strong>final cleanup</strong> in preparation for unloading
+
+</dl>
+
+Not every applet needs to override all four of these methods.
+For example, the 
+<a href="../../getStarted/applet/index.html">"Hello World" applet</a>
+<a href="../../getStarted/applet/index.html"><img
+   src="../../images/getStartedIcon.gif" width=20 height=20 border=0></a>
+doesn't override
+<code>start()</code>,
+<code>stop()</code>, or
+<code>destroy()</code>,
+since it doesn't do anything after it's initialized.
+The "Hello World" applet just displays a string once,
+using its <code>init()</code> method.
+Most applets, however, do more.
+<p>
+
+Every applet that does something after initialization --
+changes its onscreen appearance or reacts to user actions, for example --
+must override the <code>start()</code> method.
+The <code>start()</code> method either performs the applet's work or
+(more likely) sets up a helper object to perform the work.
+<p>
+
+Most applets that override <code>start()</code>
+should also override the <code>stop()</code> method.
+The <code>stop()</code> method 
+should suspend the applet's execution, 
+so that it doesn't take up system resources
+when the user isn't viewing the applet's page.
+For example, an applet that displays animation
+should stop displaying the animation
+when the user isn't looking at it.
+<p>
+
+Many applets don't need to override the <code>destroy()</code> method,
+since their <code>stop()</code> method
+(which is called before <code>destroy()</code>)
+does everything necessary to shut down the applet's execution.
+However, <code>destroy()</code> is available
+for applets that need to release additional resources.
+<p>
+
+The
+<code>init()</code>,
+<code>start()</code>,
+<code>stop()</code>, and
+<code>destroy()</code> methods
+are discussed throughout this trail.
+For more information,
+you can also refer to the
+<a href=http://java.sun.com/JDK-1.0/api/java.applet.Applet.html>Applet
+API reference page<img src=../../images/apiIcon.gif
+height=20 width=20 border=0></a>.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="lifeCycle.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="componentMethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

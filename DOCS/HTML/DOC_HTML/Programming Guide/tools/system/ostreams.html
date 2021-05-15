@@ -1,0 +1,167 @@
+<html>
+<head>
+<title>Standard Output and Error Streams</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="using.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="misc.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Using System Resources</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Standard Output and Error Streams
+</h2>
+<p>
+<blockquote>
+ 
+Probably the most often used items from the System class are the
+the standard output and standard error streams which you can use
+write text to the user's terminal window.
+Both the standard output and standard error streams are System
+class variables. You can address them with <code>System.out</code>
+and <code>System.err</code>, respectively.
+
+<p>
+The standard output stream is typically used for command output, that is,
+to print the results of a command to the user.
+The standard error stream is typically used to print any errors that occur
+when a program is running. Printing program output and errors to different
+streams allows the user to pipe them to different locations thereby separating
+them.
+
+<h4>The print(), println() and write() Methods</h4>
+<blockquote>
+Both standard output and standard error derive from the PrintStream
+class. As such, you use one of PrintStream's three methods to print text to the stream:
+<code>print()</code>, <code>println()</code>, and <code> write()</code>.
+
+<p>
+The <code>print()</code> and <code>println()</code> methods are essentially the same;
+they both write their String argument to the stream.
+The one difference between the two methods is that <code>println()</code>
+appends a newline character to the end of its output while <code>print()</code>
+does not. In other words, this
+<blockquote>
+<pre>
+System.out.print("Duke is not a penguin!\n");
+</pre>
+</blockquote>
+is equivalent to this
+<blockquote>
+<pre>
+System.out.println("Duke is not a penguin!");
+</pre>
+</blockquote>
+Notice the extra <code>\n</code> in the first method call;
+it's the two-character code for a newline character.
+<code>println()</code> automatically appends a newline character
+to its output.
+
+<p>
+The <code>write()</code>method is less frequently used than either
+of the <code>print()</code>methods, and is used to write bytes
+to the stream. Use <code>write()</code> to write non-ASCII data.
+</blockquote>
+
+<h4>Arguments to print() and println()</h4>
+<blockquote>
+The <code>print()</code> and <code>println()</code> methods both take a single argument,
+and because the Java language supports method overloading, the
+argument may be one of any of the following data types: Object, String,
+char[], int, long, float, double, and boolean. In addition, there's
+an extra version of <code>println()</code> which takes no arguments and
+just prints a newline to the stream.
+</blockquote>
+
+<h4>Printing Objects of Different Data Types</h4>
+<blockquote>
+The following program uses <code>println()</code> to output data
+of various types to the standard output stream.
+<blockquote>
+<pre>
+class DataTypePrintTest {
+    public static void main(String args[]) {
+
+	Thread ObjectData = new Thread();
+	String StringData = &quot;Java Mania&quot;;
+	char CharArrayData[] = { 'a', 'b', 'c' };
+	int IntegerData = 4;
+	long LongData = Long.MIN_VALUE;
+	float FloatData = Float.MAX_VALUE;
+	double DoubleData = Math.PI;
+	boolean BooleanData = true;
+
+	System.out.println(&quot;object = &quot; + ObjectData);
+	System.out.println(&quot;string = &quot; + StringData);
+	System.out.println(&quot;character array = &quot; + CharArrayData);
+	System.out.println(&quot;integer = &quot; + IntegerData);
+	System.out.println(&quot;long = &quot; + LongData);
+	System.out.println(&quot;float = &quot; + FloatData);
+	System.out.println(&quot;double = &quot; + DoubleData);
+	System.out.println(&quot;boolean = &quot; + BooleanData);
+    }
+}
+</pre>
+</blockquote>
+The program listed above produces this output:
+<blockquote>
+<pre>
+object = Thread[Thread-4,5,main]
+string = Java Mania
+character array = abc
+integer = 4
+long = -9223372036854775808
+float = 3.40282e+38
+double = 3.14159
+boolean = true
+</pre>
+</blockquote>
+Notice that you can print an object--the first <code>println()</code>
+method call prints a Thread object and the second prints a String
+object. When you use <code>print()</code> or <code>println()</code>
+to print an object, the data printed depends on the type of the object.
+In the example, printing a String object yields the contents of the
+String. However, printing a Thread yields a string of this format
+<blockquote>
+<pre>
+<i>ThreadClass</i>[<i>name</i>,<i>priority</i>,<i>group</i>]
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-beta/api/java.io.PrintStream.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/api/java.io.PrintStream.html>java.io.PrintStream</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="using.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="misc.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Using System Resources</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

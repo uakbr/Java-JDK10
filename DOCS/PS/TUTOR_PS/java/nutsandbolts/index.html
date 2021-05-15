@@ -1,0 +1,95 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The Nuts and Bolts of the Java Language</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../anatomy/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="classdef.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     The Nuts and Bolts of the Java Language
+</h1>
+<p>
+<blockquote>
+ 
+This lesson introduces you to the basic concepts of the Java language
+through a line by line explanation of a simple Java application.
+You'll learn specifics about the syntax and semantics of the Java
+language including variables and data types, control flow, and
+operators and expressions.  You will also learn about basic class
+definitions, the <code>main()</code> method, strings, static methods and variables,
+and making system calls.
+
+<h4>The Character-Counting Application</h4>
+<blockquote>
+The following application reads and counts characters in its input and then
+displays the number of characters read. The character-counting program uses
+several components of the Java language and of the class libraries shipped
+with the Java development environment. The links in the following listing visit
+pages that explain a particular feature of the application or a general Java
+language concept. Where appropriate, those pages refer you to other lessons
+in <strong>The Java Programmer's Guide</strong> or to other documentation.
+<blockquote>
+<pre>
+<a href=classdef.html>class Count</a> {
+    <a href=main.html>public static void main</a>(String args[])
+        <a href=exceptions.html>throws java.io.IOException</a>
+    {
+        <a href=vars.html>int count = 0;</a>
+
+        <a href=while.html>while</a> (<a href=input.html>System.in.read() != -1</a>)
+            <a href=operators.html>count++;</a>
+        <a href=output.html>System.out.println</a>(<a href=string.html>"Input has " + count + " chars."</a>);
+    }
+}
+</pre>
+</blockquote>
+Instead of using the links embedded in the source listing above,
+you can use the
+<a href="../anatomy/index.html"><img src=../../images/PreviousArrow.gif width=20 height=20 border=0></a>
+and
+<a href="classdef.html"><img src=../../images/NextArrow.gif width=20 height=20 border=0></a>
+links (in the header and footer of each page) to step through the links in order.
+</blockquote>
+
+<h4><a href=run.html>Running the Application</a>
+</h4>
+<blockquote>
+Type in the program exactly as it appears above and save it to a file.
+Then use the Java compiler to compile the program, and 
+the Java interpreter to run it.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../anatomy/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="classdef.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!--NewPage-->
+<html>
+<head>
+<title>What is Inheritance?</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="class.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="bibliography.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Object-Oriented Programming Concepts: A Primer</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    What is Inheritance?
+</h2>
+<p>
+<blockquote>
+
+Generally speaking, objects are defined in terms of classes. You know a lot
+about an object by knowing its class. Even if you don't know what a penny-farthing
+is, if I told you it was a bicycle, you would know that it had two wheels,
+handle bars and pedals.
+<p>
+Object-oriented systems take this a step further and allow classes to be defined
+in terms of other classes. For example, mountain bikes, race bikes and tandems are
+all different kinds of bicycles. In object-oriented terminology,
+mountain bikes, race bikes and tandems are all <em>subclasses</em> of the
+bicycle class. Similarly, the bicycle class is the <em>superclass</em> of
+mountain bikes, race bikes and tandems.
+<p>
+<center><img src="images/bikeinheritance.trans.gif" width=399 height=316></center>
+<p>
+Each subclass <em>inherits</em> state (in the form of variable declarations) from
+the superclass. Mountain bikes, race bikes and tandems share some states:
+cadence, speed and the like. Also, each subclass inherits methods from
+the superclass. Mountain bikes, race bikes and tandems share some behaviours:
+braking and changing pedaling speed.
+<p>
+However, subclasses are not limited to the state and behaviours provided to them
+by their superclass. (What would be the point in that?) Subclasses can add
+variables and methods to the ones they inherited from the superclass.
+Tandem bicycles have two seats and two sets of handle bars; some mountain bikes
+have an extra set of gears with a lower gear ratio.
+<p>
+Subclasses can also <em>override</em> inherited methods and provide specialized
+implementations for those methods. For example, if you had a mountain bike with
+an extra set of gears, you would override the "change gears" method so that the
+rider could actually use those new gears.
+<p>
+You are not limited to just one layer of inheritance--the inheritance tree,
+or <em>class hierarchy</em>, can be as deep as needed. Methods and variables
+are inherited down through the levels. The further down in the hierarchy a
+class appears, the more specialized its behaviour.
+
+<h4>The Benefit of Inheritance</h4>
+<ul>
+
+<li>
+Subclasses provide specialized behaviours from the basis of common elements
+provided by the superclass. Through the use of inheritance, programmers can reuse
+the code in the superclass many times.
+
+<li>
+Programmers can implement superclasses that define "generic" behaviours (called
+<em>abstract classes</em>). The essence of the superclass is defined and may be partially
+implemented but much of the class is left undefined and unimplemented. Other
+programmers fill in the details with specialized subclasses.
+
+</ul>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="class.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="bibliography.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

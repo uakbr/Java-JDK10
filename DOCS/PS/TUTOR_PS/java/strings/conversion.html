@@ -1,0 +1,98 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Converting Objects to Strings</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="modifying.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="andback.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Converting Objects to Strings
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class ReverseString {
+    public static String reverseIt(String source) {
+	int i, len = source.length();
+	StringBuffer dest = new StringBuffer(len);
+
+	for (i = (len - 1); i >= 0; i--) {
+	    dest.append(source.charAt(i));
+	}
+	return <strong>dest.toString()</strong>;
+    }
+}
+</pre>
+</blockquote>
+
+<h4>The toString() Method</h4>
+<blockquote>
+It's often convenient or necessary to convert an object to a String
+because you need to pass it to a method that only accepts String values.
+For example, <code>System.out.println()</code> does not accept StringBuffers,
+so you need to convert a StringBuffer to a String before you can print it.
+The <code>reverseIt()</code> method above
+uses StringBuffer's <code>toString()</code> method
+to convert the StringBuffer to a String object before returning the String.
+<blockquote>
+<pre>
+return dest.toString();
+</pre>
+</blockquote>
+Several classes in the java.lang also support
+<code>toString()</code> including all of the "type wrapper" classes
+such as Character, Integer, Boolean and the others. Also,
+the base Object class has a <code>toString()</code> method
+that converts an Object to a String. When you write a subclass
+of Object, you can override <code>toString()</code> to perform
+a more specific conversion for your subclass.
+</blockquote>
+
+<h4>The valueOf() Method</h4>
+<blockquote>
+As a convenience, the String class provides the static method
+<code>valueOf()</code> which you can use to convert variables of different
+types to Strings. For example, to print the value of pi
+<blockquote>
+<pre>
+System.out.println(String.valueOf(Math.PI));
+</pre>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="modifying.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="andback.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

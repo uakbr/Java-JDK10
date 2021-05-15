@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Troubleshooting Interpreter Problems</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="compilerproblems.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../index.html"><img src=../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/troubleHeader.gif width=26 height=26 align=bottom border=0 alt="Troubleshooting | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Troubleshooting</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Troubleshooting Interpreter Problems
+</h2>
+<p>
+<blockquote>
+
+<h4>Can't Find Class</h4>
+<blockquote>
+A common error of beginner Java programmers is to try to interpret the
+<code>.class</code> file created by the compiler.
+For example, in
+<a href=../java/nutsandbolts/index.html><em>The Nuts and Bolts of the Java Language</em></a>
+<a href=../java/nutsandbolts/index.html><img src=../images/javaIcon.gif width=20 height=20 border=0></a>
+the compiler creates a file called <code>Count.class</code>.
+If you try to interprete <em>the file</em> rather than the
+class, the interpreter displays this error message:
+<blockquote>
+<pre>
+Can't find class Count.class
+</pre>
+</blockquote>
+The argument to the Java interpreter is the <em>name of the class</em>
+that you want to use, <em><strong>not</strong> the filename</em>.
+</blockquote>
+
+<h4>The main() Method is Not Defined</h4>
+<blockquote>
+The Java interpreter requires that the class you execute with it have
+a method named <code>main()</code>, because the interpreter must
+have somewhere to begin execution of your Java application.
+<a href=../java/anatomy/main.html>The main() Method</a>
+<a href=../java/anatomy/main.html><img src=../images/javaIcon.gif width=20 height=20 border=0></a>
+discusses the <code>main()</code> method in detail.
+<p>
+If you try to run a class with the Java interpreter that does not have
+a <code>main()</code> method, the interpreter prints this error message
+<blockquote>
+<pre>
+In class <em>classname</em>: void main(String argv[]) is not defined
+</pre>
+</blockquote>
+where <em>classname</em> is the name of the class that you tried to run.
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href=../tools/index.html><img src=../images/toolIcon.gif width=20 height=20 border=0></a>
+<a href=../tools/index.html><em>The Java Development Environment</em></a><br>
+<a href=http://java.sun.com/JDK-beta/tools/solaris/java.html><img src=../images/manPagesIcon.gif width=8 height=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/tools/solaris/java.html>Interpreter Man Page</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="compilerproblems.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../index.html"><img src=../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/troubleHeader.gif width=26 height=26 align=top border=0 alt="Troubleshooting | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Troubleshooting</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Miscellaneous System Methods</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="ostreams.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="runtime.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Using System Resources</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Miscellaneous System Methods
+</h2>
+<p>
+<blockquote>
+ 
+ 
+<h4>Getting the Current Time</h4>
+<blockquote>
+The <code>currentTimeMillis()</code> method returns
+the current time in milliseconds since 00:00:00 UTC, January 1, 1970.
+The <code>currentTimeMillis()</code> method is commonly used during
+performance tests: get the current time, perform the operation that
+you want to time, get the current time again--the
+difference in the two time samples is "roughly" the amount
+of time that the operation took to perform.
+<p>
+Often in graphical user interfaces the time difference between mouse
+clicks is used to determine whether a user double clicked in the window.
+The following applet uses <code>currentTimeMillis()</code> to compute
+the number of milliseconds between two mouse clicks. If the time period
+between the clicks is smaller than 200 milliseconds, the two mouse clicks
+are interpreted as a double mouse click.
+<p>
+<applet codebase=betaclasses code=TimingIsEverything.class width=300 height=50>
+<app class=TimingIsEverything width=300 height=50>
+</applet>
+<p>
+Here's <a href="betaclasses/TimingIsEverything.java">the source</a>
+for the TimingIsEverything applet shown above.
+<p>
+You could use the return value from this method to compute
+the current date and time. However, you'll probably find that it's
+more convenient to get the current date and time from the
+<a href=http://java.sun.com/JDK-beta/api/java.util.Date.html>Date</a>
+<a href=http://java.sun.com/JDK-beta/api/java.util.Date.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+class.
+
+<p>
+You may have noticed that System supports two other time-related methods
+besides the <code>currentTimeMillis()</code> method:
+<code>currentTime()</code> and <code>nowMillis()</code>.
+Both are obsolete--you should use the <code>currentTimeMillis()</code>
+method instead. <code>currentTime()</code> and <code>nowMillis()</code>
+may not be supported in future versions of the System class.
+</blockquote>
+
+<h4>Exiting the Runtime Environment</h4>
+<blockquote>
+To exit the Java interpreter, call the <code>System.exit()</code> method.
+You pass an integer exit code to the <code>exit()</code> method, and the interpreter
+exits with that exit code.<br>
+<strong>Note:</strong> The <code>exit()</code> method causes the Java interpreter to
+exit, not just your Java program. You should use this function with caution,
+particularly in applets.
+</blockquote>
+ 
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="ostreams.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="runtime.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Using System Resources</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

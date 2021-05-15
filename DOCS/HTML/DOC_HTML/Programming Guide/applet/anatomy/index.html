@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>The Anatomy of an Applet</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="lifeCycle.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     The Anatomy of an Applet
+</h1>
+<p>
+<blockquote>
+
+This lesson discusses the parts of an applet.
+If you haven't yet compiled an applet and included it in an HTML page,
+you might want to do so now.
+Step by step instructions are in 
+<a href="../../getStarted/applet/index.html"><b>Getting
+Started: The "Hello World" Applet</b>
+<img src="../../images/getStartedIcon.gif" width=20 height=20 border=0></a>.
+<p>
+
+Every applet is implemented by creating a subclass of the Applet class.
+The following figure shows the inheritance hierarchy of the Applet class.
+This hierarchy determines much of what an applet can do and how,
+as you'll see on the next few pages.
+<p>
+
+<pre>
+java.lang.Object
+   |
+   +----java.awt.Component
+           |
+           +----java.awt.Container
+                   |
+                   +----java.awt.Panel
+                           |
+                           +----java.applet.Applet
+</pre>
+
+<h4>A Simple Applet</h4>
+<blockquote>
+Below is the source code for an applet called Simple.
+The Simple applet displays a descriptive string
+whenever it encounters a major milestone in its life,
+such as when the user first visits the page the applet's on.
+The pages that follow
+use the Simple applet and build upon it
+to illustrate concepts that are common to many applets.
+If you find yourself baffled by Java source code,
+you might want to go to 
+<a href="../../java/index.html"><b>Writing Java Programs</b>
+<img src="../../images/getStartedIcon.gif" width=20 height=20 border=0></a>
+to learn about the language.
+<p>
+
+<blockquote>
+<pre>
+import java.awt.Graphics;
+
+public class Simple extends java.applet.Applet {
+
+    StringBuffer buffer = new StringBuffer();
+
+    public void init() {
+	resize(500, 20);
+        addItem("initializing... ");
+    }
+
+    public void start() {
+        addItem("starting... ");
+    }
+
+    public void stop() {
+        addItem("stopping... ");
+    }
+
+    public void destroy() {
+	addItem("preparing for unloading...");
+    }
+
+    public void addItem(String newWord) {
+	System.out.println(newWord);
+	buffer.append(newWord);
+	repaint();
+    }
+
+    public void paint(Graphics g) {
+	g.drawRect(0, 0, size().width - 1, size().height - 1);
+	g.drawString(buffer.toString(), 5, 15);
+    }
+}
+</pre>
+</blockquote>
+
+For comparison, here's the
+<a href="classes/Simple.java">Alpha 3 version of Simple.java</a>.
+
+</blockquote>
+
+<p>
+
+<h4><a href="lifeCycle.html">The Life Cycle of an Applet</a>
+</h4>
+<blockquote>
+You can use the Simple applet to learn
+about the milestones in every applet's life.
+</blockquote>
+
+<h4><a href="appletMethods.html">Methods for Milestones</a>
+</h4>
+<blockquote>
+
+The Applet class provides a framework for applet execution,
+defining methods that the system calls
+when milestones -- major events in an applet's life cycle -- occur.
+Every applet must override some or all of these methods
+to respond appropriately.
+</blockquote>
+
+<h4><a href="componentMethods.html">Methods for Drawing and Event Handling</a>
+</h4>
+<blockquote>
+Applets inherit the drawing and event handling methods
+of the AWT Component class.
+(AWT stands for Advanced Windowing Toolkit; 
+it's the package that applets and applications use
+to produce user interfaces.)
+<em>Drawing</em> refers to anything related to 
+representing an applet on-screen --
+drawing images,
+presenting user interface components such as buttons,
+or using graphics primitives.
+<em>Event handling</em> refers to detecting and processing
+user input such as mouse clicks and key presses,
+as well as more abstract events
+such as saving files and iconifying windows.
+</blockquote>
+
+<h4><a href="containerMethods.html">Methods for Adding UI Components</a>
+</h4>
+<blockquote>
+Applets inherit from the AWT Container class.
+This means that they are designed to hold Components --
+user interface objects
+such as buttons, labels, pop-up lists, and scrollbars.
+Like other Containers, applets use layout managers
+that control the positioning of Components.
+</blockquote>
+
+<h4><a href="threads.html">Threads in Applets</a>
+</h4>
+<blockquote>
+Even the simplest applets run in multiple threads,
+although it's not always apparent.
+Many applets create and use their own threads,
+so that they perform well
+without affecting the performance of the applet viewer or of other applets.
+</blockquote>
+
+<h4><a href="../../MissingPage.html">What Applets Can and Can't Do</a>
+</h4>
+<blockquote>
+Things applets can't do, for security reasons:
+They can't load libraries written in any language but Java.
+Also, windows that an applet brings up
+are distinguished by a red bar and some warning text,
+so that applets can't look like trusted applications.
+<p>
+
+Things that applets can do, 
+that you might not expect:
+Although most applets stop running once you leave their page,
+they don't have to.
+<p>
+
+[List what else applets can and can't do,
+and how you can find out the restrictions
+on the particular system your applet is running within.]
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="lifeCycle.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

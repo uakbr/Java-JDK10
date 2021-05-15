@@ -1,0 +1,149 @@
+
+
+
+<html>
+<head>
+<title>The "text/plain" Content Handler</title>
+</head>
+<body>
+<a href="../protocol/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><img src=../../images/dim.NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/getStartedHeader.gif width=26 height=26 align=bottom border=0 alt="Getting Started"></a>
+<p>
+<hr size=4>
+
+<h1>
+     The "text/plain" Content Handler
+</h1>
+<p>
+<blockquote>
+
+<strong>Note:</strong>
+This page reflects the 1.0 Alpha 3 release of HotJava and Java.
+It will be updated for the Beta release of HotJava.
+
+<p>
+By following the steps on this page,
+you can create and use a content handler.
+Content handlers are Java programs
+that HotJava loads when it needs
+to interpret a particular MIME type/subtype combination.
+Some examples of MIME type/subtype combinations are
+text/plain, text/richtext, image/gif, and so on.
+(You can download the official list of <a
+href="ftp://ftp.isi.edu/in-notes/iana/assignments/media-types/media-types">MIME
+types</a>.)
+When you've followed all the steps,
+your directory (folder) structure should look something like this:
+<p>
+<img src="images/contDir.gif" width=542 height=48>
+<p>
+
+<h4> Create directories </h4>
+<blockquote>
+Create the directory structure shown in the figure above:
+<samp>classes/net/www/content/text</samp>.
+<p>
+
+By convention, the directory structure starts
+with a directory named <samp>classes</samp>.
+The next three directories <em>must</em> be named as shown
+(<samp>net/www/content</samp>).
+The final directory must have the same name as the MIME type of the data.
+In this case, this is "text".
+In the next step, you'll create a Java source file
+named after the MIME subtype of the data ("plain").
+</blockquote>
+
+<h4> Create a Java source file for the content type </h4>
+<blockquote>
+In the <samp>text</samp> directory,
+create a file named plain.java with
+<a href=example/plain.java>these contents</a>.
+This file defines a class named plain
+that's a subclass of ContentHandler
+(a class in the net.www.html package).
+The name of each ContentHandler subclass
+must match the name of the MIME subtype it handles
+[or Generic if it handles all subtypes of the type?
+(not implemented yet)].
+</blockquote>
+
+<h4> Compile the Java source file </h4>
+<blockquote>
+<a href="_compiling.html">Compile the content handler</a> using the Java compiler.
+<P>
+
+If compilation succeeds,
+the compiler creates a file named <SAMP>plain.class</SAMP>.
+If compilation fails,
+make sure you typed in and named the program
+exactly as shown above.
+</blockquote>
+
+<h4> Set the CLASSPATH environment variable </h4>
+<blockquote>
+<a href=_classpath.html>Set the CLASSPATH environment variable</a>
+to include the classes directory,
+so that HotJava can find the content handler.
+</blockquote>
+
+<h4> Turn off any special mailcap handling of text/plain </h4>
+<blockquote>
+If you've used a mailcap file to specify special handling
+of the text/plain MIME type/subtype,
+you need to
+<a href=_mailcap.html>turn off that special handling</a>,
+so that HotJava will use your content handler instead.
+</blockquote>
+
+<h4> Start HotJava </h4>
+<blockquote>
+Even if HotJava is already running,
+you need to quit and restart it
+so that it can read the new value of the CLASSPATH environment variable
+and (if appropriate) reread the mailcap file.
+</blockquote>
+
+<h4> Load the content handler</h4>
+<blockquote>
+The content handler is automatically loaded
+the first time you visit a plain/text document.
+<p>
+Load the content handler by viewing a plain text document,
+such as <a href=example/test>this one.</a>
+You should see the contents of the file in the browser,
+followed by this text:
+<blockquote>
+<pre>
+-- This closing message brought to you by your plain/text
+content handler. To remove this content handler, delete the
+net.www.content.text.plain class from your class path.
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>Now what?</h4>
+<blockquote>
+Now you can either:
+<ul>
+<li> Return to the
+     <a href="../../index.html"><em>Trail Map</em></a>
+     <a href="../../index.html"><img src="../../images/WayUpArrow.gif" width=20 height=20 border=0></a>
+     to get an overview of the trails you can follow.
+<li> Learn more about writing protocol handlers by going to the
+     <a href="../../MissingPage.html"><em>Extending HotJava</em></a>
+     <a href="../../MissingPage.html"><img src="../../images/extendingIcon.gif" width=20 height=20 border=0></a>
+     trail.
+</ul>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<a href="../protocol/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><img src=../../images/dim.NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/getStartedHeader.gif width=26 height=26 align=top border=0 alt="Getting Started"></a>
+</body>
+</html>

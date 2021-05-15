@@ -1,0 +1,520 @@
+%!
+%%Title: priority.html
+%%DocumentFonts: NewCenturySchlbk-Roman NewCenturySchlbk-Bold NewCenturySchlbk-Italic NewCenturySchlbk-BoldItalic Courier Courier-Bold Courier-Oblique Courier-BoldOblique
+%%Creator: html2ps 0.1 beta, written by Jan Karrman, jan@tdb.uu.se
+%%EndComments
+save
+/D {def} def /E {exch} D
+/M {moveto} D
+/S {show} D
+/R {rmoveto} D
+/L {lineto} D
+/RL {rlineto} D
+/SW {stringwidth} D
+/GI {getinterval} D
+/PI {putinterval} D
+/U {gsave CP currentfont /FontInfo get /UnderlinePosition get
+ 0 E currentfont /FontMatrix get dtransform E pop add newpath M
+ dup SW RL stroke grestore S } D
+/B {/r E D gsave -10 0 R CP 
+  newpath r 0 360 arc closepath fill grestore } D
+/OB {/r E D gsave -10 0 R CP 
+  newpath r 0 360 arc closepath stroke grestore } D
+/NP {PN 0 ne {showpage} if 0.6 setlinewidth 70 756 translate
+ F dup scale /BP true D /PN PN 1 add D NO {/OF currentfont D RF findfont
+ 10 scalefont setfont W 2 div LE neg 40 sub M PN ST cvs S OF setfont} if
+ XO SZ SL get neg M} D
+/SF {dup SZ SL 3 2 roll put dup -1.2 mul /YI E D E findfont E scalefont
+ setfont} D
+/FS {CF MK PF {1 or} if and or /CF E D FR SL CF put FL CF get E SF} D
+/RF {/NewCenturySchlbk-Roman} D
+/BF {/NewCenturySchlbk-Bold} D
+/IF {/NewCenturySchlbk-Italic} D
+/IB {/NewCenturySchlbk-BoldItalic} D
+/FF {/Courier} D
+/FB {/Courier-Bold} D
+/FI {/Courier-Oblique} D
+/FT {/Courier-BoldOblique} D
+/FL [RF FF BF FB IF FI IB FT] D
+/reencodeISO {
+dup dup findfont dup length dict begin
+{ 1 index /FID ne { def }{ pop pop } ifelse } forall
+/Encoding ISOLatin1Encoding D
+currentdict end definefont
+} D
+/ISOLatin1Encoding [
+/space/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quoteright
+/parenleft/parenright/asterisk/plus/comma/minus/period/slash
+/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon
+/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N
+/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright
+/asciicircum/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m
+/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright/asciitilde
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/dotlessi/grave/acute/circumflex/tilde/macron/breve
+/dotaccent/dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut
+/ogonek/caron/space/exclamdown/cent/sterling/currency/yen/brokenbar
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot
+/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute
+/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave
+/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex
+/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
+/yacute/thorn/ydieresis
+] D
+[RF BF IF IB FF FB FI FT] {reencodeISO D} forall
+
+/WK ( ) D
+/BS {/PC E D /TX E D /fin false D /BW WK SW pop D /CW 0 D /LK 0 D /SC 0 D
+ /RT TX D {RT WK search {/NW E D pop /RT E D /WH NW SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC /SC LK D /CW WH BW add D}
+ {/CW CW WH add BW add D} ifelse
+ /LK LK NW length add 1 add D} {pop exit} ifelse} loop
+ /fin true D /LC TX length D /WH RT SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC NL RT dup () ne {PC} {pop} ifelse}
+ {TX SC LC SC sub GI PC} ifelse} D
+
+/W {453 F div} D
+/LE {651 F div} D
+/BL {HM not {CP E pop XO E M} if} D
+/NL {CP /YC E D pop XO YC M YC LE neg gt
+ {YI CI sub dup 0 lt BP not and {dup 0 E R CI add /CI E D} {pop} ifelse}
+ {NP} ifelse} D
+/RS {/TM E D /CN 0 D TM
+ {dup 9 eq E 10 eq or {TM CN ( ) PI} if
+  /CN CN 1 add D} forall /CN 0 D /BK HM EN and {0} {1} ifelse D TM
+ {dup 32 ne {TM CN 3 2 roll put /CN CN 1 add D /BK 0 D}
+ {pop BK 0 eq {TM CN 32 put /CN CN 1 add D} if /BK 1 D} ifelse}
+  forall TM 0 CN GI dup () ne 
+  {dup CN 1 sub get 32 eq {/EN false D} {/EN true D} ifelse} if} D
+/join {2 copy length E length add string dup 4 2 roll 2 index 0 3 index
+ PI E length E PI} bind D
+
+/CP {currentpoint} D
+/WR {dup () eq {pop} {IG {DE search {pop pop} if /IG false D} if
+ PB {dup 0 get 10 ne {(\n) E join} if /PB false D} if
+ PP {dup 0 get 10 ne {(\n) E join} if /PP false D} if
+ (\n) search {TR /CI 0 D /NC 0 D NL pop WR} {TR} ifelse} ifelse} D
+/TR {(\t) search {dup length /NC E NC add D SH MS 0 8 NC 8 mod sub dup
+ /NC E NC add D GI SH pop TR} {dup length /NC E NC add D SH} ifelse
+ /BP false D} D
+/SH {CP E pop LE neg lt {NP} if AU AF and UF or {U} {S} ifelse} D
+/ON {AR AI NN get 1 add dup AR AI 3 -1 roll put ST cvs length dup ST E (. ) PI
+ ST 0 3 -1 roll 2 add GI dup SW pop neg 0 R SH} D
+/SP {YI E /YI E D NL /YI E D} D
+/BR {BN} D
+/BN {PF {WR} {BT NL} ifelse /HM false D} D
+/AB {CH E 0 E put CH join WB} D
+/NN {dup 0 lt {pop 0} if} D
+/HD {IG {DE search {pop pop} if /IG false D} if} D
+/DH {pop BT} D
+/TL {} D
+/LT {pop BT} D
+/H  {1 sub /HL E D BN CP E pop LE neg WW add lt {NP} if
+ BH SP /SL SL 1 add D HS HL get HT HL get FS} D
+/EH {BN AH SP /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/BT {IG {DE search {pop pop} if /IG false D} if RS dup dup () ne E ( ) ne and
+ {/LS LL D /LL W CP pop sub D {/CI 0 D SH /BP false D fin not {NL} if
+  /HM true D /LL LS D} BS} {S} ifelse} D
+/P  {PF {WR /PP true D} {BN AE not {AH SP} if} ifelse} D
+/HR {BN 0 CP E pop M gsave W 0 RL stroke grestore
+ /CI 0 D BP {/BP false D} if NL} D
+/AD {BN /AE true D AH SP IF 11 SF} D
+/DA {BN /AE false D AH SP RF 11 SF} D
+/PR {BN /CF 0 D 9 PS mul 1 FS /PF true D /PB true D /NC 0 D} D
+/PW {pop PR} D
+/RP {dup () ne {dup dup length 1 sub get 10 ne {(\n) join} if} if
+ WR AH SP /CF 0 D 11 0 FS /PF false D} D
+/SI {/XO AI LG add NN IN mul BC NN BI mul add D /LL W XO sub D} D
+/DT {BN /LG LG 1 sub D SI /LG LG 1 add D BL} D
+/DD {BN SI BL} D
+/DL {BN XO 0 eq {AH SP} if /LG LG 1 add D BL} D
+/LD {BN LG 0 gt {/LG LG 1 sub D} if SI XO 0 eq {AH SP} if BL} D
+/UL {BT XO 0 eq {AH SP} {NL} ifelse NR AI NN 0 put /UI UI 1 add D
+ /AI AI 1 add D SI BL} D
+/LU {BT /UI UI 1 sub D /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ifelse BL} D
+/OL {BT XO 0 eq {AH SP} {NL} ifelse NR AI NN 1 put /AI AI 1 add D SI BL} D
+/LO {BT AR AI NN 0 put /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ifelse BL} D
+/LI {BN /BP false D /CI 0 D CP E pop LE neg lt {NP} if NR AI 1 sub NN get 1 eq
+ {ON} {0 3 R 2.5 UI 2 mod 0 eq {OB} {B} ifelse 0 -3 R} ifelse BL} D
+/BQ {BN AH SP /BC BC 1 add D SI BL} D
+/QB {BN AH SP /BC BC 1 sub D SI BL} D
+/WB {PF {WR} {BT} ifelse} D
+/A  {WB /AF true D} D
+/EA {WB /AF false D} D
+/CM {WB /IG true D /DE (-->) D} D
+/SK {PF {(<) join WR} {BT /IG true D /DE (>) D} ifelse} D
+/SS {SZ SL get /SL SL 1 add D} D
+/I  {WB SS 4 FS} D
+/BD {WB SS 2 FS} D
+/TT {WB SS 1 FS} D
+/KB {WB SS /CF 0 D 3 FS} D
+/CT {WB SS /CF 0 D 4 FS} D
+/SM {WB SS /CF 0 D 1 FS} D
+/ES {WB /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/UN {WB /UF true D} D
+/NU {WB /UF false D} D
+
+/F 1 D
+/BH -35 D
+/AH -28 D
+/LL W D
+/XO 0 D
+/YI 0 D
+/CI 0 D
+/LG 0 D
+/AI 0 D
+/UI 0 D
+/IN 30 D
+/BI 12 D
+/WW 50 D
+/PS 1 D
+/AR [0 0 0 0 0 0 0 0 0 0] D
+/NR [0 0 0 0 0 0 0 0 0 0] D
+/FR [0 0 0 0 0 0 0 0 0 0] D
+/SZ [0 0 0 0 0 0 0 0 0 0] D
+/HS [19 17 15 13 12 11] D
+/HT [2 2 2 2 2 2] D
+/SL 0 D
+/CF 0 D
+/BC 0 D
+/MK 7 D
+/PN 0 D
+/MS (        ) D
+/CH 1 string D
+/ST 6 string D
+/IG false D
+/HM false D
+/PF false D
+/EN false D
+/UF false D
+/PP false D
+/AE false D
+/AF false D
+/NO false D
+/AU true D
+/BP true D
+%%EndProlog
+save
+RF 11 SF
+0 LE neg 20 sub M
+(
+
+)HD(
+)TL(Thread Priority)LT(
+)DH(
+
+)SK(table width=100%>
+)SK(tr>
+)SK(td align=left>
+)A( Previous |  )WB()EA()A( Next |  )WB()EA()A( Trail Map |  )WB()EA()A( Writing Java Programs |  )WB()EA(
+)SK(td>
+)SK(td align=right>
+)A()BD()I(Threads of Control)ES()ES()EA(
+)SK(/td>
+)SK(/tr>
+)SK(/table>
+)P(
+)SK(hr size=4>
+
+)2 H(
+    Thread Priority
+)EH(
+)P(
+)BQ(
+
+Previously in this lesson, we've claimed that threads run concurrently.
+While conceptually this is true, in practice it isn't. Most computer
+configurations have a single CPU, so threads actually run one at a time
+in such a way as to simulate concurrency. The execution of multiple
+threads on a single CPU, in some order, is called )I(scheduling)ES(.
+The Java runtime supports a very simple, deterministic scheduling
+algorithm known as )I(fixed priority scheduling)ES(. This algorithm
+schedules threads based on their )I(priority)ES( relative to
+other )A("Runnable")EA( threads.
+)P(
+When a Java thread is created, it inherits its priority from the
+thread that created it. You can also modify a thread's priority at
+any time after its creation using the )SM(setPriority\(\))ES( method.
+Thread priorities range between
+MIN_PRIORITY and MAX_PRIORITY \(constants defined in class Thread\).
+At any given time, when multiple threads are ready to be executed,
+the runtime system chooses the "Runnable" thread with the highest
+priority for execution. Only when that thread stops, yields, or becomes
+)A("Not Runnable")EA( for some reason,
+will a lower priority thread start executing.
+If there are two threads of the same priority waiting for the CPU,
+the scheduler chooses them in a round-robin fashion.
+)P(
+The Java runtime system's thread scheduling algorithm is also )I(preemptive)ES(. If at
+any time a thread with a higher priority than all other "Runnable" threads
+becomes "Runnable", the runtime system chooses the new higher priority
+thread for execution. The new higher priority thread is said to preempt
+the other threads.
+)P(
+The Java runtime system's thread scheduling scheme can be summed up with this simple rule:
+)HR(
+)BD(Rule:)ES( At any given time, the highest priority runnable thread
+is running.
+)HR(
+)4 H(The 400,000 Micron Thread Race)EH(
+)BQ(
+This )A(Java source code)EA( implements
+an applet that animates a race between two "runner" threads with
+different priorities. When you click the mouse down over the applet,
+it starts the two runners. The top runner, labelled "1", has a priority
+of 1 \(the lowest possible thread priority in the Java system\). The second runner,
+labelled "2", has a priority of 2.
+)P(
+)BD(Try This:)ES( Click over the applet below to start the race.
+)BR(
+
+)SK(param name="type" value="unfair">)SK(/applet>
+)P(
+This is the )SM(run\(\))ES( method for both )A(runners)EA(.
+)BQ(
+)PR(
+public int tick = 1;
+public void run\(\) {
+    while \(tick < 400000\) {
+        tick++;
+    }
+} 
+)RP(
+)QB(
+This )SM(run\(\))ES( method simply counts from 1 to 400,000.
+The instance variable )SM(tick)ES( is public because the
+applet uses this value to determine how far the runner has progressed
+\(how long its line is\).
+)P(
+In addition to the two runner threads, this applet also has a third
+thread that handles the drawing. The drawing thread's )SM(run\(\))ES(
+method contains an infinite loop; during each iteration of the loop it
+draws a line for each runner \(whose length is computed from the runner's
+)SM(tick)ES( variable\), and then sleeps for 10 milliseconds.
+The drawing thread has a thread priority of 3--higher than either runner.
+So, whenever the drawing thread wakes up after 10 milliseconds, it
+becomes the highest priority thread, preempting whichever runner is
+currently running and draws the lines. Thus you can see the lines
+inch their way across the page
+)P(
+As you can see, this is not a fair race because one runner has
+a higher priority than the other. Each time the drawing thread
+yields the CPU by going to sleep for 10 milliseconds, the scheduler
+chooses the highest priority runnable thread to run; in this case,
+it's always the runner labelled "2". Here is another version
+of the applet that implements a "fair race", that is, both of the
+runners have the same priority and they have an equal chance of
+being chosen to run.
+)P(
+)BD(Try this:)ES( Again, click down with the mouse to start the race.
+)BR(
+
+)SK(param name="type" value="fair">)SK(/applet>
+)P(
+In this race, each time the drawing thread yields the CPU by
+going to sleep, there are two Runnable threads of equal
+priority--the runners--waiting for the CPU; the scheduler
+must choose one of the threads to run. In this situation,
+the scheduler chooses the next thread to run in a round-robin
+fashion.
+)QB(
+
+)4 H(Selfish Threads)EH(
+)BQ(
+The Runner class used in the races above actually implements "socially-impaired"
+thread behaviour. Recall the )SM(run\(\))ES( method from the Runner class used
+in the races above:
+)BQ(
+)PR(
+public int tick = 1;
+public void run\(\) {
+    while \(tick < 400000\) {
+        tick++;
+    }
+} 
+)RP(
+)QB(
+The )SM(while)ES( loop in the )SM(run\(\))ES( method is in a tight loop.
+That is to say, once the scheduler chooses a thread with this thread body
+for execution, the thread never voluntarily relinquishes control of the CPU--the
+thread continues to run until the )SM(while)ES( loop terminates naturally
+or until the thread is preempted by a higher priority thread.
+)P(
+In some situations, having "selfish" threads doesn't cause any problems because
+a higher priority thread preempts the selfish one \(just as the drawing thread
+in the RaceApplet preempts the selfish runners\). However, in other situations,
+threads with CPU-greedy )SM(run\(\))ES( methods, such as the Runner class,
+can take over the CPU and cause other threads to have to wait for a long
+time before getting a chance to run.
+)QB(
+
+)4 H(Time-Slicing)EH(
+)BQ(
+Some systems fight selfish thread behaviour with a strategy known as
+)I(time-slicing)ES(. Time-slicing comes into play when there are multiple
+"Runnable" threads of equal priority and those threads are the highest priority
+threads competing for the CPU. For example, this
+)A(stand-alone Java program)EA( \(which is based on
+the RaceApplet above\) creates two equal priority
+)A(selfish threads)EA(
+that have the following )SM(run\(\))ES( method.
+)BQ(
+)PR(
+public void run\(\) {
+    while \(tick < 400000\) {
+        tick++;
+        if \(\(tick % 50000\) == 0\) {
+            System.out.println\("Thread #" + num + ", tick = " + tick\);
+        }
+    }
+}    
+)RP(
+)QB(
+This )SM(run\(\))ES( contains a tight loop that increments the integer )SM(tick)ES(
+and every 50,000 ticks prints out the thread's identifier and its )SM(tick)ES( count.
+)P(
+When running this program on a time-sliced system, you will see messages from both
+threads intermingled with one another. Like this:
+)BQ(
+)PR(
+Thread #1, tick = 50000
+Thread #0, tick = 50000
+Thread #0, tick = 100000
+Thread #1, tick = 100000
+Thread #1, tick = 150000
+Thread #1, tick = 200000
+Thread #0, tick = 150000
+Thread #0, tick = 200000
+Thread #1, tick = 250000
+Thread #0, tick = 250000
+Thread #0, tick = 300000
+Thread #1, tick = 300000
+Thread #1, tick = 350000
+Thread #0, tick = 350000
+Thread #0, tick = 400000
+Thread #1, tick = 400000
+)RP(
+)QB(
+This is because a time-sliced system divides the CPU into time slots and iteratively
+gives each of the equal-and-highest priority threads a time slot in which to run.
+The time-sliced system will continue to iterate through the equal-and-highest priority
+threads allowing each one a bit of time to run until or more of them finish or until
+a higher priority preempts them. Notice that time-slicing makes no guarantees as to
+how often or in what order threads are scheduled to run.
+)P(
+When running this program on a non-time-sliced system, however, you will see messages
+from one thread finish printing before the other thread ever gets a chance to print
+one message. Like this:
+)BQ(
+)PR(
+Thread #0, tick = 50000
+Thread #0, tick = 100000
+Thread #0, tick = 150000
+Thread #0, tick = 200000
+Thread #0, tick = 250000
+Thread #0, tick = 300000
+Thread #0, tick = 350000
+Thread #0, tick = 400000
+Thread #1, tick = 50000
+Thread #1, tick = 100000
+Thread #1, tick = 150000
+Thread #1, tick = 200000
+Thread #1, tick = 250000
+Thread #1, tick = 300000
+Thread #1, tick = 350000
+Thread #1, tick = 400000
+)RP(
+)QB(
+This is because a non-time-sliced system chooses one of the equal-and-highest
+priority threads to run and allows that thread to run until it relinquishes the
+CPU \(by sleeping, yielding, finishing its job\) or until a higher priority preempts it.
+)P(
+)BD(Try this:)ES( Compile and run the )A(RaceTest)EA(
+and )A(SelfishRunner)EA( classes on
+your computer. Can you tell if you have a time-sliced system?
+)P(
+As you can imagine, writing CPU-intensive code can have negative repercussions
+on other threads running in the same process. In general, you should try to
+write "well-behaved" threads that voluntarily relinquish the CPU periodically and
+give other threads an opportunity to run. In particular, you should never
+write Java code that relies on time-sharing--this will practically guarantee
+that your program will give different results on a different computer system.
+)P(
+A thread can voluntarily yield the CPU \(without going to sleep or some other
+drastic means\) by calling the )SM(yield\(\))ES( method. The )SM(yield\(\))ES(
+method gives other threads of the same priority a chance to run. If there
+are no equal priority threads in the "Runnable" state, then the yield is ignored.
+)P(
+)BD(Try this:)ES( Rewrite the SelfishRunner class to be a
+)A(PoliteRunner)EA( by calling the
+)SM(yield\(\))ES( method from the )SM(run\(\))ES( method.
+Be sure to modify the )A(main program)EA(
+to create PoliteRunners instead of SelfishRunners. Compile and run the new
+classes on your computer. Now isn't that better?
+)QB(
+
+)4 H(Summary)EH(
+)UL(
+)LI(
+In most configurations, there is only one CPU, thus threads must share
+the CPU with other threads. The execution of multiple threads on a
+single CPU, in some order, is called scheduling. The Java runtime
+supports a very simple, deterministic scheduling algorithm known as
+fixed priority scheduling.
+)LI(
+Each Java thread is given a numeric priority, between MIN_PRIORITY and
+MAX_PRIORITY \(constants defined in class Thread\). At any given time,
+when multiple threads are ready to be executed, the thread with the
+highest priority will be chosen for execution. Only when that thread
+stops, or is suspended for some reason, will a lower priority thread
+start executing.
+)LI(
+Scheduling of the CPU is fully preemptive. If a thread with a higher
+priority than the currently executing thread needs to execute, the
+higher priority thread is immediately scheduled.
+)LI(
+The Java runtime will not preempt the currently running thread for
+another thread of the same priority. In other words, the Java runtime
+does not time-slice. However, the system implementation of threads
+underlying the Java Thread class may support time-slicing.
+Do not write code that relies on time-slicing.
+)P(
+If the currently running thread yields the CPU \(i.e. allows another
+thread to execute by calling the )SM(yield\(\))ES(\), then the
+scheduler implements a simple non-preemptive round-robin scheduling order.
+)LI(
+In addition, a given thread may, at any time, give up its right to
+execute by calling the )SM(yield\(\))ES( method. Threads can only
+yield the CPU to other threads of the same priority--attempts to
+yield to a lower priority thread are ignored.
+)LU(
+
+)QB(
+)P(
+)SK(hr size=4>
+)P(
+)SK(table width=100%>
+)SK(tr>
+)SK(td align=left>
+)A( Previous |  )WB()EA()A( Next |  )WB()EA()A( Trail Map |  )WB()EA()A( Writing Java Programs |  )WB()EA(
+)SK(td>
+)SK(td align=right>
+)A()BD()I(Threads of Control)ES()ES()EA(
+)SK(/td>
+)SK(/tr>
+)SK(/table>
+
+
+)WB showpage restore

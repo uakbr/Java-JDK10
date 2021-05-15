@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>The Anatomy of a Java Application</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../objects/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="diff.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     The Anatomy of a Java Application
+</h1>
+<p>
+<blockquote>
+
+Java programs that run within a Java-compatible browser are known as <em>applets</em>.
+This lesson discusses the components of a stand-alone Java program,
+that is, a program written in the Java language that runs independently of
+any browser. Stand-alone Java programs are also known as <em>Java applications</em>.
+For a quick, no-nonsense introduction to writing applets, see
+<a href=../../getStarted/applet/index.html>The "Hello World" Applet</a>
+<a href=../../getStarted/applet/index.html><img src=../../images/getStartedIcon.gif width=20 height=20 border=0></a>.
+<p>
+With all the fuss being made about object-oriented programming
+and design, you might think that you need a Ph.D. to sort through it.
+Fear not. Along with descriptions of the components of a Java program,
+this lesson provides a simple introduction to the fundamental concepts
+of object-oriented programming--<em>classes</em> and <em>objects</em>--
+through a simple Java application.
+
+<h4>Print the Current Date and Time</h4>
+<blockquote>
+The following application, called <code>DateApp</code>,
+displays the current date and time.
+<blockquote>
+<pre>
+import java.util.Date;
+class DateApp {
+    public static void main (String args[]) {
+        Date today = new Date(); 
+        System.out.println(today);
+    }
+}
+</pre>
+</blockquote>
+The program is a modified version
+of the canonical "Hello World" application found in
+<a href=../../getStarted/application/index.html>The "Hello World" Application</a>
+<a href=../../getStarted/application/index.html><img src=../../images/getStartedIcon.gif width=20 height=20 border=0></a>.
+The next page of this lesson provides a
+<a href=diff.html>Comparison of DateApp and "Hello World"</a>.
+</blockquote>
+
+<h4>A Note About Import</h4>
+<blockquote>
+The first line in the program <em>imports</em> the Date class from
+the java.util package. Importing a class from a package makes that
+class available to the file into which it was imported. The java.util
+package is a collection of classes that provide miscellaneous
+functionality. The Date class from the java.util package lets you
+manage and manipulate calendar dates in a system independent way.
+<p>
+<a href="../../tools/packages/index.html"><em>Package Tour</em></a>
+<a href="../../tools/packages/index.html"><img src=../../images/toolIcon.gif width=20 height=20 border=0></a>
+provides an overview of all of the packages shipped as part of
+the Java development environment and the classes contained within
+each. Also,
+<a href="../../tools/environment/packages.html">Creating and Using Packages</a>
+<a href="../../tools/environment/packages.html"><img src=../../images/toolIcon.gif width=20 height=20 border=0></a>
+discusses how to use packages and their objects and how to create your own.
+</blockquote>
+
+<h4><a href=classdef.html>Defining a Class</a>
+</h4>
+<blockquote>
+In the Java language, all functions and variables exist within a <em>class</em> or an <em>object</em>--
+the Java language does not support global functions or stray variables.
+So, the skeleton of any Java application is a <em>class definition</em>.
+</blockquote>
+
+<h4><a href=main.html>The main() Method</a>
+</h4>
+<blockquote>
+The brain of any Java application is its <code>main()</code> method.
+When you run a Java application with the Java interpreter, you
+specify the name of the class that you want to run. The interpreter
+invokes the <code>main()</code> method defined within that class.
+The <code>main()</code> method controls the flow of the program, allocates
+whatever resources are needed, and runs any other methods that provide the
+functionality for the application.
+</blockquote>
+
+<h4>
+<a href=objects.html>An Introduction to Java Objects</a>
+</h4>
+<blockquote>
+The other corporeal components of a Java application are the
+supporting objects, classes, methods and Java language statements
+that you write to implement the application.
+</blockquote>
+
+<h4><a href=tools.html>Saving, Compiling and Running an Application</a>
+</h4>
+<blockquote>
+Type in the program exactly as it appears above and save it to a file.
+Then use the Java compiler to compile the program, and 
+the Java interpreter to run it.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../objects/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="diff.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

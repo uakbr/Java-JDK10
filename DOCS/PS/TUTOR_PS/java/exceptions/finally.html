@@ -1,0 +1,132 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The finally Block</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="catch.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="putItTogether.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The finally Block
+</h2>
+<p>
+<blockquote>
+
+The final step in setting up an exception handler is providing a mechanism
+for cleaning up the state of the method before (possibly) allowing control
+to be passed to a different part of the program. You do this by enclosing
+the cleanup code within a <code>finally</code> block.
+<p>
+The <code>try</code> block of the <code>writeList()</code> method that
+you've been working with opens a PrintStream. The program should close that
+stream before allowing control to pass out of the <code>writeList()</code>
+method. This poses a somewhat complicated problem because <code>writeList()</code>'s
+<code>try</code> block has three different exit possibilities:
+<ol>
+<li>
+The <code>new FileOutputStream</code> statement failed and threw an IOException.
+<li>
+The <code>victor.elementAt(i)</code> statement failed and threw an ArrayIndexOutOfBoundsException.
+<li>
+Everything succeeded and the <code>try</code> block exited normally.
+</ol>
+
+The runtime system always executes the statements within the <code>finally</code>
+block regardless of what happens within the <code>try</code> block. That is,
+regardless of whether control exits the <code>writeList()</code> method's
+<code>try</code> block due to scenario 1, 2, or 3 listed above,
+the code within the <code>finally</code> block will be executed.
+<p>
+This is the <code>finally</code> block for the <code>writeList()</code> method
+which cleans up and closes the PrintStream.
+<blockquote>
+<pre>
+finally {
+    if (pStr != null) { 
+        System.err.println("Closing PrintStream");
+        pStr.close(); 
+    } else { 
+        System.err.println("PrintStream not open");
+    } 
+} 
+</pre>
+</blockquote>
+
+<h4>Is the finally Statement Really Necessary?</h4>
+<blockquote>
+At first the need for a <code>finally</code> statement may not be immediately
+apparent. Programmers often ask "Is the <code>finally</code> statement really
+necessary or is it just sugar for my Java?" In particular, C++ programmers doubt
+the need for a <code>finally</code> statement because C++ doesn't have one.
+<p>
+The need for a <code>finally</code> statement is not apparent until you consider the following:
+how would the PrintStream in the <code>writeList()</code> method get closed if
+you didn't provide an exception handler
+for the ArrayIndexOutOfBoundsException and an ArrayIndexOutOfBoundsException occurred?
+(It would be easy and legal to omit an exception handler for ArrayIndexOutOfBoundsException
+because it's a runtime exception and the compiler won't alert you that the
+<code>writeList()</code> contains a method call that might throw one.) The answer
+is that the PrintStream would not get closed if an ArrayIndexOutOfBoundsException
+occurred and <code>writeList()</code> did not provide a handler for it--unless 
+the <code>writeList()</code> provided a <code>finally</code> statement.
+
+<p>
+There are other benefits to using the <code>finally</code> statement as well.
+In the <code>writeList()</code> example it is possible to provide for cleanup
+without the intervention of a <code>finally</code> statement. For example,
+you could put the code to close the PrintStream at the end of the <code>try</code>
+block and again within exception handler for ArrayIndexOutOfBoundsException
+as shown here:
+<blockquote>
+<pre>
+try {
+    . . .
+    <strong>pStr.close();	// don't do this; it duplicates code </strong>
+} catch (ArrayIndexOutOfBoundsException e) {
+    <strong>pStr.close();	// don't do this; it duplicates code </strong>
+    System.err.println("Caught ArrayIndexOutOfBoundsException: " + e.getMessage());
+} catch (IOException e) {
+    System.err.println("Caught IOException: " + e.getMessage());
+}
+</pre>
+</blockquote>
+However, this duplicates code which makes the
+code hard to read and prone to errors if you modify the code later. For
+example, if you add code to the <code>try</code> block that may throw a new type of
+exception, you will have to remember to close the PrintStream within the new
+exception handler (which if you're anything like me you are bound to forget).
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="catch.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="putItTogether.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

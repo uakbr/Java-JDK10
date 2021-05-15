@@ -1,0 +1,27 @@
+
+Hi,
+
+This directory contains a prototype of how you could
+interface Tcl to Java. This code was originally written
+by Patrick Naughton (naughton@starwave.com) and has only
+been slightly modified since.
+
+The source for Tcl is not included. You'll have to get
+that somewhere in order to build it from scratch. However,
+I have included the Solaris libraries so you can try it out. 
+
+Try this:
+
+	setenv LD_LIBRARY_PATH .:$LD_LIBRARY_PATH
+	java TclTest
+
+and you should see the output of some Tcl code being
+executed from Java.
+
+PS: We don't support this stuff. It is just there as a demo
+of how to interface between Tcl and Java.
+
+Have fun,
+
+	Arthur van Hoff
+	

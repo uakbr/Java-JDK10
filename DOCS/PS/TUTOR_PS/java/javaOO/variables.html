@@ -1,0 +1,217 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Declaring a Member Variable</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="methods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="accesscontrol.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Declaring a Member Variable
+</h2>
+<p>
+<blockquote>
+
+[PENDING: fix intro to this page]
+In Java, there are two different kinds of variables: variables that are
+associated with an object or class (called <em>member variables</em>) and
+those that are not associated with an object or class but are used locally
+within methods and other code blocks (local variables, parameters, etc.).
+This page talks about member variables. For more information regarding
+local and other variables, see <a href=../../MissingPage.html>missing page</a>.
+<p>
+You define all member variables within the body of the class. The following
+is a general description of all member variable declarations in Java.
+<blockquote>
+<pre>
+[<em>accessSpecifier</em>] [static] [final] [transient] [volatile] <em>type</em> <em>variablename</em>
+</pre>
+</blockquote>
+There are two different types of member variables: class variables and
+instance variables. A class variable occurs once per class regardless of
+the number of instances created of that class. The system allocates
+memory for class variables the first time it encounters the class.
+An instance variable occurs once per instance of a class; that is,
+every time you create a new instance of the class, the system allocates
+memory for all of the class's instance variables.
+<p>
+An earlier section, <a href="declaringclass.html">Declaring a Class</a>,
+showed you the general outline of a class declaration:
+<blockquote>
+<pre>
+class declaration {
+    . . .
+    class body
+    . . .
+}
+</pre>
+</blockquote>
+Within the class you define all the variables and methods supported
+by that class. This page focuses on how to declare variables for
+a class. The <a href="methods.html">next page</a> shows you how
+to declare and implement your class's methods.
+<p>
+You declare all of the variables that are a member of the class within
+the class body. Typically, you declare a class's variables before
+you declare its methods, although this is not required.
+<blockquote>
+<pre>
+class declaration {
+    . . .
+    <em>member variable declarations</em>
+    . . .
+    <em>method declarations</em>
+    . . .
+}
+</pre>
+</blockquote>
+<strong>Note:</strong> To declare variables that are a member of a
+class, the declarations must be within the class body, but <strong>not</strong>
+within the body of a method. Variables declared within the body of a method
+are local to that method.
+<p>
+At minimum, a member variable declaration has two components: the type
+of the variable and its name. For example, the following code snippet
+declares an integer variable named <code>anInteger</code> for the class
+<code>IntegerClass</code>.
+<blockquote>
+<pre>
+class IntegerClass {
+    int anInteger;
+}
+</pre>
+</blockquote>
+When you declare a variable like this, you declare an <em>instance variable</em>.
+[PENDING: More more more]. For information about declaring class variables, see
+<a href="../../MissingPage.html>somewhere else</a>
+
+<a name="datatypes>
+<h4>A Variable's Type</h4>
+</a>
+<blockquote>
+Every variable in a Java program must have a type. A variable's type
+determines the values that the variable can have and the operations
+that can be performed on the variable. There are two major categories
+of data types in the Java language: simple types and complex types.
+Simple data types are comprised of a single value and include
+integer numbers, floating point numbers, boolean values, and characters
+(a single character, that is). Complex types are comprised of multiple
+or complex values and, sometimes, the operations that can be performed
+on those values. Complex types include classes, interfaces, and arrays.
+<p>
+The following table lists all of the simple data types supported
+by the Java language, the keyword that you use to declare a variable
+of that type, and the size of the variable.
+<blockquote>
+<pre>
+Keyword		Size	Description
+----------------------------
+(integer types)
+byte		8-bit	Byte-length integer
+short		16-bit	Short integer
+int		32-bit	Integer
+long		64-bit	Long integer
+
+(floating-point types)
+float		32-bit	single-precision floating point
+double		64-bit	double-precision floating point
+
+(other types)
+char		16-bit	a single Unicode character
+boolean		N/A	a Boolean
+</pre>
+</blockquote>
+<p>
+[PENDING: Say something intelligent about complex data types.]
+</blockquote>
+
+<h4>A Variable's Name</h4>
+<blockquote>
+[PENDING: More here]
+</blockquote>
+
+<h4>Other Variable Declaration Components</h4>
+<blockquote>
+Besides type and name, there are several other variable attributes
+that you can specify when declaring a variable. These include such
+attributes as whether other objects can access the variable,
+whether or not the variable is a class or instance
+variable and whether or not the variable is a constant.
+<p>
+Follow these links to find more information about
+<ul>
+<li>
+<a href="accesscontrol.html">Controlling Access to a Class's Variables</a>
+<li>
+<a href="classvars.html">Declaring a Class Variable</a> [PENDING: this might be too hidden]
+<li>
+<a href="constants.html">Declaring a Constant</a>
+<li>
+<a href="transient.html">Declaring a Transient Variable</a>
+<li>
+<a href="volatile.html">Declaring a Volatile Variable</a>
+</ul>
+</blockquote>
+
+<h4>Summary</h4>
+<blockquote>
+In summary, a member variable declaration looks like this:
+<blockquote>
+<pre>
+[<em>accessSpecifier</em>] [static] [final] [transient] [volatile] <em>type</em> <em>variablename</em>
+</pre>
+</blockquote>
+The items between [ and ] are optional. Italic items are to be replaced
+by keywords or names.
+<p>
+A variable declaration defines the following aspects of the variable: 
+<ul>
+<li>
+<em>accessSpecifier</em> defines which other classes have access to
+the variable
+<li>
+<code>static</code> indicates that the variable is a class member variable
+as opposed to an instance member variable
+<li>
+<code>final</code> indicates that the variable is a constant
+<li>
+<code>transient</code> variables are not part of the object's persistent state
+<li>
+<code>volatile</code> means that the variable is modified asynchronously
+</ul>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="methods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="accesscontrol.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

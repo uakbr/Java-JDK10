@@ -1,0 +1,95 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Dealing with Exceptions</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="catchOrDeclare.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="theexample.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Dealing with Exceptions
+</h2>
+<p>
+<blockquote>
+
+<a href=firstencounter.html>Your First Encounter with Java Exceptions</a>
+briefly described what your first encounter with Java exceptions was probably
+like: it was likely in the form of an error message from the compiler complaining
+that you must either catch or declare exceptions. Then,
+<a href=catchOrDeclare.html>Java's Catch or Declare Requirement</a> discussed
+what exactly was meant by the error message and why the Java language designers
+decided to make this requirement. Now, we're going to show you both how to catch
+an exception and how to declare one.
+
+<h4><a href=theexample.html>The Example</a></h4>
+<blockquote>
+Both sections below, the one on catching an exception and the one on declaring
+an exception, use the same example. This example defines and implements a
+class named <a href=example/ListOfNumbersWOHandler.java>ListOfNumbers</a>.
+The ListOfNumbers class calls two methods from classes in the Java packages
+that can throw exceptions. <a href=#catching>Catching and Handling Exceptions</a>
+will show you how to write exception handlers for both exceptions, and
+<a href=#declaring>Declaring the Exceptions Thrown by a Method</a>
+will show you how to declare those exceptions instead of catching them.
+</blockquote>
+
+<a name=catching>
+<h4><a href=handling.html>Catching and Handling Exceptions</a></h4>
+</a>
+<blockquote>
+Now that you've familiarized yourself with the ListOfNumbers class and
+where the exceptions can be thrown, let's write exception handlers to
+catch and handle those exceptions.
+<p>
+This section covers the three components of an exception handler: the <code>try</code>,
+<code>catch</code>, and <code>finally</code> blocks by showing you how to
+use them to write an exception handler for the ListOfNumbers class's <code>writeList()</code>
+method. In addition, this section contains a page that walks through the
+<code>writeList()</code> method and analyzes what occurs within the method
+during various scenarios.
+</blockquote>
+
+<a name=declaring>
+<h4><a href=declaring.html>Declaring the Exceptions Thrown by a Method</a></h4>
+</a>
+<blockquote>
+If it is not appropriate for your method to catch and handle an exception
+thrown by a method that it calls, or if your method itself throws its
+own exception, you must declare in the method signature that the method
+throws the exception.
+Using the ListOfNumbers class this section shows you how to declare exceptions.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="catchOrDeclare.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="theexample.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

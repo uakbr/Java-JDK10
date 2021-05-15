@@ -1,0 +1,147 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Operators</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="input.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="output.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Operators
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class Count {
+    public static void main(String args[])
+        throws java.io.IOException
+    {
+        int count = 0;
+
+        while (System.in.read() <strong>!=</strong> -1)
+            <strong>count++;</strong>
+        System.out.println("Input has " + count + " chars.");
+    }
+}    
+</pre>
+</blockquote>
+The character-counting program uses several <em>operators</em>
+including <code>[]</code>, <code>=</code>, <code>!=</code>, <code>++</code>,
+and <code>+</code>.
+As in other languages, Java operators fall into four categories:
+arithmetic, relational, logical, and string.
+With a few notable exceptions, Java operators use <em>infix notation</em>--the
+operator appears <em>between</em> its operands.
+<blockquote>
+<pre>
+op1 operator op2
+</pre>
+</blockquote>
+
+<h4>Arithmetic Operators</h4>
+<blockquote>
+The Java language supports various arithmetic operations--including addition, subtraction,
+multiplication, and division--on all numbers.
+The statement <code>count++</code> uses a
+short cut operator <code>++</code>, which increments a number.
+</blockquote>
+
+<h4>Relational Operators</h4>
+<blockquote>
+The relational operators compare two values and determine the relationship
+between them. For example, <code>!=</code> returns true if
+two values are <em>unequal</em>. The character-counting program uses <code>!=</code>
+to determine whether the value returned by <code>System.in.read()</code> is not equal to -1.
+</blockquote>
+
+<h4>Logical Operators</h4>
+<blockquote>
+The logical operators take two values and perform boolean logic
+operations. Two such operators are <code>&&</code> and <code>||</code>,
+which perform <em>boolean and</em> and <em>boolean or</em> operations, respectively.
+Typically, programmers use logical operators to evaluate
+compound expressions. For example, this code snippet verifies that
+an array index is between two boundaries:
+<blockquote>
+<pre>
+if (0 &lt; index && index &lt; NUM_ENTRIES)
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>String Operators</h4>
+<blockquote>
+The Java language extends the definition of the operator <code>+</code> to
+include string concatenation. The example program uses <code>+</code>
+to contenate "<code>Input has </code>", the value of <code>count</code>,
+and "<code> chars.</code>"
+<blockquote>
+<pre>
+System.out.println("Input has " + count + " chars.");
+</pre>
+</blockquote>
+<a href="string.html#strcat">String Concatenation</a>
+contains more information.
+</blockquote>
+
+<h4>Operator Precedence</h4>
+<blockquote>
+The Java language allows you to create compound expressions and statements such as
+this one:
+<blockquote>
+<pre>
+x * y * z
+</pre>
+</blockquote>
+In this particular example, the order in which the expression is evaluated
+is unimportant because multiplication is commutative.
+However, this is not true of all expressions, for example:
+<blockquote>
+<pre>
+x * y / 100
+</pre>
+</blockquote>
+gives different results if you perform the
+multiplication first or the division first.
+You can use balanced parentheses <code>(</code> and <code>)</code>
+to explicitly tell the Java compiler the order in which to evaluate an expression,
+for example <code>x * (y / 100)</code>, or you can rely on the <em>precedence</em> the
+Java language assigns to each operator. This <a href="charts.html">chart</a>
+illustrates the relative precedence for all Java operators.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="input.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="output.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

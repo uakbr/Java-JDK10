@@ -1,0 +1,115 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The Standard Input Stream</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="while.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="operators.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Standard Input Stream
+</h2>
+<p>
+<blockquote>
+  
+<blockquote>
+<pre>
+class Count {
+    public static void main(String args[])
+        throws java.io.IOException
+    {
+        int count = 0;
+
+        while (<strong>System.in.read() != -1</strong>)
+            count++;
+        System.out.println("Input has " + count + " chars.");
+    }
+}    
+</pre>
+</blockquote>
+
+System is a member of the java.lang
+package and provides system functionality such
+as standard input and output, copying arrays, getting
+the current date and time, and getting environment variables.
+The <code>while</code> loop uses the System class
+to read characters.
+<p>
+All of the System class's methods and variables are class
+methods and variables. For more information about how to use
+class methods and variables refer to
+<a href=../anatomy/static.html>Static vs. Instance</a>
+<a href=../anatomy/static.html><img src=../../images/javaIcon.gif width=20 height=20 border=0></a>
+in <em>The Anatomy of a Java Application</em>.
+
+<h4>The Standard Input Stream</h4>
+<blockquote>
+<code>System.in</code> implements the <em>standard input stream</em>.
+The standard input stream is a C library concept
+that has been assimilated into the Java language. Simply put, a stream is
+a flowing buffer of characters; the standard input stream
+is a stream that reads characters from the keyboard.
+The standard input stream is a convenient place
+for an old-fashioned text-based application to get
+input from the user.
+</blockquote>
+
+<h4>Reading from the Standard Input Stream</h4>
+<blockquote>
+The <code>read()</code> method provided by <code>System.in</code>
+reads a single character and returns either the
+character that was read or, if there are no more characters to
+be read, -1.
+<p>
+When a program reads from the standard input stream,
+the program blocks waiting for you to type something in.
+The program continues to wait for input until you give
+it some indication that the input is complete.
+To indicate to any program that reads from the standard input stream
+that you have finished entering characters, type the
+<a href="_endofinput.html">end-of-input character</a>
+appropriate for your system at the beginning of a new line.
+When the character-counting program receives an end-of-input character
+the loop terminates and the program displays the number of characters
+you typed.
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.System.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.System.html>java.lang.System</a>
+</blockquote>
+ 
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="while.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="operators.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,153 @@
+
+
+
+<!--NewPage-->
+<html>
+<head>
+<title>The "Hello World" Applet</title>
+</head>
+<body>
+<a href="../application/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><img src=../../images/dim.NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/getStartedHeader.gif width=26 height=26 align=bottom border=0 alt="Getting Started"></a>
+<p>
+<hr size=4>
+
+<h1>
+     The "Hello World" Applet
+</h1>
+<p>
+<blockquote>
+
+
+<p>
+By following the steps on this page,
+you can create and use an applet.
+When you've followed all the steps,
+your directory (folder) structure should look something like this:
+<p>
+<img src="images/appletDir.gif" width=466 height=85>
+<p>
+
+<h4><A name = "Directory">Create a directory</a></h4>
+<blockquote>
+<A Href=_dirstruct.html>Create a directory</a> to hold your HTML pages,
+if you don't already have one.
+<P>
+
+<strong>Important:</strong>
+Do <strong>NOT</strong> invoke <samp>hotjava</samp>
+[or any other applet viewer?]
+from the <strong>HTML</strong> directory
+if you might want to reload the applet.
+Because of the way the class loader works,
+an applet can't be reloaded
+(for example, after you make changes to its code)
+when you invoke the applet viewer from the directory 
+that contains the applet's compiled code.
+</blockquote>
+
+<h4> Create a Java source file </h4>
+<blockquote>
+Create a file named <SAMP>HelloWorld.java</SAMP>
+in the <strong>HTML</strong> directory
+with the Java code shown here:
+<blockquote>
+<pre>
+import java.awt.Graphics;
+public class HelloWorld extends java.applet.Applet {
+    public void init() {
+	resize(150,25);
+    }
+    public void paint(Graphics g) {
+	g.drawString("Hello world!", 50, 25);
+    }
+}
+</pre>
+</blockquote>
+</blockquote>
+
+<h4> <A name = "Compile"> Compile the source file</a></h4>
+
+<blockquote>
+<a href="_compiling.html">Compile the file</a>
+using the Java compiler.
+<P>
+
+If compilation succeeds,
+the compiler creates a file named <SAMP>HelloWorld.class</SAMP>.
+If compilation fails,
+make sure you typed in and named the program
+exactly as shown above.
+</blockquote>
+
+<h4>Create an HTML file that includes the applet</h4>
+<blockquote>
+Create a file 
+named <SAMP>Hello.html</SAMP>
+in your HTML directory
+containing the following text:
+<blockquote>
+<PRE>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt; A Simple Program &lt;/TITLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+
+Here is the output of my program:
+&lt;APPLET CODE=&quot;HelloWorld.class&quot; WIDTH=150 HEIGHT=25&gt;
+&lt;/APPLET&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</PRE>
+</blockquote>
+</blockquote>
+<P>
+
+<h4>Load the HTML file</h4>
+<blockquote>
+Load the new HTML file into HotJava by entering its URL
+in the <SAMP>Document URL</SAMP> field
+near the top of the HotJava window.
+For example:
+<blockquote>
+<PRE>
+file:/home/kwalrath/HTML/Hello.html
+</PRE>
+</blockquote>
+
+Once you've successfully completed these steps,
+you should see the following
+in the HotJava page that comes up:
+<blockquote>
+Here is the output of my program:
+<applet CODE="HelloWorld.class" CODEBASE="betaclasses" WIDTH=150 HEIGHT=25>
+<APP CLASS="HelloWorld">
+</applet>
+</blockquote>
+</blockquote>
+
+<h4>Now what?</h4>
+<blockquote>
+Now you can either:
+<ul>
+<li> Return to the
+<a href="../../index.html"><em>Trail Map</em></a><a href="../../index.html"><img src="../../images/WayUpArrow.gif" width=20 height=20 border=0 alt="(the master page for this tutorial)"></a>
+    to get an overview of the trails you can follow.
+
+<li> Learn more about writing applets by going to the
+<a href="../../applet/index.html"><em>Writing Applets</em></a><a href="../../applet/index.html"><img src="../../images/appletIcon.gif" width=20 height=20 border=0 alt="(in the Writing Applets trail)"></a>
+     trail.
+</ul>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<a href="../application/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><img src=../../images/dim.NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/getStartedHeader.gif width=26 height=26 align=top border=0 alt="Getting Started"></a>
+</body>
+</html>

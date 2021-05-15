@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>Graphical UI Components</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../anatomy/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of UI Elements</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Graphical UI Components
+</h2>
+<p>
+<blockquote>
+
+This page contains an applet
+that shows you the graphical UI components we provide.
+Every graphical UI component is implemented
+with a subclass of the AWT 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html>Component</a>
+class.
+If your browser isn't Java-compatible,
+then instead of seeing the running applet,
+you'll see pictures of its windows.
+(Here's the applet's
+<a href="example/GUI.java">source code</a>.)
+<p>
+
+<applet codebase=example code=GUI.class width=437 height=233>
+<img src=images/GUIsnapshot.gif width=344 height=188>
+<img src=images/Framesnapshot.gif width=120 height=114 align=center
+     border=5>
+</applet>
+<h4>
+The Basic Controls:
+Buttons, Checkboxes, Choices, Lists, Menus, and Text Fields
+</h4>
+<blockquote>
+The
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Button.html>Button</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Checkbox.html>Checkbox</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Choice.html>Choice</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.List.html>List</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.MenuItem.html>MenuItem</a>, and
+<a href=http://java.sun.com/JDK-beta/api/java.awt.TextField.html>TextField</a>
+classes provide basic controls.
+These are the most common ways that
+users give instructions to Java programs.
+When a user activates one of these controls --
+by clicking a button
+or by pressing Return in a text field, for example --
+it posts an event (ACTION_EVENT).
+An object that contains the control can react to the event 
+by implementing the <code>action()</code> method.
+</blockquote>
+
+
+<h4>
+Other Ways of Getting User Input:
+Canvases and Text Areas
+</h4>
+<blockquote>
+When the basic controls aren't appropriate,
+you can use the Canvas and TextArea classes
+to get user input.
+The TextArea class simply provides an area
+to display or allow editing of several lines of text.
+<p>
+To draw custom graphics to the screen --
+in a paint program, image processor, or game, for example --
+create a subclass of the Canvas class.
+</blockquote>
+
+
+<h4>
+Yet More Components:
+Scrollbars and Labels
+</h4>
+<blockquote>
+The AWT provides two more handy components:  scrollbars and labels.
+Text areas automatically have scrollbars, 
+but you can use the Scrollbar class to make other kinds of areas scroll.
+Labels simply display an uneditable, unselectable line of text.
+</blockquote>
+
+
+<h4>
+Containers:
+Windows and Panels
+</h4>
+<blockquote>
+The AWT provides two types of containers,
+both implemented as subclasses of the 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Container.html>Container</a>
+class
+(which is a Component subclass).
+The Window subclasses -- Dialog, FileDialog, and Frame --
+provide windows to contain components.
+Panels group components within an area of an existing window.
+<p>
+The example program uses a Panel to group the label and the text area,
+another Panel to group them with a canvas,
+and a third Panel to group
+the text field, button, checkbox, and pop-up list of choices.
+All these Panels are grouped by the Applet object,
+since the Applet class is a subclass of Panel.
+<p>
+The example program uses a Frame
+to hold the Menu and List.
+(Frames create normal, full-fledged windows,
+as opposed to the windows that Dialogs create,
+which are dependent on Frames and can be modal.)
+When the program is run as an application,
+then the <code>main()</code> method
+creates a Frame to hold the Applet.
+Finally, when you select the "File dialog..." item
+in the menu,
+the program creates a FileDialog object,
+which is a Dialog
+that can be either an Open or a Save dialog.
+<applet height=0 width=0>
+<p>
+Here, if you don't have a Java-compatible browser,
+is a picture of the window that the FileDialog brings up:<p>
+<!-- Will this work?  It's a kludge to include this figure only
+     if you have a browser that doesn't understand applets. -->
+<img src="images/FileDialog.gif" width=280 height=374>
+</applet>
+</blockquote>
+
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../anatomy/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of UI Elements</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

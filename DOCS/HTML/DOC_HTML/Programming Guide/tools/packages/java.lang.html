@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>The Java Language Package</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="java.io.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Java Language Package
+</h2>
+<p>
+<blockquote>
+
+The Java language package, a.k.a. java.lang, provides
+classes that are core to the Java language. If you are writing
+stand-alone Java applications, you are likely to encounter
+and use the classes and interfaces in this package first.
+The classes in this package are grouped in the following manner:
+<dl>
+
+<dt>
+<strong>Object</strong>
+<dd>
+The grand-daddy of all classes--the class from which all others derive.
+
+<dt>
+<strong>Data Type Wrappers</strong>
+<dd>
+A collection of classes used to wrap variables of a
+simple data type: Boolean, Character, Double, Float,
+Integer and Long. Each of these classes are subclasses
+of the abstract class Number.
+
+<dt>
+<strong>Strings</strong>
+<dd>
+Two classes that implement mutable and immutable character data.
+<a href="../../java/strings/index.html"><em>The String and StringBuffer Classes</em></a>
+<a href="../../java/strings/index.html"><img src="../../images/javaIcon.gif" border=0 width=20 height=20></a>
+is a thorough lesson on the use of both types of strings.
+
+<dt>
+<strong>System and Runtime</strong>
+<dd>
+These two classes provide let your programs use system resources.
+System provides a system-independent programming
+interface to system resources and Runtime gives you
+direct system-specific access to the runtime environment.
+<a href="../system/index.html"><em>Using System Resources</em></a>
+describes both the System and Runtime classes and their methods.
+
+<dt>
+<strong>Threads</strong>
+<dd>
+The Thread, ThreadDeath and ThreadGroup classes implement the
+multi-threading capabilities so important to the Java language.
+The java.lang package also defines the Runnable interface.
+Runnable makes it convenient for Java class to be active
+without subclassing the Thread class. Through an example-oriented approach
+<a href="../../java/threads/index.html"><em>Threads of Control</em></a>
+<a href="../../java/threads/index.html"><img src="../../images/javaIcon.gif" border=0 width=20 height=20></a>
+will teach you about Java threads.
+
+<dt>
+<strong>Classes</strong>
+<dd>
+The Class class provides a runtime description of a class and
+the ClassLoader class allows you to load classes into your
+program during runtime.
+
+<dt>
+<strong>Math</strong>
+<dd>
+A library of math routines and values such as pi.
+
+<dt>
+<strong>Exceptions, Errors and Throwable</strong>
+<dd>
+When an error occurs in a Java program, the program throws
+an object which indicates what the problem was and the state of
+the interpreter when the error occurred. Only objects that
+derive from the Throwable class can be thrown. There are
+two main subclasses of Throwable: Exception and Error. Exceptions
+are a form of Throwable that "normal" programs may try to catch.
+Errors are used for more catastophic errors--normal programs should
+not catch errors. The java.lang package contains the Throwable,
+Exception and Error classes, and numerous subclasses of Exception
+and Error that represent specific problems.
+
+<dt>
+<strong>Processes</strong>
+<dd>
+Process objects represent the system process that is created
+when you use Runtime to execute system commands. The java.lang
+packages defines and implements the generic Process class
+and two of its subclasses that represent processes on specific
+platforms: UNIXProcess and Win32Process.
+
+</dl>
+
+<p>
+The compiler automatically imports this package for you.
+No other packages are automatically imported.
+
+<h4>See Also</h4>
+<blockquote>
+<a href="http://java.sun.com/JDK-beta/api/java.lang.html"><img src="../../images/apiIcon.gif" border=0 width=20 height=20></a>
+<a href="http://java.sun.com/JDK-beta/api/java.lang.html">java.lang</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="java.io.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

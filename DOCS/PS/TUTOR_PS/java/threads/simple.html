@@ -1,0 +1,155 @@
+<!--NewPage-->
+<html>
+<head>
+<title>A Simple Thread Example</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="definition.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="attributes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    A Simple Thread Example
+</h2>
+<p>
+<blockquote>
+
+The simple example shown in full on the previous page defines two
+classes: SimpleThread and TwoThreadsTest. Let's begin our exploration
+of the application with the SimpleThread class: a subclass of the Thread
+class that is provided by the java.lang package.
+<blockquote>
+<pre>
+class SimpleThread extends Thread {
+    public SimpleThread(String str) {
+	super(str);
+    }
+    public void run() {
+	for (int i = 0; i &lt; 10; i++) {
+	    System.out.println(i + &quot; &quot; + getName());
+            try {
+		sleep((int)(Math.random() * 1000));
+	    } catch (InterruptedException e) {}
+	}
+	System.out.println(&quot;DONE! &quot; + getName());
+    }
+}
+</pre>
+</blockquote>
+The first method in the SimpleThread class is a constructor that takes
+a String as its only argument. This constructor is implemented by calling
+a superclass constructor and is only interesting to us because it sets
+the Thread's name which is used later in the program.
+<p>
+The next method in the SimpleThread class is the <code>run()</code> method.
+The <code>run()</code> method is the heart of any Thread--it's where the
+action of the Thread takes place. The <code>run()</code> method of the
+SimpleThread class contains a <code>for</code> loop that iterates ten times. In
+each iteration the method display the iteration number and the name of the Thread then
+sleeps for a random interval between 0 and 1 second.
+After the loop has finished, the <code>run()</code> method prints "DONE!" along
+with the name of the thread. That's it for the SimpleThread class.
+<p>
+The TwoThreadsTest class provides a <code>main()</code> method that
+creates two SimpleThread threads: one is named "Jamaica" and the other
+is named "Fiji". (If you can't decide on where to go for vacation you
+can use this program to help you decide--go to the island whose
+thread prints "DONE!" first.)
+<blockquote>
+<pre>
+class TwoThreadsTest {
+    public static void main (String args[]) {
+        new SimpleThread(&quot;Jamaica&quot;).start();
+        new SimpleThread(&quot;Fiji&quot;).start();
+    }
+}
+</pre>
+</blockquote>
+The <code>main()</code> method also starts each thread immediately
+following its construction by calling the <code>start()</code> method.
+To save you from typing in this program, click here for the source
+code to the
+<a href=betaclasses/SimpleThread.java>SimpleThread</a>
+class and here for the source code to the
+<a href=betaclasses/TwoThreadsTest.java>TwoThreadsTest</a>
+program. Compile and run the program and watch your vacation
+fate unfold. You should see output similar to the following:
+<blockquote>
+<pre>
+0 Jamaica
+0 Fiji
+1 Fiji
+1 Jamaica
+2 Jamaica
+2 Fiji
+3 Fiji
+3 Jamaica
+4 Jamaica
+4 Fiji
+5 Jamaica
+5 Fiji
+6 Fiji
+6 Jamaica
+7 Jamaica
+7 Fiji
+8 Fiji
+9 Fiji
+8 Jamaica
+DONE! Fiji
+9 Jamaica
+DONE! Jamaica
+</pre>
+</blockquote>
+(Looks like I'm going to Fiji!!)
+Notice how the output from each thread is intermingled with the output from the
+other. This is due to the fact that both SimpleThread threads are running concurrently
+thus both <code>run()</code> methods are running at the same time and each thread
+is displaying its output at the same time as the other.
+<p>
+<strong>Try This:</strong> Change the main program so that it creates a third
+thread with the name "Bora Bora". Compile and run the program again.
+Does this change your island of choice for your vacation?
+Here's the code for the new main program which we renamed to
+<a href=betaclasses/ThreeThreadsTest.java>ThreeThreadsTest</a>.
+
+<h4>Keep Going</h4>
+<blockquote>
+This page glosses over many of the details of threads such as the
+<code>start()</code> and <code>sleep()</code> methods.
+Don't worry, the next several pages of this lesson explain these concepts and
+others in detail. The important thing to understand from this
+page is that a Java program can have many threads, and that those
+threads can run <em>concurrently</em>.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="definition.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="attributes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

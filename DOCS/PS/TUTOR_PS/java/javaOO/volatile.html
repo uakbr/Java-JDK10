@@ -1,0 +1,66 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Declaring a Volatile Variable</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="transient.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="interfaces.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Declaring a Volatile Variable
+</h2>
+<p>
+<blockquote>
+
+When you are using threads that can modify the same variable, you can use
+Java's <code>volatile</code> keyword to indicate that to the Java runtime
+system. At this time, the Java runtime system does nothing with this
+information. However, future releases of the Java runtime system will use
+this information to ensure that the variable is loaded from memory before
+each use, and stored to memory after each use to ensure that the value
+of the variable is consistent and coherent within each thread.
+<p>
+The following variable declaration is an example of how to declare that
+that a variable can be modified asynchronously by concurrent threads. 
+<blockquote>
+<pre>
+class VolatileExample {
+    volatile int counter;
+    . . .
+}
+</pre>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="transient.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="interfaces.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

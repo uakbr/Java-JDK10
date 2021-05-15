@@ -1,0 +1,111 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Character Data</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="output.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="run.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Character Data
+</h2>
+<p>
+<blockquote>
+ 
+<blockquote>
+<pre>
+class Count {
+    public static void main(String args[])
+	throws java.io.IOException
+    {
+        int count = 0;
+
+        while (System.in.read() != -1)
+            count++;
+        System.out.println(<strong>"Input has " + count + " chars."</strong>);
+    }
+}    
+</pre>
+</blockquote>
+
+In C and C++, strings are simply null-terminated arrays
+of characters.  However, in the Java language, strings are
+first-class objects--instances of the String class.
+Like System, the String class is a member of the java.lang
+package.
+<p>
+The character-counting program 
+uses Strings in two different places.
+The first is in the definition of the <code>main()</code> method:
+<blockquote>
+<pre>
+    String args[]
+</pre>
+</blockquote>
+This code explicitly declares an array, named <code>args</code>, that
+contains String objects. The empty brackets indicate that
+the length of the array is unknown at compilation time.
+
+<p>
+The compiler always allocates a String object when it encounters
+a <em>literal string</em>--a string of characters between double
+quotation marks. So the program implicitly allocates two String objects
+with "<code>Input has </code>" and "<code> chars.</code>".
+
+<a name=strcat><h4>String Concatenation</h4></a>
+<blockquote>
+The Java language lets you concatenate strings together easily with the <code>+</code>
+operator. The example program uses this feature of the Java language to print its
+output. The following code snippet concatenates three strings together to produce
+its output:
+<blockquote>
+<pre>
+"Input has " + count + " chars."
+</pre>
+</blockquote>
+Two of the strings concatenated together are literal strings: "<code>Input has </code>"
+and "<code> chars.</code>" The third string--the one in the middle--is actually an integer that
+first gets converted to a string and then concatenated to the others.
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html>java.lang.String</a><br>
+<a href=../strings/index.html><img src=../../images/javaIcon.gif height=20 width=20 border=0></a>
+<a href=../strings/index.html><em>The String and StringBuffer Classes</em></a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="output.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="run.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

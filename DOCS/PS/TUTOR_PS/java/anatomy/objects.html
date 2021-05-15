@@ -1,0 +1,95 @@
+<!--NewPage-->
+<html>
+<head>
+<title>An Introduction to Java Objects</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="main.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="creating.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    An Introduction to Java Objects
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+import java.util.Date;
+class DateApp {
+    public static void main(String args[]) {
+        <strong>Date today = new Date();
+        System.out.println(today);</strong>
+    }
+}
+</pre>
+</blockquote>
+The <code>DateApp</code> application is about the simplest Java program
+that you can write that actually does something, and because it is
+such a simple program, it doesn't need to define any additional classes itself.
+However, most programs that you write will be more complex and require you to write
+other classes, and supporting Java code.
+<p>
+The <code>DateApp</code> application does <em>use</em> two other
+classes--the System class and the Date class--that are provided with
+the Java development environment. The System class provides system-independent
+access to system-dependent functionality.
+For more information about the System class, see
+<a href="../../tools/system/index.html"><em>Using System Resources</em></a>
+<a href="../../tools/system/index.html"><img src=../../images/toolIcon.gif width=20 height=20 border=0></a>.
+The Date class provides access to system-indepedent date functionality.
+It is through the use of these two classes that you'll learn about objects,
+instance methods and variables, and static methods and variables.
+
+<h4><a href=creating.html>Declaring, Instantiating and Initializing an Object</a>
+</h4>
+<blockquote>
+The first line in the <code>main()</code> method, declares,
+instantiates and initializes an object named <code>today</code>.
+The constructor used to initialize <code>today</code> is the
+default constructor which initializes the new Date object
+to contain the current day and time.
+</blockquote>
+
+<h4><a href=static.html>Static vs. Instance</a>
+</h4>
+<blockquote>
+The second line of the <code>main()</code> method
+uses dot notation to refer to a class's or object's
+variables or methods. This one line of code
+illustrates the use of both <em>static methods and variables</em>
+and <em>instance variables and methods</em>.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="main.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="creating.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

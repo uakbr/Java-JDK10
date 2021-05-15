@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Step By Step</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="step1.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=bottom border=0 alt="Integrating Native Methods into Java Programs | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     Step By Step
+</h1>
+<p>
+<blockquote>
+
+This lesson walks you through the steps necessary to integrate native
+code with Java programs.
+<p>
+The example used throughout this lesson implements the canonical "Hello World!"
+program.  The "Hello World!" program has two Java classes: the first implements
+the <code>main()</code> method for the overall program, and the second, called
+<code>HelloWorld</code>, has one method, a native method, that displays "Hello
+World!". The implementation for the native method is provided in the C programming
+language.
+
+<h4>
+<a href=step1.html>Step 1: Write the Java Code</a>
+</h4>
+<blockquote>
+Create a Java class, named <code>HelloWorld</code>, that declares a native method.
+Also, write the main program that creates a <code>HelloWorld</code> object
+and calls the native method.
+</blockquote>
+
+<h4>
+<a href=step2.html>Step 2: Compile the Java Code</a>
+</h4>
+<blockquote>
+Use <code>javac</code> to compile the Java code that you wrote in <strong>Step 1</strong>.
+</blockquote>
+
+<h4>
+<a href=step3.html>Step 3: Create the .h File</a>
+</h4>
+<blockquote>
+Use <code>javah</code> to create a <code>.h</code> file.
+</blockquote>
+
+<h4>
+<a href=step4.html>Step 4: Create a Stubs File</a>
+</h4>
+<blockquote>
+Now, use <code>javah</code> to create a stubs file.
+</blockquote>
+
+<h4>
+<a href=step5.html>Step 5: Write the C Function</a>
+</h4>
+<blockquote>
+Write the implementation for the native method in a C source file. The implementation
+will be a regular C function that's integrated with your Java class.
+</blockquote>
+
+<h4>
+<a href=step6.html>Step 6: Create a Dynamically Loadable Library</a>
+</h4>
+<blockquote>
+Use the C compiler to compile the <code>.h</code> file, the stubs file, and the <code>.c</code>
+file that you created in <strong>Steps 3, 4, and 5</strong> into a dynamically loadable library.
+</blockquote>
+
+<h4>
+<a href=step7.html>Step 7: Run the Program</a>
+</h4>
+<blockquote>
+And finally, use <code>java</code>, the Java interpreter, to run the program.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="step1.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=top border=0 alt="Integrating Native Methods into Java Programs | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

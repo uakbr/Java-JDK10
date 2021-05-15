@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>Command Line Arguments</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../strings/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="space.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     Command Line Arguments
+</h1>
+<p>
+<blockquote>
+
+Your Java application can accept any number of arguments
+from the command line. Command line arguments allow the user to
+affect the operation of an application. For example, a program
+might allow the user to specify verbose mode--that is, specify that
+the application display a lot of trace information--with the
+command line argument <code>-verbose</code>.
+<p>
+When invoking an application, the user types the command line arguments
+after the application name. For example, suppose you had a Java application,
+called <code>Sort</code>, that sorted lines in a file, and that the data 
+you want sorted is in a file named <code>ListOfFriends</code>. If you were
+using DOS, you would invoke the <code>Sort</code> application on your
+data file like this:
+<blockquote>
+<pre>
+C:\> <strong>java Sort ListOfFriends</strong>
+</pre>
+</blockquote>
+In the Java language, when you invoke an application, the runtime system passes the
+command line arguments to the application's <code>main</code> method via
+an array of Strings. Each String in the array contains one of the command
+line arguments. In the previous example, the command line arguments passed
+to the <code>Sort</code> application is an array that contains a single string:
+"<code>ListOfFriends</code>".
+
+<h4>Echo Command Line Arguments</h4>
+<blockquote>
+This simple application displays each of its command line arguments 
+on a line by itself:
+<blockquote>
+<pre>
+class Echo {
+    public static void main (String args[]) {
+        for (int i = 0; i &lt; args.length; i++)
+            System.out.println(args[i]);
+    }
+}
+</pre>
+</blockquote>
+<strong>Try this:</strong> Invoke the Echo application with the
+command line shown in this DOS example:
+<blockquote>
+<pre>
+C:\> <strong>java Echo Drink Hot Java</strong>
+Drink
+Hot
+Java
+</pre>
+</blockquote>
+You'll notice that the application displays each word--<code>Drink</code>,
+<code>Hot</code>, and <code>Java</code>--on a line by itself. This is because
+<a href=space.html>The Space Character Separates Command Line Arguments</a>.
+</blockquote>
+
+<h4><a href=conventions.html>Conventions</a>
+</h4>
+<blockquote>
+There are several conventions that you should observe when accepting and processing
+command line arguments with a Java application.
+</blockquote>
+
+<h4><a href=parsing.html>Parsing Command Line Arguments</a>
+</h4>
+<blockquote>
+Most programs accept several command line arguments that allow the user to
+affect the execution of the application. For example, the UNIX command that prints
+the contents of a directory--the <code>ls</code> utility program--accepts arguments
+that determine which file attributes to print and the order in which the files are listed.
+Typically, the user can specify the command line arguments in any order thereby
+requiring the application to <em>parse</em> them.
+</blockquote>
+
+
+<hr>
+<strong>Note to C and C++ Programmers:</strong>
+The command line arguments passed to a Java application differ
+in number and in type than those passed to a C or C++ program.
+For further information refer to
+<a href=../../noMoreC/cmdLineArgs.html>Java Command Line Arguments Differ from C and C++</a>
+<a href=../../noMoreC/cmdLineArgs.html><img src=../../images/noCIcon.gif width=20 height=20 border=0></a>.
+<hr>
+
+<strong>Note to Applet Programmers:</strong>
+The runtime system only passes command line
+arguments to Java <em>applications</em>--applets use parameters
+instead.  For more information about applet parameters, see
+<a href="../../MissingPage.html">Communicating With the User</a>
+<a href="../../MissingPage.html"><img src=../../images/appletIcon.gif align=left width=20 height=20 border=0></a>.
+<hr>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../strings/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="space.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

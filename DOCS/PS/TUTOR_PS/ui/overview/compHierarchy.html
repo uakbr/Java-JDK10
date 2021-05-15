@@ -1,0 +1,180 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The Component Hierarchy</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="egClasses.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="drawing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of the Java UI</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Component Hierarchy
+</h2>
+<p>
+<blockquote>
+
+<applet codebase=example code=Converter.class width=275 height=160>
+<img src=images/Converter.gif width=275 height=209>
+</applet>
+
+<p>
+The example program (see above)
+has several levels in its Component hierarchy.
+The parent of each level is a Container
+(which inherits from Component).
+Below is a figure of the hierarchy.
+
+<pre>                          a Frame
+                             |
+                            ...
+                             |
+                        a Converter
+                             |
+           ----------------------------------
+           |                                |
+ a ConversionPanel (metricPanel)  a ConversionPanel (usaPanel)   
+           |                                |
+   -------------------              -------------------
+   |       |         |              |       |         |
+a Label    |      a Choice       a Label    |      a Choice
+           |                                |
+     --------------                  --------------
+     |            |                  |            |
+a TextField  a Scrollbar        a TextField  a Scrollbar
+</pre>
+
+<h4>Explanation</h4>
+<blockquote>
+At the top of the hierarchy is the window (Frame instance)
+that displays the program.
+When the example program runs as an application,
+the Frame is created in the program's <code>main()</code> method.
+When the example runs as an applet,
+the Frame is the browser or other applet viewer window.
+<p>
+
+Under the Frame is a Converter object,
+which inherits from Applet and
+thus is a Container (specifically, a Panel).
+Depending on what viewer the applet is displayed in,
+one or more Containers might be between the Converter object
+and the Frame at the top of the Component hierarchy.
+<p>
+
+Directly under the Converter object
+are two ConversionPanels.
+Here is the code that puts them under the Converter:
+<blockquote>
+<pre>
+public class Converter extends Applet {
+    . . .
+    public void init() {
+        . . . //Create metricPanel and usaPanel,
+        . . . //two ConversionPanels.
+        add(metricPanel);
+        add(usaPanel);
+    }
+</pre>
+</blockquote>
+
+Each ConversionPanel has four children:
+a Label, a TextField, a Scrollbar, and a Choice.
+Here's the code that adds the children:
+<blockquote>
+<pre>
+class ConversionPanel extends Panel {
+    . . .
+    ConversionPanel(Converter myController, String myTitle, Unit myUnits[]) {
+        . . .
+        //Add the label
+        Label label = new Label(title, Label.CENTER);
+        //...Set up GridBagConstraints for this Component...
+        gridbag.setConstraints(label, c);
+        add(label);
+
+        //Add the text field
+        textField = new TextField("0", 10);
+        //...Set up GridBagConstraints for this Component...
+        gridbag.setConstraints(textField, c);
+        add(textField);
+ 
+        //Add the pop-up list (Choice)
+        unitChooser = new Choice();
+        //...Initialize the Choice...
+        //...Set up GridBagConstraints for this Component...
+        gridbag.setConstraints(unitChooser, c);
+        add(unitChooser);
+ 
+        //Add the slider
+        slider = new Scrollbar(Scrollbar.HORIZONTAL, 0, 100, min, max);
+        //...Set up GridBagConstraints for this Component...
+        gridbag.setConstraints(slider, c);
+        add(slider);
+    }
+</pre>
+</blockquote>
+
+The GridBagConstraints is an object 
+that tells the GridBagLayout (the layout manager for this Panel)
+how to place a particular component.
+GridBagLayout, along with our other layout managers,
+is discussed in 
+<a href=../layout/index.html>Laying Out Components within a
+Container.</a>
+</blockquote>
+
+<h4>Summary</h4>
+<blockquote>
+The example program's Component hierarchy
+contains eight non-Container Components --
+Components that present the graphical UI of the program.
+These are the Labels, TextFields, Choices, and Scrollbars
+the program displays.
+There might be additional Components
+such as window controls under the Frame.
+<p>
+
+The Component hierarchy has at least four Containers --
+a Frame (window),
+a Converter (a custom kind of Panel),
+and two ConversionPanels (another custom Panel).
+<p>
+
+Note that if we add a new window -- a Dialog or Frame --
+to the example applet, 
+the new window will have its own Component hierarchy,
+unattached to the hierarchy this lesson presents.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="egClasses.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="drawing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of the Java UI</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

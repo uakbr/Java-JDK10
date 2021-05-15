@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Methods for Adding UI Components</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="componentMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="threads.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Methods for Adding UI Components
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+public class Simple extends java.applet.Applet {
+    . . . 
+    public void paint(Graphics g) {
+	g.clearRect(0, 0, size().width - 1, size().height - 1);
+	g.drawRect(0, 0, size().width - 1, size().height - 1);
+	g.drawString(buffer.toString(), 5, 15);
+    }
+}
+</pre>
+</blockquote>
+The Simple applet has a display problem:
+It doesn't scroll.  
+Once the text it displays reaches the end of the display area,
+you can't see any new text.
+The simplest cure for this problem
+is to use a pre-made UI component 
+that has the right behavior.
+<p>
+
+<strong>
+Note:
+</strong>
+This page glosses over many details.
+To really learn about using UI components,
+go to 
+<a href="../../ui/index.html">Creating a User Interface</a>
+<a href="../../ui/index.html"><img 
+   src=../../images/uiIcon.gif width=20 height=20 border=0></a>.
+
+<h4>Pre-Made UI Components</h4>
+<blockquote>
+The AWT supplies the following UI components
+(the Component subclass for each is listed in parentheses):
+<ul>
+<li> buttons (java.awt.Button)
+<li> checkboxes (java.awt.Checkbox)
+<li> single-line text fields (java.awt.TextField)
+<li> larger text display and editing areas (java.awt.TextArea)
+<li> labels (java.awt.Label)
+<li> lists (java.awt.List)
+<li> pop-up lists of choices (java.awt.Choice)
+<li> scrollbars (java.awt.Scrollbar)
+<li> drawing areas (java.awt.Canvas)
+<li> menus (java.awt.Menu, java.awt.MenuItem, java.awt.CheckboxMenuItem)
+<li> containers (java.awt.Panel, java.awt.Window and its subclasses)
+</ul>
+</blockquote>
+
+<h4>Methods for Using UI Components in Applets</h4>
+<blockquote>
+Because the Applet class inherits from the AWT Container class,
+it's easy to add Components to Applets.
+Each Applet has a layout manager
+that determines how the Components are placed
+within the display area.
+Here are some of the methods the Container class supplies,
+which you can use to include and position Components in your applet:
+<dl>
+<dt> <code>add()</code>
+<dd> Adds the specified Component to this Container.
+<dt> <code>remove()</code>
+<dd> Removes the specified Component from this Container.
+<dt> <code>getComponents()</code>
+<dd> Gets all the Components in this Container.
+<dt> <code>locate()</code>
+<dd> Locates the Component at the specified x,y position.
+<dt> <code>setLayout()</code>
+<dd> Sets the layout manager for this Container.
+<dt> <code>preferredSize()</code>
+<dd> Returns the preferred size of this Container.
+</dl>
+</blockquote>
+
+<h4>Adding a Non-Editable Text Field to the Simple Applet</h4>
+<blockquote>
+To make the Simple applet use a scrolling, non-editable text field,
+we can use the TextField class.
+Here is the revised <a href=betaclasses/ScrollingSimple.java>source code.</a>
+The main changes are listed below.
+<blockquote>
+<pre>
+TextField field = new TextField(80);
+//We used to use a StringBuffer.
+
+public void init() {
+    //Add the TextField, and then display it.
+    field.setEditable(false);
+    add(field);
+    resize(field.preferredSize());
+    show();
+    addItem("initializing... ");
+}
+
+public void addItem(String newWord) {
+    //This used to append the string to the StringBuffer;
+    //now it appends it to the TextField.
+    String t = field.getText();
+    System.out.println(newWord);
+    field.setText(t + newWord);
+    repaint();
+}
+
+//The paint() method is no longer necessary,
+//since the TextField repaints itself automatically.
+</pre>
+</blockquote>
+Below is the resulting applet.
+<p>
+<applet code=ScrollingSimple.class codebase=betaclasses width=500 height=50>
+<blockquote>
+<hr>
+<em>
+Your browser doesn't understand the APPLET tag,
+and there's no Alpha version of this applet.
+The reason:  
+With the Alpha 3 and earlier APIs, 
+it's difficult to write an applet that uses the AWT.
+</em>
+<hr>
+</blockquote>
+</applet>
+</blockquote>
+
+<h4>Where Can I Find More Information?</h4>
+<blockquote>
+Using Components is covered in detail
+in <a href=../../ui/index.html>Creating a User Interface</a> 
+<a href=../../ui/index.html><img
+src=../../images/uiIcon.gif width=20 height=20 border=0></a>.
+For more information on the methods listed above,
+you can also refer to the
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Container.html>Container
+API reference page<img src=../../images/apiIcon.gif
+height=20 width=20 border=0></a>.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="componentMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="threads.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

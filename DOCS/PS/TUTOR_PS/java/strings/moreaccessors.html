@@ -1,0 +1,161 @@
+<!--NewPage-->
+<html>
+<head>
+<title>More Accessor Methods</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="accessors.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="modifying.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    More Accessor Methods
+</h2>
+<p>
+<blockquote>
+
+<h4>For the String Class</h4>
+<blockquote>
+In addition to the <code>length()</code> and <code>charAt()</code>
+accessors you saw on the <a href=accessors.html>previous page</a>,
+The String class provides two accessors that return the index within the
+string of a specific character or string: <code>indexOf()</code> and
+<code>lastIndexOf()</code>. The <code>indexOf()</code> method searches
+from the beginning of the string forward, and <code>lastIndexOf()</code>
+searches from the end of the string backward.
+<p>
+The <code>indexOf()</code> and <code>lastIndexOf()</code> methods are
+frequently used in conjunction with <code>substring()</code> which returns
+a substring of the string.
+The following class illustrates the use of <code>lastIndexOf()</code>
+and <code>substring()</code> to isolate different parts of a filename.<br>
+<strong>NOTE:</strong> these methods don't do any error checking and
+assume that their argument contains a full directory path and a filename
+with an extension.
+<blockquote>
+<pre>
+class Filename {
+    String fullpath;
+    char pathseparator;
+
+    Filename(String str, char sep) {
+	fullpath = str;
+	pathseparator = sep;
+    }
+
+    String extension() {
+	int dot = fullpath.lastIndexOf('.');
+	return fullpath.substring(dot + 1);
+    }
+
+    String filename() {
+	int dot = fullpath.lastIndexOf('.');
+	int sep = fullpath.lastIndexOf(pathseparator);
+	return fullpath.substring(sep + 1, dot);
+    }
+
+    String path() {
+	int sep = fullpath.lastIndexOf(pathseparator);
+	return fullpath.substring(0, sep);
+    }
+}
+</pre>
+</blockquote>
+The <code>extension()</code> method uses <code>lastIndexOf()</code> to locate the last
+occurrence of the period ('.') in the filename.
+Then <code>substring()</code> uses the return value of <code>lastIndexOf()</code>
+to extract the filename extension--that is, the substring from the period ('.')
+to the end of the string. This code assumes that the filename
+actually has a period ('.') in it; if the filename does not have a period ('.'), then
+<code>lastIndexOf()</code> returns -1, and the
+<code>substring()</code> method throws a "string index out of range exception".
+<p>
+Also, notice that <code>extension()</code> uses <code>dot + 1</code> as the
+argument to <code>substring()</code>. If the period ('.')
+character is the last character of the string, then <code>dot + 1</code> is equal to
+the length of the string which is one larger than the largest index into the string
+(because indices start at 0). However, <code>substring()</code> accepts an index
+equal to (but not greater than) the length of the string and interpret
+it to mean "the end of the string".
+<p>
+<strong>Try this:</strong> Inspect the other methods in the Filename class and
+notice how the <code>lastIndexOf()</code> and <code>substring()</code> methods
+work together to isolate different parts of a filename.
+
+<p>
+While the methods in the example above uses only one version of the <code>lastIndexOf()</code>
+method, the String class actually supports four different versions of both the
+<code>indexOf()</code> and <code>lastIndexOf()</code> methods which
+<ul>
+<li>
+returns the index of the first (last) occurrence of the specified character
+<li>
+returns the index of the first (last) occurrence of the specified character,
+searching forward (backward) from the specified index
+<li>
+returns the index of the first (last) occurrence of the specified String.
+<li>
+returns the index of the first (last) occurrence of the specified String,
+searching forward (backward) from the specified index
+</ul>
+</blockquote>
+
+<h4>For the StringBuffer Class</h4>
+<blockquote>
+Like String, StringBuffer provides <code>length()</code> and <code>charAt()</code>
+accessor methods. In addition to these two accessors, StringBuffer also has
+a method: <code>capacity()</code>. The <code>capacity()</code> method differs
+from <code>length()</code> in that it returns the amount of space currently
+allocated for the StringBuffer, rather than the amount of space used.
+For example, the capacity of the StringBuffer in the <code>reverseIt()</code> method
+shown here
+<blockquote>
+<pre>
+class ReverseString {
+    public static String reverseIt(String source) {
+	int i, len = source.length();
+	StringBuffer dest = new StringBuffer(len);
+
+	for (i = (len - 1); i &gt;= 0; i--) {
+	    dest.append(source.charAt(i));
+	}
+	return dest.toString();
+    }
+}
+</pre>
+</blockquote>
+never changes, while the length of the StringBuffer increases by one for each
+iteration of the loop.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="accessors.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="modifying.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

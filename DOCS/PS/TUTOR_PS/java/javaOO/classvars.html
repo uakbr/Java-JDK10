@@ -1,0 +1,128 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Declaring a Class Variable</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="accesscontrol.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="constants.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Declaring a Class Variable
+</h2>
+<p>
+<blockquote>
+
+By default, when you declare a variable within a class that variable
+is an <em>instance variable</em>. Every time you instantiate a new object
+from the class, you get a new copy of each instance variable of that
+class, and that copy is associated with the new object.
+For example, the class defined below has one instance variable,
+an integer named x.
+<blockquote>
+<pre>
+class AnIntegerNamedX {
+    int x;
+}
+</pre>
+</blockquote>
+Every time you instantiate AnIntegerNamedX, you create an instance
+of AnIntegerNamedX and each instance of AnIntegerNamedX gets its own
+copy of <code>x</code>. To access a particular <code>x</code>, you
+must access it through the object with which it is associated (either
+directly, if you have access, or through the instance's methods).
+There is no other way to access <code>x</code> except through the 
+instance. 
+<p>
+This code snippet creates two different objects of type AnIntegerNamedX,
+sets their <code>x</code> values to different values, <a name=snippet>then prints
+out the values.</a>
+<blockquote>
+<pre>
+. . .
+AnIntegerNamedX myX = new AnIntegerNamedX();
+AnIntegerNamedX anotherX = new AnIntegerNamedX();
+myX.x = 1;
+anotherX.x = 2;
+System.out.println("myX.x = " + myX.x);
+System.out.println("anotherX.x = " + anotherX.x);
+. . .
+</pre>
+</blockquote>
+The output produced by this code snippet is
+<blockquote>
+<pre>
+myX.x = 1
+anotherX.x = 2
+</pre>
+</blockquote>
+illustrating that each instance of the class AnIntegerNamedX has its
+own copy of the instance variable <code>x</code>.
+<p>
+However, when declaring a variable, you can specify that variable to
+be a <em>class variable</em> rather than an instance variable. The
+system creates a single copy of a class variable the first time it
+encounters the class in which the variable is defined. All instances
+of that class share the same class variable.
+<p>
+To specify that a variable is a class variable, use the keyword
+<code>static</code>. For example, let's change the AnIntegerNamedX
+class such that its <code>x</code> variable is now a class variable
+<blockquote>
+<pre>
+class AnIntegerNamedX {
+    static int x;
+}
+</pre>
+</blockquote>
+Now the exact same code snippet <a href=#snippet>from before</a> that
+creates two instances of AnIntegerNamedX, sets their <code>x</code> values,
+and then prints the <code>x</code> values produces this, different, output.
+<blockquote>
+<pre>
+myX.x = 2
+anotherX.x = 2
+</pre>
+</blockquote>
+That's because now that <code>x</code> is a class variable there is only
+one copy of the variable and it is shared by all instances of AnIntegerNamedX
+including <code>myX</code> and <code>anotherX</code>.
+<p>
+You use class variables for items that you need only one copy of and which must
+be accessible by all objects inheriting from the class in which the variable
+is declared. For example, class variables are often used to define constants
+(this is more memory efficient as constants can't change so you really only
+need one copy).
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="accesscontrol.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="constants.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

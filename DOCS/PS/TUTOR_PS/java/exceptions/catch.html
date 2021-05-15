@@ -1,0 +1,220 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The catch Block(s)</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="try.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="finally.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The catch Block(s)
+</h2>
+<p>
+<blockquote>
+
+As you learned on the <a href="try.html">previous page</a>,
+the <code>try</code> statement defines the scope of its
+associated exception handlers.
+You associate exception handlers with a <code>try</code> statement by
+providing one or more sequential <code>catch</code> blocks directly
+after the <code>try</code> block.
+<blockquote>
+<pre>
+try {
+    . . . 
+} catch ( . . . ) {
+    . . . 
+} catch ( . . . ) {
+    . . . 
+} . . . 
+</pre>
+</blockquote>
+There can be no intervening code between the end of the <code>try</code>
+statement and the beginning of the first <code>catch</code> statement.
+The general form of Java's <code>catch</code> statement is:
+<blockquote>
+<pre>
+catch (<em>SomeThrowableClassName</em> <em>variableName</em>) {
+    <em>Java statements</em>
+}
+</pre>
+</blockquote>
+As you can see, the <code>catch</code> statement requires a single formal
+argument. The argument to the <code>catch</code> statement looks like an
+argument declaration for a method. The argument type, <em>SomeThrowableClassName</em>,
+declares the type of exception that the handler can handle and must be the name
+of a class that inherits from the
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.Throwable.html">Throwable</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.Throwable.html"><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+class defined in the
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html">java.lang</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html"><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+package. (When Java programs throw an exception they are really just throwing
+an object, and only objects that derive from Throwable can be thrown. You'll
+learn more about throwing exceptions in <a href=throwing.html>How to Throw Exceptions</a>.)
+
+<p>
+<em>variableName</em> is the name by which the handler can refer to the
+exception caught by the handler. For example, the exception handlers for
+the <code>writeList()</code> method (shown below) each call the exception's
+<code>getMessage()</code> method using the exception's declared name
+<code>e</code>:
+<blockquote>
+<pre>
+e.getMessage()
+</pre>
+</blockquote>
+You access the instance variables and methods of exceptions in the same manner
+that you access the instance variables and methods of other objects.
+<code>getMessage()</code> is a method provided by the Throwable class
+that prints additional information about the error that occurred. 
+The Throwable class also implements two methods for filling in and printing
+the contents of the execution stack when the exception occurred.
+Subclasses of Throwable can add other methods or instance variables.
+To find out what methods an exception implements check its class and
+superclass definitions.
+
+<p>
+The <code>catch</code> statement governs a series of legal Java statements.
+These statements are executed when and if the exception handler is invoked.
+The runtime system invokes the exception handler when an exception whose type
+matches that of the <code>catch</code> statement's argument is thrown within
+the handler's <code>try</code> block.
+
+<p>
+The <code>writeList()</code> method from the
+<a href=example/ListOfNumbersWOHandler.java>ListOfNumbers</a>
+class uses two exception handlers for its <code>try</code> statement--one
+handler for each of the two different types of exceptions that can
+be thrown within the <code>try</code> block--ArrayIndexOutOfBoundsException
+and IOException.
+<blockquote>
+<pre>
+try {
+    . . . 
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.err.println("Caught ArrayIndexOutOfBoundsException: " + e.getMessage());
+} catch (IOException e) {
+    System.err.println("Caught IOException: " + e.getMessage());
+}
+</pre>
+</blockquote>
+<a name=IOException>An IOException Occurs</a>
+Let's suppose that the FileOutputStream constructor fails and throws an
+IOException. The runtime system immediately takes over and tries to locate
+an appropriate exception handler. The runtime system begins its search at
+the top of the method call stack. When the exception occurred, the FileOutputStream
+constructor was at the top of the call stack. However, the FileOutputStream
+constructor doesn't have an appropriate exception handler so the runtime system
+checks the next method in the method call stack--the <code>writeList()</code>
+method. The <code>writeList()</code> method has two exception handlers:
+one for ArrayIndexOutOfBoundsException and one for IOException.
+<p>
+The runtime system checks <code>writeList</code>'s handlers in the order that
+they appear following the <code>try</code> statement. (So, the order that you
+write your exception handlers matters!)
+The argument to the first exception handler is ArrayIndexOutOfBoundsException,
+but the exception that was thrown is an IOException. An IOException cannot legally
+be assigned to an ArrayIndexOutOfBoundsException, so the runtime system continues
+its search for an appropriate exception handler.
+<p>
+The argument to <code>writeList()</code>'s second exception handler is an
+IOException. The exception thrown by the FileOutputStream constructor
+is also an IOException and so it can legally be assigned to the handler's IOException
+argument. Thus, this handler is deemed appropriate and the runtime system
+executes this handler which prints this statement:
+<blockquote>
+<pre>
+Caught IOException: OutFile.txt
+</pre>
+</blockquote>
+The runtime system goes through a similar process if an
+ArrayIndexOutOfBoundsException occurs. For more details,
+<a href=putItTogether.html>Putting It All Together</a>
+walks through the <code>writeList()</code> method after it's been
+completed (there's one more step) and investigates what happens
+during the three possible scenarios that this code presents:
+the code runs successfully, an IOException occurs, or an
+ArrayIndexOutOfBoundsException occurs.
+
+<h4>Catching Multiple Exception Types with One Handler</h4>
+<blockquote>
+The two exception handlers used by the <code>writeList()</code> method
+are very specialized; they handle only one type of exception. The Java
+language allows you to write general exception handlers that handle
+multiple types of exceptions.
+<p>
+As you know, Java exceptions are Throwable objects (they are instances
+of Throwable or a subclass of Throwable). The Java packages contain
+numerous classes that derive from Throwable and thus, build a hierarchy
+of Throwable classes.
+<p>
+<img src="images/throwableHierarchy.trans.gif" width=495 height=258>
+<p>
+Your exception handler can be written to handle any class that inherits
+from Throwable. If you write a handler for a "leaf" class (a class with
+no subclasses), you've written a specialized handler: it will only handle
+exceptions of that specific type. If you write a handler for a "node" class
+(a class with subclasses), you've written a general handler: it will handle
+any exception whose type is the node class or any of its subclasses.
+<p>
+Let's modify the <code>writeList()</code> method once again. Only this
+time, let's write it so that it handles both IOExceptions and ArrayIndexOutOfBoundsExceptions.
+The closest common ancester of IOException and ArrayIndexOutOfBoundsException
+is the Exception class. Thus an exception handler that would handle both
+types of exceptions would look like this:
+<blockquote>
+<pre>
+try {
+    . . .
+} catch (Exception e) {
+    System.err.println("Exception caught: " + e.getMessage());
+}
+</pre>
+</blockquote>
+The Exception class is pretty high in the Throwable class hierarchy. So in
+addition to the IOException and ArrayIndexOutOfBoundsException types that
+this exception handler is intended to catch, it will also catch numerous
+other types. Generally speaking, your exception handlers should be more
+specialized than this one. Handlers that can catch most or all exceptions
+are typically useless for error recovery because the handler has to determine
+what type of exception occurred anyway (to determine the best recovery
+strategy). Also exception handlers that are too general can make code
+<em>more</em> error prone by catching and handling exceptions that weren't
+anticipated by the programmer and for which the handler was not intended.
+
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="try.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="finally.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Modify your Library Path</title>
+</head>
+<body>
+<a href="step7.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous"></a>
+<p>
+<hr size=4>
+
+<h2>
+    Modify your Library Path
+</h2>
+<p>
+<blockquote>
+
+<dl>
+
+<dt><strong>UNIX</strong>
+<dd>
+<pre>
+% <strong>setenv LD_LIBRARY_PATH <em>mylibrarypath</em>:${LD_LIBRARY_PATH}</strong>
+</pre>
+where <em>mylibrarypath</em> is the directory name that contains <code>libhello.so</code>.
+
+<dt><strong>DOS shell (Windows 95/NT)</strong>
+<dd>
+On Windows 95/NT, the <code>loadLibrary()</code> method searches the <code>PATH</code>
+environment variable for DLL libraries. In addition, <code>loadLibrary()</code> also
+searches the directory where the executables lives.
+</dl>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<a href="step7.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous"></a>
+</body>
+</html>

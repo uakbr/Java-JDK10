@@ -1,0 +1,170 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The String and StringBuffer Classes</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../nutsandbolts/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="whytwo.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     The String and StringBuffer Classes
+</h1>
+<p>
+<blockquote>
+
+The <code>reverseIt()</code> method in the following class uses both
+the String and StringBuffer classes to reverse the characters
+of a string. If you have a list of words, you can use this method in
+conjunction with a sort program to create a list of rhyming words (at least
+a list of words with the same ending syllables). Just
+reverse all the strings in the list, sort the list, and reverse
+the strings again.
+<blockquote>
+<pre>
+class ReverseString {
+    public static String reverseIt(String source) {
+	int i, len = source.length();
+	StringBuffer dest = new StringBuffer(len);
+
+	for (i = (len - 1); i &gt;= 0; i--) {
+	    dest.append(source.charAt(i));
+	}
+	return dest.toString();
+    }
+}
+</pre>
+</blockquote>
+The <code>reverseIt()</code> method accepts an argument of type String
+called <code>source</code> which contains the string data to be reversed.
+The method creates a StringBuffer, <code>dest</code>, the same size as
+<code>source</code>, then loops backwards over all the
+characters in <code>source</code> and appends them to <code>dest</code>
+thereby reversing the string.
+Finally, the method converts <code>dest</code>, a StringBuffer, to a String.
+<p>
+In addition to highlighting the differences between Strings and StringBuffers,
+this lesson illustrates several features of the String and StringBuffer classes:
+creating Strings and StringBuffers, using accessor methods to get information
+about a String or StringBuffer, modifying a StringBuffer, and converting one
+type of string to another.
+
+<h4><a href=whytwo.html>Why Two String Classes?</a>
+</h4>
+<blockquote>
+The Java development environment provides two classes
+that store and manipulate character data:
+<em>String</em>, for constant strings, and <em>StringBuffer</em>,
+for mutable strings.
+</blockquote>
+
+<h4><a href=creating.html>Creating Strings and StringBuffers</a>
+</h4>
+<blockquote>
+This line from the method above
+<blockquote>
+<pre>
+StringBuffer dest = new StringBuffer(len);
+</pre>
+</blockquote>
+creates a new StringBuffer in three steps: declaration, instantiation,
+and initialization. These are the same steps for creating
+an object of any type.
+</blockquote>
+
+<h4><a href=accessors.html>Accessor Methods</a>
+</h4>
+<blockquote>
+The <code>reverseIt()</code> method uses two <em>accessor methods</em> to
+obtain information about <code>source</code>: <code>charAt()</code> and <code>length()</code>.
+Both String and StringBuffer provide a number of other accessor methods,
+including some for inspecting substrings and getting the positions of a specific character.
+</blockquote>
+
+<h4><a href=modifying.html>Modifying StringBuffers</a>
+</h4>
+<blockquote>
+The <code>reverseIt()</code> method uses StringBuffer's <code>append()</code>
+method to add characters to <code>dest</code>. In addition to <code>append()</code>,
+StringBuffer provides methods to insert characters into the buffer or
+modify a character at a specific location within the buffer, among others.
+</blockquote>
+
+<h4><a href=conversion.html>Converting Objects to Strings</a>
+</h4>
+<blockquote>
+<code>reverseIt()</code> converts the resulting StringBuffer
+to a String and returns the string. You can convert several different data types
+to Strings using String's <code>valueOf()</code> method.
+</blockquote>
+
+<h4><a href=andback.html>Converting Strings to Numbers</a>
+</h4>
+<blockquote>
+You can also use methods from the Integer, Float, Double, and Long classes
+to convert the contents of a String to a number.
+</blockquote>
+
+<h4>Other Interesting Features
+</h4>
+<blockquote>
+String and StringBuffer provide several other useful ways to manipulate
+string data, including concatenation, comparison, substitution, and converting to
+upper and lower case.
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html>java.lang.String</a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+and
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.StringBuffer.html>java.lang.StringBuffer</a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.StringBuffer.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+summarize and list all of the methods and variables supported by these two classes.
+</blockquote>
+
+<h4><a href=stringsAndJavac.html>Strings and the Java Compiler</a>
+</h4>
+<blockquote>
+Before moving on to another lesson, you need to understand one final,
+important peculiarity about Strings and StringBuffers. The Java compiler
+uses Strings and StringBuffers behind the scenes to handle literal strings
+and concatenation.
+</blockquote>
+
+<hr>
+<strong>Note to C and C++ Programmers:</strong> Java strings are first-class objects;
+whereas C and C++ strings are simply null-terminated arrays of characters.
+For more information see
+<a href=../../noMoreC/strings.html>Java Strings are First-Class Objects</a>
+<a href=../../noMoreC/strings.html><img src=../../images/noCIcon.gif width=20 height=20 border=0></a>.
+<hr>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../nutsandbolts/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="whytwo.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

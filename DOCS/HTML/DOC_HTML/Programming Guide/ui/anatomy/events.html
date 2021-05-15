@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>Event Handling</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="hierarchy.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="drawing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Event Handling
+</h2>
+<p>
+<blockquote>
+
+When the user acts on a Component -- 
+clicking it or pressing the Return key, for example --
+an Event object is created.
+The AWT event-handling system
+passes the Event up the Component hierarchy
+until one of the Components handles it.
+<p>
+
+
+It's possible for more than one Component
+to handle a single event.
+For example, in the example program
+when the user presses Return in a text field,
+the associated TextField object partially handles
+the event
+(setting the TextField value??).
+It then allows the TextField's Container
+to see the event.
+The Container reacts to the event by
+updating the slider below the text field.
+The Container then tells the event-handling system
+that the event has been completely handled --
+that its own Container
+(a ConversionPanel)
+shouldn't be passed the event.
+<p>
+
+<h4>The Event Object</h4>
+
+Each event results in the creation of an
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Event.html>Event</a> object.
+Each Event object includes the following information:
+<ul>
+<li> The type of the event -- for example,
+     a key press or mouse click, 
+     or a more abstract event such as an "action" or window iconification.
+     
+<li> The object that was the "target" of the event -- for example,
+     the Button corresponding to the onscreen button the user clicked,
+     or the TextField corresponding to the field that user just typed in.
+
+<li> A timestamp indicating when the event occurred.
+
+<li> The location (x,y) where the event occurred.
+
+<li> The key that was pressed (for keyboard events).
+
+<li> An arbitrary argument (such as the string displayed on the Component)
+     associated with the Event.
+
+<li> The state of the modifier keys when the event occurred.
+</ul>
+
+<h4>How to Implement an Event Handler</h4>
+Components can respond to events by implementing the
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#handleEvent(java.awt.Event)>handleEvent()</a>
+method or by
+implementing a method that's
+specific to one type of event.
+The latter works because the default (Component)
+definition of the handleEvent() method
+simply calls a method that's specific to the event type.
+These event-specific methods are
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#mouseEnter>mouseEnter()</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#mouseExit>mouseExit()</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#mouseMove>mouseMove()</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#mouseUp>mouseUp()</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#mouseDown>mouseDown()</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#mouseDrag>mouseDrag()</a>,
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#keyDown>keyDown()</a>, and
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html#action>action()</a>.
+<p>
+
+In the example program,
+all the event handling is performed by ConversionPanels.
+They use the handleEvent() method 
+to catch events resulting from user actions
+on the slider (Scrollbar),
+text field (TextField),
+and pop-up list (Choice).
+<p>
+
+Here is the ConversionPanel implementation of the handleEvent method:
+<blockquote>
+<pre>
+public boolean handleEvent(Event e) {
+    if (e.target instanceof Scrollbar) {
+        textField.setText(String.valueOf(slider.getValue()));
+        controller.convert(this);
+        return true;
+    } else if (e.target instanceof TextField) {
+        setSliderValue(getValue());
+        controller.convert(this);
+        return true;
+    } else if (e.target instanceof Choice) {
+        controller.convert(this);
+        return true;
+    }
+    return false;
+}
+</pre>
+</blockquote>
+
+The method simply makes sure
+that the ConversionPanel's slider and text field both show the same value,
+and then asks the Converter object to update the other ConversionPanel.
+If the event target isn't a Scrolbar, TextField, or Choice,
+the method returns false, 
+indicating that it couldn't handle the event 
+and that the event should be passed up the Component hierarchy.
+Otherwise, the method returns true,
+indicating that the event has been completely handled.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="hierarchy.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="drawing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

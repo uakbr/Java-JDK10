@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Threads in Applets: Example</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="threads.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../finishing/notes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Threads in Applets: Example
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+
+<strong>
+Note:
+</strong>
+If you've already looked at this page,
+reload it to see the example again.
+<p>
+
+<strong>
+Another note:
+</strong>
+This example was designed for the 1.0 Alpha 3 HotJava browser
+with immediate applet loading.
+It might not make sense when viewed any other way.
+You can't predict the thread architecture of every browser -- 
+one might spin off a separate thread for every applet, 
+while another might use fewer threads than the HotJava browser uses.
+The safest thing to do is to follow this rule:
+<strong>
+Create a separate thread to perform any lengthy operation.
+</strong>
+<p>
+
+The following applet (named Good)
+has a computation-intensive beginning sequence,
+implemented as a loop that occasionally prints status.
+The Good applet does the right thing:
+Instead of putting the loop
+in the <code>init()</code> or <code>start()</code> method,
+it spins off a thread to do the computation.
+(Here's the <a href="classes/Good.java">source code</a>.)
+Notice how relatively quickly the browser
+can display the applet and the text after it.
+<p>
+<applet code="Good.class" codebase=betaclasses width=500 height=20>
+<app class=Good>
+</applet>
+<p>
+
+The next applet (named Bad) does the same things as Good,
+but at the wrong time:
+It performs its computation
+in its <code>init()</code> method.
+(Here's the <a href="classes/Bad.java">source code</a>.)
+You can watch the applet's progress
+by reading the status line at the bottom of this window.
+Notice how the applet and the text that follows it
+don't appear for quite a while,
+since the formatting thread 
+is stuck executing the applet's <code>init()</code> method.
+<p>
+<applet code="Bad.class" codebase=betaclasses width=500 height=20>
+<app class=Bad>
+</applet>
+<p>
+Worse yet, the Bad applet starves the Good one.
+Because the Good applet's <code>start()</code> method
+doesn't get called until Bad's <code>init()</code> method has returned,
+the Good applet doesn't get a chance to create its thread
+(much less run it)
+until the Bad applet is finished.
+<p>
+
+<!--Try this-->
+
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="threads.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../finishing/notes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

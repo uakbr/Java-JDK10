@@ -1,0 +1,23 @@
+
+Hi,
+
+For better instructions on how to use the AppletViewer class
+check out:
+
+	http://java.sun.com/people/avh/appletviewer.html
+
+Examples:
+
+	java AppletViewer doc:/demo/ class=AudioItem snd=audio/spacemusic.au
+
+	java AppletViewer http://java.sun.com/people/avh/ \
+	     class=DateItem translator=EnglishTime speaker=avh \
+	     width=150 height=35
+
+The code was last updated on the 5th of July 1995. Among other things
+this fixes a problem with mouseMove and mouseDrag events. There is a known
+bug with regard to resize() in the alpha2 and alph3 releases of HotJava. 
+
+Have fun,
+
+	Arthur van Hoff

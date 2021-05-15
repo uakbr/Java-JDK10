@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>Conventions for Command Line Arguments</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="space.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="parsing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Command Line Arguments</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Conventions for Command Line Arguments
+</h2>
+<p>
+<blockquote>
+
+The Java language follows UNIX conventions that define three different types of
+command line arguments:
+<ul>
+<li>
+<a href=#wordarguments>word arguments</a> (also known as options)
+<li>
+<a href=#argumentarguments>arguments that require arguments</a>
+<li>
+<a href=#flags>flags</a>
+</ul>
+
+In addition, your application should observe the following conventions
+that apply to Java command line arguments.
+<ul>
+<li>
+The dash character ( - ) precedes options, flags or series of flags.
+<li>
+Arguments can be given in any order, except where an argument requires
+another argument.
+<li>
+Flags can be listed in any order and/or separately: <code>-xn</code> <em>or</em>
+<code>-nx</code> <em>or</em> <code>-x -n</code>.
+<li>
+Filenames typically come last.
+<li>
+The program prints a usage error when a command line argument is unrecognized.
+Usages statements usually take the form:
+<pre>
+usage: <em>application_name</em> [ optional_args ] required_args
+</pre>
+</ul>
+
+<a name=wordarguments>
+<h4>Word Arguments</h4>
+</a>
+<blockquote>
+Arguments, such as <code>-verbose</code>, are <em>word arguments</em>
+and must be specified in their entirety on the command line. For example,
+<code>-ver</code> would <strong>not</strong> match <code>-verbose</code>.
+<p>
+You can use a statement such as the following to check for word arguments.
+<blockquote>
+<pre>
+if (argument.equals("-verbose"))
+    vflag = true;
+</pre>
+</blockquote>
+The statement checks for the word argument <code>-verbose</code>
+and sets a flag within the program indicating that the program
+should run in verbose mode.
+</blockquote>
+
+<a name=argumentarguments>
+<h4>Arguments that Require Arguments</h4>
+</a>
+<blockquote>
+Some arguments require more information. For example, a command line argument
+such as <code>-output</code> might allow the user to redirect the output of the
+program. However, the <code>-output</code> option alone does not provide enough
+information to the application: how does the application know where to redirect
+its output? Thus, the user must also specify a filename. Typically, the next item on the
+command line provides the additional information for command line arguments
+that require it. You can use a statement such as the following to parse arguments
+that require arguments.
+<blockquote>
+<pre>
+if (argument.equals("-output")) {
+    if (nextarg &lt; args.length)
+        outputfile = args[nextarg++];
+    else
+        System.err.println("-output requires a filename");
+}
+</pre>
+</blockquote>
+Notice that the code snippet checks to make sure that the
+user actually specified a next argument before trying to use it.
+</blockquote>
+ 
+<a name=flags>
+<h4>Flags</h4>
+</a>
+<blockquote>
+Flags are single character codes that modify the behaviour of the
+program in some way. For example, the <code>-t</code> flag provided
+to UNIX's <code>ls</code> command indicates that the output should
+be sorted by time stamp. Most applications allow users to specify
+flags separately in any order:
+<blockquote>
+<pre>
+-x -n     <em>or</em>    -n -x
+</pre>
+</blockquote>
+In addition, to make life easier for users, applications should
+also allow users to concatenate flags and specify them in any order:
+<blockquote>
+<pre>
+-nx    <em>or</em>    -xn
+</pre>
+</blockquote>
+The sample program described on the <a href="parsing.html">next page</a>
+implements a simple algorithm to process flag arguments
+that can be specified in any order and/or separately.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="space.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="parsing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Command Line Arguments</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

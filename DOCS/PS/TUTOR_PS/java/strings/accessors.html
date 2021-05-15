@@ -1,0 +1,117 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Accessor Methods</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="creating.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="moreaccessors.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Accessor Methods
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class ReverseString {
+    public static String reverseIt(String source) {
+	int i, len = <strong>source.length()</strong>;
+	StringBuffer dest = new StringBuffer(len);
+
+	for (i = (len - 1); i >= 0; i--) {
+	    dest.append(<strong>source.charAt(i)</strong>);
+	}
+	return dest.toString();
+    }
+}
+</pre>
+</blockquote>
+An object's instance variables are encapsulated within the object,
+hidden inside, safe from inspection or manipulation by other objects. With certain
+well-defined exceptions, the object's methods are the only means
+by which other objects can inspect or alter an object's instance variables.
+Encapsulation of an object's data protects the object from
+corruption by other objects and conceals an object's implementation
+details from outsiders.
+This encapsulation of data behind an object's methods is one of the
+cornerstones of object-oriented programming.
+<p>
+Methods used to obtain information about an object are known as
+<em>accessor methods</em>.
+The <code>reverseIt()</code> method uses two of String's
+accessor methods to obtain information about the <code>source</code> string.
+<p>
+First, <code>reverseIt()</code> uses String's
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html#length()><code>length()</code></a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html#length()><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+accessor method to obtain the length of the String <code>source</code>.
+<blockquote>
+<pre>
+int len = source.length();
+</pre>
+</blockquote>
+Note that <code>reverseIt()</code> doesn't care if String maintains its
+length attribute as an integer, as a floating point number, or even if String
+computes its length on the fly. <code>reverseIt()</code> simply relies on the
+public interface of the <code>length()</code> method which returns the length
+of the String as an integer. That's all <code>reverseIt()</code> needs
+to know.
+<p>
+Second, <code>reverseIt()</code> uses the
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html#charAt(int)><code>charAt()</code></a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.String.html#charAt(int)><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+accessor which returns the character at the position specified in the parameter.
+<blockquote>
+<pre>
+source.charAt(i)
+</pre>
+</blockquote>
+The character returned by <code>charAt()</code> is then appended to the
+StringBuffer <code>dest</code>. Since the loop variable <code>i</code>
+begins at the end of <code>source</code> and proceeds backwards over
+the string, the characters are appended in reverse order to the StringBuffer,
+thereby reversing the string.
+
+<h4><a href=moreaccessors.html>More Accessor Methods</a>
+</h4>
+<blockquote>
+In addition to <code>length()</code> and <code>charAt()</code>, String
+supports a number of other accessor methods that provide access
+to substrings and the indices of specific characters in the String. 
+StringBuffer has its own set of similar accessor methods.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="creating.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="moreaccessors.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

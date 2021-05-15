@@ -1,0 +1,155 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Your First Encounter with Java Exceptions</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="definition.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="catchOrDeclare.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Your First Encounter with Java Exceptions
+</h2>
+<p>
+<blockquote>
+
+This error message
+<blockquote>
+<pre>
+InputFile.java:8: Warning: Exception java.io.FileNotFoundException must be caught, or it must be declared in throws clause of this method.
+	fis = new FileInputStream(filename);
+	      ^
+</pre>
+</blockquote>
+is one of two similar error messages you will see if you try to compile
+this class, <a href=example/InputFile.java>InputFile</a>,
+because the InputFile class contains calls to methods
+that will throw exceptions when an error occurs.
+The Java language requires that methods either <em>catch</em> or
+<em>declare</em> all non-runtime exceptions that can be thrown within the scope
+of that method (details about what this actually means are covered on the next page,
+<a href=#catchdeclare>Java's Catch or Declare Requirement</a>). If
+the compiler detects a method, such as those in InputFile, that don't
+meet this requirement, it issues an error message like the one shown
+above and refuses to compile the program.
+<p>
+Let's look at InputFile in more detail and see what's going on.
+<p>
+The InputFile class wraps a FileInputStream and provides a method,
+<code>getLine()</code>, for reading a line from the current position in
+the input stream.
+<blockquote>
+<pre>
+import java.io.*;
+
+class InputFile {
+
+    FileInputStream fis;
+
+    InputFile(String filename) {
+<strong>        fis = new FileInputStream(filename);</strong>
+    }
+
+    String getLine() {
+        int c;
+        StringBuffer buf = new StringBuffer();
+
+        while ((c = fis.read()) != -1) {
+            if (c == '\n') {
+                return buf.toString();
+            } else
+                buf.append((char)c);
+        }
+        return null;
+    }
+}
+</pre>
+</blockquote>
+The compiler prints the first error message because of the bold line in the above
+code listing. The bold line creates a new FileInputStream object and uses it to open
+a file (whose name is passed into the FileInputStream constructor).
+
+<p>
+So, what should the FileInputStream do if the named file does not exist on
+the filesystem? Well, that depends on what the program using the FileInputStream wants
+to do.
+The implementers of FileInputStream have no idea what the InputFile class wants
+to do if the file does not exist. Should the FileInputStream kill the program?
+Should it try an alternate filename? Should it just create a file of the indicated
+name? There's no possible way the FileInputStream implementers could choose a
+solution that would suit every user of FileInputStream. So, they punted, or rather,
+threw, an exception. That is, if the file named in the argument to the FileInputStream
+constructor does not exist on the filesystem, the constructor throws a
+java.io.FileNotFoundException. By throwing an exception, FileInputStream allows
+the calling method to handle the error in whatever way is most appropriate for it.
+
+<p>
+As you can see from the code, the InputFile class completely
+ignores the fact that the FileInputStream constructor can throw an exception.
+However, as stated previously, the Java language requires that methods either catch or
+declare all non-runtime exceptions that can be thrown within the scope
+of that method.
+Because the InputFile class does neither, the compiler prints an error message to
+that effect when it encounters the call to the FileInputStream constructor and
+refuses to compile the class.
+
+<p>
+In addition to the first error message shown above, you will also see this similar
+error message when you compile the InputFile class:
+<blockquote>
+<pre>
+InputFile.java:15: Warning: Exception java.io.IOException must be caught, or it must be declared in throws clause of this method.
+	while ((c = fis.read()) != -1) {
+	                    ^
+</pre>
+</blockquote>
+The InputFile class's <code>getLine()</code> method reads from the FileInputStream
+that was opened in InputFile's constructor. The FileInputStream <code>read()</code>
+method throws a java.io.IOException if for some reason it can't read from the file.
+Again, the InputFile class makes no attempt to catch or declare this exception.
+Thus you see the second error message.
+
+<p>
+At this point, you have two options, you can either arrange to catch the exceptions
+within the appropriate methods in the InputFile class, or the InputFile methods can "duck"
+and allow another method further up the call stack to catch them. Either way, the
+InputFile methods must do something, either catch or declare the exceptions, before
+the InputFile class can be compiled.
+<p>
+The next page describes in further detail <a href="catchOrDeclare.html">Java's 
+Catch or Declare Requirement</a>. The subsequent pages show you how to comply to
+the requirement.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="definition.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="catchOrDeclare.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

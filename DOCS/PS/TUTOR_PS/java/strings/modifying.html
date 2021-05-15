@@ -1,0 +1,114 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Modifying StringBuffers</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="moreaccessors.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="conversion.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Modifying StringBuffers
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class ReverseString {
+    public static String reverseIt(String source) {
+	int i, len = source.length();
+	StringBuffer dest = new StringBuffer(len);
+
+	for (i = (len - 1); i >= 0; i--) {
+	    <strong>dest.append(source.charAt(i));</strong>
+	}
+	return dest.toString();
+    }
+}
+</pre>
+</blockquote>
+The <code>reverseIt</code> method uses StringBuffer's <code>append()</code> method to
+add a character to the end of the destination string: <code>dest</code>.
+If the appended character causes the size of the StringBuffer to grow
+beyond its current capacity, the StringBuffer allocates more memory.
+Because memory allocation is a relatively expensive operation, you can make
+your code more efficient by minimizing the number of times memory
+must be allocated for a StringBuffer by initializing its capacity to a reasonable first guess.
+For example, the <code>reverseIt</code> method constructs the StringBuffer with an
+initial capacity equal to the length of the source string ensuring
+only one memory allocation for <code>dest</code>.
+<p>
+Using <code>append()</code> to add a character to the end of a StringBuffer
+is only one of StringBuffer's methods that allow you to append data to the end
+of a StringBuffer. There are several <code>append()</code> methods that append
+data of various types, such as float, int, boolean, and even Object,
+to the end of the StringBuffer. The data is converted to a string
+before the append takes place.
+
+<h4>Insertion</h4>
+<blockquote>
+At times, you may want to insert data into the middle of a StringBuffer.
+You do this with one of StringBufffer's <code>insert()</code> methods.
+This example illustrates how you would insert a string into a StringBuffer.
+<blockquote>
+<pre>
+StringBuffer sb = new StringBuffer("Drink Java!");
+sb.insert(6, "Hot ");
+System.out.println(sb.toString());
+</pre>
+</blockquote>
+This code snippet prints
+<blockquote>
+<pre>
+Drink Hot Java!
+</pre>
+</blockquote>
+With StringBuffer's many <code>insert()</code>,
+you specify the index <em>before</em> which you want the data inserted.
+In the example, "<strong>Hot </strong>" needed to be inserted before the 'J'
+in "<strong>Java</strong>". Indices begin at 0, so the index for 'J' is 6.
+To insert data at the beginning of a StringBuffer use an index of 0.
+To add data at the end of a StringBuffer use an index equal to the current
+length of the StringBuffer or use <code>append()</code>.
+</blockquote>
+
+<h4>Set Character At</h4>
+<blockquote>
+Another useful StringBuffer modifier is <code>setCharAt()</code> which
+sets the character at a specific location in the StringBuffer.
+<code>setCharAt()</code> is useful when you want to reuse a StringBuffer.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="moreaccessors.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="conversion.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

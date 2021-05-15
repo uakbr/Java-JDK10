@@ -1,0 +1,826 @@
+%!
+%%Title: ui.components.html
+%%DocumentFonts: NewCenturySchlbk-Roman NewCenturySchlbk-Bold NewCenturySchlbk-Italic NewCenturySchlbk-BoldItalic Courier Courier-Bold Courier-Oblique Courier-BoldOblique
+%%Creator: html2ps 0.2 alpha, written by Jan Karrman, jan@tdb.uu.se
+%%EndComments
+save
+1000 dict begin
+/colorimage where {pop} {
+ /colorimage {
+  pop pop /Bp exch def /Gp exch def /Rp exch def
+  {/Re Rp def /Gr Gp def /Bl Bp def
+  0 1 Re length 1 sub {
+   /i exch def Gr i Re i get 0.299 mul Gr i get 0.587 mul add
+   Bl i get 0.114 mul add cvi put
+  } for Gr} image
+ } def
+} ifelse
+/D {def} def
+/t {true} D
+/f {false} D
+/RF {/NewCenturySchlbk-Roman} D
+/BF {/NewCenturySchlbk-Bold} D
+/IF {/NewCenturySchlbk-Italic} D
+/IB {/NewCenturySchlbk-BoldItalic} D
+/FF {/Courier} D
+/FB {/Courier-Bold} D
+/FI {/Courier-Oblique} D
+/FT {/Courier-BoldOblique} D
+/F 1 D
+/W {453 F div} D
+/LE {651 F div} D
+/PS 1 D
+/HS [19 17 15 13 12 11] D
+/HT [2 2 2 2 2 2] D
+/MK 7 D
+/NO t D
+/ZL f D
+/ZR f D
+/Zl () D
+/Zr () D
+/TU f D
+/AU t D
+/SN 0 D
+/LA {TU PM 1 eq and {W 56 F div add 0 translate}
+ {70 705 translate F dup scale} ie} D
+/FP 0 D
+/SG [0.80000000000000004441 1 1] D
+statusdict /setduplexmode known
+ {statusdict begin false setduplexmode end} if
+%-- End of variable part --
+/ie {ifelse} D
+/E {exch} D
+/M {moveto} D
+/S {show} D
+/R {rmoveto} D
+/L {lineto} D
+/RL {rlineto} D
+/CP {currentpoint} D
+/SW {stringwidth} D
+/GI {getinterval} D
+/PI {putinterval} D
+/U {gsave CP currentfont /FontInfo get /UnderlinePosition get
+ 0 E currentfont /FontMatrix get dtransform E pop add newpath M
+ dup SW RL stroke grestore} D
+/B {-10 3 R gsave CP newpath 2.5 0 360 arc closepath
+ UI 2 mod 0 eq {stroke} {fill} ie grestore 10 -3 R} D
+/NP {/PM PN SN sub 2 mod D PN SN gt TU not PM 0 eq or and {showpage} if
+ 0.6 setlinewidth LA /BP t D /PN PN 1 add D
+ /OF currentfont D RF findfont 10 scalefont setfont
+ /YO {LE neg 60 F div dup 40 gt {pop 40} if sub} D
+ NO {W 2 div YO M PN ST cvs S} if
+ ZL {0 YO M Zl S} if
+ ZR {W YO M Zr dup stringwidth pop neg 0 R S} if
+ OF setfont
+ XO SZ SL get neg M /CI 0 D} D
+/SF {/CS E D CS SZ SL 3 2 roll put /YI CS -1.2 mul D dup ST cvs C1 E join
+ ( NF ) join /C1 E D NF /BW ( ) SW pop D} D
+/NF {FL E get findfont CS scalefont setfont} D
+/FS {CF MK PF {1 or} if and or /CF E D FR SL CF put CF E SF} D
+/FL [RF FF BF FB IF FI IB FT] D
+/reencodeISO {
+dup dup findfont dup length dict begin
+{ 1 index /FID ne { def }{ pop pop } ie } forall
+/Encoding ISOLatin1Encoding D
+currentdict end definefont
+} D
+/ISOLatin1Encoding [
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quoteright
+/parenleft/parenright/asterisk/plus/comma/minus/period/slash
+/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon
+/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N
+/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright
+/asciicircum/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m
+/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright/asciitilde
+/.notdef/backslash/parenleft/parenright/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/dotlessi/grave/acute/circumflex/tilde/macron/breve
+/dotaccent/dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut
+/ogonek/caron/space/exclamdown/cent/sterling/currency/yen/brokenbar
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot
+/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute
+/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave
+/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex
+/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
+/yacute/thorn/ydieresis
+] D
+FL {reencodeISO D} forall
+
+/BS {/PC E D /TX E D /fin f D /CW 0 D /LK 0 D /SC 0 D
+ /RT TX D {RT ( ) search {/NW E D pop /RT E D /WH NW SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC /SC LK D /CW WH BW add D}
+ {/CW CW WH add BW add D} ie
+ /LK LK NW length add 1 add D} {pop exit} ie} loop
+ /fin t D /LC TX length D /WH RT SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC NL RT dup () ne {PC} {pop} ie}
+ {TX SC LC SC sub GI PC} ie} D
+
+/BT {RS dup dup () ne E ( ) ne and
+ {/LS LL D /LL W L1 sub XO sub D {/CI 0 D SH /BP f D fin not {NL} if
+  /HM t D /LL LS D} BS} {BG {pop} {SH /BP f D} ie} ie} D
+/BL {HM not {CP E pop XO E M} if} D
+/NL {BL W XO sub L1 sub TB {BW add} if AT mul 2 div YA neg dup 0 lt {3 sub} if
+ R F0 CF ne {F0 NF} if C1 cvx exec /C1 () D /L1 0 D /F0 CF D
+ BP not {0 YB NN neg R} if /YA 0 D /YB 0 D CP /YC E D pop XO YC M YC LE neg gt
+ {YI CI sub dup 0 lt BP not and {dup 0 E R CI add /CI E D} {pop} ie}
+ {NP} ie /T t D} D
+/RS {/TM E D /CN 0 D TM
+ {dup 9 eq E 10 eq or {TM CN ( ) PI} if
+  /CN CN 1 add D} forall /CN 0 D /BK HM EN and {0} {1} ie D TM
+ {dup 32 ne {TM CN 3 2 roll put /CN CN 1 add D /BK 0 D}
+ {pop BK 0 eq {TM CN 32 put /CN CN 1 add D} if /BK 1 D} ie}
+  forall TM 0 CN GI dup dup () ne E ( ) ne and
+  {dup CN 1 sub get 32 eq {/EN f D} {/EN t D} ie} if} D
+/join {2 copy length E length add string dup 4 2 roll 2 index 0 3 index
+ PI E length E PI} bind D
+/EG {dup 0 E dup () eq {E pop} {E get} ifelse 10 ne {(\n) E join} if} D
+/WR {PB {EG /PB f D} if PP {EG /PP f D} if (\n) search
+ {dup () ne BP not or {TR /CI 0 D /NC 0 D NL pop WR}{pop pop WR} ie} {TR} ie} D
+/TR {(\t) search {dup length /NC E NC add D SH MS 0 8 NC 8 mod sub dup
+ /NC E NC add D GI SH pop TR} {dup length /NC E NC add D SH} ie
+ /BP f D} D
+/SH {CP E pop LE neg lt {NP} if dup SW pop L1 add /L1 E D
+ C1 (\() join T not {( ) join} if E join (\)) join
+ AU AF and UF or {( U ) join} if ( S ) join /C1 E D /T t D /TB EN not D} D
+/BG {CP pop XO sub abs 0.01 lt} D
+/ON {AR AI NN get 1 add dup AR AI 3 -1 roll put ST cvs length dup ST E (. ) PI
+ ST 0 3 -1 roll 2 add GI dup SW pop neg 0 R S} D
+/SP {YI E /YI E D NL /YI E D} D
+/BR {BN} D
+/BN {PF {WR} {BT NL} ie /HM f D} D
+/AB {CH E 0 E put CH join WB} D
+/NN {dup 0 lt {pop 0} if} D
+/H  {1 sub /HL E D E BN /AT E D CP E pop LE neg WW add lt {NP} if
+ BH SP /SL SL 1 add D HS HL get HT HL get FS} D
+/EH {BN /AT 0 D AH SP /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/P  {E PF {WR /PP t D} {BN AE not {AH SP} if} ie /AT E D} D
+/HR {BN 0 CP E pop M gsave PF {0 YI R} if W 0 RL stroke grestore /CI 0 D
+ /BP f D NL} D
+/AD {BN /AE t D AH SP 4 11 SF} D
+/DA {BN /AE f D AH SP 0 11 SF} D
+/PR {BN /AT 0 D /CF 0 D 9 PS mul 1 FS /PF t D /PB t D /NC 0 D} D
+/PW {pop PR} D
+/RP {PF {dup () ne {dup dup length 1 sub get 10 ne {(\n) join} if} if
+ WR AH SP /CF 0 D 11 0 FS /PF f D} {BT} ie} D
+/SI {/XO AI LG add NN IN mul BC NN BI mul add D /LL W XO sub D} D
+/DT {BN /LG LG 1 sub D SI /LG LG 1 add D BL} D
+/DD {BN SI BL} D
+/DL {BN XO 0 eq {AH SP} if /LG LG 1 add D BL} D
+/LD {BN LG 0 gt {/LG LG 1 sub D} if SI XO 0 eq {AH SP} if BL} D
+/UL {BN XO 0 eq {AH SP} {NL} ie NR AI NN 0 put /UI UI 1 add D
+ /AI AI 1 add D SI BL} D
+/LU {BN /UI UI 1 sub D /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ie BL} D
+/OL {BN XO 0 eq {AH SP} {NL} ie NR AI NN 1 put /AI AI 1 add D SI BL} D
+/LO {BN AR AI NN 0 put /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ie BL} D
+/LI {BN /BP f D /CI 0 D CP E pop LE neg lt {NP} if
+ /C1 C1 NR AI 1 sub NN get 1 eq {( ON )} {( B )} ie join D BL} D
+/BQ {BN AH SP /BC BC 1 add D SI BL} D
+/QB {BN AH SP /BC BC 1 sub D SI BL} D
+/WB {PF {WR} {BT} ie} D
+/A  {WB /AF t D} D
+/EA {WB /AF f D} D
+/SS {SZ SL get /SL SL 1 add D} D
+/I  {WB SS 4 FS} D
+/BD {WB SS 2 FS} D
+/TT {WB SS 1 FS} D
+/KB {WB SS /CF 0 D 3 FS} D
+/CT {WB SS /CF 0 D 4 FS} D
+/SM {WB SS /CF 0 D 1 FS} D
+/ES {WB /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/UN {WB /UF t D} D
+/NU {WB /UF f D} D
+/SB {0 1 NI {/N E D /K WS N get D /NY AY N get FC N get mul D /BV NY array D
+ 0 1 NY 1 sub {/TM K string D currentfile TM readhexstring pop pop BV E TM put}
+ for BM N BV put} for} D
+/colorimage where {pop} {
+ /colorimage {
+  pop pop /Bp E D /Gp E D /Rp E D
+  {/Re Rp D /Gr Gp D /Bl Bp D
+  0 1 Re length 1 sub {
+   /i E D Gr i Re i get 0.299 mul Gr i get 0.587 mul add Bl i get 0.114 mul add
+   cvi put
+  } for Gr} image
+ } D
+} ie
+/IP {BV N get /N N 1 add D} D
+/II {/K E D /TY E D /XW AX K get D /YW AY K get D /IS SG IT K get get D
+ /XS XW IS mul D /YS YW IS mul D YS CS sub TY 2 eq {/MB E D /MA 0 D}
+ {TY 2 mod 1 eq {2 div /MA E 2 sub D /MB MA 4 add D}{/MA E D /MB 0 D} ie} ie} D
+/IM {II /ty TY D /xs XS D /ys YS D /ya YA D /yb YB D /ma MA D /mb MB D /k K D
+ /CI 0 D WB L1 xs add dup /L1 E D XO add W gt
+ {NL /YA ma D /YB mb D /YS ys D /L1 xs D}
+ {ma YA gt {/YA ma D} if mb YB gt {/YB mb D} if} ie CP E pop YS sub LE neg lt
+ {NP /YA ma D /YB mb D /L1 xs D} if /BP f D ty ST cvs ( ) join k ST cvs join
+ C1 E join ( DI ) join FP 2 eq FP 1 eq AF and or {( FM ) join} if /C1 E D
+ /HM t D /EN f D /T TY 3 eq D} D
+/DI {II /YN YW neg D /HM t D /CI 0 D /K2 IX K get D gsave CP MB sub translate
+ K2 0 ge {/DP AZ K2 get D /BV BM K2 get D XS YS scale /N 0 D XW YW DP
+ [XW 0 0 YN 0 YW] {IP} FC K2 get 1 eq {image} {{IP} {IP} t 3 colorimage} ie}
+ {PV K2 neg 1 sub get exec} ie grestore XS 0 R} D
+/FM {gsave CP MB sub translate XS neg 0 M 0 YS RL XS 0 RL 0 YS neg RL XS neg
+ 0 RL stroke grestore} D
+/BH -35 D
+/AH -28 D
+/LL W D
+/XO 0 D
+/YI 0 D
+/CI 0 D
+/LG 0 D
+/AI 0 D
+/UI 0 D
+/IN 30 D
+/BI 12 D
+/WW 50 D
+/AR [0 0 0 0 0 0 0 0 0 0] D
+/NR [0 0 0 0 0 0 0 0 0 0] D
+/FR [0 0 0 0 0 0 0 0 0 0] D
+/SZ [0 0 0 0 0 0 0 0 0 0] D
+/SL 0 D
+/CF 0 D
+/BC 0 D
+/YA 0 D
+/YB 0 D
+/F0 0 D
+/N 0 D
+/AT 0 D
+/C1 () D
+/C2 () D
+/L1 0 D
+/L2 0 D
+/PN SN D
+/MS (        ) D
+/CH 1 string D
+/ST 6 string D
+/HM f D
+/PF f D
+/EN f D
+/TB f D
+/UF f D
+/PP f D
+/AE f D
+/AF f D
+/BP t D
+/T t D
+/AX [26 26 26 26] D
+/AY [26 26 26 26] D
+/IX [0 1 2 3] D
+/IT [0 0 0 0] D
+/AZ [8 8 8 8] D
+/WS [26 26 26 26] D
+/FC [3 3 3 3] D
+/NI 3 D
+/BM 4 array D
+%%EndProlog
+SB
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8f8c8c8c848487
+8487c6c6bdbdbdbdbdb5b5b5b5b5adadadada5a8ada5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d9e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9c9c949494948f9494949c94948c84848484847bc6bdbdbdbdb5bdb5b5b5
+b5b5a8adadadb5adada5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7d9e7
+e7e7e7e7e7e7e7e7e7e7e7e79c9c9c9c9c9c9c8f9cf7f1f1f7f7f7f7f7f7
+e684848784877b7bbdbdbdbdbdb5b5a8bdfcf2f2fcfcfcfcfcfceea59c9a
+9c9a9c93e7e7e7e7e7e7e7d9e7fff7f7ffffffffffffffe7e7d6e7d6e7da
+9c9c9c9c9c948f8ff1f7d6f7f7f7f7f7f7f7c48484847b847b7bbdbdbdbd
+b5b5a8a8f2fcd6fcfcfcfcfcfcfcd29c9c9c9c9c939ce7e7e7e7e7e7d9d9
+f7ffdefffffffffffffff4e7e7e7e7e7dae79c9c9c9c8f8f87f7f7e6b1f7
+f7f7f7f7f7f79c8784877b7b7b7bbdbdbdb5a8a89afcfceeb9fcfcfcfcfc
+fcfcb59a9c9a9c939c93e7e7e7e7d9d9d6ffffffd9ffffffffffffffe7d6
+e7d6e7dae7da9c9c9c948f72f1c46f4a87f7f7f7f7f7f7f78c84847b877b
+7b7bbdbdb5b5a88cf2d281609afcfcfcfcfcfcfca59c9c9c9a949394e7e7
+e7e7d9d3f7f4bdadd6ffffffffffffffe7e7e7e7d6e7dae79c9c9c8f6f8f
+ce5f4a8fd6f7f7f7f7f7f7f7877b877b7b7b7b73b5b5b5a8819ad673609a
+d6fcfcfcfcfcfcfc9a9c9a9c9494948ce7e7e7d9bdc0debdadc0deffffff
+ffffffffd6e7d6e7e7e7e7de9c9c8f7b5e8fd28fd6f7f7f7f7f7f7a0f7e6
+84847b7b7b7b737bb5b5a893749ae19ad6fcfcfcfcfcfcaefcee9c9c9c94
+93948c8ce7e7d9dab1c0fbc0deffffffffffffd6ffffe7e7e7e7dae7dee7
+9c948f7e4a8ff7f7f7f7f7f7f7bb5e0af7f77b7b7b7b7b7b7b73b5b5a88b
+609afcfcfcfcfcfcfcc67424fcfc939c939494938c8ce7e7d9bcadc0ffff
+ffffffffffdcb179ffffdae7dae7e7dae7de94948f6f4a9df7f7f7f7f1a0
+5e0a0a0af7f77b7b7b7b737b7373b5b5a88160a7fcfcfcfcf2ae74242424
+fcfc949394938c8c8c8ce7e7d9bdadc0fffffffff7d6b1797979ffffe7da
+e7dae7e7dede949487634a8ff7f7f1b15e0a0a0a0a0a0a0a0a0a0a0a7b73
+7373b5ad9a7b609afcfcf2b9742424242424242424242424948c8c8ce7e7
+d6c6adc0fffff7d9b17979797979797979797979e7dedede948c87634a8f
+f7c95e0a0a0a0a0a0a0a0a0a0a0a0a0a73737372adad9a7b609afccd7424
+2424242424242424242424248c8c8c84e7e7d6bdadc0ffdbb17979797979
+7979797979797979e7dedede948c87634a8ff7e6c4a0630a0a0a0a0a0a0a
+0a0a0a0a7373736badad9a7b609afceed2ae7b2424242424242424242424
+8c8c8484e7e7d6bdadc0fffff4d6bd7979797979797979797979e7ded6d6
+948c87634a7ef7e6c4a79c8f5e0a0a0aa3a7635f637372736b6badad9a7b
+608bfceed2bcb5a874242424b8bc7b737b8c84848484e7e7d6bdadbcffff
+f4e7e7d9b1797979f7e7c6bdcededed6d6d68c8c87634a6ff7f7f7e6c4a7
+a7b15e0ac4bb63636b7373736b6badad9a7b6081fcfcfceed2bcbcb97424
+d2c67b7b848484848484e7e7d6c6adbdfffffffff4e7e7d9b179f4dcc6c6
+d6d6d6d6d6ce8c8f876f4a5ef7f7f7f7f7d2c4a7a7b1f7ed876b736b736b
+6b6bada89a816074fcfcfcfcfce1d2bcbcb9fcf89a8484848484847be7d9
+d6bdadb1fffffffffffbf4e7e7d9ffffd6d6d6d6d6d6cece8c8c876b4a4a
+f7f7f7f7f7f7e6c4a7bbf7f7a7726b726b6b6b6ba5a59a84605afcfcfcfc
+fcfceed2bcc6fcfcbc8c848c84847b7be7e7d6cead96fffffffffffffff4
+e7dcffffe7d3d6d3d6cecece8c8f876b4a37f1f7f7f7f7f7f7f7e6e6f7f7
+e6736b6b6b6b6b63a5a89a84604ff2fcfcfcfcfcfcfceeeefcfcee848484
+847b7b7be7d9d6cead9ff7ffffffffffffffffffffffffd6d6d6cececec6
+8c8484724a378fdef7f7f7f7f7f7f7f7f7f7f7876b6b6b6b6363a5a59c8c
+604f9adefcfcfcfcfcfcfcfcfcfcfc9a8484847b7b7be7e7e7d3ad9fc0de
+ffffffffffffffffffffffd6d6cececec6c68487847250374a374a4a5e6f
+7e7e7e7e83878f736b6b6b63635ea59a9c8c684f5a4f5a6074818b8b8b8b
+959aa88c847b7b7b7b73e7d6e7d3b89f969f96adb1bdbcbcbcbcc2d6d9de
+cececec6c6c68484877b635e4a4a374a4a373737374a4a636b6b6b6b6363
+5e63a5a59a937b7460604f605a4f4f4f4f60607b7b84847b7b7b737be7e7
+d6dac6b1adad9fad969f9f9f9fadadc6cecececec6c6c6bd8484847b7b6b
+6b63635f505f5e505e505f636b6b636363635f5f9c9c9c939384847b7b73
+687374687468737b847b7b7b7b7b7373e7e7e7dadad6cec6c6bdb8bdb1b8
+b1b8bdc6cececec6c6c6bdbd8487847b7b7b7b73726b6b6b6b6b636b636b
+6b6b6363635f5f5f9c9a9c939c93938c8c84848484847b847b7b7b7b7b7b
+7b737373e7d6e7dae7dadaded3d6d6d6d6cececececececec6c6c6bdbdbd
+84847b7b7b7b7b7373737373736b736b6b6b6b6363635f5f5f5e9c9c939c
+9394938c8c8c8c8c84848484847b7b7b7b7b73737374e7e7dae7dae7dade
+dedededed6d6d6cecececec6c6bdbdbdbdb1
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8c8c8c848487
+8487c6c6bdbdbdbdbdbdb5b5b5b5adadadadada5a5a5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9ca79ca79c94948f94948f8c8c8c84848484847bc6bdbdbdbdb5bdbcbdbc
+b5b5ada8adada8a5a5a5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7d9
+e7e7d9e7e7e7e7e7e7e7e7e79c9c9c9c9c9c9ce6f7f7f7f7f7f7f1f1f78f
+8784848784877b7bbdbdbdbdbdb5b5eefcfcfcfcfcfcf2f2fca89aa59c9a
+9c9a9c93e7e7e7e7e7e7e7fffffffffffffff7f7ffd9d6e7e7d6e7d6e7da
+9c9c9c9c9c9c94c4f7f7f7f7f7f7f7d6f7ed877b877b7b847b7bbdbdbdbd
+b5b5b5d2fcfcfcfcfcfcfcd6fcf89a939a9c9c9c939ce7e7e7e7e7e7e7f4
+ffffffffffffffdeffffd6dad6e7e7e7dae79c9c9c9c9c9494a5f7f7f7f7
+f7f7f7bbe6f7f1727b7b7b7b7b7bbdbdbdb5b5b5b5c6fcfcfcfcfcfcfcc6
+eefcf28c93939c939c93e7e7e7e7e7e7e7e7ffffffffffffffdcfffff7d3
+dadae7dae7da9c9c9c9c9494949cf7f7f7f7f7f7f7875e7ec4f16b72877b
+7b7bbdbdb5b5b5b5b5b5fcfcfcfcfcfcfc9a748bd2f2848c9a949394e7e7
+e7e7e7e7e7e7ffffffffffffffd6b1bcf4f7ced3d6e7dae79c9c9c949494
+948cf7f7f7f7f7f7f7d6a0504ad68763737b7b73b5b5b5b5b5b5adadfcfc
+fcfcfcfcfcd6ae6860d69a7b8c94948ce7e7e7e7e7e7e7e7ffffffffffff
+ffded6b8added6c6dee7e7de9c9c94949494948cf1f7a0f7f7f7f7f7f7e6
+bbd283506b73737bb5b5b5b5b5adadadf2fcaefcfcfcfcfcfceec6e19568
+848c8c8ce7e7e7e7e7e7e7e7f7ffd6ffffffffffffffdcfbc2b8cededee7
+9c9494949494948cf7f70a5ebbf7f7f7f7f7f7f78f4a63737373b5b5b5b5
+adadadadfcfc2474c6fcfcfcfcfcfcfc9a607b8c8c8ce7e7e7e7e7e7e7e7
+ffff79b1dcffffffffffffffc0adc6dedede94949494948c8c8cf7f70a0a
+0a5ea0f1f7f7f7f79d4a5e727373b5b5b5adadadadadfcfc24242474aef2
+fcfcfcfca760738c8c8ce7e7e7e7e7e7e7e7ffff797979b1d6f7ffffffff
+c0adc6d3dede949494940a0a0a0a0a0a0a0a0a0a0a5eb1f1f7f78f375f6b
+7373b5b5adad242424242424242424242474b9f2fcfc9a4f73848c8ce7e7
+e7e77979797979797979797979b1d9f7ffffc09fbdd6dede9494948c0a0a
+0a0a0a0a0a0a0a0a0a0a0a5ec9f78f4a5f6b7372adadadad242424242424
+2424242424242474cdfc9a6073848c84e7e7e7e779797979797979797979
+797979b1dbffc0adbdd6dede94948c8c0a0a0a0a0a0a0a0a0a0a0a63a0b1
+e6f78f375f6b6b6badadadad24242424242424242424247baec8eefc9a4f
+73848484e7e7e7e77979797979797979797979bdd6f9ffffc09fbdd6d6d6
+948c948c8c7b5f63a79c0a0a0a5e8f9ca7c4e6f77e375f6b6b6badadada5
+a593737bbcb524242474a8b5bcd2eefc8b4f73848484e7e7e7e7e7dabdc6
+e7e7797979b1d9e7e7f4ffffbc9fbdced6d68c948c8f847b6f63c4c40a5e
+a7a7a7c4e6f7f7f76f375f6b6b6badadada8a593817bd2d22474bcbcbcd2
+eefcfcfc814f737b8484e7e7e7d9e7dabdc6f4f479b1e7e7e7f4ffffffff
+bd9fbdced6ce8c8c8c8c87847287f1f7b1a7a7c4d2f7f7f7f7f75e4a5e63
+6b6badada5a59a9c8c9af2fcb9bcbcd2e1fcfcfcfcfc745a737b847be7e7
+e7e7d6e7d3d6f7ffd9e7e7f4fbffffffffffb196c6cecece8c8c8c848487
+84c4f7f7a7b1c4e6f7f7f7f7f7f74a4a5f636b6ba5a5a5a5a59a9cd2fcfc
+bcc8d2eefcfcfcfcfcfc5a60737b7b7be7e7e7e7e7d6e7f4ffffe7f9f4ff
+ffffffffffff96adbdcecece8c8c8c84848487e6f7f7e6f1f7f7f7f7f7f7
+f7f137375f636b63a5a5a5a5a59c9aeefcfceef2fcfcfcfcfcfcfcf24f4f
+737b7b7be7e7e7e7e7e7d6fffffffff7fffffffffffffff79f9fbdcecec6
+8c8c8484878494f7f7f7f7f7f7f7f7f7f7f7de8f374a5f636363a5a5a5a5
+9a9cadfcfcfcfcfcfcfcfcfcfcfcde9a4f60737b7b7be7e7e7e7d6e7e7ff
+ffffffffffffffffffffdec09fadbdc6c6c68484848484878c9c8f837e7e
+7e7e6f5e4a4a3737374a5e63635fa5a5a59c9c9aa5b5a8958b8b8b8b8174
+605a4f4f4f60737b7b73e7e7e7e7e7d6e7e7d9c2bcbcbcbcbdb1ad969f9f
+9fadc6c6c6bd84848487847b7b7b6b504a373737374a374a374a4a506363
+5f63a59c9c9a9c9c939384685a4f4f4f4f5a4f604f6060687b7b737be7e7
+e7d6e7e7dadaceb8969f9f9f9f969fad9fadadb8c6c6bdbd84848484847b
+7b7b6b635e5f5f5050505e505f5f5f5e63635f5f9c9c9c9c9c939493847b
+7373736868687468737373737b7b7373e7e7e7e7e7dae7dad6cec6bdbdb8
+b8b8b1b8bdbdbdc6bdbdbdbd8487847b7b7b7b7b7372736b6b6b6b636363
+63636363635f5f5f9c9a9c939c9493948c8c8484847b7b7b7b7b7b7b7b7b
+7b737373e7d6e7dae7e7dae7ded3d6d6d6cececececec6c6c6c6bdbdbdbd
+84847b7b7b7b7b7b73737373736b6b6b6b6b6b6363635f5f5f5e9c9c939c
+939494938c8c8c8c848484847b7b7b7b7b7b73737374e7e7dae7dae7e7da
+e7dededed6d6d6cecececec6c6bdbdbdbdb1
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8f8487848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a8a59a9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+d9e7d6e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8f848784847b
+8784c6c6bdbdbdbdbdb5b5b5b5b5adadadadada5a8a59a9c9c939a9ce7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d9e7d6e7e7dad6e7a59c9c9c9c9c
+f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7727b7bc6bdbdbdbdb5fcfcfcfc
+fcfcfcfcfcfcfcfcfcfcfcfcfc8c939ce7e7e7e7e7e7ffffffffffffffff
+ffffffffffffffffffd3dae79c9c9c9c9cf7f7f7d2d2d2d2edf7f7f7f7ed
+d2d2e6f70a5e727bbdbdbdbdbdfcfcfce1e1e1e1f8fcfcfcfcf8e1e1eefc
+24738c93e7e7e7e7e7fffffffbfbfbfbfffffffffffffbfbffff79c6d3da
+9c9c9c9cf7f7f7c4c4c4c4f7f7f7f7f7f7f7edd2f7204a5e6b7bbdbdbdbd
+fcfcfcd2d2d2d2fcfcfcfcfcfcfcf8e1fc3460738493e7e7e7e7fffffff4
+f4f4f4fffffffffffffffffbff7fadc6d6da9c9c9cf7f7f7c4d2e6d2eded
+e6f7f7f7f7f7f7f70a4a4a5e737bbdbdbdfcfcfcd2e1eee1f8f8eefcfcfc
+fcfcfcfc246060738c94e7e7e7fffffff4fbfffbffffffffffffffffffff
+79adadc6dee79c9c9c4ae69494636b6b63638c8cb1b17b847b6be64a506b
+737bbdbdb560eeb5b57b84847b7badadc8c89ca59c84ee6068848c93e7e7
+e7adffe7e7cececececee7e7f9f9e7e7e7d6ffadb8d6deda9c9c9c944ad2
+946b6b6363637bb1b1c47ba3b18463d250847373b5b5b5b560e1b584847b
+7b7b9cc8c8d294b8c8a57be1689c8c8ce7e7e7e7adfbe7cecec6c6cee7f9
+f9f4e7f7f9e7cefbb8efdee79c9c9494944ad28c7b726b638484b1b1a384
+84847b4ae65e8473b5b5b5b5b560e1ad938c847b9c9cc8c8b89c9c9c9c60
+ee739c8ce7e7e7e7e7adfbe7dad3cecee7eff9f9f7efefefe7adffc6efde
+9c9494948cf7f7c4b1d2c4d2f7f7f7f7e6ede6e6d2f74a506373b5b5b5b5
+adfcfcd2c8e1d2e1fcfcfcfceef8eeeee1fc60687b8ce7e7e7e7e7fffff4
+f9fbf4fbfffffffffffffffffbffadb8cee794949494f7f7d2c4c4d2c4e6
+f7f7f7edd2e6f7f7f70a4a506b73b5b5b5adfcfce1d2d2e1d2eefcfcfcf8
+e1eefcfcfc246068848ce7e7e7e7fffffbf4f4fbf4fffffffffffbffffff
+ff79adb8d6de949494f7f7d2d2c4d2d2c4edf7f7f7f7f7f7f7f7204a4a5e
+6b72b5b5adfcfce1e1d2e1e1d2f8fcfcfcfcfcfcfcfc346060738484e7e7
+e7fffffbfbf4fbfbf4ffffffffffffffffff7fadadc6d6de9494944ae68c
+6b6b6b6363636b727b847b727363d24a50636b72adadad60eea58484847b
+7b7b848c939c948c8c7be160687b8484e7e7e7adffe7cececececececed3
+dae7e7d3decefbadb8ced6de94948c8c4ad287637b846b63636b84847b73
+736b5ee64a5e636badadadad60e19a7b949c847b7b84a59c9c948c8473ee
+60737b84e7e7e7e7adfbd6cee7efd6c6c6d6e7efe7e7e7d6c6ffadc6ced6
+948c948c8c4ae672848e6363636b7b84847b6b6b5037d2205e63adadadad
+a560ee8ca5a87b7b7b849c9ca59c8484684fe134737be7e7e7e7e7adffd3
+e7f6cec6c6d6e7e7e7e7d6d6b89ffb7fc6ce8c948c8c8cf7f7d2d2d2d2d2
+d2f7f7f7f7e6d2edf7f7204a5063adadada5a5fcfce1e1e1e1e1e1fcfcfc
+fceee1f8fcfc3460687be7e7e7e7e7fffffbfbfbfbfbfbfffffffffffbff
+ffff7fadb8ce8c8c8c8cf7f7ede6e6d2d2d2e6d2edf7f7d2e6f7f70a3750
+5e63adada5a5fcfcf8eeeee1e1e1eee1f8fcfce1eefcfc244f68737be7e7
+e7e7fffffffffffbfbfbfffbfffffffbffffff799fb8c6ce8c8c8cf7f7f7
+f7f7f7f7e6e6d2d2f7f7f7f7f7f7203750506363a5a5a5fcfcfcfcfcfcfc
+eeeee1e1fcfcfcfcfcfc344f68687b7be7e7e7fffffffffffffffffffbfb
+ffffffffffff7f9fb8b8cec68c8c8c4ae684b1b1b17b7b63636b638e8e8e
+8e7be64a4a5e6363a5a5a560ee9cc8c8c894937b7b847ba8a8a8a89cee60
+60737b7be7e7e7adffe7f9f9f9e7daceced6cef6f6f6f6e7ffadadc6c6c6
+8c8c84844ad2b1a3b1b173636b8e5e8e8e8e8e847be64a505e63a5a5a5a5
+60e1c8b8c8c88c7b84a873a8a8a8a89c9cee6068737be7e7e7e7adfbf9f7
+f9f9deced6f6c6f6f6f6f6efe7ffadb8c6c6848484847b4ad2b1a3a37b73
+5e5e63636b8e8e8e8463e64a505fa5a5a59c9c60e1c8b8b89c8c73737b7b
+84a8a8a89c7bee606873e7e7e7e7e7adfbf9f7f7e7dec6c6c6c6d6f6f6f6
+efceffadb8bd848484877b734ad2e6e6e6e6e6e6e6e6e6e6e6e6e6e6d2e6
+0a50a59c9c9a938c60e1eeeeeeeeeeeeeeeeeeeeeeeeeeeee1ee2468e7e7
+e7d6dadeadfbfffffffffffffffffffffffffffffbff79b88484877b8473
+634a4a0a240a0a240a0a240a0a240a0a240a244a9c9c9a9c9c8c7b606024
+3a24243a24243a24243a24243a243a60e7e7d6e7e7deceadad798e79798e
+79798e79798e79798e798ead848484847b7b735e50504a504a4a504a4a4a
+4a374a4a4a4a4a4a9c9c9c9c93948c7368686068606068606060604f6060
+60606060e7e7e7e7dae7dec6b8b8adb8adadb8adadadad9fadadadadadad
+87847b7b7b7b7b736363635e5e5e5e5e5e505050505050504a509a9c939c
+9493938c7b7b7b737373737373686868686868686068d6e7dae7e7dadade
+cececec6c6c6c6c6c6b8b8b8b8b8b8b8adb8
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8c8c8c846f37
+4a84c6c6bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a5814f609ce7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7bd9fade7a59c9c9c9c9c
+9c9c9494949494948c8c8c8c8c84844a24508487c6bdbdbdbdb5b5b5b5b5
+b5adadadadada5a5a5a5a5603a689c9ae7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7ad8eb8e7d69c0000000000209494949494948c8c4a8c8c
+8c7224206384847bbd000000000034b5b5b5adadadadad60a5a5a58c3a34
+7b9c9c94e73b3b3b3b3b7fe7e7e7e7e7e7e7e7ade7e7e7d38e7fc6e7e7e7
+9c00202020f72094949494948c8c4a4a8c8c3720377b847b7b7bbd003434
+34fc34b5b5adadadadad6060a5a54f344f939c939c93e73b7f7f7fff7fe7
+e7e7e7e7e7e7adade7e79f7f9fdae7dae7da9c00208e8ef720949494948c
+8c4af77b8c24205087847b847b7bbd0034a8a8fc34b5adadadadad60fc94
+a53a34689a9c9c9c9394e73b7ff6f6ff7fe7e7e7e7e7e7adffe7e78e7fb8
+d6e7e7e7dae79c00208e8ef7209420f7f74a4af7f74a84727b84847b7b7b
+7b7bbd0034a8a8fc34ad34fcfc6060fcfc60a58c939c9c9c93949493e73b
+7ff6f6ff7fe77fffffadadffffade7d3dae7e7e7dae7e7da9c00208e8ef7
+208c20f78e00f7a38e0a8c8784847b7b7b7b7b7bb50034a8a8fc34ad34fc
+a800fcb8a824a59a9c9c939c9c93948ce73b7ff6f6ff7fe77ffff63bfff7
+f679e7d6e7e7dae7e7dae7e79c00208e8ef7208c0ab10000500a15008420
+202020202024247bb50034a8a8fc34ad24c8000068241c009c3434343434
+343a3a93e73b7ff6f6ff7fe779f93b3bb879583be77f7f7f7f7f7f8e8eda
+9c00208e8ef720940a5e1515000a150084847b7b7b7b7b7b7b73b50034a8
+a8fc34ad24731c1c00241c009c9c9c9494939493948ce73b7ff6f6ff7fe7
+79c658583b79583be7e7e7e7e7dae7dae7e79400208e8ef7208c0a00004a
+84000a00846b727b7b7b737b7373b50034a8a8fc34ad240000609c002400
+9c848c9493948c8c8c8ce73b7ff6f6ff7fe7793b3bade73b793be7ced3e7
+dae7dee7dede9400f7f7f7a3208c8c8c8484848400007b2420507b737b73
+7373b500fcfcfcb834a5a5a5a59c9c9c00009c3a3468948c948c8c8ce73b
+fffffff77fe7e7e7e7e7e7e73b3be78e7fb8e7dee7dedede9400f78e8e8e
+208c8c84848487847b007b7b3720247373737372ad00fca8a8a834a5a5a5
+a59c9a9c9c0094944f343a8c8c8c8c84e73bfff6f6f67fe7e7e7e7e7d6e7
+e73be7e79f7f8ededededede9400e68e8e8e208484848784847b847b7b7b
+736324205e73736bad00eea8a8a834a5a5a59a9c9c9c9c9494938c7b3a34
+738c8484e73bfff6f6f67fe7e7e7d6e7e7e7e7e7e7dae7ce8e7fc6ded6d6
+94008e8e848e208484848484000000000000000000000000006bad00a8a8
+9ca834a5a59c9c9c0000000000000000000000000084e73bf6f6e7f67fe7
+e7e7e7e73b3b3b3b3b3b3b3b3b3b3b3b3bd68c000000204a20848784877b
+00f7f7f7f7f7f7f7f7f7f720006bad000000346034a59a9c9a9c00fcfcfc
+fcfcfcfcfcfcfc340084e73b3b3b7fad7fe7d6e7d6e73bffffffffffffff
+ffffff7f3bd68c00208e8ef720848484847b00f78e8e8e8e8e8e8e8e8e20
+006bad0034a8a8fc349c9c9c9c9c00fca8a8a8a8a8a8a8a8a834007be73b
+7ff6f6ff7fe7e7e7e7e73bfff6f6f6f6f6f6f6f6f67f3bce8c00208e8ef7
+2084877b7b7b00f78e8e8e8e8e8e8e8e8e20006ba50034a8a8fc349c9a9c
+939400fca8a8a8a8a8a8a8a8a834007be73b7ff6f6ff7fe7d6e7dae73bff
+f6f6f6f6f6f6f6f6f67f3bce8c00208e8ef720847b877b7b00f78e8e8e8e
+8e8e8e8e8e200063a50034a8a8fc349c9c9a9c9400fca8a8a8a8a8a8a8a8
+a834007be73b7ff6f6ff7fe7e7d6e7e73bfff6f6f6f6f6f6f6f6f67f3bce
+8c00208e8ef7207b7b7b7b7b008e202020202020202020200063a50034a8
+a8fc349c9c94949400a834343434343434343434007be73b7ff6f6ff7fe7
+e7e7e7e73bf67f7f7f7f7f7f7f7f7f7f3bce8400f7f7edf7207b7b7b7b7b
+000000000000000000000000005ea500fcfcf8fc349c9394939400000000
+00000000000000000073e73bffffffff7fe7dae7dae73b3b3b3b3b3b3b3b
+3b3b3b3b3bc6840020202020207b7b7b7b737b737373726b6b6b6b6b6363
+5e63a5003434343434949493948c8c8c8c8c84848484847b7b7b737be73b
+7f7f7f7f7fe7e7dae7dee7e7dededed6d6d6d6cecec6c6bd84848484847b
+7b7b7b7b737b737373736b6b6b6b636363635f5f9c9c9c9c9c9c94939494
+8c8c8c8c8c848484847b7b7b7b7b7373e7e7e7e7e7e7e7dae7e7dee7dede
+ded6d6d6cecec6c6c6c6bdbd8487847b7b7b7b7b7b7373737373736b6b6b
+6b6b6363635f5f5f9c9a9c939c939494938c8c8c8c8c848484847b7b7b7b
+7b737373e7d6e7dae7dae7e7dae7dedededed6d6d6cececec6c6c6bdbdbd
+84847b847b7b7b7b7373737373736b6b6b6b6b6363635f5f5f5e9c9c939c
+939493948c8c8c8c8c848484847b7b7b7b7b73737374e7e7dae7dae7dae7
+e7dedededed6d6d6cececec6c6bdbdbdbdb1
+0 11 SF
+0 LE neg 20 sub M
+(
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Using Components, the GUI Building Blocks)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Using Components, the GUI Building Blocks: Table of Contents
+)EH(
+)0 P(
+)BQ(
+
+
+)UL(
+)LI(
+)A(Using Components, the GUI Building Blocks)EA(
+    )UL(
+    )LI(
+    )A(Using the Standard Components)EA(
+        )UL(
+        )LI(
+	General Rules for Using Components
+        )LI(
+	How to Use Buttons
+        )LI(
+	How to Use Canvases
+        )LI(
+	How to Use Checkboxes
+        )LI(
+	How to Use Choices
+        )LI(
+	How to Use Dialogs
+        )LI(
+	How to Use Frames
+        )LI(
+	How to Use Labels
+        )LI(
+	How to Use Lists
+        )LI(
+	How to Use Menus
+        )LI(
+	How to Use Panels
+        )LI(
+	How to Use Scrollbars
+        )LI(
+	How to Use TextAreas
+        )LI(
+	How to Use TextFields
+	)LU(
+    )LI(
+    Creating a Custom Component
+    )LI(
+    Common Component Problems \201and Their Solutions\202
+    )LU(
+)LU(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Using Components, the GUI Building Blocks)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Table of Contents)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 1 H(
+     Using Components, the GUI Building Blocks
+)EH(
+)0 P(
+)BQ(
+
+)0 4 H(
+)A(Using the Standard Components)EA(
+)EH(
+)BQ(
+Start here to learn the general rules of using Components,
+as well as details on using all the Component subclasses the AWT provides.
+)QB(
+
+)0 4 H(
+)A(Creating a Custom Component)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(Common Component Problems \201and Their Solutions\202)EA(
+)EH(
+)BQ(
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Table of Contents)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Using Components, the GUI Building Blocks)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Using the Components We Provide
+)EH(
+)0 P(
+)BQ(
+
+)0 4 H(
+)A(General Rules for Using Components)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Buttons)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Canvases)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Checkboxes)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Choices)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Dialogs)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Frames)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Labels)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Lists)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Menus)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Panels)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use Scrollbars)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use TextAreas)EA(
+)EH(
+)BQ(
+)QB(
+
+)0 4 H(
+)A(How to Use TextFields)EA(
+)EH(
+)BQ(
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Using Components, the GUI Building Blocks)ES()ES()EA(
+
+
+
+
+
+)WB NL showpage end restore

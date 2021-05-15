@@ -1,0 +1,292 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Controlling Access to a Class's Methods</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="methods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="classmethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Controlling Access to a Class's Methods
+</h2>
+<p>
+<blockquote>
+
+The Java language supports five distinct access levels for
+methods: private, private protected, protected, public, and,
+if left unspecified, "friendly". The following chart shows
+the access level permitted by each specifier.
+<blockquote>
+<pre>
+				sub-	pack-
+Specifier		class	class	age	world
+-----------------------------------------------------
+private			X
+private protected	X	X
+protected		X	X*	X
+public			X	X	X	X
+
+friendly		X	 	X
+</pre>
+</blockquote>
+The first column indicates whether or not the class itself can call
+the method defined by the access specifier. The second
+column indicates whether or not subclasses of the class (regardless of
+which package they are in) can call the method. The
+third column indicates whether or not classes in the same package
+(regardless of their parentage) as the class can call the
+method. And finally, the fourth column indicates that all
+classes can call the method.
+<p>
+You'll note that the protected access specifier/sub-class intersection
+has an '*' -- this indicates that this particular access case
+has a special caveat which is discussed in detail <a href=#protectedcaveat>below</a>.
+<p>
+Let's look at each access level in more detail.
+
+<h4>Private</h4>
+<blockquote>
+Let's begin with the most restrictive access level--private.
+Only the class in which a private method is defined can call that
+method. To declare a private method, use the keyword <code>private</code>.
+For example, the following class defines one private method within it:
+<blockquote>
+<pre>
+class Alpha {
+    private void iamprivate() {
+	System.out.println("iamprivate");
+    }
+}
+</pre>
+</blockquote>
+Objects of type Alpha can call the <code>iamprivate()</code> method,
+but objects of other types cannot. For example, the following class,
+regardless of which package it is in or its parentage, cannot call
+the <code>iamprivate()</code> method within the Alpha class.
+<blockquote>
+<pre>
+class Beta {
+    void accessMethod() {
+        Alpha a = new Alpha();
+        a.iamprivate();		// illegal
+    }
+}
+</pre>
+</blockquote>
+You can tell when one of your classes is attempting to access a method to
+which it does not have access--the compiler will print an error message similar
+to the following and refuse to compile your program.
+<blockquote>
+<pre>
+Beta.java:12: No method matching iamprivate() found in class Alpha.
+        a.iamprivate();		// illegal
+1 error
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>Private Protected</h4>
+<blockquote>
+The next most restrictive access specified is private protected. This
+access level includes the same access level as private plus allows
+any of the class's subclasses to call the method.
+To declare a private protected method, use the keywords <code>private protected</code>.
+For example, the following class defines one private protected method within it:
+<blockquote>
+<pre>
+class Alpha {
+    private protected void iamprivateprotected() {
+	System.out.println("iamprivateprotected");
+    }
+}
+</pre>
+</blockquote>
+Objects of type Alpha can call the <code>iamprivateprotected()</code>
+method. In addition, subclasses of Alpha also have access to
+<code>iamprivateprotected()</code>. For instance, this subclass of
+Alpha can call the <code>iamprivateprotected()</code> method of
+another Alpha object.
+<blockquote>
+<pre>
+class Beta extends Alpha {
+    void modifyVariable(Alpha a) {
+        a.iamprivateprotected();	// legal
+    }
+}
+</pre>
+</blockquote>
+The output from this method call will be the string
+<blockquote>
+<pre>
+iamprivateprotected
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>Protected</h4>
+<blockquote>
+The next access level specifier is protected which allows the class itself,
+subclasses (with a caveat), and all classes in the same package to call
+the method.
+To declare a protected method, use the keyword <code>protected</code>.
+For example, take this version of the Alpha class which
+is now declared to be within a package named "Greek" and which has a
+single protected method declared within it.
+<blockquote>
+<pre>
+package Greek;
+
+class Alpha {
+    protected void iamprotected() {
+	System.out.println("iamprotected");
+    }
+}
+</pre>
+</blockquote>
+Now, suppose that the class, Beta, was also declared to be a member of
+the Greek package. The Beta class can legally call the <code>iamprotected()</code>
+method declared within the Alpha class.
+<blockquote>
+<pre>
+package Greek;
+
+class Beta {
+    void accessMethod() {
+        Alpha a = new Alpha();
+        a.iamprotected();	// legal
+    }
+}
+</pre>
+</blockquote>
+The output from this method call will be the string
+<blockquote>
+<pre>
+iamprotected
+</pre>
+</blockquote>
+<a name=protectedcaveat>
+That's pretty straightforward.</a> Now, let's investigate how subclasses of
+Alpha can access protected methods.
+<p>
+Let's introduce a new class, Gamma, that
+derives from Alpha but lives in a different package. The Gamma class can
+access the <code>iamprotected()</code> method, but only on objects of type
+Gamma or its subclasses. For example, the <code>accessMethod()</code>
+of the following class attempts to access the <code>iamprotected()</code>
+method on an object of type ProtectedAlpha, which is illegal, and on an object
+of type Gamma, which is legal.
+<blockquote>
+<pre>
+class Gamma {
+    void accessMethod(ProtectedAlpha a) {
+        a.iamprotected = 10;		// illegal
+        this.iamprotected = 10;		// illegal
+    }
+}
+</pre>
+</blockquote>
+If a class is both a subclass of and in the same package as the class
+with the protected variable, then the class has access to the protected
+method (its package status takes precedence over its subclass status).
+</blockquote>
+
+<h4>Public</h4>
+<blockquote>
+Now for the easiest access specifier--public. To declare a public method,
+use the keyword <code>public</code>. For example,
+<blockquote>
+<pre>
+class Alpha {
+    public void iampublic() {
+	System.out.println("iampublic");
+    }
+}
+</pre>
+</blockquote>
+Any class, in any package, can call a class's public methods.
+For example, this version of the Beta class
+<blockquote>
+<pre>
+class Beta {
+    void accessMethod() {
+	Alpha a = new Alpha();
+        a.iampublic();			// legal
+    }
+}
+</pre>
+</blockquote>
+can legally call the <code>iampublic()</code> method
+in the Alpha class.
+</blockquote>
+
+<h4>Friendly</h4>
+<blockquote>
+And finally, the last access level is what you get if you don't
+explicitly set a method's access level to one of the previous levels.
+This access level is known as "friendly".
+For example, this version of the Alpha class declares a single
+friendly method and lives within the Greek package.
+<blockquote>
+<pre>
+package Greek;
+
+class Alpha {
+    void iamfriendly() {
+	System.out.println("iamfriendly");
+    }
+}
+</pre>
+</blockquote>
+The Alpha class can call the <code>iamfriendly()</code> method.
+In addition, all the classes declared within the same package as
+Alpha can also call <code>iamfriendly()</code>.
+For example, suppose that both Alpha and Beta were declared
+as part of the Greek package, then this Beta class
+<blockquote>
+<pre>
+package Greek;
+
+class Beta {
+    void accessMethod() {
+        Alpha a = new Alpha();
+        a.iamprotected();	// legal
+    }
+}
+</pre>
+</blockquote>
+could legally call <code>iamfriendly()</code>.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="methods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="classmethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

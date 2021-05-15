@@ -1,0 +1,120 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Java's Catch or Declare Requirement</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="firstencounter.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="dealing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Java's Catch or Declare Requirement
+</h2>
+<p>
+<blockquote>
+
+As stated previously, Java requires that methods either catch or
+declare all non-runtime exceptions that can be thrown within the scope of
+that method. This requirement has several components
+that need further description: "catch", "declare", "non-runtime exceptions",
+and "the exceptions that can be thrown within the scope of the method".
+
+<h4>Catch</h4>
+<blockquote>
+A method can catch an exception by providing an exception handler for
+that type of exception. The next page, <a href=dealing.html>Dealing with Exceptions</a>,
+introduces an example program, talks about catching exceptions, and shows you how
+to write an exception handler for the example program.
+</blockquote>
+
+<h4>Declare</h4>
+<blockquote>
+If a method chooses not to catch an exception, then the method must
+declare that it can throw it. Why did the Java designers make this requirement?
+Because any exception that can be thrown by a method is really part of
+the method's public programming interface: callers of a method must know
+about the exceptions that a method can throw in order to intelligently
+and conciously decide what to do about those exceptions. Thus, you
+declare the exceptions that can be thrown within the scope of a Java
+methods in the method signature.
+<p>
+The next page, <a href=dealing.html>Dealing with Exceptions</a>,
+talks about declaring exceptions and shows you how to declare
+exceptions for Java methods that require it.
+</blockquote>
+
+<h4>Non-runtime Exceptions</h4>
+<blockquote>
+In Java, there are different types of exceptions, including I/O Exceptions, 
+runtime exceptions and exceptions of your own creation to name a few.
+Of interest to us in this discussion are runtime exceptions. Runtime
+exceptions are those exceptions that occur within the Java runtime system.
+This includes arithmetic exceptions, such as when dividing by zero, pointer
+exceptions, such as trying to access an object through a null reference,
+and indexing exceptions, such as attempting to access an array element
+through an index that is too large or too small.
+<p>
+Runtime exceptions can occur anywhere in a program and in a typical
+program can be very numerous. Often the cost of checking for runtime exceptions
+exceeds the benefit of catching or declaring them. Thus the compiler
+does not require that you catch or declare runtime exceptions, though
+you can.
+<p>
+Often, this is considered a loophole in Java's exception handling mechanism
+and programmer's are tempted to declare all exceptions to be runtime exceptions.
+In general, this is not recommended.
+<a href=runtime.html>Runtime Exceptions--The Controversy</a> contains a thorough
+discussion about when and how to use runtime exceptions.
+</blockquote>
+
+<h4>The exceptions that can be thrown within the scope of the method</h4>
+<blockquote>
+The statement <em>exceptions that can be thrown within the scope of the method</em>
+may seem obvious at first: just look for the <code>throw</code> statement.
+However, this statement includes more than just the exceptions that can be thrown
+directly by the method: the key is in the phrase <em>within the scope of</em>.
+This phrase includes any exception that can be thrown while the flow of control
+remains within the method. Thus, this statement includes both
+<ul>
+<li>
+exceptions that are thrown directly by the method with Java's <code>throw</code>
+statement, and
+<li>
+exceptions that are thrown indirectly by the method through calls to other
+methods
+</ul>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="firstencounter.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="dealing.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

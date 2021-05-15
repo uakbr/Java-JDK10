@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>Using Layout Managers</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="border.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     Using Layout Managers
+</h1>
+<p>
+<blockquote>
+
+This lesson tells you how to use layout managers.
+First, it tells you how to use the layout managers
+that we provide.
+Next, it shows how to position Components
+without using a layout manager.
+Finally, it tells you how to create your own layout manager.
+<p>
+
+The layout managers we provide range from the very simple 
+(FlowLayout and GridLayout)
+to the special purpose (BorderLayout and CardLayout)
+to the ultra-flexible (GridBagLayout).
+<p>
+
+<h4>
+<a href=border.html>BorderLayout</a>
+</h4>
+<blockquote>
+BorderLayout is the default layout manager for all Windows,
+such as Frames and Dialogs.
+It uses five areas to hold components:
+north, south, east, west, and center.
+All extra space is placed in the center area.
+Here's a picture of a program that puts one button in each area.
+<p>
+<img src=images/BorderEx1.gif width=302 height=138>
+</blockquote>
+
+<h4>
+<a name=CardEx>
+<a href=card.html>CardLayout</a></a>
+</h4>
+<blockquote>
+Use the CardLayout class when you have an area
+that can contain different Components at different times.
+CardLayouts are commonly tied to Choices,
+with the state of the Choice determining
+which Panel (group of Components)
+the CardLayout displays.
+Here are two pictures of a program that uses a Choice
+and CardLayout in this way.
+<p>
+
+<img src=images/CardEx1-1.gif width=184 height=131>
+<img src=images/CardEx1-2.gif width=184 height=131>
+</blockquote>
+
+<h4>
+<a href=flow.html>FlowLayout</a>
+</h4>
+<blockquote>
+FlowLayout is the default layout manager for all Panels.
+It simply lays out components 
+from left to right,
+centering them within their row
+and, if necessary, starting new rows.
+Both Panels in the CardLayout figure <a href=#CardEx>above</a> use FlowLayouts.
+</blockquote>
+
+<h4>
+<a href=gridbag.html>GridBagLayout</a>
+</h4>
+<blockquote>
+GridBagLayout is the most sophisticated, flexible layout manager we provide.
+It aligns components vertically and horizontally, 
+without requiring that the components be the same size.
+Here's a picture of a program that uses a GridBagLayout
+to manage ten buttons in a panel.
+<p>
+<img src=images/GridBagEx1.gif width=262 height=155>
+</blockquote>
+
+<h4>
+<a href=grid.html>GridLayout</a>
+</h4>
+<blockquote>
+GridLayouts simply make a bunch of Components have equal size,
+displaying them in the requested number of rows and columns.
+Here's a picture of a program with a Panel that uses a GridLayout
+to control the display of 5 buttons.  
+<p>
+<img src=images/GridEx1.gif width=209 height=105>
+</blockquote>
+
+<h4>
+<a href=none.html>Doing Without a Layout Manager</a>
+</h4>
+<blockquote>
+You can position Components using absolute coordinates
+without using a layout manager.
+Here's a picture of a program 
+with a panel that sets its layout manager to null
+and then positions three buttons.
+
+<p>
+<img src=images/NoneEx1.gif width=250 height=90>
+</blockquote>
+
+<h4>
+<a href=custom.html>Creating a Custom Layout Manager</a>
+</h4>
+<blockquote>
+Instead of using one of our layout managers,
+you can write your own.
+Layout managers must implement the LayoutManager interface,
+which specifies the five methods every layout manager must define.
+Here's a picture of a program
+that uses a custom layout manager
+to position components diagonally across a panel.
+<p>
+<img src=images/CustomEx1.gif width=209 height=175>
+</blockquote>
+
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="border.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

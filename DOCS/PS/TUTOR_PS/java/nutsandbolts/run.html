@@ -1,0 +1,94 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Running the Application</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="string.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../strings/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Running the Application
+</h2>
+<p>
+<blockquote>
+
+Before you can run the application, you must save it to a Java 
+source file, and compile it. For more information about saving
+a Java source file, and compiling a java program, see the
+<a href="../anatomy/tools.html">Saving, Compiling and Running an Application</a>
+<a href="../anatomy/tools.html"><img src="../../images/javaIcon.gif" width=20 height=20 border=0></a>
+page in <em>The Anatomy of a Java Application</em>.
+<p>
+Now, you can <a href="_interpreting.html">run your application</a> using the Java interpreter.
+<p>
+The output of the character-counting program depends on the input
+you enter for it.
+When a application reads from the standard input stream, like
+the character-counting application does, the application blocks waiting
+for you to type something in. The application continues
+to wait for input until you give it some indication that the input is complete.
+To indicate to any program that reads from the standard input stream
+that you have finished entering characters type the <a href="_endofinput2.html">end-of-input character</a>
+appropriate for your system at the beginning of a newline.
+When the character-counting program receives an end-of-input character it
+prints out the number of characters you typed.
+<p>
+In the UNIX example below, the user entered
+<strong>This is a test.</strong> and the application displayed
+<code>Input has 16 chars.</code>
+<blockquote>
+<pre>
+<strong>% java Count
+This is a test.</strong>
+Input has 16 chars.
+</pre>
+</blockquote>
+At first glance it may appear that the output is incorrect, since
+<strong>This is a test.</strong> has only 15 characters. But the user entered
+a newline as the 16th character.
+<p>
+If you have any problems, see
+<a href="../../troubleshooting/interpreterproblems.html">Troubleshooting Interpreter Problems</a>
+<a href="../../troubleshooting/interpreterproblems.html"><img src="../../images/troubleIcon.gif" width=20 height=20 border=0></a>.
+
+<h4>See Also</h4>
+<blockquote>
+<a href="http://java.sun.com/JDK-1.0/tools/solaris/javac.html"><img src="../../images/manPagesIcon.gif" width=8 height=20 border=0></a>
+<a href="http://java.sun.com/JDK-1.0/tools/solaris/javac.html">Compiler Man Page</a><br>
+<a href="http://java.sun.com/JDK-1.0/tools/solaris/java.html"><img src="../../images/manPagesIcon.gif" width=8 height=20 border=0></a>
+<a href="http://java.sun.com/JDK-1.0/tools/solaris/java.html">Interpreter Man Page</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="string.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../strings/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

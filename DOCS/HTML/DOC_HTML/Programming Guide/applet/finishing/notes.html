@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>Before You Ship That Applet</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../anatomy/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Finishing an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Before You Ship That Applet
+</h2>
+<p>
+<blockquote>
+
+
+Stop!
+Before you let the whole world know about your applet,
+make sure the answer to all of the following questions is
+<strong>yes</strong>.
+<p>
+
+<ol>
+<strong>
+<li> Have you removed or disabled debugging output? 
+</strong> <p>
+
+<blockquote>
+     Debugging output
+     (generally created with <code>System.out.println()</code>),
+     while useful to you,
+     is generally confusing or annoying to users.
+     If you need to give textual feedback to the user, 
+     try to do it inside the applet's display area
+     or in the status area at the bottom of the window
+     (see the Applet <code><a
+     href="http://java.sun.com/JDK-beta/api/java.applet.Applet.html#showStatus(java.lang.String)">showStatus()</a></code>
+     method).
+</blockquote>
+
+<strong> <p>
+<li> Does the applet stop running when it's offscreen?
+</strong> <p>
+
+<blockquote>
+     Most applets should not use CPU resources when the browser 
+     is iconified or is displaying a page that
+     doesn't contain the applet.  If your applet code doesn't launch
+     any threads explicitly, then you're OK.
+     <p>
+
+     If your applet code launches any threads, then unless you
+     have a REALLY GOOD excuse not to, you should implement the <code><a
+     href="http://java.sun.com/JDK-beta/api/java.applet.Applet.html#stop()">stop()</a></code>
+     method so that it stops and then destroys (by setting to null)
+     the threads you launched.  For example:
+<blockquote>
+<pre>
+public synchronized void stop() {
+    if (refresh != null) {
+        refresh.stop();
+        refresh = null;
+    }
+}
+</pre>
+</blockquote>
+</blockquote>
+
+<strong> <p>
+<li> If the applet does something that might get annoying --
+     play sounds or animation, for example --
+     does it give the user a way of stopping the annoying behavior?
+</strong> <p>
+
+<blockquote>
+     Be kind to your users.
+     Give them a way to stop the applet in its tracks, without leaving the page.
+     In an applet that otherwise doesn't respond to mouse clicks,
+     you can do this by implementing the <code><a
+     href="http://java.sun.com/JDK-beta/api/java.awt.Component.html#mouseDown(java.awt.Event, int, int)">mouseDown()</a></code>
+     method so that a mouse click suspends or resumes the annoying thread.
+     For example:
+<blockquote>
+<pre>
+boolean threadSuspended = false; //an instance variable
+
+public boolean mouseDown(Event e, int x, int y) {
+    if (threadSuspended) { 
+        myThread.resume();
+    } else {
+        myThread.suspend();
+    }
+    threadSuspended = !threadSuspended;
+    return true;
+}
+</pre>
+</blockquote>
+</blockquote>
+
+</ol>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../anatomy/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Finishing an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

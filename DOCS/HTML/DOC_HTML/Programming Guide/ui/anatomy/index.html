@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Anatomy of a Program with a Graphical UI</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../overview/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="classes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     Anatomy of a Program with a Graphical UI
+</h1>
+<p>
+<blockquote>
+
+This lesson picks apart a simple Java program that has a graphical UI,
+explaining:
+<ul>
+<li> the classes the program uses
+<li> the program's hierarchy of Components
+<li> how events propagate through the hierarchy
+<li> how drawing occurs
+</ul>
+<p>
+
+The program converts distance measurements between metric and U.S. units.
+Here is its <a href=example/Converter.java>source code.</a>
+Below is the program.
+If your browser is Java-compatible, 
+you'll see the program running as an applet.
+Otherwise, you'll see a picture
+of the program running as an application.
+<p>
+
+<applet codebase=example code=Converter.class width=260 height=150>
+<img src=images/Converter.gif width=260 height=173>
+</applet>
+
+
+<h4>
+<a href=classes.html>Classes in the Example Program</a>
+</h4>
+<blockquote>
+The example program defines three classes 
+and creates instances of several classes that we provide.
+It defines an Applet subclass so that it can run as an applet.
+It creates Components to provide basic controls
+so that the user can interact with it.
+Using Containers and LayoutManagers,
+it groups the Components.
+</blockquote>
+
+
+<h4>
+<a href=hierarchy.html>The Component Hierarchy</a>
+</h4>
+<blockquote>
+The Components in the example program are arranged in a hierarchy,
+with Containers defining the structure of the hierarchy.
+</blockquote>
+
+
+<h4>
+<a href=events.html>Event Handling</a>
+</h4>
+<blockquote>
+User actions result in events,
+which are passed up the Component hierarchy
+until an object responds to the event.
+</blockquote>
+
+
+<h4>
+<a href=drawing.html>Drawing</a>
+</h4>
+<blockquote>
+Components are drawn from the top of the hierarchy --
+the program's window --
+down to the non-Container Components.
+</blockquote>
+
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../overview/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="classes.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

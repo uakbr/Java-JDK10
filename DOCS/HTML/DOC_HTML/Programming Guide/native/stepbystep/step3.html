@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Step 3: Create the .h File</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step2.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="step4.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=bottom border=0 alt="Integrating Native Methods into Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Step 3: Create the .h File
+</h2>
+<p>
+<blockquote>
+
+In this step, you use the
+<a href="http://java.sun.com/JDK-beta/tools/solaris/javah.html">javah</a>
+<a href="http://java.sun.com/JDK-beta/tools/solaris/javah.html"><img src="../../images/manPagesIcon.gif" width=10 height=20 border=0></a>
+utility program to generate a C header file (a <code>.h</code> file) from
+the <code>HelloWorld</code> Java class. The header file defines a structure
+that represents the <code>HelloWorld</code> class on the C side, and provides
+a C function definition for the implementation of the native method
+<code>displayHelloWorld()</code> defined in that class.
+<p>
+<a href=_runjavah.html>Run <code>javah</code></a> now on the <code>HelloWorld</code>
+class that you created in the previous steps. For example, on UNIX you would
+issue the following command to your favorite shell tool.
+<blockquote>
+<pre>
+% javah HelloWorld
+</pre>
+</blockquote>
+By default, <code>javah</code> places the new <code>.h</code> file in the same
+directory as the <code>.class</code> file. You can tell <code>javah</code> to
+place the header files in a different directory with the <code>-d</code> option.
+<p>
+The name of the header file is the Java class name with a <code>.h</code> appended
+to the end of it. For example, the command shown above will generate a file named
+<a href="example/HelloWorld.h"><code>HelloWorld.h</code></a>.
+
+<h4>The Class Structure</h4>
+<blockquote>
+Look at the header file. Notice that it contains a struct definition for a structure
+named <code>ClassHelloWorld</code>. The members of this structure parallel the members
+of the corresponding Java class; that is to say, the fields in the struct correspond
+to instance variables in the class. But since <code>HelloWorld</code> doesn't have
+any instance variables, there is just a place holder in the structure. You can use
+the members of the struct to reference class instance variables from your C functions.
+</blockquote>
+
+<h4>The Function Definition</h4>
+<blockquote>
+In addition to the C structure that mimics the Java class, you will also notice a
+C function signature that looks like this:
+<blockquote>
+<pre>
+extern void HelloWorld_displayHelloWorld(struct HHelloWorld *);
+</pre>
+</blockquote>
+This is the definition for the C function that you will write in 
+<a href="step5.html">Step 5: Write the C Function</a> that provides the implementation
+for the <code>HelloWorld</code> class's native method <code>displayHelloWorld()</code>.
+You must use this function signature when you write the implementation
+for the native method.
+If <code>HelloWorld</code> contained any other native methods, their function signatures
+would appear here as well.
+<p>
+The name of the C function that implements the native method is derived from
+the package name, the class name, and the name of the Java native method.
+Thus, the native method <code>displayHelloWorld()</code> within the <code>HelloWorld</code>
+class becomes <code>HelloWorld_displayHelloWorld()</code>. In our example, there is no
+package name because <code>HelloWorld</code> is in the default package.
+<p>
+You will notice that the C function accepts a single parameter even though
+the native method defined in the Java class accepted none. You can think
+of the parameter as the "this" variable in C++.
+Our example ignores the "this" parameter. However, the example in
+<a href="../../MissingPage.html"><em>Arguments and Return Values</em></a>
+<a href="../../MissingPage.html"><img src="../../images/nativeIcon.gif" width=20 height=20 border=0></a>
+describes in detail how to access the data in the "this" parameter.
+</blockquote>
+
+<h4>See Also</h4> 
+<blockquote> 
+<a href="http://java.sun.com/JDK-beta/tools/solaris/javah.html"><img src="../../images/manPagesIcon.gif" width=10 height=20 border=0></a>
+<a href="http://java.sun.com/JDK-beta/tools/solaris/javah.html">javah Man Page</a><br> 
+<a href="../../tools/index.html"><img src="../../images/toolIcon.gif" width=20 height=20 border=0></a>
+<a href="../../tools/index.html"><em>Developer Tools</em></a>    
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step2.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="step4.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=top border=0 alt="Integrating Native Methods into Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

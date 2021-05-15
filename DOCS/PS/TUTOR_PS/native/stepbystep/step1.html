@@ -1,0 +1,132 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Step 1: Write the Java Code</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="step2.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=bottom border=0 alt="Integrating Native Methods into Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Step 1: Write the Java Code
+</h2>
+<p>
+<blockquote>
+
+The following Java code segment defines a class named
+<a href="example/HelloWorld.java"><code>HelloWorld</code></a>
+that has one method and a static code segment.
+<blockquote>
+<pre>
+class HelloWorld {
+    public native void displayHelloWorld();
+
+    static {
+	System.loadLibrary(&quot;hello&quot;);
+    }
+}
+</pre>
+</blockquote>
+
+<h4>Define a Native Method</h4>
+<blockquote>
+You can tell that the implementation for the <code>HelloWorld</code> class's
+<code>displayHelloWorld()</code> method is written in another programming language
+because of the <code>native</code> keyword that appears as part of its method
+definition:
+<blockquote>
+<pre>
+public <strong>native</strong> void displayHelloWorld();
+</pre>
+</blockquote>
+This method definition provides only the method signature for <code>displayHelloWorld()</code>
+and does not provide any implementation for it. The implementation for <code>displayHelloWorld()</code>
+is provided in a separate C language source file.
+<p>
+The method definition for <code>displayHelloWorld()</code> also indicates that the method
+is a public instance method, accepts no arguments and returns no value. For more information
+about arguments to and return values from native methods see
+<a href="../../MissingPage.html"><em>Arguments and Return Values</em></a>
+<a href="../../MissingPage.html"><img src=../../images/nativeIcon.gif width=20 height=20 border=0></a>.
+<p>
+Like other methods, native methods must be defined within a Java class.
+</blockquote>
+
+<h4>Load the Library</h4>
+<blockquote>
+The C code that implements <code>displayHelloWorld</code> must be compiled into a dynamically
+loadable library (you will do this in <a href=step6.html>Step 6: Create a Dynamically
+Loadable Library</a>) and loaded into the Java class that requires it. Loading the
+library into the Java class maps the implementation of the native method to its definition.
+<p>
+The following static code block from the <code>HelloWorld</code> class loads the
+appropriate library, named <code>hello</code>. The runtime system executes a class's
+static code block when it loads the class.
+<blockquote>
+<pre>
+static {
+    System.loadLibrary("hello");
+}
+</pre>
+</blockquote>
+The <code>loadLibrary()</code> method is part of the
+<a href="http://java.sun.com/JDK-1.0/doc/api/java.lang.System.html">System</a>
+<a href="http://java.sun.com/JDK-1.0/doc/api/java.lang.System.html"><img src="../../images/apiIcon.gif" width=20 height=20 border=0></a>
+class.
+</blockquote>
+
+<h4>Create the Main Program</h4>
+<blockquote>
+In a separate source file, named <a href=example/Main.java>Main.java</a>,
+create a Java application that instantiates <code>HelloWorld</code> and
+calls the <code>displayHelloWorld()</code> native method.
+<blockquote>
+<pre>
+class Main {
+    public static void main(String args[]) {
+	new HelloWorld().displayHelloWorld();
+    }
+}
+</pre>
+</blockquote>
+As you can see from the code sample above, you call a native method in
+the same manner as you call a regular method: just append the name
+of the method to the end of the object name with a period ('.'). A matched
+set of parentheses, ( and ), follow the method name and enclose any arguments
+to pass into the method. The <code>displayHelloWorld()</code> method doesn't
+take any arguments.
+
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="step2.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=top border=0 alt="Integrating Native Methods into Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

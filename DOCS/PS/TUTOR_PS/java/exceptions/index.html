@@ -1,0 +1,129 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Handling Errors using Exceptions</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../threads/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="definition.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     Handling Errors using Exceptions
+</h1>
+<p>
+<blockquote>
+
+If there's one golden rule of programming, it's this: errors occur in
+software programs. This we know. But what really matters is what
+happens after the error occurs. How is the error handled? Who handles
+it? Can the program recover?
+<p>
+The Java language uses <em>exceptions</em> to provide
+error handling capabilities for its programs. In this lesson you will
+learn what an exception is, how to throw and catch exceptions, what to
+do with an exception once you've caught it, and how to best use the
+exception class hierarchy provided by the Java development environment.
+<p>
+<strong>Note on terminology:</strong> Some languages (or their development
+environments) use the terms <em>raise</em> and <em>handle</em> the same way
+that Java uses <em>throw</em> and <em>catch</em>. Java inherits its
+terminology and much of its exception syntax from C++.
+
+<h4><a href=definition.html>What's an Exception and Why Do I Care?</a></h4>
+<blockquote>
+An exception is an event that occurs during the execution of a program
+that disrupts the normal flow of instructions.
+</blockquote>
+
+<h4><a href=firstencounter.html>Your First Encounter with Java Exceptions</a></h4>
+<blockquote>
+Now that you understand what exceptions are and the advantages of using
+exceptions in your Java programs, let's start writing some Java code to
+put exceptions to use.
+<p>
+If you have done any amount of Java programming
+at all, you have undoubtedly seen an error message similar to this one:
+<blockquote>
+<pre>
+FileWithGetLine.java:8: Warning: Exception java.io.FileNotFoundException must be caught, or it must be declared in throws clause of this method.
+	fis = new FileInputStream(filename);
+	      ^
+</pre>
+</blockquote>
+This message indicates that the compiler found an exception that is not being
+dealt with. The Java language requires that all non-runtime exceptions be caught
+or declared. At first, this may seem overburdensome to you, however, there
+are advantages to this requirement.
+</blockquote>
+
+<h4><a href=catchOrDeclare.html>Java's Catch or Declare Requirement</a></h4>
+<blockquote>
+Java requires that your programs either catch or declare all non-runtime
+exceptions that can be thrown within the scope of that method.
+</blockquote>
+
+<h4><a href=dealing.html>Dealing with Exceptions</a></h4>
+<blockquote>
+This page introduces an example that we will use to show you how to catch
+an exception and handle it, and alternatively, how to declare an exception
+that can be thrown within a method.
+</blockquote>
+
+<h4><a href=throwing.html>Throwing Exceptions</a></h4>
+<blockquote>
+So far, you've been catching exceptions thrown by the Java runtime system
+or classes from the Java packages. This section shows you how you can throw
+exceptions from your own Java code using the <code>throw</code> statement. All
+exceptions must be <em>Throwable</em>, that is, exceptions must inherit
+(either directly or indirectly) from the Throwable class defined in the
+java.lang package.
+</blockquote>
+
+<h4><a href=runtime.html>Runtime Exceptions--The Controversy</a></h4>
+<blockquote>
+Because the Java language does not require methods to catch or declare
+runtime exceptions, it's tempting for programmers to
+write code that always throw runtime exceptions, or
+make all of their exception subclasses inherit from RuntimeException.
+Both of these are "exception abuse" and are not recommended.
+</blockquote>
+
+<hr>
+<strong>Note to C++ Programmers:</strong>
+Java exception handlers can have a finally block
+which allows programs to cleanup after the <code>try</code> block.
+See <a href="finally.html">The finally Block</a> for more information
+about how to use the <code>finally</code> statement.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../threads/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="definition.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

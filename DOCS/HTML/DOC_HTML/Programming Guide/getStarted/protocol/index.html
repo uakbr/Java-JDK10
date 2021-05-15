@@ -1,0 +1,140 @@
+
+
+
+<html>
+<head>
+<title>The "run:" Protocol Handler</title>
+</head>
+<body>
+<a href="../applet/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../content/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/getStartedHeader.gif width=26 height=26 align=bottom border=0 alt="Getting Started"></a>
+<p>
+<hr size=4>
+
+<h1>
+     The "run:" Protocol Handler
+</h1>
+<p>
+<blockquote>
+
+<strong>Note:</strong>
+This page reflects the 1.0 Alpha 3 release of HotJava and Java.
+It will be updated for the Beta release of HotJava.
+
+<p>
+
+By following the steps on this page,
+you can create and use a protocol handler.
+When you've followed all the steps,
+your directory (folder) structure should look something like this:
+<p>
+<img src="images/protDir.gif" width=581 height=98>
+<p>
+
+<h4> Create directories </h4>
+<blockquote>
+Create the directory structure shown in the figure above:
+<samp>classes/net/www/protocol/run</samp>.
+<p>
+
+By convention, the directory structure starts
+with a directory named <samp>classes</samp>.  
+The next three directories <em>must</em> be named as shown
+(<samp>net/www/protocol</samp>).
+The final directory must have the same name as the protocol
+(without the trailing ':'); in this case, this is <samp>run</samp>.
+</blockquote>
+
+<h4> Create a Java source file for the protocol handler </h4>
+<blockquote>
+In the <samp>run</samp> directory,
+create a file named Handler.java with
+<a href=example/Handler.java>these contents</a>.  
+This file defines a class named Handler that's a subclass of
+URLStreamHandler (a class in the net.www.html package).
+</blockquote>
+
+<h4> Put an applet in the classes directory </h4>
+<blockquote>
+Put an applet in the same directory
+as the <samp>net</samp> directory you just created
+(see the figure above).
+You can use the HelloWorld applet,
+saving the <a href=example/HelloWorld.java>source code</a>
+in a file named HelloWorld.java.
+</blockquote>
+
+<h4> Compile the Java source files </h4>
+<blockquote>
+<a href="_compiling.html">Compile the protocol handler and applet</a>
+using the Java compiler.
+<P>
+
+If compilation succeeds,
+the compiler creates a file named <SAMP>Handler.class</SAMP>
+for the protocol handler and <samp>HelloWorld.class</samp> for the applet.
+If compilation fails,
+make sure you typed in and named the programs
+exactly as shown above.
+</blockquote>
+
+<h4> Set the CLASSPATH environment variable </h4>
+<blockquote>
+<a href=_classpath.html>Set the CLASSPATH environment variable</a>
+to include the classes directory,
+so that HotJava can find the run protocol handler and the test program.
+</blockquote>
+
+<h4> Start HotJava </h4>
+<blockquote>
+Even if HotJava is already running,
+you need to restart it
+so that it can read the new value of the CLASSPATH environment variable.
+<p>
+<strong>Important:</strong>
+Do <strong>NOT</strong> invoke <samp>hotjava</samp>
+from the <strong>classes</strong> directory.
+Due to a bug, HotJava can't reload an applet
+(for example, after you make changes to its code)
+when you invoke <samp>hotjava</samp> from the directory
+that contains the applet's compiled code.
+</blockquote>
+
+<h4> Load the protocol handler </h4>
+<blockquote>
+Load the "run:" protocol handler and the applet,
+using a URL such as this:
+<blockquote>
+<pre>
+run:HelloWorld
+</pre>
+</blockquote>
+You should see the applet running in the page that appears.
+</blockquote>
+
+
+<h4>Now what?</h4>
+<blockquote>
+Now you can either:
+<ul>
+<li> Go to the next lesson, <a href="../content/index.html">The "text/plain" Content Handler</a>,
+     which steps you through writing a <em>content handler</em>.
+<li> Learn more about writing protocol handlers by going to the
+     <a href="../../MissingPage.html"><em>Extending HotJava</em></a>
+     <a href="../../MissingPage.html"><img src="../../images/extendingIcon.gif" width=20 height=20 border=0></a>
+     trail.
+</ul>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<a href="../applet/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../content/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/getStartedHeader.gif width=26 height=26 align=top border=0 alt="Getting Started"></a>
+</body>
+</html>

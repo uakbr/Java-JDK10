@@ -1,0 +1,97 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The CLASSPATH Environment Variable</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="packages.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Managing Your Programming Environment</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The CLASSPATH Environment Variable
+</h2>
+<p>
+<blockquote>
+
+To run a stand-alone Java application, you specify the name of
+the Java application that you wish to execute to the Java interpreter.
+To run an applet, you specify the applet's name with an APP tag within
+an HTML file. The HotJava browser passes the applet's name to the
+Java interpreter.
+In either case, the application or applet that you are
+running could be anywhere on your system or on the network. Also,
+the application or applet might use other classes or objects that
+are in the same or different location.
+<p>
+Because your classes could be anywhere, you must indicate to the
+Java interpreter where it can find the classes that you are trying to run.
+You do this with the CLASSPATH environment variable.
+The CLASSPATH environment variable is comprised of a list of
+directory names that contain compiled Java classes.
+The actual construct of CLASSPATH depends on the
+<a href=_classpath.html>system</a> you are running.
+<p>
+When the interpreter gets a classname, either from the command line,
+from the HotJava browser, or from an application or applet, the interpreter
+searches each directory in the CLASSPATH until it finds the
+class it's looking for.
+<p>
+You should put the top-level directory that contains your Java classes in your
+CLASSPATH. By convention, many people have a <code>classes</code> directory
+in their home directory where they put all of the Java code. If you have
+such a directory, you should put that directory in your CLASSPATH. However,
+when you are working with applets, it's convenient to put the applet
+in a <code>classes</code> directory underneath the directory
+where the HTML file is that contains the applet.
+For this and other reasons, it's often convenient to put dot
+('.')--the current directory--in the CLASSPATH as well.
+<p>
+The classes included with the Java development environment are automatically
+available to you because the interpreter automatically appends the
+correct directory to your CLASSPATH when it starts up.
+
+<h4>Order is Important</h4>
+<blockquote>
+When the Java interpreter is looking for a class, it searches the
+directories indicated by your CLASSPATH in order until it finds a class
+with the correct name. The Java interpreter runs the first class
+with the correct name that it encounters and does not search the
+remaining directories. Normally, it's best to
+give your classes unique names, but if you can't avoid it, make
+sure that your CLASSPATH searches your classes in the proper order.
+Keep this in mind when setting up your
+CLASSPATH and your source code hierarchy.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="packages.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Managing Your Programming Environment</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

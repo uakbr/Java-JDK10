@@ -1,0 +1,80 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Step 4: Create a Stubs File</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step3.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="step5.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=bottom border=0 alt="Integrating Native Methods into Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Step 4: Create a Stubs File
+</h2>
+<p>
+<blockquote>
+
+In addition to the <code>.h</code> file that you generated in the
+previous step, you must also use <code>javah</code> to generate a
+<em>stub</em> file. The stub file contains C code that provides the
+glue that holds the Java class and its parallel C structure together.
+<p>
+To <a href=_stubjavah.html>generate a stub</a> file use <code>javah</code>'s
+<code>-stubs</code> option. Again remember to run <code>javah</code>
+on the Java class.
+<p>
+By default, <code>javah</code> will place the resulting stub file
+in the same directory as the <code>.class</code> file. You can use the
+<code>-d</code> option to force <code>javah</code> to put the generated
+stub file in a different directory.
+<p>
+Similar to the <code>.h</code> file
+that <code>javah</code> generates, the name of the stubs file is the
+class name with <code>.c</code> appended to the end. In the "Hello World!"
+example that you've been working with throughout this lesson, the stub
+file is called <a href="example/HelloWorld.c"><code>HelloWorld.c</code></a>.
+<p>
+For the moment, all you really need to know about the stub file is that
+you will later compile it into the dynamically loadable library that
+you create in
+<a href=step6.html><em>Step 6: Create a Dynamically Loadable Library</em></a>.
+
+<h4>See Also</h4>
+<blockquote>
+<a href="http://java.sun.com/JDK-1.0/tools/solaris/javah.html"><img src="../../images/manPagesIcon.gif" width=10 height=20 border=0></a>
+<a href="http://java.sun.com/JDK-1.0/tools/solaris/javah.html">javah Man Page</a><br>
+<a href="../../tools/index.html"><img src="../../images/toolIcon.gif" width=20 height=20 border=0></a>
+<a href="../../tools/index.html"><em>Developer Tools</em></a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step3.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="step5.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=top border=0 alt="Integrating Native Methods into Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

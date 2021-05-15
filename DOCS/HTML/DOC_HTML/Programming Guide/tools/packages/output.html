@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Output Streams</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="input.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="java.util.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Output Streams
+</h2>
+<p>
+<blockquote>
+
+The following diagram shows the class hierarchy for the output
+stream classes provided by the java.io package.
+OutputStream inherits from the Object class; four classes
+inherit directly from OutputStream; FilterOutputStream is an
+abstract class with three direct descendents.<br>
+<strong>Note:</strong> you can click on any of the class symbols
+in the following image to visit the API documentation for that class.
+
+<p>
+<applet codebase=betaclasses code=ImageMap.class width=424 height=153>
+<param name="img" value="images/outputstreams.trans.gif">
+<param name="highlight" value="brighter30">
+<param name="area1" value="HrefButtonArea,1,64,91,27,http://java.sun.com/JDK-beta/api/java.io.OutputStream.html">
+<param name="area2" value="HrefButtonArea,127,10,128,27,http://java.sun.com/JDK-beta/api/java.io.FileOutputStream.html">
+<param name="area3" value="HrefButtonArea,127,46,128,27,http://java.sun.com/JDK-beta/api/java.io.PipedOutputStream.html">
+<param name="area4" value="HrefButtonArea,127,82,128,27,http://java.sun.com/JDK-beta/api/java.io.FilterOutputStream.html">
+<param name="area5" value="HrefButtonArea,127,118,128,27,http://java.sun.com/JDK-beta/api/java.io.ByteArrayOutputStream.html">
+<param name="area6" value="HrefButtonArea,298,26,120,27,http://java.sun.com/JDK-beta/api/java.io.DataOutputStream.html">
+<param name="area7" value="HrefButtonArea,298,63,120,27,http://java.sun.com/JDK-beta/api/java.io.PrintStream.html">
+<param name="area8" value="HrefButtonArea,298,100,120,27,http://java.sun.com/JDK-beta/api/java.io.BufferedOutputStream.html">
+<param name="area9" value="ClickArea,0,0,424,153">
+
+<app class=ImageMap img="images/outputstreams.trans.gif"
+        highlight=brighter30
+        area1=HrefButtonArea,3,62,91,27,http://java.sun.com/JDK-beta/api/java.io.OutputStream.html
+        area2=HrefButtonArea,130,8,128,27,http://java.sun.com/JDK-beta/api/java.io.FileOutputStream.html
+        area3=HrefButtonArea,130,44,128,27,http://java.sun.com/JDK-beta/api/java.io.PipedOutputStream.html
+        area4=HrefButtonArea,130,80,128,27,http://java.sun.com/JDK-beta/api/java.io.FilterOutputStream.html
+        area5=HrefButtonArea,130,116,128,27,http://java.sun.com/JDK-beta/api/java.io.ByteArrayOutputStream.html
+        area6=HrefButtonArea,301,24,120,27,http://java.sun.com/JDK-beta/api/java.io.DataOutputStream.html
+        area7=HrefButtonArea,301,61,120,27,http://java.sun.com/JDK-beta/api/java.io.PrintStream.html
+        area8=HrefButtonArea,301,98,120,27,http://java.sun.com/JDK-beta/api/java.io.BufferedOutputStream.html
+        area9=ClickArea,0,0,424,153
+>
+</applet>
+
+<p>
+Each of the InputStreams provided by the java.io package
+are intended for a different purpose, either writing to
+a different type of output source or writing a specific type
+or form of data.
+
+<h4>Simple Output Streams</h4>
+<blockquote>
+To write to a file: use FileOutputStream.<br>
+To write to a pipe: use PipedOutputStream. Typically attached to a PipedInputStream.<br>
+To write to a buffer: use ByteArrayOutput.<br>
+</blockquote>
+ 
+<h4>Filter Output Streams</h4>
+<blockquote>
+FilterOutputStream is an abstract class that defines
+the interface for filtered output streams. Filtered output streams
+have some intelligence built into them
+about the data that they are writing. You are no doubt already
+familiar with one of the descendents of FilterOutputStream: the PrintStream class.
+<code>System.out</code> and <code>System.err</code> are both instances
+of PrintStream. PrintStream provides extra methods for
+conveniently printing Strings and other data.
+
+<h4>How to Use the Filtered Streams</h4>
+<blockquote>
+To write primitive Java data types: use DataOutputStream.<br>
+For an efficient stream that buffers while writing: use BufferedOutputStream.<br>
+For a stream with convenient printing methods: use PrintStream.<br>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="input.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="java.util.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Package Tour</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

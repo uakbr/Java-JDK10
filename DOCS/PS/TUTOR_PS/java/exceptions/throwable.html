@@ -1,0 +1,111 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The Throwable Class and Its Subclasses</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="throw.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="creating.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Throwable Class and Its Subclasses
+</h2>
+<p>
+<blockquote>
+
+As you learned on the previous page, you can only throw objects that derive
+from the Throwable class. This includes direct descendents (that is, objects
+that derive directly from the Throwable class) as well as indirect descendents
+(objects that derive from children or grandchildren of the Throwable class).
+
+<p>
+This diagram illustrates the class hierarchy of the Throwable class and its
+significant subclasses.
+<p>
+<img src="images/throwableHierarchy.trans.gif" width=495 height=258>
+<p>
+As you can see from the diagram, Throwable has two direct descendants:
+Error and Exception.
+
+<h4>Errors</h4>
+<blockquote>
+When a dynamic linking failure or some other "hard"
+failure in the virtual machine occurs, the virtual
+machine throws an Error. Typical Java programs
+should not catch Errors. In addition, it's unlikely that
+typical Java programs will ever throw Errors either.
+</blockquote>
+
+<h4>Exceptions</h4>
+<blockquote>
+Most programs throw and catch objects that derive from the
+Exception class. Exceptions indicate that a problem occurred
+but that problem is not a serious systemic problem. Most programs
+you write will throw and catch Exceptions.
+<p>
+The Exception class has many descendents defined in the Java packages
+which indicate various types of exceptions that can occur.
+For example, IllegalAccessException signals that a particular method
+coult not be found, and InstantiationException indicates that a program
+attempted to instantiate an abstract class or an interface.
+<p>
+One Exception subclass has special meaning in the Java language and
+deserves mention here: RuntimeException.
+</blockquote>
+
+<a name=RuntimeExceptions>
+<h4>RuntimeExceptions</h4>
+</a>
+<blockquote>
+The RuntimeException class represents exceptions that occur within the Java
+virtual machine (during runtime). An example of a runtime exception is
+NullPointerException which occurs when a method tries to access a member
+of an object through a null reference. A NullPointerException can occur anywhere
+a program tries to dereference a reference to an object, and the cost of checking
+for the exception often outweighs the benefit of catching it.
+<p>
+Because runtime exceptions are so ubiquitous and attempting to catch or
+declare all of them all the time would be a fruitless exercise and a
+fruitful source of unreadable and unmaintainable code, the compiler allows
+runtime exceptions to go uncaught and undeclared.
+<p>
+The Java packages define several RuntimeException classes. You can
+catch these exceptions just like other exceptions. However, a method is not
+required to declare that it throws RuntimeExceptions. In addition, you
+can create your own RuntimeException subclasses.
+<a href=runtime.html>Runtime Exceptions--The Controversy</a> contains a thorough
+discussion about when and how to use runtime exceptions.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="throw.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="creating.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Using an Object</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="objectcreation.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="garbagecollection.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Using an Object
+</h2>
+<p>
+<blockquote>
+
+Once you've created an object, you will very likely want to use it for
+something. Suppose, for example, that in the user of your drawing application
+clicked the mouse over the rectangle and dragged it to a new location.
+Your drawing application should keep pace and update the x, y position of
+the memory representation of the on-screen rectangle.
+<p>
+The Rectangle class provides two equivalent ways to do this:
+<ol>
+<li>
+call the <code>move()</code> method
+<li>
+manipulate the object's x, y variables directly
+</ol>
+Option 1 is often considered "more object-oriented" and safer because you
+manipulate the object's variables indirectly through its protective layer
+of methods rather than twiddling directly with its variables. Manipulating
+an object's variables directly is often considered error-prone; you could
+potentially put the object into an inconsistent state. However, a
+class would not make its variables available for direct manipulation by other
+objects if it were possible for those manipulations to put the object in
+an inconsistent state. So, we can assume that manipulating a Rectangle's x
+and y variables directly is as safe as calling its <code>move()</code>method.
+<p>
+A class can restrict or allow access to its instances' variables and methods
+by other objects. The following two sections discuss calling methods and
+manipulating variables that have been made accessible to other objects. To
+learn more about specifying access to an class's methods and variables
+refer to <a href="../../MissingPage.html">Missing Page</a>.
+
+<a name=methods>
+<h4>Calling an Object's Method</h4>
+</a>
+<blockquote>
+First, let's focus on calling the rectangle's <code>move()</code> method.
+The next section will show you how to manipulate the Rectangle's x and y
+variables directly.
+<p>
+<a name=objectreference>
+To call an object's method,</a> simply append the method name to an object
+reference with an intervening '.' (period), and provide any arguments to the method
+within enclosing parentheses. If the method does not require any arguments,
+just use empty parentheses.
+<blockquote>
+<pre>
+object.method(<em>argumentList</em>);
+   <em>or</em>
+object.method();
+</pre>
+</blockquote>
+Back to the drawing application, if the user moved the rectangle named
+<code>rect</code> to a new location, say 244, 47, the call to <code>rect</code>'s
+<code>move()</code> method would look like this:
+<blockquote>
+<pre>
+rect.move(244, 47);
+</pre>
+</blockquote>
+This Java statement calls <code>rect</code>'s <code>move()</code> method
+with two integer parameters, 244 and 47. This statement has the effect 
+of moving the <code>rect</code> object to the x, y location 244, 47.
+If you wanted to move a different rectangle, named <code>bob</code> for
+example, to a new location you would write:
+<blockquote>
+<pre>
+bob.move(244, 47);
+</pre>
+</blockquote>
+As you see from these examples, method calls are directed at a specific
+object; the object specified in the method call is the object that responds
+to the instruction. Method calls are also called <em>messages</em>. Just
+like real-world messages, object messages must be addressed to a particular
+recipient. You get different results depending on which object is the recipient
+of the message. In the example above, when you send the object named <code>rect</code>
+a <code>move</code> message, <code>rect</code> moves to the new location.
+When you send the object named <code>bob</code> a <code>move</code> message,
+<code>bob</code> moves. Very different results.
+<p>
+Like other Java statements, a method call is an expression and evaluates
+to some value. The value of a method call is its return value, if it has
+one. You will often wish to assign the return value of a method to a variable
+or use the method call within the scope of another expression or statement. The
+<code>move()</code> method doesn't return a value (it's declared void). However,
+Rectangle's <code>inside()</code> method does. The <code>inside()</code> method
+takes an x, y coordinate and returns true if that point lies within the rectangle.
+So you could use the <code>inside()</code> method to determine if some point, say
+the current mouse location, was inside the rectangle and do something special
+if it were.
+<blockquote>
+<pre>
+if (rect.inside(mouse.x, mouse.y)) {	// mouse is in the rectangle
+    . . .
+} else {				// mouse is outside of the rectangle
+    . . .
+}
+</pre>
+</blockquote>
+Remember that the method call is like a message to the object named. In this
+case, the object named is the Rectangle named <code>rect</code>. Thus,
+<blockquote>
+<pre>
+rect.inside(mouse.x, mouse.y)
+</pre>
+</blockquote>
+is asking <code>rect</code> if the mouse cursor location represented by
+<code>mouse.x</code> and <code>mouse.y</code> is contained within it. You would
+likely get a different response if you sent the same message to <code>bob</code>.
+<p>
+As stated <a href="#objectreference">previously</a>, the <em>object</em> in
+the method call <code>object.method()</code> must be an <em>object reference</em>.
+You are not limited to using the object's name here (if it even has one), you can
+use an expression to determine the object to which to send a message. One common
+use of an expression as object reference is just after an object is created. For
+example, you can create an object and immediately thereafter call one of its methods:
+<blockquote>
+<pre>
+new Rectangle(0, 0, 100, 50).equals(anotherRect)
+</pre>
+</blockquote>
+The expression <code>new Rectangle(0, 0, 100, 50)</code> evaluates to an
+object reference that refers to a Rectangle object. Thus you can use the
+dot notation to then call the new rectangle's <code>equals()</code> method
+to determine if the new rectangle is equal to the one specified in
+<code>equals()</code>'s argument list.
+</blockquote>
+
+<a name=variables>
+<h4>Referencing an Object's Variables</h4>
+</a>
+<blockquote>
+You reference an object's variables in the same way that you
+call its methods--simply append the variable name to an object
+reference with an intervening '.' (period).
+<blockquote>
+<pre>
+object.variable
+</pre>
+</blockquote>
+You can use this notation to either view or modify an object's variables.
+For example, we can change <code>rect</code>'s height and width using
+the following two statements:
+<blockquote>
+<pre>
+rect.height = 15;
+rect.width = 37;
+</pre>
+</blockquote>
+Or you can calculate the rectangle's area using these statements
+<blockquote>
+<pre>
+area = rect.height * rect.width;
+</pre>
+</blockquote>
+Similar to method calls, when you reference a variable through an object,
+you are referencing a particular instances variables. If <code>bob</code>
+and <code>rect</code> are both rectangles of different height and widths,
+this instruction
+<blockquote>
+<pre>
+area = rect.height * rect.width;
+</pre>
+</blockquote>
+calculates the area of the rectangle named <code>rect</code> and
+this instruction
+<blockquote>
+<pre>
+area = bob.height * bob.width;
+</pre>
+</blockquote>
+calculates the area of the rectangle named <code>bob</code>.
+<p>
+As with method calls, the <em>object</em> in <code>object.variable</code> must
+be an <em>object reference</em>. You are not limited to using just the object's
+name here (if it even has one), you can use an expression to specify the object
+whose variables you want to inspect. One common use of an expression as object
+reference is just after an object is created. For example, you can find out
+the height of an uninitialized Rectangle with:
+<blockquote>
+<pre>
+height = new Rectangle().height;
+</pre>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="objectcreation.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="garbagecollection.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

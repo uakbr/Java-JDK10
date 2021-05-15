@@ -1,0 +1,165 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Using System Resources</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../environment/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="using.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     Using System Resources
+</h1>
+<p>
+<blockquote>
+ 
+Often, a program requires access to system resources such as properties,
+standard input and output streams or the current time. Your program
+could use these resources directly from the current runtime environment
+but your program would only be able to run in the environment for which
+it was written. Each time you wanted to run the program in a new environment,
+you would have to "port" the program by rewriting the system-dependent
+sections of code.
+<p>
+The Java development environment solves this problem by allowing your program
+to use system resources through a system-independent programming interface
+implemented by the
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.System.html">System</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.System.html"><img src="../../images/apiIcon.gif" width=20 height=20 border=0></a>
+class (a member of the
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html">java.lang</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html"><img src="../../images/apiIcon.gif" width=20 height=20 border=0></a>
+package).
+<p>
+As you can see from this diagram, the System class allows your Java programs
+to use system resources but insulates them from system-specific details.
+<p>
+<center><img src="images/conceptual.trans.gif" width=303 height=215></center>
+<p>
+If you've experimented with other lessons in the
+<strong>Java Programmer's Guide</strong>, you've no doubt already seen the
+System class's standard output stream used by several examples to display text.
+Other system resources available through the System class include:
+<ul>
+<li>
+standard input, output and error streams
+<li>
+system properties
+<li>
+garbage collection
+<li>
+loading dynamic libraries
+<li>
+and miscellany, including copying arrays, getting the current time, exiting
+the runtime environment and using the security manager
+</ul>
+
+<h4><a href=using.html>Using the System Class</a>
+</h4>
+<blockquote>
+All of System's methods and variables are class method and class variables.
+That is, you don't instantiate the System class to use it; you use the class
+directly.
+</blockquote>
+
+<h4><a href=ostreams.html>Standard Output and Error Streams</a>
+</h4>
+<blockquote>
+Probably the most often used items from the System class are the
+streams used for writing text. System provides two streams for writing
+text--the standard output and standard error streams.
+</blockquote>
+
+<h4>Standard Input Stream</h4>
+<blockquote>
+In addition to the two output streams, System provides a stream for reading
+text--the standard input stream. The example program in
+<em>The Nuts and Bolts of the Java Language</em> uses the standard input
+stream to count the number of characters typed in by the user. Visit
+<a href=../../java/nutsandbolts/input.html>The Standard Input Stream</a>
+<a href=../../java/nutsandbolts/input.html><img src=../../images/javaIcon.gif width=20 height=20 border=0></a>
+in that lesson for a discussion about the standard input stream.
+</blockquote>
+
+<h4><a href="../../MissingPage.html">System Properties</a>
+</h4>
+<blockquote>
+[PENDING: this page is under construction]
+</blockquote>
+
+<h4><a href="../../MissingPage.html">Garbage Collection</a>
+</h4>
+<blockquote>
+[PENDING: this page is under construction]
+</blockquote>
+
+<h4><a href="../../MissingPage.html">Loading Dynamic Libraries</a>
+</h4>
+<blockquote>
+[PENDING: this page is under construction]
+</blockquote>
+
+<h4><a href="misc.html">Miscellaneous System Methods</a>
+</h4>
+<blockquote>
+The System class includes several miscellaneous methods that let you
+get the current time in milliseconds (<code>currentTimeMillis()</code>),
+exit the interpreter (<code>exit()</code>), copy arrays (<code>arrayCopy()</code>)
+and work with the security manager (<code>getSecurityManager()</code> and
+<code>setSecurityManager</code>). This page currently only
+contains information about the <code>currentTimeMillis()</code> and
+<code>exit()</code> methods.
+</blockquote>
+
+<h4><a href=runtime.html>Using System-Dependent Resources</a>
+</h4>
+<blockquote>
+Most system programming needs are met through the programming interface
+provided by the System class. However, in rare cases, a program must
+bypass the system-independent interface of the System class and use system
+resources directly from the runtime environment. The Java environment
+provides a
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.Runtime.html">Runtime</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.Runtime.html"><img src="../../images/apiIcon.gif" width=20 height=20 border=0></a>
+object (another member of the
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html">java.lang</a>
+<a href="http://java.sun.com/JDK-1.0/api/java.lang.html"><img src="../../images/apiIcon.gif" width=20 height=20 border=0></a>
+package) which represents the current runtime environment
+that you can use to access system resources directly.<br>
+<strong>Note:</strong> messaging the Runtime object directly compromises
+your ability to run your program on different systems. You should only do
+this in special situations.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../environment/index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="using.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

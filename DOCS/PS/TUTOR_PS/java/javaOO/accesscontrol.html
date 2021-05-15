@@ -1,0 +1,272 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Controlling Access to a Class's Variables</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="variables.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="classvars.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Controlling Access to a Class's Variables
+</h2>
+<p>
+<blockquote>
+
+The Java language supports five distinct access levels for
+variables: private, private protected, protected, public, and,
+if left unspecified, "friendly". The following chart shows
+the access level permitted by each specifier.
+<blockquote>
+<pre>
+				sub-	pack-
+Specifier		class	class	age	world
+-----------------------------------------------------
+private			X
+private protected	X	X
+protected		X	X*	X
+public			X	X	X	X
+
+friendly		X	 	X
+</pre>
+</blockquote>
+The first column indicates whether or not the class itself has access
+to the variable defined by the access specifier. The second
+column indicates whether or not subclasses of the class (regardless of
+which package they are in) have access to the variable. The
+third column indicates whether or not classes in the same package
+(regardless of their parentage) as the class have access to the
+variable. And finally, the fourth column indicates that all
+classes have access to the variable.
+<p>
+You'll note that the protected access specifier/sub-class intersection
+has an '*' -- this indicates that this particular access case
+has a special caveat which is discussed in detail <a href=#protectedcaveat>below</a>.
+<p>
+Let's look at each access level in more detail.
+
+<h4>Private</h4>
+<blockquote>
+Let's begin with the most restrictive access level--private.
+A private variable is only accessible to the class in which
+it is defined.
+To declare a private variable, use the keyword <code>private</code>.
+For example, the following class defines one private variable within it:
+<blockquote>
+<pre>
+class Alpha {
+    private int iamprivate;
+}
+</pre>
+</blockquote>
+Objects of type Alpha can inspect or modify the <code>iamprivate</code> variable,
+but objects of other types cannot. For example, the following class,
+regardless of which package it is in or its parentage, cannot access the <code>iamprivate</code>
+variable within the Alpha class.
+<blockquote>
+<pre>
+class Beta {
+    void accessMethod() {
+        Alpha a = new Alpha();
+        a.iamprivate = 10;	// illegal
+    }
+}
+</pre>
+</blockquote>
+You can tell when one of your classes is attempting to access a variable to
+which it does not have access--the compiler will print an error message similar
+to the following and refuse to compile your program.
+<blockquote>
+<pre>
+Beta.java:9: Variable iamprivate in class Alpha not accessible from class Beta.
+        a.iamprivate = 10;     // illegal
+         ^
+1 error
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>Private Protected</h4>
+<blockquote>
+The next most restrictive access specified is private protected. This
+access level includes the same access level as private plus allows
+any of the class's subclasses to access the variable.
+To declare a private protected variable, use the keywords <code>private protected</code>.
+For example, the following class defines one one private protected variable within it:
+<blockquote>
+<pre>
+class Alpha {
+    private protected int iamprivateprotected;
+}
+</pre>
+</blockquote>
+Objects of type Alpha can inspect or modify the <code>iamprivateprotected</code>
+variable. In addition, subclasses of Alpha also have access to
+<code>iamprivateprotected</code>. For instance, this subclass of
+Alpha can assign its <code>iamprivateprotected</code> variable to
+that of another Alpha object.
+<blockquote>
+<pre>
+class Beta extends Alpha {
+    void modifyVariable(Alpha a) {
+        a.iamprivateprotected = this.iamprivateprotected;	// legal
+    }
+}
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>Protected</h4>
+<blockquote>
+The next access level specifier is protected which allows the class itself,
+subclasses (with a caveat), and all classes in the same package to access
+the variable.
+To declare a protected variable, use the keyword <code>protected</code>.
+For example, take this version of the Alpha class which
+is now declared to be within a package named "Greek" and which has a
+single protected variable declared within it.
+<blockquote>
+<pre>
+package Greek;
+
+class Alpha {
+    protected int iamprotected;
+}
+</pre>
+</blockquote>
+Now, suppose that the class, Beta, was also declared to be a member of
+the Greek package. The Beta class can legally access the <code>iamprotected</code>
+variable declared within the Alpha class.
+<blockquote>
+<pre>
+package Greek;
+
+class Beta {
+    void accessMethod() {
+        Alpha a = new Alpha();
+        a.iamprotected = 10;	// legal
+    }
+}
+</pre>
+</blockquote>
+<a name=protectedcaveat>
+That's pretty straightforward.</a> Now, let's investigate how subclasses of
+Alpha can access protected variables.
+<p>
+Let's introduce a new class, Gamma, that
+derives from Alpha but lives in a different package. The Gamma class can
+access the <code>iamprotected</code> variable, but only on objects of type
+Gamma or its subclasses. For example, the <code>accessMethod()</code>
+of the following class attempts to access the <code>iamprotected</code>
+variable on an object of type ProtectedAlpha, which is illegal, and on an object
+of type Gamma, which is legal.
+<blockquote>
+<pre>
+class Gamma {
+    void accessMethod(ProtectedAlpha a) {
+        a.iamprotected = 10;    //illegal
+        this.iamprotected = 10;
+    }
+}
+</pre>
+</blockquote>
+If a class is both a subclass of and in the same package as the class
+with the protected variable, then the class has access to the protected
+variable (its package status takes precedence over its subclass status).
+</blockquote>
+
+<h4>Public</h4>
+<blockquote>
+Now for the easiest access specifier--public. To declare a public variable,
+use the keyword <code>public</code>. For example,
+<blockquote>
+<pre>
+class Alpha {
+    public int iampublic;
+}
+</pre>
+</blockquote>
+Any class, in any package, has access to a class's public variables.
+For example, this version of the Beta class
+<blockquote>
+<pre>
+class Beta {
+    void accessMethod() {
+	Alpha a = new Alpha();
+        a.iampublic = 10;	// legal
+    }
+}
+</pre>
+</blockquote>
+can legally inspect and modify the <code>iampublic</code> variable
+in the Alpha class.
+</blockquote>
+
+<h4>Friendly</h4>
+<blockquote>
+And finally, the last access level is what you get if you don't
+explicitly set a variable's access to one of the other levels.
+For example, this version of the Alpha class declares a single
+"friendly" variable and lives within the Greek package.
+<blockquote>
+<pre>
+package Greek;
+
+class Alpha {
+    int iamfriendly;
+}
+</pre>
+</blockquote>
+The Alpha class has access to <code>iamfriendly</code>. In
+addition, all the classes declared within the same package as
+Alpha also have access to <code>iamfriendly</code>.
+For example, suppose that both Alpha and Beta were declared
+as part of the Greek package, then this Beta class
+<blockquote>
+<pre>
+package Greek;
+
+class Beta {
+    void accessMethod() {
+        Alpha a = new Alpha();
+        a.iamprotected = 10;	// legal
+    }
+}
+</pre>
+</blockquote>
+could legally access <code>iamfriendly</code>.
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="variables.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="classvars.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,554 @@
+%PDF-1.1
+%‚„œ”
+1 0 obj
+[/CalRGB
+<<
+/WhitePoint [0.9505 1 1.089]
+/Gamma [1.8 1.8 1.8]
+/Matrix [0.4497 0.2446 0.02518 0.3163 0.672 0.1412 0.1845 0.08334 0.9227]
+>>
+]
+endobj
+3 0 obj
+<<
+/Length 6995
+>>
+stream
+BT
+/F2 1 Tf
+8 0 1.7 8 99.609 51.534 Tm
+0 Tr
+0 g
+0 Tc
+-0.008 Tw
+(Java Source License)Tj
+46.828 0 TD
+[(1)73(1/95)]TJ
+-21.657 0.602 TD
+-0.002 Tw
+[(1)-61( of  2)]TJ
+21.912 -1.8 TD
+-0.009 Tw
+[(Rev)69(. 2.0)]TJ
+/F4 1 Tf
+8 0 0 8 228.699 714.274 Tm
+-0.001 Tw
+[(JA)72(V)71(A)0( INTERNAL USE SOURCE LICENSE)]TJ
+-17.334 -3.324 TD
+[(1.0)-2210(LICENSE GRANT)]TJ
+/F2 1 Tf
+0 -1.977 TD
+-0.094 Tw
+[(1.1)-2210(Sun)6( grants to you \(\252Licensee\272\) a nontransferable, nonexclusive, royalty\261free, limited license to \(i\) use the Java source)]TJ
+0 -1.304 TD
+-0.176 Tw
+[(code)6( \(\252Licensed Software\272\) for internal evaluation, research, educational purposes only)70(, and not for productive use, \(ii\) modify the)]TJ
+T*
+0.005 Tw
+[(Licensed)11( Software to create derivative works, including ports, and \(iii\) compile the Licensed Software and derivative works)]TJ
+0 -1.311 TD
+-0.133 Tw
+[(prepared)18( in accordance with subsection \(ii\). Other than the limited rights granted in this License,  Licensee acquires no right, title)]TJ
+0 -1.304 TD
+-0.069 Tw
+[(or interest in or to the Licensed Software, and Licensee shall have no right to distribute the LIcensed Software, i.e. the Source)]TJ
+T*
+-0.047 Tw
+[(Code,)10( except that Licensee may post to the internet only those modifications to the Source Code created by Licensee during)]TJ
+0 -1.311 TD
+-0.176 Tw
+[(porting)16( \(i.e., dif)20(fs\).  Sun owns all modifications, enhancements and bug fixes made by or for Licensee; provided that Licensee shall)]TJ
+0 -1.304 TD
+-0.01 Tw
+[(retain)13( all rights to any independently developed software, such as applications, developed by or for Licensee.)]TJ
+0 -2.268 TD
+0.009 Tw
+[(1.2)-2210(Sun)6( grants to Licensee the royalty\261free right to distribute binary derived and compiled from the Licensed )9(Software)]TJ
+0 -1.304 TD
+-0.018 Tw
+[(\(\252Derived)7( Binaries\272\), in accordance with the terms and conditions of this License  provided, that: \(i\) Derived Binaries are not)]TJ
+T*
+-0.113 Tw
+[(bundled,)22( combined or associated in any way with a product, \(ii\) there is no charge associated with such distribution, \(iii\) Derived)]TJ
+0 -1.311 TD
+-0.135 Tw
+[(Binaries)11( must be compatible with the then\261current version of the publicly available test suite supplied by Sun which verifies Java)]TJ
+0 -1.304 TD
+-0.176 Tw
+[(compatibility)22( \(\252T)112(est Suite\272\), and \(iv\) in the event Licensee creates additional classes or otherwise extends the public programming)]TJ
+T*
+-0.064 Tw
+[(interface)14( \(AAPI\), Licensee must publish the specification for such extensions for use by )7(third )7(party )7(developers )7(of )7(Java\261based)]TJ
+T*
+-0.161 Tw
+[(software.)10( In the event such distribution is fee\261based, associated with a product, or designed for productive internal use, Licensee)]TJ
+0 -1.311 TD
+-0.01 Tw
+[(must execute a commercial license agreement with Sun.)]TJ
+0 -2.268 TD
+-0.15 Tw
+[(1.3)-2210(This License, including any licenses and rights granted hereunder)56(, the Licensed Software and Derived Binaries may not)]TJ
+0 -1.304 TD
+-0.073 Tw
+[(be sold, leased, assigned, sublicensed or otherwise transferred, in whole or in part, by Licensee. Sun is under no obligation to)]TJ
+T*
+-0.006 Tw
+[(provide)11( maintenance or support for the Licensed Software, or to notify Licensee or upgrades to the T)112(est Suites or Licensed)]TJ
+T*
+(Software.)Tj
+/F4 1 Tf
+0 -2.941 TD
+0 Tw
+[(2.0)-2210(COPYRIGHTS AND TRADEMARKS)]TJ
+/F2 1 Tf
+0 -1.984 TD
+-0.042 Tw
+[(2.1)-2210(Licensee)11( shall reproduce and apply any copyright or other proprietary rights notices included on or embedded in the)]TJ
+0 -1.304 TD
+-0.166 Tw
+[(Licensed)11( Software to any copies of the Licensed Software or Derived Binaries, in whole or in part, in any form. Licensee shall have)]TJ
+T*
+-0.162 Tw
+[(no right to use any Sun trademarks, trade names or trade dress absent a separate written agreement between Sun and Licensee.)]TJ
+0 -2.268 TD
+-0.014 Tw
+[(2.2)-2210(In order to preserve Java compatibility across all platforms, Derived Binaries must pass the then\261current version of)]TJ
+0 -1.304 TD
+-0.18 Tw
+[(Sun')30(s )-8(Java )-8(T)112(est Suite, and must remain compatible with subsequent versions of the T)112(est )9(Suites )9(and )9(upgraded )9(Licensed )9(Software.)]TJ
+0 -1.311 TD
+0.076 Tw
+[(If Licensee wants to use Sun')20(s trademarks or compatibility logos for Java, it must execute a separate trademark license)]TJ
+0 -1.304 TD
+-0.007 Tw
+[(agreement)24( with Sun.)]TJ
+/F4 1 Tf
+0 -2.941 TD
+[(3.0)-2210(FEES)]TJ
+/F2 1 Tf
+0 -1.977 TD
+-0.008 Tw
+(Use of the Licensed Software in accordance with the terms of this License shall not require payment of a license fee.)Tj
+/F4 1 Tf
+0 -2.941 TD
+-0.004 Tw
+[(4.0)-2210(TERM AND TERMINA)70(TION)]TJ
+/F2 1 Tf
+0 -1.977 TD
+-0.007 Tw
+[(4.1)-2210(This License shall commence on the date it is signed by Sun, and expire five \(5\) years thereafter)56(.)]TJ
+0 -2.268 TD
+-0.125 Tw
+[(4.2)-2210(Sun)6( may immediately terminate this License upon written notice to Licensee, at Sun')20(s option, if Licensee fails to comply)]TJ
+0 -1.304 TD
+-0.051 Tw
+[(with any of the material terms or conditions of this License.  Upon termination of this License, use of all Licensed Software by)]TJ
+0 -1.311 TD
+-0.012 Tw
+[(Licensee)11( shall be immediately discontinued and the license and rights granted hereunder shall expire.)]TJ
+/F4 1 Tf
+0 -2.934 TD
+-0.004 Tw
+[(5.0)-2210(DISCLAIMER OF W)56(ARRANTY)]TJ
+/F2 1 Tf
+0 -1.984 TD
+-0.007 Tw
+[(5.1)-2210(The Licensed Software is provided \252AS IS\272 and without any warranty of any kind.)]TJ
+0 -2.268 TD
+-0.104 Tw
+[(5.2)-2210(SUN DOES NOT MAKE AND HEREBY DISCLAIMS ANY EXPRESS OR IMPLIED W)34(ARRANTIES INCLUDING, BUT)]TJ
+0 -1.304 TD
+-0.135 Tw
+[(NOT LIMITED T)20(O, THE W)34(ARRANTIES OF NON\261INFRINGEMENT)112(, MERCHANT)70(ABILITY OR FITNESS FOR A P)70(A)0(R)20(TICULAR)]TJ
+T*
+-0.001 Tw
+(PURPOSE, OR ARISING FROM A COURSE OF DEALING, USAGE OR TRADE PRACTICE.)Tj
+/F4 1 Tf
+0 -2.941 TD
+-0.004 Tw
+[(6.0)-2210(LIMIT)80(A)69(TION OF LIABILITY)]TJ
+/F2 1 Tf
+0 -1.977 TD
+-0.135 Tw
+[(6.1)-2210(In no event will Sun be liable for any lost revenues, data, or profits, or special, indirect or consequential damages, even if)]TJ
+0 -1.311 TD
+-0.17 Tw
+[(Sun)6( )-6(has )-6(been )-6(advised )-6(of the possibility or probability of such damages. Sun')20(s maximum liability for damages shall be limited to the)]TJ
+0 -1.304 TD
+-0.011 Tw
+[(License)8( )-5(Fee, )-5(if )-5(any)70(, required under Section 3.0 for the particular Licensed Software which caused the damages.)]TJ
+ET
+0 G
+1 i 1 J 1 j 0.9 w 10 M []0 d
+-0.45 792.847 m
+-18.45 792.847 l
+-0.45 792.847 m
+-0.45 810.847 l
+612.79 792.847 m
+612.79 810.847 l
+612.79 792.847 m
+630.79 792.847 l
+612.79 -0.507 m
+630.79 -0.507 l
+612.79 -0.507 m
+612.79 -18.507 l
+-0.45 -0.507 m
+-0.45 -18.507 l
+-0.45 -0.507 m
+-18.45 -0.507 l
+S
+endstream
+endobj
+4 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font <<
+/F2 5 0 R
+/F4 6 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Length 5657
+>>
+stream
+BT
+/F2 1 Tf
+8 0 1.7 8 99.609 51.534 Tm
+0 Tr
+0 g
+0 Tc
+-0.008 Tw
+(Java Source License)Tj
+46.828 0 TD
+[(1)73(1/95)]TJ
+-21.657 0.602 TD
+-0.002 Tw
+[(2)-61( of  2)]TJ
+21.912 -1.8 TD
+-0.009 Tw
+[(Rev)69(. 2.0)]TJ
+8 0 0 8 90.028 714.274 Tm
+-0.096 Tw
+[(6.2)-2210(The)7( Licensed Software is not fault\261tolerant and is not designed, manufactured or intended for use or resale as on\261line)]TJ
+0 -1.304 TD
+-0.012 Tw
+[(control)9( equipment in hazardous environments requiring fail\261safe performance, such as in the operation of nuclear facilities,)]TJ
+T*
+-0.106 Tw
+[(aircraft)8( navigation or communication systems, air traf)20(fic control, direct life support machines, or weapons systems, in which the)]TJ
+T*
+0.146 Tw
+[(failure)15( of the Licensed Software or derived binaries could lead directly to )10(death, )10(personal )10(injury)70(, or severe physical or)]TJ
+0 -1.311 TD
+-0.165 Tw
+[(environmental)29( damage \(\252High Risk Activities\272\).  Sun specifically disclaims any express or implied warranty of fitness for High Risk)]TJ
+0 -1.304 TD
+-0.093 Tw
+[(Activities. Licensee will not)]TJ
+/F4 1 Tf
+11.544 0 TD
+( )Tj
+/F2 1 Tf
+0.191 0 TD
+(knowingly use, distribute or resell the Licensed Software or derived binaries for High Risk Activities)Tj
+-11.735 -1.304 TD
+0.008 Tw
+[(and)9( will ensure that its customers and end\261users of its products are provided with a copy of the notice specified in the first)]TJ
+T*
+-0.007 Tw
+[(sentence)11( of this Section 6.2.)]TJ
+/F4 1 Tf
+0 -2.863 TD
+-0.006 Tw
+[(7.0.)-1932(CONFIDENTIAL INFORMA)70(TION.)]TJ
+/F2 1 Tf
+0 -1.942 TD
+-0.041 Tw
+[(The)7( Licensed Software is the confidential and proprietary information of Sun Microsystems, Inc. \(\252Confidential Information\272\).)]TJ
+0 -1.311 TD
+-0.124 Tw
+[(Licensee)11( shall not disclose Confidential Information and shall use it only for purposes specifically contemplated by this License.)]TJ
+0 -1.304 TD
+-0.014 Tw
+[(This )-6(License )-6(will )-6(not )-6(af)20(fect any other confidential disclosure agreement between the parties.)]TJ
+/F4 1 Tf
+0 -2.856 TD
+[(8.0)-2210(EXPORT)]TJ
+/F2 1 Tf
+0 -1.949 TD
+-0.154 Tw
+[(Licensee)11( shall not export, re\261export or transfer)56(, whether directly or indirectly)70(, the Licensed Software or Binary Derivative or direct)]TJ
+0 -1.304 TD
+-0.096 Tw
+[(products)7( thereof, to any person or company who is a legal resident or is controlled by a legal resident of any proscribed country)]TJ
+T*
+0.14 Tw
+[(listed)9( in the U.S. Export Administration Regulations \(or any equivalent thereof\) unless properly authorized by the U.S.)]TJ
+0 -1.311 TD
+(Government.)Tj
+/F4 1 Tf
+0 -2.856 TD
+-0.002 Tw
+[(9.0)-2210(U.S. GOVERNMENT RESTRICTED RIGHTS)]TJ
+/F2 1 Tf
+0 -1.942 TD
+-0.142 Tw
+[(The)7( Licensed Software is provided with RESTRICTED RIGHTS.  Use, duplication, or disclosure by the Government is subject to)]TJ
+0 -1.311 TD
+-0.116 Tw
+[(the)7( restrictions as set forth in subparagraph \(c\) \(1\) \(ii\) of the Rights in T)112(echnical Data and Computer Software Clause as DF)56(ARS)]TJ
+0 -1.304 TD
+-0.18 Tw
+[(252.227\2617013)36( )-6( )-6(and )-6(F)56(AR 52.227\26119, as applicable. Manufacturer is Sun Microsystems, Inc. 2550 Garcia A)20(venue, )26(Mountain V)20(iew)60(,)]TJ
+T*
+-0.017 Tw
+[(California)20( 94043.)]TJ
+/F4 1 Tf
+0 -2.863 TD
+0.001 Tw
+[(10.0)-1654(GOVERNING LA)56(W)]TJ
+/F2 1 Tf
+0 -1.942 TD
+-0.008 Tw
+[(Any action related to this License will be governed by California law)56(, excluding choice of law rules.)]TJ
+/F4 1 Tf
+0 -3.529 TD
+-0.007 Tw
+[(SUN MICROSYSTEMS, INC.)-15328(LICENSEE)]TJ
+0 -1.304 TD
+-0.013 Tw
+(Java Products Group)Tj
+/F2 1 Tf
+28.368 -2.587 TD
+(Company:)Tj
+ET
+0 G
+1 i 1 J 1 j 0.057 w 10 M []0 d
+353.82 342.879 168.435 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 389.027 334.091 Tm
+-0.024 Tw
+(\(If Applicable\))Tj
+-37.375 -2.587 TD
+[(By:)-26923(By:)]TJ
+ET
+102.104 311.754 192.756 -0.34 re
+B*
+329.046 311.754 193.209 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 162.085 302.967 Tm
+[(\(Signature\))-23422(\(Signature\))]TJ
+-9.007 -2.587 TD
+[(Name:)-25423(Name:)]TJ
+ET
+114.009 280.63 180.85 -0.34 re
+B*
+340.951 280.63 181.304 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 162.085 271.843 Tm
+-0.009 Tw
+[(\(Printed or T)56(yped\))-20389(\(Printed or T)56(yped\))]TJ
+-9.007 -2.587 TD
+[(T)36(itle:)-26238(T)36(itle:)]TJ
+ET
+107.49 249.505 187.37 -0.34 re
+B*
+334.431 249.505 187.824 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 90.028 230.513 Tm
+[(Date:)-25978(Date:)]TJ
+ET
+109.587 228.869 185.272 -0.34 re
+B*
+336.529 228.869 185.726 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 316.97 205.455 Tm
+(Address:)Tj
+ET
+349.002 207.78 173.254 -0.34 re
+B*
+BT
+/F4 1 Tf
+8 0 0 8 90.028 184.762 Tm
+-0.013 Tw
+(Distribution Form \(choose one)Tj
+ET
+191.962 184.195 14.173 -0.34 re
+f*
+BT
+/F4 1 Tf
+8 0 0 8 206.135 184.762 Tm
+-0.007 Tw
+[( only\):)]TJ
+ET
+349.909 187.087 172.346 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 90.028 164.069 Tm
+-0.001 Tw
+(Zip file:                          _______)Tj
+ET
+349.909 166.394 172.346 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 90.028 143.376 Tm
+-0.003 Tw
+[(Gzipped tar file:            _______)-14209(EMail:)]TJ
+ET
+339.591 141.732 182.665 -0.34 re
+B*
+BT
+/F2 1 Tf
+8 0 0 8 90.028 122.74 Tm
+-0.007 Tw
+[(Compressed tar file:     _______)-14202(Phone:)]TJ
+ET
+342.709 121.096 179.546 -0.34 re
+B*
+0 G
+0.9 w 
+-0.45 792.847 m
+-18.45 792.847 l
+-0.45 792.847 m
+-0.45 810.847 l
+612.79 792.847 m
+612.79 810.847 l
+612.79 792.847 m
+630.79 792.847 l
+612.79 -0.507 m
+630.79 -0.507 l
+612.79 -0.507 m
+612.79 -18.507 l
+-0.45 -0.507 m
+-0.45 -18.507 l
+-0.45 -0.507 m
+-18.45 -0.507 l
+S
+endstream
+endobj
+10 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font <<
+/F2 5 0 R
+/F4 6 0 R
+>>
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F2
+/Encoding 11 0 R
+/BaseFont /Helvetica
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F4
+/Encoding 11 0 R
+/BaseFont /Helvetica-Bold
+>>
+endobj
+11 0 obj
+<<
+/Type /Encoding
+/Differences [
+ 0/Aacute/Acircumflex/Adieresis/Agrave/Aring/Atilde/Ccedilla/Eacute
+/Ecircumflex/Edieresis/Egrave/Iacute/Icircumflex/Idieresis/Igrave/Ntilde
+/Oacute/Ocircumflex/Odieresis/Ograve/Otilde/Scaron/Uacute/Ucircumflex
+/Udieresis/Ugrave/Ydieresis/Zcaron/char28/char29/char30/char31
+ 127/quotedblleft/aacute/acircumflex/adieresis/agrave/aring/atilde/ccedilla
+/eacute/ecircumflex/edieresis/egrave/iacute/icircumflex/idieresis/igrave
+/ntilde/oacute/ocircumflex/odieresis/ograve/otilde/scaron/uacute
+/ucircumflex/udieresis/ugrave/ydieresis/zcaron/char156/char157/char158
+/char159/char160 176/char176 181/char181 190/char190 192/char192 201/char201 204/char204
+ 209/char209/char210/char211/char212/char213/char214/char215/char216
+/char217/char218/char219/char220/char221/char222/char223/char224
+ 226/char226 228/char228/char229/char230/char231 236/char236/char237/char238
+/char239/char240 242/char242/char243/char244 246/char246/char247 252/char252
+/char253/char254/char255
+]
+>>
+endobj
+2 0 obj
+<<
+/Type /Page
+/Parent 7 0 R
+/Resources 4 0 R
+/Contents 3 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Page
+/Parent 7 0 R
+/Resources 10 0 R
+/Contents 9 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Pages
+/Kids [2 0 R 8 0 R ]
+/Count 2
+/MediaBox [0 0 612 792 ]
+>>
+endobj
+12 0 obj
+<<
+/Type /Catalog
+/Pages 7 0 R
+>>
+endobj
+13 0 obj
+<<
+/CreationDate (D:19951221103018)
+/Producer (Acrobat Distiller 2.0 for Windows)
+>>
+endobj
+xref
+0 14
+0000000000 65535 f
+0000000017 00000 n
+0000014443 00000 n
+0000000182 00000 n
+0000007235 00000 n
+0000013189 00000 n
+0000013295 00000 n
+0000014620 00000 n
+0000014531 00000 n
+0000007354 00000 n
+0000013069 00000 n
+0000013406 00000 n
+0000014717 00000 n
+0000014773 00000 n
+trailer
+<<
+/Size 14
+/Root 12 0 R
+/Info 13 0 R
+/ID [<6e81ae5dbd09998e2eed841c022fb09e><6e81ae5dbd09998e2eed841c022fb09e>]
+>>
+startxref
+14880
+%%EOF

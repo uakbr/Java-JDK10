@@ -1,0 +1,91 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Roll Your Own Packages</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="packages.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="import.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Managing Your Programming Environment</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Roll Your Own Packages
+</h2>
+<p>
+<blockquote>
+
+Packages are groups of related classes and interfaces
+and provide convenient a mechanism for managing a large
+set of classes and interfaces and avoiding naming conflicts.
+Several packages are included as part of the Java
+development environment: the Java language packages, the
+browser packages, and the window toolkit package just
+to name a few.
+<p>
+In addition to the Java packages, you can create your
+own packages using Java's <code>package</code> statement.
+Suppose that you had a group of classes that implement
+a collection of graphic objects such as circles, rectangles,
+lines, and points. In addition to these classes you also
+defined an interface Draggable [PENDING: does this make sense?]
+It makes sense to collect all of these classes and interfaces
+together into a package called "Graphics". In this way other
+programmers can easily determine what the group of classes are
+for and how they relate to one another and to other classes
+and packages.
+<p>
+You create a package implicitly when you put a class or classes
+in it. Here's an outline of the Graphics package described in the
+previous paragraph.
+<blockquote>
+<pre>
+<strong>package Graphics;</strong>
+
+class Circle {
+    . . .
+}
+</pre>
+</blockquote>
+The first line in the preceding code snippet indicates that
+all of the classes defined in this compilation unit are members
+of a package named <code>Graphics</code>.
+The package statement refers to everything in the current
+compilation unit (in most cases a compilation unit is a
+file). You can define a class per file and have each class
+be in the same package.
+
+<p>
+All classes and interfaces are in a package.
+Default package.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="packages.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="import.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Managing Your Programming Environment</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

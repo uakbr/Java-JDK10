@@ -1,0 +1,142 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Troubleshooting Compiler Problems</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="interpreterproblems.html"><img src=../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/troubleHeader.gif width=26 height=26 align=bottom border=0 alt="Troubleshooting | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Troubleshooting</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Troubleshooting Compiler Problems
+</h2>
+<p>
+<blockquote>
+ 
+<h4>Can't Locate the Compiler</h4>
+<blockquote>
+[PENDING: do platform-specific information here for all platforms]
+On UNIX systems, you may see the following error message
+if your path isn't set properly.
+<blockquote>
+<pre>
+javac: Command not found 
+</pre>   
+</blockquote>
+Use <code>setenv</code> or similar command to modify your path
+variable so that it includes the directory where the Java compiler
+lives.
+</blockquote>
+
+<h4>Syntax Errors</h4>
+<blockquote>
+If you mistype part of a program, the compiler may issue a <em>syntax</em>
+error. The message usually displays the type of the error,
+the line number where the error was detected, the code on that line, and the
+position of the error within the code.
+Here's an error caused by omitting a <code>';'</code> at the end of
+a statement:
+<blockquote>
+<pre>
+testing.java:14: ';' expected.
+    System.out.println("Input has " + count + " chars.")
+                                                        ^
+1 error
+</pre>   
+</blockquote>
+Sometimes the compiler can't guess your intent and prints
+a confusing error message or multiple error messages if
+the error cascades over several lines. For example,
+this code snippet omits a <code>';'</code> from the bold line.
+<blockquote>
+<pre>
+while (System.in.read() != -1)
+<strong>    count++</strong>
+System.out.println("Input has " + count + " chars.");
+</pre>
+</blockquote>
+When processing this code, the compiler issues two error messages:
+<blockquote>
+<pre>
+testing.java:13: Invalid type expression.
+        count++
+                 ^
+testing.java:14: Invalid declaration.
+    System.out.println("Input has " + count + " chars.");
+                      ^
+2 errors
+</pre>
+</blockquote>
+The compiler issued two error messages because
+after it processed <code>count++</code>, the compiler's state indicates
+that it's in the middle of an expression. Without the <code>';'</code> the compiler has
+no way of knowing that the statement is complete.
+<p>
+If you see any compiler errors, then your program did not successfully compile, and
+the compiler did not create a <code>.class</code> file. Carefully verify the program,
+fix any errors that you detect and try again.
+</blockquote>
+
+<a name=semantic>
+<h4>Semantic Errors</h4>
+</a>
+<blockquote>
+In addition to verifying that your program is syntactically
+correct, the compiler checks for other basic correctness.
+For example, the compiler warns you <em>each time</em> you use
+a variable that has not been initialized:
+<blockquote>
+<pre>
+testing.java:13: Variable count may not have been initialized.
+        count++;
+        ^
+testing.java:14: Variable count may not have been initialized.
+    System.out.println("Input has " + count + " chars.");
+                                      ^
+2 errors
+</pre>
+</blockquote>
+Again, your program did not successfully compile, and the compiler did
+not create a <code>.class</code> file. Fix the error and try again.
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href=../tools/index.html><img src=../images/toolIcon.gif width=20 height=20 border=0></a>
+<a href=../tools/index.html><em>The Java Development Environment</em></a><br>
+<a href=http://java.sun.com/JDK-1.0/tools/solaris/javac.html><img src=../images/manPagesIcon.gif width=8 height=20 border=0></a>
+<a href=http://java.sun.com/JDK-1.0/tools/solaris/javac.html>Compiler Man Page</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="interpreterproblems.html"><img src=../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/troubleHeader.gif width=26 height=26 align=top border=0 alt="Troubleshooting | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Troubleshooting</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

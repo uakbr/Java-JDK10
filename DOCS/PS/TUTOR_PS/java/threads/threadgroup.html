@@ -1,0 +1,250 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The ThreadGroup Class</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="daemon.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="multithreaded.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The ThreadGroup Class
+</h2>
+<p>
+<blockquote>
+
+In Java, all threads must be a member of a <em>thread group</em>.
+Thread groups provide a mechanism for collecting multiple threads
+together into a single object and manipulating those threads all at
+once through the group rather than individually through the threads
+themselves. For example, you can start or suspend all the threads
+within a group with a single method call. Java thread groups are
+implemented by the ThreadGroup class in the java.lang package.
+<p>
+ThreadGroups can contain any number of threads and can contain
+any number of ThreadGroups. The result is a root-like hierarchy of
+threads and thread groups.
+
+<h4>List Management Methods</h4>
+<blockquote>
+The ThreadGroup class is similar to other collection objects in
+that it provides a set of methods that manage the list of threads
+within the group and allow other objects to query for information
+about the list. For example, you can call ThreadGroup's
+<code>activeCount()</code> method to find out the number of threads
+currently within the group. In addition, you can <code>enumerate()</code>
+all the threads within the group and all the other thread groups within
+the group.
+<p>
+Other list management methods provided by the ThreadGroup class include
+<code>activeGroupCount</code> and <code>list()</code>.
+</blockquote>
+
+<h4>Methods that Operate on the Group</h4>
+<blockquote>
+The ThreadGroup class supports several attributes that are set and
+retrieved from the group as a whole. These attributes include the
+maximum priority that any thread within the group can have, whether
+or not the group is group of daemon threads, the name of the group,
+and the parent of the group.
+<p>
+The methods that get and set ThreadGroup attributes operate at the
+group level. That is, they inspect or change the attribute on the
+ThreadGroup object, but do not affect any of the threads within the
+group.  The following is a list of ThreadGroup methods that operate
+at the group level:
+<ul>
+<li>
+<code>getMaxPriority()</code>, <code>setMaxPriority()</code>
+<li>
+<code>getDaemon()</code>, <code>setDaemon()</code>
+<li>
+<code>getName()</code>
+<li>
+<code>getParent()</code>, <code>parentOf()</code>
+<li>
+<code>toString()</code>
+</ul>
+So, for example, when you use <code>setMaxPriority()</code> to change
+a group's maximum priority, you are only changing the attribute on the
+group object; you are not changing the priority of any of the threads
+within the group. Consider this small program that creates a group and
+a thread within that group:
+<blockquote>
+<pre>
+class PriorityTest {
+    public static void main (String args[]) {
+	Thread t1 = new RandomPrintString(&quot;Duke&quot;);
+        Thread t2 = new RandomPrintString(&quot;Of Earl&quot;);
+        Thread t3 = new RandomPrintString(&quot;Whatcha doin'?&quot;);
+
+	t1.setPriority(4);
+	t2.setPriority(5);
+	t3.setPriority(6);
+
+	t1.start();
+	t2.start();
+	t3.start();
+    }
+}
+
+class RandomPrintString extends Thread {
+    public RandomPrintString(String str) {
+	super(str);
+    }
+    public void run() {
+	for (int i = 0; i &lt; 10; i++) {
+	    System.out.println(getName());
+	    //sleep((int)(Math.random() * 1000));
+	}
+    }
+}
+</pre>
+</blockquote>
+When the ThreadGroup is created it inherits its maximum priority
+attribute from its parent thread group (which in this case is the
+maximum allowed by the Java runtime system (10)).
+Next the program sets the thread's priority to the maximum allowed
+by the Java runtime system, and then lowers the group's maximum to
+the "normal" priority (5). The <code>setMaxPriority()</code> method
+does not affect the priority of the <code>max</code> thread, so that
+at this point, the <code>max</code> thread has a priority of 10 which
+is greater than the maximum priority of its group <code>norm</code>.
+This is the output from the program:
+<blockquote>
+<pre>
+Group's maximum priority = 5
+Thread's priority = 10
+</pre>
+</blockquote>
+So, you can see that it is possible for a thread to have a higher
+priority than the maximum allowed by its group.
+A thread group's maximum priority is used to limit a thread's priority
+when the thread is first created within a group and when you use
+<code>setPriority()</code> to change it. Note that <code>setMaxPriority()</code>
+does change the maximum priority of all of its sub-threadgroups.
+<p>
+Similarly, a group's name and daemon status applies only to the group.
+Changing the group's name or daemon status does not affect the name
+or daemon status of any of its threads. Furthermore, a group's daemon
+status does not in any way imply the daemon status of its threads--you
+can put any thread within a daemon thread group. The daemon status of
+a thread group simply determines when the group will be destroyed.
+</blockquote>
+
+<h4>Methods that Operate on All Threads within a Group</h4>
+<blockquote>
+The ThreadGroup class supports several methods that allow you to
+modify the current state of all the threads within that group:
+<ul>
+<li>
+<code>resume()</code>
+<li>
+<code>stop()</code>
+<li>
+<code>suspend()</code>
+</ul>
+These methods apply the appropriate state change to every thread
+in the thread group and to every thread sub-group in the thread
+group.
+</blockquote>
+
+<h4>Access Restrictions</h4>
+<blockquote>
+The ThreadGroup class itself does not
+impose any access restrictions (such as allowing threads from one
+group to inspect or modify threads in a different group) on thread
+groups. Rather the ThreadGroup class supports the security manager
+(a subclass of the java.lang.SecurityManager class) in its effort
+to impose access restrictions based on thread group membership.
+
+<p>
+The ThreadGroup checks with the current security manager, through a call
+to its <code>checkAccess()</code> method, when any "regulated"
+access is attempted to see if the access should be allowed. The security manager
+decides whether or not to allow the access based on the group membership of the
+threads involved. If access is not allowed, the <code>checkAccess()</code>
+methods throws a SecurityException. Otherwise, <code>checkAccess()</code>
+just returns. The following is a list of ThreadGroup
+methods that call <code>checkAccess()</code> before performing the action
+of the method. These are what are known as <em>regulated accesses</em>, that
+is, accesses that must be approved by the security manager before they can be
+completed.
+<ul>
+<li>
+creation of a new ThreadGroup with the constructor
+<code>ThreadGroup(ThreadGroup parent, String name)</code>
+<li>
+<code>setDaemon()</code>
+<li>
+<code>setMaxPriority()</code>
+<li>
+<code>stop()</code>
+<li>
+<code>suspend()</code>
+<li>
+<code>resume()</code>
+<li>
+<code>destroy()</code>
+</ul>
+By default, when you write a stand-alone Java application you get a generic
+security manager that imposes no access restrictions and allows any thread
+to inspect or modify any other thread regardless of the groups they are in.
+You can define and implement your own access restrictions for thread
+groups by subclassing SecurityManager, overriding the appropriate
+methods, and then installing your security manager as the current security
+manager in your application.
+
+<p>
+The HotJava Web browser is an example of an application that implements
+its own security manager. HotJava needs to ensure that applets are
+well-behaved and don't do nasty things (such as lowering the priority
+of another applet's threads) to other applets running at the same time.
+HotJava's security manager does not allow threads in different groups
+to modify one another. Please note that access restrictions based on
+thread groups may vary from browser to browser and thus applets
+may behave differently in different browsers. For more information
+about access restrictions on thread groups within applets, see
+<a href="../../MissingPage.html>Missing Page</a>.
+</blockquote>
+
+<h4>See also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.ThreadGroup.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.ThreadGroup.html>java.lang.ThreadGroup</a><br>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.SecurityManager.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.SecurityManager.html>java.lang.SecurityManager</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="daemon.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="multithreaded.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>More Methods to Override</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="majorMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../../MissingPage.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    More Methods to Override
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<blockquote>
+<pre>
+class Simple extends Applet {
+    . . .
+    public void <strong>paint</strong>(Graphics g) { . . . }
+    . . .
+}
+</pre>
+</blockquote>
+The Simple applet,
+like most other applets,
+overrides the <code>paint()</code> method.
+The <code>paint()</code> method
+is one of two display methods
+that the Applet class provides 
+for applets to override:
+<dl>
+<dt> <code>paint()</code>
+<dd> the basic display method;
+     most applets implement this method 
+     to draw the applet's representation within a browser page
+<dt> <code>update()</code>
+<dd> a method you can use along with <code>paint()</code>
+     to make improvements in drawing performance
+</dl>
+
+The Applet class also provides a group of methods
+for event handling:
+
+<dl>
+<dt> <code>keyDown()</code>
+<dd> notifies the applet that the user pressed a key on the keyboard
+<dt> <code>mouseDown()</code>, 
+     <code>mouseUp()</code>
+<dd> notify the applet that the user pressed/released a mouse button
+<dt> <code>mouseEnter()</code>,
+     <code>mouseExit()</code>
+<dd> notify the applet that the cursor
+     entered/exited the applet's display area
+<dt> <code>mouseDrag()</code>
+<dd> notifies the applet that the user moved the mouse
+     while pressing a mouse button
+<dt> <code>mouseMove()</code>
+<dd> notifies the applet that the mouse moved
+     but no mouse button was pressed
+</dl>
+
+An applet overrides the method corresponding to the event
+the applet needs to react to.
+For example, 
+to make the Simple applet respond to mouse clicks,
+we must add 
+a <code>mouseDown()</code> method.
+<blockquote>
+<pre>
+public void mouseDown(int x, int y) {
+    addItem("click!... ");
+}
+</pre>
+</blockquote>
+Below is the resulting applet.
+When you click within its rectangle,
+it displays the word "click!...".
+<p>
+<app class=SimpleClick width=500 height=20>
+<p>
+
+
+Drawing and event handling 
+are covered in detail later in this trail,
+in [PENDING].
+For more information on the methods listed above,
+you can also refer to the
+<a href=http://java.sun.com/JDK-beta/api/browser.Applet.html>Applet
+API reference page<img src=../../images/apiIcon.gif
+height=16 width=16 border=1></a>.
+
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="majorMethods.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../../MissingPage.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of an Applet</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Declaring a Transient Variable</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="constants.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="volatile.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Declaring a Transient Variable
+</h2>
+<p>
+<blockquote>
+
+You use the <code>transient</code> keyword to indicate to the the Java
+virtual machine that the indicated variable is not part of the persistent
+state of the object. At this time, the Java virtual machine ignores the
+<code>transient</code> marker. Future releases of the Java system will use
+the <code>transient</code> marker to implement various object archiving
+functions.
+<p>
+Like other variable modifiers in the Java system, you use <code>transient</code>
+in a class or instance variable declaration like this
+<blockquote>
+<pre>
+class TransientExample {
+    transient int hobo;
+    . . .
+}
+</pre>
+</blockquote>
+This statement declares an integer variable named <code>hobo</code>
+that is not part of the persistent state of the TransientExample class.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="constants.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="volatile.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

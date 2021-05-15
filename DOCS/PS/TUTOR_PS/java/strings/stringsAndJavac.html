@@ -1,0 +1,110 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Strings and the Java Compiler</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="andback.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../cmdLineArgs/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Strings and the Java Compiler
+</h2>
+<p>
+<blockquote>
+
+<h4>Literals</h4>
+<blockquote>
+In the Java language, you specify <em>literal strings</em> between double quotes just like
+in C and C++.
+<blockquote>
+<pre>
+"Hello World!"
+</pre>
+</blockquote>
+You can use literal strings anywhere you would use a String object.
+For example, <code>System.out.println()</code> accepts a String argument, so you
+could use a literal string in place of a String there.
+<blockquote>
+<pre>
+System.out.println("And might I add that you look lovely today.");
+</pre>
+</blockquote>
+You can also use String methods directly from a literal string.
+<blockquote>
+<pre>
+int len = "Goodbye Cruel World".length();
+</pre>
+</blockquote>
+Because the compiler automatically creates a new String object for
+every literal string it encounters, you can use a literal string
+to initialize a String.
+<blockquote>
+<pre>
+String s = "Hola Mundo";
+</pre>
+</blockquote>
+The above construct is equivalent to, but more efficient than, this one
+<blockquote>
+<pre>
+String s = new String("Hola Mundo");
+</pre>
+</blockquote>
+because the compiler ends up creating two Strings instead of one:
+first when the compiler encounters <strong>"Hola Mundo!"</strong>, and second when
+it encounters <code>new String()</code>.
+</blockquote>
+
+<h4>Concatentation and the + Operator</h4>
+<blockquote>
+In the Java language, you can use '+' to concatenate Strings together.
+<blockquote>
+<pre>
+String cat = "cat";
+System.out.println("con" + cat + "enation");
+</pre>
+</blockquote>
+This is a little deceptive because, as you know, Strings are immutable
+objects; they can't be changed. However, behind the scenes the compiler
+uses StringBuffers to implement concatenation. The above example
+is compiled to:
+<blockquote>
+<pre>
+String cat = "cat";
+System.out.println(new StringBuffer.append("con").append(cat).append("enation"));
+</pre>
+</blockquote>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="andback.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../cmdLineArgs/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The String and StringBuffer Classes</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

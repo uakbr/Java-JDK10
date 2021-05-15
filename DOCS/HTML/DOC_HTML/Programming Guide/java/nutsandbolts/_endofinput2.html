@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Platform-Specific Details: The End-of-Input Character</title>
+</head>
+<body>
+<a href="run.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous"></a>
+<p>
+<hr size=4>
+
+<h2>
+    Platform-Specific Details: The End-of-Input Character
+</h2>
+<p>
+<blockquote>
+ 
+<dl>
+<dt><strong>UNIX</strong>
+<dd>
+Use the control-D character (type D while holding down the
+control key) to indicate to a program reading from the standard
+input stream that you have finished entering input.
+The control-D character is often written as <code>^D</code>.
+<blockquote>
+<pre>
+% <strong>java Count
+This is test.
+^D</strong>
+Input has 16 chars.
+</pre>
+</blockquote>
+
+<dt><strong>DOS shell (Windows 95/NT)</strong>
+<dd>
+Use the control-Z character (type Z while holding down the
+control key) to indicate to a program reading from the standard
+input stream that you have finished entering input.
+Or you can press the <code>F6</code> key.
+The control-Z character is often written as <code>^Z</code>.
+<blockquote>
+<pre>
+C:\> <strong>java Count
+This is test.
+^Z</strong>
+Input has 17 chars.
+</pre>
+</blockquote>
+</dl>
+
+<strong>Note:</strong> the program gives different results for UNIX and
+DOS systems. On UNIX when you press the return key, you get
+a single character <code>\n</code>.
+However, on DOS when you press the return key, you get
+two characters <code>\r\n</code>.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<a href="run.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous"></a>
+</body>
+</html>

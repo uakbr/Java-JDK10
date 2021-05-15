@@ -1,0 +1,129 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Overview of the Java UI</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="components.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h1>
+     Overview of the Java UI
+</h1>
+<p>
+<blockquote>
+
+This lesson gives an overview of what the Java environment 
+provides to help you create a user interface (UI).
+<em>UI</em> is a broad term that refers to all sorts of
+communication between a program and its users.
+UI is not only what the user sees,
+but what the user hears and feels.
+Even the speed with which a program interacts with the user
+is an important part of the program's UI.
+This lesson covers some Java classes
+that provide UI-related functionality.
+Eventually, we hope to provide a UI style guide,
+to give you more help with the art of designing a UI.
+<p>
+
+The Java environment provides classes for the following functionality:
+<ul>
+<li> <b>Displaying text using standard input and output --</b>
+     Standard input and output are the old-fashioned way
+     of presenting a user interface.
+     They're still useful for testing and debugging programs,
+     as well as for functionality that's not aimed at the typical end-user.
+     See 
+<a href="../../MissingPage.html">Input and Output Streams</a><a href="../../MissingPage.html"><img src="../../images/javaIcon.gif" width=20 height=20 border=0 alt="(in the Writing Java Programs trail)"></a>
+     for information on using standard input and output.
+<li> <b>Playing sounds -- </b>
+     All our sound-playing capabilities are either platform-dependent
+     or applet-specific.
+     [point to further info]
+<li> <b>Saving user preferences using properties -- </b>
+     For information that applets and applications
+     need to save even when they're not running,
+     you can use <em>properties.</em>
+     Applets may have problems using properties, 
+     due to security restrictions [check].
+     [point to further info]
+<li> <b>Getting applet attributes --</b>
+     Attributes are an applet-only mechanism
+     for getting user preferences.
+<li> <b>Presenting a graphical UI (GUI) --</b>
+     The rest of this lesson gives an overview of the Java GUI support. 
+</ul>
+
+Applets and applications commonly present information to the user
+(and invite the user's interaction)
+using a GUI.
+The Abstract Window Toolkit (AWT) contains 
+a complete set of classes for writing GUI programs.
+<p>
+
+<h4>
+<a href=components.html>AWT Components</a>
+</h4>
+<blockquote>
+The AWT provides many standard GUI components
+such as buttons, lists, menus, and text areas.
+It also includes containers
+(such as windows and menu bars)
+and higher-level components
+(such as a dialog for opening or saving files).
+</blockquote>
+
+<h4>
+<a href=../../MissingPage.html>Other AWT Classes</a>
+</h4>
+<blockquote>
+Other classes in the AWT include those for working with
+graphics contexts (including basic drawing operations),
+images, events, fonts, and colors.
+</blockquote>
+
+<h4>
+<a href=anatomy.html>The Anatomy of a GUI-Based Program</a>
+</h4>
+<blockquote>
+The AWT provides a framework for drawing and event handling.
+Using a program-specific hierarchy of containers and components, 
+the AWT forwards events (such as mouse clicks)
+to the appropriate object.
+The same hierarchy determines the order in which
+containers and components draw themselves.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="../index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="components.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

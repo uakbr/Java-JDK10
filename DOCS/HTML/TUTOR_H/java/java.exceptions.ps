@@ -1,0 +1,4455 @@
+%!
+%%Title: java.exceptions.html
+%%DocumentFonts: NewCenturySchlbk-Roman NewCenturySchlbk-Bold NewCenturySchlbk-Italic NewCenturySchlbk-BoldItalic Courier Courier-Bold Courier-Oblique Courier-BoldOblique
+%%Creator: html2ps 0.2 alpha, written by Jan Karrman, jan@tdb.uu.se
+%%EndComments
+save
+1000 dict begin
+/colorimage where {pop} {
+ /colorimage {
+  pop pop /Bp exch def /Gp exch def /Rp exch def
+  {/Re Rp def /Gr Gp def /Bl Bp def
+  0 1 Re length 1 sub {
+   /i exch def Gr i Re i get 0.299 mul Gr i get 0.587 mul add
+   Bl i get 0.114 mul add cvi put
+  } for Gr} image
+ } def
+} ifelse
+/D {def} def
+/t {true} D
+/f {false} D
+/RF {/NewCenturySchlbk-Roman} D
+/BF {/NewCenturySchlbk-Bold} D
+/IF {/NewCenturySchlbk-Italic} D
+/IB {/NewCenturySchlbk-BoldItalic} D
+/FF {/Courier} D
+/FB {/Courier-Bold} D
+/FI {/Courier-Oblique} D
+/FT {/Courier-BoldOblique} D
+/F 1 D
+/W {453 F div} D
+/LE {651 F div} D
+/PS 1 D
+/HS [19 17 15 13 12 11] D
+/HT [2 2 2 2 2 2] D
+/MK 7 D
+/NO t D
+/ZL f D
+/ZR f D
+/Zl () D
+/Zr () D
+/TU f D
+/AU t D
+/SN 0 D
+/LA {TU PM 1 eq and {W 56 F div add 0 translate}
+ {70 705 translate F dup scale} ie} D
+/FP 0 D
+/SG [0.80000000000000004441 1 1] D
+statusdict /setduplexmode known
+ {statusdict begin false setduplexmode end} if
+%-- End of variable part --
+/ie {ifelse} D
+/E {exch} D
+/M {moveto} D
+/S {show} D
+/R {rmoveto} D
+/L {lineto} D
+/RL {rlineto} D
+/CP {currentpoint} D
+/SW {stringwidth} D
+/GI {getinterval} D
+/PI {putinterval} D
+/U {gsave CP currentfont /FontInfo get /UnderlinePosition get
+ 0 E currentfont /FontMatrix get dtransform E pop add newpath M
+ dup SW RL stroke grestore} D
+/B {-10 3 R gsave CP newpath 2.5 0 360 arc closepath
+ UI 2 mod 0 eq {stroke} {fill} ie grestore 10 -3 R} D
+/NP {/PM PN SN sub 2 mod D PN SN gt TU not PM 0 eq or and {showpage} if
+ 0.6 setlinewidth LA /BP t D /PN PN 1 add D
+ /OF currentfont D RF findfont 10 scalefont setfont
+ /YO {LE neg 60 F div dup 40 gt {pop 40} if sub} D
+ NO {W 2 div YO M PN ST cvs S} if
+ ZL {0 YO M Zl S} if
+ ZR {W YO M Zr dup stringwidth pop neg 0 R S} if
+ OF setfont
+ XO SZ SL get neg M /CI 0 D} D
+/SF {/CS E D CS SZ SL 3 2 roll put /YI CS -1.2 mul D dup ST cvs C1 E join
+ ( NF ) join /C1 E D NF /BW ( ) SW pop D} D
+/NF {FL E get findfont CS scalefont setfont} D
+/FS {CF MK PF {1 or} if and or /CF E D FR SL CF put CF E SF} D
+/FL [RF FF BF FB IF FI IB FT] D
+/reencodeISO {
+dup dup findfont dup length dict begin
+{ 1 index /FID ne { def }{ pop pop } ie } forall
+/Encoding ISOLatin1Encoding D
+currentdict end definefont
+} D
+/ISOLatin1Encoding [
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quoteright
+/parenleft/parenright/asterisk/plus/comma/minus/period/slash
+/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon
+/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N
+/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright
+/asciicircum/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m
+/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright/asciitilde
+/.notdef/backslash/parenleft/parenright/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/dotlessi/grave/acute/circumflex/tilde/macron/breve
+/dotaccent/dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut
+/ogonek/caron/space/exclamdown/cent/sterling/currency/yen/brokenbar
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot
+/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute
+/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave
+/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex
+/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
+/yacute/thorn/ydieresis
+] D
+FL {reencodeISO D} forall
+
+/BS {/PC E D /TX E D /fin f D /CW 0 D /LK 0 D /SC 0 D
+ /RT TX D {RT ( ) search {/NW E D pop /RT E D /WH NW SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC /SC LK D /CW WH BW add D}
+ {/CW CW WH add BW add D} ie
+ /LK LK NW length add 1 add D} {pop exit} ie} loop
+ /fin t D /LC TX length D /WH RT SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC NL RT dup () ne {PC} {pop} ie}
+ {TX SC LC SC sub GI PC} ie} D
+
+/BT {RS dup dup () ne E ( ) ne and
+ {/LS LL D /LL W L1 sub XO sub D {/CI 0 D SH /BP f D fin not {NL} if
+  /HM t D /LL LS D} BS} {BG {pop} {SH /BP f D} ie} ie} D
+/BL {HM not {CP E pop XO E M} if} D
+/NL {BL W XO sub L1 sub TB {BW add} if AT mul 2 div YA neg dup 0 lt {3 sub} if
+ R F0 CF ne {F0 NF} if C1 cvx exec /C1 () D /L1 0 D /F0 CF D
+ BP not {0 YB NN neg R} if /YA 0 D /YB 0 D CP /YC E D pop XO YC M YC LE neg gt
+ {YI CI sub dup 0 lt BP not and {dup 0 E R CI add /CI E D} {pop} ie}
+ {NP} ie /T t D} D
+/RS {/TM E D /CN 0 D TM
+ {dup 9 eq E 10 eq or {TM CN ( ) PI} if
+  /CN CN 1 add D} forall /CN 0 D /BK HM EN and {0} {1} ie D TM
+ {dup 32 ne {TM CN 3 2 roll put /CN CN 1 add D /BK 0 D}
+ {pop BK 0 eq {TM CN 32 put /CN CN 1 add D} if /BK 1 D} ie}
+  forall TM 0 CN GI dup dup () ne E ( ) ne and
+  {dup CN 1 sub get 32 eq {/EN f D} {/EN t D} ie} if} D
+/join {2 copy length E length add string dup 4 2 roll 2 index 0 3 index
+ PI E length E PI} bind D
+/EG {dup 0 E dup () eq {E pop} {E get} ifelse 10 ne {(\n) E join} if} D
+/WR {PB {EG /PB f D} if PP {EG /PP f D} if (\n) search
+ {dup () ne BP not or {TR /CI 0 D /NC 0 D NL pop WR}{pop pop WR} ie} {TR} ie} D
+/TR {(\t) search {dup length /NC E NC add D SH MS 0 8 NC 8 mod sub dup
+ /NC E NC add D GI SH pop TR} {dup length /NC E NC add D SH} ie
+ /BP f D} D
+/SH {CP E pop LE neg lt {NP} if dup SW pop L1 add /L1 E D
+ C1 (\() join T not {( ) join} if E join (\)) join
+ AU AF and UF or {( U ) join} if ( S ) join /C1 E D /T t D /TB EN not D} D
+/BG {CP pop XO sub abs 0.01 lt} D
+/ON {AR AI NN get 1 add dup AR AI 3 -1 roll put ST cvs length dup ST E (. ) PI
+ ST 0 3 -1 roll 2 add GI dup SW pop neg 0 R S} D
+/SP {YI E /YI E D NL /YI E D} D
+/BR {BN} D
+/BN {PF {WR} {BT NL} ie /HM f D} D
+/AB {CH E 0 E put CH join WB} D
+/NN {dup 0 lt {pop 0} if} D
+/H  {1 sub /HL E D E BN /AT E D CP E pop LE neg WW add lt {NP} if
+ BH SP /SL SL 1 add D HS HL get HT HL get FS} D
+/EH {BN /AT 0 D AH SP /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/P  {E PF {WR /PP t D} {BN AE not {AH SP} if} ie /AT E D} D
+/HR {BN 0 CP E pop M gsave PF {0 YI R} if W 0 RL stroke grestore /CI 0 D
+ /BP f D NL} D
+/AD {BN /AE t D AH SP 4 11 SF} D
+/DA {BN /AE f D AH SP 0 11 SF} D
+/PR {BN /AT 0 D /CF 0 D 9 PS mul 1 FS /PF t D /PB t D /NC 0 D} D
+/PW {pop PR} D
+/RP {PF {dup () ne {dup dup length 1 sub get 10 ne {(\n) join} if} if
+ WR AH SP /CF 0 D 11 0 FS /PF f D} {BT} ie} D
+/SI {/XO AI LG add NN IN mul BC NN BI mul add D /LL W XO sub D} D
+/DT {BN /LG LG 1 sub D SI /LG LG 1 add D BL} D
+/DD {BN SI BL} D
+/DL {BN XO 0 eq {AH SP} if /LG LG 1 add D BL} D
+/LD {BN LG 0 gt {/LG LG 1 sub D} if SI XO 0 eq {AH SP} if BL} D
+/UL {BN XO 0 eq {AH SP} {NL} ie NR AI NN 0 put /UI UI 1 add D
+ /AI AI 1 add D SI BL} D
+/LU {BN /UI UI 1 sub D /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ie BL} D
+/OL {BN XO 0 eq {AH SP} {NL} ie NR AI NN 1 put /AI AI 1 add D SI BL} D
+/LO {BN AR AI NN 0 put /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ie BL} D
+/LI {BN /BP f D /CI 0 D CP E pop LE neg lt {NP} if
+ /C1 C1 NR AI 1 sub NN get 1 eq {( ON )} {( B )} ie join D BL} D
+/BQ {BN AH SP /BC BC 1 add D SI BL} D
+/QB {BN AH SP /BC BC 1 sub D SI BL} D
+/WB {PF {WR} {BT} ie} D
+/A  {WB /AF t D} D
+/EA {WB /AF f D} D
+/SS {SZ SL get /SL SL 1 add D} D
+/I  {WB SS 4 FS} D
+/BD {WB SS 2 FS} D
+/TT {WB SS 1 FS} D
+/KB {WB SS /CF 0 D 3 FS} D
+/CT {WB SS /CF 0 D 4 FS} D
+/SM {WB SS /CF 0 D 1 FS} D
+/ES {WB /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/UN {WB /UF t D} D
+/NU {WB /UF f D} D
+/SB {0 1 NI {/N E D /K WS N get D /NY AY N get FC N get mul D /BV NY array D
+ 0 1 NY 1 sub {/TM K string D currentfile TM readhexstring pop pop BV E TM put}
+ for BM N BV put} for} D
+/colorimage where {pop} {
+ /colorimage {
+  pop pop /Bp E D /Gp E D /Rp E D
+  {/Re Rp D /Gr Gp D /Bl Bp D
+  0 1 Re length 1 sub {
+   /i E D Gr i Re i get 0.299 mul Gr i get 0.587 mul add Bl i get 0.114 mul add
+   cvi put
+  } for Gr} image
+ } D
+} ie
+/IP {BV N get /N N 1 add D} D
+/II {/K E D /TY E D /XW AX K get D /YW AY K get D /IS SG IT K get get D
+ /XS XW IS mul D /YS YW IS mul D YS CS sub TY 2 eq {/MB E D /MA 0 D}
+ {TY 2 mod 1 eq {2 div /MA E 2 sub D /MB MA 4 add D}{/MA E D /MB 0 D} ie} ie} D
+/IM {II /ty TY D /xs XS D /ys YS D /ya YA D /yb YB D /ma MA D /mb MB D /k K D
+ /CI 0 D WB L1 xs add dup /L1 E D XO add W gt
+ {NL /YA ma D /YB mb D /YS ys D /L1 xs D}
+ {ma YA gt {/YA ma D} if mb YB gt {/YB mb D} if} ie CP E pop YS sub LE neg lt
+ {NP /YA ma D /YB mb D /L1 xs D} if /BP f D ty ST cvs ( ) join k ST cvs join
+ C1 E join ( DI ) join FP 2 eq FP 1 eq AF and or {( FM ) join} if /C1 E D
+ /HM t D /EN f D /T TY 3 eq D} D
+/DI {II /YN YW neg D /HM t D /CI 0 D /K2 IX K get D gsave CP MB sub translate
+ K2 0 ge {/DP AZ K2 get D /BV BM K2 get D XS YS scale /N 0 D XW YW DP
+ [XW 0 0 YN 0 YW] {IP} FC K2 get 1 eq {image} {{IP} {IP} t 3 colorimage} ie}
+ {PV K2 neg 1 sub get exec} ie grestore XS 0 R} D
+/FM {gsave CP MB sub translate XS neg 0 M 0 YS RL XS 0 RL 0 YS neg RL XS neg
+ 0 RL stroke grestore} D
+/BH -35 D
+/AH -28 D
+/LL W D
+/XO 0 D
+/YI 0 D
+/CI 0 D
+/LG 0 D
+/AI 0 D
+/UI 0 D
+/IN 30 D
+/BI 12 D
+/WW 50 D
+/AR [0 0 0 0 0 0 0 0 0 0] D
+/NR [0 0 0 0 0 0 0 0 0 0] D
+/FR [0 0 0 0 0 0 0 0 0 0] D
+/SZ [0 0 0 0 0 0 0 0 0 0] D
+/SL 0 D
+/CF 0 D
+/BC 0 D
+/YA 0 D
+/YB 0 D
+/F0 0 D
+/N 0 D
+/AT 0 D
+/C1 () D
+/C2 () D
+/L1 0 D
+/L2 0 D
+/PN SN D
+/MS (        ) D
+/CH 1 string D
+/ST 6 string D
+/HM f D
+/PF f D
+/EN f D
+/TB f D
+/UF f D
+/PP f D
+/AE f D
+/AF f D
+/BP t D
+/T t D
+/AX [26 26 26 26 406 32 495 337] D
+/AY [26 26 26 26 197 32 258 167] D
+/IX [0 1 2 3 4 5 6 7] D
+/IT [0 0 0 0 0 0 0 0] D
+/AZ [8 8 8 8 1 8 1 1] D
+/WS [26 26 26 26 51 32 62 43] D
+/FC [3 3 3 3 1 3 1 1] D
+/NI 7 D
+/BM 8 array D
+%%EndProlog
+SB
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8f8c8c8c848487
+8487c6c6bdbdbdbdbdb5b5b5b5b5adadadada5a8ada5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d9e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9c9c949494948f9494949c94948c84848484847bc6bdbdbdbdb5bdb5b5b5
+b5b5a8adadadb5adada5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7d9e7
+e7e7e7e7e7e7e7e7e7e7e7e79c9c9c9c9c9c9c8f9cf7f1f1f7f7f7f7f7f7
+e684848784877b7bbdbdbdbdbdb5b5a8bdfcf2f2fcfcfcfcfcfceea59c9a
+9c9a9c93e7e7e7e7e7e7e7d9e7fff7f7ffffffffffffffe7e7d6e7d6e7da
+9c9c9c9c9c948f8ff1f7d6f7f7f7f7f7f7f7c48484847b847b7bbdbdbdbd
+b5b5a8a8f2fcd6fcfcfcfcfcfcfcd29c9c9c9c9c939ce7e7e7e7e7e7d9d9
+f7ffdefffffffffffffff4e7e7e7e7e7dae79c9c9c9c8f8f87f7f7e6b1f7
+f7f7f7f7f7f79c8784877b7b7b7bbdbdbdb5a8a89afcfceeb9fcfcfcfcfc
+fcfcb59a9c9a9c939c93e7e7e7e7d9d9d6ffffffd9ffffffffffffffe7d6
+e7d6e7dae7da9c9c9c948f72f1c46f4a87f7f7f7f7f7f7f78c84847b877b
+7b7bbdbdb5b5a88cf2d281609afcfcfcfcfcfcfca59c9c9c9a949394e7e7
+e7e7d9d3f7f4bdadd6ffffffffffffffe7e7e7e7d6e7dae79c9c9c8f6f8f
+ce5f4a8fd6f7f7f7f7f7f7f7877b877b7b7b7b73b5b5b5a8819ad673609a
+d6fcfcfcfcfcfcfc9a9c9a9c9494948ce7e7e7d9bdc0debdadc0deffffff
+ffffffffd6e7d6e7e7e7e7de9c9c8f7b5e8fd28fd6f7f7f7f7f7f7a0f7e6
+84847b7b7b7b737bb5b5a893749ae19ad6fcfcfcfcfcfcaefcee9c9c9c94
+93948c8ce7e7d9dab1c0fbc0deffffffffffffd6ffffe7e7e7e7dae7dee7
+9c948f7e4a8ff7f7f7f7f7f7f7bb5e0af7f77b7b7b7b7b7b7b73b5b5a88b
+609afcfcfcfcfcfcfcc67424fcfc939c939494938c8ce7e7d9bcadc0ffff
+ffffffffffdcb179ffffdae7dae7e7dae7de94948f6f4a9df7f7f7f7f1a0
+5e0a0a0af7f77b7b7b7b737b7373b5b5a88160a7fcfcfcfcf2ae74242424
+fcfc949394938c8c8c8ce7e7d9bdadc0fffffffff7d6b1797979ffffe7da
+e7dae7e7dede949487634a8ff7f7f1b15e0a0a0a0a0a0a0a0a0a0a0a7b73
+7373b5ad9a7b609afcfcf2b9742424242424242424242424948c8c8ce7e7
+d6c6adc0fffff7d9b17979797979797979797979e7dedede948c87634a8f
+f7c95e0a0a0a0a0a0a0a0a0a0a0a0a0a73737372adad9a7b609afccd7424
+2424242424242424242424248c8c8c84e7e7d6bdadc0ffdbb17979797979
+7979797979797979e7dedede948c87634a8ff7e6c4a0630a0a0a0a0a0a0a
+0a0a0a0a7373736badad9a7b609afceed2ae7b2424242424242424242424
+8c8c8484e7e7d6bdadc0fffff4d6bd7979797979797979797979e7ded6d6
+948c87634a7ef7e6c4a79c8f5e0a0a0aa3a7635f637372736b6badad9a7b
+608bfceed2bcb5a874242424b8bc7b737b8c84848484e7e7d6bdadbcffff
+f4e7e7d9b1797979f7e7c6bdcededed6d6d68c8c87634a6ff7f7f7e6c4a7
+a7b15e0ac4bb63636b7373736b6badad9a7b6081fcfcfceed2bcbcb97424
+d2c67b7b848484848484e7e7d6c6adbdfffffffff4e7e7d9b179f4dcc6c6
+d6d6d6d6d6ce8c8f876f4a5ef7f7f7f7f7d2c4a7a7b1f7ed876b736b736b
+6b6bada89a816074fcfcfcfcfce1d2bcbcb9fcf89a8484848484847be7d9
+d6bdadb1fffffffffffbf4e7e7d9ffffd6d6d6d6d6d6cece8c8c876b4a4a
+f7f7f7f7f7f7e6c4a7bbf7f7a7726b726b6b6b6ba5a59a84605afcfcfcfc
+fcfceed2bcc6fcfcbc8c848c84847b7be7e7d6cead96fffffffffffffff4
+e7dcffffe7d3d6d3d6cecece8c8f876b4a37f1f7f7f7f7f7f7f7e6e6f7f7
+e6736b6b6b6b6b63a5a89a84604ff2fcfcfcfcfcfcfceeeefcfcee848484
+847b7b7be7d9d6cead9ff7ffffffffffffffffffffffffd6d6d6cececec6
+8c8484724a378fdef7f7f7f7f7f7f7f7f7f7f7876b6b6b6b6363a5a59c8c
+604f9adefcfcfcfcfcfcfcfcfcfcfc9a8484847b7b7be7e7e7d3ad9fc0de
+ffffffffffffffffffffffd6d6cececec6c68487847250374a374a4a5e6f
+7e7e7e7e83878f736b6b6b63635ea59a9c8c684f5a4f5a6074818b8b8b8b
+959aa88c847b7b7b7b73e7d6e7d3b89f969f96adb1bdbcbcbcbcc2d6d9de
+cececec6c6c68484877b635e4a4a374a4a373737374a4a636b6b6b6b6363
+5e63a5a59a937b7460604f605a4f4f4f4f60607b7b84847b7b7b737be7e7
+d6dac6b1adad9fad969f9f9f9fadadc6cecececec6c6c6bd8484847b7b6b
+6b63635f505f5e505e505f636b6b636363635f5f9c9c9c939384847b7b73
+687374687468737b847b7b7b7b7b7373e7e7e7dadad6cec6c6bdb8bdb1b8
+b1b8bdc6cececec6c6c6bdbd8487847b7b7b7b73726b6b6b6b6b636b636b
+6b6b6363635f5f5f9c9a9c939c93938c8c84848484847b847b7b7b7b7b7b
+7b737373e7d6e7dae7dadaded3d6d6d6d6cececececececec6c6c6bdbdbd
+84847b7b7b7b7b7373737373736b736b6b6b6b6363635f5f5f5e9c9c939c
+9394938c8c8c8c8c84848484847b7b7b7b7b73737374e7e7dae7dae7dade
+dedededed6d6d6cecececec6c6bdbdbdbdb1
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8c8c8c848487
+8487c6c6bdbdbdbdbdbdb5b5b5b5adadadadada5a5a5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9ca79ca79c94948f94948f8c8c8c84848484847bc6bdbdbdbdb5bdbcbdbc
+b5b5ada8adada8a5a5a5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7d9
+e7e7d9e7e7e7e7e7e7e7e7e79c9c9c9c9c9c9ce6f7f7f7f7f7f7f1f1f78f
+8784848784877b7bbdbdbdbdbdb5b5eefcfcfcfcfcfcf2f2fca89aa59c9a
+9c9a9c93e7e7e7e7e7e7e7fffffffffffffff7f7ffd9d6e7e7d6e7d6e7da
+9c9c9c9c9c9c94c4f7f7f7f7f7f7f7d6f7ed877b877b7b847b7bbdbdbdbd
+b5b5b5d2fcfcfcfcfcfcfcd6fcf89a939a9c9c9c939ce7e7e7e7e7e7e7f4
+ffffffffffffffdeffffd6dad6e7e7e7dae79c9c9c9c9c9494a5f7f7f7f7
+f7f7f7bbe6f7f1727b7b7b7b7b7bbdbdbdb5b5b5b5c6fcfcfcfcfcfcfcc6
+eefcf28c93939c939c93e7e7e7e7e7e7e7e7ffffffffffffffdcfffff7d3
+dadae7dae7da9c9c9c9c9494949cf7f7f7f7f7f7f7875e7ec4f16b72877b
+7b7bbdbdb5b5b5b5b5b5fcfcfcfcfcfcfc9a748bd2f2848c9a949394e7e7
+e7e7e7e7e7e7ffffffffffffffd6b1bcf4f7ced3d6e7dae79c9c9c949494
+948cf7f7f7f7f7f7f7d6a0504ad68763737b7b73b5b5b5b5b5b5adadfcfc
+fcfcfcfcfcd6ae6860d69a7b8c94948ce7e7e7e7e7e7e7e7ffffffffffff
+ffded6b8added6c6dee7e7de9c9c94949494948cf1f7a0f7f7f7f7f7f7e6
+bbd283506b73737bb5b5b5b5b5adadadf2fcaefcfcfcfcfcfceec6e19568
+848c8c8ce7e7e7e7e7e7e7e7f7ffd6ffffffffffffffdcfbc2b8cededee7
+9c9494949494948cf7f70a5ebbf7f7f7f7f7f7f78f4a63737373b5b5b5b5
+adadadadfcfc2474c6fcfcfcfcfcfcfc9a607b8c8c8ce7e7e7e7e7e7e7e7
+ffff79b1dcffffffffffffffc0adc6dedede94949494948c8c8cf7f70a0a
+0a5ea0f1f7f7f7f79d4a5e727373b5b5b5adadadadadfcfc24242474aef2
+fcfcfcfca760738c8c8ce7e7e7e7e7e7e7e7ffff797979b1d6f7ffffffff
+c0adc6d3dede949494940a0a0a0a0a0a0a0a0a0a0a5eb1f1f7f78f375f6b
+7373b5b5adad242424242424242424242474b9f2fcfc9a4f73848c8ce7e7
+e7e77979797979797979797979b1d9f7ffffc09fbdd6dede9494948c0a0a
+0a0a0a0a0a0a0a0a0a0a0a5ec9f78f4a5f6b7372adadadad242424242424
+2424242424242474cdfc9a6073848c84e7e7e7e779797979797979797979
+797979b1dbffc0adbdd6dede94948c8c0a0a0a0a0a0a0a0a0a0a0a63a0b1
+e6f78f375f6b6b6badadadad24242424242424242424247baec8eefc9a4f
+73848484e7e7e7e77979797979797979797979bdd6f9ffffc09fbdd6d6d6
+948c948c8c7b5f63a79c0a0a0a5e8f9ca7c4e6f77e375f6b6b6badadada5
+a593737bbcb524242474a8b5bcd2eefc8b4f73848484e7e7e7e7e7dabdc6
+e7e7797979b1d9e7e7f4ffffbc9fbdced6d68c948c8f847b6f63c4c40a5e
+a7a7a7c4e6f7f7f76f375f6b6b6badadada8a593817bd2d22474bcbcbcd2
+eefcfcfc814f737b8484e7e7e7d9e7dabdc6f4f479b1e7e7e7f4ffffffff
+bd9fbdced6ce8c8c8c8c87847287f1f7b1a7a7c4d2f7f7f7f7f75e4a5e63
+6b6badada5a59a9c8c9af2fcb9bcbcd2e1fcfcfcfcfc745a737b847be7e7
+e7e7d6e7d3d6f7ffd9e7e7f4fbffffffffffb196c6cecece8c8c8c848487
+84c4f7f7a7b1c4e6f7f7f7f7f7f74a4a5f636b6ba5a5a5a5a59a9cd2fcfc
+bcc8d2eefcfcfcfcfcfc5a60737b7b7be7e7e7e7e7d6e7f4ffffe7f9f4ff
+ffffffffffff96adbdcecece8c8c8c84848487e6f7f7e6f1f7f7f7f7f7f7
+f7f137375f636b63a5a5a5a5a59c9aeefcfceef2fcfcfcfcfcfcfcf24f4f
+737b7b7be7e7e7e7e7e7d6fffffffff7fffffffffffffff79f9fbdcecec6
+8c8c8484878494f7f7f7f7f7f7f7f7f7f7f7de8f374a5f636363a5a5a5a5
+9a9cadfcfcfcfcfcfcfcfcfcfcfcde9a4f60737b7b7be7e7e7e7d6e7e7ff
+ffffffffffffffffffffdec09fadbdc6c6c68484848484878c9c8f837e7e
+7e7e6f5e4a4a3737374a5e63635fa5a5a59c9c9aa5b5a8958b8b8b8b8174
+605a4f4f4f60737b7b73e7e7e7e7e7d6e7e7d9c2bcbcbcbcbdb1ad969f9f
+9fadc6c6c6bd84848487847b7b7b6b504a373737374a374a374a4a506363
+5f63a59c9c9a9c9c939384685a4f4f4f4f5a4f604f6060687b7b737be7e7
+e7d6e7e7dadaceb8969f9f9f9f969fad9fadadb8c6c6bdbd84848484847b
+7b7b6b635e5f5f5050505e505f5f5f5e63635f5f9c9c9c9c9c939493847b
+7373736868687468737373737b7b7373e7e7e7e7e7dae7dad6cec6bdbdb8
+b8b8b1b8bdbdbdc6bdbdbdbd8487847b7b7b7b7b7372736b6b6b6b636363
+63636363635f5f5f9c9a9c939c9493948c8c8484847b7b7b7b7b7b7b7b7b
+7b737373e7d6e7dae7e7dae7ded3d6d6d6cececececec6c6c6c6bdbdbdbd
+84847b7b7b7b7b7b73737373736b6b6b6b6b6b6363635f5f5f5e9c9c939c
+939494938c8c8c8c848484847b7b7b7b7b7b73737374e7e7dae7dae7e7da
+e7dededed6d6d6cecececec6c6bdbdbdbdb1
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8f8487848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a8a59a9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+d9e7d6e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8f848784847b
+8784c6c6bdbdbdbdbdb5b5b5b5b5adadadadada5a8a59a9c9c939a9ce7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d9e7d6e7e7dad6e7a59c9c9c9c9c
+f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7727b7bc6bdbdbdbdb5fcfcfcfc
+fcfcfcfcfcfcfcfcfcfcfcfcfc8c939ce7e7e7e7e7e7ffffffffffffffff
+ffffffffffffffffffd3dae79c9c9c9c9cf7f7f7d2d2d2d2edf7f7f7f7ed
+d2d2e6f70a5e727bbdbdbdbdbdfcfcfce1e1e1e1f8fcfcfcfcf8e1e1eefc
+24738c93e7e7e7e7e7fffffffbfbfbfbfffffffffffffbfbffff79c6d3da
+9c9c9c9cf7f7f7c4c4c4c4f7f7f7f7f7f7f7edd2f7204a5e6b7bbdbdbdbd
+fcfcfcd2d2d2d2fcfcfcfcfcfcfcf8e1fc3460738493e7e7e7e7fffffff4
+f4f4f4fffffffffffffffffbff7fadc6d6da9c9c9cf7f7f7c4d2e6d2eded
+e6f7f7f7f7f7f7f70a4a4a5e737bbdbdbdfcfcfcd2e1eee1f8f8eefcfcfc
+fcfcfcfc246060738c94e7e7e7fffffff4fbfffbffffffffffffffffffff
+79adadc6dee79c9c9c4ae69494636b6b63638c8cb1b17b847b6be64a506b
+737bbdbdb560eeb5b57b84847b7badadc8c89ca59c84ee6068848c93e7e7
+e7adffe7e7cececececee7e7f9f9e7e7e7d6ffadb8d6deda9c9c9c944ad2
+946b6b6363637bb1b1c47ba3b18463d250847373b5b5b5b560e1b584847b
+7b7b9cc8c8d294b8c8a57be1689c8c8ce7e7e7e7adfbe7cecec6c6cee7f9
+f9f4e7f7f9e7cefbb8efdee79c9c9494944ad28c7b726b638484b1b1a384
+84847b4ae65e8473b5b5b5b5b560e1ad938c847b9c9cc8c8b89c9c9c9c60
+ee739c8ce7e7e7e7e7adfbe7dad3cecee7eff9f9f7efefefe7adffc6efde
+9c9494948cf7f7c4b1d2c4d2f7f7f7f7e6ede6e6d2f74a506373b5b5b5b5
+adfcfcd2c8e1d2e1fcfcfcfceef8eeeee1fc60687b8ce7e7e7e7e7fffff4
+f9fbf4fbfffffffffffffffffbffadb8cee794949494f7f7d2c4c4d2c4e6
+f7f7f7edd2e6f7f7f70a4a506b73b5b5b5adfcfce1d2d2e1d2eefcfcfcf8
+e1eefcfcfc246068848ce7e7e7e7fffffbf4f4fbf4fffffffffffbffffff
+ff79adb8d6de949494f7f7d2d2c4d2d2c4edf7f7f7f7f7f7f7f7204a4a5e
+6b72b5b5adfcfce1e1d2e1e1d2f8fcfcfcfcfcfcfcfc346060738484e7e7
+e7fffffbfbf4fbfbf4ffffffffffffffffff7fadadc6d6de9494944ae68c
+6b6b6b6363636b727b847b727363d24a50636b72adadad60eea58484847b
+7b7b848c939c948c8c7be160687b8484e7e7e7adffe7cececececececed3
+dae7e7d3decefbadb8ced6de94948c8c4ad287637b846b63636b84847b73
+736b5ee64a5e636badadadad60e19a7b949c847b7b84a59c9c948c8473ee
+60737b84e7e7e7e7adfbd6cee7efd6c6c6d6e7efe7e7e7d6c6ffadc6ced6
+948c948c8c4ae672848e6363636b7b84847b6b6b5037d2205e63adadadad
+a560ee8ca5a87b7b7b849c9ca59c8484684fe134737be7e7e7e7e7adffd3
+e7f6cec6c6d6e7e7e7e7d6d6b89ffb7fc6ce8c948c8c8cf7f7d2d2d2d2d2
+d2f7f7f7f7e6d2edf7f7204a5063adadada5a5fcfce1e1e1e1e1e1fcfcfc
+fceee1f8fcfc3460687be7e7e7e7e7fffffbfbfbfbfbfbfffffffffffbff
+ffff7fadb8ce8c8c8c8cf7f7ede6e6d2d2d2e6d2edf7f7d2e6f7f70a3750
+5e63adada5a5fcfcf8eeeee1e1e1eee1f8fcfce1eefcfc244f68737be7e7
+e7e7fffffffffffbfbfbfffbfffffffbffffff799fb8c6ce8c8c8cf7f7f7
+f7f7f7f7e6e6d2d2f7f7f7f7f7f7203750506363a5a5a5fcfcfcfcfcfcfc
+eeeee1e1fcfcfcfcfcfc344f68687b7be7e7e7fffffffffffffffffffbfb
+ffffffffffff7f9fb8b8cec68c8c8c4ae684b1b1b17b7b63636b638e8e8e
+8e7be64a4a5e6363a5a5a560ee9cc8c8c894937b7b847ba8a8a8a89cee60
+60737b7be7e7e7adffe7f9f9f9e7daceced6cef6f6f6f6e7ffadadc6c6c6
+8c8c84844ad2b1a3b1b173636b8e5e8e8e8e8e847be64a505e63a5a5a5a5
+60e1c8b8c8c88c7b84a873a8a8a8a89c9cee6068737be7e7e7e7adfbf9f7
+f9f9deced6f6c6f6f6f6f6efe7ffadb8c6c6848484847b4ad2b1a3a37b73
+5e5e63636b8e8e8e8463e64a505fa5a5a59c9c60e1c8b8b89c8c73737b7b
+84a8a8a89c7bee606873e7e7e7e7e7adfbf9f7f7e7dec6c6c6c6d6f6f6f6
+efceffadb8bd848484877b734ad2e6e6e6e6e6e6e6e6e6e6e6e6e6e6d2e6
+0a50a59c9c9a938c60e1eeeeeeeeeeeeeeeeeeeeeeeeeeeee1ee2468e7e7
+e7d6dadeadfbfffffffffffffffffffffffffffffbff79b88484877b8473
+634a4a0a240a0a240a0a240a0a240a0a240a244a9c9c9a9c9c8c7b606024
+3a24243a24243a24243a24243a243a60e7e7d6e7e7deceadad798e79798e
+79798e79798e79798e798ead848484847b7b735e50504a504a4a504a4a4a
+4a374a4a4a4a4a4a9c9c9c9c93948c7368686068606068606060604f6060
+60606060e7e7e7e7dae7dec6b8b8adb8adadb8adadadad9fadadadadadad
+87847b7b7b7b7b736363635e5e5e5e5e5e505050505050504a509a9c939c
+9493938c7b7b7b737373737373686868686868686068d6e7dae7e7dadade
+cececec6c6c6c6c6c6b8b8b8b8b8b8b8adb8
+a5a5a5a59c9c9c9c9c9c9c94949494948c8c8c8c8c8c84848487c6c6c6c6
+bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a59c9ae7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6a5a5a59c9c9c9c9c9c9c9494
+9494948c948c8c8c8c8484848484c6c6c6bdbdbdbdbdb5b5b5b5b5adadad
+adada5a5a5a5a59c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7a5a59c9c9c9c9c9c9c9494949494948c8c8c8c8c8c848487
+8487c6c6bdbdbdbdbdb5b5b5b5b5adadadadada5a5a5a5a5a59a9c9ae7e7
+e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7d6e7d6a59c9c9c9c9c
+9c9c9494949494948c8c8c8c8c8484848484847bc6bdbdbdbdb5b5b5b5b5
+b5adadadadada5a5a5a5a5a59c9c9c9ce7e7e7e7e7e7e7e7e7e7e7e7e7e7
+e7e7e7e7e7e7e7e7e7e7e7e79c9c9c9c8f83634a373720202424374a5e6b
+8784848784877b7bbdbdbdbda8957b604f4f34343a3a4f6074849aa5a59a
+9c9a9c93e7e7e7e7d9c2bdad9f9f7f7f8e8e9fadb1ced6e7e7d6e7d6e7da
+9c9ca06f4a375e72a3d2f1edf1e6b1845f373763877b847b7b7bbdbdae81
+604f748cb8e1f2f8f2eec89c734f4f7b9a9c9c9c939ce7e7d6bdad9fb1d3
+f7fbf7fff7fff9e7bd9f9fbdd6e7e7e7dae79c9c635094c4d2e6f1f7f7f7
+f7f7edf1e6d28e4a5e9ca7947b7bbdbd7b68add2e1eef2fcfcfcfcfcf8f2
+eee1a86073b5bcad9493e7e7bdb8e7f4fbfff7fffffffffffff7fffbf6ad
+c6e7e7e7e7da9c9c24cef1e6b184370a00001524507284b1d2f1a3f7f7f7
+8c7bbdbd3ad6f2eec89c4f2400001c3a688ca5c8e1f2b8fcfcfca594e7e7
+8edef7fff9e79f793b3b588eb8d3e7f9fbf7f7ffffffe7e79c9c5e84f74a
+000000001500150000001537e6f18e37378ebb7bb5bd749cfc6000000000
+1c001c0000001c4feef2a84f4fa8c68ce7e7b1e7ffad3b3b3b3b583b583b
+3b3b589ffff7f69f9ff6dce79c9c8f37d2ed8e50240a1515150a204a6bb1
+e6c4374a5063d27bb5b5a84fe1f8a8683a241c1c1c24346084c8eed24f60
+687be18ce7e7d99ffbfff6b88e79585858797fadd6f9fff49fadb8cefbe7
+9c94946f63f7f7f7f7f7f1e6f7f7f7f7e6c4c44a6b7b7bd2bb73b5b5b581
+7bfcfcfcfcfcf2eefcfcfcfceed2d260849493e1c68ce7e7e7bdbdffffff
+fffff7fffffffffffff4f4adcee7dafbdce79494948f50d2f7f7f7f7f7f7
+f7f7d2c4b1b1b1248c94b1f78c73b5b5b5a868e1fcfcfcfcfcfcfcfce1d2
+c8c8c83aa5adc8fca58ce7e7e7d9b8fbfffffffffffffffffbf4f9f9f98e
+e7e7f9ffe7de9494948c6f72f7f7f7f7f7f7f7f7e6c4b1d2c4a3f7c4bb7b
+7373b5b5adad818cfcfcfcfcfcfcfcfceed2c8e1d2b8fcd2c68c8c8ce7e7
+e7e7bdd3fffffffffffffffffff4f9fbf4f7fff4dce7dede9494948c8f5f
+d2f7f7f7f7f7f7f7e6c4c4d2a38e5e50506b7372adadadada873e1fcfcfc
+fcfcfcfceed2d2e1b8a8736868848c84e7e7e7e7d9bdfbffffffffffffff
+fff4f4fbf7f6c6b8b8d6dede94948c948c6b73f7f7f7f7f7f7f7e6d2e67b
+4a6b506b7372726badadadadad848cfcfcfcfcfcfcfceee1ee9460846884
+8c848c84e7e7e7e7e7cedefffffffffffffffffbffe7add6b8d6deded3d6
+9494a7c4e6e663d2f7f7f7f7f7f7f7f7d250c4c4b18c73736b6badb5bcd2
+eeee7be1fcfcfcfcfcfcfcfce168d2d2c8a58c8c8484e7e7e7f4ffffbdfb
+fffffffffffffffffbb8f4f4f9e7deded6d68cc4e6f7f7e66b63a3d2f7f7
+f7f7d2a36b4af7e6f7e6c4726b6badd2eefcfcee7b7bb8e1fcfcfcfce1b8
+8460fceefceed28c8484e7f4ffffffffcec6f7fbfffffffffbf7d6adffff
+fffff4d3d6ce8cd2f7f7f7f1e6a37b5f372424375073a3e6f7f7f7f1c487
+6b6bade1fcfcfcf2eeb894734f3a3a4f688cb8eefcfcfcf2d29a847be7fb
+fffffff7fff7e7bd9f8e8e9fb8def7fffffffff7f4d6cece8f63c4f1f7f7
+f7f7f7f7f7f7f7f7f7ede6d2d2f1e6c4b1506b6ba87bd2f2fcfcfcfcfcfc
+fcfcfcfcfcf8eee1e1f2eed2b9687b7bd9bdf4f7ffffffffffffffffffff
+fffffffbfbf7fff4d9b8cece8c5f4a73c4e6f7f7f7f7f7f7f7f7d2d2e6e6
+e6c4a75e374a6b63a573608cd2eefcfcfcfcfcfcfcfce1e1eeeeeed2bc73
+4f607b7be7bdaddef4fffffffffffffffffffbfbfffffff4e7c69fadcec6
+8c8c6f4a3737637ba3c4e6e6e6d2d2b18c634a372437506b6363a5a58160
+4f4f7b94b8d2eeeeeee1e1c8a57b604f3a4f687b7b7be7e7bdad9f9fc6e7
+f7f4fffffffbfbf9e7cead9f8e9fb8cec6c6848484847b6f504a37242424
+2024242437374a506b6b6b63635ea5a5a59c938168604f3a3a3a343a3a3a
+4f4f60687b847b7b7b73e7e7e7e7dabdb8ad9f8e8e8e7f8e8e8e9f9fadb8
+cececec6c6c684848487847b847b7b7b7b737b73737373736b6b6b6b6363
+5e63a59c9c9a9c9c9c949494938c8c8c8c8c84848484847b7b7b737be7e7
+e7d6e7e7e7e7e7e7dae7e7dededed6d6d6d6cecec6c6c6bd84848484847b
+7b7b7b7b7373737373736b6b6b6b636363635f5f9c9c9c9c9c9394939493
+8c8c8c8c8c848484847b7b7b7b7b7373e7e7e7e7e7dae7dae7dae7dedede
+ded6d6d6cecec6c6c6c6bdbd8487847b7b7b7b7b7b7373737373736b6b6b
+6b6b6363635f5f5f9c9a9c939c949394938c8c8c8c8c848484847b7b7b7b
+7b737373e7d6e7dae7e7dae7dae7dedededed6d6d6cececec6c6c6bdbdbd
+84847b7b7b7b7b7b7373737373736b6b6b6b6b6363635f5f5f5e9c9c939c
+939494938c8c8c8c8c848484847b7b7b7b7b73737374e7e7dae7dae7e7da
+e7dedededed6d6d6cececec6c6bdbdbdbdb1
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffff80000000000000000000003fffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffc7f
+ffffffffffffffffffffc7ffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffbffffffffffffffffffff
+fffbffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffe7fffffffffffffffffffffffcffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffdfffffffffffffffffffffffff7fffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffbfffffffffffffff
+ffffffffffbfffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffbfffffffffffffffffffffffffdfffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff7fffffffffffffffffffffffffdfffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffeffffffffff
+ffffffffffffffffefffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffeffffffffffffffffffffffffffef
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffefffffff03ffffffb7fffffffffefffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffeffff
+fff7fffffffbfffffffffff7ffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffdfffffff7ef638d3171d3ff
+fffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffdfffffff7f6dd74db6ecdfffffff7ffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fdfffffff039df75db6eddfffffff7ffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffdfffffff7f9df05db
+6eddfffffff7ffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffdfffffff7f6df7ddb6eddfffffff7ffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffefffffff7ef5d74db6eddffffffefffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffefffffff02f
+638d3971ddffffffefffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffefffffffffffffdffffffffffffef
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffff7ffffffffffffdffffffffffffdfffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfff
+fffffffffdffffffffffffdfffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffbfffffffffffffffffffff
+ffffbfffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffffffffffffffffff7fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffeffffffffffffffffffffffffeffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffff3ffffffffffffff
+fffffffff9ffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffc7fffffffffffffffffffffc7ffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffff80000000000000000000003fffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffdfffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffdfffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffdfffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffdfffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffdfffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffdfffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffdfffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffdfffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffdfffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffdfffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffdfffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffdfffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffdfffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffdfffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffdfffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffdfffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffe07ffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff07ffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff07ffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffff07ffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffff0fff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff8fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff8fffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff8fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffff9fffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffdfffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffdfffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffff80000000000000000000003fffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffc7fffffffffffffffffffffc7ffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffbffffffffffffff
+fffffffffbffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffe7fffffffffffffffffffffffcffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffdfffffffffffffffffffffffff7fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffbfffffffff
+ffffffffffffffffbfffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffbfffffffffffffffffffffffffbf
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffff7fffffffffffffffffffffffffdfffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fff
+ffffffffffffffffffffffdfffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffeffffffffffffffffffffff
+ffffefffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffeffff7fffffc0ffffffeeffffffefffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fefffebfffffdfffffffefffffffefffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffdfffebaac775fbd8e
+3a46c74ffff7ffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffdfffdd99bb75fdb75d9aebb37fff7ffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfffddbbfb740e77ddbaebb77fff7ffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffdfffc1bbc36
+dfe77c1baebb77fff7ffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffdfffbebbbbadfdb7dfbaebb77fff7
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffefffbebbbbadfbd75d9aebb77ffefffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffefffb
+ebbc5dc0bd8e3a66c777ffefffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffefffffffffdfffffffbffff
+ffffefffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff7ffffffffbfffffffbffffffffdfffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffbffffffff7fffffffbffffffffdfffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffbfffffffffffffff
+ffffffffffbfffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffff7fffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffeffffffffffffffffffffffffeffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffff3ffffffff
+fffffffffffffff9ffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffc7fffffffffffffffffffffc7ff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffff80000000000000000000003fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff07ffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffcd9ffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffff3de7fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffcfdf9fffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff3fdfe7
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffcffdff9ffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffff3ffdffe7fffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf
+ffdfff9fffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffff3fffdfffe7ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffcffffdffff9ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff3ffffdffffe7fffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffcfffffdfffff9fff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffff3fffffdfffffe7ffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffcffffffdffffff9ffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffff3ffffffdfff
+fffe7fffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffcfffffffdfffffff9fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffff3fffffffdfffffffe7ffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffcffffff
+ffdffffffff9ffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffff3ffffffffdffffffffe7fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff3cfffffffffdfffffffff9e7fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffe13f
+ffffffffdfffffffffe63fffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffc0ffffffffffdfffffffff
+f81fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff80ffffffffffdffffffffffc0fffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff00ffffffffffdffffffffffc07ffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffe00ffffffffffdfff
+fffffff803ffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffc3fffffffffffdfffffffffffe1ffffffff
+fffffffffffffffffffffffffffffffffffc000000000000000000000000
+000000000fffffffffffdfffffffffff8000000000000000000000000000
+000001ffffffffffe3fffffffffffffffffffffffffffffffff1ffffffff
+ffdffffffffffc7ffffffffffffffffffffffffffffffffe3fffffffffdf
+fffffffffffffffffffffffffffffffffeffffffffffdffffffffffbffff
+ffffffffffffffffffffffffffffffdfffffffff3fffffffffffffffffff
+ffffffffffffffff3fffffffffdfffffffffe7ffffffffffffffffffffff
+ffffffffffffe7fffffffeffffffffffffffffffffffffffffffffffffdf
+ffffffffdfffffffffdffffffffffffffffffffffffffffffffffffbffff
+fffdffffffffffffffffffffffffffffffffffffefffffffffdfffffffff
+bffffffffffffffffffffffffffffffffffffdfffffffdffffffffffffff
+fffffffffffffffffffffff7ffffffffdfffffffffbfffffffffffffffff
+fffffffffffffffffffefffffffbffffffffffffffffffffffffffffffff
+fffff7ffffffffdfffffffff7fffffffffffffffffffffffffffffffffff
+fefffffff7fffffffffffffffffffffffffffffffffffffbffffffffdfff
+fffffeffffffffffffffffffffffffffffffffffffff7ffffff7ffffffff
+fffffffffffffffffffffffffffffbffffffffdffffffffeffffffffffff
+ffffffffffffffffffffffffff7ffffff7fffefffffdbedfff7ffe07ffff
+ffb7fffffffbffffffffdffffffffefffe06ffffffff407ffff81ffffffe
+dfffffff7ffffff7fffefffffdfedfff7ffeffffffffbffffffffdffffff
+ffdffffffffefffefeffffffff7bfffffbfffffffeffffffffbfffffefff
+fee9bb1db2da79717afdec71d3171a7ffffdffffffffdffffffffdfffefe
+e3adf1a63bdd4f1bf7b1c74c5c69ffffbfffffeffffee6baedacd9b66eb6
+fedbaecdb6e9bffffdffffffffdffffffffdfffefedd92ee9b7bdd36ebfb
+6ebb36dba6ffffbfffffeffffeeebbedaedbb76ece073beeddb6ebbffffd
+ffffffffdffffffffdfffe06ddb6eebb7bdd76e81cefbb76dbaeffffbfff
+ffeffffeeed70daedbb760ceff3be0ddb6ebbffffdffffffffdffffffffd
+fffefec1b6e0bb7bdb760bfcef8376dbaeffffbfffffeffffeeed6edaedb
+b76fb6fedbefddb6ebbffffdffffffffdffffffffdfffefedfb6efbb7beb
+76fbfb6fbf76dbaeffffbffffff7fffeeeeeedacdbb66e7afdebaecdb6eb
+bffffbffffffffdffffffffefffefeddb6eebb7beb36ebf7aebb36dbaeff
+ff7ffffff7fffeeeef15b2dbb9717a05ec71d3971bbffffbffffffffdfff
+fffffefffe06e3b6f1bb3bf74f1817b1c74e5c6effff7ffffff7ffffffff
+ffffffffffffffffffdffffffffffbffffffffdffffffffeffffffffffff
+fffff77fffffffff7fffffffff7ffffffbffffffffffffffffffffffffff
+dffffffffff7ffffffffdfffffffff7fffffffffffffffef7fffffffff7f
+fffffffefffffffdffffffffffffffffffffffffffdffffffffff7ffffff
+ffdfffffffffbfffffffffffffffdf7fffffffff7ffffffffefffffffdff
+ffffffffffffffffffffffffffffffffffefffffffffdfffffffffbfffff
+fffffffffffffffffffffffffffffffdfffffffeffffffffffffffffffff
+ffffffffffffffffdfffffffffdfffffffffdfffffffffffffffffffffff
+fffffffffffffbffffffff7fffffffffffffffffffffffffffffffffffbf
+fffffffe07ffffffffeffffffffffffffffffffffffffffffffffff7ffff
+ffff9ffffffffffffffffffffffffffffffffffe7fffffffff07ffffffff
+f3ffffffffffffffffffffffffffffffffffcfffffffffe3ffffffffffff
+fffffffffffffffffffff1ffffffffff07fffffffffc7fffffffffffffff
+fffffffffffffffffe3ffffffffffc000000000000000000000000000000
+000fffffffffff07ffffffffff8000000000000000000000000000000001
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffff0fff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff8fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff8fffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff8fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffff9fffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffdfffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffdfffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffe0000000000000000000000000000000007ffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffff1ff
+fffffffffffffffffffffffffffffff8ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffefffffffffffffffffffff
+ffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff9fffffffffffffffffffffffffffffffffff9fff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff7fffffffffffffffffffffffffffffffffffefffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffeffffffffffffffff
+fffffffffffffffffffff7ffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffeffffffffffffffffffffffffffffffffff
+fffbffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfffffffffffffffffffffffffffffffffffffbffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffbffffffffff
+fffffffffffffffffffffffffffdffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffbffffffffffffffffffffffffffff
+fffffffffdffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffbfbeff87fffbf037fffffff703ffffffb7ffffdffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffff7f9ef
+f7bfffbf7f7fffffff77fffffffbfffffeffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffff7faee37f771a77f63adf1d2
+37ef638d3171d3feffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffff7faedd9f76e9b7f5d92eecd77f6dd74db6ecdfeff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+f7fb6dde776fbb035db6eedd7039df75db6eddfeffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff7fbaddfb76fbb7f41
+b6e0dd77f9df05db6eddfeffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffbfbadd7b76fbb7f5fb6efdd77f6df7ddb6e
+ddfeffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffbfbcdd7b66ebb7f5db6eedd77ef5d74db6eddfdffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffbfbee387971
+bb0363b6f1dd302f638d3971ddfdffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffbffffffffffffffffffffffffffff
+fdfffffffdffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffdfffffffffffffffffffffffffffffdfffffffbffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffeffff
+fffffffffffffffffffffffffdfffffffbffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffeffffffffffffffffffffff
+fffffffffffffff7ffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff7fffffffffffffffffffffffffffffffffffefff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffbfffffffffffffffffffffffffffffffffffdfffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffcfffffffffffffff
+ffffffffffffffffffff3fffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffff1ffffffffffffffffffffffffffffffff
+f8ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffe0000000000000000000000000000000007ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff5d6ebffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffdf7fbfffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffebaed6ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffbf007f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff5d6ebffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffdf7fbfffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffebd6c2c2d2f5ffff
+ffffd6e1fadbc7c2dbfafffffff5d6ebffffffffffffffffbf7f404070df
+ffffffff7f9fef8f50408fefffffffdf7fbfffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffd2aeae
+c2c2aeb3e6ffffffaebdbdb3c2bdaebdf0ffffebaed6ffffffffffffff70
+000040400010afffffff0030301040300030cfffffbf007fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffff0aebdfafffff0b3b8ffffffaeaebdfaffffe1aec2ffffebaed6ffff
+ffffffffcf0030efffffcf1020ffffff000030efffff9f0040ffffbf007f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffebc2e6ffffffffc2aeffffffaeaef5ffffffffccaef0
+ffebaed6ffffffffffffbf40afffffffff4000ffffff0000dfffffffff60
+00cfffbf007fffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffae6b3aeffffffaeb8ffff
+ffffffe1aee6ffebaed6ffffffffffffffffffffffefaf1000ffffff0020
+ffffffffff9f00afffbf007fffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff0ccbdaeaeaeaeaeff
+ffffaec2ffffffffffebaed6ffebaed6ffffffffffffffcf603000000000
+00ffffff0040ffffffffffbf007fffbf007fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffe6aeaec2
+d6e1f0c2aeffffffaec2ffffffffffebaedbffebaed6ffffffffffffaf00
+00407f9fcf4000ffffff0040ffffffffffbf008fffbf007fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffbdb3f0ffffffffc2aeffffffaebdffffffffffdbaeebffebaed6ffff
+ffffffff3010cfffffffff4000ffffff0030ffffffffff8f00bfffbf007f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffaec2fffffffffab3aeffffffaeaef5ffffffffc2b3ff
+ffebaed6ffffffffffff0040ffffffffef1000ffffff0000dfffffffff40
+10ffffbf007fffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffbdb3f0fffff5bdaeaeffffffaeaebdfa
+ffffe1aeccffffebaed6ffffffffffff3010cfffffdf300000ffffff0000
+30efffff9f0060ffffbf007fffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffe6aeb3c2bdaec2d2aebd
+f0ffaeb8b3aec2b3aebdfaffffebaed6ffffffffffffaf00104030004070
+0030cfff0020100040100030efffffbf007fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffebd2c2
+d2e6fffaccc7f5ffaec2f5d2c2c7e1fffffffff5d6ebffffffffffffffbf
+704070afffef6050dfff0040df7040509fffffffffdf7fbfffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffaec2ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff0040ffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffaec2ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffff0040ffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffaec2ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffff0040
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffc2d2ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff4070ffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff00000000000000000000007ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffff8ffffffffffffffffffffff8ffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffff7fffffffffffffffffffffff7fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffcffffffffffffffffffffffff9fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffbffffffffffffffffffffffffefffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff7fffffffffffffffffffffffff7
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffff7ffffffffffffffffffffff
+fffbffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffefffffffffffffffffff
+fffffffbffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffdfffffffffffffff
+fffffffffffdffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffdfffffffffff
+fffffffffffffffdffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffdfffffff
+ffc3bf7ffefffffffffdffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfff
+ffffffbdbffffefffffffffeffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+bfffffffff7ea763c47ffffffffeffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffbfffffffff7e9b5dbafffffffffeffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffbfffffffff7ebb5dbefffffffffeffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffbfffffffff7ebb41befffffffffeffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffdfffffffff7ebb5fbefffffffffeffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffbd9b5dbafffffffffdffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffdfffffffffc3a763c67ffffffffdffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffdfffffffffffff7ffffffffffffdffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffefffffffffffff7ffffffffffffb
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffff7fffffffffffeffffffffff
+fffbffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffff7ffffffffffffffffff
+fffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffbffffffffffffff
+ffffffffffefffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffdffffffffff
+ffffffffffffffdfffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffe7fffff
+ffffffffffffffffff3fffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f
+fffffffffffffffffffff8ffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff00000000000000000000007ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffff7fffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffff7fffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff7fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffff7fffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffff7fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffff81fffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffc1fffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffc1fffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffc1fffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffe3fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffe3fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffe3fffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffe3fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffff000000000
+00000000000007ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff8fffff
+fffffffffffffffff8ffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f
+ffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fcffffffffffffffffffffffff9fffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffbffffffffffffffffffffffffefffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffff7fffffffffffffffffffffffff7ffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffff7fffffffffffffffffffffffffbffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffeffffffffffffffffffffffffffbffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdffffffffffffffffffffffffffdffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffdffffffffffffffffffffffffffdffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffdffffff017fffffffbf7fffffffdffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffdffffffef7fffffffbf7fffffffe
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffbffffffef4eb1bba3a763fff
+fffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffbffffffef366ebb9d9b5
+dffffffeffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffbffffffef76eedb7
+dbb5dffffffeffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffbffffffef76e
+edb61bb41ffffffeffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffbffffffe
+f76eed55dbb5fffffffeffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfff
+fffef76eeeedd9b5dffffffdffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+dffffffef76f1eee2a763ffffffdffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffdffffffffffffffffffffffffffdffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffeffffffffffffffffffffffffffbffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffff7fffffffffffffffffffffffffbffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffff7fffffffffffffffffffffffff7ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffbffffffffffffffffffffffffefffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffdffffffffffffffffffffffffdfffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffe7fffffffffffffffffffffff3fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffff8ffffffffffffffffffffff8ff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff000000000000000000000
+07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff9ffffffffffffffff
+ffffcfffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffff7ffffffffffff
+fffffffff3ffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffefffffffff
+fffffffffffffcffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff9fffff
+ffffffffffffffffff3fffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f
+ffffffffffffffffffffffcfffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fcfffffffffffffffffffffffff3ffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffbfffffffffffffffffffffffffcffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffff7ffffffffffffffffffffffffff3fffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffcfffffffffffffffffffffffffffcfffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffbffffffffffffffffffffffffffff3ffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff7ffffffffffffffffffffffffffffc9fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffcffffffffffffffffffffffffffffff0fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffbffffffffffffffffffffffffffffff07
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffe7ffffffffffffffffffffffffffff
+fe03ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffdfffffffffffffffffffffffff
+fffffc01ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffbfffffffffffffffffffff
+ffffffffffc0ffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffe7fffffffffffffffff
+fffffffffffffffc7fffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffdffffffffffffff
+fffffffffe0000000000000000000001ffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffff3ffffffffff
+ffffffffffffe1fffffffffffffffffffffe3fffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffefffffff
+ffffffffffffffffdfffffffffffffffffffffffdfffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfff
+ffffffffffffffffffff3fffffffffffffffffffffffe7ffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+3ffffffffffffffffffffffefffffffffffffffffffffffffbffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffefffffffffffffffffffffffdfffffffffffffffffffffffffdffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfffffffffffffffffffffffdfffffffffffffffffffffffffeff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffff3fffffffffffffffffffffffbffffffffffffffffffffffff
+feffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffeffffffffffffffffffffffff7ffffffffffffffffffff
+ffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffff9ffffffffffffffffffffffff7ffffffffffffffff
+ffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffff7ffffffffffffffffffffffff7ffffff81ffff
+ffdbffffffffff7fffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffefffffffffffffffffffffffff7ffffffbf
+ffffffdfffffffffffbfffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffff9ffffffffffffffffffffffffefffff
+ffbf7b1c698b8e9fffffffbfffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff7ffffffffffffffffffffffffef
+ffffffbfb6eba6db766fffffffbfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffcfffffffffffffffffffffff
+ffefffffff81cefbaedb76efffffffbfffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffbfffffffffffffffffff
+ffffffefffffffbfcef82edb76efffffffbfffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffff7fffffffffffffff
+ffffffffffefffffffbfb6fbeedb76efffffffbfffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffcffffffffffff
+fffffffffffffff7ffffffbf7aeba6db76efffffff7fffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffbffffffff
+fffffffffffffffffff7ffffff817b1c69cb8eefffffff7fffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffe7ffff
+fffffffffffffffffffffff7ffffffffffffefffffffffffff7fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf
+fffffffffffffffffffffffffffbffffffffffffeffffffffffffeffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffbffffffffffffffffffffffffffffdffffffffffffeffffffffffffeff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffe7ffffffffffffffffffffffffffffdffffffffffffffffffffffff
+fdffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffdfffffffffffffffffffffffffffffeffffffffffffffffffff
+fffffbffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffbffffffffffffffffffffffffffffff7fffffffffffffff
+fffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffe7ffffffffffffffffffffffffffffff9fffffffffff
+ffffffffffffcfffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdfffffffffffffffffffffffffffffffe3ffffff
+fffffffffffffffe3fffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff3ffffffffffffffffffffffffffffffffc00
+00000000000000000001ffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffeffffffffffffffffffffffffffffffff
+ffffff7ffffffffffffffffbffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffdffffffffffffffffffffffffffff
+fffffffffe7ffffffffffffffffcffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffb3ffffffffffffffffffffffff
+fffffffffffffe7fffffffffffffffff7fffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff0fffffffffffffffffffff
+fffffffffffffffffe3fffffffffffffffffbfffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffe0fffffffffffffffff
+fffffffffffffffffffffd3fffffffffffffffffcfffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffc07ffffffffffff
+fffffffffffffffffffffffffd3ffffffffffffffffff7ffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffc07ffffffff
+fffffffffffffffffffffffffffffd3ffffffffffffffffffbffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff81fffff
+fffffffffffffffffffffffffffffffffd3ffffffffffffffffffcffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffff0ff
+fffffffffffffffffffffffffffffffffffffb3fffffffffffffffffff7f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+e7fffffffffffffffffffffffffffffffffffffffb5fffffffffffffffff
+ffb9fffffffffffffffffffffffffffffffffffffffff800000000000000
+00000003fffffffffffffffffffffffffffffffffffffb5fffffffffffff
+ffffffc0ffffffffffffffffffffffffffffffffffffffffc7ffffffffff
+fffffffffffc7ffffffffffffffffffffffffffffffffffff75fffffffff
+fffffffffff07fffffffffffffffffffffffffffffffffffffffbfffffff
+ffffffffffffffffbffffffffffffffffffffffffffffffffffff6dfffff
+fffffffffffffff03ffffffffffffffffffffffffffffffffffffffe7fff
+ffffffffffffffffffffcffffffffffffffffffffffffffffffffffff6df
+ffffffffffffffffffe01ffffffffffffffffffffffffffffffffffffffd
+fffffffffffffffffffffffff7ffffffffffffffffffffffffffffffffff
+eedffffffffffffffffffffc0fffffffffffffffffffffffffffffffffff
+fffbfffffffffffffffffffffffffbffffffffffffffffffffffffffffff
+ffff0eefffffffffffffffffffff87ffffffffffffffffffffffffffffff
+fffffffbfffffffffffffffffffffffffdffffffffffffffffffffffffff
+ffffffff02effffffffffffffffffffff3ffffffffffffffffffffffffff
+fffffffffff7fffffffffffffffffffffffffdffffffffffffffffffffff
+ffffffffffff02efffffffffffffffffffffc0000000000000000000001f
+ffffffffffffffeffffffffffffffffffffffffffeffffffffffffffffff
+ffffffffffffffff06effffffffffffffffffffe3fffffffffffffffffff
+ffe3ffffffffffffffeffffffffffffffffffffffffffeffffffffffffff
+ffffffffffffffffffff0eeffffffffffffffffffffdffffffffffffffff
+fffffffdffffffffffffffeffffffffff81ffffffffffffffeffffffffff
+ffffffffffffffffffffffff0eeffffffffffffffffffff3ffffffffffff
+fffffffffffe7fffffffffffffeffffffffffbffffffffffffffff7fffff
+ffffffffffffffffffffffffffff1eefffffffffffffffffffefffffffff
+ffffffffffffffffbfffffffffffffdffffffffffbfaac6bffffffffff7f
+ffffffffffffffffffffffffffffffff3ef7ffffffffffffffffffdfffff
+ffffffffffffffffffffdfffffffffffffdffffffffffbf99ba7ffffffff
+ff7fffffffffffffffffffffffffffffffff3017ffffffffffffffffffdf
+ffffffffffffffffffffffffefffffffffffffdffffffffff81bbbafffff
+ffffff7fffffffffffffffffffffffffffffffff7817ffffffffffffffff
+ffbfffffffffffffffffffffffffefffffffffffffdffffffffffbfbbbaf
+ffffffffff7ffffffffffffffffffffffffffffffffff817ffffffffffff
+ffffff7ffffffffffffffffffffffffff7ffffffffffffdffffffffffbfb
+bbafffffffffff7fffffffffffffffff00000000000000000000007fffff
+ffffffffff7ffffffffffffffffffffffffff7ffffffffffffefffffffff
+fbfbbbaffffffffffefffffffffffffffff8fffffffffffffffffc37ff8f
+ffffffffffffff7c1ffff77fffe07ffffff77ffff7ffffffffffffefffff
+fffff81bbc6ffffffffffefffffffffffffffff7fffffffffffffffffc3b
+fff7fffffffffffffefdeffff7ffffeffffffff7fffffbffffffffffffef
+fffffffffffffffffffffffffeffffffffffffffffcfffffffffffffffff
+fc7bfff9fffffffffffffefdeeed2356f8efdec71d2363a7fbffffffffff
+fff7fffffffffffffffffffffffffdffffffffffffffffbfffffffffffff
+fffffc7bfffefffffffffffffefdeeecd749776fedbaecd75d9bfbffffff
+fffffffbfffffffffffffffffffffffffdffffffffffffffff7fffffffff
+fffffffffe40ffff7ffffffffffffefc1eedd75b776073beedd75dbbfbff
+fffffffffffbfffffffffffffffffffffffffbffffffffffffffff7fffff
+fffffffffffffee0ffffbffffffffffffefddeedd75b706ff3be0dd75dbb
+fbfffffffffffffdfffffffffffffffffffffffff7fffffffffffffffeff
+fffffffffffffffffee0ffffbfffffffffffff7deeedd75b77efedbefdd7
+5dbbfbfffffffffffffeffffffffffffffffffffffffefffffffffffffff
+fdffff00000000000000000000005fffffffffffff7deecdd75b776fdeba
+ecd75dbbf7ffffffffffffff3fffffffffffffffffffffff9fffffffffff
+fffffdfff8fffffffffffffffff0ffff8fffffffffffff7def2dd35b78e0
+5ec71d3363bbf7ffffffffffffffc7fffffffffffffffffffffc7fffffff
+fffffffffdfff7fffffffffffffffff8fffff7ffffffffffff7fffffffff
+fffffffffdfffffff7fffffffffffffff80000000000000000000003ffff
+fffffffffffffbffcffffffffffffffffff8fffff9ffffffffffffbfffff
+fffffffffffffdffffffefffffffffffffffffffffffffffbfffffffffff
+fffffffffffffffffbffbffffffffffffffffffcfffffeffffffffffffdf
+fffffffffffffffffdffffffefffffffffffffffffffffffffff3fffffff
+fffffffffffffffffffffbff7ffffffffffffffffffcffffff7fffffffff
+ffdfffffffffffffffffffffffffdfffffffffffffffffffffffffff3fff
+fffffffffffffffffffffffffbff7ffffffffffffffffffeffffffbfffff
+ffffffefffffffffffffffffffffffffbfffffffffffffffffffffffffff
+1ffffffffffffffffffffffffffffbfefffffffffffffffffffeffffffbf
+fffffffffff7ffffffffffffffffffffffff7fffffffffffffffffffffff
+fffe9ffffffffffffffffffffffffffffdfdffff00000000000000000000
+005ffffffffffff9fffffffffffffffffffffffcffffffffffffffffffff
+fffffffe9ffffffffffffffffffffffffffffdfdfff8ffffffffffffffff
+ffffff8ffffffffffffe3fffffffffffffffffffffe3ffffffffffffffff
+fffffffffffe9ffffffffffffffffffffffffffffdfdfff7ffffffffffff
+fffffffffff7ffffffffffffc0000000000000000000001fffffffffffff
+fffffffffffffffe9ffffffffffffffffffffffffffffdfbffcfffffffff
+fffffffffffffff9ffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffd9ffffffffffffffffffffffffffffefbffbfffff
+fffffffffffffffffffeffffffffffffffffffffffffbfffffffffffffff
+fffffffffffffffffffffffdafffffffffffffffffffffffffffff7bff7f
+ffffffffffffffffffffffff7fffffffffffffffffffffffbfffffffffff
+fffffffffffffffffffffffffffdafffffffffffffffffffffffffffff7b
+ff7fffffffffffffffffffffffffbfffffffffffffffffffffff3fffffff
+fffffffffffffffffffffffffffffffbafffffffffffffffffffffffffff
+ffbbfeffffffffffffffffffffffffffbfffffffffffffffffffffff3fff
+fffffffffffffffffffffffffffffffffffb6fffffffffffffffffffffff
+ffffffddfdffffffffffffffffffffffffffdfffffffffffffffffffffff
+1ffffffffffffffffffffffffffffffffffffffb6fffffffffffffffffff
+ffffffffffe5fdffffffffffffffffffffffffffdfffffffffffffffffff
+fffe9ffffffffffffffffffffffffffffffffffffff76fffffffffffffff
+fffffffffffffff9fdffffffffffffffffffffffffffdfffffffffffffff
+fffffffe9fffffffffffffffffffffffffffffffffffff0777ffffffffff
+fffffffffffffffffffdfbffffffffffffffffffffffffffefffffffffff
+fffffffffffe9fffffffffffffffffffffffffffffffffffff0177ffffff
+fffffffffffffffffffffffefbffffffffffffffffffffffffffefffffff
+fffffffffffffffe9fffffffffffffffffffffffffffffffffffff0177ff
+ffffffffffffffffffffffffffff7bffffffffffffffffffffffffffefff
+fffffffffffffffffffd9fffffffffffffffffffffffffffffffffffff03
+77ffffffffffffffffffffffffffffff7bffffffffffffffffffffffffff
+effffffffffffffffffffffdafffffffffffffffffffffffffffffffffff
+ff0777ffffffffffffffffffffffffffffffbbffffffffffffffffffffff
+ffffeffffffffffffffffffffffdafffffffffffffffffffffffffffffff
+ffffff0777ffffffffffffffffffffffffffffffddffffffffff9fe7fcff
+ffffffffeffffffffffffffffffffffb6fffffffffffffffffffffffffff
+ffffffffff0f77ffffffffffffffffffffffffffffffe5ffffffffff9fe7
+fcffffffffffdffffffffffffffffffffffb6fffffffffffffffffffffff
+ffffffffffffff1f7bfffffffffffffffffffffffffffffff9ffffffffff
+9fe7fcffffffffffdffffffffffffffffffffffb6fffffffffffffffffff
+ffffffffffffffffff180bfffffffffffffffffffffffffffffffdffffff
+ffffffffffffffffffffdffffffffffffffffffffff76fffffffffffffff
+ffffffffffffffffffffff3c0bfffffffffffffffffffffffffffffffeff
+ffffffffffffffffffffffffbfffffffffffffffffffff8777ffffffffff
+ffffffffffffffffffffffffff7c0bffffffffffffffffffffffffffffff
+ff7fffffffffffffffffffffffffbfffffffffffffffffffff8177ffffff
+fffffffffffffffffff00000000000000000000007ffffffffffffffffff
+ffffff7fffffffffffffffffffffffff7fffffffffffffffffffff8177ff
+ffffffffffffffffffffff8ffffffffffffe1bfffffff8ffffffffffffff
+ffffffffffbffffffffffffffffffffffffeffffffffffffffffffffff83
+77ffffffffffffffffffffffff7ffffffffffffe1dffffffff7fffffffff
+ffffffffffffffdffffffffffffffffffffffffdffffffffffffffffffff
+ff8777fffffffffffffffffffffffcfffffffffffffe3dffffffff9fffff
+ffffffffffffffffffe7fffffffffffffffffffffff3ffffffffffffffff
+ffffff8777fffffffffffffffffffffffbfffffffffffffe3dffffffffef
+fffffffffffffffffffffff8ffffffffffffffffffffff8fffffffffffff
+ffffffffff8f7bfffffffffffffffffffffff7ffffffffffffff207fffff
+fff7ffffffffffffffffffffffff00000000000000000000007fffffffff
+ffffffffffffff980bfffffffffffffffffffffff7ffffffffffffff707f
+fffffffbffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffff9c0bffffffffffffffffffffffefffffffffffffff
+707ffffffffbffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffbc0bffffffffffffffffffffffdffff0000000
+0000000000000005ffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffc1bffffffffffffffffffffffdfff8fff
+fffffffff87ffffffff8ffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffff00000000000000000000007ffffffffffffdfff
+7ffffffffffffc7fffffffff7fffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff8ffffffffffe1dfffffffff8ffffffffffff
+dffcfffffffffffffc7fffffffff9fffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffff7ffffffffffe3dffffffffff7fffffff
+ffffbffbfffffffffffffe7fffffffffefffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffcfffffffffffe3dffffffffff9fff
+ffffffffbff7fffffffffffffe7ffffffffff7ffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffbfffffffffffe3c7fffffffff
+efffffffffffbff7ffffffffffffff7ffffffffffbffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff7ffffffffffff607fffff
+fffff7ffffffffffbfefffffffffffffff7ffffffffffbffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff7ffffffffffff707f
+fffffffffbffffffffffbfdffff00000000000000000000005ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffefffffffffffff
+707ffffffffffbffffffffffdfdfff8ffffffffffffffffffffff8ffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffdffff00000
+000000000000000005ffffffffffdfdfff7fffffffffffffffffffffff7f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffdfff8f
+fffffffff87ffffffffff8ffffffffffdfdffcffffffffffffffffffffff
+ff9fffffffffffffffffffffffffffffffffffffffffffffffffffffffdf
+ff7ffffffffffc7fffffffffff7fffffffffefbffbffffffffffffffffff
+ffffffefffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffbffcfffffffffffc7fffffffffff9ffffffffff7bff7ffffffffffffff
+fffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffbffbfffffffffffe7fffffffffffeffffffffff7bff7ffffffffff
+fffffffffffffffbffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffbff7fffffffffffe7ffffffffffff7fffffffffbbfefffffff
+fffffffffffffffffffbffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffbff7ffffffffffff7ffffffffffffbfffffffffdbfdfff
+fffffffffffffffffffffffdffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffbfefffffffffffff7ffffffffffffbfffffffffe5f
+dffffffffffffffffffffffffffdffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffdfdffff00000000000000000000005ffffffff
+ff9fdffffffffffffffffffffffffffdffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdfdfff8ffffffffffffffffffffff8ffff
+ffffffdfdffffffffffffffffffffffffffeffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffdfdfff7fffffffffffffffffffffff
+7fffffffffefbffffffffffffffffffffffffffeffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffdfbffcffffffffffffffffffff
+ffff9ffffffffff7bffffffffffffffffffffffffffeffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffefbffbffffffffffffffff
+ffffffffeffffffffff7bffffffffffffffffffffffffffeffffffffffff
+fffffffffffffffffffffffffffffffffffffffffff7bff7ffffffffffff
+fffffffffffff7fffffffffbbffffffffffffffffffffffffffeffffffff
+fffffffffffffffffffffffffffffffffffffffffffffff7bff7ffffffff
+fffffffffffffffffbfffffffffdbffffffffff3fe7f9ffffffffffeffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffbbfefffff
+fffffffffffffffffffffbfffffffffe5ffffffffff3fe7f9ffffffffffd
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffddfdf
+fffffffffffffffffffffffffdffffffffff9ffffffffff3fe7f9fffffff
+fffdfffffffffffffffffffffffffffffffffffffffffffffffffffffffe
+5fdffffffffffffffffffffffffffdffffffffffdfffffffffffffffffff
+fffffffdffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffff9fdffffffffffffffffffffffffffdffffffffffefffffffffffffff
+fffffffffffbffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffdfbffffffffffffffffffffffffffefffffffffff7ffffffffff
+fffffffffffffffbffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffefbffffffffffffffffffffffffffefffffffffff7ffffff
+fffffffffffffffffff7ffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffff7bffffffffffffffffffffffffffefffffffffffbff
+ffffffffffffffffffffffefffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffff7bffffffffffffffffffffffffffeffffffffff
+fdffffffffffffffffffffffffdfffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffbbffffffffffffffffffffffffffeffffff
+fffffe7fffffffffffffffffffffff3fffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffddffffffffff9fe7fcffffffffffeff
+ffffffffff8ffffffffffffffffffffff8ffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffe5ffffffffff9fe7fcfffffffff
+fdfffffffffffff00000000000000000000007ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff9ffffffffff9fe7fcfffff
+fffffdffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffdfffffffffffffffff
+fffffffffdffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffefffffffffffff
+fffffffffffffbffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffff7ffffffff
+fffffffffffffffffbffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffff
+fffffffffffffffffffff7ffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb
+ffffffffffffffffffffffffefffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffdffffffffffffffffffffffffdfffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffe7fffffffffffffffffffffff3fffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffff8ffffffffffffffffffffff8ffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffff00000000000000000000007ffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffc000000000000000000000000007fffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffe3ffffffffffffffffffffff
+ffff8fffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffdffffffffffffffffffffffffffff7ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffff3ffffffffffffffffffffffffffff9ff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffeffffff
+fffffffffffffffffffffffeffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffdffffffffffffffffffffffffffffff7fffffffff
+fffffffffffffffffffffffffffffffffffffffffffffdffffffffffffff
+ffffffffffffffffbfffffffffffffffffffffffffffffffffffffffffff
+fffffffffffbffffffffffffffffffffffffffffffbfffffffffffffffff
+fffffffffffffffffffffffffffffffffffff7ffffffffffffffffffffff
+ffffffffdfffffffffffffffffffffffffffffffffffffffffffffffffff
+fff7ffffffffffffffffffffffffffffffdfffffffffffffffffffffffff
+fffffffffffffffffffffffffffff7fefbfefffedfbfb81ffffffdbfffff
+dffffffffffffffffffffffffffffffffffffffffffffffffffffff7feff
+fefffedfffbbfffffffdffffffefffffffffffffffffffffffffffffffff
+ffffffffffffffffffffeffefb4edc72dfb31bf7b1c698b8e9ffefffffff
+ffffffffffffffffffffffffffffffffffffffffffffffeffefb36bbacdf
+adbbfb6eba6db766ffefffffffffffffffffffffffffffffffffffffffff
+ffffffffffffeffefb767baedfafb81cefbaedb76effefffffffffffffff
+ffffffffffffffffffffffffffffffffffffffeffefb76782edfb3bbfcef
+82edb76effefffffffffffffffffffffffffffffffffffffffffffffffff
+ffffeffefb76bbeedfbdbbfb6fbeedb76effefffffffffffffffffffffff
+fffffffffffffffffffffffffffffff7fefb76dbacdfadbbf7aeba6db76e
+ffdffffffffffffffffffffffffffffffffffffffffffffffffffffff7fe
+0b76ec72c1b39817b1c69cb8eeffdfffffffffffffffffffffffffffffff
+fffffffffffffffffffffff7fffffffffffffffffffffeffffffffdfffff
+fffffffffffffffffffffffffffffffffffffffffffffffffbffffffffff
+fffffffffffeffffffffbfffffffffffffffffffffffffffffffffffffff
+fffffffffffffffdfffffffffffffffffffffeffffffffbfffffffffffff
+fffffffffffffffffffffffffffffffffffffffffdffffffffffffffffff
+ffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffff
+fffffffefffffffffffffffffffffffffffffeffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffff
+fffdffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+9ffffffffffffffffffffffffffff3ffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffe3ffffffffffffffffffffffffff8fffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffc000000
+000000000000000000007fffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff7ffffffffffffffff7ffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffeffffffffff
+fffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffefffffffffffffffffbffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffefffffffffffffffffb
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfffffffffffffffffdffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffdfffffffffffffffffeffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd
+fffffffffffffffffeffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffdffffffffffffffffff7fffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffbffffffff
+ffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffbffffffffffffffffffbfffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffbffffffffffffffff
+ffbfffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffff7ffffffffffffffffffdfffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffff7ffffffffffffffffffefffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+f7ffffffffffffffffffefffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffeffffffffffffffffffff7ffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffe0fffffff
+fffffffffffff67fffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffe03fffffffffffffffffff87fffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffe03ffffffffffffff
+fffff07fffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffe07ffffffffffffffffffc07fffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffe0ffffffffffffffffffff03f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fe0ffffffffffffffffffff83fffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffe1ffffffffffffffffffffc3fffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffe3fffff
+fffffffffffffffe3fffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffe3fffffffffffffffffffff1fffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffe7fffffffffffff
+ffffffff9fffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffeffffffffffffffffffffffdfffffffffffffffffffffffff
+ffffffffffffffffe000000000000000000000000000fffffffffffff000
+00000000000000000000000000007fffffffffffff1fffffffffffffffff
+ffffffffff1fffffffffff0fffffffffffffffffffffffffffffff87ffff
+fffffffeffffffffffffffffffffffffffffeffffffffffeffffffffffff
+fffffffffffffffffffffbfffffffffff9ffffffffffffffffffffffffff
+fff3fffffffff9fffffffffffffffffffffffffffffffffcfffffffffff7
+fffffffffffffffffffffffffffffdfffffffff7ffffffffffffffffffff
+ffffffffffffff7fffffffffeffffffffffffffffffffffffffffffeffff
+ffffefffffffffffffffffffffffffffffffffffbfffffffffefffffffff
+ffffffffffffffffffffff7fffffffefffffffffffffffffffffffffffff
+ffffffdfffffffffdfffffffffffffffffffffffffffffff7fffffffdfff
+ffffffffffffffffffffffffffffffffdfffffffffbfffffffffffffffff
+ffffffffffffffbfffffffbfffffffffffffffffffffffffffffffffffef
+ffffffffbfffffffffffffffffffffffffffffffbfffffffbfffffffffff
+ffffffffffffffffffffffffefffffffffbf7ffffdbf5fff7fff03ffffff
+bbffffbfffffffbe1dfbfff77dfec0ffffffd03ffffffdbfffefffffffff
+bf7ffffdff5fff7fff7fffffffbfffffdfffffffbdedfffff73dfedfffff
+ffd7fffffffdfffff7ffffffff7f69dd8db95d3971bd7ef638e91b1d3fdf
+ffffff7bf53b8e235d8c5fe3769e57ef638e98b8d3f7ffffffff7f66dd75
+b65cd66edb7f6dd766baecdfdfffffff7bf4db75d75d76dfdd766d97f6dd
+766db74df7ffffffff7f6eddf5b75dd76ee7039df76ebaeddfdfffffff7b
+f5db75f76d76c1dd76edd039df76edb75df7ffffffff7f6eeb85b75dd760
+e77f9df06ebaeddfdfffffff7bf5db05f77576dfdd76edd7f9df06edb75d
+f7ffffffff7f6eeb75b75dd76fdb7f6df7eebaeddfdfffffff7bf5db7df7
+7576dfdd76edd7f6df7eedb75df7ffffffffbf6ef775b65dd66ebd7ef5d7
+66baeddfbfffffffbdecdb75d77976dfdd66ed97ef5d766db75defffffff
+ffbf6ef789b95dd971bd02f638e99b1ddfbfffffffbe1d3b8e337d8e5fe3
+96ee502f638e9cb8ddefffffffffbfffffffffffffffffffffffefffffff
+bfffffffbffffbfffffffffffffffffffffffeffffffefffffffffdfffff
+ffffffffffffffffffefffffff7fffffffdffffbffffffffffffffffffff
+fffeffffffdfffffffffefffffffffffffffffffffffefffffff7fffffff
+effff7fffffffffffffffffffffffeffffffdfffffffffefffffffffffff
+fffffffffffffffffeffffffffefffffffffffffffffffffffffffffffff
+ffbffffffffff7fffffffffffffffffffffffffffffdfffffffff7ffffff
+ffffffffffffffffffffffffffff7ffffffffffbffffffffffffffffffff
+fffffffffbfffffffffbfffffffffffffffffffffffffffffffffeffffff
+fffffcffffffffffffffffffffffffffffe7fffffffffcffffffffffffff
+fffffffffffffffffff9ffffffffffff1fffffffffffffffffffffffffff
+1fffffffffff1fffffffffffffffffffffffffffffffc7ffffffffffffe0
+00000000000000000000000000ffffffffffffe000000000000000000000
+00000000003fffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffdffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffdffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffdffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffdffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffeffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffeffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffeffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffeffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffeffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffeffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffeffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffff7fffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffbfffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffbfffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffbfffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffc0fffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffe0fffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffe0fffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff0fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffff0fffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff8fffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff8fffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffcfffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffcfffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffefffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffefffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffe000000000000000000000001fffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffff1fffffffffffffff
+ffffffffe3ffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffefffffffffffffffffffffffffdffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffff9ffffffffffffffffffffffff
+fe7fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+f7ffffffffffffffffffffffffffbfffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffefffffffffffffffffffffffffffdfffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffefffffff
+ffffffffffffffffffffefffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffdfffffffffffffffffffffffffffefffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffbfffffffffffffff
+fffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffbffffffffffffffffffffffffffff7ffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffbe07ffff7fbf7f703ffffffb
+7ffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff7effffff7fbfff77fffffffbfffffbffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffff7efeb7a62ebf6637ef638d3171d3fbff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffff7efe4b
+9b6ebf5b77f6dd74db6ecdfbffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff7e06dbbb6ebf5f7039df75db6eddfbffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffff7efedbbb6dbf67
+77f9df05db6eddfbffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffbefedbbb75bf7b77f6df7ddb6eddfbffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffbefedb9b75bf5b77ef5d74
+db6eddf7ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffbe06dba73b8367302f638d3971ddf7ffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffbfffffbffbfffffffffffdfffffff7
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfff
+ffbff7fffffffffffdffffffefffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffefffffbfeffffffffffffdffffffefffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffefffffffffff
+ffffffffffffffffdfffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff7ffffffffffffffffffffffffffbfffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffbffffffffffffffffff
+ffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffcfffffffffffffffffffffffffcffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffff1fffffffffffffffffffffffe3
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+e000000000000000000000001fffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffff
+0 11 SF
+0 LE neg 20 sub M
+(
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Table Of Contents
+)EH(
+)0 P(
+)BQ(
+
+
+)UL(
+)LI(
+)A(Handling Errors using Exceptions)EA(
+    )UL(
+    )LI(
+    )A(What's an Exception and Why Do I Care?)EA(
+    )LI(
+    )A(Your First Encounter with Java Exceptions)EA(
+    )LI(
+    )A(Java's Catch or Declare Requirement)EA(
+    )LI(
+    )A(Dealing with Exceptions)EA(
+        )UL(
+        )LI(
+        )A(The Example)EA(
+        )LI(
+        )A(Catching and Handling Exceptions)EA(
+            )UL(
+            )LI(
+            )A(The try Block)EA(
+            )LI(
+            )A(The catch Block\201s\202)EA(
+            )LI(
+            )A(The finally Block)EA(
+            )LI(
+            )A(Putting It All Together)EA(
+            )LU(
+        )LI(
+        )A(Declaring the Exceptions Thrown by a Method)EA(
+	)LU(
+    )LI(
+    )A(How to Throw Exceptions)EA(
+        )UL(
+        )LI(
+        )A(The throw Statement)EA(
+        )LI(
+        )A(The Throwable Class and Its Subclasses)EA(
+        )LI(
+	)A(Creating Your Own Exception Classes)EA(
+	)LU(
+    )LI(
+    )A(Runtime Exceptions--The Controversy)EA(
+    )LU(
+)LU(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Table of Contents)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 1 H(
+     Handling Errors using Exceptions
+)EH(
+)0 P(
+)BQ(
+
+If there's one golden rule of programming, it's this: errors occur in
+software programs. This we know. But what really matters is what
+happens after the error occurs. How is the error handled? Who handles
+it? Can the program recover?
+)0 P(
+The Java language uses )I(exceptions)ES( to provide
+error handling capabilities for its programs. In this lesson you will
+learn what an exception is, how to throw and catch exceptions, what to
+do with an exception once you've caught it, and how to best use the
+exception class hierarchy provided by the Java development environment.
+)0 P(
+)BD(Note on terminology:)ES( Some languages \201or their development
+environments\202 use the terms )I(raise)ES( and )I(handle)ES( the same way
+that Java uses )I(throw)ES( and )I(catch)ES(. Java inherits its
+terminology and much of its exception syntax from C++.
+
+)0 4 H()A(What's an Exception and Why Do I Care?)EA()EH(
+)BQ(
+An exception is an event that occurs during the execution of a program
+that disrupts the normal flow of instructions.
+)QB(
+
+)0 4 H()A(Your First Encounter with Java Exceptions)EA()EH(
+)BQ(
+Now that you understand what exceptions are and the advantages of using
+exceptions in your Java programs, let's start writing some Java code to
+put exceptions to use.
+)0 P(
+If you have done any amount of Java programming
+at all, you have undoubtedly seen an error message similar to this one:
+)BQ(
+)PR(
+FileWithGetLine.java:8: Warning: Exception java.io.FileNotFoundException must be caught, or it must be declared in throws clause of this method.
+	fis = new FileInputStream\201filename\202;
+	      ^
+)RP(
+)QB(
+This message indicates that the compiler found an exception that is not being
+dealt with. The Java language requires that all non-runtime exceptions be caught
+or declared. At first, this may seem overburdensome to you, however, there
+are advantages to this requirement.
+)QB(
+
+)0 4 H()A(Java's Catch or Declare Requirement)EA()EH(
+)BQ(
+Java requires that your programs either catch or declare all non-runtime
+exceptions that can be thrown within the scope of that method.
+)QB(
+
+)0 4 H()A(Dealing with Exceptions)EA()EH(
+)BQ(
+This page introduces an example that we will use to show you how to catch
+an exception and handle it, and alternatively, how to declare an exception
+that can be thrown within a method.
+)QB(
+
+)0 4 H()A(Throwing Exceptions)EA()EH(
+)BQ(
+So far, you've been catching exceptions thrown by the Java runtime system
+or classes from the Java packages. This section shows you how you can throw
+exceptions from your own Java code using the )SM(throw)ES( statement. All
+exceptions must be )I(Throwable)ES(, that is, exceptions must inherit
+\201either directly or indirectly\202 from the Throwable class defined in the
+java.lang package.
+)QB(
+
+)0 4 H()A(Runtime Exceptions--The Controversy)EA()EH(
+)BQ(
+Because the Java language does not require methods to catch or declare
+runtime exceptions, it's tempting for programmers to
+write code that always throw runtime exceptions, or
+make all of their exception subclasses inherit from RuntimeException.
+Both of these are "exception abuse" and are not recommended.
+)QB(
+
+)HR(
+)BD(Note to C++ Programmers:)ES(
+Java exception handlers can have a finally block
+which allows programs to cleanup after the )SM(try)ES( block.
+See )A(The finally Block)EA( for more information
+about how to use the )SM(finally)ES( statement.
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Table of Contents)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    What's an Exception and Why Do I Care?
+)EH(
+)0 P(
+)BQ(
+
+The term )I(exception)ES( is shorthand for the phrase "exceptional event"
+and can be defined as follows:
+)HR(
+)BD(Definition)ES(: An )I(exception)ES( is an event that occurs
+during the execution of a program that disrupts the normal flow of instructions.
+)HR(
+
+)0 P(
+Many different kinds of errors can cause exceptions: problems ranging from
+serious hardware errors, such as a hard disk crash, to simple programming errors,
+such as trying to access an out-of-bounds array element.
+When such an error occurs within a Java method, the method creates an
+exception object and hands it off to the runtime system. The exception object
+contains information about the exception including its type and the state of
+the program when the error occurred. The runtime system is then responsible for
+finding some code to handle the error. In Java terminology, creating an exception
+object and handing it to the runtime system is called )I(throwing an exception)ES(.
+
+)0 P(
+After a method throws an exception, the runtime system leaps into action to try
+and find someone to handle the exception. The set of possible "someones" to
+handle the exception is the set of methods in the call stack of the method
+where the error occurred. The runtime system searches backwards through the
+call stack, beginning with the method in which the error occurred, until
+it finds a method that contains an appropriate )I(exception handler)ES(. An
+exception handler is considered appropriate if the type of the exception thrown
+is the same as the type of exception handled by the handler. Thus the exception
+bubbles up through the call stack until an appropriate handler is found
+and one of the calling methods handles the exception. The exception handler chosen
+is said to )I(catch the exception)ES(.
+
+)0 P(
+)HR(
+)BD(Note on terminology:)ES( Some languages \201or their development
+environments\202 use the terms )I(raise)ES( and )I(handle)ES( the same way
+that Java uses )I(throw)ES( and )I(catch)ES(. Java inherits its
+terminology and much of its exception syntax from C++.
+)HR(
+
+)0 P(
+If the runtime system exhaustively searches all of the methods on the call
+stack without finding an appropriate exception handler the runtime system
+\201and consequently the Java program\202 terminates.
+
+)0 P(
+By using exceptions to manage errors, Java programs have the following advantages
+over traditional error management techniques:
+)UL(
+)LI(
+)A(Advantage 1: Separate Error Handling Code from "Regular" Code)EA(
+)LI(
+)A(Advantage 2: Propagate Errors Up the Call Stack)EA(
+)LI(
+)A(Advantage 3: Grouping Error Types and Error Differentiation)EA(
+)LU(
+
+
+
+)0 4 H(Advantage 1: Separate Error Handling Code from "Regular" Code)EH(
+)EA(
+)BQ(
+In traditional programming, error detection, reporting and handling often leads
+to confusing spaghetti code. For example, suppose that you have a function that
+reads an entire file into memory. In psuedo-code, your function might look something
+like this:
+)BQ(
+)PR(
+read_file {
+    openTheFile;
+    determine its size;
+    allocate that much memory;
+    read the file into memory;
+    closeTheFile;
+}
+)RP(
+)QB(
+At first glance this function seems simple enough, but it ignores all of these
+potential errors:
+)UL(
+)LI(
+what happens if the file can't be opened?
+)LI(
+what happens if the length of the file can't be determined?
+)LI(
+what happens if enough memory can't be allocated?
+)LI(
+what happens if the read fails?
+)LI(
+what happens if the file can't be closed?
+)LU(
+To answer these questions within your )SM(read_file)ES( function,
+you'd have to add a lot of code to do error detection, reporting and handling.
+Your function would end up looking something like this:
+)BQ(
+)PR(
+errorCodeType )BD(read_file {)ES(
+    initialize errorCode = 0;
+    )BD(openTheFile;)ES(
+    if \201theFileIsOpen\202 {
+        )BD(determine the length of the file;)ES(
+	if \201gotTheFileLength\202 {
+            )BD(allocate that much memory;)ES(
+	    if \201gotEnoughMemory\202 {
+                )BD(read the file into memory;)ES(
+		if \201readFailed\202 {
+		    errorCode = -1;
+		}
+	    } else {
+		errorCode = -2;
+	    }
+	} else {
+	    errorCode = -3;
+	}
+        )BD(closeTheFile;)ES(
+	if \201theFileDidntClose && errorCode == 0\202 {
+	    errorCode = -4;
+	} else {
+	    errorCode = errorCode and -4;
+	}
+    } else {
+	errorCode = -5;
+    }
+    return errorCode;
+)BD(})ES(
+)RP(
+)QB(
+With error detection built in, your original 7 lines \201in bold\202 have been
+inflated to 29 lines of code--a bloat factor of almost 400 percent. Worse,
+there's so much error detection, reporting, and returning, that the original
+7 lines of code are lost in the clutter. And worse yet, the logical flow
+of the code has also been lost in the clutter making it difficult to tell
+if the code is doing the right thing \201is the file )I(really)ES( being closed
+if the function fails to allocate enough memory?\202 and even more difficult
+to ensure that the code continues to do the right thing after you modify
+the function three months after writing it. Many programmers "solve" this
+problem by simply ignoring it--errors are "reported" when their programs crash.
+)0 P(
+Java provides an elegant solution to the problem of error management:
+exceptions. Exceptions enable you to write the main flow of your code and deal
+with the, well, exceptional cases elsewhere.  If your )SM(read_file)ES(
+function used exceptions instead of traditional error management techniques,
+it would look something like this:
+)BQ(
+)PR(
+)BD(read_file {)ES(
+    try {
+        )BD(openTheFile;
+        determine its size;
+        allocate that much memory;
+        read the file into memory;
+        closeTheFile;)ES(
+    } catch \201fileOpenFailed\202 {
+	doSomething;
+    } catch \201sizeDeterminationFailed\202 {
+        doSomething;
+    } catch \201memoryAllocationFailed\202 {
+        doSomething;
+    } catch \201readFailed\202 {
+        doSomething;
+    } catch \201fileCloseFailed\202 {
+        doSomething;
+    }
+)BD(})ES(
+)RP(
+)QB(
+Notice that exceptions don't spare you the effort of doing the work
+of detecting, reporting and handling errors. What exceptions do provide
+for you is the means to separate all the grungy details of what to
+do when something out-of-the-ordinary happens.
+)0 P(
+In addition, the bloat factor for error management code in this program
+is about 250 percent--compared to 400 percent in the previous example.
+)QB(
+ 
+ 
+)0 4 H(Advantage 2: Propagate Errors Up the Call Stack)EH( 
+)EA( 
+)BQ( 
+A second advantage of exceptions is the ability to propagate error
+reporting up the call stack of methods. Suppose, that the )SM(read_file)ES(
+method was the fourth method in a series of nested method calls made by your
+main program: )SM(method1)ES( called )SM(method2)ES( which called
+)SM(method3)ES( which finally called )SM(read_file)ES(.
+)BQ(
+)PR(
+method1 {
+    call method2;
+}
+method2 {
+    call method3;
+}
+method3 {
+    call read_file;
+}
+)RP(
+)QB(
+Suppose also, that )SM(method1)ES( was the only method interested
+in the errors that occurred within )SM(read_file)ES(. Traditional
+error notification techniques force )SM(method2)ES( and )SM(method3)ES(
+to propagate the error codes returned by )SM(read_file)ES( up the
+call stack until the error codes finally reached )SM(method1)ES(--the
+only method that was interested in them.
+)BQ(
+)PR(
+)BD(method1 {)ES(
+    errorCodeType error;
+    error = )BD(call method2;)ES(
+    if \201error\202
+	doErrorProcessing;
+    else
+	proceed;
+)BD(})ES(
+errorCodeType )BD(method2 {)ES(
+    errorCodeType error;
+    error = )BD(call method3;)ES(
+    if \201error\202
+	return error;
+    else
+	proceed;
+)BD(})ES(
+errorCodeType )BD(method3 {)ES(
+    errorCodeType error;
+    error = )BD(call readFile;)ES(
+    if \201error\202
+	return error;
+    else
+	proceed;
+)BD(})ES(
+)RP(
+)QB(
+As you learned earlier, the Java runtime system searches backwards through
+the call stack to find any methods that are interested in handling a particular
+exception. A Java method can "duck" any exceptions thrown within it, thereby
+allowing a method further up the call stack to catch it.
+Thus only the methods that care about errors have to worry about detecting
+errors.
+)BQ(
+)PR(
+)BD(method1 {)ES(
+    try {
+        )BD(call method2;)ES(
+    } catch \201exception\202 {
+	doErrorProcessing;
+    }
+)BD(})ES(
+)BD(method2 )ES(throws exception )BD({
+    call method3;
+})ES(
+)BD(method3)ES( throws exception )BD({
+    call read_file;
+})ES(
+)RP(
+)QB(
+However, as you can see from the psuedo-code, ducking an exception does require
+some effort on the part of the "middleman" methods. Any non-runtime exceptions
+that can be thrown within a method is part of that method's public programming
+interface and must be declared in the )SM(throws)ES( clause of the method.
+Thus a method informs its callers about the exceptions that it can throw so that
+the callers can intelligently and conciously decide what to do about those exceptions.
+)0 P(
+Notice again the difference in the bloat factors of these two error management
+techniques and the code obfuscation factor. The code that uses exceptions is
+more compact and easier to understand.
+)QB(
+
+
+)0 4 H(Advantage 3: Grouping Error Types and Error Differentiation)EH(
+)EA(
+)BQ(
+Often exceptions fall into categories or groups.
+For example, you could imagine a group of exceptions each of which represented
+a specific type of error that can occur when manipulating an array:
+the index was out of range for the size of the array, the element being
+inserted into the array was of the wrong type, or the element being
+searched for was not in the array.
+Furthermore, you can imagine that some methods would like to handle all
+exceptions that fall within a category \201all array exceptions\202,
+and other methods would like to handle specific exceptions \201just the
+invalid index exceptions, please\202.
+)0 P(
+Because all exceptions that are thrown within a Java program are first-class
+objects, grouping or categorization of exceptions is a natural outcome of
+classes and superclasses.
+Java exceptions must be Throwable, that is, they must be instances of
+Throwable or any Throwable subclass.
+Like other Java classes, you can create subclasses of the
+Throwable class and subclasses of your subclasses.
+Each "leaf" class \201a class with no subclasses\202 represents a specific type of
+exception and each "node" class \201a class with one or more subclasses\202 represents
+a group of related exceptions.
+)0 P(
+For example, in the following diagram, ArrayException is a subclass of
+Exception \201a subclass of Throwable\202 and has three subclasses.
+)0 P(
+)0 4 IM(
+)0 P(
+InvalidIndexException, ElementTypeException and NoSuchElementException are all
+leaf classes and each one represents a very specific type of error that can
+occur when manipulating an array. A method can catch an exception based on its
+specific type \201its immediate class or interface\202.
+For example, if your wanted to write an exception handler that handled only
+invalid index exceptions, your )SM(catch)ES( statement would look like
+this:
+)BQ(
+)PR(
+catch \201InvalidIndexException e\202 {
+    . . .
+}
+)RP(
+)QB(
+ArrayException is a node class and represents any error that can occur
+when manipulating an array object including those specifically represented
+by one of it subclasses.
+A method can catch an exception based on its group or general type by specifying
+any one of the exception's superclasses in the )SM(catch)ES( statement.
+For example, if a method wanted to catch all array exceptions regardless of
+their specific type, that method would set up an exception handler whose
+argument was ArrayException:
+)BQ(
+)PR(
+catch \201ArrayException e\202 {
+    . . .
+}
+)RP(
+)QB(
+This handler would catch all array exceptions including InvalidIndexException,
+ElementTypeException and NoSuchElementException. You could even set up
+an exception handler that handled any Exception with this handler
+)BQ(
+)PR(
+catch \201Exception e\202 {
+    . . .
+}
+)RP(
+)QB(
+but it is not recommended.
+)0 P(
+So you can create groups of exceptions and handle exceptions in a general
+fashion, or you can use the specific exception type to differentiate exceptions and
+handle exceptions in an exact fashion.
+)QB(
+
+)0 4 H(What's Next?)EH(
+)BQ(
+Now that you understand what exceptions are and the advantages of using
+exceptions in your Java programs, it's time to learn how.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Your First Encounter with Java Exceptions
+)EH(
+)0 P(
+)BQ(
+
+This error message
+)BQ(
+)PR(
+InputFile.java:8: Warning: Exception java.io.FileNotFoundException must be caught, or it must be declared in throws clause of this method.
+	fis = new FileInputStream\201filename\202;
+	      ^
+)RP(
+)QB(
+is one of two similar error messages you will see if you try to compile
+this class, )A(InputFile)EA(,
+because the InputFile class contains calls to methods
+that will throw exceptions when an error occurs.
+The Java language requires that methods either )I(catch)ES( or
+)I(declare)ES( all non-runtime exceptions that can be thrown within the scope
+of that method \201details about what this actually means are covered on the next page,
+)A(Java's Catch or Declare Requirement)EA(\202. If
+the compiler detects a method, such as those in InputFile, that don't
+meet this requirement, it issues an error message like the one shown
+above and refuses to compile the program.
+)0 P(
+Let's look at InputFile in more detail and see what's going on.
+)0 P(
+The InputFile class wraps a FileInputStream and provides a method,
+)SM(getLine\201\202)ES(, for reading a line from the current position in
+the input stream.
+)BQ(
+)PR(
+import java.io.*;
+
+class InputFile {
+
+    FileInputStream fis;
+
+    InputFile\201String filename\202 {
+)BD(        fis = new FileInputStream\201filename\202;)ES(
+    }
+
+    String getLine\201\202 {
+        int c;
+        StringBuffer buf = new StringBuffer\201\202;
+
+        while \201\201c = fis.read\201\202\202 != -1\202 {
+            if \201c == '\200n'\202 {
+                return buf.toString\201\202;
+            } else
+                buf.append\201\201char\202c\202;
+        }
+        return null;
+    }
+}
+)RP(
+)QB(
+The compiler prints the first error message because of the bold line in the above
+code listing. The bold line creates a new FileInputStream object and uses it to open
+a file \201whose name is passed into the FileInputStream constructor\202.
+
+)0 P(
+So, what should the FileInputStream do if the named file does not exist on
+the filesystem? Well, that depends on what the program using the FileInputStream wants
+to do.
+The implementers of FileInputStream have no idea what the InputFile class wants
+to do if the file does not exist. Should the FileInputStream kill the program?
+Should it try an alternate filename? Should it just create a file of the indicated
+name? There's no possible way the FileInputStream implementers could choose a
+solution that would suit every user of FileInputStream. So, they punted, or rather,
+threw, an exception. That is, if the file named in the argument to the FileInputStream
+constructor does not exist on the filesystem, the constructor throws a
+java.io.FileNotFoundException. By throwing an exception, FileInputStream allows
+the calling method to handle the error in whatever way is most appropriate for it.
+
+)0 P(
+As you can see from the code, the InputFile class completely
+ignores the fact that the FileInputStream constructor can throw an exception.
+However, as stated previously, the Java language requires that methods either catch or
+declare all non-runtime exceptions that can be thrown within the scope
+of that method.
+Because the InputFile class does neither, the compiler prints an error message to
+that effect when it encounters the call to the FileInputStream constructor and
+refuses to compile the class.
+
+)0 P(
+In addition to the first error message shown above, you will also see this similar
+error message when you compile the InputFile class:
+)BQ(
+)PR(
+InputFile.java:15: Warning: Exception java.io.IOException must be caught, or it must be declared in throws clause of this method.
+	while \201\201c = fis.read\201\202\202 != -1\202 {
+	                    ^
+)RP(
+)QB(
+The InputFile class's )SM(getLine\201\202)ES( method reads from the FileInputStream
+that was opened in InputFile's constructor. The FileInputStream )SM(read\201\202)ES(
+method throws a java.io.IOException if for some reason it can't read from the file.
+Again, the InputFile class makes no attempt to catch or declare this exception.
+Thus you see the second error message.
+
+)0 P(
+At this point, you have two options, you can either arrange to catch the exceptions
+within the appropriate methods in the InputFile class, or the InputFile methods can "duck"
+and allow another method further up the call stack to catch them. Either way, the
+InputFile methods must do something, either catch or declare the exceptions, before
+the InputFile class can be compiled.
+)0 P(
+The next page describes in further detail )A(Java's 
+Catch or Declare Requirement)EA(. The subsequent pages show you how to comply to
+the requirement.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    InputFile.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+import java.io.*;
+
+class InputFile {
+
+    FileInputStream fis;
+
+    InputFile\201String filename\202 {
+        fis = new FileInputStream\201filename\202;
+    }
+
+    String getLine\201\202 {
+        int c;
+        StringBuffer buf = new StringBuffer\201\202;)WR(
+
+        while \201\201c = fis.read\201\202\202 != -1\202 {
+            if \201c == '\200n'\202 {
+                return buf.toString\201\202;
+            } else
+                buf.append\201\201char\202c\202;
+        }
+        return null;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Java's Catch or Declare Requirement
+)EH(
+)0 P(
+)BQ(
+
+As stated previously, Java requires that methods either catch or
+declare all non-runtime exceptions that can be thrown within the scope of
+that method. This requirement has several components
+that need further description: "catch", "declare", "non-runtime exceptions",
+and "the exceptions that can be thrown within the scope of the method".
+
+)0 4 H(Catch)EH(
+)BQ(
+A method can catch an exception by providing an exception handler for
+that type of exception. The next page, )A(Dealing with Exceptions)EA(,
+introduces an example program, talks about catching exceptions, and shows you how
+to write an exception handler for the example program.
+)QB(
+
+)0 4 H(Declare)EH(
+)BQ(
+If a method chooses not to catch an exception, then the method must
+declare that it can throw it. Why did the Java designers make this requirement?
+Because any exception that can be thrown by a method is really part of
+the method's public programming interface: callers of a method must know
+about the exceptions that a method can throw in order to intelligently
+and conciously decide what to do about those exceptions. Thus, you
+declare the exceptions that can be thrown within the scope of a Java
+methods in the method signature.
+)0 P(
+The next page, )A(Dealing with Exceptions)EA(,
+talks about declaring exceptions and shows you how to declare
+exceptions for Java methods that require it.
+)QB(
+
+)0 4 H(Non-runtime Exceptions)EH(
+)BQ(
+In Java, there are different types of exceptions, including I/O Exceptions, 
+runtime exceptions and exceptions of your own creation to name a few.
+Of interest to us in this discussion are runtime exceptions. Runtime
+exceptions are those exceptions that occur within the Java runtime system.
+This includes arithmetic exceptions, such as when dividing by zero, pointer
+exceptions, such as trying to access an object through a null reference,
+and indexing exceptions, such as attempting to access an array element
+through an index that is too large or too small.
+)0 P(
+Runtime exceptions can occur anywhere in a program and in a typical
+program can be very numerous. Often the cost of checking for runtime exceptions
+exceeds the benefit of catching or declaring them. Thus the compiler
+does not require that you catch or declare runtime exceptions, though
+you can.
+)0 P(
+Often, this is considered a loophole in Java's exception handling mechanism
+and programmer's are tempted to declare all exceptions to be runtime exceptions.
+In general, this is not recommended.
+)A(Runtime Exceptions--The Controversy)EA( contains a thorough
+discussion about when and how to use runtime exceptions.
+)QB(
+
+)0 4 H(The exceptions that can be thrown within the scope of the method)EH(
+)BQ(
+The statement )I(exceptions that can be thrown within the scope of the method)ES(
+may seem obvious at first: just look for the )SM(throw)ES( statement.
+However, this statement includes more than just the exceptions that can be thrown
+directly by the method: the key is in the phrase )I(within the scope of)ES(.
+This phrase includes any exception that can be thrown while the flow of control
+remains within the method. Thus, this statement includes both
+)UL(
+)LI(
+exceptions that are thrown directly by the method with Java's )SM(throw)ES(
+statement, and
+)LI(
+exceptions that are thrown indirectly by the method through calls to other
+methods
+)LU(
+)QB(
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Dealing with Exceptions
+)EH(
+)0 P(
+)BQ(
+
+)A(Your First Encounter with Java Exceptions)EA(
+briefly described what your first encounter with Java exceptions was probably
+like: it was likely in the form of an error message from the compiler complaining
+that you must either catch or declare exceptions. Then,
+)A(Java's Catch or Declare Requirement)EA( discussed
+what exactly was meant by the error message and why the Java language designers
+decided to make this requirement. Now, we're going to show you both how to catch
+an exception and how to declare one.
+
+)0 4 H()A(The Example)EA()EH(
+)BQ(
+Both sections below, the one on catching an exception and the one on declaring
+an exception, use the same example. This example defines and implements a
+class named )A(ListOfNumbers)EA(.
+The ListOfNumbers class calls two methods from classes in the Java packages
+that can throw exceptions. )A(Catching and Handling Exceptions)EA(
+will show you how to write exception handlers for both exceptions, and
+)A(Declaring the Exceptions Thrown by a Method)EA(
+will show you how to declare those exceptions instead of catching them.
+)QB(
+
+
+)0 4 H()A(Catching and Handling Exceptions)EA()EH(
+)EA(
+)BQ(
+Now that you've familiarized yourself with the ListOfNumbers class and
+where the exceptions can be thrown, let's write exception handlers to
+catch and handle those exceptions.
+)0 P(
+This section covers the three components of an exception handler: the )SM(try)ES(,
+)SM(catch)ES(, and )SM(finally)ES( blocks by showing you how to
+use them to write an exception handler for the ListOfNumbers class's )SM(writeList\201\202)ES(
+method. In addition, this section contains a page that walks through the
+)SM(writeList\201\202)ES( method and analyzes what occurs within the method
+during various scenarios.
+)QB(
+
+
+)0 4 H()A(Declaring the Exceptions Thrown by a Method)EA()EH(
+)EA(
+)BQ(
+If it is not appropriate for your method to catch and handle an exception
+thrown by a method that it calls, or if your method itself throws its
+own exception, you must declare in the method signature that the method
+throws the exception.
+Using the ListOfNumbers class this section shows you how to declare exceptions.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The Example
+)EH(
+)0 P(
+)BQ(
+
+The two sections that cover catching an exception and declaring
+an exception, use this class as an example.
+)BQ(
+)PR(
+import java.io.*;
+import java.util.Vector;
+
+class ListOfNumbers {
+    private Vector victor;
+    final int size = 10;
+
+    public ListOfNumbers \201\202 {
+	int i;
+	victor = new Vector\201size\202;
+	for \201i = 0; i < size; i++\202
+	    victor.addElement\201new Integer\201i\202\202;
+    }
+    public void writeList\201\202 {
+	PrintStream pStr = null;
+	
+	System.err.println\201"Entering try statement"\202;
+	int i;
+	pStr = new PrintStream\201
+		  new BufferedOutputStream\201
+		     new FileOutputStream\201"OutFile.txt"\202\202\202;
+	
+	for \201i = 0; i < size; i++\202
+	    pStr.println\201"Value at: " + i + " = " + victor.elementAt\201i\202\202;
+
+        pStr.close\201\202;
+    }
+}
+)RP(
+)QB(
+This example defines and implements a class named
+)A(ListOfNumbers)EA(. Upon
+construction, ListOfNumbers creates a Vector that contains ten
+Integer elements with the sequential values 0 through 9. The ListOfNumbers
+class also defines a method named )SM(writeList\201\202)ES( which writes the
+list of numbers into a text file called "OutFile.txt".
+
+)0 P(
+The )SM(writeList\201\202)ES( method calls two other methods that can throw exceptions.
+First, this line:
+)BQ(
+)PR(
+pStr = new PrintStream\201new BufferedOutputStream\201new )BD(FileOutputStream\201"OutFile.txt"\202)ES(\202\202;
+)RP(
+)QB(
+invokes the constructor for FileOutputStream which will thrown an
+IOException if the file cannot be opened for any reason.
+
+)0 P(
+Second, the Vector class's )SM(elementAt\201\202)ES( method
+)BQ(
+)PR(
+pStr.println\201"Value at: " + i + " = " + )BD(victor.elementAt\201i\202)ES(\202;
+)RP(
+)QB(
+will throw an ArrayIndexOutOfBoundsException if you pass in an index whose
+value is too small \201a negative number\202 or too large \201larger than the number
+of elements currently contained by the Vector\202.
+
+)0 P(
+If you try to compile the ListOfNumbers class, the compiler will print an
+error message about the exception thrown by the FileOutputStream constructor, but
+will )BD(not)ES( display an error message about the exception thrown
+by )SM(elementAt\201\202)ES(.
+This is because the exception thrown by the FileOutputStream constructor, IOException,
+is a non-runtime exception and the exception thrown by the )SM(elementAt\201\202)ES(
+method, ArrayIndexOutOfBoundsException, is a runtime exception. Java only
+requires that you catch or declare non-runtime exceptions. For more information,
+refer to )A(Java's Catch or Declare Requirement)EA(.
+
+)0 P(
+The next section, )A(Catching and Handling Exceptions)EA(, will show you how
+to write an exception handler for the ListOfNumbers's )SM(writeList\201\202)ES( method.
+
+)0 P(
+Following that is a section named
+)A(Declaring the Exceptions Thrown By a Method)EA(
+will show you how to declare that the ListOfNumbers's )SM(writeList\201\202)ES( method
+throws the exceptions instead of catching them.
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    ListOfNumbersWOHandler.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+import java.io.*;
+import java.util.Vector;
+
+class ListOfNumbers {
+    private Vector victor;
+    final int size = 10;
+
+    public ListOfNumbers \201\202 {
+	int i;
+	victor = new Vector\201size\202;
+	for \201i = 0; i < size; i++\202
+	    victor.addElement\201new Integer\201i\202\202;
+    })WR(
+    public void writeList\201\202 {
+	PrintStream pStr = null;
+	
+	System.err.println\201"Entering try statement"\202;
+	int i;
+	pStr = new PrintStream\201
+		  new BufferedOutputStream\201
+		     new FileOutputStream\201"OutFile.txt"\202\202\202;
+	
+	for \201i = 0; i < size; i++\202
+	    pStr.println\201"Value at: " + i + " = " + victor.elementAt\201i\202\202;
+
+        pStr.close\201\202;
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Catching and Handling Exceptions
+)EH(
+)0 P(
+)BQ(
+
+The next several pages show you how to build an exception handler for the
+)SM(writeList\201\202)ES( method in the example program described in
+)A(The Example)EA(. The first three pages listed below describe
+three different components of an exception handler and
+show how those components can be used in the )SM(writeList\201\202)ES( method.
+The fourth page walks through the resulting )SM(writeList\201\202)ES( method
+and analyzes what occurs within the example code during various scenarios.
+
+)0 4 H()A(The try Block)EA()EH(
+)BQ(
+The first step in writing any exception handler is putting the Java
+statements within which an exception can occur into a )SM(try)ES( block.
+The )SM(try)ES( block is said to )I(govern)ES( the statements
+enclosed within it and defines the scope of any exception handlers
+\201established by subsequent )SM(catch)ES( blocks\202 associated with it.
+)QB(
+
+)0 4 H()A(The catch Block\201s\202)EA()EH(
+)BQ(
+Next, you associate exception handlers with a )SM(try)ES( block by
+providing one or more sequential )SM(catch)ES( blocks directly
+after the )SM(try)ES( block.
+)QB(
+
+)0 4 H()A(The finally Block)EA()EH(
+)BQ(
+Java's )SM(finally)ES( block provides a mechanism which allows your
+method to cleanup after itself regardless of what happens within the )SM(try)ES(
+block. Use the )SM(finally)ES( block to close files or release
+other system resources.
+)QB(
+
+)0 4 H()A(Putting It All Together)EA()EH(
+)BQ(
+The previous sections describe how to construct the )SM(try)ES(,
+)SM(catch)ES(, and )SM(finally)ES( code blocks for the )SM(writeList\201\202)ES(
+example. Now, let's walk through the code and investigate what happens
+during three possible scenarios that this code presents.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The try Block
+)EH(
+)0 P(
+)BQ(
+
+The first step in constructing an exception handler is to enclose the
+statements that might throw an exception within a )SM(try)ES( block.
+In general, a )SM(try)ES( block looks like this:
+)BQ(
+)PR(
+try {
+    )I(Java statements)ES(
+}
+)RP(
+)QB(
+The segment of code labelled )I(Java statements)ES( is composed of one
+or more legal Java statements that could potentially throw an exception.
+)0 P(
+To construct an exception handler for the )SM(writeList\201\202)ES(
+method from the ListOfNumbers class, you need to enclose the exception-throwing
+statements of the )SM(writeList\201\202)ES( method within a )SM(try)ES( block.
+There is more than one way to accomplish this task: you could put each statement
+that might potentially throw an exception within its own )SM(try)ES( statement,
+and provide separate exception handlers for each )SM(try)ES(.
+Or you could put all of the )SM(writeList\201\202)ES( statements within a
+single )SM(try)ES( statement and associate multiple handlers with it.
+The following listing uses one )SM(try)ES( statement for the entire
+method because the code tends to be easier to read.
+)BQ(
+)PR(
+PrintStream pstr;
+
+)BD(try {)ES(
+    int i;
+
+    System.err.println\201"Entering try statement"\202;
+    pStr = new PrintStream\201
+              new BufferedOutputStream\201
+	         new FileOutputStream\201"OutFile.txt"\202\202\202;
+
+    for \201i = 0; i < size; i++\202
+        pStr.println\201"Value at: " + i + " = " + victor.elementAt\201i\202\202;
+)BD(})ES(
+)RP(
+)QB(
+The )SM(try)ES( statement is said to )I(govern)ES( the statements
+enclosed within it and defines the scope of any exceptions handlers
+\201established by subsequent )SM(catch)ES( blocks\202 associated with it.
+In other words, if an exception occurs within the )SM(try)ES( statement,
+that exception is handled by the appropriate exception handler associated
+with this )SM(try)ES( statement.
+
+)0 P(
+A )SM(try)ES( statement )I(must)ES( be accompanied either by one or
+more )SM(catch)ES( blocks, or one )SM(finally)ES( block.
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The catch Block\201s\202
+)EH(
+)0 P(
+)BQ(
+
+As you learned on the )A(previous page)EA(,
+the )SM(try)ES( statement defines the scope of its
+associated exception handlers.
+You associate exception handlers with a )SM(try)ES( statement by
+providing one or more sequential )SM(catch)ES( blocks directly
+after the )SM(try)ES( block.
+)BQ(
+)PR(
+try {
+    . . . 
+} catch \201 . . . \202 {
+    . . . 
+} catch \201 . . . \202 {
+    . . . 
+} . . . 
+)RP(
+)QB(
+There can be no intervening code between the end of the )SM(try)ES(
+statement and the beginning of the first )SM(catch)ES( statement.
+The general form of Java's )SM(catch)ES( statement is:
+)BQ(
+)PR(
+catch \201)I(SomeThrowableClassName)ES( )I(variableName)ES(\202 {
+    )I(Java statements)ES(
+}
+)RP(
+)QB(
+As you can see, the )SM(catch)ES( statement requires a single formal
+argument. The argument to the )SM(catch)ES( statement looks like an
+argument declaration for a method. The argument type, )I(SomeThrowableClassName)ES(,
+declares the type of exception that the handler can handle and must be the name
+of a class that inherits from the
+)A(Throwable)EA(
+)A()0 5 IM()EA(
+class defined in the
+)A(java.lang)EA(
+)A()0 5 IM()EA(
+package. \201When Java programs throw an exception they are really just throwing
+an object, and only objects that derive from Throwable can be thrown. You'll
+learn more about throwing exceptions in )A(How to Throw Exceptions)EA(.\202
+
+)0 P(
+)I(variableName)ES( is the name by which the handler can refer to the
+exception caught by the handler. For example, the exception handlers for
+the )SM(writeList\201\202)ES( method \201shown below\202 each call the exception's
+)SM(getMessage\201\202)ES( method using the exception's declared name
+)SM(e)ES(:
+)BQ(
+)PR(
+e.getMessage\201\202
+)RP(
+)QB(
+You access the instance variables and methods of exceptions in the same manner
+that you access the instance variables and methods of other objects.
+)SM(getMessage\201\202)ES( is a method provided by the Throwable class
+that prints additional information about the error that occurred. 
+The Throwable class also implements two methods for filling in and printing
+the contents of the execution stack when the exception occurred.
+Subclasses of Throwable can add other methods or instance variables.
+To find out what methods an exception implements check its class and
+superclass definitions.
+
+)0 P(
+The )SM(catch)ES( statement governs a series of legal Java statements.
+These statements are executed when and if the exception handler is invoked.
+The runtime system invokes the exception handler when an exception whose type
+matches that of the )SM(catch)ES( statement's argument is thrown within
+the handler's )SM(try)ES( block.
+
+)0 P(
+The )SM(writeList\201\202)ES( method from the
+)A(ListOfNumbers)EA(
+class uses two exception handlers for its )SM(try)ES( statement--one
+handler for each of the two different types of exceptions that can
+be thrown within the )SM(try)ES( block--ArrayIndexOutOfBoundsException
+and IOException.
+)BQ(
+)PR(
+try {
+    . . . 
+} catch \201ArrayIndexOutOfBoundsException e\202 {
+    System.err.println\201"Caught ArrayIndexOutOfBoundsException: " + e.getMessage\201\202\202;
+} catch \201IOException e\202 {
+    System.err.println\201"Caught IOException: " + e.getMessage\201\202\202;
+}
+)RP(
+)QB(
+An IOException Occurs)EA(
+Let's suppose that the FileOutputStream constructor fails and throws an
+IOException. The runtime system immediately takes over and tries to locate
+an appropriate exception handler. The runtime system begins its search at
+the top of the method call stack. When the exception occurred, the FileOutputStream
+constructor was at the top of the call stack. However, the FileOutputStream
+constructor doesn't have an appropriate exception handler so the runtime system
+checks the next method in the method call stack--the )SM(writeList\201\202)ES(
+method. The )SM(writeList\201\202)ES( method has two exception handlers:
+one for ArrayIndexOutOfBoundsException and one for IOException.
+)0 P(
+The runtime system checks )SM(writeList)ES('s handlers in the order that
+they appear following the )SM(try)ES( statement. \201So, the order that you
+write your exception handlers matters!\202
+The argument to the first exception handler is ArrayIndexOutOfBoundsException,
+but the exception that was thrown is an IOException. An IOException cannot legally
+be assigned to an ArrayIndexOutOfBoundsException, so the runtime system continues
+its search for an appropriate exception handler.
+)0 P(
+The argument to )SM(writeList\201\202)ES('s second exception handler is an
+IOException. The exception thrown by the FileOutputStream constructor
+is also an IOException and so it can legally be assigned to the handler's IOException
+argument. Thus, this handler is deemed appropriate and the runtime system
+executes this handler which prints this statement:
+)BQ(
+)PR(
+Caught IOException: OutFile.txt
+)RP(
+)QB(
+The runtime system goes through a similar process if an
+ArrayIndexOutOfBoundsException occurs. For more details,
+)A(Putting It All Together)EA(
+walks through the )SM(writeList\201\202)ES( method after it's been
+completed \201there's one more step\202 and investigates what happens
+during the three possible scenarios that this code presents:
+the code runs successfully, an IOException occurs, or an
+ArrayIndexOutOfBoundsException occurs.
+
+)0 4 H(Catching Multiple Exception Types with One Handler)EH(
+)BQ(
+The two exception handlers used by the )SM(writeList\201\202)ES( method
+are very specialized; they handle only one type of exception. The Java
+language allows you to write general exception handlers that handle
+multiple types of exceptions.
+)0 P(
+As you know, Java exceptions are Throwable objects \201they are instances
+of Throwable or a subclass of Throwable\202. The Java packages contain
+numerous classes that derive from Throwable and thus, build a hierarchy
+of Throwable classes.
+)0 P(
+)0 6 IM(
+)0 P(
+Your exception handler can be written to handle any class that inherits
+from Throwable. If you write a handler for a "leaf" class \201a class with
+no subclasses\202, you've written a specialized handler: it will only handle
+exceptions of that specific type. If you write a handler for a "node" class
+\201a class with subclasses\202, you've written a general handler: it will handle
+any exception whose type is the node class or any of its subclasses.
+)0 P(
+Let's modify the )SM(writeList\201\202)ES( method once again. Only this
+time, let's write it so that it handles both IOExceptions and ArrayIndexOutOfBoundsExceptions.
+The closest common ancester of IOException and ArrayIndexOutOfBoundsException
+is the Exception class. Thus an exception handler that would handle both
+types of exceptions would look like this:
+)BQ(
+)PR(
+try {
+    . . .
+} catch \201Exception e\202 {
+    System.err.println\201"Exception caught: " + e.getMessage\201\202\202;
+}
+)RP(
+)QB(
+The Exception class is pretty high in the Throwable class hierarchy. So in
+addition to the IOException and ArrayIndexOutOfBoundsException types that
+this exception handler is intended to catch, it will also catch numerous
+other types. Generally speaking, your exception handlers should be more
+specialized than this one. Handlers that can catch most or all exceptions
+are typically useless for error recovery because the handler has to determine
+what type of exception occurred anyway \201to determine the best recovery
+strategy\202. Also exception handlers that are too general can make code
+)I(more)ES( error prone by catching and handling exceptions that weren't
+anticipated by the programmer and for which the handler was not intended.
+
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The finally Block
+)EH(
+)0 P(
+)BQ(
+
+The final step in setting up an exception handler is providing a mechanism
+for cleaning up the state of the method before \201possibly\202 allowing control
+to be passed to a different part of the program. You do this by enclosing
+the cleanup code within a )SM(finally)ES( block.
+)0 P(
+The )SM(try)ES( block of the )SM(writeList\201\202)ES( method that
+you've been working with opens a PrintStream. The program should close that
+stream before allowing control to pass out of the )SM(writeList\201\202)ES(
+method. This poses a somewhat complicated problem because )SM(writeList\201\202)ES('s
+)SM(try)ES( block has three different exit possibilities:
+)OL(
+)LI(
+The )SM(new FileOutputStream)ES( statement failed and threw an IOException.
+)LI(
+The )SM(victor.elementAt\201i\202)ES( statement failed and threw an ArrayIndexOutOfBoundsException.
+)LI(
+Everything succeeded and the )SM(try)ES( block exited normally.
+)LO(
+
+The runtime system always executes the statements within the )SM(finally)ES(
+block regardless of what happens within the )SM(try)ES( block. That is,
+regardless of whether control exits the )SM(writeList\201\202)ES( method's
+)SM(try)ES( block due to scenario 1, 2, or 3 listed above,
+the code within the )SM(finally)ES( block will be executed.
+)0 P(
+This is the )SM(finally)ES( block for the )SM(writeList\201\202)ES( method
+which cleans up and closes the PrintStream.
+)BQ(
+)PR(
+finally {
+    if \201pStr != null\202 { 
+        System.err.println\201"Closing PrintStream"\202;
+        pStr.close\201\202; 
+    } else { 
+        System.err.println\201"PrintStream not open"\202;
+    } 
+} 
+)RP(
+)QB(
+
+)0 4 H(Is the finally Statement Really Necessary?)EH(
+)BQ(
+At first the need for a )SM(finally)ES( statement may not be immediately
+apparent. Programmers often ask "Is the )SM(finally)ES( statement really
+necessary or is it just sugar for my Java?" In particular, C++ programmers doubt
+the need for a )SM(finally)ES( statement because C++ doesn't have one.
+)0 P(
+The need for a )SM(finally)ES( statement is not apparent until you consider the following:
+how would the PrintStream in the )SM(writeList\201\202)ES( method get closed if
+you didn't provide an exception handler
+for the ArrayIndexOutOfBoundsException and an ArrayIndexOutOfBoundsException occurred?
+\201It would be easy and legal to omit an exception handler for ArrayIndexOutOfBoundsException
+because it's a runtime exception and the compiler won't alert you that the
+)SM(writeList\201\202)ES( contains a method call that might throw one.\202 The answer
+is that the PrintStream would not get closed if an ArrayIndexOutOfBoundsException
+occurred and )SM(writeList\201\202)ES( did not provide a handler for it--unless 
+the )SM(writeList\201\202)ES( provided a )SM(finally)ES( statement.
+
+)0 P(
+There are other benefits to using the )SM(finally)ES( statement as well.
+In the )SM(writeList\201\202)ES( example it is possible to provide for cleanup
+without the intervention of a )SM(finally)ES( statement. For example,
+you could put the code to close the PrintStream at the end of the )SM(try)ES(
+block and again within exception handler for ArrayIndexOutOfBoundsException
+as shown here:
+)BQ(
+)PR(
+try {
+    . . .
+    )BD(pStr.close\201\202;	// don't do this; it duplicates code )ES(
+} catch \201ArrayIndexOutOfBoundsException e\202 {
+    )BD(pStr.close\201\202;	// don't do this; it duplicates code )ES(
+    System.err.println\201"Caught ArrayIndexOutOfBoundsException: " + e.getMessage\201\202\202;
+} catch \201IOException e\202 {
+    System.err.println\201"Caught IOException: " + e.getMessage\201\202\202;
+}
+)RP(
+)QB(
+However, this duplicates code which makes the
+code hard to read and prone to errors if you modify the code later. For
+example, if you add code to the )SM(try)ES( block that may throw a new type of
+exception, you will have to remember to close the PrintStream within the new
+exception handler \201which if you're anything like me you are bound to forget\202.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Putting It All Together
+)EH(
+)0 P(
+)BQ(
+
+When all of the components are put togehter, the )SM(writeList\201\202)ES(
+method will look like this:
+)BQ(
+)PR(
+public void writeList\201\202 {
+    PrintStream pStr = null;
+
+    try {
+        int i;
+
+        System.err.println\201"Entering try statement"\202;
+        pStr = new PrintStream\201
+              new BufferedOutputStream\201
+                 new FileOutputStream\201"OutFile.txt"\202\202\202;
+
+        for \201i = 0; i < size; i++\202
+            pStr.println\201"Value at: " + i + " = " + victor.elementAt\201i\202\202;
+    } catch \201ArrayIndexOutOfBoundsException e\202 {
+        System.err.println\201"Caught ArrayIndexOutOfBoundsException: " + e.getMessage\201\202\202;
+    } catch \201IOException e\202 {
+        System.err.println\201"Caught IOException: " + e.getMessage\201\202\202;
+    } finally {
+        if \201pStr != null\202 {
+            System.err.println\201"Closing PrintStream"\202;
+            pStr.close\201\202;
+        } else {
+            System.err.println\201"PrintStream not open"\202;
+        }
+    }
+}  
+)RP(
+)QB(
+This )SM(try)ES( block in this method has three different exit possibilities:
+)OL(
+)LI(
+The )SM(new FileOutputStream)ES( statement fails and throws an IOException.
+)LI(
+The )SM(victor.elementAt\201i\202)ES( statement fails and throws an ArrayIndexOutOfBoundsException.
+)LI(
+Everything succeeds and the )SM(try)ES( statement exits normally.
+)LO(
+This page investigates in
+detail what happens in the )SM(writeList\201\202)ES( method during
+each of those exit possibilities.
+
+)0 4 H(Scenario 1: An IOException Occurs)EH(
+)BQ(
+The )SM(new FileOutputStream\201"OutFile.txt"\202)ES( statement can fail for
+any number of reasons: the user doesn't have write permission on the file or
+directory, the file system is full, or the directory for the file doesn't exist.
+If any of these situations is true, then the constructor for FileOutputStream
+throws an IOException.
+)0 P(
+When the IOException is thrown, the runtime system immediately stops execution
+of the )SM(try)ES( block. Then the runtime system attempts to locate an
+exception handler appropriate for handling an IOException.
+)0 P(
+The runtime system immediately takes over and tries to locate
+an appropriate exception handler. The runtime system begins its search at
+the top of the method call stack. When the exception occurred, the FileOutputStream
+constructor was at the top of the call stack. However, the FileOutputStream
+constructor doesn't have an appropriate exception handler so the runtime system
+checks the next method in the method call stack--the )SM(writeList\201\202)ES(
+method. The )SM(writeList\201\202)ES( method has two exception handlers:
+one for ArrayIndexOutOfBoundsException and one for IOException.
+)0 P(
+The runtime system checks )SM(writeList)ES('s handlers in the order that
+they appear following the )SM(try)ES( statement.
+The argument to the first exception handler is ArrayIndexOutOfBoundsException,
+but the exception that was thrown is an IOException. An IOException cannot legally
+be assigned to an ArrayIndexOutOfBoundsException, so the runtime system continues
+its search for an appropriate exception handler.
+)0 P(
+The argument to )SM(writeList\201\202)ES('s second exception handler is an
+IOException. The exception thrown by the FileOutputStream constructor
+is also an IOException and can be legally assigned to the handler's IOException
+argument. Thus, this handler is deemed appropriate and the runtime system
+executes this handler which prints this statement:
+)BQ(
+)PR(
+Caught IOException: OutFile.txt
+)RP(
+)QB(
+)0 P(
+After the exception handler has run, the runtime system passes control to the
+)SM(finally)ES( block. In this particular scenario, the PrintStream never
+got opened, thus )SM(pStr)ES( is null and won't get closed.
+After the )SM(finally)ES( block has completed executing, the program
+continues with the first statement after the )SM(finally)ES( block.
+)0 P(
+The complete output that you will see from the ListOfNumbers program when an IOException
+is thrown is this:
+)BQ(
+)PR(
+Entering try statement
+Caught IOException: OutFile.txt
+PrintStream not open
+)RP(
+)QB(
+
+)QB(
+
+)0 4 H(Scenario 2: An ArrayIndexOutOfBoundsException Occurs)EH(
+)BQ(
+This scenario is the same as the first except that a different error occurs
+during the )SM(try)ES( block. In this scenario, the argument passed to
+Vector's )SM(elementAt\201\202)ES( method is out of bounds. That is, the
+argument is either less than 0 or is larger than the size of the array.
+\201The way the code is written, this is actually impossible, but let's suppose
+a bug is introduced into the code when someone modifies it.\202
+)0 P(
+Similar to scenario 1, when the exception occurs the runtime system stops
+execution of the )SM(try)ES( block and attempts to locate an exception
+handler suitable for an ArrayIndexOutOfBoundsException. The runtime system
+searches for an appropriate exception handler as it did before and comes
+upon the )SM(catch)ES( statement in the )SM(writeList\201\202)ES( method
+that handles exceptions of the type ArrayIndexOutOfBoundsException and executes it.
+)0 P(
+After the exception handler has run, the runtime system passes control to the
+)SM(finally)ES( block. In this particular scenario, the PrintStream did get
+opened, thus the )SM(finally)ES( statement closes it.
+After the )SM(finally)ES( block has completed executing, the program
+continues with the first statement after the )SM(finally)ES( block.
+)0 P(
+The complete output that you will see from the ListOfNumbers program when an
+ArrayIndexOutOfBoundsException is thrown is this:
+)BQ(
+)PR(
+Entering try statement
+Caught ArrayIndexOutOfBoundsException: 10 >= 10
+Closing PrintStream
+)RP(
+)QB(
+)QB(
+
+)0 4 H(Scenario 3: The try block exits normally)EH(
+)BQ(
+In this scenario, all the statements within the scope of the )SM(try)ES(
+block execute successfully and throw no exceptions. Execution falls off the
+end of the )SM(try)ES( block and then the runtime system passes control to
+the )SM(finally)ES( block. Since everything was successful, we know that
+the PrintStream is open when control reaches the )SM(finally)ES( block
+and must be closed.
+Again, after the )SM(finally)ES( block has completed executing, the program
+continues with the first statement after the )SM(finally)ES( block.
+)0 P(
+Thus, the output that you will see from the ListOfNumbers program when
+no exceptions are thrown is:
+)BQ(
+)PR(
+Entering try statement
+Closing PrintStream
+)RP(
+)QB(
+
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    ListOfNumbers.java
+)EH(
+)0 P(
+)BQ(
+
+)PR(
+
+/*
+ * Copyright \201c\202 1994 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for NON-COMMERCIAL purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. Please refer to the file "copyright.html"
+ * for further important copyright and licensing information.
+ *
+ * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
+ * THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, OR NON-INFRINGEMENT. SUN SHALL NOT BE LIABLE FOR
+ * ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
+ * DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ */
+import java.io.*;
+import java.util.Vector;
+
+class ListOfNumbers {
+    private Vector victor;
+    final int size = 10;
+
+    public ListOfNumbers \201\202 {
+	int i;
+	victor = new Vector\201size\202;
+	for \201i = 0; i < size; i++\202
+	    victor.addElement\201new Integer\201i\202\202;
+    })WR(
+    public void writeList\201\202 {
+	PrintStream pStr = null;
+
+        try {
+	    int i;
+
+	    System.err.println\201"Entering try statement"\202;
+	    pStr = new PrintStream\201
+		  new BufferedOutputStream\201
+		     new FileOutputStream\201"OutFile.txt"\202\202\202;
+	
+	    for \201i = 0; i < size; i++\202
+	        pStr.println\201"Value at: " + i + " = " + victor.elementAt\201i\202\202;
+        } catch \201ArrayIndexOutOfBoundsException e\202 {
+            System.err.println\201"Caught ArrayIndexOutOfBoundsException: " + e.getMessage\201\202\202;
+        } catch \201IOException e\202 {
+            System.err.println\201"Caught IOException: " + e.getMessage\201\202\202;
+        } finally {
+            if \201pStr != null\202 {
+                System.err.println\201"Closing PrintStream"\202;
+                pStr.close\201\202;
+            } else {
+                System.err.println\201"PrintStream not open"\202;
+	    }
+        }
+    }
+}
+)RP(
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Declaring the Exceptions Thrown by a Method
+)EH(
+)0 P(
+)BQ(
+
+The previous section showed you how to write an exception handler
+for the )SM(writeList\201\202)ES( method in the ListOfNumbers class.
+Sometimes, it's appropriate for your code to catch exceptions that
+can occur within it. In other cases, however, it's better to let a
+method further up the call stack handle the exception. For example,
+if you were providing the ListOfNumbers class as part of a package
+of classes, you probably couldn't anticipate the needs of all of the
+users of your package. In this case, it's better to )BD(not)ES(
+catch the exception and allow someone further up the call stack to
+handle it.
+)0 P(
+If the )SM(writeList\201\202)ES( method doesn't catch the exceptions that
+can occur within it, then the )SM(writeList\201\202)ES( method must
+declare that it can throw them.
+Let's modify the )SM(writeList\201\202)ES( method to declare the methods
+that it can throw. To remind you, here's the )SM(writeList\201\202)ES(
+method again.
+)BQ(
+)PR(
+public void writeList\201\202 {
+    System.err.println\201"Entering try statement"\202;
+    int i;
+    pStr = new PrintStream\201
+	      new BufferedOutputStream\201
+		 new FileOutputStream\201"OutFile.txt"\202\202\202;
+
+    for \201i = 0; i < size; i++\202
+	pStr.println\201"Value at: " + i + " = " + victor.elementAt\201i\202\202;
+}
+)RP(
+)QB(
+As you recall, the )SM(new FileOutputStream\201"OutFile.txt"\202)ES( statement
+may throw an IOException \201which is not a runtime exception\202.
+The )SM(victor.elementAt\201i\202)ES( statement can throw an
+ArrayIndexOutOfBoundsException \201which is a subclass of RuntimeException\202.
+
+)0 P(
+To declare that )SM(writeList\201\202)ES( throws these two exceptions,
+you would add a )SM(throws)ES( clause to the method signature for the
+)SM(writeList\201\202)ES( method. The )SM(throws)ES( clause is composed
+of the )SM(throws)ES( keyword followed by a comma-separated list of all
+the exceptions thrown by that method. The )SM(throws)ES( clause goes
+after the method name and argument list and before the curly bracket that
+defines the scope of the method. Like this:
+)BQ(
+)PR(
+public void writeList\201\202 throws IOException, ArrayIndexOutOfBoundsException {
+)RP(
+)QB(
+Remember that ArrayIndexOutOfBoundsException is a runtime exception, so you
+don't have to declare it in the )SM(throws)ES( clause, although you can.
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    How to Throw Exceptions
+)EH(
+)0 P(
+)BQ(
+
+The pages listed below explain how to throw exceptions in
+a Java program.
+
+)0 4 H()A(The throw Statement)EA()EH(
+)BQ(
+Before you can catch an exception, some Java code somewhere must
+throw one. Any Java code can throw an exception: your code, code
+from a package written by someone else \201such as the packages that
+come with the Java development environment\202, or the Java runtime
+system. Regardless of who \201or what\202 throws the exception, it's
+always thrown with the Java )SM(throw)ES( statement.
+)QB(
+
+)0 4 H()A(The Throwable Class and Its Subclasses)EA()EH(
+)BQ(
+The Java language requires that all objects you throw with the
+)SM(throw)ES( statement derive from the Throwable class or one
+of its subclasses.
+)QB(
+
+)0 4 H()A(Creating Your Own Exception Classes)EA()EH(
+)BQ(
+As you have undoubtedly noticed in your travels \201travails?\202 through the
+Java language, the packages that ship with the Java development environment
+provide numerous error and exception classes. All of these classes are
+descendents of the Throwable class and allow programs to differentiate
+between the various types of errors or exceptions that can occur during
+the execution of a Java program.
+)0 P(
+You, as a Java programmer, can create your own error and exception classes
+as well to create a set of classes that represents problems
+that can occur within the classes that you write. Indeed, if you are a package
+developer you will find that you must create their own set of exceptions
+classes to allow your users to differentiate an error that can occur
+in your package versus those errors that occur in the Java development
+environment or other packages.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The throw Statement
+)EH(
+)0 P(
+)BQ(
+
+All Java methods use the )SM(throw)ES( statement to throw an exception.
+The )SM(throw)ES( statement requires a single argument: a
+)I(throwable)ES( object. In the Java system, throwable objects
+are instances of any subclass of the
+)A(Throwable)EA(
+)A()0 5 IM()EA(
+class defined in
+)A(java.lang)EA(
+)A()0 5 IM()EA(.
+)BQ(
+)PR(
+throw )I(someThrowableObject)ES(;
+)RP(
+)QB(
+
+If you attempt to throw an object that is not throwable, the compiler
+will display an error message similar to the following
+)BQ(
+)PR(
+testing.java:10: Cannot throw class java.lang.Integer; it must be a subclass of class java.lang.Throwable.
+	    throw new Integer\2014\202;
+	    ^
+)RP(
+)QB(
+and refuse to compile your program.
+The next page, )A(The Throwable Class and Its Subclasses)EA(,
+talks more about the Throwable class.
+
+)0 P(
+Let's look at the )SM(throw)ES( statement in context.
+The following method is taken from a class that implements a common
+stack object. The )SM(pop\201\202)ES( method removes the top element
+from the stack and returns it. If the stack is empty this method throws
+an exception:
+)BQ(
+)PR(
+public Object pop\201\202 )BD(throws EmptyStackException)ES( {
+    Object obj;
+
+    if \201size == 0\202
+        )BD(throw new EmptyStackException\201\202;)ES(
+
+    obj = objectAt\201size - 1\202;
+    setObjectAt\201size - 1, null\202;
+    size--;
+    return obj;
+}
+)RP(
+)QB(
+The )SM(pop\201\202)ES( method checks to see if there are any elements on the
+stack. If the stack is empty \201its size is equal to 0\202 then )SM(pop\201\202)ES(
+instantiates a new EmptyStackException object and throws it. The EmptyStackException
+class is defined in the java.util package. Later pages in
+this lesson describe how you can create your own exception classes. For now,
+all you really need to remember is that you can only throw objects that inherit
+from the java.lang.Throwable class.
+
+)0 4 H(The throws Clause)EH(
+)BQ(
+You'll notice that the declaration of the )SM(pop\201\202)ES( method contains this
+clause:
+)BQ(
+)PR(
+throws EmptyStackException
+)RP(
+)QB(
+which declares that the method can throw an EmptyStackException.
+As you know, the Java language requires that methods either catch or
+declare all non-runtime exceptions that can be thrown within the scope of
+that method. You do this with the )SM(throws)ES(
+clause of the method declaration. For more information about this requirement
+see )A(Java's Catch or Declare Requirement)EA(.
+Also, )A(Declaring the Exceptions Thrown by a Method)EA(
+shows you in more detail how a method can declare the exceptions it can throw.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    The Throwable Class and Its Subclasses
+)EH(
+)0 P(
+)BQ(
+
+As you learned on the previous page, you can only throw objects that derive
+from the Throwable class. This includes direct descendents \201that is, objects
+that derive directly from the Throwable class\202 as well as indirect descendents
+\201objects that derive from children or grandchildren of the Throwable class\202.
+
+)0 P(
+This diagram illustrates the class hierarchy of the Throwable class and its
+significant subclasses.
+)0 P(
+)0 6 IM(
+)0 P(
+As you can see from the diagram, Throwable has two direct descendants:
+Error and Exception.
+
+)0 4 H(Errors)EH(
+)BQ(
+When a dynamic linking failure or some other "hard"
+failure in the virtual machine occurs, the virtual
+machine throws an Error. Typical Java programs
+should not catch Errors. In addition, it's unlikely that
+typical Java programs will ever throw Errors either.
+)QB(
+
+)0 4 H(Exceptions)EH(
+)BQ(
+Most programs throw and catch objects that derive from the
+Exception class. Exceptions indicate that a problem occurred
+but that problem is not a serious systemic problem. Most programs
+you write will throw and catch Exceptions.
+)0 P(
+The Exception class has many descendents defined in the Java packages
+which indicate various types of exceptions that can occur.
+For example, IllegalAccessException signals that a particular method
+coult not be found, and InstantiationException indicates that a program
+attempted to instantiate an abstract class or an interface.
+)0 P(
+One Exception subclass has special meaning in the Java language and
+deserves mention here: RuntimeException.
+)QB(
+
+
+)0 4 H(RuntimeExceptions)EH(
+)EA(
+)BQ(
+The RuntimeException class represents exceptions that occur within the Java
+virtual machine \201during runtime\202. An example of a runtime exception is
+NullPointerException which occurs when a method tries to access a member
+of an object through a null reference. A NullPointerException can occur anywhere
+a program tries to dereference a reference to an object, and the cost of checking
+for the exception often outweighs the benefit of catching it.
+)0 P(
+Because runtime exceptions are so ubiquitous and attempting to catch or
+declare all of them all the time would be a fruitless exercise and a
+fruitful source of unreadable and unmaintainable code, the compiler allows
+runtime exceptions to go uncaught and undeclared.
+)0 P(
+The Java packages define several RuntimeException classes. You can
+catch these exceptions just like other exceptions. However, a method is not
+required to declare that it throws RuntimeExceptions. In addition, you
+can create your own RuntimeException subclasses.
+)A(Runtime Exceptions--The Controversy)EA( contains a thorough
+discussion about when and how to use runtime exceptions.
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Creating Your Own Exception Classes
+)EH(
+)0 P(
+)BQ(
+
+When you design a package of Java classes that collaborate to
+provide some useful function to your users, you work hard to
+ensure that your classes interact well together and that their
+interfaces are easy to understand and program to. You should
+spend as much time thinking about and designing the exceptions
+that your classes throw as you do thinking about and designing
+the classes themselves.
+)0 P(
+Suppose you were writing a linked list class that you were
+planning to distribute as freeware software.
+Among other methods, your linked list class supports these methods:
+)DL(
+)DT(
+)SM(objectAt\201int n\202)ES(
+)DD(
+returns the object in the )SM(n)ES(th position in the list,
+)DT(
+)SM(firstObject\201\202)ES(
+)DD(
+returns the first object in the list
+)DT(
+)SM(indexOf\201Object o\202)ES(
+)DD(
+searches the list for the Object specified and returns its
+position in the list
+)LD(
+
+)0 4 H(What Can Go Wrong?)EH(
+)BQ(
+Because many programmers would be using your linked list class, you
+can be assured that many will misuse or abuse your class and its methods.
+Also, some legitimate calls to your linked list's methods may result
+in an undefined result. Regardless, in the face of errors, you want your
+linked list class to be as robust as possible under the circumstances,
+do something reasonable about the error, and communicate errors back to
+the calling program. However, you can't anticipate how each user of your
+linked list class will want the object to behave under adversity.
+So, often the best thing to do is to throw an exception.
+)0 P(
+Each of the methods supported by your linked list may wish to throw an
+exception under certain conditions, and each method will probably throw
+a different type of exception than the others. For example,
+)DL(
+)DT(
+)SM(objectAt\201\202)ES(
+)DD(
+will throw a exception if the integer passed into the method is less than
+0 or larger than the number of object currently contained in the list
+)DT(
+)SM(firstObject\201\202)ES(
+)DD(
+will throw a exception if the list contains no objects
+)DT(
+)SM(indexOf\201\202)ES(
+)DD(
+will throw a exception if the object passed into the method is
+not contained in the list
+)LD(
+But what type of exception should each method throw? Should it be
+an exception provided with the Java development environment? Or should
+you roll your own?
+)QB(
+
+)0 4 H(Choosing the Exception Type to Throw)EH(
+)BQ(
+When faced with choosing the type of exception to throw, you have two
+choices:
+)OL(
+)LI(
+use one written by someone else. For example, the Java development
+enviroment provides a lot of exception classes that you could use.
+)LI(
+write one of your own
+)LO(
+
+You should go to the trouble of writing your own exception classes
+if you answer "yes" to any of the following questions. Otherwise, you
+can probably get away with using someone else's:
+)UL(
+)LI(
+Do you need an exception type that isn't represented by those in
+the Java development environment?
+)LI(
+Would it help your users if they could differentiate your exceptions
+from those thrown by classes written by other vendors?
+)LI(
+Does your code throw more than one related exception?
+)LI(
+If you use someone else's exceptions, will your users have access to
+those exceptions? A similar question is "Should your package be
+independent and self-contained?"
+)LU(
+)0 P(
+Your linked list class can throw multiple exceptions, and it would
+be convenient to be able to catch all exceptions thrown by the linked
+list with one handler. Also, if you plan on distributing your linked
+list in a package, all related code should be packaged together.
+Thus for the linked list, you should roll your own exception class
+hierarchy.
+)0 P(
+The following diagram illustrates one possible exception class hierarchy
+designed to support the linked list as described above:
+)0 P(
+)0 7 IM(
+)0 P(
+LinkedListException is the parent class of all the possible exceptions
+that can be thrown by the linked list class. Users of your linked list
+class can write a single exception handler to handle all linked list
+exceptions with a )SM(catch)ES( statement like this:
+)BQ(
+)PR(
+catch \201LinkedListException\202 {
+    . . . 
+}
+)RP(
+)QB(
+Or, users could write more specialized handlers for each subclass of
+LinkedListException.
+)QB(
+
+)0 4 H(Choosing a Superclass)EH(
+)BQ(
+The diagram above does not indicate the superclass of the LinkedListException
+class. As you know, Java exceptions must be Throwable objects \201they must be
+instances of Throwable or a subclass of Throwable\202. So, your temptation might
+be to make LinkedListException a subclass of Throwable. However,
+the java.lang package provides two Throwable subclasses that further divide
+the type of problems that can occur within a Java program: Errors and
+Exceptions. Most of the applets and applications that you write will
+throw objects that are Exceptions. \201Errors are reserved for serious hard
+errors that occur deep in the system.\202
+)0 P(
+Theoretically, any Exception subclass could be used as the parent
+class of LinkedListException. However, a quick perusal of those
+classes show that they are either too specialized or completely unrelated
+to LinkedListException to be appropriate.
+Thus, the parent class of LinkedListException should be Exception.
+)0 P(
+Because runtime exceptions don't have to be declared in the throws clause
+of a method, many packages developers ask: "Isn't
+it just easier if I make all of my exception inherit from RuntimeException?"
+The answer to this question is covered in detail
+on )A(Runtime Exceptions--The Controversy)EA(.
+The bottom line is that you shouldn't derive from RuntimeException
+unless your class really is a runtime exception! For most of you, this
+means "No, your exceptions shouldn't inherit from RuntimeException."
+)QB(
+
+)0 4 H(Naming Conventions)EH(
+)BQ(
+It's good practice to append the word "Exception" to the end of
+all classes that inherit \201directly or indirectly\202 from the
+Exception class. Similarly, classes that inherit from the Error
+class should end with the string "Error".
+)QB(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL NP(
+
+
+
+
+
+
+
+)A()0 0 IM()EA()A()0 1 IM()EA()A()0 2 IM()EA()A()0 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+)0 P(
+)HR(
+
+)0 2 H(
+    Runtime Exceptions--The Controversy
+)EH(
+)0 P(
+)BQ(
+
+Because the Java language does not require methods to catch or declare
+runtime exceptions, it's tempting for programmers to
+write code that throws only runtime exceptions or
+make all of their exception subclasses inherit from RuntimeException.
+Both of these programming shortcuts allow programmers to write Java
+code without bothering with all of the nagging
+)BQ(
+)PR(
+InputFile.java:8: Warning: Exception java.io.FileNotFoundException must be caught, or it must be declared in throws clause of this method.
+        fis = new FileInputStream\201filename\202;
+              ^  
+)RP(
+)QB(
+errors from the compiler and without bothering to declare or catch
+any exceptions. While this may seem convenient to the programmer, it
+sidesteps the intent of Java's catch or declare requirement and can
+cause problems for the programmers using your classes.
+)0 P(
+Why did the Java designers decide to force a method to declare all uncaught
+non-runtime exceptions that can be thrown within its scope?
+Because any exception that can be thrown by a method is really part of
+the method's public programming interface: callers of a method must know
+about the exceptions that a method can throw in order to intelligently
+and conciously decide what to do about those exceptions.
+The exceptions that a method can throw are as much a part of that
+method's programming interface as its parameters and return value.
+)0 P(
+Your next question might be: "Well then, if it's so good to document
+a method's API including the exceptions that it can throw, why not declare
+runtime exceptions, too?"
+)0 P(
+RuntimeExceptions represent a programming problem that was detected by
+the runtime system or an inappropriate use of an API. This includes arithmetic
+exceptions, such as when dividing by zero, pointer exceptions, such as trying
+to access an object through a null reference, and indexing exceptions, such
+as attempting to access an array element through an index that is too large
+or too small.
+)0 P(
+Runtime exceptions can occur anywhere in a program and in a typical
+program can be very numerous. Typically, the cost of checking for runtime
+exceptions exceeds the benefit of catching or declaring them. Thus the compiler
+does not require that you catch or declare runtime exceptions, though you can.
+)0 P(
+Non-runtime exceptions represent useful information about the operation
+of a legally specified request that the caller may have had no control
+over and that the caller needs to be informed about--for example, the
+filesystem is now full, or the remote end has closed the connection, or
+the access privileges don't allow this action.
+)0 P(
+What does it buy you if you throw a RuntimeException or create a subclass
+of RuntimeException just because you don't want to deal with declaring it? 
+Simply, you get the ability to throw an exception without declaring that
+you do so. In other words, it is a way to avoid documenting the exceptions
+that a method can throw.
+When is this good? Well, when is it ever good to avoid documenting a
+method's behavior? The answer is "hardly ever".
+
+)HR(
+)BD(Rules of Thumb:)ES(
+)UL(
+)LI(
+A method can detect and throw a RuntimeException
+when it's encountered an error in the virtual machine runtime, however, it's
+typically easier to just let the virtual machine detect and throw it.
+Normally, the methods you write should throw an Exception.
+)LI(
+Similarly, you create a subclass of RuntimeException when
+you are creating an error in the virtual machine runtime
+\201which you probably aren't\202. Otherwise you should subclass Exception.
+)LI(
+Do not throw a runtime exception or create a subclass of RuntimeException
+simply because you don't want to be bothered with declaring them.
+)LU(
+
+)HR(
+
+)QB(
+)0 P(
+)HR(
+)0 P(
+
+
+
+)A()2 0 IM()EA()A()2 1 IM()EA()A()2 2 IM()EA()A()2 3 IM()EA(
+
+
+)A()BD()I(Handling Errors using Exceptions)ES()ES()EA(
+
+
+
+
+
+)WB NL showpage end restore

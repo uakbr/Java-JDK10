@@ -1,0 +1,96 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Introducing Exceptions</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="main.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="vars.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Introducing Exceptions
+</h2>
+<p>
+<blockquote>
+ 
+<blockquote>
+<pre>
+class Count {
+    public static void main(String args[])
+        <strong>throws java.io.IOException</strong>
+    {
+        int count = 0;
+
+        while (System.in.read() != -1)
+            count++;
+        System.out.println("Input has " + count + " chars.");
+    }
+}    
+</pre>
+</blockquote>
+
+The following code snippet is invalid because it tries to divide 7 by 0
+and mathematically divide by 0 is an undefined operation.
+<blockquote>
+<pre>
+int x = 0;
+int y = 7;
+System.out.println("answer = " + <strong>y/x</strong>);
+</pre>
+</blockquote>
+An event that occurs during the execution of program that prevents the continuation of
+the normal flow of instructions, such as the divide by 0 above, is called an
+<em>exception</em>. Different computer systems handle exceptions in different ways;
+some more elegantly than others.
+<p>
+In the Java language, you can catch exceptions and try to handle them within a special code segment
+known as an <em>exception handler</em>. The exception handler can try to recover
+from the error, or if the error is too serious to recover from, then the exception
+handler can display pertinent information to help the user detect the problem.
+
+<p>
+In the Java language, every method must declare all of the exceptions, if any, it can throw.
+The bold line shown in the character-counting application above declares
+that the <code>main()</code> method can throw an exception called
+<code>java.io.IOException</code>. You will notice that the <code>main()</code>
+method does not throw any exceptions directly. Rather it can throw one
+indirectly through its call to <code>System.in.read()</code>.
+
+<h4>See Also</h4>
+<blockquote>
+<a href="../../MissingPage.html"><img src=../../images/javaIcon.gif height=20 width=20 border=0></a>
+<a href="../../MissingPage.html">Error Handling and Exceptions</a>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="main.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="vars.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

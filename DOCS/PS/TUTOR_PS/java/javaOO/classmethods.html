@@ -1,0 +1,156 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Writing a Class Method</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="methodaccess.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="finalmethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Writing a Class Method
+</h2>
+<p>
+<blockquote>
+
+By default, when you declare a method within a class that method
+is an <em>instance method</em>. All instances of the class share
+the same implementation of an instance method. However, the instance
+method operates on the instance variables that are particular to
+that instance. For example, the class defined below has one instance
+variable, an integer named x.
+<blockquote>
+<pre>
+class AnIntegerNamedX {
+    int x;
+}
+</pre>
+</blockquote>
+Every time you instantiate AnIntegerNamedX, you create an instance
+of AnIntegerNamedX and each instance of AnIntegerNamedX gets its own
+copy of <code>x</code>. To access a particular <code>x</code>, you
+must access it through the object with which it is associated (either
+directly, if you have access, or through the instance's methods).
+There is no other way to access <code>x</code> except through the
+instance.
+<p>
+Now, let's make <code>x</code> private, and create two public methods
+within AnIntegerNamedX which allows other objects to set and query
+the value of <code>x</code>.
+<blockquote>
+<pre>
+class AnIntegerNamedX {
+    private int x;
+    public int x() {
+	return x;
+    }
+    public void setX(int newX) {
+	x = newX;
+    }
+}
+</pre>
+</blockquote>
+Note that these two methods refer directly to <code>x</code> without
+using the dot notation. Assuming that there are no other variables
+within this scope named <code>x</code>, an object's instance methods
+automatically refer to the object's instance variables by name.
+<p>
+Now the following code snippet creates two different instaces of type
+AnIntegerNamedX, sets their <code>x</code> values to different values
+using the new <code>setX()</code> method, and <a name=snippet>then prints
+out the values.</a>
+<blockquote>
+<pre>
+. . .
+AnIntegerNamedX myX = new AnIntegerNamedX();
+AnIntegerNamedX anotherX = new AnIntegerNamedX();
+myX.setX(1);
+anotherX.setX(2);
+System.out.println("myX.x = " + myX.x());
+System.out.println("anotherX.x = " + anotherX.x());
+. . .
+</pre>
+</blockquote>
+The output produced by this code snippet is
+<blockquote>
+<pre>
+myX.x = 1
+anotherX.x = 2
+</pre>
+</blockquote>
+illustrating that each instance of the class AnIntegerNamedX has its
+own copy of the instance variable <code>x</code>, and that an instance's
+instance methods operate on that instance's instance variables.
+<p>
+When declaring a method, you can specify that method to
+be a <em>class method</em> rather than an instance method. As you know,
+the system creates a single copy of a class variable the first time it
+encounters the class in which the variable is defined. All instances
+of that class share the same class variable. Class methods operate
+on class variables.
+<p>
+To specify that a method is a class method, use the keyword
+<code>static</code>. For example, let's change the AnIntegerNamedX
+class such that its <code>x</code> variable is now a class variable
+and that it's <code>x()</code> and <code>setX()</code> methods are
+now class methods:
+<blockquote>
+<pre>
+class AnIntegerNamedX {
+    static private int x;
+    static public int x() {
+	return x;
+    }
+    static public void setX(int newX) {
+	x = newX;
+    }
+}
+</pre>
+</blockquote>
+Now the exact same code snippet <a href=#snippet>from before</a> that
+creates two instances of AnIntegerNamedX, sets their <code>x</code> values,
+and then prints the <code>x</code> values produces this, different, output.
+<blockquote>
+<pre>
+myX.x = 2
+anotherX.x = 2
+</pre>
+</blockquote>
+That's because now that <code>x</code> is a class variable there is only
+one copy of the variable and it is shared by all instances of AnIntegerNamedX
+including <code>myX</code> and <code>anotherX</code>. And the class methods
+<code>x()</code> and <code>setX()</code> refer to the same variable--the class
+variable <code>x</code>.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="methodaccess.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="finalmethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

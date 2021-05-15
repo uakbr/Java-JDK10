@@ -1,0 +1,147 @@
+<!--NewPage-->
+<html>
+<head>
+<title>General Rules for Using Layout Managers</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="using.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="border.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Laying Out Components within a Container</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    General Rules for Using Layout Managers
+</h2>
+<p>
+<blockquote>
+
+<!--possible applet:  custom Container that has buttons letting
+us add/delete Components, and lets us know when the layout-related
+methods are called. -->
+
+Unless you explicitly tell a Container not to use a layout manager,
+it will be associated with its very own instance of a layout manager.
+This layout manager is automatically consulted every time
+the Container might need to change its appearance.
+Except for GridBagLayout,
+most layout managers don't require
+applications and applets to directly call the layout manager's methods.
+
+<h4>
+<a name=creating>
+How to Create a Layout Manager and Associate It with a Container
+</a>
+</h4>
+<blockquote>
+Every container has a default layout manager associated with it.
+If you want to use this default, you don't have to do a thing.
+The constructor for each Container 
+creates a layout manager instance
+and initializes the Container to use it.
+<p>
+
+To use a non-default layout manager,
+you need to create an instance of the desired layout manager class
+and tell the Container to use it.
+Below is some typical code that does this.
+This code creates a CardLayout manager
+and sets it up as the layout manager for a Container.
+<p>
+
+<blockquote>
+<pre>
+aContainer.setLayout(new CardLayout());
+</pre>
+</blockquote>
+
+</blockquote>
+
+<h4>
+<a name=using>
+Rules of Thumb for Using Layout Managers
+</a>
+</h4>
+
+<blockquote>
+The Container methods that result in calls to the Container's layout manager are
+<code>add()</code>,
+<code>remove()</code>,
+<code>removeAll()</code>,
+<code>layout()</code>,
+<code>preferredSize()</code>,
+and <code>minimumSize()</code>.
+The
+<code>add()</code>,
+<code>remove()</code>, and
+<code>removeAll()</code>
+methods add and remove Components from a Container;
+you can call them at any time.
+The 
+<code>layout()</code> method,
+which is called as the result of any paint request to a Container, 
+requests that the Container
+place and size itself and the Components it contains;
+you don't call it
+directly [CHECK].
+The <code>preferredSize()</code> 
+and <code>minimumSize()</code> methods
+return the Container's ideal size and minimum size, respectively.
+The values returned are just hints;
+they have no effect unless your program enforces these sizes [CHECK].
+<P>
+
+You must take special care
+when calling a Container's <code>preferredSize()</code>
+and <code>minimumSize()</code> methods.
+The values these methods return are meaningless unless the Container
+and its Components have valid peer objects.
+The peer object corresponding to a Component 
+is created whenever the Component's
+<code>addNotify()</code> method is called,
+which happens:
+<ul>
+<li> when the Component is a peer-less Window,
+     or is contained in a peer-less Window,
+     and the Window's
+     <code>pack()</code> or <code>show()</code> method is called
+<li> when the Component is added to a Container that already has a peer
+<li> when your program directly calls
+     the Component's <code>addNotify()</code> method,
+     or the <code>addNotify()</code> method
+     of any Container above the Component
+     [is this really OK?]
+</ul>
+
+</blockquote>
+
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="using.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="border.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Laying Out Components within a Container</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

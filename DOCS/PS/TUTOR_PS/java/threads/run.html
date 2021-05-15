@@ -1,0 +1,95 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Thread Body</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="attributes.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="clock.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Thread Body
+</h2>
+<p>
+<blockquote>
+
+All the action takes place in the thread body which is the thread's
+<code>run()</code> method. After a thread has been created and
+initialized, the runtime system calls its <code>run()</code> method.
+The code in the <code>run()</code> method implements the behaviour
+for which the thread was created. It's the thread's raison d'etre
+(reason to be).
+<p>
+Often, a thread's <code>run()</code> method is a loop. For example,
+an animation thread might loop through and display a series of images.
+Sometimes a thread's <code>run()</code> method performs an operation that
+takes a long time. For example, downloading and playing a sound
+or a JPEG movie.
+<p>
+There are two different ways that you can provide a customized
+<code>run()</code> method for a Java thread:
+<ol>
+<li>
+Subclass the Thread class defined in the java.lang package and
+override the <code>run()</code> method.
+<br>
+<strong>Example:</strong> The SimpleThread class used in the the example
+described in <a href="simple.html">A Simple Thread Example</a> previously in
+this lesson is an example of this style of using Java threads.
+<li>
+Provide a class that implements the Runnable interface, also defined
+in the java.lang package. Now, when you instantiate a thread (either directly
+from the Thread class, or from a subclass of Thread), give the new
+thread a handle to an instance of your Runnable class. This Runnable
+object provides the <code>run()</code> method to the thread.
+<br>
+<strong>Example:</strong> The clock applet you see here <applet
+codebase=betaclasses code=Clock.class width=60 height=10><app class=Clock width=60 height=10></applet>
+is an example of using the Runnable interface to provide a <code>run()</code>
+method to a thread.
+<a href="clock.html"><strong>The Clock Applet</strong></a>
+describes the source code for this simple applet.
+</ol>
+
+There are good reasons for choosing either of the two options described
+above over the other. However, for most cases, the following rule of
+thumb will guide you to the best option.
+
+<hr>
+<strong>Rule of thumb:</strong> If your class <em>must</em> derive from
+some other class (the most common example being Applet), then you should
+use Runnable as described in Option #2.
+<hr>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="attributes.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="clock.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

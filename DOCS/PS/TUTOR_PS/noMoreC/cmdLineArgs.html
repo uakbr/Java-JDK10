@@ -1,0 +1,95 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Java Command Line Arguments Differ from C and C++</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="operators.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="strings.html"><img src=../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/noCHeader.gif width=26 height=26 align=bottom border=0 alt="How the Java Language Differs From C and C++ | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>How the Java Language Differs from C and C++</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Java Command Line Arguments Differ from C and C++
+</h2>
+<p>
+<blockquote>
+
+The command line arguments passed to a Java application are different
+in number and in type than those passed to a C or C++ program.
+
+<h4>Number of Parameters</h4>
+<blockquote>
+In C and C++ when you invoke a program, the system passes two parameters to it:
+<blockquote>
+<strong>argc</strong>--the number of arguments on the command line<br>
+<strong>argv</strong>--a pointer to an array of strings that contain the arguments<br>
+</blockquote>
+<p>
+When you invoke a Java application, the system only passes one parameter to it:
+<blockquote>
+<strong>args</strong>--an array of Strings (just an array--not a pointer to an array)
+that contain the arguments<br>
+</blockquote>
+<p>
+You can derive the number of command line arguments with the array's
+<code>length()</code> method.
+</blockquote>
+
+<h4>The First Command Line Argument</h4>
+<blockquote>
+In C and C++, the system passes the entire command line to 
+the program as arguments, including the name used to invoke
+it. For example, if you invoked a C program like this:
+<blockquote>
+<pre>
+<strong>diff</strong> file1 file2
+</pre>
+</blockquote>
+Then the first argument in the <code>argv</code> parameter is <code>diff</code>.
+
+<p>
+In the Java language, you always know the name of the application because it's
+the name of the class where the main method is defined.
+So, the Java runtime system does not pass the class name you
+invoke to the main method. Rather, the system passes only the items on the
+command line that appear after the class name. For example,
+if you invoked a Java application like this:
+<blockquote>
+<pre>
+java diff <strong>file1</strong> file2
+</pre>
+</blockquote>
+The first command line argument is <code>file1</code>.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="operators.html"><img src=../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="strings.html"><img src=../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../index.html"><img src=../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="./index.html"><img src=../images/noCHeader.gif width=26 height=26 align=top border=0 alt="How the Java Language Differs From C and C++ | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>How the Java Language Differs from C and C++</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

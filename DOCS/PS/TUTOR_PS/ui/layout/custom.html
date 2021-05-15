@@ -1,0 +1,100 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Creating a Custom Layout Manager</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="gridbag.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="none.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Laying Out Components within a Container</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Creating a Custom Layout Manager
+</h2>
+<p>
+<blockquote>
+
+<strong>Note:</strong>
+Before you start creating a custom layout manager,
+make sure that no existing layout manager will work.
+In particular, 
+<a href=gridbag.html>GridBagLayout</a>
+is flexible enough to work in most cases.
+<p>
+
+To create a custom layout manager,
+you must create a class that implements the
+<a href=http://java.sun.com/JDK-1.0/api/java.awt.LayoutManager.html>LayoutManager</a>
+interface.
+Besides implementing the five methods required by LayoutManager,
+layout managers generally implement at least one public constructor
+and the 
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.Object.html#toString><code>toString()</code></a>
+method.
+Layout managers don't actually draw Components.
+They simply invoke each Component's 
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.Component.html#resize><code>resize()</code></a>,
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.Component.html#move><code>move()</code></a>,
+and/or
+<a href=http://java.sun.com/JDK-1.0/api/java.lang.Component.html#reshape><code>reshape()</code></a>
+to set the Component's size and position.
+<p>
+
+Here's <a href=example/DiagonalLayout.java.html>source code</a>
+for a custom layout manager named DiagonalLayout.
+It lays out components diagonally, 
+from left to right, 
+with one component per row.
+<p>
+
+Here's an example of DiagonalLayout in action:
+<p>
+<applet code=AppletButton.class codebase=example width=350 height=60>
+<param name=windowType value=CustomWindow>
+<param name=windowText value="Custom Layout Manager (DiagonalLayout)">
+<param name=buttonText value="Click here to see a custom layout manager in action">
+<blockquote>
+<hr>
+<em>
+Your browser can't run 1.0 Java applets,
+so here's a picture of the window the program brings up:</em>
+<p>
+<img src=images/CustomEx1.gif width=209 height=175>
+<hr>
+</blockquote>
+</applet>
+
+
+<!-- SAY MORE! -->
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="gridbag.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="none.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Laying Out Components within a Container</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

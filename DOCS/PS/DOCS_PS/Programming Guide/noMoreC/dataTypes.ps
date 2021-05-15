@@ -1,0 +1,364 @@
+%!
+%%Title: dataTypes.html
+%%DocumentFonts: NewCenturySchlbk-Roman NewCenturySchlbk-Bold NewCenturySchlbk-Italic NewCenturySchlbk-BoldItalic Courier Courier-Bold Courier-Oblique Courier-BoldOblique
+%%Creator: html2ps 0.1 beta, written by Jan Karrman, jan@tdb.uu.se
+%%EndComments
+save
+/D {def} def /E {exch} D
+/M {moveto} D
+/S {show} D
+/R {rmoveto} D
+/L {lineto} D
+/RL {rlineto} D
+/SW {stringwidth} D
+/GI {getinterval} D
+/PI {putinterval} D
+/U {gsave CP currentfont /FontInfo get /UnderlinePosition get
+ 0 E currentfont /FontMatrix get dtransform E pop add newpath M
+ dup SW RL stroke grestore S } D
+/B {/r E D gsave -10 0 R CP 
+  newpath r 0 360 arc closepath fill grestore } D
+/OB {/r E D gsave -10 0 R CP 
+  newpath r 0 360 arc closepath stroke grestore } D
+/NP {PN 0 ne {showpage} if 0.6 setlinewidth 70 756 translate
+ F dup scale /BP true D /PN PN 1 add D NO {/OF currentfont D RF findfont
+ 10 scalefont setfont W 2 div LE neg 40 sub M PN ST cvs S OF setfont} if
+ XO SZ SL get neg M} D
+/SF {dup SZ SL 3 2 roll put dup -1.2 mul /YI E D E findfont E scalefont
+ setfont} D
+/FS {CF MK PF {1 or} if and or /CF E D FR SL CF put FL CF get E SF} D
+/RF {/NewCenturySchlbk-Roman} D
+/BF {/NewCenturySchlbk-Bold} D
+/IF {/NewCenturySchlbk-Italic} D
+/IB {/NewCenturySchlbk-BoldItalic} D
+/FF {/Courier} D
+/FB {/Courier-Bold} D
+/FI {/Courier-Oblique} D
+/FT {/Courier-BoldOblique} D
+/FL [RF FF BF FB IF FI IB FT] D
+/reencodeISO {
+dup dup findfont dup length dict begin
+{ 1 index /FID ne { def }{ pop pop } ifelse } forall
+/Encoding ISOLatin1Encoding D
+currentdict end definefont
+} D
+/ISOLatin1Encoding [
+/space/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quoteright
+/parenleft/parenright/asterisk/plus/comma/minus/period/slash
+/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon
+/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N
+/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright
+/asciicircum/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m
+/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright/asciitilde
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/dotlessi/grave/acute/circumflex/tilde/macron/breve
+/dotaccent/dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut
+/ogonek/caron/space/exclamdown/cent/sterling/currency/yen/brokenbar
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot
+/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute
+/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave
+/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex
+/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
+/yacute/thorn/ydieresis
+] D
+[RF BF IF IB FF FB FI FT] {reencodeISO D} forall
+
+/WK ( ) D
+/BS {/PC E D /TX E D /fin false D /BW WK SW pop D /CW 0 D /LK 0 D /SC 0 D
+ /RT TX D {RT WK search {/NW E D pop /RT E D /WH NW SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC /SC LK D /CW WH BW add D}
+ {/CW CW WH add BW add D} ifelse
+ /LK LK NW length add 1 add D} {pop exit} ifelse} loop
+ /fin true D /LC TX length D /WH RT SW pop D CW WH add LL gt
+ {TX SC LK SC sub GI PC NL RT dup () ne {PC} {pop} ifelse}
+ {TX SC LC SC sub GI PC} ifelse} D
+
+/W {453 F div} D
+/LE {651 F div} D
+/BL {HM not {CP E pop XO E M} if} D
+/NL {CP /YC E D pop XO YC M YC LE neg gt
+ {YI CI sub dup 0 lt BP not and {dup 0 E R CI add /CI E D} {pop} ifelse}
+ {NP} ifelse} D
+/RS {/TM E D /CN 0 D TM
+ {dup 9 eq E 10 eq or {TM CN ( ) PI} if
+  /CN CN 1 add D} forall /CN 0 D /BK HM EN and {0} {1} ifelse D TM
+ {dup 32 ne {TM CN 3 2 roll put /CN CN 1 add D /BK 0 D}
+ {pop BK 0 eq {TM CN 32 put /CN CN 1 add D} if /BK 1 D} ifelse}
+  forall TM 0 CN GI dup () ne 
+  {dup CN 1 sub get 32 eq {/EN false D} {/EN true D} ifelse} if} D
+/join {2 copy length E length add string dup 4 2 roll 2 index 0 3 index
+ PI E length E PI} bind D
+
+/CP {currentpoint} D
+/WR {dup () eq {pop} {IG {DE search {pop pop} if /IG false D} if
+ PB {dup 0 get 10 ne {(\n) E join} if /PB false D} if
+ PP {dup 0 get 10 ne {(\n) E join} if /PP false D} if
+ (\n) search {TR /CI 0 D /NC 0 D NL pop WR} {TR} ifelse} ifelse} D
+/TR {(\t) search {dup length /NC E NC add D SH MS 0 8 NC 8 mod sub dup
+ /NC E NC add D GI SH pop TR} {dup length /NC E NC add D SH} ifelse
+ /BP false D} D
+/SH {CP E pop LE neg lt {NP} if AU AF and UF or {U} {S} ifelse} D
+/ON {AR AI NN get 1 add dup AR AI 3 -1 roll put ST cvs length dup ST E (. ) PI
+ ST 0 3 -1 roll 2 add GI dup SW pop neg 0 R SH} D
+/SP {YI E /YI E D NL /YI E D} D
+/BR {BN} D
+/BN {PF {WR} {BT NL} ifelse /HM false D} D
+/AB {CH E 0 E put CH join WB} D
+/NN {dup 0 lt {pop 0} if} D
+/HD {IG {DE search {pop pop} if /IG false D} if} D
+/DH {pop BT} D
+/TL {} D
+/LT {pop BT} D
+/H  {1 sub /HL E D BN CP E pop LE neg WW add lt {NP} if
+ BH SP /SL SL 1 add D HS HL get HT HL get FS} D
+/EH {BN AH SP /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/BT {IG {DE search {pop pop} if /IG false D} if RS dup dup () ne E ( ) ne and
+ {/LS LL D /LL W CP pop sub D {/CI 0 D SH /BP false D fin not {NL} if
+  /HM true D /LL LS D} BS} {S} ifelse} D
+/P  {PF {WR /PP true D} {BN AE not {AH SP} if} ifelse} D
+/HR {BN 0 CP E pop M gsave W 0 RL stroke grestore
+ /CI 0 D BP {/BP false D} if NL} D
+/AD {BN /AE true D AH SP IF 11 SF} D
+/DA {BN /AE false D AH SP RF 11 SF} D
+/PR {BN /CF 0 D 9 PS mul 1 FS /PF true D /PB true D /NC 0 D} D
+/PW {pop PR} D
+/RP {dup () ne {dup dup length 1 sub get 10 ne {(\n) join} if} if
+ WR AH SP /CF 0 D 11 0 FS /PF false D} D
+/SI {/XO AI LG add NN IN mul BC NN BI mul add D /LL W XO sub D} D
+/DT {BN /LG LG 1 sub D SI /LG LG 1 add D BL} D
+/DD {BN SI BL} D
+/DL {BN XO 0 eq {AH SP} if /LG LG 1 add D BL} D
+/LD {BN LG 0 gt {/LG LG 1 sub D} if SI XO 0 eq {AH SP} if BL} D
+/UL {BT XO 0 eq {AH SP} {NL} ifelse NR AI NN 0 put /UI UI 1 add D
+ /AI AI 1 add D SI BL} D
+/LU {BT /UI UI 1 sub D /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ifelse BL} D
+/OL {BT XO 0 eq {AH SP} {NL} ifelse NR AI NN 1 put /AI AI 1 add D SI BL} D
+/LO {BT AR AI NN 0 put /AI AI 1 sub D SI XO 0 eq {AH SP} {NL} ifelse BL} D
+/LI {BN /BP false D /CI 0 D CP E pop LE neg lt {NP} if NR AI 1 sub NN get 1 eq
+ {ON} {0 3 R 2.5 UI 2 mod 0 eq {OB} {B} ifelse 0 -3 R} ifelse BL} D
+/BQ {BN AH SP /BC BC 1 add D SI BL} D
+/QB {BN AH SP /BC BC 1 sub D SI BL} D
+/WB {PF {WR} {BT} ifelse} D
+/A  {WB /AF true D} D
+/EA {WB /AF false D} D
+/CM {WB /IG true D /DE (-->) D} D
+/SK {PF {(<) join WR} {BT /IG true D /DE (>) D} ifelse} D
+/SS {SZ SL get /SL SL 1 add D} D
+/I  {WB SS 4 FS} D
+/BD {WB SS 2 FS} D
+/TT {WB SS 1 FS} D
+/KB {WB SS /CF 0 D 3 FS} D
+/CT {WB SS /CF 0 D 4 FS} D
+/SM {WB SS /CF 0 D 1 FS} D
+/ES {WB /SL SL 1 sub NN D /CF 0 D SZ SL get FR SL get FS} D
+/UN {WB /UF true D} D
+/NU {WB /UF false D} D
+
+/F 1 D
+/BH -35 D
+/AH -28 D
+/LL W D
+/XO 0 D
+/YI 0 D
+/CI 0 D
+/LG 0 D
+/AI 0 D
+/UI 0 D
+/IN 30 D
+/BI 12 D
+/WW 50 D
+/PS 1 D
+/AR [0 0 0 0 0 0 0 0 0 0] D
+/NR [0 0 0 0 0 0 0 0 0 0] D
+/FR [0 0 0 0 0 0 0 0 0 0] D
+/SZ [0 0 0 0 0 0 0 0 0 0] D
+/HS [19 17 15 13 12 11] D
+/HT [2 2 2 2 2 2] D
+/SL 0 D
+/CF 0 D
+/BC 0 D
+/MK 7 D
+/PN 0 D
+/MS (        ) D
+/CH 1 string D
+/ST 6 string D
+/IG false D
+/HM false D
+/PF false D
+/EN false D
+/UF false D
+/PP false D
+/AE false D
+/AF false D
+/NO false D
+/AU true D
+/BP true D
+%%EndProlog
+save
+RF 11 SF
+0 LE neg 20 sub M
+(
+
+)HD(
+)TL(C Data Types Not Supported By the Java Language)LT(
+)DH(
+
+)SK(table width=100%>
+)SK(tr>
+)SK(td align=left>
+)A( Previous |  )WB()EA()A( Next |  )WB()EA()A( Trail Map |  )WB()EA()A( How the Java Language Differs From C and C++ |  )WB()EA(
+)SK(td>
+)SK(td align=right>
+)A()BD()I(How the Java Language Differs from C and C++)ES()ES()EA(
+)SK(/td>
+)SK(/tr>
+)SK(/table>
+)P(
+)SK(hr size=4>
+
+)2 H(
+    C Data Types Not Supported By the Java Language
+)EH(
+)P(
+)BQ(
+
+The Java language does not support pointers, )SM(struct)ES(, or )SM(union)ES(.
+
+)4 H(pointers)EH(
+)BQ(
+The Java language passes all arrays and objects by reference but does not have
+an explicit pointer type. You cannot construct a reference to anonymous
+memory. In addition to making programming easier, this prevents
+common errors due to pointer mismanagement.
+)QB(
+
+)4 H(struct and union)EH(
+)BQ(
+The Java language does not support either )SM(struct)ES( or )SM(union)ES(.
+Instead use classes or interfaces to build composite types.
+For example, in C, you might declare a structure that contains
+information about employees like this:
+)BQ(
+)PR(
+struct employee {
+    char name[NAMESIZE];
+    char address[ADRSIZE];
+    long ssn;
+    double salary;
+    double \(*compute_raise\)\(double, double\);
+};
+)RP(
+)QB(
+The last line of this structure is a pointer to a function.
+When you allocate and initialize an employee structure,
+you must supply the structure with a pointer to a function,
+and that function must be defined as indicated in the struct
+declaration. In the example above, the )SM(compute_raise)ES(
+function must accept two doubles are arguments, and return a double.
+This function will do the trick.
+)BQ(
+)PR(
+double compute_raise\(double salary, double percent\)
+{
+    return salary * percent;
+}
+)RP(
+)QB(
+Note that even though )SM(salary)ES( is part of the structure
+we still need to supply that value to the function.
+Here's a main program that creates, initializes an employee
+structure, and then computes a 10% raise for that person.
+Note that the main program has access to information \(the employee's
+salary\) that ideally should be kept private.
+)BQ(
+)PR(
+main\(\)
+{
+    struct employee George = {
+        "George",
+        "NOWHERE",
+        123456789,
+        45000.00,
+        compute_raise
+    };
+    printf\("raise = %f\\n", George.compute_raise\(George.salary, 0.10\)\);
+}
+)RP(
+)QB(
+)P(
+In the Java language, the need for structures is completely obsoleted by classes.
+which provide for a cleaner way to bundle data and
+methods together, and a way to keep some of that data private to the class.
+)P(
+In the Java language, instead of the struct declared above, you would declare a class to
+maintain information about employees:
+)BQ(
+)PR(
+class Employee {
+    String name;
+    String address;
+    long ssn;
+    private double salary;
+    double compute_raise\(double percent\) {
+        return percent * salary;
+    }
+    Employee\(String a_name, String a_address, long a_ssn, double a_salary\){
+        name = a_name;
+        address = a_address;
+        ssn = a_ssn;
+        salary = a_salary;
+    };
+}
+)RP(
+)QB(
+Note that a complete method declaration for )SM(compute_raise)ES(
+including the method body is implemented within the class.
+Also note that the salary instance variable is declared private--this
+means that only an instance of this class has access to the salary
+information-- thereby keeping the information protected from prying eyes.
+Try doing that with C.
+A constructor is included for convenience.
+)P(
+Notice how this application can compute George's raise without
+ever obtaining the salary information directly.
+)BQ(
+)PR(
+class MainClass {
+    public static void main\(String args[]\) {
+        Employee george = new Employee\("George", "NOWHERE", 123456789, 45000.0\);
+        System.out.println\("raise = " + george.compute_raise\(0.10\)\);
+    }
+}
+)RP(
+)QB(
+)QB(
+
+)QB(
+)P(
+)SK(hr size=4>
+)P(
+)SK(table width=100%>
+)SK(tr>
+)SK(td align=left>
+)A( Previous |  )WB()EA()A( Next |  )WB()EA()A( Trail Map |  )WB()EA()A( How the Java Language Differs From C and C++ |  )WB()EA(
+)SK(td>
+)SK(td align=right>
+)A()BD()I(How the Java Language Differs from C and C++)ES()ES()EA(
+)SK(/td>
+)SK(/tr>
+)SK(/table>
+
+
+)WB showpage restore

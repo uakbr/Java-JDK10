@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>Classes in the Example Program</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="hierarchy.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Classes in the Example Program
+</h2>
+<p>
+<blockquote>
+
+The example program defines two classes
+that inherit from AWT classes.
+It also defines a data storing class.
+However, most of the objects in the program
+are instances of AWT classes.
+
+<h4>Classes Defined in the Example Program</h4>
+<blockquote>
+The example program defines two 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Panel.html>Panel</a> subclasses,
+Converter and ConversionPanel,
+and a simple class named Unit.
+<p>
+
+The Converter class is the heart of the example program.
+It contains the program's main() method
+(which is called if the program is run as an application),
+as well as initialization and startup code,
+which is called either by the main() method 
+or by the application that loads that program as an applet.
+The Converter class actually extends the 
+<a href=http://java.sun.com/JDK-beta/api/java.applet.Applet.html>Applet</a> class
+(which itself extends Panel),
+instead of directly extending Panel.
+This is necessary because all applets must contain an Applet subclass.
+However, since the example program can also run as an application,
+the Converter class must behave like it extends Panel,
+since the Applet class provides functionality 
+that isn't available to applications.
+<p>
+
+<p>
+
+The ConversionPanel class
+provides a way of grouping all the controls
+that describe a particular set of distance measurements.
+The example program creates two ConversionPanel objects,
+one for metric distance measurements,
+and the other for U.S. distance measurements.
+<p>
+
+
+The Unit class provides objects that
+group a description
+(such as "Centimeters")
+with a multiplier that indicates the number of units per meter
+(0.01, for example).
+</blockquote>
+
+<h4>AWT Objects in the Example Program</h4>
+<blockquote>
+
+The example program uses several LayoutManagers, Containers, and Components
+provided by the AWT package.
+It also creates two Insets objects.
+<p>
+
+<a href=http://java.sun.com/JDK-beta/api/java.awt.LayoutManager.html>LayoutManagers</a>
+are objects that arrange the onscreen representation of Components
+within Containers.
+The example program creates three objects
+that conform to the LayoutManager interface: a 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.GridLayout.html>GridLayout</a>
+and two 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.BorderLayout.html>BorderLayouts.</a>
+The GridLayout manages the layout of the Components
+in the Converter instance.
+Each ConversionPanel uses a BorderLayout object
+to manage its Components.
+<p>
+
+Besides the Converter and ConversionPanel objects,
+the example program creates two or three 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Container.html>Containers.</a>
+Each ConversionPanel contains a 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Panel.html>Panel</a>
+(which uses the default 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.FlowLayout.html>FlowLayout</a>
+layout manager)
+to help organize the ConversionPanel's contents.
+If the program is run as an application
+(instead of as an applet),
+then it also creates a
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Frame.html>Frame</a>
+instance (a window).
+<p>
+
+All the non-Container
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component.html>Components</a>
+in the example program
+are created by ConversionPanel.
+Each ConversionPanel contains one instance each
+of the AWT Label, Choice, TextField, and Scrollbar classes.
+<p>
+
+Both the Converter and the ConversionPanel classes create
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Insets.html>Insets</a>
+instances
+that specify the padding that should appear
+around their onscreen representations.
+<p>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="hierarchy.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

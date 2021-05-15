@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>The Standard Output Stream</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="operators.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="string.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Standard Output Stream
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+class Count {
+    public static void main(String args[])
+        throws java.io.IOException
+    {
+        int count = 0;
+
+        while (System.in.read() != -1)
+            count++;
+        <strong>System.out.println</strong>("Input has " + count + " chars.");
+    }
+}    
+</pre>
+</blockquote>
+
+You've already seen the System class being used to
+read characters from the standard input stream.
+The character-counting program also uses the
+System class to display its output.
+<code>System.out.println()</code> displays
+its string argument followed by a newline.
+<code>println()</code> has a companion method
+<code>print()</code> that displays it argument
+with no trailing newline.
+To explicitly specify the newline character use <code>\n</code>.
+<p>
+<code>System.out</code> implements the <em>standard output stream</em>.
+The standard output stream is a C library concept
+that has been assimilated into the Java language. Simply put, a stream is
+a flowing buffer of characters; the standard output stream
+is a stream that writes its contents to the display.
+The standard output stream is a convenient place
+for an old-fashioned text-based application to display
+its output.
+
+<h4>See Also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.System.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.System.html>java.lang.System</a><br>
+<a href=../../tools/system/ostreams.html><img src=../../images/toolIcon.gif height=20 width=20 border=0></a>
+<a href=../../tools/system/ostreams.html>Standard Output and Error Streams</a> from <em>Using System Resources</em>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="operators.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="string.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>The Nuts and Bolts of the Java Language</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

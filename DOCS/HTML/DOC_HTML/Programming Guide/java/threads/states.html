@@ -1,0 +1,255 @@
+<html>
+<head>
+<title>Thread State</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="clock.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="priority.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Thread State
+</h2>
+<p>
+<blockquote>
+
+The following diagram illustrates the various states
+that a Java thread can be in at any point during its life
+and which method calls cause a transition to another state.
+This diagram is not a complete finite state diagram, but
+rather an overview of the more interesting and common facets
+of a thread's life. The remainder of this page discusses a
+Thread's life cycle in terms of its state.
+
+<p>
+<img src="images/threadstate.trans.gif" width=519 height=240>
+<p>
+
+<h4>New Thread</h4>
+<blockquote>
+The following statement creates a new thread but does not
+start it thereby leaving the thread in the state labeled
+"New Thread" in the diagram.
+<blockquote>
+<pre>
+Thread myThread = new MyThreadClass();
+</pre>
+</blockquote>
+When a thread is in the "New Thread" state, it is merely
+an empty Thread object. No system resources have been allocated
+for it yet. Thus when a thread is in this state, you
+can only start the thread or stop it; calling any other
+method besides <code>start()</code> or <code>stop()</code>
+when a thread is in this state makes no sense and causes an
+<a href="#IllegalThreadStateException">IllegalThreadStateException</a>.
+</blockquote>
+
+<a name="Runnable">
+<h4>Runnable</h4>
+</a>
+<blockquote>
+Now consider these two lines of code:
+<blockquote>
+<pre>
+Thread myThread = new MyThreadClass();
+myThread.start();
+</pre>
+</blockquote>
+The <code>start()</code> method creates the system resources
+necessary to run the thread, schedules the thread to run, and
+calls the thread's <code>run()</code> method.
+At this point the thread is in the "Runnable" state.
+This state is called "Runnable" rather than "Running" because
+the thread may not actually be running when it is in this state.
+Many computers have a single processor making it impossible to
+run all "Runnable" threads at the same time. So, the Java runtime
+system must implement a scheduling scheme that shares the
+processor between all "Runnable" threads. (See
+<a href="priority.html"><strong>Thread Priority</strong></a>
+for more information about scheduling.)
+However, for most purposes you can think of the "Runnable"
+state as simply "Running".
+When a thread is running--it's "Runnable" and is the current
+thread--the instructions in its <code>run()</code> are executing
+sequentially.
+</blockquote>
+
+<a name="Runnable">
+<h4>Not Runnable</h4>
+</a>
+<blockquote>
+A thread enters the "Not Runnable" state when one of these four events occur:
+<ul>
+<li>
+someone calls its <code>suspend()</code> method
+<li>
+someone calls its <code>sleep()</code> method
+<li>
+the thread uses its <code>wait()</code> method to wait on a condition variable
+<li>
+the thread is blocking on I/O.
+</ul>
+For example, the bold line in this code snippet
+<blockquote>
+<pre>
+Thread myThread = new MyThreadClass();
+myThread.start();
+try {
+    <strong>myThread.sleep(10000);</strong>
+} catch (InterruptedException e){
+}
+</pre>
+</blockquote>
+puts <code>myThread</code> to sleep for 10 seconds (10,000 milliseconds).
+During those 10 seconds, even if the processor became available
+<code>myThread</code> would not run. After the 10 seconds are up,
+<code>myThread</code> becomes "Runnable" again and now if the processor
+became available <code>myThread</code> would run.
+<p>
+For each of the "entrances" into the "Not Runnable" state listed
+above, there is a specific and distinct escape route that returns
+the thread to the "Runnable" state. An escape route only works
+for its corresponding "entrance". For example, if a thread has
+been put to sleep, then the specified number of milliseconds must
+elapse before the thread becomes "Runnable" again. Calling
+<code>resume()</code> on a sleeping thread has no effect.
+<p>
+The following indicates the escape route for every entrance into
+the "Not Runnable" state.
+<ul>
+<li>
+If a thread has been put to sleep, then the specified number
+of milliseconds must elapse.
+<li>
+If a thread has been suspended, then someone must call its
+<code>resume()</code> method. 
+<li>
+If a thread is waiting on a condition variable,
+whatever object owns the variable must relinquish it by
+calling either <code>notify()</code> or <code>notifyAll()</code>.
+<li>
+If a thread is blocked on I/O, then the specified I/O command
+must complete. 
+</ul>
+</blockquote>
+
+<h4>Dead</h4>
+<blockquote>
+A thread can die in two ways: either from natural causes, or
+by being killed (stopped). A thread dies naturally when its
+<code>run()</code> method exits normally. For example, the
+<code>while</code> loop in this method is a finite loop--it
+will iterate 100 times and then exit.
+<blockquote>
+<pre>
+public void run() {
+    int i = 0;
+    while (i &lt; 100) {
+	i++;
+	System.out.println("i = " + i);
+    }
+}
+</pre>
+</blockquote>
+A thread with this <code>run()</code> method will die naturally
+after the loop and the <code>run()</code> method completes.
+<p>
+You can also kill a thread at any time by calling its <code>stop()</code>
+method. This code snippet
+<blockquote>
+<pre>
+Thread myThread = new MyThreadClass();
+myThread.start();
+try {
+    Thread.currentThread().sleep(10000);
+} catch (InterruptedException e){
+}
+<strong>myThread.stop();</strong>
+</pre>
+</blockquote>
+creates and starts <code>myThread</code> then puts the current
+thread to sleep for 10 seconds. When the current thread wakes up,
+the bold line in the code segment kills <code>myThread</code>.
+<p>
+The <code>stop()</code> method throws a ThreadDeath object
+at the thread to kill it. Thus when a thread is killed in this
+manner it dies asynchronously. The thread will die when it actually
+receives the ThreadDeath exception.
+<p>
+Applets often use the <code>stop()</code> method to kill all of its
+threads when the Java-compatible browser in which it is running tells
+the applet to stop (when the user changes pages for example).
+See <a href="../../MissingPage.html">Threads in Applets</a> for more information.
+</blockquote>
+
+<a name="IllegalThreadStateException">
+<h4>IllegalThreadStateException</h4>
+</a>
+<blockquote>
+The runtime system throws an IllegalThreadStateException when you
+call a method on a thread and that thread's state does not
+allow for that method call. For example, IllegalThreadStateException
+is thrown when you call <code>suspend()</code> on a thread that
+is not "Runnable".
+<p>
+As shown in the various examples of threads so far in this
+lesson, when you call a thread method that can throw an exception,
+you must either catch and handle the exception, or declare that
+the calling method throws the uncaught exception.
+</blockquote>
+
+<h4>The isAlive() Method</h4>
+<blockquote>
+And a final word about thread state: the programming interface
+for the Thread class includes a method called <code>isAlive()</code>.
+The <code>isAlive()</code> returns true if the thread has been started
+and not stopped. Thus, if the <code>isAlive()</code> method returns
+<strong>false</strong> you know that the thread is either
+a "New Thread" or "Dead". If the <code>isAlive()</code> method returns
+<strong>true</strong>, you know that the thread is either "Runnable" or
+"Not Runnable". You cannot differentiate between a "New Thread" and a
+"Dead" thread; nor can you differentiate between a "Runnable" thread
+and a "Not Runnable" thread.
+</blockquote>
+
+<h4>See Also</h4>
+<blockquote>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Thread.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Thread.html>java.lang.Thread</a><br>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.IllegalThreadStateException.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.IllegalThreadStateException.html>java.lang.IllegalThreadStateException</a><br>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.ThreadDeath.html><img src=../../images/apiIcon.gif height=20 width=20 border=0></a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.ThreadDeath.html>java.lang.ThreadDeath</a><br>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="clock.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="priority.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Threads of Control</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

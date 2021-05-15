@@ -1,0 +1,204 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Putting It All Together</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="finally.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="declaring.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Putting It All Together
+</h2>
+<p>
+<blockquote>
+
+When all of the components are put togehter, the <code>writeList()</code>
+method will look like this:
+<blockquote>
+<pre>
+public void writeList() {
+    PrintStream pStr = null;
+
+    try {
+        int i;
+
+        System.err.println("Entering try statement");
+        pStr = new PrintStream(
+              new BufferedOutputStream(
+                 new FileOutputStream("OutFile.txt")));
+
+        for (i = 0; i < size; i++)
+            pStr.println("Value at: " + i + " = " + victor.elementAt(i));
+    } catch (ArrayIndexOutOfBoundsException e) {
+        System.err.println("Caught ArrayIndexOutOfBoundsException: " + e.getMessage());
+    } catch (IOException e) {
+        System.err.println("Caught IOException: " + e.getMessage());
+    } finally {
+        if (pStr != null) {
+            System.err.println("Closing PrintStream");
+            pStr.close();
+        } else {
+            System.err.println("PrintStream not open");
+        }
+    }
+}  
+</pre>
+</blockquote>
+This <code>try</code> block in this method has three different exit possibilities:
+<ol>
+<li>
+The <code>new FileOutputStream</code> statement fails and throws an IOException.
+<li>
+The <code>victor.elementAt(i)</code> statement fails and throws an ArrayIndexOutOfBoundsException.
+<li>
+Everything succeeds and the <code>try</code> statement exits normally.
+</ol>
+This page investigates in
+detail what happens in the <code>writeList()</code> method during
+each of those exit possibilities.
+
+<h4>Scenario 1: An IOException Occurs</h4>
+<blockquote>
+The <code>new FileOutputStream("OutFile.txt")</code> statement can fail for
+any number of reasons: the user doesn't have write permission on the file or
+directory, the file system is full, or the directory for the file doesn't exist.
+If any of these situations is true, then the constructor for FileOutputStream
+throws an IOException.
+<p>
+When the IOException is thrown, the runtime system immediately stops execution
+of the <code>try</code> block. Then the runtime system attempts to locate an
+exception handler appropriate for handling an IOException.
+<p>
+The runtime system immediately takes over and tries to locate
+an appropriate exception handler. The runtime system begins its search at
+the top of the method call stack. When the exception occurred, the FileOutputStream
+constructor was at the top of the call stack. However, the FileOutputStream
+constructor doesn't have an appropriate exception handler so the runtime system
+checks the next method in the method call stack--the <code>writeList()</code>
+method. The <code>writeList()</code> method has two exception handlers:
+one for ArrayIndexOutOfBoundsException and one for IOException.
+<p>
+The runtime system checks <code>writeList</code>'s handlers in the order that
+they appear following the <code>try</code> statement.
+The argument to the first exception handler is ArrayIndexOutOfBoundsException,
+but the exception that was thrown is an IOException. An IOException cannot legally
+be assigned to an ArrayIndexOutOfBoundsException, so the runtime system continues
+its search for an appropriate exception handler.
+<p>
+The argument to <code>writeList()</code>'s second exception handler is an
+IOException. The exception thrown by the FileOutputStream constructor
+is also an IOException and can be legally assigned to the handler's IOException
+argument. Thus, this handler is deemed appropriate and the runtime system
+executes this handler which prints this statement:
+<blockquote>
+<pre>
+Caught IOException: OutFile.txt
+</pre>
+</blockquote>
+<p>
+After the exception handler has run, the runtime system passes control to the
+<code>finally</code> block. In this particular scenario, the PrintStream never
+got opened, thus <code>pStr</code> is null and won't get closed.
+After the <code>finally</code> block has completed executing, the program
+continues with the first statement after the <code>finally</code> block.
+<p>
+The complete output that you will see from the ListOfNumbers program when an IOException
+is thrown is this:
+<blockquote>
+<pre>
+Entering try statement
+Caught IOException: OutFile.txt
+PrintStream not open
+</pre>
+</blockquote>
+
+</blockquote>
+
+<h4>Scenario 2: An ArrayIndexOutOfBoundsException Occurs</h4>
+<blockquote>
+This scenario is the same as the first except that a different error occurs
+during the <code>try</code> block. In this scenario, the argument passed to
+Vector's <code>elementAt()</code> method is out of bounds. That is, the
+argument is either less than 0 or is larger than the size of the array.
+(The way the code is written, this is actually impossible, but let's suppose
+a bug is introduced into the code when someone modifies it.)
+<p>
+Similar to scenario 1, when the exception occurs the runtime system stops
+execution of the <code>try</code> block and attempts to locate an exception
+handler suitable for an ArrayIndexOutOfBoundsException. The runtime system
+searches for an appropriate exception handler as it did before and comes
+upon the <code>catch</code> statement in the <code>writeList()</code> method
+that handles exceptions of the type ArrayIndexOutOfBoundsException and executes it.
+<p>
+After the exception handler has run, the runtime system passes control to the
+<code>finally</code> block. In this particular scenario, the PrintStream did get
+opened, thus the <code>finally</code> statement closes it.
+After the <code>finally</code> block has completed executing, the program
+continues with the first statement after the <code>finally</code> block.
+<p>
+The complete output that you will see from the ListOfNumbers program when an
+ArrayIndexOutOfBoundsException is thrown is this:
+<blockquote>
+<pre>
+Entering try statement
+Caught ArrayIndexOutOfBoundsException: 10 >= 10
+Closing PrintStream
+</pre>
+</blockquote>
+</blockquote>
+
+<h4>Scenario 3: The try block exits normally</h4>
+<blockquote>
+In this scenario, all the statements within the scope of the <code>try</code>
+block execute successfully and throw no exceptions. Execution falls off the
+end of the <code>try</code> block and then the runtime system passes control to
+the <code>finally</code> block. Since everything was successful, we know that
+the PrintStream is open when control reaches the <code>finally</code> block
+and must be closed.
+Again, after the <code>finally</code> block has completed executing, the program
+continues with the first statement after the <code>finally</code> block.
+<p>
+Thus, the output that you will see from the ListOfNumbers program when
+no exceptions are thrown is:
+<blockquote>
+<pre>
+Entering try statement
+Closing PrintStream
+</pre>
+</blockquote>
+
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="finally.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="declaring.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

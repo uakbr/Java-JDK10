@@ -1,0 +1,126 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Creating an Object</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="usingobject.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Java Objects</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Creating an Object
+</h2>
+<p>
+<blockquote>
+
+In Java, you create an object by creating an <em>instance of a class</em>
+or, in other words, <em>instantiating a class</em>. To create a new object,
+use Java's <code>new</code> operator plus a constructor for the type of
+object that you want to create.
+<blockquote>
+<pre>
+new <em>Constructor(...)</em>
+</pre>
+</blockquote>
+Constructors are special methods provided by every Java class allowing
+programmers to create and initialize objects of that type. If you are creating
+your own class and want more information about how to write constructors
+(rather than how to use them which is what we cover in this section),
+refer to <a href="../../MissingPage.html">Missing Page</a>.
+<p>
+Constructors have the same name as the class and, because Java supports method
+name overloading, a class can have any number of constructors. The constructors
+are differentiated from one another by the number and type of their arguments.
+For example, each of the following methods is a constructor for the class
+Rectangle in the java.awt package:
+<blockquote>
+<pre>
+public Rectangle() {
+    . . .
+}
+public Rectangle(int height, int width) {
+    . . .
+}
+public Rectangle(int x, int y, int height, int width) {
+    . . .
+}
+</pre>
+</blockquote>
+Typically, a constructor uses its arguments to initialize the new object's 
+state. So, the first constructor shown above initializes a new Rectangle
+to some reasonable default, the second constructor initializes
+the new Rectangle with the specified width and height, and so on.
+When creating an object, you would choose the constructor whose
+arguments best reflected how you wanted to initialize the new object.
+<p>
+Suppose that you were writing a drawing application and the user
+drew rectangle on the screen positioned at the origin that was 100 pixels
+wide by 50 pixels high. Your program would want to create an object in
+memory that represented this rectangle so that the user could continue to
+manipulate the rectangle.
+If you were using the Rectangle class from java.awt, you would first look
+at the list of constructors supported by the Rectangle class and choose the
+one that best suited your needs. Since you know the dimensions and position
+of the Rectangle in advance, it's probably most convenient
+to use the following Rectangle constructor which allows you to initialize the
+Rectangle with an x, y origin and a width and height directly from integer
+values.
+<blockquote>
+<pre>
+public Rectangle(int x, int y, int width, int height)
+</pre>
+</blockquote>
+Thus, you would create the rectangle with this Java statement:
+<blockquote>
+<pre>
+new Rectangle(0, 0, 100, 50);
+</pre>
+</blockquote>
+This statement creates a new object of the type Rectangle (allocates ample
+memory for it on the heap), does some primitive initialization (zeros out
+all of the object's variables), and then calls the indicated constructor
+to perform more personalized initialization on the object (initialize the
+origin and dimenstions to those specified in the constructor's arguments).
+<p>
+The <code>new</code> operator returns a reference to the newly created object.
+Typically, you will want to assign the return value of the <code>new</code>
+operator to a variable so that you can use the object later. The variable
+must be of the same type as the object or one of its superclasses.
+<blockquote>
+<pre>
+Rectangle rect = new Rectangle(0, 0, 100, 50);
+</pre>
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="usingobject.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="TOC.html"><strong><em>Table of Contents</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

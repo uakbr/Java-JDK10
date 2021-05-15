@@ -1,0 +1,80 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Threads in Applets: Examples</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="threads.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="security.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Threads in Applets: Examples
+</h2>
+<p>
+<blockquote>
+
+This page points to two pages with thread-using applets.
+One applet (Good) performs computation-intensive initialization
+in a separate thread.
+The other (Bad) performs the same initialization
+directly in its <code>init()</code> method.
+<p>
+
+The exact results of these applets' execution 
+depend on the browser that contains the applets.
+However, these applets are likely to demonstrate clearly
+the following rule:
+<strong>
+Whenever an applet performs a lengthy operation,
+it should use a separate thread 
+(which it creates)
+to perform the operation.
+</strong>
+<p>
+
+To compare these applets' execution,
+follow these steps:
+<ol>
+<li> Bring up a new browser window
+     (such as by cloning this page
+     or starting up another browser process).
+<li> From one browser window, 
+     <a href=threadExampleGood.html>view the page that has the Good applet.</a>
+<li> From the other browser window,
+     <a href=threadExampleBad.html>view the page that has the Bad applet.</a>
+</ul>
+
+<!--Try this-->
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="threads.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="security.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

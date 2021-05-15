@@ -1,0 +1,98 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The try Block</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="handling.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="catch.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The try Block
+</h2>
+<p>
+<blockquote>
+
+The first step in constructing an exception handler is to enclose the
+statements that might throw an exception within a <code>try</code> block.
+In general, a <code>try</code> block looks like this:
+<blockquote>
+<pre>
+try {
+    <em>Java statements</em>
+}
+</pre>
+</blockquote>
+The segment of code labelled <em>Java statements</em> is composed of one
+or more legal Java statements that could potentially throw an exception.
+<p>
+To construct an exception handler for the <code>writeList()</code>
+method from the ListOfNumbers class, you need to enclose the exception-throwing
+statements of the <code>writeList()</code> method within a <code>try</code> block.
+There is more than one way to accomplish this task: you could put each statement
+that might potentially throw an exception within its own <code>try</code> statement,
+and provide separate exception handlers for each <code>try</code>.
+Or you could put all of the <code>writeList()</code> statements within a
+single <code>try</code> statement and associate multiple handlers with it.
+The following listing uses one <code>try</code> statement for the entire
+method because the code tends to be easier to read.
+<blockquote>
+<pre>
+PrintStream pstr;
+
+<strong>try {</strong>
+    int i;
+
+    System.err.println("Entering try statement");
+    pStr = new PrintStream(
+              new BufferedOutputStream(
+	         new FileOutputStream("OutFile.txt")));
+
+    for (i = 0; i < size; i++)
+        pStr.println("Value at: " + i + " = " + victor.elementAt(i));
+<strong>}</strong>
+</pre>
+</blockquote>
+The <code>try</code> statement is said to <em>govern</em> the statements
+enclosed within it and defines the scope of any exceptions handlers
+(established by subsequent <code>catch</code> blocks) associated with it.
+In other words, if an exception occurs within the <code>try</code> statement,
+that exception is handled by the appropriate exception handler associated
+with this <code>try</code> statement.
+
+<p>
+A <code>try</code> statement <em>must</em> be accompanied either by one or
+more <code>catch</code> blocks, or one <code>finally</code> block.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="handling.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="catch.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Handling Errors using Exceptions</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>The Runtime Object</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="misc.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=bottom border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Using System Resources</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Runtime Object
+</h2>
+<p>
+<blockquote>
+ 
+<center><img src="images/details.trans.gif" width=492 height=347></center>
+<p>
+At the core of the Java runtime environment is the Java virtual machine,
+the Java interpreter and the host operating system.
+<p>
+The oval labelled <strong>Runtime</strong> in the diagram is an instance of the
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Runtime.html>Runtime</a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.Runtime.html><img src=../../images/apiIcon.gif width=20 height=20 border=0></a>
+class (a member of the
+<a href=http://java.sun.com/JDK-beta/api/java.lang.html>java.lang</a>
+<a href=http://java.sun.com/JDK-beta/api/java.lang.html><img src=../../images/apiIcon.gif width=20 height=20 border=0></a>
+package) and represents the "current runtime environment" which could be anything
+from Sun's implementation of the Java Virtual Machine and interpreter running
+on Solaris to ACME Company's implementation of the Virtual Machine
+and interpreter running on the ACME toaster.
+<p>
+Runtime objects provide two services. First, they communicate with the components
+of the runtime environment--getting information and invoking functions. Second,
+Runtime objects are also the interface to system-dependent capabilities. For example,
+UNIX runtime objects might support the <code>getenv()</code> and <code>setenv()</code>
+functions. Other runtime objects, such as MacOS, may not support <code>getenv()</code>
+and <code>setenv()</code> because the host operating system doesn't.
+<p>
+Because the Runtime class is tightly integrated with the implementation of the
+Java interpreter, the Java Virtual Machine and the host operating system, it is
+system dependent. If objects in your program message the Runtime object directly,
+your program is likely to be system dependent and require modifications before
+being able to run on other systems.
+<p>
+Even though different systems provide different ways for doing things, there is some
+overlap and commonality in the services that they provide.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="misc.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/toolHeader.gif width=26 height=26 align=top border=0 alt="The Java Development Environment | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Using System Resources</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

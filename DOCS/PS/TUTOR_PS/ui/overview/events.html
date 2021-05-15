@@ -1,0 +1,198 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Event Handling</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="drawing.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../layout/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of the Java UI</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Event Handling
+</h2>
+<p>
+<blockquote>
+
+When the user acts on a Component -- 
+clicking it or pressing the Return key, for example --
+an Event object is created.
+The AWT event-handling system
+passes the Event up the Component hierarchy,
+giving each Component a chance to react to the event
+before the window system fully processes it.
+Each Component's event handler can either ignore an event
+or react to it in any of the following ways:
+<ul>
+<li> by modifying the Event instance before it goes further up the hierarchy --
+     for example, a TextField subclass that displays all letters in uppercase
+     might react to the keypress of a lowercase letter 
+     by changing the Event to contain the uppercase version of the letter
+<li> by reacting in some other way to the event --
+     for example, a TextField subclass (or a TextField's Container)
+     could react to a Return keypress 
+     by calling a method that processes the text field's contents
+<li> by stopping the event from being processed further --
+     for example, if an invalid character is entered in a text field,
+     an event handler could simply stop the Event 
+     from being processed any further
+</ul>
+<p>
+
+From a Component's view, the AWT event-handling system is 
+more like an event-<em>filtering</em> system.
+Window-system-dependent code generates an event,
+but Components get a chance to modify, react to, or destroy
+the event
+before the window-system-dependent code fully processes the event.
+[CHECK -- is this the best, most correct way of saying this?]
+The following [NON-EXISTENT] figure shows the chain of event handling
+for a TextField event in the 
+<a href=example/Converter.java>example program.</a>
+<p>
+<!--img get Tom's figure-->
+
+<strong>Note:</strong>
+In the current release, 
+mouse events are forwarded to Components
+<em>after</em> the window-system-dependent code has fully processed the event.
+So although Components can intercept all <em>keyboard</em> events,
+they can't currently intercept <em>mouse</em> events.
+<p>
+
+
+
+<h4>The Event Object</h4>
+<blockquote>
+Each event results in the creation of an 
+<a href="http://java.sun.com/JDK-1.0/api/java.awt.Event.html">Event</a><a href="http://java.sun.com/JDK-1.0/api/java.awt.Event.html"><img src="../../images/apiIcon.gif" width=20 height=20 border=0 alt="(in the API reference documentation)"></a>
+object.
+An Event object includes the following information:
+<ul>
+<li> The type of the event -- for example,
+     a key press or mouse click, 
+     or a more abstract event such as an "action" or window iconification.
+     
+<li> The object that was the "target" of the event -- for example,
+     the Button corresponding to the onscreen button the user clicked,
+     or the TextField corresponding to the field that user just typed in.
+
+<li> A timestamp indicating when the event occurred.
+
+<li> The location (x,y) where the event occurred.
+
+<li> The key that was pressed (for keyboard events).
+
+<li> An arbitrary argument (such as the string displayed on the Component)
+     associated with the Event.
+
+<li> The state of the modifier keys when the event occurred.
+</ul>
+</blockquote>
+
+<h4>How to Implement an Event Handler</h4>
+<blockquote>
+Components can respond to events by implementing the
+<code><a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#handleEvent(java.awt.Event)>handleEvent()</a></code>
+method or by
+implementing a method that's
+specific to one type of event.
+The latter works because the default (Component)
+definition of the <code>handleEvent()</code> method
+simply calls a method that's specific to the event type.
+These event-specific methods are
+<code><a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#mouseEnter>mouseEnter()</a>,
+<a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#mouseExit>mouseExit()</a>,
+<a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#mouseMove>mouseMove()</a>,
+<a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#mouseUp>mouseUp()</a>,
+<a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#mouseDown>mouseDown()</a>,
+<a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#mouseDrag>mouseDrag()</a>,
+<a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#keyDown>keyDown()</a>, </code>
+and
+<code><a href=http://java.sun.com/JDK-1.0/api/java.awt.Component.html#action>action()</a>.</code>
+<p>
+
+<strong>Important:</strong>
+All event handler methods must execute quickly!
+Otherwise, they'll destroy the perceived performance of your program.
+If you need to perform some lengthy operation as the result of
+an event,
+do it by starting up another thread 
+(or sending a request to another thread)
+to perform the operation.
+For help on using threads,
+see
+<a href="../../java/threads/index.html">Threads of Control</a><a href="../../java/threads/index.html"><img src="../../images/javaIcon.gif" width=20 height=20 border=0 alt="(in the Writing Java Programs trail)"></a>
+<p>
+
+In the example program,
+all the event handling is performed by ConversionPanels.
+They use the <code>handleEvent()</code> method 
+to catch events resulting from user actions
+on the slider (Scrollbar),
+text field (TextField),
+and pop-up list (Choice).
+<p>
+
+Here is the ConversionPanel implementation of the 
+<code>handleEvent()</code> method:
+<blockquote>
+<pre>
+public boolean handleEvent(Event e) {
+    if (e.target instanceof Scrollbar) {
+        textField.setText(String.valueOf(slider.getValue()));
+        controller.convert(this);
+    } else if ((e.target instanceof TextField) 
+    	       && (e.id == Event.ACTION_EVENT)) {
+        setSliderValue(getValue());
+        controller.convert(this);
+    } else if ((e.target instanceof Choice)
+    	       && (e.id == Event.ACTION_EVENT)) {
+        controller.convert(this);
+    } 
+    return false;
+}
+</pre>
+</blockquote>
+
+The method simply makes sure
+that the ConversionPanel's slider and text field both show the same value,
+and then asks the Converter object to update the other ConversionPanel.
+The method always returns <code>false</code>
+so that the event will be fully processed.
+We would return <code>true</code>
+if we wanted to stop the event from being processed further.
+<p>
+
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="drawing.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../layout/index.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of the Java UI</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!--NewPage-->
+<html>
+<head>
+<title>The Life Cycle of an Applet</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="appletMethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    The Life Cycle of an Applet
+</h2>
+<p>
+<blockquote>
+
+
+
+<a name="output">
+<!--FILE BUG; THIS DOESN'T WORK when put around the APP tag; SHOULDN'T IT?-->
+Below (if you're running a Java-compatible browser)
+is the Simple applet.
+</a>
+<p>
+
+<applet code="Simple.class" codebase=betaclasses width=500 height=20>
+<APP class=Simple width=500 height=20>
+</applet>
+<p>
+
+<a name="loading"><h4>Loading the Applet</h4></a>
+<blockquote>
+You should see "initializing... starting..." above,
+as the result of the applet being loaded.
+When an applet is loaded,
+here's what happens:
+<ul>
+<li> An instance of the applet's controlling class is created.
+<li> The applet <b>initializes</b> itself.
+<li> The applet <b>starts</b> running.
+</ul>
+
+</blockquote>
+
+<a name="leaving"><h4>Leaving and Returning to the Applet's Page</h4></a>
+<blockquote>
+When the user leaves the page
+-- for example, to go to another page --
+the applet has the option of <b>stopping</b> itself.
+When the user returns to the page,
+the applet can <b>start</b> itself again.
+The same thing happens when the user iconifies
+the browser window that contains the applet.
+
+<p>
+
+<strong>Try this:</strong>
+Leave and then return to this page.
+You'll see "stopping..." added to the
+<a href="#output">applet output above</a>,
+as the applet is given the chance to stop itself.
+You'll also see "starting...",
+when the applet is told to start itself again.
+<p>
+
+<strong>Try this:</strong>
+Iconify this window.
+Most window systems provide a button in the title bar
+that lets you do this.
+(Other terms used instead of "iconify" are "miniaturize" or "close".)
+You should see "stopping..." and then "starting..."
+added to the 
+<a href="#output">applet output above</a>.
+</blockquote>
+
+<a name="reloading"><h4>Reloading the Applet</h4></a>
+<blockquote>
+Some browsers let the user reload applets,
+which consists of unloading the applet and then loading it again.
+Before an applet is unloaded, 
+it's given the chance to <b>stop</b> itself
+and then to perform a <b>final cleanup</b>,
+so that the applet can release any resources it holds.
+After that, the applet is unloaded
+and then loaded as described in
+<a href="#loading"><b>Loading the Applet</b></a>,
+above.
+<p>
+
+<strong>Try this:</strong>
+If you're using the HotJava browser,
+look at the 
+<a href="_stdout.html">standard output</a>
+to see what happens when you reload this page.
+You should see "stopping..." and "preparing for unloading..."
+when the applet is unloaded.
+(You can't see this in the applet above
+because the applet is unloaded before the text can be displayed.)
+When the applet is reloaded,
+you should see "initializing..." and "starting...",
+just like when you loaded the applet for the first time.
+<em>(It appears that the 1.0beta3 Netscape browser reloads the applet
+only if its reloaded page has changed. 
+If the page hasn't changed, 
+the browser appears to act as if you temporarily left the page.)</em>
+</blockquote>
+
+<a name="quitting"><h4>Quitting the Browser</h4></a>
+<blockquote>
+When the user quits the browser 
+(or whatever application is displaying the applet),
+the applet has the chance to <b>stop</b> itself and do <b>final cleanup</b>
+before the browser exits.
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="appletMethods.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/appletHeader.gif width=26 height=26 align=top border=0 alt="Writing Applets | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Overview of Applets</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

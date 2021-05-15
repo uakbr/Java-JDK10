@@ -1,0 +1,96 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Defining a Class</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="main.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=bottom border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Defining a Class
+</h2>
+<p>
+<blockquote>
+
+<blockquote>
+<pre>
+import java.util.Date;
+<strong>class DateApp {</strong>
+    public static void main(String args[]) {
+        Date today = new Date();
+        System.out.println(today);
+    }
+<strong>}</strong>
+</pre>
+</blockquote>
+
+The bold line in the <code>DateApp</code> application listing above
+begins a <em>class definition block</em>. A class--the basic
+building block of an object-oriented language such as the
+Java language--is a template that describes the data and behaviour
+associated with <em>instances</em> of that class. When you
+<em>instantiate</em> a class you create an object that will
+look and feel like other instances of the same class.
+The data associated with a class or object are called <em>variables</em>;
+the behaviour associated with class or object are called <em>methods</em>.
+<p>
+Julia Child's recipe for rack of lamb is a real-world example of a class.
+Her rendition of the rack of lamb is one instance of the recipe,
+and mine is quite another. (While both racks of lamb may "look and feel"
+the same, I imagine that they "smell and taste" differently.)
+<p>
+A more traditional example of a class from the world of programming is
+a class that represents a rectangle. The class would contain variables
+for the origin of the rectangle, and its width and height. The class would
+also contain a method that calculates the area of the rectangle.
+An instance of the rectangle class would contain the information for a specific
+rectangle: like the dimensions of the floor of your office, or
+the dimensions of the window you are using to view this page.
+<p>
+In the Java language, the general form of a class definition is
+<blockquote>
+<pre>
+class <em>name</em> {
+    . . .
+}
+</pre>
+</blockquote>
+where the keyword <code>class</code> begins the class definition for a
+class named <code>name</code>. The variables and methods of the class are
+embraced by the curly brackets that begin and end the class definition block. 
+<code>DateApp</code> has no variables and has a single
+method named <code>main()</code>.
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="index.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="main.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/javaHeader.gif width=26 height=26 align=top border=0 alt="Writing Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>The Anatomy of a Java Application</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

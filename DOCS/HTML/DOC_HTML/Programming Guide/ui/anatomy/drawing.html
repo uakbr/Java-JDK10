@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>Drawing</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="events.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=bottom border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Drawing
+</h2>
+<p>
+<blockquote>
+
+When a Java program with a Graphical UI needs to draw itself --
+whether for the first time,
+or in response to becoming unhidden [wc?],
+or because its appearance needs to change to reflect something happening
+inside the program --
+it starts with the top Component in the hierarchy
+and works its way down to the bottom-most Components.
+[true?  couldn't you draw a subset of the hierarchy?]
+This is all orchestrated by the AWT drawing system.
+<p>
+
+When the Converter application draws itself,
+here's what happens:
+<ol>
+<li> The Frame draws itself.
+<li> The Converter object draws itself,
+     drawing a box around its area.
+<li> One of the two ConversionPanels draws itself,
+     drawing a box around its area.
+<br>
+<strong>Note:</strong>
+You can't rely on the order 
+that two Components at the same level
+will be drawn in.
+For example, you can't rely on the metric panel
+being drawn before the U.S. one.
+Similarly, you can't rely on the order of drawing two Components
+at <em>different</em> levels 
+if the lower Component isn't contained in the higher Component.
+[I just guessed this stuff.  Make sure it's correct!]
+<li> The contents of the ConversionPanel --
+     the Label, Panel, and Choice -- draw themselves.
+<!-- ACK!!! REWRITE!!! -->
+</ol>
+
+In this way, each Component draws itself
+before any of the Components it contains.
+This ensures that a Panel's background, for example, 
+is visible only where it isn't covered by one of the Components it contains.
+<!-- example program with different backgrounds? -->
+
+
+<h4>How Drawing Requests Occur</h4>
+<blockquote>
+
+Programs can draw only when the AWT tells them to.
+The reason is that each occurrence of a Component drawing itself
+must execute without interruption.
+Otherwise, unpredictable results could occur,
+such as a Button being drawn halfway,
+and then being interrupted by some lengthy animation.
+<!-- NEED A BETTER EXAMPLE! -->
+The AWT orders drawing requests by making them run in a single thread.
+A program can, however, request that the AWT schedule them for drawing.
+<p>
+
+The AWT requests that a Component draw itself
+by invoking the Component's
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component#update>update()</a> method.
+<a name=update>The Component implementation of the update() method</a>
+simply clears the Component's background
+(drawing a rectangle over the whole Component
+in the Component's background color)
+and then calling the Component's 
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Component#paint>paint()</a> method.
+The default implementation of the paint() method does nothing.
+<p>
+
+</blockquote>
+
+
+<h4>The Graphics Object</h4>
+<blockquote>
+
+The only argument to the paint() and update() methods is a
+<a href=http://java.sun.com/JDK-beta/api/java.awt.Graphics.html>Graphics</a> object
+that represents the context
+in which the Component can perform its drawing.
+Each Graphics object includes the following information:
+
+The Graphics class provides methods for the following:
+<ul>
+<li> Drawing and filling 
+     rectangles, arcs, lines, ovals, polygons, text, and images.
+<li> Getting or setting the current color, font, or clipping area.
+<li> Setting the paint mode.
+</ul>
+</blockquote>
+
+<h4>How to Draw</h4>
+<blockquote>
+
+The simplest way for a Component to draw itself
+is to put drawing code in its paint() method.
+This means that when the AWT makes a drawing request
+(by calling the Component's update() method, 
+which is implemented as described
+<a href=#update>above</a>),
+the Component's entire area is cleared
+and then its paint() method is called.
+For programs that don't repaint themselves often,
+the performance of this scheme is fine.
+<p>
+
+Below is an example of an implementation of the paint() method.
+Both the Converter and ConversionPanel classes 
+draw a box around their area using this code.
+(Both classes also implement an insets() method
+that specifies the padding around the panel's contents.
+If they didn't have this method, 
+the box drawn in the paint() method
+would overlap the external boundaries
+of the panel's contents.)
+<blockquote>
+<pre>
+public void paint(Graphics g) {
+    Dimension d = size();
+    g.drawRect(0,0, d.width - 1, d.height - 1);
+}
+</pre>
+</blockquote>
+
+Programs that repaint themselves often
+can use two techniques to improve their performance:
+implementing both update() and paint()
+and using double-buffering.
+These techniques are discussed [nowhere yet].
+
+</blockquote>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="events.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="../end.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/uiHeader.gif width=26 height=26 align=top border=0 alt="Creating a User Interface | "></a>
+<td>
+<td align=right>
+<a href="index.html"><strong><em>Anatomy of a Program with a Graphical UI</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!--NewPage-->
+<html>
+<head>
+<title>Step 5: Write the C Function</title>
+</head>
+<body>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step4.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=bottom border=0 alt="Previous | "></a><a
+href="step6.html"><img src=../../images/NextArrow.gif width=26 height=26 align=bottom border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=bottom border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=bottom border=0 alt="Integrating Native Methods into Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+<p>
+<hr size=4>
+
+<h2>
+    Step 5: Write the C Function
+</h2>
+<p>
+<blockquote>
+
+Now, you can finally get down to the business of writing
+the implementation for the native method in C.
+<p>
+The function that you write must have the same function signature as the
+one you generated with <code>javah</code> into the <code>HelloWorld.h</code> file
+in <a href="step3.html">Step 3: Create the .h File</a>.
+The function signature generated for the <code>HelloWorld</code> class's 
+<code>displayHelloWorld()</code> native method looks like this:
+<blockquote>
+<pre>
+extern void HelloWorld_displayHelloWorld(struct HHelloWorld *);
+</pre>
+</blockquote>
+Here's our implementation for <code>HelloWorld_displayHelloWorld()</code>
+which can be found in the file named <a href="example/HelloWorldImp.c"><code>HelloWorldImp.c</code></a>.
+<blockquote>
+<pre>
+#include &lt;StubPreamble.h&gt;
+#include &quot;HelloWorld.h&quot;
+#include &lt;stdio.h&gt;
+
+void HelloWorld_displayHelloWorld(struct HHelloWorld *this) {
+    printf(&quot;Hello World!\n&quot;);
+    return;
+}
+</pre>
+</blockquote>
+As you can see, the implementation for <code>HelloWorld_displayHelloWorld()</code>
+is straightforward: the function uses the <code>printf()</code> function to
+display the string "Hello World!" and then returns.
+<p>
+This file includes 3 C header files:
+<ul>
+<li>
+<code>StubPreamble.h</code> which provides enough information
+to the C code to interact with the Java runtime system.
+When writing native methods, you must always include this file
+in your C source files.
+<li>
+The <code>.h</code> file that you generated in
+<a href="step3.html">Step 3: Create the .h File</a>.
+This file contains the C structure that represents the Java class for
+which we are writing the native method and the function definition
+for the native method you are writing in this step.
+<li>
+The code snippet above also includes <code>stdio.h</code> because
+it uses the <code>printf()</code> function.
+</ul>
+
+</blockquote>
+<p>
+<hr size=4>
+<p>
+<table width=100%>
+<tr>
+<td align=left>
+<a href="step4.html"><img src=../../images/PreviousArrow.gif width=26 height=26 align=top border=0 alt="Previous | "></a><a
+href="step6.html"><img src=../../images/NextArrow.gif width=26 height=26 align=top border=0 alt="Next | "></a><a
+href="../../index.html"><img src=../../images/WayUpArrow.gif width=26 height=26 align=top border=0 alt="Trail Map | "></a><a
+href="../index.html"><img src=../../images/nativeHeader.gif width=26 height=26 align=top border=0 alt="Integrating Native Methods into Java Programs | "></a>
+</td>
+<td align=right>
+<a href="index.html"><strong><em>Step By Step</em></strong></a>
+</td>
+</tr>
+</table>
+</body>
+</html>

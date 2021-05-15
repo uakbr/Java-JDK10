@@ -1,0 +1,35 @@
+<Html>
+<Head>
+<Title>Standard Output</Title>
+</Head>
+
+<Body>
+<PRE><A Href="index.html">Return to Lesson</A>
+</PRE>
+<HR>
+
+<H1>Platform-Specific Details:
+    Changing the Mailcap Specification of "plain/text"</H1>
+
+UNIX:
+<P>
+Generally, per-user configuration of mailcap is done
+in a file named <samp>~/.mailcap</samp>.
+If you have no such file, contact your system administrator
+to find out where your mailcap information is.
+<ol>
+<li> In your mailcap file,
+     find the line beginning with "text/plain".
+     For example:
+<pre>text/plain; /usr/openwin/bin/textedit %s </pre>
+<li> Comment out the line (using the '#' character) or delete it.
+     For example:
+<pre>#text/plain; /usr/openwin/bin/textedit %s </pre>
+</ol>
+
+<HR>
+<PRE><A Href="index.html">Return to Lesson</A>
+</PRE>
+
+</Body>
+</Html>
