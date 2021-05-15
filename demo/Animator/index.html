@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>The Animator Applet</title>
+</head>
+
+<body>
+<h1>The Animator Applet - beta version</h1>
+The Animator applet is a general purpose animation tool.
+It has these features:
+<ul>
+<li> you can specify an order to the frames, which lets you reuse them
+<li> you can specify whether the animation repeats
+<li> you can specify a soundtrack
+<li> you can specify sounds to be played with individual frames 
+<li> you can specify the amount of time to pause between frames
+     (both on the animation as a whole and on individual frames)
+<li> you can specify a startup image to display while loading
+<li> you can specify a background image upon which to display the
+     animation
+<li> you can specify a position at which to display each frame
+</ul>
+
+Please try out the Animator applet for your own animations
+and let us know what you think.
+
+Here's the <a href="Animator.java">source code</a>.  You can
+save it by bringing up the View Source window for it, and clicking the
+Save button.  Then just compile it and try it out.
+
+<p>
+
+<strong>Note:</strong>
+You can't compile this applet under 1.0Alpha2 -- only under 1.0beta.
+<p>
+
+The Animator applet isn't finished -- 
+we plan to add more features --
+but we'd appreciate your suggestions.
+Send bug reports and feature requests to
+<a href="mailto:java@java.sun.com">java@java.sun.com</a>.
+<p>
+
+<h2>
+Tag Syntax
+</h2>
+
+<pre>
+&lt;APP CLASS="Animator"
+     IMAGESOURCE="aDirectory"       -- the directory that has the animation
+				       frames (a series of pictures in GIF
+				       format, named T1.gif, T2.gif, ...)
+     STARTUP="aFile"		    -- an image to display at load time
+     BACKGROUND="aFile"		    -- an image to paint the frames against
+     STARTIMAGE="aNumber"	    -- number of the starting frame (1..n)
+     ENDIMAGE="aNumber" 	    -- number of the end frame (1..n)
+     PAUSE="100"	  	    -- milliseconds to pause between images
+				       default - can be overriden by PAUSES)
+     PAUSES="300|200||400|200||100" -- millisecond delay per frame.  Blank
+				       uses default PAUSE value
+     REPEAT="true"	            -- repeat the sequence?
+     POSITIONS="100@200||200@100||200@200|100@100|105@105"
+				    -- positions (X@Y) for each frame.  Blank
+				       means use previous frame's position
+     IMAGES="3|3|2|1|2|3|17"        -- explicit order for frames - see below
+     SOUNDSOURCE="aDirectory"       -- the directory that has the audio files
+     SOUNDTRACK="aFile"		    -- an audio file to play throughout
+     SOUNDS="aFile.au|||||bFile.au" -- audio files keyed to individual frames
+&gt;
+</pre>
+
+<h3>
+The IMAGES, STARTIMAGE, and ENDIMAGE parameters
+</h3>
+
+You can specify either an IMAGES list or a STARTIMAGE/ENDIMAGE range,
+but not both.  The IMAGES list is a string of frame numbers in the
+order in which you wish them to display, separated by vertical bars.
+
+<p>
+
+STARTIMAGE and ENDIMAGE let you specify a range of images.  Specifying
+an ENDIMAGE that is numerically less than the STARTIMAGE will display
+the images in reverse order.  Both parameters have default values of
+1, so specifying only STARTIMAGE="15" means "play the frames in
+reverse order from 15 to 1."  Saying only ENDIMAGE="13" means "play
+the frames from 1 to 13."  Of course, you can use both STARTIMAGE and
+ENDIMAGE together.
+
+<p>
+	
+<hr>
+<ADDRESS>
+Herb Jellinek | <a href="mailto:jellinek@eng.sun.com">jellinek@eng.sun.com</a>
+</ADDRESS>
+</body>
+</html>

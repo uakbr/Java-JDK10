@@ -1,0 +1,243 @@
+                 README: The Java Developers Kit
+
+
+This 1.0 release of the Java Developers Kit (JDK) lets you
+write applets that conform to the 1.0 Java applet API.  
+
+
+The JDK helps you to:
+---------------------
+	- Develop applets that conform to the final applet API
+	- Create applets that run in all Java-enabled browsers
+	- Develop Java applications
+	- Experiment with the debugger API (and a prototype
+	  command-line debugger)
+ 
+
+Supported platforms
+-------------------
+The JDK is available for SPARC Solaris, Windows NT, and Windows 95.
+  
+
+The JDK contains:
+-----------------
+	- classes.zip
+		DO NOT UNZIP THIS FILE!  It is needed by the compiler and
+		interpreter.
+
+	- src.zip
+                This is a set of source files that may be unzipped if
+                desired.  You can get a free copy of the correct version
+                of unzip from ftp://ftp.uu.net/pub/archiving/zip/WIN32 .
+
+	- Java Applet Viewer, 
+	  	 for testing and running applets
+
+	- Java Debugger API and Prototype Debugger,
+	         an API (java.tools.debug) and early prototype
+	         of a command-line debugger that uses the API
+
+	- Java Compiler
+
+	- Java Interpreter
+		
+NOTE: This release does NOT include a Web browser. 
+
+
+What is the final applet API?
+------------------------------
+The final applet API consists of the following packages:  java.lang,
+java.util, java.io, java.net, java.awt, java.awt.peer, java.awt.image,
+and java.applet.  We and our partners are committed to supporting
+this API.
+
+
+----------------------------------------------------------------------
+IMPORTANT: Please make sure you understand the Copyright and License
+information (in the file named COPYRIGHT) before using this release.
+----------------------------------------------------------------------
+
+
+The rest of this document has the following sections:
+
+- Where to find more information
+- Running applets with the Applet Viewer
+- The APPLET tag
+- Debugging programs with JDB
+
+
+Where to find more information
+------------------------------
+This file is the only documentation included in this release.  The
+rest of the information you need is on our website:
+
+	http://java.sun.com/JDK-1.0/
+
+It includes the following:
+
+- Frequently asked questions
+- Changes since the last release
+- Applet examples (some of which are in this release, as well)
+- API documentation 
+- Documentation for the Java programming tools (including java,
+  javac, and jdb)
+- The latest Java Language Specification 
+- Known bugs in the JDK 
+
+If you have questions, problems, or comments:
+
+1. Check out the FAQ at:
+
+	http://java.sun.com/JDK-1.0/faq.html
+
+2. Before filing a bug report, please check the known bugs at:
+
+	http://java.sun.com/JDK-1.0/KnownBugs-JDK.html
+
+   File bug reports following the instructions at:
+
+	http://java.sun.com/GettingInTouch/BugReport.html
+
+3. The newsgroup comp.lang.java and the Java/HotJava mailing lists 
+   are active forums for posting questions and exchanging information 
+   with other Java users.  See http://java.sun.com/mail.html for 
+   information on accessing the newsgroup and mailing lists.
+
+4. Other questions can be sent to java@java.sun.com.
+
+
+Running applets with the Applet Viewer
+--------------------------------------
+Here are two examples of using the Applet Viewer:
+
+  bin/appletviewer demo/GraphLayout/example1.html
+  bin/appletviewer http://java.sun.com/applets/applets/NervousText/example1.html 
+  (On the PC, use "bin\appletviewer" instead of "bin/appletviewer".)
+
+The argument is a filename or URL that refers to an HTML file that
+contains one or more APPLET tags.  The Applet Viewer finds the APPLET
+tags in the HTML file and runs the applets as specified by the tags
+(in separate windows).
+
+
+The APPLET tag
+--------------
+The APP tag of previous releases is gone, replaced by the APPLET tag. 
+Here is an example of a simple APPLET tag:
+
+  <applet code="MyApplet.class" width=100 height=140></applet>
+
+This tells the viewer or browser to load the applet whose compiled
+code is in MyApplet.class (in the same directory as the current HTML
+document), and to set the initial size of the applet to 100 pixels
+wide and 140 pixels high.
+
+Here's a more complex example of an APPLET tag:
+
+  <applet codebase="http://java.sun.com/applets/applets/NervousText"
+	code="NervousText.class" width=400 height=75 align=center >
+  <param name="text" value="This is the Applet Viewer.">
+  <blockquote>
+  <hr>
+  If you were using a Java-enabled browser,
+  you would see dancing text instead of this paragraph.
+  <hr>
+  </blockquote>
+  </applet>
+
+This tells the viewer or browser to load the applet whose compiled
+code is at the URL
+http://java.sun.com/applets/applets/NervousText/NervousText.class,
+to set the initial size of the applet to 400x75 pixels, and to align
+the applet in the center of the line.  The viewer/browser must also
+set the applet's "text" attribute (which customizes the text this
+applet displays) to be "This is the Applet Viewer."  If the page is
+viewed by a browser that can't execute Java applets, then the browser
+will ignore the APPLET and PARAM tags, displaying the HTML between
+the <blockquote> and </blockquote> tags.  Java-enabled browsers
+*ignore* that HTML.
+
+Here's the complete syntax for the APPLET tag:
+
+    '<' 'APPLET'
+        ['CODEBASE' '=' codebaseURL]
+        'CODE' '=' appletFile
+	['ALT' '=' alternateText]
+	['NAME' '=' appletInstanceName]
+	'WIDTH' '=' pixels 'HEIGHT' '=' pixels
+	['ALIGN' '=' alignment]
+	['VSPACE' '=' pixels] ['HSPACE' '=' pixels]
+    '>'
+    ['<' 'PARAM' 'NAME' '=' appletAttribute1 'VALUE' '=' value '>']
+    ['<' 'PARAM' 'NAME' '=' appletAttribute2 'VALUE' '=' value '>']
+    . . .
+    [alternateHTML]
+    '</APPLET>'
+
+'CODEBASE' '=' codebaseURL
+    This optional attribute specifies the base URL of the applet --
+    the directory that contains the applet's code.  If this attribute
+    is not specified, then the document's URL is used.
+
+'CODE' '=' appletFile
+    This required attribute gives the name of the file that contains
+    the applet's compiled Applet subclass.  This file is relative to
+    the base URL of the applet.  It cannot be absolute.
+    
+'ALT' '=' alternateText
+    This optional attribute specifies any text that should be
+    displayed if the browser understands the APPLET tag but can't
+    run Java applets.
+
+'NAME' '=' appletInstanceName
+    This optional attribute specifies a name for the applet instance,
+    which makes it possible for applets on the same page to find (and
+    communicate with) each other.
+
+'WIDTH' '=' pixels 'HEIGHT' '=' pixels
+    These required attributes give the initial width and height (in
+    pixels) of the applet display area, not counting any windows or
+    dialogs that the applet brings up.  
+
+'ALIGN' '=' alignment
+    This required attribute specifies the alignment of the applet.
+    The possible values of this attribute are the same as those for
+    the IMG tag: left, right, top, texttop, middle, absmiddle,
+    baseline, bottom, absbottom.
+
+'VSPACE' '=' pixels 'HSPACE' '=' pixels
+    These option attributes specify the number of pixels above and
+    below the applet (VSPACE) and on each side of the applet (HSPACE).
+    They're treated the same way as the IMG tag's VSPACE and HSPACE
+    attributes.
+
+'<' 'PARAM' 'NAME' '=' appletAttribute1 'VALUE' '=' value '>' . . .
+    This tag is the only way to specify an applet-specific attribute.
+    Applets access their attributes with the getParameter() method.
+
+
+Debugging programs with JDB
+---------------------------
+This release contains the Java Debugger (JDB), an alpha-quality
+prototype of a command-line debugger for Java classes.  It is
+designed to test the Java Debugger API, which is in the package
+java.tools.debug.  We look forward to getting your feedback on
+the debugger API.
+
+You can debug applets using the -debug option of appletviewer.
+When debugging applets, it's best to invoke appletviewer from
+the directory that contains the applet's HTML file.  For example,
+on Solaris:
+
+    cd demo/TicTacToe
+    ../../bin/appletviewer -debug example1.html 
+
+On the PC:
+
+    cd demo\TicTacToe
+    ..\..\bin\appletviewer -debug example1.html 
+    
+You can find documentation on the debugger and its API at:
+
+    http://java.sun.com/JDK-1.0/debugging/
+
